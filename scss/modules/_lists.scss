@@ -1,0 +1,168 @@
+// ---------------------------------------------------------- 
+// Lists
+// ----------------------------------------------------------
+
+@mixin lists-css {
+
+// Ordered <ol> and unordered <ul>
+
+:where(.ul-none, .ol-none, .ul-inline, .ol-inline, .list-comma, .list-divider) {
+  list-style-type: "";
+  padding-inline-start: 0;
+}
+
+:where(.ul-inline, .ol-inline, .list-comma, .list-divider) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+:where(.ul-inline, .ol-inline) {
+  column-gap: var(--gap, .75rem);
+}
+
+:where(.list-comma) {
+  column-gap: var(--gap, .3rem);
+}
+
+.list-comma *:not(:last-child):after {
+  content: ",";
+}
+
+.list-divider *:not(:first-child) {
+  padding-inline-start: var(--divider-px, .5rem);
+}
+
+.list-divider *:not(:last-child):after {
+  content: var(--divider, "|");
+  padding-inline-start: var(--divider-px, .5rem);
+}
+
+:where(.dl-none, .dl-meta, .dl-comma, .dl-comma-inline) dd {
+  margin-inline-start: 0;
+}
+
+// Definition <dl>
+
+.dl-meta {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  column-gap: var(--dl-meta-gap, .75rem);
+}
+
+:where(.dl-comma, .dl-comma-inline) {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--gap, 0.3rem);
+}
+
+.dl-comma-inline dt {
+  margin-inline-end: var(--dt-me, 0.15rem);
+}
+
+:where(.dl-meta, .dl-comma-inline) dt:after {
+  font-weight: 400;
+  content: var(--dt-colon, ":");
+}
+
+.dl-comma dt {
+  inline-size: 100%;
+}
+
+:where(.dl-comma) dt:not(:first-child) {
+  margin-block-start: var(--dt-mt, 0.25rem);
+}
+
+:where(.dl-comma, .dl-comma-inline) dd:not(:last-child):after {
+  content: var(--content,  ",");
+}
+
+:where(.dl-comma, .dl-comma-inline) dd:not(:last-child):has(+ dt):after {
+  content: "";
+}
+
+// List groups 
+
+:where(.list-group, .list-links) {
+  --list-group-hover-radius: calc(var(--list-group-radius, 0.188rem) - 1px);
+  color: var(--list-group-txt, inherit);
+  list-style-type: "";
+  max-inline-size: var(--list-group-width);
+  border: 1px solid var(--list-group-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+  border-radius: var(--list-group-radius, 0.188rem);
+  background-color: var(--list-group-bg, Canvas);
+}
+
+:where(.list-group, .list-links):is(ul, ol) {
+  padding-inline-start: 0;
+}
+
+:where(.list-group, .list-links) dd {
+  margin-inline-start: 0;
+}
+
+:where(.list-group, .list-links) :is(li, dd):not(:last-child) {
+  border-block-end: 1px solid var(--list-group-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+}
+
+:where(.list-group :is(li, dt, dd), .list-links dt) {
+  padding-block: var(--list-group-py, 0.5rem);
+  padding-inline: var(--list-group-px, 0.75rem);
+}
+
+:where(.list-group, .list-links) dt {
+  border-block-end: 1px solid var(--list-group-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+  background-color: var(--list-group-title-bg, color-mix(in srgb, CanvasText 3%, Canvas));
+}
+
+:where(.list-group, .list-links) dt:first-child {
+  border-radius: var(--list-group-hover-radius) var(--list-group-hover-radius) 0 0;
+}
+
+// List links
+:where(.list-links a) {
+  text-decoration: none;
+  display: block;
+  padding-block: var(--list-group-py, 0.5rem);
+  padding-inline: var(--list-group-px, 0.75rem);
+}
+
+:where(.list-links a:is(:hover, :focus)) {
+  background-color: var(--list-group-hover, color-mix(in srgb, CanvasText 6%, Canvas));
+}
+
+:where(.list-links a:focus-visible) {
+  outline: none;
+}
+
+:where(.list-links *:first-child a:is(:hover, :focus)) {
+  border-radius: var(--list-group-hover-radius) var(--list-group-hover-radius) 0 0;
+}
+
+:where(.list-links *:last-child a:is(:hover, :focus)) {
+  border-radius: 0 0 var(--list-group-hover-radius) var(--list-group-hover-radius);
+}
+
+:where(.list-group, .list-links) [aria-current="page"] {
+  font-weight: bold;
+}
+
+// Ordered lists, inserts counter-increment to replace list-style-type.
+:where(.list-group, .list-links) ol {
+  counter-reset: ol-list;
+}
+
+:where(.list-group, .list-links):is(ol) li {
+  counter-increment: ol-list;
+}
+
+:where(.list-group):is(ol) li:before {
+  content: counter(ol-list) ". "; 
+  margin-inline-end: 0.25rem;
+}
+
+:where(.list-links):is(ol) li a:before {
+  content: counter(ol-list) ". "; 
+  margin-inline-end: 0.25rem;
+}
+
+} // end lists-css

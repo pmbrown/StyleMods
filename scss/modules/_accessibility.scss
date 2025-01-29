@@ -1,0 +1,31 @@
+// ---------------------------------------------------------- 
+// Accessibility
+// ----------------------------------------------------------
+
+@mixin smooth-scroll-css {
+  :where(html) {
+    scroll-behavior: smooth;
+  }
+}
+
+@mixin view-transition-css {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+@mixin vis-hidden-mixin {
+  position: absolute;
+  block-size: 1px;
+  inline-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@mixin vis-hidden-css {
+  .vis-hidden, .vis-hidden-focus:not(:focus):not(:focus-within) {
+    @include vis-hidden-mixin;
+  }
+}

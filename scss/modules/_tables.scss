@@ -1,0 +1,71 @@
+// ---------------------------------------------------------- 
+// Tables
+// ----------------------------------------------------------
+
+@mixin tables-css {
+
+:where(table) {
+  border-collapse: collapse;
+  inline-size: 100%;
+  margin-block-end: var(--table-mb, 1rem);
+  font-variant-numeric: tabular-nums;
+}
+
+:where(caption) {
+  font-weight: bold;
+  text-align: left;
+  padding-block-end: 0.5rem;
+}
+
+:where(thead) th {
+  color: var(--thead-txt, inherit);
+  background-color: var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas));
+}
+
+:where(thead) th:last-child {
+  border-inline-end-color: var(--table-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+}
+
+:where(th) {
+  font-weight: bold;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+:where(thead, tbody, tfoot, tr, td, th) {
+  border: 1px solid var(--table-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+  vertical-align: top;
+}
+
+:where(tbody, thead) th, td {
+  padding-block: var(--table-py, 0.313rem);
+  padding-inline: var(--table-px, 0.75rem);
+  white-space: nowrap;
+}
+
+:where(.table-striped tr):nth-child(even),
+:where(.table-combo tr):nth-child(even) {
+  color: var(--table-stripes-text, inherit);
+  background-color: var(--table-stripes, color-mix(in srgb, CanvasText 1%, Canvas));
+}
+
+:where(.table-hover tbody tr):hover,
+:where(.table-combo tbody tr):hover {
+  color: var(--table-hover-text, inherit);
+  background-color: var(--table-hover, color-mix(in srgb, CanvasText 2%, Canvas));
+}
+
+:where(.table-wrap) {
+  overflow-x: auto;
+  margin-block-end: var(--table-wrap-mb, 1rem);
+}
+
+:where(.table-wrap):focus {
+  outline: 0.188rem solid color-mix(in srgb, CanvasText 16%, Canvas);
+}
+
+:where(.table-wrap table) {
+  --table-mb: 0;
+}
+
+} // end table-css

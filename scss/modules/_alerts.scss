@@ -1,0 +1,68 @@
+// ---------------------------------------------------------- 
+// Alerts
+// ----------------------------------------------------------
+
+@mixin alerts-css {
+
+.alert {
+  color: var(--alert-text, inherit);
+  margin-block-end: 1rem;
+  padding-block: var(--alert-py, 0.66rem);
+  padding-inline: var(--alert-px, 1rem);
+  border: 1px solid var(--alert-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+  border-radius: var(--alert-radius); 
+  background-color: var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canvas));
+}
+
+.alert * {
+  --mb: 0;
+}
+
+.alert[open] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: 100%;  
+  margin: initial;
+  margin-block-end: 1rem;
+  padding-block: var(--alert-py, 0.5rem);
+  padding-inline-end: .5rem;
+}
+
+.alert [method="dialog"] {
+  margin-inline-start: auto;
+}
+
+.alert [method="dialog"] button {
+  background-color: transparent;
+  border: none;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  margin-inline-start: auto;
+}
+
+.alert [method="dialog"] button:before {
+  --ico: var(--alert-txt, CanvasText);
+  display: inline-block;
+  content: "";
+  block-size: 1em;
+  inline-size: 1em;  
+  vertical-align: -.115em;
+  background-color: var(--ico);
+  mask-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m13 3-10 10zm-10 0 10 10z' fill='none' stroke='currentColor' stroke-width='1.5'/></svg>");
+  mask-repeat: no-repeat;
+}
+
+.alert [method="dialog"] button span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+} // End alerts-css

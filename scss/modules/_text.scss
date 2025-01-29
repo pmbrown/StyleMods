@@ -1,0 +1,23 @@
+// ---------------------------------------------------------- 
+// Text
+// ----------------------------------------------------------
+
+@mixin font {
+  color: var(--fc, inherit);
+  font-family: var(--ff, inherit);
+  font-size: var(--fs, revert);
+  font-weight: var(--fw, revert);
+  font-variant: var(--fv, initial);
+  text-transform: var(--tt, initial);
+  text-align: var(--ta, initial);
+  text-wrap: var(--tw, initial);
+  line-height: var(--lh, inherit);
+  letter-spacing: var(--ls, initial);
+  word-spacing: var(--ws, initial);
+}
+
+@mixin text-css {
+  .font, .font * {
+    @include font;
+  }
+}

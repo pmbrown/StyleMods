@@ -1,0 +1,30 @@
+// ---------------------------------------------------------- 
+// Shadows
+// ----------------------------------------------------------
+
+@mixin shadows-css {
+
+:where(html) {
+  --shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 1rem 2.5rem rgba(0, 0, 0, 0.175);
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+  
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+  
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+  
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+} // end shadows-css
