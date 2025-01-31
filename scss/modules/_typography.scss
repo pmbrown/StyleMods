@@ -7,9 +7,7 @@
 :where(html) {
   --text: CanvasText;
   --background: Canvas;
-  --link: light-dark(#1c3db5, #9fbfdf);
-  --link-hover: color-mix(in srgb, var(--link) 75%, white);
-  --link-visited: color-mix(in srgb, var(--link) 55%, white);
+  
   --fs: clamp(100%, 40% + 0.666vw, 140%);
   --body: 1rem;
   color-scheme: light dark;
@@ -40,6 +38,9 @@
 }
 
 :where(a) {
+  --link: light-dark(#1c3db5, #9fbfdf);
+  --link-hover: color-mix(in srgb, var(--link) 75%, white);
+  --link-visited: color-mix(in srgb, var(--link) 55%, white);
   color: var(--link);
   overflow-wrap: break-word;
   text-decoration-color: color-mix(in srgb, var(--link) 75%, var(--background));
@@ -208,7 +209,7 @@ a > :where(code) {
 }
 
 :where(details) {
-  --mb-open: 0.5rem;
+  --mb-open: 0.75rem;
   margin-block-end: 1rem;
 }
 

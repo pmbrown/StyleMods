@@ -62,7 +62,6 @@
 }
 
 :where(button, [type=button], [type=submit], [type=reset]):is(:hover, :focus) {
-  border-color: var(--btn-hover, color-mix(in srgb, CanvasText 6%, Canvas));
   background-color: var(--btn-hover, color-mix(in srgb, CanvasText 6%, Canvas));
 }
 
