@@ -1,2 +1,2 @@
 # SassMods
-Sass modules for web design setup
+Sass modules for web design
