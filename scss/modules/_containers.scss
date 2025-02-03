@@ -1,0 +1,34 @@
+// ---------------------------------------------------------- 
+// Containers
+// ----------------------------------------------------------
+
+@mixin containers-css {
+
+.container, .container-xl, .container-lg, .container-md, .container-sm, .container-xs {
+  inline-size: 100%;
+  max-inline-size: var(--size);
+  margin-inline: var(--mx, auto);
+  padding-inline: var(--px);
+}
+
+.container-xl {
+  --size: 1600px;
+}
+
+.container-lg {
+  --size: 1280px;
+}
+
+.container-md {
+  --size: 1024px;
+}
+
+.container-sm {
+  --size: 768px;
+}
+
+.container-xs {
+  --size: 480px;
+}
+
+} // end containers-css

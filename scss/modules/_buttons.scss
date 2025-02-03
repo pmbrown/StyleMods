@@ -28,11 +28,8 @@
   box-shadow: var(--btn-focus, 0 0 0 0.12rem) var(--btn-focus-color, color-mix(in srgb, CanvasText 16%, Canvas));
 }
 
-.btn:focus:not(:focus-visible) {
-  box-shadow: none;
-}
-
 .btn:focus:not(:focus-visible) {  
+  box-shadow: none;
   background-color: var(--btn-bg, color-mix(in srgb, CanvasText 3%, Canvas));
 }
   

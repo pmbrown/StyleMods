@@ -1,0 +1,666 @@
+// ---------------------------------------------------------- 
+// SassMods framework
+// ----------------------------------------------------------
+@use "sassmods" as *;
+
+// HTML
+$enable-typography:       true;
+$enable-forms-buttons:    true;
+$enable-tables:           true;
+$enable-smooth-scroll:    false;
+$enable-view-transition:  false;
+
+// Utilities
+$enable-accordions:       true;
+$enable-alerts:           true;
+$enable-badges:           true;
+$enable-buttons:          true;
+$enable-cards:            true;
+$enable-containers:       true;
+$enable-display:          true;
+$enable-images:           true;
+$enable-lists:            true;
+$enable-margins:          true; // See _spacing.scss
+$enable-padding:          true; // See _spacing.scss
+$enable-shadows:          true;
+$enable-text:             true;
+$enable-vis-hidden:       true; // See _text.scss
+$enable-theme-switch:     false;
+
+// Color variables
+$enable-surface:          true;
+$enable-grays:            true;
+$enable-blue:             true;
+$enable-red:              true;
+$enable-green:            true;
+$enable-orange:           true;
+$enable-cyan:             true;
+$enable-yellow:           true;
+$enable-purple:           true;
+$enable-pink:             true;
+$enable-olive:            true;
+$enable-color-utility:    true;
+
+// Grids and gaps
+$enable-grid:             true;
+$enable-autogrid:         true;
+$enable-gaps:             true;
+$enable-bp-xl:            true; // 1601px
+$enable-bp-lg:            true; // 1281px
+$enable-bp-md:            true; // 1025px
+$enable-bp-sm:            true; // 769px
+$enable-bp-xs:            true; // 481px
+
+// Icons
+// Utility styles
+$enable-icon-utilities:       true;
+$enable-icon-links-buttons:   true;
+
+// Icon variables and classes
+$enable-icon-variables:       true;
+$enable-icon-classes:         true;
+
+// Default icons
+$enable-custom-icons:         true;
+$enable-house-svg:            true;
+$enable-email-svg:            true;
+$enable-plus-svg:             true;
+$enable-minus-svg:            true;
+$enable-bars-svg:             true;
+$enable-dots-h-svg:           true;
+$enable-dots-v-svg:           true;
+$enable-caret-down-svg:       true;
+$enable-caret-up-svg:         true;
+$enable-caret-right-svg:      true;
+$enable-caret-left-svg:       true;
+$enable-close-svg:            true;
+$enable-close-box-svg:        true;
+$enable-close-box-fill-svg:   true;
+$enable-box-svg:              true;
+$enable-pen-box-svg:          true;
+$enable-tick-box-svg:         true;
+$enable-ext-link-svg:         true;
+$enable-pg-link-svg:          true;
+$enable-search-svg:           true;
+$enable-download-svg:         true;
+$enable-user-svg:             true;
+$enable-question-svg:         true;
+$enable-sun-svg:              true;
+$enable-moon-svg:             true;
+
+// Brand icons
+$enable-rss-svg:              true;
+$enable-github-svg:           true;
+$enable-twitter-svg:          true;
+$enable-mastodon-svg:         true;
+$enable-tiktok-svg:           true;
+$enable-facebook-svg:         true;
+$enable-instagram-svg:        true;
+$enable-pinterest-svg:        true;
+$enable-codepen-svg:          true;
+$enable-reddit-svg:           true;
+
+@include versions;
+
+@if $enable-typography {
+  @include typography-css;
+}
+
+@media (prefers-reduced-motion: no-preference) { 
+  @if $enable-smooth-scroll {
+    @include smooth-scroll-css;
+  }
+  
+  @if $enable-view-transition {
+    @include view-transition-css;
+  }
+}
+
+@if $enable-forms-buttons {
+  @include forms-buttons-css;
+}
+
+@if $enable-tables {
+  @include tables-css;
+}
+
+@if $enable-accordions {
+  @include accordions-css;
+}
+
+@if $enable-alerts {
+  @include alerts-css;
+}
+
+@if $enable-badges {
+  @include badges-css;
+}
+
+@if $enable-buttons {
+  @include buttons-css;
+}
+
+@if $enable-cards {
+  @include cards-css;
+}
+
+@if $enable-containers {
+  @include containers-css;
+}
+
+@if $enable-display {
+  @include display-css;
+}
+
+@if $enable-images {
+  @include images-css;
+}
+
+@if $enable-lists {
+  @include lists-css;
+}
+
+@if $enable-margins {
+  @include margins-css;
+}
+
+@if $enable-padding {
+  @include padding-css;
+}
+
+@if $enable-shadows {
+  @include shadows-css;
+}
+
+@if $enable-text {
+  @include text-css;
+}
+
+@if $enable-vis-hidden {
+  @include vis-hidden-css;
+}
+
+@if $enable-theme-switch {
+  @include theme-switch-css;
+}
+
+:where(html) {
+  @if $enable-surface {
+    @include surface-variables;
+  }
+  
+  @if $enable-grays {
+    @include gray-variables;
+  }
+  
+  @if $enable-blue {
+    @include blue-variables;
+  }
+  
+  @if $enable-red {
+    @include red-variables;  
+  }
+  
+  @if $enable-green {
+    @include green-variables; 
+  }
+  
+  @if $enable-orange {
+    @include orange-variables;  
+  }
+  
+  @if $enable-cyan {
+    @include cyan-variables;  
+  }
+  
+  @if $enable-yellow {
+    @include yellow-variables;
+  }
+  
+  @if $enable-purple {
+    @include purple-variables;
+  }
+  
+  @if $enable-pink {
+    @include pink-variables;
+  }
+  
+  @if $enable-olive {
+    @include olive-variables;  
+  }
+}
+
+@if $enable-color-utility {
+  @include color-bg-utility;
+}
+
+:where(html) {
+  @if $enable-grid {@include grid-variables;}
+  @if $enable-autogrid {@include autogrid-variables;}  
+}
+
+@if $enable-grid or $enable-autogrid {
+  .grid {
+    @include grid-utility;
+  }
+}
+
+@if $enable-grid {@include grid;}
+@if $enable-autogrid {@include autogrid;}
+@if $enable-gaps { @include gaps; }
+
+@if $enable-bp-xl {
+  @media (max-width: #{$bp-xl}) {
+    @if $enable-grid {@include grid-xl;}
+    @if $enable-autogrid {@include autogrid-xl;}
+    @if $enable-gaps {@include gaps-xl;}
+  }
+}
+
+@if $enable-bp-lg {
+  @media (max-width: #{$bp-lg}) {
+    @if $enable-grid {@include grid-lg;}
+    @if $enable-autogrid {@include autogrid-lg;}
+    @if $enable-gaps {@include gaps-lg;}
+  }
+}
+
+@if $enable-bp-md {
+  @media (max-width: #{$bp-md}) {
+    @if $enable-grid {@include grid-md;}
+    @if $enable-autogrid {@include autogrid-md;}
+    @if $enable-gaps {@include gaps-md;}
+  }
+}
+
+@if $enable-bp-sm {
+  @media (max-width: #{$bp-sm}) {
+    @if $enable-grid {@include grid-sm;}
+    @if $enable-autogrid {@include autogrid-sm;}
+    @if $enable-gaps {@include gaps-sm;}
+  }
+}
+
+@if $enable-bp-xs {
+  @media (max-width: #{$bp-xs}) {
+    @if $enable-grid {@include grid-xs;}
+    @if $enable-autogrid {@include autogrid-xs;}
+    @if $enable-gaps {@include gaps-xs;}
+  }
+}
+
+@if $enable-icon-utilities {
+  @include icon-utilities;
+}
+
+@if $enable-icon-links-buttons {
+  @include icon-links-buttons;
+}
+
+@if $enable-icon-variables {
+  :where(html) {
+    @if $enable-custom-icons {
+      @include custom-icons-variables;
+    }
+   
+    @if $enable-house-svg {
+      --house: #{$house};
+    }
+    
+    @if $enable-email-svg {
+      --email: #{$email};
+    }
+    
+    @if $enable-plus-svg {
+      --plus: #{$plus};
+    }
+    
+    @if $enable-minus-svg {
+      --minus: #{$minus};
+    }
+    
+    @if $enable-bars-svg {
+      --bars: #{$bars};
+    }
+    
+    @if $enable-dots-h-svg {
+      --dots-h: #{$dots-h};
+    }
+    
+    @if $enable-dots-v-svg {
+      --dots-v: #{$dots-v};
+    }
+    
+    @if $enable-caret-down-svg {
+      --caret-down: #{$caret-down};
+    }
+    
+    @if $enable-caret-up-svg {
+      --caret-up: #{$caret-up};
+    }
+    
+    @if $enable-caret-left-svg {
+      --caret-left: #{$caret-left};
+    }
+    
+    @if $enable-caret-right-svg {
+      --caret-right: #{$caret-right};
+    }
+    
+    @if $enable-close-svg {
+      --close: #{$close};
+    }
+    
+    @if $enable-ext-link-svg {
+      --ext-link: #{$ext-link};
+    }
+    
+    @if $enable-pg-link-svg {
+      --pg-link: #{$pg-link};
+    }
+    
+    @if $enable-search-svg {
+      --search: #{$search};
+    }
+    
+    @if $enable-box-svg {
+      --box: #{$box};
+    }
+    
+    @if $enable-pen-box-svg {
+      --pen-box: #{$pen-box};
+    }
+    
+    @if $enable-tick-box-svg {
+      --tick-box: #{$tick-box};
+    }
+    
+    @if $enable-close-box-svg {
+      --close-box: #{$close-box};
+    }
+    
+    @if $enable-close-box-fill-svg {
+      --close-box-fill: #{$close-box-fill};
+    }
+    
+    @if $enable-download-svg {
+      --download: #{$download};
+    }
+    
+    @if $enable-user-svg {
+      --user: #{$user};
+    }
+    
+    @if $enable-question-svg {
+      --question: #{$question};
+    }
+    
+    @if $enable-sun-svg {
+      --sun: #{$sun};
+    }
+    
+    @if $enable-moon-svg {
+      --moon: #{$moon};
+    }
+    
+    @if $enable-rss-svg {
+      --rss: #{$rss};
+    }
+    
+    @if $enable-github-svg {
+      --github: #{$github};
+    }
+    
+    @if $enable-twitter-svg {
+      --twitter: #{$twitter};
+    }
+    
+    @if $enable-mastodon-svg {
+      --mastodon: #{$mastodon};
+    }
+  
+    @if $enable-tiktok-svg {
+      --tiktok: #{$tiktok};
+    }
+      
+    @if $enable-facebook-svg {
+      --facebook: #{$facebook};
+    }
+    
+    @if $enable-instagram-svg {
+      --instagram: #{$instagram};
+    }
+    
+    @if $enable-pinterest-svg {
+      --pinterest: #{$pinterest};
+    }
+    
+    @if $enable-codepen-svg {
+      --codepen: #{$codepen};
+    }
+    
+    @if $enable-reddit-svg {
+      --reddit: #{$reddit};
+    }
+  }
+} // end-if icon-variables
+
+// ---------------------------------------------------------- 
+// Utility classes
+// ----------------------------------------------------------
+
+@if $enable-icon-classes {
+  @if $enable-custom-icons {
+    @include custom-icons-classes;
+  }
+
+  @if $enable-house-svg {
+    .house {
+      --svg: var(--house);        
+    }
+  }
+  
+  @if $enable-email-svg {
+    .email {
+      --svg: var(--email);        
+    }
+  }
+  
+  @if $enable-plus-svg {
+    .plus {
+      --svg: var(--plus);        
+    }
+  }
+  
+  @if $enable-minus-svg {
+    .minus {
+      --svg: var(--minus);        
+    }
+  }
+  
+  @if $enable-ext-link-svg {
+    .ext-link {
+      --svg: var(--ext-link);        
+    }
+  }
+  
+  @if $enable-pg-link-svg {
+    .pg-link {
+      --svg: var(--pg-link);        
+    }
+  }
+  
+  @if $enable-bars-svg {
+    .bars {
+      --svg: var(--bars);        
+    }
+  }
+  
+  @if $enable-dots-h-svg {
+    .dots-h {
+      --svg: var(--dots-h);        
+    }
+  }
+  
+  @if $enable-dots-v-svg {
+    .dots-v {
+      --svg: var(--dots-v);        
+    }
+  }
+  
+  @if $enable-caret-down-svg {
+    .caret-down {
+      --svg: var(--caret-down);        
+    }
+  }
+  
+  @if $enable-caret-up-svg {
+    .caret-up {
+      --svg: var(--caret-up);        
+    }
+  }
+  
+  @if $enable-caret-left-svg {
+    .caret-left {
+      --svg: var(--caret-left);        
+    }
+  }
+  
+  @if $enable-caret-right-svg {
+    .caret-right {
+      --svg: var(--caret-right);        
+    }
+  }
+  
+  @if $enable-box-svg {
+    .box {
+      --svg: var(--box);        
+    }
+  }
+  
+  @if $enable-pen-box-svg {
+    .pen-box {
+      --svg: var(--pen-box);        
+    }
+  }
+  
+  @if $enable-close-svg {
+    .close {
+      --svg: var(--close);        
+    }
+  }
+  
+  @if $enable-close-box-svg {
+    .close-box {
+      --svg: var(--close-box);        
+    }
+  }
+  
+  @if $enable-close-box-fill-svg {
+    .close-box-fill {
+      --svg: var(--close-box-fill);        
+    }
+  }
+  
+  @if $enable-tick-box-svg {
+    .tick-box {
+      --svg: var(--tick-box);        
+    }
+  }
+  
+  @if $enable-search-svg {
+    .search {
+      --svg: var(--search);        
+    }
+  }
+  
+  @if $enable-download-svg {
+    .download {
+      --svg: var(--download);        
+    }
+  }
+  
+  @if $enable-user-svg {
+    .user {
+      --svg: var(--user);        
+    }
+  }
+  
+  @if $enable-question-svg {
+    .question {
+      --svg: var(--question);        
+    }
+  }
+  
+  @if $enable-sun-svg {
+    .sun {
+      --svg: var(--sun);        
+    }
+  }
+  
+  @if $enable-moon-svg {
+    .moon {
+      --svg: var(--moon);        
+    }
+  }
+  
+  @if $enable-rss-svg {
+    .rss {
+      --svg: var(--rss);        
+    }
+  }
+  
+  @if $enable-github-svg {
+    .github {
+      --svg: var(--github);        
+    }
+  }
+  
+  @if $enable-twitter-svg {
+    .twitter {
+      --svg: var(--twitter);        
+    }
+  }
+  
+  @if $enable-mastodon-svg {
+    .mastodon {
+      --svg: var(--mastodon);        
+    }
+  }
+  
+  @if $enable-tiktok-svg {
+    .tiktok {
+      --svg: var(--tiktok);        
+    }
+  }
+  
+  @if $enable-facebook-svg {
+    .facebook {
+      --svg: var(--facebook);        
+    }
+  }
+  
+  @if $enable-instagram-svg {
+    .instagram {
+      --svg: var(--instagram);        
+    }
+  }
+  
+  @if $enable-pinterest-svg {
+    .pinterest {
+      --svg: var(--pinterest);        
+    }
+  }
+  
+  @if $enable-codepen-svg {
+    .codepen {
+      --svg: var(--codepen);        
+    }
+  }
+  
+  @if $enable-reddit-svg {
+    .reddit {
+      --svg: var(--reddit);        
+    }
+  }
+} // end-if icon-classes

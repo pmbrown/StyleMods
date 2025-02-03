@@ -1,0 +1,39 @@
+//  ------------------------------------------------------------
+//  Block and flex display
+//  ------------------------------------------------------------
+
+@mixin display-css {
+
+.block {
+  display: block;
+}
+  
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+  
+.flex-wrap-none {
+  flex-wrap: nowrap;
+}
+  
+} // end flex-css

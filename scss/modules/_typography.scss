@@ -1,20 +1,10 @@
 // ---------------------------------------------------------- 
 // Typography
+// Also includes smooth-scroll & view-transtion mixin styles
+// provided below typography.
 // ----------------------------------------------------------
 
 @mixin typography-css {
-
-:where(html) {
-  --text: CanvasText;
-  --background: Canvas;
-  
-  --fs: clamp(100%, 40% + 0.666vw, 140%);
-  --body: 1rem;
-  color-scheme: light dark;
-  font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
-  background-color: var(--background);
-  block-size: 100%;
-}
 
 :where(:not([popover], dialog)) {
   margin: 0;
@@ -22,6 +12,17 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+:where(html) {
+  --text: CanvasText;
+  --background: Canvas;  
+  --fs: clamp(100%, 40% + 0.666vw, 140%);
+  --body: 1rem;
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  block-size: 100%;
 }
 
 :where(html, body, h1, h2, h3, h4, h5, h6) {
@@ -40,7 +41,7 @@
 :where(a) {
   --link: light-dark(#1c3db5, #9fbfdf);
   --link-hover: color-mix(in srgb, var(--link) 75%, white);
-  --link-visited: color-mix(in srgb, var(--link) 55%, white);
+  --link-visited: color-mix(in srgb, var(--link) 75%, white);
   color: var(--link);
   overflow-wrap: break-word;
   text-decoration-color: color-mix(in srgb, var(--link) 75%, var(--background));
@@ -266,3 +267,16 @@ a > :where(code) {
 }
 
 } // End typography mixin
+
+// Motion-animation
+@mixin smooth-scroll-css {
+  :where(html) {
+    scroll-behavior: smooth;
+  }
+}
+
+@mixin view-transition-css {
+  @view-transition {
+    navigation: auto;
+  }
+}
