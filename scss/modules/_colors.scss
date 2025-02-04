@@ -13,14 +13,13 @@ $pink:      #ff1493 !default;
 $olive:     #556b2f !default;
 
 @mixin color-bg-props {
-  color: var(--col, inherit);
-  background-color: var(--bg, initial);
+  color: var(--txt);
+  background-color: var(--bg);
 }
 
 @mixin color-bg-utility {
   .bg {
-    color: var(--col, inherit);
-    background-color: var(--bg, initial);
+    @include color-bg-props;
   }
 }
 

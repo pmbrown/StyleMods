@@ -3,7 +3,6 @@
 // ----------------------------------------------------------
 
 @mixin font {
-  color: var(--fc, inherit);
   font-family: var(--ff, inherit);
   font-size: var(--fs, revert);
   font-weight: var(--fw, revert);

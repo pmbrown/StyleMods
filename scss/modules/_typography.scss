@@ -15,120 +15,93 @@
 }
 
 :where(html) {
-  --text: CanvasText;
-  --background: Canvas;  
-  --fs: clamp(100%, 40% + 0.666vw, 140%);
-  --body: 1rem;
   color-scheme: light dark;
-  font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
-  background-color: var(--background);
+  color: var(--text, CanvasText);
+  font-size: var(--html, clamp(100%, 40% + 0.666vw, 140%));
+  font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;  
+  background-color: var(--background, Canvas);
   block-size: 100%;
 }
 
-:where(html, body, h1, h2, h3, h4, h5, h6) {
-  color: var(--text);
-  font-size: var(--fs);
-  font-weight: var(--fw);
-  line-height: var(--lh);
-}
-
 :where(body) {
-  --fs: var(--body);
-  --fw: normal;
-  --lh: 1.5;
+  font-size: var(--body, 1rem);
+  font-weight: var(--fw, normal);
+  line-height: var(--lh, 1.5);
 }
 
 :where(a) {
-  --link: light-dark(#1c3db5, #9fbfdf);
-  --link-hover: color-mix(in srgb, var(--link) 75%, white);
-  --link-visited: color-mix(in srgb, var(--link) 75%, white);
-  color: var(--link);
+  color: var(--link, LinkText);
   overflow-wrap: break-word;
-  text-decoration-color: color-mix(in srgb, var(--link) 75%, var(--background));
+  text-decoration-color: color-mix(in srgb, var(--link, LinkText) 75%, Canvas);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.1175em;
 }
 
 :where(a:visited) {
-  color: var(--link-visited);
-  text-decoration-color: color-mix(in srgb, var(--link-visited) 35%, var(--background));
+  color: color-mix(in srgb, var(--visited, LinkText) 75%, white);
+  text-decoration-color: color-mix(in srgb, var(--visited, LinkText) 50%, Canvas);
 }
 
 :where(a:hover) {
-  color: var(--link-hover);
+  color: color-mix(in srgb, var(--hover, LinkText) 75%, white);
   text-decoration: none;
-}
-
-:where(a:focus-visible) {
-  outline: 0.094rem solid var(--link-hover);
-  outline-offset: 0.1175rem;
-  border-radius: 0.15em;
 }
 
 :where(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none;
 }
 
-:where(h1, h2, h3, h4, h5, h6, p, ol, ul, dl, address) {
-  text-wrap: var(--tw);
-  margin-block-end: var(--mb);
-}
-
 :where(h1, h2, h3, h4, h5, h6) {
-  --fw: 700;
-  --lh: 1.2;
-  --tw: pretty;
-  --mb: .75rem;
+  font-weight: var(--fw, 700);
+  line-height: var(--lh, 1.2);
+  text-wrap: var(--tw, pretty);
+  margin-block-end: var(--mb, 0.75rem);
 }
 
 :where(h1) {
-  --fs: 2rem;
+  font-size: var(--h1, 2rem);
 }
 
 :where(h2) {
-  --fs: 1.725rem;
+  font-size: var(--h2, 1.725rem);
 }
 
 :where(h3) {
-  --fs: 1.5rem;
+  font-size: var(--h3, 1.5rem);
 }
 
 :where(h4) {
-  --fs: 1.35rem;
+  font-size: var(--h4, 1.35rem);
 }
 
 :where(h5) {
-  --fs: 1.2rem;
+  font-size: var(--h5, 1.2rem);
 }
 
 :where(h6) {
-  --fs: 1.063rem;
   --lh: 1.25;
+  font-size: var(--h6, 1.063rem);
 }
 
 :where(small) {
-  --fs: 0.906em;
-  font-size: var(--fs);
+  font-size: var(--small, 0.906em);
 }
 
 :where(h1, h2, h3, h4, h5, h6) small {
-  --fs: .75em;
+  --small: 0.75em;
 }
 
 :where(bold, strong) {
-  --fw: bold;
-  font-weight: var(--fw);
+  font-weight: var(--fw, bold);
 }
 
 :where(p, ol, ul, dl, address) {
-  --tw: pretty;
-  --mb: 1rem;
-  line-height: var(--lh, inherit);
+  text-wrap: var(--tw, pretty);
+  margin-block-end: var(--mb, 1rem);
 }
 
 :where(ol, ul) {
-  --pl: 2rem;
-  padding-inline-start: var(--pl);
+  padding-inline-start: var(--ps, 2rem);
 }
 
 :where(ol) {
@@ -205,22 +178,19 @@ a > :where(code) {
 }
 
 :where(blockquote p:first-of-type) {
-  --mb: .25rem;
-  font-size: var(--fs, inherit);
+  --mb: 0.25rem;
 }
 
 :where(details) {
-  --mb-open: 0.75rem;
   margin-block-end: 1rem;
 }
 
 :where(summary) {
-  font-weight: var(--fw, inherit);
   cursor: pointer;
 }
 
 :where(details[open] summary) {
-  margin-block-end: var(--mb-open);
+  margin-block-end: var(--mb-open, 0.75rem);
 }
 
 :where(hr) {

@@ -6,7 +6,7 @@
 
 .alert {
   color: var(--alert-text, inherit);
-  margin-block-end: 1rem;
+  margin-block-end: var(--alert-mb, 1rem);
   padding-block: var(--alert-py, 0.66rem);
   padding-inline: var(--alert-px, 1rem);
   border: 1px solid var(--alert-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
@@ -15,7 +15,7 @@
 }
 
 .alert * {
-  --mb: 0;
+  margin-block-end: 0;
 }
 
 .alert[open] {
@@ -26,9 +26,9 @@
   inline-size: 100%;
   max-inline-size: 100%;  
   margin: initial;
-  margin-block-end: 1rem;
+  margin-block-end: var(--alert-mb, 1rem);
   padding-block: var(--alert-py, 0.5rem);
-  padding-inline-end: .5rem;
+  padding-inline-end: var(--alert-pe, 0.5rem);
 }
 
 .alert [method="dialog"] {

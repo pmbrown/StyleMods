@@ -3,10 +3,6 @@
 // ----------------------------------------------------------
 @mixin theme-switch-css {
 
-#themes {
-  --ico: buttontext;
-}
-
 [style="color-scheme: light;"] #themes {
   --svg: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m7.47 0v2.26h1.15v-2.26zm-4.9 2.19-0.812 0.8 1.62 1.6 0.812-0.8zm10.8 0-1.62 1.6 0.812 0.8 1.62-1.6zm-5.29 1.25s-4.59 0-4.59 4.52c0 4.52 4.59 4.52 4.59 4.52s4.59 0 4.59-4.52c0-4.52-4.59-4.52-4.59-4.52zm5.67 3.92v1.13h2.3v-1.13zm-13.7 0.0243v1.13h2.3v-1.13zm3.01 4-1.62 1.6 0.812 0.8 1.62-1.6zm9.99 0-0.812 0.8 1.62 1.6 0.812-0.8zm-5.54 2.36v2.26h1.15v-2.26z'/></svg>");
 }
@@ -21,18 +17,18 @@
   block-size: 1em;
   inline-size: 1em;  
   vertical-align: -.12em;
-  background-color: var(--ico);
+  background-color: var(--ico, buttontext);
   mask-image: var(--svg);
   mask-repeat: no-repeat;
 }
 
 #themes span {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  block-size: 1px;
+  inline-size: 1px;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip-path: inset(50%);
   white-space: nowrap;
 }
 
