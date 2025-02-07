@@ -1,0 +1,57 @@
+// ---------------------------------------------------------- 
+// Popovers
+// ----------------------------------------------------------
+$popover-text-color:        var(--popover-txt) !default;
+$popover-margin-top:        var(--popover-mt, 1rem) !default;
+$popover-padding-block:     var(--popover-py, 0.75rem) !default;
+$popover-padding-inline:    var(--popover-px, 1rem) !default;
+$popover-border-color:      var(--popover-bd-col, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
+$popover-radius:            var(--popover-radius, 0.125em) !default;
+$popover-background-color:  var(--popover-bg, Canvas) !default; 
+$popover-transition:        var(--popover-transition, 0.25s) !default;
+$popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
+
+@mixin popovers-css {
+
+:where([popover]) {
+  color: #{$popover-text-color};
+  block-size: fit-content;
+  max-block-size: calc(100vh - 2rem);
+  inline-size: calc((100% - 6px) - 2em);
+  max-inline-size: var(--popover-width, fit-content);
+  margin-block-start: #{$popover-margin-top};
+  padding-block: #{$popover-padding-block};
+  padding-inline: #{$popover-padding-inline};
+  border: 1px solid #{$popover-border-color};
+  border-radius: #{$popover-radius};
+  background-color: #{$popover-background-color}; 
+  overflow: auto;
+  overscroll-behavior: contain; 
+}
+
+:where([popover]) *:last-child {
+  margin-block-end: 0;
+}
+
+[popover]::backdrop {
+  background-color: #{$popover-backdrop};
+}
+
+} // end popovers-css
+
+@mixin popovers-animation-css {
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  [popover] {
+    transition: #{$popover-transition};
+    opacity: 1; 
+  }
+}
+
+@starting-style {
+  [popover] {
+    opacity: 0;    
+  }
+}
+
+}

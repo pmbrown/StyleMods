@@ -21,16 +21,6 @@ $margins-sizes: (
   "5": #{$s5},
 ) !default;
 
-$margin-utilities: (
-  "m": margin,
-  "mt": margin-block-start,
-  "mb": margin-block-end,
-  "ms": margin-inline-start,
-  "me": margin-inline-end,
-  "my": margin-block,
-  "mx": margin-inline,
-) !default;
-
 $padding-sizes: (
   "0": #{$s0},
   "1": #{$s1},
@@ -40,63 +30,47 @@ $padding-sizes: (
   "5": #{$s5},
 ) !default;
 
-$padding-utilities: (
-  "p": padding,
-  "pt": padding-block-start,
-  "pb": padding-block-end,
-  "ps": padding-inline-start,
-  "pe": padding-inline-end,
-  "py": padding-block,
-  "px": padding-inline,
-) !default;
-
 @mixin margins-css {
-
-@each $name, $value in $margin-utilities {
-  .#{$name}-auto, .#{$name}-0, .#{$name}-1, .#{$name}-2, .#{$name}-3, .#{$name}-4, .#{$name}-5 {
-    #{$value}: var(--#{$name});        
-  }
-}
 
 @each $name, $value in $margins-sizes {
   .m-#{$name} {
-    --m: #{$value};        
+    margin: #{$value};        
   }
 }  
 
 @each $name, $value in $margins-sizes {
   .mt-#{$name} {
-    --mt: #{$value};        
+    margin-block-start: #{$value};        
   }
 }
 
 @each $name, $value in $margins-sizes {
   .mb-#{$name} {
-    --mb: #{$value};        
+    margin-block-end: #{$value};        
   }
 }
 
 @each $name, $value in $margins-sizes {
   .ms-#{$name} {
-    --ms: #{$value};        
+    margin-inline-start: #{$value};        
   }
 }
 
 @each $name, $value in $margins-sizes {
   .me-#{$name} {
-    --me: #{$value};        
+    margin-inline-end: #{$value};        
   }
 }
   
 @each $name, $value in $margins-sizes {
   .my-#{$name} {
-    --my: #{$value};        
+    margin-block: #{$value};        
   }
 }
   
 @each $name, $value in $margins-sizes {
   .mx-#{$name} {
-    --mx: #{$value};        
+    margin-inline: #{$value};        
   }
 }
 
@@ -106,51 +80,45 @@ $padding-utilities: (
 
 @mixin padding-css {
 
-@each $name, $value in $padding-utilities {
-  .#{$name}-0, .#{$name}-1, .#{$name}-2, .#{$name}-3, .#{$name}-4, .#{$name}-5 {
-    #{$value}: var(--#{$name});        
-  }
-}
-
 @each $name, $value in $padding-sizes {
   .p-#{$name} {
-    --p: #{$value};        
+    padding: #{$value};        
   }
 }
 
 @each $name, $value in $padding-sizes {
   .pt-#{$name} {
-    --pt: #{$value};        
+    padding-block-start: #{$value};        
   }
 }
 
 @each $name, $value in $padding-sizes {
   .pb-#{$name} {
-    --pb: #{$value};        
+    padding-block-end: #{$value};        
   }
 }
 
 @each $name, $value in $padding-sizes {
   .ps-#{$name} {
-    --ps: #{$value};        
+    padding-inline-start: #{$value};        
   }
 }
 
 @each $name, $value in $padding-sizes {
   .pe-#{$name} {
-    --pe: #{$value};        
+    padding-inline-end: #{$value};        
   }
 }
 
 @each $name, $value in $padding-sizes {
   .py-#{$name} {
-    --py: #{$value};        
+    padding-block: #{$value};        
   }
 }
 
 @each $name, $value in $padding-sizes {
   .px-#{$name} {
-    --px: #{$value};        
+    padding-inline: #{$value};        
   }
 }
 

@@ -1,0 +1,38 @@
+// ---------------------------------------------------------- 
+// Theme switch
+// ----------------------------------------------------------
+$light-scheme-icon:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m7.47 0v2.26h1.15v-2.26zm-4.9 2.19-0.812 0.8 1.62 1.6 0.812-0.8zm10.8 0-1.62 1.6 0.812 0.8 1.62-1.6zm-5.29 1.25s-4.59 0-4.59 4.52c0 4.52 4.59 4.52 4.59 4.52s4.59 0 4.59-4.52c0-4.52-4.59-4.52-4.59-4.52zm5.67 3.92v1.13h2.3v-1.13zm-13.7 0.0243v1.13h2.3v-1.13zm3.01 4-1.62 1.6 0.812 0.8 1.62-1.6zm9.99 0-0.812 0.8 1.62 1.6 0.812-0.8zm-5.54 2.36v2.26h1.15v-2.26z'/></svg>") !default;
+$dark-scheme-icon:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m5.27 1c-0.533 0.0926-0.946 0.529-1.39 0.815-1.17 0.88-1.95 2.19-2.46 3.54-0.777 2.03-0.429 4.41 0.861 6.16 1.41 1.98 3.67 3.56 6.18 3.49 1.98-0.0388 3.86-0.991 5.28-2.33 0.48-0.565 0.971-1.16 1.27-1.84 0.089-0.435-0.481-0.742-0.809-0.456-1.61 0.937-3.67 1.22-5.37 0.365-1.52-0.764-2.79-2.04-3.55-3.55-0.871-1.73-0.56-3.83 0.411-5.45 0.187-0.304-0.0437-0.726-0.4-0.734z'/></svg>") !default;
+
+@mixin theme-switch-css {
+
+[style="color-scheme: light;"] #themes {
+  --svg: #{$light-scheme-icon};
+}
+  
+[style="color-scheme: dark;"] #themes {
+  --svg: #{$dark-scheme-icon};
+}
+
+#themes:before {
+  display: inline-block;
+  content: "";
+  block-size: 1em;
+  inline-size: 1em;  
+  vertical-align: -.12em;
+  background-color: var(--ico, buttontext);
+  mask-image: var(--svg);
+  mask-repeat: no-repeat;
+}
+
+#themes span {
+  position: absolute;
+  block-size: 1px;
+  inline-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+} // end theme-switch-css

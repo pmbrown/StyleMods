@@ -1,14 +1,18 @@
 // ---------------------------------------------------------- 
 // Shadows
 // ----------------------------------------------------------
+$shadow:      0 0.25rem 0.75rem rgba(0, 0, 0, 0.15) !default;
+$shadow-sm:   0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !default;
+$shadow-lg:   0 0.5rem 1.25rem rgba(0, 0, 0, 0.15) !default;
+$shadow-xl:   0 1rem 2.5rem rgba(0, 0, 0, 0.175) !default;
 
 @mixin shadows-css {
 
 :where(html) {
-  --shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
-  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
-  --shadow-xl: 0 1rem 2.5rem rgba(0, 0, 0, 0.175);
+  --shadow: #{$shadow};
+  --shadow-sm: #{$shadow-sm};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-xl: #{$shadow-xl};
 }
 
 .shadow {

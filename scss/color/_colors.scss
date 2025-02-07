@@ -1,6 +1,7 @@
 // ---------------------------------------------------------- 
 // Colors
 // ----------------------------------------------------------
+$surface:   Canvas !default;
 $gray:      #808080 !default;
 $blue:      #0066ff !default;
 $red:       #ff0000 !default;
@@ -12,29 +13,29 @@ $purple:    #6f42c1 !default;
 $pink:      #ff1493 !default;
 $olive:     #556b2f !default;
 
-@mixin color-bg-props {
-  color: var(--txt);
-  background-color: var(--bg);
+@mixin background-color-props {
+  color: var(--bg-txt);
+  background-color: var(--bg-col);
 }
 
-@mixin color-bg-utility {
-  .bg {
-    @include color-bg-props;
+@mixin background-color-utility {
+  .bg-color {
+    @include background-color-props;
   }
 }
 
 @mixin surface-variables {
-  --surf-1: color-mix(in srgb, CanvasText 4%, Canvas);
-  --surf-2: color-mix(in srgb, CanvasText 8%, Canvas);
-  --surf-3: color-mix(in srgb, CanvasText 14%, Canvas);
-  --surf-4: color-mix(in srgb, CanvasText 20%, Canvas);
-  --surf-5: color-mix(in srgb, CanvasText 26%, Canvas);
-  --surf-6: color-mix(in srgb, CanvasText 32%, Canvas);
-  --surf-7: color-mix(in srgb, CanvasText 38%, Canvas);
-  --surf-8: color-mix(in srgb, CanvasText 44%, Canvas);
-  --surf-9: color-mix(in srgb, CanvasText 50%, Canvas);
-  --surf-10: color-mix(in srgb, CanvasText 56%, Canvas);
-  --surf-11: color-mix(in srgb, CanvasText 62%, Canvas);
+  --surf-1: color-mix(in srgb, CanvasText 4%, #{$surface});
+  --surf-2: color-mix(in srgb, CanvasText 8%, #{$surface});
+  --surf-3: color-mix(in srgb, CanvasText 14%, #{$surface});
+  --surf-4: color-mix(in srgb, CanvasText 20%, #{$surface});
+  --surf-5: color-mix(in srgb, CanvasText 26%, #{$surface});
+  --surf-6: color-mix(in srgb, CanvasText 32%, #{$surface});
+  --surf-7: color-mix(in srgb, CanvasText 38%, #{$surface});
+  --surf-8: color-mix(in srgb, CanvasText 44%, #{$surface});
+  --surf-9: color-mix(in srgb, CanvasText 50%, #{$surface});
+  --surf-10: color-mix(in srgb, CanvasText 56%, #{$surface});
+  --surf-11: color-mix(in srgb, CanvasText 62%, #{$surface});
 }
 
 @mixin gray-variables {

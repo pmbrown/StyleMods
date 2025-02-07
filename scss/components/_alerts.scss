@@ -1,17 +1,24 @@
 // ---------------------------------------------------------- 
 // Alerts
 // ----------------------------------------------------------
+$alert-text-color:        var(--alert-text, inherit);
+$alert-margin-bottom:     var(--alert-mb, 1rem);
+$alert-padding-block:     var(--alert-py, 0.66rem);
+$alert-padding-inline:    var(--alert-px, 1rem);
+$alert-border-color:      var(--alert-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+$alert-radius:            var(--alert-radius); 
+$alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canvas));
 
 @mixin alerts-css {
 
 .alert {
-  color: var(--alert-text, inherit);
-  margin-block-end: var(--alert-mb, 1rem);
-  padding-block: var(--alert-py, 0.66rem);
-  padding-inline: var(--alert-px, 1rem);
-  border: 1px solid var(--alert-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
-  border-radius: var(--alert-radius); 
-  background-color: var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canvas));
+  color: #{$alert-text-color};
+  margin-block-end: #{$alert-margin-bottom};
+  padding-block: #{$alert-padding-block};
+  padding-inline: #{$alert-padding-inline};
+  border: 1px solid #{$alert-border-color};
+  border-radius: #{$alert-radius}; 
+  background-color: #{$alert-background-color};
 }
 
 .alert * {
@@ -26,9 +33,10 @@
   inline-size: 100%;
   max-inline-size: 100%;  
   margin: initial;
-  margin-block-end: var(--alert-mb, 1rem);
-  padding-block: var(--alert-py, 0.5rem);
-  padding-inline-end: var(--alert-pe, 0.5rem);
+  margin-block-end: #{$alert-margin-bottom};
+  padding-block: #{$alert-padding-block};
+  padding-inline-end: #{$alert-padding-inline};
+  transition: none;
 }
 
 .alert [method="dialog"] {
@@ -38,7 +46,7 @@
 .alert [method="dialog"] button {
   background-color: transparent;
   border: none;
-  padding-block: 0.25rem;
+  padding-block: 0.1rem;
   padding-inline: 0.5rem;
   margin-inline-start: auto;
 }

@@ -1,0 +1,82 @@
+// ---------------------------------------------------------- 
+// Tables
+// ----------------------------------------------------------
+$table-margin-bottom:             var(--table-mb, 1rem) !default;
+$table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
+$table-py:                        var(--table-py, 0.313rem) !default;
+$table-px:                        var(--table-px, 0.75rem) !default;
+$thead-color:                     var(--thead-txt, inherit) !default;
+$thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
+$table-caption-padding-bottom:    0.5rem !default;
+$table-stripes-color:             var(--table-stripes-text, inherit) !default;
+$table-stripes-background-color:  var(--table-stripes, color-mix(in srgb, CanvasText 1%, Canvas)) !default;
+$table-hover-color:               var(--table-hover-text, inherit) !default;
+$table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasText 2%, Canvas)) !default;
+
+@mixin tables-css {
+
+:where(table) {
+  border-collapse: collapse;
+  inline-size: 100%;
+  margin-block-end: #{$table-margin-bottom};
+  font-variant-numeric: tabular-nums;
+}
+
+:where(caption) {
+  font-weight: bold;
+  text-align: left;
+  padding-block-end: #{$table-caption-padding-bottom};
+}
+
+:where(thead) th {
+  color: #{$thead-color};
+  background-color: #{$thead-background-color};
+}
+
+:where(thead) th:last-child {
+  border-inline-end-color: #{$table-border-color};
+}
+
+:where(th) {
+  font-weight: bold;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+:where(thead, tbody, tfoot, tr, td, th) {
+  border: 1px solid #{$table-border-color};
+  vertical-align: top;
+}
+
+:where(tbody, thead) th, td {
+  padding-block: #{$table-py};
+  padding-inline: #{$table-px};
+  white-space: nowrap;
+}
+
+:where(.table-striped tr):nth-child(even),
+:where(.table-combo tr):nth-child(even) {
+  color: #{$table-stripes-color};
+  background-color: #{$table-stripes-background-color};
+}
+
+:where(.table-hover tbody tr):hover,
+:where(.table-combo tbody tr):hover {
+  color: #{$table-hover-color};
+  background-color: #{$table-hover-background-color};
+}
+
+:where(.table-wrap) {
+  overflow-x: auto;
+  margin-block-end: var(--table-wrap-mb, 1rem);
+}
+
+:where(.table-wrap):focus {
+  outline: 0.188rem solid color-mix(in srgb, CanvasText 16%, Canvas);
+}
+
+:where(.table-wrap table) {
+  --table-mb: 0;
+}
+
+} // end table-css

@@ -4,103 +4,107 @@
 @use "sassmods" as *;
 
 // HTML
-$enable-typography:       true;
-$enable-forms-buttons:    true;
-$enable-tables:           true;
-$enable-smooth-scroll:    false;
-$enable-view-transition:  false;
+$enable-typography:         true;
+$enable-forms-buttons:      true;
+$enable-tables:             true;
+$enable-smooth-scroll:      false;
+$enable-view-transition:    false;
 
 // Utilities
-$enable-accordions:       true;
-$enable-alerts:           true;
-$enable-badges:           true;
-$enable-buttons:          true;
-$enable-cards:            true;
-$enable-containers:       true;
-$enable-display:          true;
-$enable-images:           true;
-$enable-lists:            true;
-$enable-margins:          true; // See _spacing.scss
-$enable-padding:          true; // See _spacing.scss
-$enable-shadows:          true;
-$enable-text:             true;
-$enable-vis-hidden:       true; // See _text.scss
-$enable-theme-switch:     false;
+$enable-accordions:         true;
+$enable-alerts:             true;
+$enable-badges:             true;
+$enable-buttons:            true;
+$enable-cards:              true;
+$enable-containers:         true;
+$enable-display:            true;
+$enable-dialogs:            true;
+$enable-dialogs-animate:    true;
+$enable-images:             true;
+$enable-lists:              true;
+$enable-margins:            true; // See _spacing.scss
+$enable-padding:            true; // See _spacing.scss
+$enable-popovers:           true;
+$enable-popovers-animate:   true;
+$enable-shadows:            true;
+$enable-text:               true;
+$enable-vis-hidden:         true; // See _text.scss
+$enable-theme-switch:       false;
 
 // Color variables
-$enable-surface:          true;
-$enable-grays:            true;
-$enable-blue:             true;
-$enable-red:              true;
-$enable-green:            true;
-$enable-orange:           true;
-$enable-cyan:             true;
-$enable-yellow:           true;
-$enable-purple:           true;
-$enable-pink:             true;
-$enable-olive:            true;
-$enable-color-utility:    true;
+$enable-surface:            true;
+$enable-grays:              true;
+$enable-blue:               true;
+$enable-red:                true;
+$enable-green:              true;
+$enable-orange:             true;
+$enable-cyan:               true;
+$enable-yellow:             true;
+$enable-purple:             true;
+$enable-pink:               true;
+$enable-olive:              true;
+$enable-bg-color-utility:   true;
 
 // Grids and gaps
-$enable-grid:             true;
-$enable-autogrid:         true;
-$enable-gaps:             true;
-$enable-bp-xl:            true; // 1601px
-$enable-bp-lg:            true; // 1281px
-$enable-bp-md:            true; // 1025px
-$enable-bp-sm:            true; // 769px
-$enable-bp-xs:            true; // 481px
+$enable-grid:               true;
+$enable-autogrid:           true;
+$enable-gaps:               true;
+$enable-bp-xl:              true;
+$enable-bp-lg:              true;
+$enable-bp-md:              true;
+$enable-bp-sm:              true;
+$enable-bp-xs:              true;
 
 // Icons
 // Utility styles
-$enable-icon-utilities:       true;
-$enable-icon-links-buttons:   true;
+$enable-icon-utilities:     true;
+$enable-icon-links-buttons: true;
 
 // Icon variables and classes
-$enable-icon-variables:       true;
-$enable-icon-classes:         true;
+$enable-icon-variables:     true;
+$enable-icon-classes:       true;
 
 // Default icons
-$enable-custom-icons:         true;
-$enable-house-svg:            true;
-$enable-email-svg:            true;
-$enable-plus-svg:             true;
-$enable-minus-svg:            true;
-$enable-bars-svg:             true;
-$enable-dots-h-svg:           true;
-$enable-dots-v-svg:           true;
-$enable-caret-down-svg:       true;
-$enable-caret-up-svg:         true;
-$enable-caret-right-svg:      true;
-$enable-caret-left-svg:       true;
-$enable-close-svg:            true;
-$enable-close-box-svg:        true;
-$enable-close-box-fill-svg:   true;
-$enable-box-svg:              true;
-$enable-pen-box-svg:          true;
-$enable-tick-box-svg:         true;
-$enable-ext-link-svg:         true;
-$enable-pg-link-svg:          true;
-$enable-search-svg:           true;
-$enable-download-svg:         true;
-$enable-user-svg:             true;
-$enable-question-svg:         true;
-$enable-sun-svg:              true;
-$enable-moon-svg:             true;
+$enable-custom-icons:       true;
+$enable-house-svg:          true;
+$enable-email-svg:          true;
+$enable-plus-svg:           true;
+$enable-minus-svg:          true;
+$enable-bars-svg:           true;
+$enable-dots-h-svg:         true;
+$enable-dots-v-svg:         true;
+$enable-caret-down-svg:     true;
+$enable-caret-up-svg:       true;
+$enable-caret-right-svg:    true;
+$enable-caret-left-svg:     true;
+$enable-close-svg:          true;
+$enable-close-box-svg:      true;
+$enable-close-box-fill-svg: true;
+$enable-box-svg:            true;
+$enable-pen-box-svg:        true;
+$enable-tick-box-svg:       true;
+$enable-ext-link-svg:       true;
+$enable-pg-link-svg:        true;
+$enable-search-svg:         true;
+$enable-download-svg:       true;
+$enable-user-svg:           true;
+$enable-question-svg:       true;
+$enable-sun-svg:            true;
+$enable-moon-svg:           true;
 
 // Brand icons
-$enable-rss-svg:              true;
-$enable-github-svg:           true;
-$enable-twitter-svg:          true;
-$enable-mastodon-svg:         true;
-$enable-tiktok-svg:           true;
-$enable-facebook-svg:         true;
-$enable-instagram-svg:        true;
-$enable-pinterest-svg:        true;
-$enable-codepen-svg:          true;
-$enable-reddit-svg:           true;
+$enable-rss-svg:            true;
+$enable-github-svg:         true;
+$enable-twitter-svg:        true;
+$enable-mastodon-svg:       true;
+$enable-tiktok-svg:         true;
+$enable-facebook-svg:       true;
+$enable-instagram-svg:      true;
+$enable-pinterest-svg:      true;
+$enable-codepen-svg:        true;
+$enable-reddit-svg:         true;
 
-@include versions;
+@include license;
 
 @if $enable-typography {
   @include typography-css;
@@ -148,6 +152,14 @@ $enable-reddit-svg:           true;
   @include containers-css;
 }
 
+@if $enable-dialogs {
+  @include dialogs-css;
+}
+
+@if $enable-dialogs-animate {
+  @include dialogs-animation-css;
+}
+
 @if $enable-display {
   @include display-css;
 }
@@ -166,6 +178,14 @@ $enable-reddit-svg:           true;
 
 @if $enable-padding {
   @include padding-css;
+}
+
+@if $enable-popovers {
+  @include popovers-css;
+}
+
+@if $enable-popovers-animate {
+  @include popovers-animation-css;
 }
 
 @if $enable-shadows {
@@ -230,8 +250,8 @@ $enable-reddit-svg:           true;
   }
 }
 
-@if $enable-color-utility {
-  @include color-bg-utility;
+@if $enable-bg-color-utility {
+  @include background-color-utility;
 }
 
 :where(html) {
