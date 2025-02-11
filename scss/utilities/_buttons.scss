@@ -8,7 +8,7 @@ $btn-padding-inline:      var(--btn-px, 0.75rem) !default;
 $btn-border-color:        var(--btn-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $btn-radius:              var(--btn-radius, 0.125em) !default;
 $btn-background-color:    var(--btn-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
-$btn-text-hover:          var(--btn-text-hover, CanvasText) !default;
+$btn-text-hover:          var(--btn-text-hover, var(--btn-text)) !default;
 $btn-background-hover:    var(--btn-hover, color-mix(in srgb, CanvasText 6%, Canvas)) !default;
 $btn-focus-shadow:        var(--btn-focus, 0 0 0 0.12rem) !default;
 $btn-focus-shadow-color:  var(--btn-focus-color, color-mix(in srgb, CanvasText 16%, Canvas)) !default;

@@ -178,7 +178,7 @@ $olive:     #556b2f !default;
   --olive-11: color-mix(in srgb, var(--olive-6) 30%, black);
 }
 
-%all-colors {
+@mixin all-color-variables {
   @include surface-variables;
   @include gray-variables;
   @include blue-variables;
@@ -194,6 +194,6 @@ $olive:     #556b2f !default;
 
 @mixin all-colors {
   :where(html) {
-    @extend %all-colors;
+    @include all-color-variables;
   } 
 }

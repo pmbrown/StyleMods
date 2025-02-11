@@ -1,57 +1,57 @@
 // ---------------------------------------------------------- 
 // Typography
 // ----------------------------------------------------------
-$text-color:                var(--text, CanvasText) !default;
-$background-color:          var(--background, Canvas) !default;
-$font-family:               system-ui, -apple-system, Arial, Helvetica, sans-serif !default;
-$html-font-size:            var(--html-fs, clamp(100%, 40% + 0.666vw, 140%)) !default;
-$body-font-size:            var(--body-fs, 1rem) !default;
-$body-font-weight:          var(--body-fw, normal) !default;
-$body-line-height:          var(--body-lh, 1.5) !default;
+$text-color:                  var(--text, CanvasText) !default;
+$background-color:            var(--background, Canvas) !default;
+$font-family:                 system-ui, -apple-system, Arial, Helvetica, sans-serif !default;
+$html-font-size:              var(--html-fs, clamp(100%, 40% + 0.666vw, 140%)) !default;
+$body-font-size:              var(--body-fs, 1rem) !default;
+$body-font-weight:            var(--body-fw, normal) !default;
+$body-line-height:            var(--body-lh, 1.5) !default;
 
-$link-color:                var(--link, LinkText) !default;
-$link-decoration-color:     color-mix(in srgb, var(--link, LinkText) 75%, Canvas) !default;
-$link-underline-offset:     0.1175em !default;
-$visited-color:             color-mix(in srgb, var(--visited, LinkText) 75%, white) !default;
-$visited-decoration-color:  color-mix(in srgb, var(--visited, LinkText) 50%, Canvas);
-$hover-color:               color-mix(in srgb, var(--hover, LinkText) 75%, white) !default;
+$link-color:                  var(--link, LinkText) !default;
+$link-decoration-color:       color-mix(in srgb, var(--link, LinkText) 75%, Canvas) !default;
+$link-underline-offset:       0.1175em !default;
+$visited-color:               color-mix(in srgb, var(--visited, LinkText) 75%, white) !default;
+$visited-decoration-color:    color-mix(in srgb, var(--visited, LinkText) 50%, Canvas);
+$hover-color:                 color-mix(in srgb, var(--hover, LinkText) 75%, white) !default;
 
-$heading-font-weight:       var(--heading-fw, 700) !default;
-$heading-line-height:       var(--heading-lh, 1.2) !default;
-$heading-text-wrap:         var(--heading-tw, pretty) !default;
-$heading-margin-bottom:     var(--heading-mb, 0.75rem) !default;
-$h1-font-size:              var(--h1-fs, 2rem) !default;
-$h2-font-size:              var(--h2-fs, 1.725rem) !default;
-$h3-font-size:              var(--h3-fs, 1.5rem) !default;
-$h4-font-size:              var(--h4-fs, 1.35rem) !default;
-$h5-font-size:              var(--h5-fs, 1.2rem) !default;
-$h6-font-size:              var(--h6-fs, 1.063rem) !default;
+$heading-font-weight:         var(--heading-fw, 700) !default;
+$heading-line-height:         var(--heading-lh, 1.2) !default;
+$heading-text-wrap:           var(--heading-tw, pretty) !default;
+$heading-margin-bottom:       var(--heading-mb, 0.75rem) !default;
+$h1-font-size:                var(--h1-fs, 2rem) !default;
+$h2-font-size:                var(--h2-fs, 1.725rem) !default;
+$h3-font-size:                var(--h3-fs, 1.5rem) !default;
+$h4-font-size:                var(--h4-fs, 1.35rem) !default;
+$h5-font-size:                var(--h5-fs, 1.2rem) !default;
+$h6-font-size:                var(--h6-fs, 1.063rem) !default;
 
-$para-margin-bottom:        var(--para-mb, 1rem) !default;
-$para-text-wrap:            var(--para-tw, pretty) !default;
-$list-margin-bottom:        var(--list-mb, 1rem) !default;
-$list-text-wrap:            var(--list-tw, pretty) !default;
-$list-indent:               var(--li-ps, 2rem) !default;
-$dl-list-indent:            var(--dd-ms, 1rem) !default;
+$para-margin-bottom:          var(--para-mb, 1rem) !default;
+$para-text-wrap:              var(--para-tw, pretty) !default;
+$list-margin-bottom:          var(--list-mb, 1rem) !default;
+$list-text-wrap:              var(--list-tw, pretty) !default;
+$list-indent:                 var(--li-ps, 2rem) !default;
+$dl-list-indent:              var(--dd-ms, 1rem) !default;
 
-$small-font-size:           0.906em !default;
-$small-font-size-heading:   0.75em !default;
-$code-color:                color-mix(in srgb, CanvasText 60%, Canvas) !default;
-$kbd-py:                    0.1em !default;
-$kbd-px:                    0.35em !default;
-$kbd-bg:                    color-mix(in srgb, CanvasText 5%, Canvas) !default;
-$kbd-radius:                0.125em !default;
+$small-font-size:             0.906em !default;
+$small-font-size-heading:     0.75em !default;
+$code-color:                  color-mix(in srgb, CanvasText 60%, Canvas) !default;
+$kbd-padding-block:           0.1em !default;
+$kbd-padding-inline:          0.35em !default;
+$kbd-background-color:        color-mix(in srgb, CanvasText 5%, Canvas) !default;
+$kbd-radius:                  0.125em !default;
 
-$pre-padding:               1rem !default;
-$pre-margin-bottom:         1rem !default;
-$pre-border-color:          color-mix(in srgb, CanvasText 12%, Canvas) !default;;
-$pre-background-color:      color-mix(in srgb, CanvasText 1%, Canvas) !default;;
-$blockquote-py:             0.75rem !default;
-$blockquote-px:             1rem !default;
-$blockquote-margin-bottom:  1rem !default;
-$blockquote-border-color:   color-mix(in srgb, CanvasText 12%, Canvas) !default;
-$blockquote-border:         1px !default;
-$blockquote-border-left:    10px !default;
+$pre-padding:                 1rem !default;
+$pre-margin-bottom:           1rem !default;
+$pre-border-color:            color-mix(in srgb, CanvasText 12%, Canvas) !default;;
+$pre-background-color:        color-mix(in srgb, CanvasText 1%, Canvas) !default;;
+$blockquote-padding-block:    0.75rem !default;
+$blockquote-padding-inline:   1rem !default;
+$blockquote-margin-bottom:    1rem !default;
+$blockquote-border-color:     color-mix(in srgb, CanvasText 12%, Canvas) !default;
+$blockquote-border:           1px !default;
+$blockquote-border-left:      10px !default;
 
 @mixin typography-css {
 
@@ -196,9 +196,9 @@ a > :where(code) {
 }
 
 :where(kbd) {
-  padding-block: #{$kbd-py};
-  padding-inline: #{$kbd-px};
-  background-color: #{$kbd-bg};
+  padding-block: #{$kbd-padding-block};
+  padding-inline: #{$kbd-padding-inline};
+  background-color: #{$kbd-background-color};
   border-radius: #{$kbd-radius};
 }
 
@@ -221,8 +221,8 @@ a > :where(code) {
 }
 
 :where(blockquote) {
-  padding-block: #{$blockquote-py};
-  padding-inline: #{$blockquote-px};
+  padding-block: #{$blockquote-padding-block};
+  padding-inline: #{$blockquote-padding-inline};
   margin-block-end: #{$blockquote-margin-bottom};
   border: #{$blockquote-border} solid #{$blockquote-border-color};
   border-inline-start-width: #{$blockquote-border-left};

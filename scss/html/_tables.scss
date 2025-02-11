@@ -3,9 +3,9 @@
 // ----------------------------------------------------------
 $table-margin-bottom:             var(--table-mb, 1rem) !default;
 $table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
-$table-py:                        var(--table-py, 0.313rem) !default;
-$table-px:                        var(--table-px, 0.75rem) !default;
-$thead-color:                     var(--thead-txt, inherit) !default;
+$table-padding-block:             var(--table-py, 0.313rem) !default;
+$table-padding-inline:            var(--table-px, 0.75rem) !default;
+$thead-text-color:                     var(--thead-txt, inherit) !default;
 $thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 $table-caption-padding-bottom:    0.5rem !default;
 $table-stripes-color:             var(--table-stripes-text, inherit) !default;
@@ -29,7 +29,7 @@ $table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasTe
 }
 
 :where(thead) th {
-  color: #{$thead-color};
+  color: #{$thead-text-color};
   background-color: #{$thead-background-color};
 }
 
@@ -49,8 +49,8 @@ $table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasTe
 }
 
 :where(tbody, thead) th, td {
-  padding-block: #{$table-py};
-  padding-inline: #{$table-px};
+  padding-block: #{$table-padding-block};
+  padding-inline: #{$table-padding-inline};
   white-space: nowrap;
 }
 

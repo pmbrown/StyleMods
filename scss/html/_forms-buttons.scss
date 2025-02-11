@@ -5,21 +5,21 @@ $button-form-font-family:  inherit !default;
 $input-focus-shadow:       var(--input-focus, 0 0 0 0.12rem) !default;
 $input-focus-color:        var(--input-focus-color, color-mix(in srgb, CanvasText 16%, Canvas)) !default;
 
-$button-color:             var(--button-color, inherit) !default;
-$button-size:              var(--button-fs, inherit) !default;
+$button-text-color:        var(--button-color, inherit) !default;
+$button-font-size:         var(--button-fs, inherit) !default;
 $button-line-height:       var(--button-lh, inherit) !default;
-$button-py:                var(--button-py, 0.313rem) !default;
-$button-px:                var(--button-px, 0.75rem) !default;
+$button-padding-block:     var(--button-py, 0.313rem) !default;
+$button-padding-inline:    var(--button-px, 0.75rem) !default;
 $button-border-color:      var(--button-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $button-radius:            var(--button-radius, 0.188rem) !default;
 $button-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 $button-background-hover:  var(--button-hover, color-mix(in srgb, CanvasText 6%, Canvas)) !default;
 
-$form-color:               var(--form-color, inherit) !default;
-$form-size:                var(--form-fs, inherit) !default;
+$form-text-color:          var(--form-color, inherit) !default;
+$form-font-size:           var(--form-fs, inherit) !default;
 $form-line-height:         var(--form-lh, inherit) !default;
-$form-py:                  var(--form-py, 0.313rem) !default;
-$form-px:                  var(--form-px, 0.5rem) !default;
+$form-padding-block:       var(--form-py, 0.313rem) !default;
+$form-padding-inline:      var(--form-px, 0.5rem) !default;
 $form-border-color:        var(--form-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $form-radius:              var(--form-radius, 0.188rem) !default;
 $form-background-color:    var(--form-bg, Canvas) !default;
@@ -27,10 +27,10 @@ $accent-color:             var(--accent, initial) !default;
 $fieldset-border-color:    var(--form-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $fieldset-radius:          0.125em !default;
 $fieldset-margin-bottom:   1.25rem !default;
-$fieldset-px:              1.25rem !default;
+$fieldset-padding-inline:  1.25rem !default;
 $legend-margin-bottom:     0.25rem !default;
-$legend-py:                var(--form-py, 0.313rem) !default;
-$legend-px:                0.75rem !default;
+$legend-padding-block:     var(--form-py, 0.313rem) !default;
+$legend-padding-inline:    0.75rem !default;
 $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 
 @mixin forms-buttons-css {
@@ -42,11 +42,11 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 
 :where(button, [type=button], [type=submit], [type=reset]),
 ::file-selector-button {
-  color: #{$button-color};
-  font-size: #{$button-size};
+  color: #{$button-text-color};
+  font-size: #{$button-font-size};
   line-height: #{$button-line-height};
-  padding-block: #{$button-py};
-  padding-inline: #{$button-px};
+  padding-block: #{$button-padding-block};
+  padding-inline: #{$button-padding-inline};
   border: 1px solid #{$button-border-color};
   border-radius: #{$button-radius};
   background-color: #{$button-background-color};
@@ -54,11 +54,11 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 }
 
 :where(select, optgroup, textarea, input:not([type=button], [type=submit], [type=reset])) {
-  color: #{$form-color};
-  font-size: #{$form-size};
+  color: #{$form-text-color};
+  font-size: #{$form-font-size};
   line-height: #{$form-line-height};
-  padding-block: #{$form-py};
-  padding-inline: #{$form-px};
+  padding-block: #{$form-padding-block};
+  padding-inline: #{$form-padding-inline};
   border: 1px solid #{$form-border-color};
   border-radius: #{$form-radius};
   background-color: #{$form-background-color};
@@ -143,13 +143,13 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 
 :where(fieldset) {
   margin-block-end: #{$fieldset-margin-bottom};
-  padding-inline: #{$fieldset-px};
+  padding-inline: #{$fieldset-padding-inline};
 }
 
 :where(legend) {
   margin-block-end: #{$legend-margin-bottom};
-  padding-block: #{$legend-py};
-  padding-inline: #{$legend-px};
+  padding-block: #{$legend-padding-block};
+  padding-inline: #{$legend-padding-inline};
   background-color: #{$legend-background-color};
 }
 
