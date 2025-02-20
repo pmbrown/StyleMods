@@ -1,0 +1,229 @@
+//  ------------------------------------------------------------
+//  Alignment
+//  ------------------------------------------------------------
+$flex-start:      flex-start;
+$flex-end:        flex-end;
+$start:           start;
+$end:             end;
+$center:          center;
+$space-around:    space-around;
+$space-between:   space-between;
+$space-evenly:    space-evenly;
+
+$alignment-1: (
+  "flex-start": $flex-start,
+  "flex-end": $flex-end,
+  "start": $start,
+  "end": $end,
+  "center": $center,
+  "space-around": $space-around,
+  "space-between": $space-between,
+  "space-evenly": $space-evenly,
+) !default;
+
+$alignment-2: (
+  "flex-start": $flex-start,
+  "flex-end": $flex-end,
+  "start": $start,
+  "end": $end,
+  "center": $center,
+) !default;
+
+// Mixins
+@mixin alignment-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name} {
+      place-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name} {
+      justify-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name} {
+      align-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name} {
+      align-items: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .as-#{$name} {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Mixin breakpoints
+// Extra large
+@mixin alignment-xl-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-xl {
+      place-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-xl {
+      justify-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-xl {
+      align-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-xl {
+      align-items: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-xl {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Large
+@mixin alignment-lg-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-lg {
+      place-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-lg {
+      justify-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-lg {
+      align-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-lg {
+      align-items: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-lg {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Medium
+@mixin alignment-md-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-md {
+      place-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-md {
+      justify-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-md {
+      align-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-md {
+      align-items: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-md {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Small
+@mixin alignment-sm-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-sm {
+      place-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-sm {
+      justify-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-sm {
+      align-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-sm {
+      align-items: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-sm {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Extra small
+@mixin alignment-xs-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-xs {
+      place-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-xs {
+      justify-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-xs {
+      align-content: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-xs {
+      align-items: #{$value};
+    }
+  }
+  
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-xs {
+      align-self: #{$value};
+    }
+  }
+}

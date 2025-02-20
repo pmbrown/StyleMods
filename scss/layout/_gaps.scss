@@ -1,0 +1,138 @@
+// ---------------------------------------------------------- 
+// Gaps
+// ----------------------------------------------------------
+$gap-0:   0 !default;
+$gap-1:   0.25rem !default;
+$gap-2:   0.5rem !default;
+$gap-3:   1rem !default;
+$gap-4:   1.5rem !default;
+$gap-5:   2rem !default;
+
+$gaps: (
+  "0": $gap-0,
+  "1": $gap-1,
+  "2": $gap-2,
+  "3": $gap-3,
+  "4": $gap-4,
+  "5": $gap-5,
+) !default;
+
+@mixin gaps-css {  
+  @each $name, $value in $gaps {
+  .gap-#{$name} {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-c-#{$name} {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-r-#{$name} {
+      row-gap: #{$value};        
+    }
+  }
+}
+
+@mixin gaps-xl-css {  
+  @each $name, $value in $gaps {
+  .gap-#{$name}-xl {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-c-#{$name}-xl {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-r-#{$name}-xl {
+      row-gap: #{$value};        
+    }
+  }
+}
+
+@mixin gaps-lg-css {  
+  @each $name, $value in $gaps {
+  .gap-#{$name}-lg {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-c-#{$name}-lg {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-r-#{$name}-lg {
+      row-gap: #{$value};        
+    }
+  }
+}
+
+@mixin gaps-md-css {  
+  @each $name, $value in $gaps {
+  .gap-#{$name}-md {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-c-#{$name}-md {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-r-#{$name}-md {
+      row-gap: #{$value};        
+    }
+  }
+}
+
+@mixin gaps-sm-css {  
+  @each $name, $value in $gaps {
+  .gap-#{$name}-sm {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-c-#{$name}-sm {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-r-#{$name}-sm {
+      row-gap: #{$value};        
+    }
+  }
+}
+
+@mixin gaps-xs-css {  
+  @each $name, $value in $gaps {
+  .gap-#{$name}-xs {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-c-#{$name}-xs {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gaps {
+  .gap-r-#{$name}-xs {
+      row-gap: #{$value};        
+    }
+  }
+}

@@ -1,0 +1,181 @@
+// ---------------------------------------------------------- 
+// Grids
+// ----------------------------------------------------------
+$g-1:     minmax(0, 1fr);
+$g-2:     repeat(2, minmax(0, 1fr));
+$g-3:     repeat(3, minmax(0, 1fr));
+$g-4:     repeat(4, minmax(0, 1fr));
+$g-5:     repeat(5, minmax(0, 1fr));
+$g-6:     repeat(6, minmax(0, 1fr));
+$g-7:     repeat(7, minmax(0, 1fr));
+$g-8:     repeat(8, minmax(0, 1fr));
+$g-9:     repeat(9, minmax(0, 1fr));
+$g-10:    repeat(10, minmax(0, 1fr));
+$g-11:    repeat(11, minmax(0, 1fr));
+$g-12:    repeat(12, minmax(0, 1fr));
+
+$ga-1:    auto;
+$ga-2:    repeat(2, minmax(0, auto));
+$ga-3:    repeat(3, minmax(0, auto));
+$ga-4:    repeat(4, minmax(0, auto));
+$ga-5:    repeat(5, minmax(0, auto));
+$ga-6:    repeat(6, minmax(0, auto));
+$ga-7:    repeat(7, minmax(0, auto));
+$ga-8:    repeat(8, minmax(0, auto));
+$ga-9:    repeat(9, minmax(0, auto));
+$ga-10:   repeat(10, minmax(0, auto));
+$ga-11:   repeat(11, minmax(0, auto));
+$ga-12:   repeat(12, minmax(0, auto));
+
+$grid: (
+  "g-1": $g-1,
+  "g-2": $g-2,
+  "g-3": $g-3,
+  "g-4": $g-4,
+  "g-5": $g-5,
+  "g-6": $g-6,
+  "g-7": $g-7,
+  "g-8": $g-8,
+  "g-9": $g-9,
+  "g-10": $g-10,
+  "g-11": $g-11,
+  "g-12": $g-12,
+) !default;
+
+$autogrid: (
+  "ga-1": $ga-1,
+  "ga-2": $ga-2,
+  "ga-3": $ga-3,
+  "ga-4": $ga-4,
+  "ga-5": $ga-5,
+  "ga-6": $ga-6,
+  "ga-7": $ga-7,
+  "ga-8": $ga-8,
+  "ga-9": $ga-9,
+  "ga-10": $ga-10,
+  "ga-11": $ga-11,
+  "ga-12": $ga-12,
+) !default;
+
+@mixin grid-utility {
+  display: grid;
+  grid-template-columns: var(--gtc);
+  grid-template-rows: var(--gtr);
+}
+
+@mixin grid-utility-css {
+  .grid {
+    @include grid-utility;
+  }
+}
+
+@mixin grid-variables {
+  @each $name, $value in $grid {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin autogrid-variables {
+  @each $name, $value in $autogrid {
+    --#{$name}: #{$value};
+  }
+}
+
+// Default grid
+@mixin grid-css {
+  @each $name, $value in $grid {
+    .#{$name} {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+// Breakpoints
+@mixin grid-xl-css {
+  @each $name, $value in $grid {
+    .#{$name}-xl {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-lg-css {
+  @each $name, $value in $grid {
+    .#{$name}-lg {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-md-css {
+  @each $name, $value in $grid {
+    .#{$name}-md {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-sm-css {
+  @each $name, $value in $grid {
+    .#{$name}-sm {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-xs-css {
+  @each $name, $value in $grid {
+    .#{$name}-xs {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-css {
+  @each $name, $value in $autogrid {
+    .#{$name} {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+// Autogrid
+@mixin autogrid-xl-css {
+  @each $name, $value in $autogrid {
+    .#{$name}-xl {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-lg-css {
+  @each $name, $value in $autogrid {
+    .#{$name}-lg {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-md-css {
+  @each $name, $value in $autogrid {
+    .#{$name}-md {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-sm-css {
+  @each $name, $value in $autogrid {
+    .#{$name}-sm {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-xs-css {
+  @each $name, $value in $autogrid {
+    .#{$name}-xs {
+      --gtc: var(--#{$name});        
+    }
+  }
+}

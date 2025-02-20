@@ -2,110 +2,143 @@
 // SassMods framework
 // ----------------------------------------------------------
 @use "sassmods" as *;
+@use "overrides" as *;
+
+$breakpoint-xl:   1601px !default;
+$breakpoint-lg:   1281px !default;
+$breakpoint-md:   1025px !default;
+$breakpoint-sm:   769px !default;
+$breakpoint-xs:   481px !default;
 
 // HTML
-$enable-typography:         true;
-$enable-forms-buttons:      true;
-$enable-tables:             true;
-$enable-smooth-scroll:      false;
-$enable-view-transition:    false;
+$enable-typography:             true;
+$enable-forms-buttons:          true;
+$enable-tables:                 true;
+$enable-smooth-scroll:          false;
+$enable-view-transition:        false;
+
+// Color
+$enable-surface:                true;
+$enable-grays:                  true;
+$enable-blue:                   true;
+$enable-red:                    true;
+$enable-green:                  true;
+$enable-orange:                 true;
+$enable-cyan:                   true;
+$enable-yellow:                 true;
+$enable-purple:                 true;
+$enable-pink:                   true;
+$enable-olive:                  true;
+$enable-theme-switch:           false;
+$enable-bg-color-utility:       true;
+
+// Components (see icons below)
+$enable-accordions:             true;
+$enable-alerts:                 true;
+$enable-cards:                  true;
+$enable-dialogs:                true;
+$enable-dialogs-animate:        true;
+$enable-popovers:               true;
+$enable-popovers-animate:       true;
 
 // Utilities
-$enable-accordions:         true;
-$enable-alerts:             true;
-$enable-badges:             true;
-$enable-buttons:            true;
-$enable-cards:              true;
-$enable-containers:         true;
-$enable-display:            true;
-$enable-dialogs:            true;
-$enable-dialogs-animate:    true;
-$enable-images:             true;
-$enable-lists:              true;
-$enable-margins:            true; // See _spacing.scss
-$enable-padding:            true; // See _spacing.scss
-$enable-popovers:           true;
-$enable-popovers-animate:   true;
-$enable-shadows:            true;
-$enable-text:               true;
-$enable-vis-hidden:         true; // See _text.scss
-$enable-theme-switch:       false;
+$enable-badges:                 true;
+$enable-buttons:                true;
+$enable-images:                 true;
+$enable-lists:                  true;
+$enable-shadows:                true;
+$enable-text:                   true;
+$enable-vis-hidden:             true; // See _text.scss
 
-// Color variables
-$enable-surface:            true;
-$enable-grays:              true;
-$enable-blue:               true;
-$enable-red:                true;
-$enable-green:              true;
-$enable-orange:             true;
-$enable-cyan:               true;
-$enable-yellow:             true;
-$enable-purple:             true;
-$enable-pink:               true;
-$enable-olive:              true;
-$enable-bg-color-utility:   true;
+// Layout breakpoints
+$enable-breakpoint-xl:          true;
+$enable-breakpoint-lg:          true;
+$enable-breakpoint-md:          true;
+$enable-breakpoint-sm:          true;
+$enable-breakpoint-xs:          true;
 
-// Grids and gaps
-$enable-grid:               true;
-$enable-autogrid:           true;
-$enable-gaps:               true;
-$enable-bp-xl:              true;
-$enable-bp-lg:              true;
-$enable-bp-md:              true;
-$enable-bp-sm:              true;
-$enable-bp-xs:              true;
+// Layout utilities
+$enable-alignment:              true;
+$enable-block:                  true;
+$enable-containers:             true;
+$enable-flex:                   true;
+$enable-grid:                   true;
+$enable-autogrid:               true;
+$enable-gaps:                   true;
+$enable-inset:                  true;
+$enable-position:               true;
+$enable-order:                  true;
+$enable-sizes:                  true;
+$enable-z-index:                true;
+$enable-margins:                true;
+$enable-padding:                true;
 
-// Icons
-// Utility styles
-$enable-icon-utilities:     true;
-$enable-icon-links-buttons: true;
+// Layout utilities breakpoints
+$enable-alignment-breakpoints:  false;
+$enable-block-breakpoints:      false;
+$enable-flex-breakpoints:       false;
+$enable-grid-breakpoints:       true;
+$enable-autogrid-breakpoints:   true;
+$enable-gaps-breakpoints:       true;
+$enable-inset-breakpoints:      false;
+$enable-position-breakpoints:   false;
+$enable-order-breakpoints:      false;
+$enable-sizes-breakpoints:      false;
+$enable-z-index-breakpoints:    false;
+$enable-margins-breakpoints:    false;
+$enable-padding-breakpoints:    false;
+
+// Icons utility styles
+$enable-icon-utilities:         true;
+$enable-icon-links-buttons:     true;
 
 // Icon variables and classes
-$enable-icon-variables:     true;
-$enable-icon-classes:       true;
+$enable-icon-variables:         true;
+$enable-icon-classes:           true;
 
 // Default icons
-$enable-custom-icons:       true;
-$enable-house-svg:          true;
-$enable-email-svg:          true;
-$enable-plus-svg:           true;
-$enable-minus-svg:          true;
-$enable-bars-svg:           true;
-$enable-dots-h-svg:         true;
-$enable-dots-v-svg:         true;
-$enable-caret-down-svg:     true;
-$enable-caret-up-svg:       true;
-$enable-caret-right-svg:    true;
-$enable-caret-left-svg:     true;
-$enable-close-svg:          true;
-$enable-close-box-svg:      true;
-$enable-close-box-fill-svg: true;
-$enable-box-svg:            true;
-$enable-pen-box-svg:        true;
-$enable-tick-box-svg:       true;
-$enable-ext-link-svg:       true;
-$enable-pg-link-svg:        true;
-$enable-search-svg:         true;
-$enable-download-svg:       true;
-$enable-user-svg:           true;
-$enable-question-svg:       true;
-$enable-sun-svg:            true;
-$enable-moon-svg:           true;
+$enable-custom-icons:           true;
+$enable-house-svg:              true;
+$enable-email-svg:              true;
+$enable-plus-svg:               true;
+$enable-minus-svg:              true;
+$enable-bars-svg:               true;
+$enable-dots-h-svg:             true;
+$enable-dots-v-svg:             true;
+$enable-caret-down-svg:         true;
+$enable-caret-up-svg:           true;
+$enable-caret-right-svg:        true;
+$enable-caret-left-svg:         true;
+$enable-close-svg:              true;
+$enable-close-box-svg:          true;
+$enable-close-box-fill-svg:     true;
+$enable-box-svg:                true;
+$enable-pen-box-svg:            true;
+$enable-tick-box-svg:           true;
+$enable-ext-link-svg:           true;
+$enable-pg-link-svg:            true;
+$enable-search-svg:             true;
+$enable-download-svg:           true;
+$enable-user-svg:               true;
+$enable-question-svg:           true;
+$enable-sun-svg:                true;
+$enable-moon-svg:               true;
 
 // Brand icons
-$enable-rss-svg:            true;
-$enable-github-svg:         true;
-$enable-twitter-svg:        true;
-$enable-mastodon-svg:       true;
-$enable-tiktok-svg:         true;
-$enable-facebook-svg:       true;
-$enable-instagram-svg:      true;
-$enable-pinterest-svg:      true;
-$enable-codepen-svg:        true;
-$enable-reddit-svg:         true;
+$enable-rss-svg:                true;
+$enable-github-svg:             true;
+$enable-twitter-svg:            true;
+$enable-mastodon-svg:           true;
+$enable-tiktok-svg:             true;
+$enable-facebook-svg:           true;
+$enable-instagram-svg:          true;
+$enable-pinterest-svg:          true;
+$enable-codepen-svg:            true;
+$enable-reddit-svg:             true;
 
 @include license;
 
+// HTML
 @if $enable-typography {
   @include typography-css;
 }
@@ -128,82 +161,7 @@ $enable-reddit-svg:         true;
   @include tables-css;
 }
 
-@if $enable-accordions {
-  @include accordions-css;
-}
-
-@if $enable-alerts {
-  @include alerts-css;
-}
-
-@if $enable-badges {
-  @include badges-css;
-}
-
-@if $enable-buttons {
-  @include buttons-css;
-}
-
-@if $enable-cards {
-  @include cards-css;
-}
-
-@if $enable-containers {
-  @include containers-css;
-}
-
-@if $enable-dialogs {
-  @include dialogs-css;
-}
-
-@if $enable-dialogs-animate {
-  @include dialogs-animation-css;
-}
-
-@if $enable-display {
-  @include display-css;
-}
-
-@if $enable-images {
-  @include images-css;
-}
-
-@if $enable-lists {
-  @include lists-css;
-}
-
-@if $enable-margins {
-  @include margins-css;
-}
-
-@if $enable-padding {
-  @include padding-css;
-}
-
-@if $enable-popovers {
-  @include popovers-css;
-}
-
-@if $enable-popovers-animate {
-  @include popovers-animation-css;
-}
-
-@if $enable-shadows {
-  @include shadows-css;
-}
-
-@if $enable-text {
-  @include text-css;
-}
-
-@if $enable-vis-hidden {
-  @include vis-hidden-css;
-}
-
-@if $enable-theme-switch {
-  @include theme-switch-css;
-}
-
+// Color
 :where(html) {
   @if $enable-surface {
     @include surface-variables;
@@ -254,58 +212,216 @@ $enable-reddit-svg:         true;
   @include background-color-utility;
 }
 
+@if $enable-theme-switch {
+  @include theme-switch-css;
+}
+
+// Components
+@if $enable-accordions {
+  @include accordions-css;
+}
+
+@if $enable-alerts {
+  @include alerts-css;
+}
+
+@if $enable-cards {
+  @include cards-css;
+}
+
+@if $enable-dialogs {
+  @include dialogs-css;
+}
+
+@if $enable-dialogs-animate {
+  @include dialogs-animation-css;
+}
+
+@if $enable-popovers {
+  @include popovers-css;
+}
+
+@if $enable-popovers-animate {
+  @include popovers-animation-css;
+}
+
+// Utilities
+@if $enable-badges {
+  @include badges-css;
+}
+
+@if $enable-buttons {
+  @include buttons-css;
+}
+
+@if $enable-images {
+  @include images-css;
+}
+
+@if $enable-lists {
+  @include lists-css;
+}
+
+@if $enable-shadows {
+  @include shadows-css;
+}
+
+@if $enable-text {
+  @include text-css;
+}
+
+@if $enable-vis-hidden {
+  @include vis-hidden-css;
+}
+
+// Layout
+@if $enable-alignment {
+  @include alignment-css;
+}
+
+@if $enable-block {
+  @include block-css;
+}
+
+@if $enable-containers {
+  @include containers-css;
+}
+
+@if $enable-flex {
+  @include flex-css;
+}
+
+@if $enable-inset {
+  @include inset-css;
+}
+
+@if $enable-order {
+  @include order-css;
+}
+
+@if $enable-position {
+  @include position-css;
+}
+
+@if $enable-sizes {
+  @include sizes-css;
+}
+
+@if $enable-z-index {
+  @include z-index-css;
+}
+
+@if $enable-margins {
+  @include margins-css;
+}
+
+@if $enable-padding {
+  @include padding-css;
+}
+
 :where(html) {
   @if $enable-grid {@include grid-variables;}
   @if $enable-autogrid {@include autogrid-variables;}  
 }
 
 @if $enable-grid or $enable-autogrid {
-  .grid {
-    @include grid-utility;
+  @include grid-utility-css;
+}
+
+@if $enable-grid {
+  @include grid-css;
+}
+
+@if $enable-autogrid {
+  @include autogrid-css;
+}
+
+@if $enable-gaps {
+  @include gaps-css;
+}
+
+@if $enable-breakpoint-xl {
+  @media (max-width: #{$breakpoint-xl}) {
+    @if $enable-grid-breakpoints {@include grid-xl-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-xl-css;}
+    @if $enable-gaps-breakpoints {@include gaps-xl-css;}
+    @if $enable-alignment-breakpoints {@include alignment-xl-css;}
+    @if $enable-block-breakpoints {@include block-xl-css;}
+    @if $enable-flex-breakpoints {@include flex-xl-css;}
+    @if $enable-inset-breakpoints {@include inset-xl-css;}
+    @if $enable-position-breakpoints {@include position-xl-css;}
+    @if $enable-order-breakpoints {@include order-xl-css;}
+    @if $enable-sizes-breakpoints {@include sizes-xl-css;}
+    @if $enable-margins-breakpoints {@include margins-xl-css;}
+    @if $enable-padding-breakpoints {@include padding-xl-css;}
   }
 }
 
-@if $enable-grid {@include grid;}
-@if $enable-autogrid {@include autogrid;}
-@if $enable-gaps { @include gaps; }
-
-@if $enable-bp-xl {
-  @media (max-width: #{$bp-xl}) {
-    @if $enable-grid {@include grid-xl;}
-    @if $enable-autogrid {@include autogrid-xl;}
-    @if $enable-gaps {@include gaps-xl;}
+@if $enable-breakpoint-lg {
+  @media (max-width: #{$breakpoint-lg}) {
+    @if $enable-grid-breakpoints {@include grid-lg-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-lg-css;}
+    @if $enable-gaps-breakpoints {@include gaps-lg-css;}
+    @if $enable-alignment-breakpoints {@include alignment-lg-css;}
+    @if $enable-block-breakpoints {@include block-lg-css;}
+    @if $enable-flex-breakpoints {@include flex-lg-css;}
+    @if $enable-inset-breakpoints {@include inset-lg-css;}
+    @if $enable-position-breakpoints {@include position-lg-css;}
+    @if $enable-order-breakpoints {@include order-lg-css;}
+    @if $enable-sizes-breakpoints {@include sizes-lg-css;}
+    @if $enable-margins-breakpoints {@include margins-lg-css;}
+    @if $enable-padding-breakpoints {@include padding-lg-css;}
   }
 }
 
-@if $enable-bp-lg {
-  @media (max-width: #{$bp-lg}) {
-    @if $enable-grid {@include grid-lg;}
-    @if $enable-autogrid {@include autogrid-lg;}
-    @if $enable-gaps {@include gaps-lg;}
+@if $enable-breakpoint-md {
+  @media (max-width: #{$breakpoint-md}) {
+    @if $enable-grid-breakpoints {@include grid-md-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-md-css;}
+    @if $enable-gaps-breakpoints {@include gaps-md-css;}
+    @if $enable-alignment-breakpoints {@include alignment-md-css;}
+    @if $enable-block-breakpoints {@include block-md-css;}
+    @if $enable-flex-breakpoints {@include flex-md-css;}
+    @if $enable-inset-breakpoints {@include inset-md-css;}
+    @if $enable-position-breakpoints {@include position-md-css;}
+    @if $enable-order-breakpoints {@include order-md-css;}
+    @if $enable-sizes-breakpoints {@include sizes-md-css;}
+    @if $enable-margins-breakpoints {@include margins-md-css;}
+    @if $enable-padding-breakpoints {@include padding-md-css;}
   }
 }
 
-@if $enable-bp-md {
-  @media (max-width: #{$bp-md}) {
-    @if $enable-grid {@include grid-md;}
-    @if $enable-autogrid {@include autogrid-md;}
-    @if $enable-gaps {@include gaps-md;}
+@if $enable-breakpoint-sm {
+  @media (max-width: #{$breakpoint-sm}) {
+    @if $enable-grid-breakpoints {@include grid-sm-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-sm-css;}
+    @if $enable-gaps-breakpoints {@include gaps-sm-css;}
+    @if $enable-alignment-breakpoints {@include alignment-sm-css;}
+    @if $enable-block-breakpoints {@include block-sm-css;}
+    @if $enable-flex-breakpoints {@include flex-sm-css;}
+    @if $enable-inset-breakpoints {@include inset-sm-css;}
+    @if $enable-position-breakpoints {@include position-sm-css;}
+    @if $enable-order-breakpoints {@include order-sm-css;}
+    @if $enable-sizes-breakpoints {@include sizes-sm-css;}
+    @if $enable-margins-breakpoints {@include margins-sm-css;}
+    @if $enable-padding-breakpoints {@include padding-sm-css;}
   }
 }
 
-@if $enable-bp-sm {
-  @media (max-width: #{$bp-sm}) {
-    @if $enable-grid {@include grid-sm;}
-    @if $enable-autogrid {@include autogrid-sm;}
-    @if $enable-gaps {@include gaps-sm;}
-  }
-}
-
-@if $enable-bp-xs {
-  @media (max-width: #{$bp-xs}) {
-    @if $enable-grid {@include grid-xs;}
-    @if $enable-autogrid {@include autogrid-xs;}
-    @if $enable-gaps {@include gaps-xs;}
+@if $enable-breakpoint-xs {
+  @media (max-width: #{$breakpoint-xs}) {
+    @if $enable-grid-breakpoints {@include grid-xs-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-xs-css;}
+    @if $enable-gaps-breakpoints {@include gaps-xs-css;}
+    @if $enable-alignment-breakpoints {@include alignment-xs-css;}
+    @if $enable-block-breakpoints {@include block-xs-css;}
+    @if $enable-flex-breakpoints {@include flex-xs-css;}
+    @if $enable-inset-breakpoints {@include inset-xs-css;}
+    @if $enable-position-breakpoints {@include position-xs-css;}
+    @if $enable-order-breakpoints {@include order-xs-css;}
+    @if $enable-sizes-breakpoints {@include sizes-xs-css;}
+    @if $enable-margins-breakpoints {@include margins-xs-css;}
+    @if $enable-padding-breakpoints {@include padding-xs-css;}
   }
 }
 

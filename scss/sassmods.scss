@@ -1,27 +1,11 @@
 // ---------------------------------------------------------- 
 // SassMods
 // ----------------------------------------------------------
-@forward "html/typography";
-@forward "html/forms-buttons";
-@forward "html/tables";
-@forward "color/colors";
-@forward "color/theme-switch";
-@forward "components/accordions";
-@forward "components/alerts";
-@forward "components/cards";
-@forward "components/dialogs";
-@forward "components/icons";
-@forward "components/popovers";
-@forward "utilities/badges";
-@forward "utilities/buttons";
-@forward "utilities/images";
-@forward "utilities/lists";
-@forward "utilities/shadows";
-@forward "utilities/text";
-@forward "layout/containers";
-@forward "layout/display";
-@forward "layout/grids-gaps";
-@forward "layout/spacing";
+@forward "html";
+@forward "color";
+@forward "components";
+@forward "utilities";
+@forward "layout";
 
 @mixin license {
 /*! SassMods - Copyright (c) 2025 Phil Brown MIT License (https://sassmods.com) */

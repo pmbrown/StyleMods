@@ -5,9 +5,11 @@ $table-margin-bottom:             var(--table-mb, 1rem) !default;
 $table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
 $table-padding-block:             var(--table-py, 0.313rem) !default;
 $table-padding-inline:            var(--table-px, 0.75rem) !default;
-$thead-text-color:                     var(--thead-txt, inherit) !default;
-$thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
+$table-caption-font-weight:       var(--table-caption-fw, bold) !default;
 $table-caption-padding-bottom:    0.5rem !default;
+$thead-text-color:                var(--thead-txt, inherit) !default;
+$thead-font-weight:               var(--thead-fw, bold) !default;
+$thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 $table-stripes-color:             var(--table-stripes-text, inherit) !default;
 $table-stripes-background-color:  var(--table-stripes, color-mix(in srgb, CanvasText 1%, Canvas)) !default;
 $table-hover-color:               var(--table-hover-text, inherit) !default;
@@ -23,7 +25,7 @@ $table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasTe
 }
 
 :where(caption) {
-  font-weight: bold;
+  font-weight: #{$table-caption-font-weight};
   text-align: left;
   padding-block-end: #{$table-caption-padding-bottom};
 }
@@ -38,7 +40,7 @@ $table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasTe
 }
 
 :where(th) {
-  font-weight: bold;
+  font-weight: #{$thead-font-weight};
   text-align: inherit;
   text-align: -webkit-match-parent;
 }

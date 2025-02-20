@@ -1,0 +1,64 @@
+//  ------------------------------------------------------------
+//  Position
+//  ------------------------------------------------------------
+$unset:     unset;
+$relative:  relative;
+$absolute:  absolute;
+$fixed:     fixed;
+$sticky:    sticky;
+
+$position: (
+  "pos-unset": $unset,
+  "pos-relative": $relative,
+  "pos-absolute": $absolute,
+  "pos-fixed": $fixed,
+  "pos-sticky": $sticky,
+) !default;
+
+@mixin position-css {
+  @each $name, $value in $position {
+    .#{$name} {
+      position: #{$value};
+    }
+  }
+}
+
+@mixin position-xl-css {
+  @each $name, $value in $position {
+    .#{$name}-xl {
+      position: #{$value};
+    }
+  }
+}
+
+@mixin position-lg-css {
+  @each $name, $value in $position {
+    .#{$name}-lg {
+      position: #{$value};
+    }
+  }
+}
+
+@mixin position-md-css {
+  @each $name, $value in $position {
+    .#{$name}-md {
+      position: #{$value};
+    }
+  }
+}
+
+@mixin position-sm-css {
+  @each $name, $value in $position {
+    .#{$name}-sm {
+      position: #{$value};
+    }
+  }
+}
+
+@mixin position-xs-css {
+  @each $name, $value in $position {
+    .#{$name}-xs {
+      position: #{$value};
+    }
+  }
+}

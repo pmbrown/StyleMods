@@ -10,6 +10,7 @@ $body-font-weight:            var(--body-fw, normal) !default;
 $body-line-height:            var(--body-lh, 1.5) !default;
 
 $link-color:                  var(--link, LinkText) !default;
+$link-decoration-width:       1px !default;
 $link-decoration-color:       color-mix(in srgb, var(--link, LinkText) 75%, Canvas) !default;
 $link-underline-offset:       0.1175em !default;
 $visited-color:               color-mix(in srgb, var(--visited, LinkText) 75%, white) !default;
@@ -27,6 +28,7 @@ $h4-font-size:                var(--h4-fs, 1.35rem) !default;
 $h5-font-size:                var(--h5-fs, 1.2rem) !default;
 $h6-font-size:                var(--h6-fs, 1.063rem) !default;
 
+$para-font-size:              var(--para-fs, inherit) !default;
 $para-margin-bottom:          var(--para-mb, 1rem) !default;
 $para-text-wrap:              var(--para-tw, pretty) !default;
 $list-margin-bottom:          var(--list-mb, 1rem) !default;
@@ -82,7 +84,7 @@ $blockquote-border-left:      10px !default;
   color: #{$link-color};
   overflow-wrap: break-word;
   text-decoration-color: #{$link-decoration-color};
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: #{$link-decoration-width};
   text-underline-offset: #{$link-underline-offset};
 }
 
@@ -133,6 +135,7 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(p) {
+  font-size: #{$para-font-size};
   text-wrap: #{$para-text-wrap};
   margin-block-end: #{$para-margin-bottom};
 }
@@ -287,3 +290,12 @@ a > :where(code) {
     navigation: auto;
   }
 }
+
+@mixin smooth-scroll-view-transition-combined {
+  @media (prefers-reduced-motion: no-preference) { 
+    @include smooth-scroll-css;
+    @include view-transition-css;
+  }
+}
+
+

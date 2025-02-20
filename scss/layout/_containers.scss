@@ -1,6 +1,11 @@
 // ---------------------------------------------------------- 
 // Containers
 // ----------------------------------------------------------
+$container-xl:  1600px !default;
+$container-lg:  1280px !default;
+$container-md:  1024px !default;
+$container-sm:  768px !default;
+$container-xs:  480px !default;
 
 @mixin containers-css {
 
@@ -12,23 +17,23 @@
 }
 
 .container-xl {
-  --size: 1600px;
+  --size: #{$container-xl};
 }
 
 .container-lg {
-  --size: 1280px;
+  --size: #{$container-lg};
 }
 
 .container-md {
-  --size: 1024px;
+  --size: #{$container-md};
 }
 
 .container-sm {
-  --size: 768px;
+  --size: #{$container-sm};
 }
 
 .container-xs {
-  --size: 480px;
+  --size: #{$container-xs};
 }
 
 } // end containers-css

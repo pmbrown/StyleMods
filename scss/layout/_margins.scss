@@ -1,0 +1,292 @@
+// ------------------------------------------------------------
+// Margins
+// ------------------------------------------------------------
+$margin-auto: auto;
+$margin-0: 0;
+$margin-1: .25rem !default;
+$margin-2: .5rem !default;
+$margin-3: 1rem !default;
+$margin-4: 1.5rem !default;
+$margin-5: 2rem !default;
+
+$margins-sizes: (
+  "auto": $margin-auto,
+  "0": $margin-0,
+  "1": $margin-1,
+  "2": $margin-2,
+  "3": $margin-3,
+  "4": $margin-4,
+  "5": $margin-5,
+) !default;
+
+@mixin margins-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name} {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name} {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name} {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name} {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name} {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name} {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name} {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+// Breakpoints
+// Extra large
+@mixin margins-xl-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-xl {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-xl {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-xl {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-xl {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-xl {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-xl {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-xl {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+// Large
+@mixin margins-lg-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-lg {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-lg {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-lg {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-lg {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-lg {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-lg {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-lg {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+// Medium
+@mixin margins-md-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-md {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-md {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-md {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-md {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-md {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-md {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-md {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+// Small
+@mixin margins-sm-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-sm {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-sm {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-sm {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-sm {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-sm {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-sm {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-sm {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+
+// Extra small
+
+@mixin margins-xs-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-xs {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-xs {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-xs {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-xs {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-xs {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-xs {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-xs {
+      margin-inline: #{$value};        
+    }
+  }
+}

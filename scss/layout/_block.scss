@@ -1,0 +1,63 @@
+//  ------------------------------------------------------------
+//  Block
+//  ------------------------------------------------------------
+
+@mixin block-css {
+  .block {
+    display: block;
+  }
+  
+  .block-inline {
+    display: inline-block;
+  }
+}
+
+@mixin block-xl-css {
+  .block-xl {
+    display: block;
+  }
+  
+  .block-inline-xl {
+    display: inline-block;
+  }
+}
+
+@mixin block-lg-css {
+  .block-lg {
+    display: block;
+  }
+  
+  .block-inline-lg {
+    display: inline-block;
+  }
+}
+
+@mixin block-md-css {
+  .block-md {
+    display: block;
+  }
+  
+  .block-inline-md {
+    display: inline-block;
+  }
+}
+
+@mixin block-sm-css {
+  .block-sm {
+    display: block;
+  }
+  
+  .block-inline-sm {
+    display: inline-block;
+  }
+}
+
+@mixin block-xs-css {
+  .block-xs {
+    display: block;
+  }
+  
+  .block-inline-xs {
+    display: inline-block;
+  }
+}

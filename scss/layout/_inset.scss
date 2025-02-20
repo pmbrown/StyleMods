@@ -1,0 +1,104 @@
+//  ------------------------------------------------------------
+//  Inset
+//  ------------------------------------------------------------
+$top:     inset-block-start;
+$bottom:  inset-block-end;
+$left:    inset-inline-start;
+$right:   inset-inline-end;
+
+$inset: (
+  "top": $top,
+  "bottom": $bottom,
+  "left": $left,
+  "right": $right,
+);
+
+@mixin inset-css {  
+  @each $name, $value in $inset {
+    .inset-#{$name} {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset {
+    .inset-#{$name}-unset {
+      #{$value}: unset;
+    }
+  }
+}
+
+@mixin inset-xl-css { 
+  @each $name, $value in $inset {
+    .inset-#{$name}-xl {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset {
+    .inset-#{$name}-unset-xl {
+      #{$value}: unset;
+    }
+  }
+}
+
+@mixin inset-lg-css {  
+  @each $name, $value in $inset {
+    .inset-#{$name}-lg {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset {
+    .inset-#{$name}-unset-lg {
+      #{$value}: unset;
+    }
+  }
+}
+
+@mixin inset-md-css {  
+  @each $name, $value in $inset {
+    .inset-#{$name}-md {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset {
+    .inset-#{$name}-unset-md {
+      #{$value}: unset;
+    }
+  }
+}
+
+@mixin inset-sm-css {  
+  @each $name, $value in $inset {
+    .#{$name}-sm {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset {
+    .#{$name}-unset-sm {
+      #{$value}: unset;
+    }
+  }
+}
+
+@mixin inset-xs-css {  
+  @each $name, $value in $inset {
+    .#{$name}-xs {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset {
+    .#{$name}-unset-xs {
+      #{$value}: unset;
+    }
+  }
+}
