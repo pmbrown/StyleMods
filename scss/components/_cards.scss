@@ -6,7 +6,7 @@ $card-padding-block:          var(--card-py, 1rem) !default;
 $card-padding-inline:         var(--card-px, 1rem) !default;
 $card-border-color:           var(--card-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $card-radius:                 var(--card-radius) !default;
-$card-background-color:       var(--card-bg, Canvas) !default;
+$card-background-color:       var(--card-bg) !default;
 $card-link-hover-text-color:  var(--card-text-hover, inherit) !default;
 $card-link-hover-background:  var(--card-hover, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 $card-link-focus-width:       var(--card-focus, 0.188rem) !default;
