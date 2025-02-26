@@ -1,181 +1,392 @@
 // ---------------------------------------------------------- 
 // Colors
 // ----------------------------------------------------------
-$surface:   Canvas !default;
-$gray:      #808080 !default;
-$blue:      #0066ff !default;
-$red:       #ff0000 !default;
-$green:     #006400 !default;
-$orange:    #ff8c00 !default;
-$cyan:      #00e6e6 !default;
-$yellow:    #ffff00 !default;
-$purple:    #6f42c1 !default;
-$pink:      #ff1493 !default;
-$olive:     #556b2f !default;
 
-@mixin background-color-props {
-  color: var(--bg-txt);
-  background-color: var(--bg-col);
+// Blue
+$blue:      #0066ff !default;
+$blue-1:    color-mix(in srgb, var(--blue) 40%, white) !default;
+$blue-2:    color-mix(in srgb, var(--blue) 50%, white) !default;
+$blue-3:    color-mix(in srgb, var(--blue) 60%, white) !default;
+$blue-4:    color-mix(in srgb, var(--blue) 70%, white) !default;
+$blue-5:    color-mix(in srgb, var(--blue) 80%, white) !default;
+$blue-6:    var(--blue) !default;  
+$blue-7:    color-mix(in srgb, var(--blue) 80%, black) !default;
+$blue-8:    color-mix(in srgb, var(--blue) 60%, black) !default;
+$blue-9:    color-mix(in srgb, var(--blue) 50%, black) !default;
+$blue-10:   color-mix(in srgb, var(--blue) 40%, black) !default;
+$blue-11:   color-mix(in srgb, var(--blue) 30%, black) !default;
+
+// Red
+$red:      #ff0000 !default;
+$red-1:    color-mix(in srgb, var(--red) 40%, white) !default;
+$red-2:    color-mix(in srgb, var(--red) 50%, white) !default;
+$red-3:    color-mix(in srgb, var(--red) 60%, white) !default;
+$red-4:    color-mix(in srgb, var(--red) 70%, white) !default;
+$red-5:    color-mix(in srgb, var(--red) 80%, white) !default;
+$red-6:    var(--red) !default;  
+$red-7:    color-mix(in srgb, var(--red) 80%, black) !default;
+$red-8:    color-mix(in srgb, var(--red) 60%, black) !default;
+$red-9:    color-mix(in srgb, var(--red) 50%, black) !default;
+$red-10:   color-mix(in srgb, var(--red) 40%, black) !default;
+$red-11:   color-mix(in srgb, var(--red) 30%, black) !default;
+
+// Green
+$green:      #006400 !default;
+$green-1:    color-mix(in srgb, var(--green) 40%, white) !default;
+$green-2:    color-mix(in srgb, var(--green) 50%, white) !default;
+$green-3:    color-mix(in srgb, var(--green) 60%, white) !default;
+$green-4:    color-mix(in srgb, var(--green) 70%, white) !default;
+$green-5:    color-mix(in srgb, var(--green) 80%, white) !default;
+$green-6:    var(--green) !default;  
+$green-7:    color-mix(in srgb, var(--green) 80%, black) !default;
+$green-8:    color-mix(in srgb, var(--green) 60%, black) !default;
+$green-9:    color-mix(in srgb, var(--green) 50%, black) !default;
+$green-10:   color-mix(in srgb, var(--green) 40%, black) !default;
+$green-11:   color-mix(in srgb, var(--green) 30%, black) !default;
+
+// Orange
+$orange:      #ff8c00 !default;
+$orange-1:    color-mix(in srgb, var(--orange) 40%, white) !default;
+$orange-2:    color-mix(in srgb, var(--orange) 50%, white) !default;
+$orange-3:    color-mix(in srgb, var(--orange) 60%, white) !default;
+$orange-4:    color-mix(in srgb, var(--orange) 70%, white) !default;
+$orange-5:    color-mix(in srgb, var(--orange) 80%, white) !default;
+$orange-6:    var(--orange) !default;  
+$orange-7:    color-mix(in srgb, var(--orange) 80%, black) !default;
+$orange-8:    color-mix(in srgb, var(--orange) 60%, black) !default;
+$orange-9:    color-mix(in srgb, var(--orange) 50%, black) !default;
+$orange-10:   color-mix(in srgb, var(--orange) 40%, black) !default;
+$orange-11:   color-mix(in srgb, var(--orange) 30%, black) !default;
+
+// Cyan
+$cyan:      #00e6e6 !default;
+$cyan-1:    color-mix(in srgb, var(--cyan) 40%, white) !default;
+$cyan-2:    color-mix(in srgb, var(--cyan) 50%, white) !default;
+$cyan-3:    color-mix(in srgb, var(--cyan) 60%, white) !default;
+$cyan-4:    color-mix(in srgb, var(--cyan) 70%, white) !default;
+$cyan-5:    color-mix(in srgb, var(--cyan) 80%, white) !default;
+$cyan-6:    var(--cyan) !default;  
+$cyan-7:    color-mix(in srgb, var(--cyan) 85%, black) !default;
+$cyan-8:    color-mix(in srgb, var(--cyan) 70%, black) !default;
+$cyan-9:    color-mix(in srgb, var(--cyan) 60%, black) !default;
+$cyan-10:   color-mix(in srgb, var(--cyan) 50%, black) !default;
+$cyan-11:   color-mix(in srgb, var(--cyan) 40%, black) !default;
+
+// Yellow
+$yellow:      #ffff00 !default;
+$yellow-1:    color-mix(in srgb, var(--yellow) 25%, white) !default;
+$yellow-2:    color-mix(in srgb, var(--yellow) 35%, white) !default;
+$yellow-3:    color-mix(in srgb, var(--yellow) 45%, white) !default;
+$yellow-4:    color-mix(in srgb, var(--yellow) 55%, white) !default;
+$yellow-5:    color-mix(in srgb, var(--yellow) 70%, white) !default;
+$yellow-6:    var(--yellow) !default;  
+$yellow-7:    color-mix(in srgb, var(--yellow) 85%, black) !default;
+$yellow-8:    color-mix(in srgb, var(--yellow) 75%, black) !default;
+$yellow-9:    color-mix(in srgb, var(--yellow) 62%, black) !default;
+$yellow-10:   color-mix(in srgb, var(--yellow) 55%, black) !default;
+$yellow-11:   color-mix(in srgb, var(--yellow) 45%, black) !default;
+
+// Purple
+$purple:      #6f42c1 !default;
+$purple-1:    color-mix(in srgb, var(--purple) 40%, white) !default;
+$purple-2:    color-mix(in srgb, var(--purple) 50%, white) !default;
+$purple-3:    color-mix(in srgb, var(--purple) 60%, white) !default;
+$purple-4:    color-mix(in srgb, var(--purple) 70%, white) !default;
+$purple-5:    color-mix(in srgb, var(--purple) 80%, white) !default;
+$purple-6:    var(--purple) !default;  
+$purple-7:    color-mix(in srgb, var(--purple) 75%, black) !default;
+$purple-8:    color-mix(in srgb, var(--purple) 65%, black) !default;
+$purple-9:    color-mix(in srgb, var(--purple) 55%, black) !default;
+$purple-10:   color-mix(in srgb, var(--purple) 45%, black) !default;
+$purple-11:   color-mix(in srgb, var(--purple) 35%, black) !default;
+
+// Pink
+$pink:      #ff1493 !default;
+$pink-1:    color-mix(in srgb, var(--pink) 40%, white) !default;
+$pink-2:    color-mix(in srgb, var(--pink) 50%, white) !default;
+$pink-3:    color-mix(in srgb, var(--pink) 60%, white) !default;
+$pink-4:    color-mix(in srgb, var(--pink) 70%, white) !default;
+$pink-5:    color-mix(in srgb, var(--pink) 80%, white) !default;
+$pink-6:    var(--pink) !default;  
+$pink-7:    color-mix(in srgb, var(--pink) 75%, black) !default;
+$pink-8:    color-mix(in srgb, var(--pink) 65%, black) !default;
+$pink-9:    color-mix(in srgb, var(--pink) 55%, black) !default;
+$pink-10:   color-mix(in srgb, var(--pink) 45%, black) !default;
+$pink-11:   color-mix(in srgb, var(--pink) 35%, black) !default;
+
+// Olive
+$olive:      #556b2f !default;
+$olive-1:    color-mix(in srgb, var(--olive) 40%, white) !default;
+$olive-2:    color-mix(in srgb, var(--olive) 50%, white) !default;
+$olive-3:    color-mix(in srgb, var(--olive) 60%, white) !default;
+$olive-4:    color-mix(in srgb, var(--olive) 70%, white) !default;
+$olive-5:    color-mix(in srgb, var(--olive) 80%, white) !default;
+$olive-6:    var(--olive) !default;  
+$olive-7:    color-mix(in srgb, var(--olive) 80%, black) !default;
+$olive-8:    color-mix(in srgb, var(--olive) 60%, black) !default;
+$olive-9:    color-mix(in srgb, var(--olive) 50%, black) !default;
+$olive-10:   color-mix(in srgb, var(--olive) 40%, black) !default;
+$olive-11:   color-mix(in srgb, var(--olive) 30%, black) !default;
+
+// Gray
+$gray:      #808080 !default;
+$gray-1:    color-mix(in srgb, var(--gray) 40%, white) !default;
+$gray-2:    color-mix(in srgb, var(--gray) 50%, white) !default;
+$gray-3:    color-mix(in srgb, var(--gray) 60%, white) !default;
+$gray-4:    color-mix(in srgb, var(--gray) 70%, white) !default;
+$gray-5:    color-mix(in srgb, var(--gray) 80%, white) !default;
+$gray-6:    var(--gray) !default;
+$gray-7:    color-mix(in srgb, var(--gray) 80%, black) !default;
+$gray-8:    color-mix(in srgb, var(--gray) 70%, black) !default;
+$gray-9:    color-mix(in srgb, var(--gray) 60%, black) !default;
+$gray-10:   color-mix(in srgb, var(--gray) 50%, black) !default;
+$gray-11:   color-mix(in srgb, var(--gray) 40%, black) !default;
+
+// Surface color-schemes
+$surface:   Canvas !default;
+$surf-1:    color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
+$surf-2:    color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
+$surf-3:    color-mix(in srgb, CanvasText 14%, var(--surface)) !default;
+$surf-4:    color-mix(in srgb, CanvasText 20%, var(--surface)) !default;
+$surf-5:    color-mix(in srgb, CanvasText 26%, var(--surface)) !default;
+$surf-6:    color-mix(in srgb, CanvasText 32%, var(--surface)) !default;
+$surf-7:    color-mix(in srgb, CanvasText 38%, var(--surface)) !default;
+$surf-8:    color-mix(in srgb, CanvasText 44%, var(--surface)) !default;
+$surf-9:    color-mix(in srgb, CanvasText 50%, var(--surface)) !default;
+$surf-10:   color-mix(in srgb, CanvasText 56%, var(--surface)) !default;
+$surf-11:   color-mix(in srgb, CanvasText 62%, var(--surface)) !default;
+
+// Maps
+$blue-variables: (
+  "blue": $blue,
+  "blue-1": $blue-1,
+  "blue-2": $blue-2,
+  "blue-3": $blue-3,
+  "blue-4": $blue-4,
+  "blue-5": $blue-5,
+  "blue-6": $blue-6,
+  "blue-7": $blue-7,
+  "blue-8": $blue-8,
+  "blue-9": $blue-9,
+  "blue-10": $blue-10,
+  "blue-11": $blue-11,
+) !default;
+
+$red-variables: (
+  "red": $red,
+  "red-1": $red-1,
+  "red-2": $red-2,
+  "red-3": $red-3,
+  "red-4": $red-4,
+  "red-5": $red-5,
+  "red-6": $red-6,
+  "red-7": $red-7,
+  "red-8": $red-8,
+  "red-9": $red-9,
+  "red-10": $red-10,
+  "red-11": $red-11,
+) !default;
+
+$green-variables: (
+  "green": $green,
+  "green-1": $green-1,
+  "green-2": $green-2,
+  "green-3": $green-3,
+  "green-4": $green-4,
+  "green-5": $green-5,
+  "green-6": $green-6,
+  "green-7": $green-7,
+  "green-8": $green-8,
+  "green-9": $green-9,
+  "green-10": $green-10,
+  "green-11": $green-11,
+) !default;
+
+$orange-variables: (
+  "orange": $orange,
+  "orange-1": $orange-1,
+  "orange-2": $orange-2,
+  "orange-3": $orange-3,
+  "orange-4": $orange-4,
+  "orange-5": $orange-5,
+  "orange-6": $orange-6,
+  "orange-7": $orange-7,
+  "orange-8": $orange-8,
+  "orange-9": $orange-9,
+  "orange-10": $orange-10,
+  "orange-11": $orange-11,
+) !default;
+
+$cyan-variables: (
+  "cyan": $cyan,
+  "cyan-1": $cyan-1,
+  "cyan-2": $cyan-2,
+  "cyan-3": $cyan-3,
+  "cyan-4": $cyan-4,
+  "cyan-5": $cyan-5,
+  "cyan-6": $cyan-6,
+  "cyan-7": $cyan-7,
+  "cyan-8": $cyan-8,
+  "cyan-9": $cyan-9,
+  "cyan-10": $cyan-10,
+  "cyan-11": $cyan-11,
+) !default;
+
+$yellow-variables: (
+  "yellow": $yellow,
+  "yellow-1": $yellow-1,
+  "yellow-2": $yellow-2,
+  "yellow-3": $yellow-3,
+  "yellow-4": $yellow-4,
+  "yellow-5": $yellow-5,
+  "yellow-6": $yellow-6,
+  "yellow-7": $yellow-7,
+  "yellow-8": $yellow-8,
+  "yellow-9": $yellow-9,
+  "yellow-10": $yellow-10,
+  "yellow-11": $yellow-11,
+) !default;
+
+$purple-variables: (
+  "purple": $purple,
+  "purple-1": $purple-1,
+  "purple-2": $purple-2,
+  "purple-3": $purple-3,
+  "purple-4": $purple-4,
+  "purple-5": $purple-5,
+  "purple-6": $purple-6,
+  "purple-7": $purple-7,
+  "purple-8": $purple-8,
+  "purple-9": $purple-9,
+  "purple-10": $purple-10,
+  "purple-11": $purple-11,
+) !default;
+
+$pink-variables: (
+  "pink": $pink,
+  "pink-1": $pink-1,
+  "pink-2": $pink-2,
+  "pink-3": $pink-3,
+  "pink-4": $pink-4,
+  "pink-5": $pink-5,
+  "pink-6": $pink-6,
+  "pink-7": $pink-7,
+  "pink-8": $pink-8,
+  "pink-9": $pink-9,
+  "pink-10": $pink-10,
+  "pink-11": $pink-11,
+) !default;
+
+$olive-variables: (
+  "olive": $olive,
+  "olive-1": $olive-1,
+  "olive-2": $olive-2,
+  "olive-3": $olive-3,
+  "olive-4": $olive-4,
+  "olive-5": $olive-5,
+  "olive-6": $olive-6,
+  "olive-7": $olive-7,
+  "olive-8": $olive-8,
+  "olive-9": $olive-9,
+  "olive-10": $olive-10,
+  "olive-11": $olive-11,
+) !default;
+
+$gray-variables: (
+  "gray": $gray,
+  "gray-1": $gray-1,
+  "gray-2": $gray-2,
+  "gray-3": $gray-3,
+  "gray-4": $gray-4,
+  "gray-5": $gray-5,
+  "gray-6": $gray-6,
+  "gray-7": $gray-7,
+  "gray-8": $gray-8,
+  "gray-9": $gray-9,
+  "gray-10": $gray-10,
+  "gray-11": $gray-11,
+) !default;
+
+$surface-variables: (
+  "surface": $surface,
+  "surf-1": $surf-1,
+  "surf-2": $surf-2,
+  "surf-3": $surf-3,
+  "surf-4": $surf-4,
+  "surf-5": $surf-5,
+  "surf-6": $surf-6,
+  "surf-7": $surf-7,
+  "surf-8": $surf-8,
+  "surf-9": $surf-9,
+  "surf-10": $surf-10,
+  "surf-11": $surf-11,
+) !default;
+
+// Mixins
+@mixin blue-variables {
+  @each $name, $value in $blue-variables {
+    --#{$name}: #{$value};
+  }
 }
 
-@mixin background-color-utility {
-  .bg-color {
-    @include background-color-props;
+@mixin red-variables {
+  @each $name, $value in $red-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin green-variables {
+  @each $name, $value in $green-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin orange-variables {
+  @each $name, $value in $orange-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin cyan-variables {
+  @each $name, $value in $cyan-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin yellow-variables {
+  @each $name, $value in $yellow-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin purple-variables {
+  @each $name, $value in $purple-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin pink-variables {
+  @each $name, $value in $pink-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin olive-variables {
+  @each $name, $value in $olive-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin gray-variables {
+  @each $name, $value in $gray-variables {
+    --#{$name}: #{$value};
   }
 }
 
 @mixin surface-variables {
-  --surf-1: color-mix(in srgb, CanvasText 4%, #{$surface});
-  --surf-2: color-mix(in srgb, CanvasText 8%, #{$surface});
-  --surf-3: color-mix(in srgb, CanvasText 14%, #{$surface});
-  --surf-4: color-mix(in srgb, CanvasText 20%, #{$surface});
-  --surf-5: color-mix(in srgb, CanvasText 26%, #{$surface});
-  --surf-6: color-mix(in srgb, CanvasText 32%, #{$surface});
-  --surf-7: color-mix(in srgb, CanvasText 38%, #{$surface});
-  --surf-8: color-mix(in srgb, CanvasText 44%, #{$surface});
-  --surf-9: color-mix(in srgb, CanvasText 50%, #{$surface});
-  --surf-10: color-mix(in srgb, CanvasText 56%, #{$surface});
-  --surf-11: color-mix(in srgb, CanvasText 62%, #{$surface});
-}
-
-@mixin gray-variables {
-  --gray-1: color-mix(in srgb, var(--gray-6) 40%, white);
-  --gray-2: color-mix(in srgb, var(--gray-6) 50%, white);
-  --gray-3: color-mix(in srgb, var(--gray-6) 60%, white);
-  --gray-4: color-mix(in srgb, var(--gray-6) 70%, white);
-  --gray-5: color-mix(in srgb, var(--gray-6) 80%, white);
-  --gray-6: #{$gray};
-  --gray-7: color-mix(in srgb, var(--gray-6) 80%, black);
-  --gray-8: color-mix(in srgb, var(--gray-6) 70%, black);
-  --gray-9: color-mix(in srgb, var(--gray-6) 60%, black);
-  --gray-10: color-mix(in srgb, var(--gray-6) 50%, black);
-  --gray-11: color-mix(in srgb, var(--gray-6) 40%, black);
-}
-
-@mixin blue-variables {
-  --blue-1: color-mix(in srgb, var(--blue-6) 40%, white);
-  --blue-2: color-mix(in srgb, var(--blue-6) 50%, white);
-  --blue-3: color-mix(in srgb, var(--blue-6) 60%, white);
-  --blue-4: color-mix(in srgb, var(--blue-6) 70%, white);
-  --blue-5: color-mix(in srgb, var(--blue-6) 80%, white);
-  --blue-6: #{$blue};
-  --blue-7: color-mix(in srgb, var(--blue-6) 80%, black);
-  --blue-8: color-mix(in srgb, var(--blue-6) 60%, black);
-  --blue-9: color-mix(in srgb, var(--blue-6) 50%, black);
-  --blue-10: color-mix(in srgb, var(--blue-6) 40%, black);
-  --blue-11: color-mix(in srgb, var(--blue-6) 30%, black);
-}
-
-@mixin red-variables {
-  --red-1: color-mix(in srgb, var(--red-6) 40%, white);
-  --red-2: color-mix(in srgb, var(--red-6) 50%, white);
-  --red-3: color-mix(in srgb, var(--red-6) 60%, white);
-  --red-4: color-mix(in srgb, var(--red-6) 70%, white);
-  --red-5: color-mix(in srgb, var(--red-6) 80%, white);
-  --red-6: #{$red};
-  --red-7: color-mix(in srgb, var(--red-6) 80%, black);
-  --red-8: color-mix(in srgb, var(--red-6) 60%, black);
-  --red-9: color-mix(in srgb, var(--red-6) 50%, black);
-  --red-10: color-mix(in srgb, var(--red-6) 40%, black);
-  --red-11: color-mix(in srgb, var(--red-6) 30%, black);
-}
-
-@mixin green-variables {
-  --green-1: color-mix(in srgb, var(--green-6) 40%, white);
-  --green-2: color-mix(in srgb, var(--green-6) 50%, white);
-  --green-3: color-mix(in srgb, var(--green-6) 60%, white);
-  --green-4: color-mix(in srgb, var(--green-6) 70%, white);
-  --green-5: color-mix(in srgb, var(--green-6) 80%, white);
-  --green-6: #{$green};
-  --green-7: color-mix(in srgb, var(--green-6) 80%, black);
-  --green-8: color-mix(in srgb, var(--green-6) 60%, black);
-  --green-9: color-mix(in srgb, var(--green-6) 50%, black);
-  --green-10: color-mix(in srgb, var(--green-6) 40%, black);
-  --green-11: color-mix(in srgb, var(--green-6) 30%, black);
-}
-
-@mixin orange-variables {
-  --orange-1: color-mix(in srgb, var(--orange-6) 40%, white);
-  --orange-2: color-mix(in srgb, var(--orange-6) 50%, white);
-  --orange-3: color-mix(in srgb, var(--orange-6) 60%, white);
-  --orange-4: color-mix(in srgb, var(--orange-6) 70%, white);
-  --orange-5: color-mix(in srgb, var(--orange-6) 80%, white);
-  --orange-6: #{$orange};
-  --orange-7: color-mix(in srgb, var(--orange-6) 80%, black);
-  --orange-8: color-mix(in srgb, var(--orange-6) 60%, black);
-  --orange-9: color-mix(in srgb, var(--orange-6) 50%, black);
-  --orange-10: color-mix(in srgb, var(--orange-6) 40%, black);
-  --orange-11: color-mix(in srgb, var(--orange-6) 30%, black);
-}
-
-@mixin cyan-variables {
-  --cyan-1: color-mix(in srgb, var(--cyan-6) 40%, white);
-  --cyan-2: color-mix(in srgb, var(--cyan-6) 50%, white);
-  --cyan-3: color-mix(in srgb, var(--cyan-6) 60%, white);
-  --cyan-4: color-mix(in srgb, var(--cyan-6) 70%, white);
-  --cyan-5: color-mix(in srgb, var(--cyan-6) 80%, white);
-  --cyan-6: #{$cyan};
-  --cyan-7: color-mix(in srgb, var(--cyan-6) 85%, black);
-  --cyan-8: color-mix(in srgb, var(--cyan-6) 70%, black);
-  --cyan-9: color-mix(in srgb, var(--cyan-6) 60%, black);
-  --cyan-10: color-mix(in srgb, var(--cyan-6) 50%, black);
-  --cyan-11: color-mix(in srgb, var(--cyan-6) 40%, black);
-}
-
-@mixin yellow-variables {
-  --yellow-1: color-mix(in srgb, var(--yellow-6) 25%, white);
-  --yellow-2: color-mix(in srgb, var(--yellow-6) 35%, white);
-  --yellow-3: color-mix(in srgb, var(--yellow-6) 45%, white);
-  --yellow-4: color-mix(in srgb, var(--yellow-6) 55%, white);
-  --yellow-5: color-mix(in srgb, var(--yellow-6) 70%, white);
-  --yellow-6: #{$yellow};
-  --yellow-7: color-mix(in srgb, var(--yellow-6) 85%, black);
-  --yellow-8: color-mix(in srgb, var(--yellow-6) 75%, black);
-  --yellow-9: color-mix(in srgb, var(--yellow-6) 62%, black);
-  --yellow-10: color-mix(in srgb, var(--yellow-6) 55%, black);
-  --yellow-11: color-mix(in srgb, var(--yellow-6) 45%, black);
-}
-
-@mixin purple-variables {
-  --purple-1: color-mix(in srgb, var(--purple-6) 40%, white);
-  --purple-2: color-mix(in srgb, var(--purple-6) 50%, white);
-  --purple-3: color-mix(in srgb, var(--purple-6) 60%, white);
-  --purple-4: color-mix(in srgb, var(--purple-6) 70%, white);
-  --purple-5: color-mix(in srgb, var(--purple-6) 80%, white);
-  --purple-6: #{$purple};
-  --purple-7: color-mix(in srgb, var(--purple-6) 75%, black);
-  --purple-8: color-mix(in srgb, var(--purple-6) 65%, black);
-  --purple-9: color-mix(in srgb, var(--purple-6) 55%, black);
-  --purple-10: color-mix(in srgb, var(--purple-6) 45%, black);
-  --purple-11: color-mix(in srgb, var(--purple-6) 35%, black);
-}
-
-@mixin pink-variables {
-  --pink-1: color-mix(in srgb, var(--pink-6) 40%, white);
-  --pink-2: color-mix(in srgb, var(--pink-6) 50%, white);
-  --pink-3: color-mix(in srgb, var(--pink-6) 60%, white);
-  --pink-4: color-mix(in srgb, var(--pink-6) 70%, white);
-  --pink-5: color-mix(in srgb, var(--pink-6) 80%, white);
-  --pink-6: #{$pink};
-  --pink-7: color-mix(in srgb, var(--pink-6) 75%, black);
-  --pink-8: color-mix(in srgb, var(--pink-6) 65%, black);
-  --pink-9: color-mix(in srgb, var(--pink-6) 55%, black);
-  --pink-10: color-mix(in srgb, var(--pink-6) 45%, black);
-  --pink-11: color-mix(in srgb, var(--pink-6) 35%, black);
-}
-
-@mixin olive-variables {
-  --olive-1: color-mix(in srgb, var(--olive-6) 40%, white);
-  --olive-2: color-mix(in srgb, var(--olive-6) 50%, white);
-  --olive-3: color-mix(in srgb, var(--olive-6) 60%, white);
-  --olive-4: color-mix(in srgb, var(--olive-6) 70%, white);
-  --olive-5: color-mix(in srgb, var(--olive-6) 80%, white);
-  --olive-6: #{$olive};
-  --olive-7: color-mix(in srgb, var(--olive-6) 80%, black);
-  --olive-8: color-mix(in srgb, var(--olive-6) 60%, black);
-  --olive-9: color-mix(in srgb, var(--olive-6) 50%, black);
-  --olive-10: color-mix(in srgb, var(--olive-6) 40%, black);
-  --olive-11: color-mix(in srgb, var(--olive-6) 30%, black);
+  @each $name, $value in $surface-variables {
+    --#{$name}: #{$value};
+  }
 }
 
 @mixin all-color-variables {
@@ -196,4 +407,15 @@ $olive:     #556b2f !default;
   :where(html) {
     @include all-color-variables;
   } 
+}
+
+@mixin background-color-props {
+  color: var(--bg-txt);
+  background-color: var(--bg-col);
+}
+
+@mixin background-color-utility {
+  .bg-color {
+    @include background-color-props;
+  }
 }
