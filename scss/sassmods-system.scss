@@ -43,6 +43,7 @@ $enable-popovers-animate:       true;
 
 // Utilities
 $enable-badges:                 true;
+$enable-borders:                true;
 $enable-buttons:                true;
 $enable-images:                 true;
 $enable-lists:                  true;
@@ -248,6 +249,10 @@ $enable-reddit-svg:             true;
 // Utilities
 @if $enable-badges {
   @include badges-css;
+}
+
+@if $enable-borders {
+  @include borders-css;
 }
 
 @if $enable-buttons {

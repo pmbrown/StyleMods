@@ -1,0 +1,97 @@
+// ---------------------------------------------------------- 
+// Borders
+// ----------------------------------------------------------
+$border-width:    var(--bd-width, 1px) !default;
+$border-style:    var(--bd-style, solid) !default;
+$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$radius-1:        0.188rem !default;
+$radius-2:        0.313rem !default;
+$radius-3:        0.5rem !default;
+$radius-4:        0.75rem !default;
+$radius-5:        1.125rem !default;
+$radius-pill:     50rem !default;
+
+$border-radius: (
+  "rd-1": $radius-1,
+  "rd-2": $radius-2,
+  "rd-3": $radius-3,
+  "rd-4": $radius-4,
+  "rd-5": $radius-5,
+  "rd-pill": $radius-pill,
+) !default;
+
+@mixin borders-css {
+
+.bd {
+  border: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-t {
+  border-block-start: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-b {
+  border-block-end: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-y {
+  border-block: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-x {
+  border-inline: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-s {
+  border-inline-start: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-e {
+  border-inline-end: #{$border-width} #{$border-style} #{$border-color};
+}
+
+.bd-child * {
+  border: #{$border-width} #{$border-style} #{$border-color};
+}
+
+// Radius
+@each $name, $value in $border-radius {
+  .#{$name} {
+    border-radius: #{$value};        
+  }
+}
+
+.rd-circle {
+  border-radius: 50%;
+}
+
+@each $name, $value in $border-radius {
+  .#{$name}-top {
+    border-start-start-radius: #{$value};
+    border-start-end-radius: #{$value};     
+  }
+}
+
+@each $name, $value in $border-radius {
+  .#{$name}-bottom {
+    border-end-start-radius: #{$value};
+    border-end-end-radius: #{$value};     
+  }
+}
+
+@each $name, $value in $border-radius {
+  .#{$name}-start {
+    border-start-start-radius: #{$value};
+    border-end-start-radius: #{$value};   
+  }
+}
+
+@each $name, $value in $border-radius {
+  .#{$name}-end {
+    border-start-end-radius: #{$value};
+    border-end-end-radius: #{$value};    
+  }
+}
+
+
+} // end borders-css
