@@ -277,25 +277,3 @@ a > :where(code) {
 }
 
 } // End typography mixin
-
-// Motion-animation
-@mixin smooth-scroll-css {
-  :where(html) {
-    scroll-behavior: smooth;
-  }
-}
-
-@mixin view-transition-css {
-  @view-transition {
-    navigation: auto;
-  }
-}
-
-@mixin smooth-scroll-view-transition-combined {
-  @media (prefers-reduced-motion: no-preference) { 
-    @include smooth-scroll-css;
-    @include view-transition-css;
-  }
-}
-
-

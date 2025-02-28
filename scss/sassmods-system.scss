@@ -16,6 +16,7 @@ $enable-forms-buttons:          true;
 $enable-tables:                 true;
 $enable-smooth-scroll:          false;
 $enable-view-transition:        false;
+$enable-vis-hidden:             true;
 
 // Color
 $enable-surface:                true;
@@ -49,7 +50,6 @@ $enable-images:                 true;
 $enable-lists:                  true;
 $enable-shadows:                true;
 $enable-text:                   true;
-$enable-vis-hidden:             true; // See _text.scss
 
 // Layout breakpoints
 $enable-breakpoint-xl:          true;
