@@ -2,13 +2,17 @@
 // Lists
 // ----------------------------------------------------------
 
+@mixin list-reset {
+  list-style-type: "";
+  padding-inline-start: 0;
+}
+
 @mixin lists-css {
 
 // Ordered <ol> and unordered <ul>
 
 :where(.ul-none, .ol-none, .ul-inline, .ol-inline, .list-comma, .list-divider) {
-  list-style-type: "";
-  padding-inline-start: 0;
+  @include list-reset;
 }
 
 :where(.ul-inline, .ol-inline, .list-comma, .list-divider) {

@@ -7,7 +7,7 @@ $absolute:  absolute;
 $fixed:     fixed;
 $sticky:    sticky;
 
-$position: (
+$position-value: (
   "pos-unset": $unset,
   "pos-relative": $relative,
   "pos-absolute": $absolute,
@@ -16,7 +16,7 @@ $position: (
 ) !default;
 
 @mixin position-css {
-  @each $name, $value in $position {
+  @each $name, $value in $position-value {
     .#{$name} {
       position: #{$value};
     }
@@ -24,7 +24,7 @@ $position: (
 }
 
 @mixin position-xl-css {
-  @each $name, $value in $position {
+  @each $name, $value in $position-value {
     .#{$name}-xl {
       position: #{$value};
     }
@@ -32,7 +32,7 @@ $position: (
 }
 
 @mixin position-lg-css {
-  @each $name, $value in $position {
+  @each $name, $value in $position-value {
     .#{$name}-lg {
       position: #{$value};
     }
@@ -40,7 +40,7 @@ $position: (
 }
 
 @mixin position-md-css {
-  @each $name, $value in $position {
+  @each $name, $value in $position-value {
     .#{$name}-md {
       position: #{$value};
     }
@@ -48,7 +48,7 @@ $position: (
 }
 
 @mixin position-sm-css {
-  @each $name, $value in $position {
+  @each $name, $value in $position-value {
     .#{$name}-sm {
       position: #{$value};
     }
@@ -56,7 +56,7 @@ $position: (
 }
 
 @mixin position-xs-css {
-  @each $name, $value in $position {
+  @each $name, $value in $position-value {
     .#{$name}-xs {
       position: #{$value};
     }

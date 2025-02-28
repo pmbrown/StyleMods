@@ -1,0 +1,25 @@
+// ---------------------------------------------------------- 
+// Backgrounds
+// ----------------------------------------------------------
+$gradient:    linear-gradient(180deg, rgba(white, .15), rgba(white, 0)) !default;
+
+@mixin background {
+  color: var(--txt);
+  background-color: var(--bg);
+}
+
+@mixin background-css {
+  .background {
+    @include background;
+  }
+}
+
+@mixin gradient {
+  background-image: #{$gradient};
+}
+
+@mixin gradient-css {
+  .gradient {
+    @include gradient;
+  }
+}

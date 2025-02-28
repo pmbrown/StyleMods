@@ -6,7 +6,7 @@ $bottom:  inset-block-end;
 $left:    inset-inline-start;
 $right:   inset-inline-end;
 
-$inset: (
+$inset-position: (
   "top": $top,
   "bottom": $bottom,
   "left": $left,
@@ -14,14 +14,14 @@ $inset: (
 );
 
 @mixin inset-css {  
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name} {
       --#{$name}: 0;
       #{$value}: var(--#{$name});
     }
   }
   
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-unset {
       #{$value}: unset;
     }
@@ -29,14 +29,14 @@ $inset: (
 }
 
 @mixin inset-xl-css { 
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-xl {
       --#{$name}: 0;
       #{$value}: var(--#{$name});
     }
   }
   
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-unset-xl {
       #{$value}: unset;
     }
@@ -44,14 +44,14 @@ $inset: (
 }
 
 @mixin inset-lg-css {  
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-lg {
       --#{$name}: 0;
       #{$value}: var(--#{$name});
     }
   }
   
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-unset-lg {
       #{$value}: unset;
     }
@@ -59,14 +59,14 @@ $inset: (
 }
 
 @mixin inset-md-css {  
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-md {
       --#{$name}: 0;
       #{$value}: var(--#{$name});
     }
   }
   
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .inset-#{$name}-unset-md {
       #{$value}: unset;
     }
@@ -74,14 +74,14 @@ $inset: (
 }
 
 @mixin inset-sm-css {  
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .#{$name}-sm {
       --#{$name}: 0;
       #{$value}: var(--#{$name});
     }
   }
   
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .#{$name}-unset-sm {
       #{$value}: unset;
     }
@@ -89,14 +89,14 @@ $inset: (
 }
 
 @mixin inset-xs-css {  
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .#{$name}-xs {
       --#{$name}: 0;
       #{$value}: var(--#{$name});
     }
   }
   
-  @each $name, $value in $inset {
+  @each $name, $value in $inset-position {
     .#{$name}-unset-xs {
       #{$value}: unset;
     }

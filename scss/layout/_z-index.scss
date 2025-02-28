@@ -9,7 +9,7 @@ $z-3:   3;
 $z-4:   4;
 $z-top: 10000;
 
-$z-index: (
+$z-index-value: (
   "z-n": $z-n,
   "z-0": $z-0,
   "z-1": $z-1,
@@ -20,7 +20,7 @@ $z-index: (
 ) !default;
 
 @mixin z-index-css { 
-  @each $name, $value in $z-index {
+  @each $name, $value in $z-index-value {
     .#{$name} {
       z-index: #{$value};
     }
@@ -28,7 +28,7 @@ $z-index: (
 }
 
 @mixin z-index-xl-css {  
-  @each $name, $value in $z-index {
+  @each $name, $value in $z-index-value {
     .#{$name}-xl {
       z-index: #{$value};
     }
@@ -36,7 +36,7 @@ $z-index: (
 }
 
 @mixin z-index-lg-css {  
-  @each $name, $value in $z-index {
+  @each $name, $value in $z-index-value {
     .#{$name}-lg {
       z-index: #{$value};
     }
@@ -44,7 +44,7 @@ $z-index: (
 }
 
 @mixin z-index-md-css {  
-  @each $name, $value in $z-index {
+  @each $name, $value in $z-index-value {
     .#{$name}-md {
       z-index: #{$value};
     }
@@ -52,7 +52,7 @@ $z-index: (
 }
 
 @mixin z-index-sm-css {  
-  @each $name, $value in $z-index {
+  @each $name, $value in $z-index-value {
     .#{$name}-sm {
       z-index: #{$value};
     }
@@ -60,7 +60,7 @@ $z-index: (
 }
 
 @mixin z-index-xs-css {  
-  @each $name, $value in $z-index {
+  @each $name, $value in $z-index-value {
     .#{$name}-xs {
       z-index: #{$value};
     }

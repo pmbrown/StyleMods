@@ -27,7 +27,7 @@ $ga-10:   repeat(10, minmax(0, auto));
 $ga-11:   repeat(11, minmax(0, auto));
 $ga-12:   repeat(12, minmax(0, auto));
 
-$grid: (
+$grid-values: (
   "g-1": $g-1,
   "g-2": $g-2,
   "g-3": $g-3,
@@ -42,7 +42,7 @@ $grid: (
   "g-12": $g-12,
 ) !default;
 
-$autogrid: (
+$autogrid-values: (
   "ga-1": $ga-1,
   "ga-2": $ga-2,
   "ga-3": $ga-3,
@@ -70,20 +70,20 @@ $autogrid: (
 }
 
 @mixin grid-variables {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin autogrid-variables {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     --#{$name}: #{$value};
   }
 }
 
 // Default grid
 @mixin grid-css {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     .#{$name} {
       --gtc: var(--#{$name});        
     }
@@ -92,7 +92,7 @@ $autogrid: (
 
 // Breakpoints
 @mixin grid-xl-css {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     .#{$name}-xl {
       --gtc: var(--#{$name});        
     }
@@ -100,7 +100,7 @@ $autogrid: (
 }
 
 @mixin grid-lg-css {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     .#{$name}-lg {
       --gtc: var(--#{$name});        
     }
@@ -108,7 +108,7 @@ $autogrid: (
 }
 
 @mixin grid-md-css {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     .#{$name}-md {
       --gtc: var(--#{$name});        
     }
@@ -116,7 +116,7 @@ $autogrid: (
 }
 
 @mixin grid-sm-css {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     .#{$name}-sm {
       --gtc: var(--#{$name});        
     }
@@ -124,7 +124,7 @@ $autogrid: (
 }
 
 @mixin grid-xs-css {
-  @each $name, $value in $grid {
+  @each $name, $value in $grid-values {
     .#{$name}-xs {
       --gtc: var(--#{$name});        
     }
@@ -132,7 +132,7 @@ $autogrid: (
 }
 
 @mixin autogrid-css {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     .#{$name} {
       --gtc: var(--#{$name});        
     }
@@ -141,7 +141,7 @@ $autogrid: (
 
 // Autogrid
 @mixin autogrid-xl-css {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     .#{$name}-xl {
       --gtc: var(--#{$name});        
     }
@@ -149,7 +149,7 @@ $autogrid: (
 }
 
 @mixin autogrid-lg-css {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     .#{$name}-lg {
       --gtc: var(--#{$name});        
     }
@@ -157,7 +157,7 @@ $autogrid: (
 }
 
 @mixin autogrid-md-css {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     .#{$name}-md {
       --gtc: var(--#{$name});        
     }
@@ -165,7 +165,7 @@ $autogrid: (
 }
 
 @mixin autogrid-sm-css {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     .#{$name}-sm {
       --gtc: var(--#{$name});        
     }
@@ -173,7 +173,7 @@ $autogrid: (
 }
 
 @mixin autogrid-xs-css {
-  @each $name, $value in $autogrid {
+  @each $name, $value in $autogrid-values {
     .#{$name}-xs {
       --gtc: var(--#{$name});        
     }

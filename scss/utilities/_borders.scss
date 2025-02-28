@@ -2,14 +2,16 @@
 // Borders
 // ----------------------------------------------------------
 $border-width:    var(--bd-width, 1px) !default;
-$border-style:    var(--bd-style, solid) !default;
-$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$border-color:    var(--bd-color, light-dark(#ddd, #333)) !default;
+$border-default:  $border-width solid $border-color !default;
+
 $radius-1:        0.188rem !default;
 $radius-2:        0.313rem !default;
 $radius-3:        0.5rem !default;
 $radius-4:        0.75rem !default;
 $radius-5:        1.125rem !default;
 $radius-pill:     50rem !default;
+$radius-circle:   50% !default;
 
 $border-radius: (
   "rd-1": $radius-1,
@@ -20,38 +22,30 @@ $border-radius: (
   "rd-pill": $radius-pill,
 ) !default;
 
+$border-radius-circle: (
+  "rd-circle": $radius-circle,
+) !default;
+
+$border-position: (
+  "bd": border,
+  "bd-t": border-block-start,
+  "bd-b": border-block-end,
+  "bd-y": border-block,
+  "bd-x": border-inline,
+  "bd-s": border-inline-start,
+  "bd-e": border-inline-end,
+) !default;
+
 @mixin borders-css {
 
-.bd {
-  border: #{$border-width} #{$border-style} #{$border-color};
-}
-
-.bd-t {
-  border-block-start: #{$border-width} #{$border-style} #{$border-color};
-}
-
-.bd-b {
-  border-block-end: #{$border-width} #{$border-style} #{$border-color};
-}
-
-.bd-y {
-  border-block: #{$border-width} #{$border-style} #{$border-color};
-}
-
-.bd-x {
-  border-inline: #{$border-width} #{$border-style} #{$border-color};
-}
-
-.bd-s {
-  border-inline-start: #{$border-width} #{$border-style} #{$border-color};
-}
-
-.bd-e {
-  border-inline-end: #{$border-width} #{$border-style} #{$border-color};
+@each $name, $value in $border-position {
+  .#{$name} {
+    #{$value}: #{$border-default};        
+  }
 }
 
 .bd-child * {
-  border: #{$border-width} #{$border-style} #{$border-color};
+  border: #{$border-default};
 }
 
 // Radius
@@ -61,8 +55,10 @@ $border-radius: (
   }
 }
 
-.rd-circle {
-  border-radius: 50%;
+@each $name, $value in $border-radius-circle {
+  .#{$name} {
+    border-radius: #{$value};        
+  }
 }
 
 @each $name, $value in $border-radius {
@@ -93,5 +89,267 @@ $border-radius: (
   }
 }
 
-
 } // end borders-css
+
+// Border breakpoints
+// Extra large
+@mixin borders-xl-css {
+  @each $name, $value in $border-position {
+    .#{$name}-xl {
+      #{$value}: #{$border-default};        
+    }
+  }
+}
+
+// Large
+@mixin borders-lg-css {
+  @each $name, $value in $border-position {
+    .#{$name}-lg {
+      #{$value}: #{$border-default};        
+    }
+  }
+}
+
+// Medium
+@mixin borders-md-css {
+  @each $name, $value in $border-position {
+    .#{$name}-md {
+      #{$value}: #{$border-default};        
+    }
+  }
+}
+
+// Small
+@mixin borders-sm-css {
+  @each $name, $value in $border-position {
+    .#{$name}-sm {
+      #{$value}: #{$border-default};        
+    }
+  }
+}
+
+// Extra small
+@mixin borders-xs-css {
+  @each $name, $value in $border-position {
+    .#{$name}-xs {
+      #{$value}: #{$border-default};        
+    }
+  }
+}
+
+// Border radius breakpoints
+// Extra large
+@mixin border-radius-xl-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-xl {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-xl {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-xl {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-xl {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-xl {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-xl {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}
+
+// Large
+@mixin border-radius-lg-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-lg {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-lg {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-lg {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-lg {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-lg {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-lg {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}
+
+// Medium
+@mixin border-radius-md-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-md {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-md {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-md {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-md {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-md {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-md {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}
+
+
+// Small
+@mixin border-radius-sm-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-sm {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-sm {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-sm {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-sm {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-sm {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-sm {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}
+
+// Extra small
+@mixin border-radius-xs-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-xs {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-xs {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-xs {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-xs {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-xs {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-xs {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}

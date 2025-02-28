@@ -408,14 +408,3 @@ $surface-variables: (
     @include all-color-variables;
   } 
 }
-
-@mixin background-color-props {
-  color: var(--bg-txt);
-  background-color: var(--bg-col);
-}
-
-@mixin background-color-utility {
-  .bg-color {
-    @include background-color-props;
-  }
-}
