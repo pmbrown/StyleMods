@@ -40,6 +40,7 @@ $alerts:                 true !default;
 $cards:                  true !default;
 $dialogs:                true !default;
 $dialogs-animate:        true !default;
+$list-groups:            true !default;
 $popovers:               true !default;
 $popovers-animate:       true !default;
 
@@ -243,6 +244,10 @@ $reddit-svg:             true !default;
 
 @if $dialogs-animate {
   @include dialogs-animation-css;
+}
+
+@if $list-groups {
+  @include list-groups-css;
 }
 
 @if $popovers {
