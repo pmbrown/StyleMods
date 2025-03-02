@@ -1,4 +1,10 @@
 // ---------------------------------------------------------- 
-// Overrides
+// System overrides
+// - Customize Sass variable properties used within the style 
+//   documents and/or values from the _configuration.scss.
+// - IMPORTANT: Make backups of any overrides included when/if 
+//   updating SassMods source files.
 // ----------------------------------------------------------
 @use "sassmods" as *;
+@use "configuration" as *;
+

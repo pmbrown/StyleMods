@@ -1,0 +1,144 @@
+// ---------------------------------------------------------- 
+// System configuration
+// - Edit directly or use the _overrides.scss document.
+// - IMPORTANT: Make backups of changes made when/if updating
+//   SassMods source files and be mindful of new additions.  
+// ----------------------------------------------------------
+$system-breakpoint-xl:          1601px !default;
+$system-breakpoint-lg:          1281px !default;
+$system-breakpoint-md:          1025px !default;
+$system-breakpoint-sm:          769px !default;
+$system-breakpoint-xs:          481px !default;
+
+// HTML
+$enable-typography:             true !default;
+$enable-forms-buttons:          true !default;
+$enable-tables:                 true !default;
+$enable-smooth-scroll:          false !default;
+$enable-view-transition:        false !default;
+$enable-vis-hidden:             true !default;
+
+// Color variables
+$enable-surface:                true !default;
+$enable-grays:                  true !default;
+$enable-blue:                   true !default;
+$enable-red:                    true !default;
+$enable-green:                  true !default;
+$enable-orange:                 true !default;
+$enable-cyan:                   true !default;
+$enable-yellow:                 true !default;
+$enable-purple:                 true !default;
+$enable-pink:                   true !default;
+$enable-olive:                  true !default;
+
+// Color-scheme theme switch
+$enable-theme-switch:           false !default;
+
+// Components (see icons below)
+$enable-accordions:             true !default;
+$enable-alerts:                 true !default;
+$enable-cards:                  true !default;
+$enable-dialogs:                true !default;
+$enable-dialogs-animate:        true !default;
+$enable-list-groups:            true !default;
+$enable-popovers:               true !default;
+$enable-popovers-animate:       true !default;
+
+// Utilities
+$enable-background-utility:     true !default;
+$enable-background-gradient:    true !default;
+$enable-badges:                 true !default;
+$enable-borders:                true !default;
+$enable-buttons:                true !default;
+$enable-images:                 true !default;
+$enable-lists:                  true !default;
+$enable-shadows:                true !default;
+$enable-text:                   true !default;
+
+// Layout breakpoints
+$enable-breakpoint-xl:          true !default;
+$enable-breakpoint-lg:          true !default;
+$enable-breakpoint-md:          true !default;
+$enable-breakpoint-sm:          true !default;
+$enable-breakpoint-xs:          true !default;
+
+// Layout utilities
+$enable-alignment:              true !default;
+$enable-block:                  true !default;
+$enable-containers:             true !default;
+$enable-flex:                   true !default;
+$enable-grid:                   true !default;
+$enable-autogrid:               true !default;
+$enable-gaps:                   true !default;
+$enable-inset:                  true !default;
+$enable-position:               true !default;
+$enable-order:                  true !default;
+$enable-sizes:                  true !default;
+$enable-z-index:                true !default;
+$enable-margins:                true !default;
+$enable-padding:                true !default;
+
+// Layout utilities breakpoints
+$enable-alignment-breakpoints:  false !default;
+$enable-block-breakpoints:      false !default;
+$enable-flex-breakpoints:       false !default;
+$enable-grid-breakpoints:       true !default;
+$enable-autogrid-breakpoints:   true !default;
+$enable-gaps-breakpoints:       true !default;
+$enable-inset-breakpoints:      false !default;
+$enable-position-breakpoints:   false !default;
+$enable-order-breakpoints:      false !default;
+$enable-sizes-breakpoints:      false !default;
+$enable-z-index-breakpoints:    false !default;
+$enable-margins-breakpoints:    false !default;
+$enable-padding-breakpoints:    false !default;
+
+// Icons utility styles
+$enable-icon-utilities:         true !default;
+$enable-icon-links-buttons:     true !default;
+
+// Icon variables and classes
+$enable-icon-variables:         true !default;
+$enable-icon-classes:           true !default;
+
+// Default icons
+$enable-custom-icons:           true !default;
+$enable-house-svg:              true !default;
+$enable-email-svg:              true !default;
+$enable-plus-svg:               true !default;
+$enable-minus-svg:              true !default;
+$enable-bars-svg:               true !default;
+$enable-dots-h-svg:             true !default;
+$enable-dots-v-svg:             true !default;
+$enable-caret-down-svg:         true !default;
+$enable-caret-up-svg:           true !default;
+$enable-caret-right-svg:        true !default;
+$enable-caret-left-svg:         true !default;
+$enable-close-svg:              true !default;
+$enable-close-box-svg:          true !default;
+$enable-close-box-fill-svg:     true !default;
+$enable-box-svg:                true !default;
+$enable-pen-box-svg:            true !default;
+$enable-tick-box-svg:           true !default;
+$enable-ext-link-svg:           true !default;
+$enable-pg-link-svg:            true !default;
+$enable-search-svg:             true !default;
+$enable-download-svg:           true !default;
+$enable-user-svg:               true !default;
+$enable-question-svg:           true !default;
+$enable-sun-svg:                true !default;
+$enable-moon-svg:               true !default;
+
+// Brand icons
+$enable-rss-svg:                true !default;
+$enable-github-svg:             true !default;
+$enable-twitter-svg:            true !default;
+$enable-mastodon-svg:           true !default;
+$enable-tiktok-svg:             true !default;
+$enable-facebook-svg:           true !default;
+$enable-instagram-svg:          true !default;
+$enable-pinterest-svg:          true !default;
+$enable-codepen-svg:            true !default;
+$enable-reddit-svg:             true !default;
+
+

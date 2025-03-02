@@ -1,598 +1,470 @@
 // ---------------------------------------------------------- 
-// SassMods system framework
+// SassMods system
+// ----------------------------------------------------------
+// - Edit the _configuration.scss to enable or disable the
+//   individual modules and/or customize breakpoints. 
+// - Use the _overrides.scss to customize Sass variable
+//   properties used within the style documents and/or to 
+//   override values from the _configuration.scss document.
+// - IMPORTANT: Make backups of each file when/if updating 
+//   SassMods source files.
 // ----------------------------------------------------------
 @use "sassmods" as *;
 @use "overrides" as *;
-
-$system-breakpoint-xl:   1601px !default;
-$system-breakpoint-lg:   1281px !default;
-$system-breakpoint-md:   1025px !default;
-$system-breakpoint-sm:   769px !default;
-$system-breakpoint-xs:   481px !default;
-
-// HTML
-$typography:             true !default;
-$forms-buttons:          true !default;
-$tables:                 true !default;
-$smooth-scroll:          false !default;
-$view-transition:        false !default;
-$vis-hidden:             true !default;
-
-// Color variables
-$surface:                true !default;
-$grays:                  true !default;
-$blue:                   true !default;
-$red:                    true !default;
-$green:                  true !default;
-$orange:                 true !default;
-$cyan:                   true !default;
-$yellow:                 true !default;
-$purple:                 true !default;
-$pink:                   true !default;
-$olive:                  true !default;
-
-// Color-scheme theme switch
-$theme-switch:           false !default;
-
-// Components (see icons below)
-$accordions:             true !default;
-$alerts:                 true !default;
-$cards:                  true !default;
-$dialogs:                true !default;
-$dialogs-animate:        true !default;
-$list-groups:            true !default;
-$popovers:               true !default;
-$popovers-animate:       true !default;
-
-// Utilities
-$background-utility:     true !default;
-$background-gradient:    true !default;
-$badges:                 true !default;
-$borders:                true !default;
-$buttons:                true !default;
-$images:                 true !default;
-$lists:                  true !default;
-$shadows:                true !default;
-$text:                   true !default;
-
-// Layout breakpoints
-$breakpoint-xl:          true !default;
-$breakpoint-lg:          true !default;
-$breakpoint-md:          true !default;
-$breakpoint-sm:          true !default;
-$breakpoint-xs:          true !default;
-
-// Layout utilities
-$alignment:              true !default;
-$block:                  true !default;
-$containers:             true !default;
-$flex:                   true !default;
-$grid:                   true !default;
-$autogrid:               true !default;
-$gaps:                   true !default;
-$inset:                  true !default;
-$position:               true !default;
-$order:                  true !default;
-$sizes:                  true !default;
-$z-index:                true !default;
-$margins:                true !default;
-$padding:                true !default;
-
-// Layout utilities breakpoints
-$alignment-breakpoints:  false !default;
-$block-breakpoints:      false !default;
-$flex-breakpoints:       false !default;
-$grid-breakpoints:       true !default;
-$autogrid-breakpoints:   true !default;
-$gaps-breakpoints:       true !default;
-$inset-breakpoints:      false !default;
-$position-breakpoints:   false !default;
-$order-breakpoints:      false !default;
-$sizes-breakpoints:      false !default;
-$z-index-breakpoints:    false !default;
-$margins-breakpoints:    false !default;
-$padding-breakpoints:    false !default;
-
-// Icons utility styles
-$icon-utilities:         true !default;
-$icon-links-buttons:     true !default;
-
-// Icon variables and classes
-$icon-variables:         true !default;
-$icon-classes:           true !default;
-
-// Default icons
-$custom-icons:           true !default;
-$house-svg:              true !default;
-$email-svg:              true !default;
-$plus-svg:               true !default;
-$minus-svg:              true !default;
-$bars-svg:               true !default;
-$dots-h-svg:             true !default;
-$dots-v-svg:             true !default;
-$caret-down-svg:         true !default;
-$caret-up-svg:           true !default;
-$caret-right-svg:        true !default;
-$caret-left-svg:         true !default;
-$close-svg:              true !default;
-$close-box-svg:          true !default;
-$close-box-fill-svg:     true !default;
-$box-svg:                true !default;
-$pen-box-svg:            true !default;
-$tick-box-svg:           true !default;
-$ext-link-svg:           true !default;
-$pg-link-svg:            true !default;
-$search-svg:             true !default;
-$download-svg:           true !default;
-$user-svg:               true !default;
-$question-svg:           true !default;
-$sun-svg:                true !default;
-$moon-svg:               true !default;
-
-// Brand icons
-$rss-svg:                true !default;
-$github-svg:             true !default;
-$twitter-svg:            true !default;
-$mastodon-svg:           true !default;
-$tiktok-svg:             true !default;
-$facebook-svg:           true !default;
-$instagram-svg:          true !default;
-$pinterest-svg:          true !default;
-$codepen-svg:            true !default;
-$reddit-svg:             true !default;
+@use "configuration" as *;
 
 @include license;
 
 // HTML
-@if $typography {
+@if $enable-typography {
   @include typography-css;
 }
 
+@if $enable-forms-buttons {
+  @include forms-buttons-css;
+}
+
+@if $enable-tables {
+  @include tables-css;
+}
+
 @media (prefers-reduced-motion: no-preference) { 
-  @if $smooth-scroll {
+  @if $enable-smooth-scroll {
     @include smooth-scroll-css;
   }
   
-  @if $view-transition {
+  @if $enable-view-transition {
     @include view-transition-css;
   }
 }
 
-@if $forms-buttons {
-  @include forms-buttons-css;
-}
-
-@if $tables {
-  @include tables-css;
+@if $enable-vis-hidden {
+  @include vis-hidden-css;
 }
 
 // Color
 :where(html) {
-  @if $surface {
+  @if $enable-surface {
     @include surface-variables;
   }
   
-  @if $grays {
+  @if $enable-grays {
     @include gray-variables;
   }
   
-  @if $blue {
+  @if $enable-blue {
     @include blue-variables;
   }
   
-  @if $red {
+  @if $enable-red {
     @include red-variables;  
   }
   
-  @if $green {
+  @if $enable-green {
     @include green-variables; 
   }
   
-  @if $orange {
+  @if $enable-orange {
     @include orange-variables;  
   }
   
-  @if $cyan {
+  @if $enable-cyan {
     @include cyan-variables;  
   }
   
-  @if $yellow {
+  @if $enable-yellow {
     @include yellow-variables;
   }
   
-  @if $purple {
+  @if $enable-purple {
     @include purple-variables;
   }
   
-  @if $pink {
+  @if $enable-pink {
     @include pink-variables;
   }
   
-  @if $olive {
+  @if $enable-olive {
     @include olive-variables;  
   }
 }
 
-@if $background-utility {
+@if $enable-background-utility {
   @include background-css;
 }
 
-@if $background-gradient {
+@if $enable-background-gradient {
   @include gradient-css;
 }
 
-@if $theme-switch {
+@if $enable-theme-switch {
   @include theme-switch-css;
 }
 
 // Components
-@if $accordions {
+@if $enable-accordions {
   @include accordions-css;
 }
 
-@if $alerts {
+@if $enable-alerts {
   @include alerts-css;
 }
 
-@if $cards {
+@if $enable-cards {
   @include cards-css;
 }
 
-@if $dialogs {
+@if $enable-dialogs {
   @include dialogs-css;
 }
 
-@if $dialogs-animate {
+@if $enable-dialogs-animate {
   @include dialogs-animation-css;
 }
 
-@if $list-groups {
+@if $enable-list-groups {
   @include list-groups-css;
 }
 
-@if $popovers {
+@if $enable-popovers {
   @include popovers-css;
 }
 
-@if $popovers-animate {
+@if $enable-popovers-animate {
   @include popovers-animation-css;
 }
 
 // Utilities
-@if $badges {
+@if $enable-badges {
   @include badges-css;
 }
 
-@if $borders {
+@if $enable-borders {
   @include borders-css;
 }
 
-@if $buttons {
+@if $enable-buttons {
   @include buttons-css;
 }
 
-@if $images {
+@if $enable-images {
   @include images-css;
 }
 
-@if $lists {
+@if $enable-lists {
   @include lists-css;
 }
 
-@if $shadows {
+@if $enable-shadows {
   @include shadows-css;
 }
 
-@if $text {
+@if $enable-text {
   @include text-css;
 }
 
-@if $vis-hidden {
-  @include vis-hidden-css;
-}
-
 // Layout
-@if $alignment {
+@if $enable-alignment {
   @include alignment-css;
 }
 
-@if $block {
+@if $enable-block {
   @include block-css;
 }
 
-@if $containers {
+@if $enable-containers {
   @include containers-css;
 }
 
-@if $flex {
+@if $enable-flex {
   @include flex-css;
 }
 
-@if $inset {
+@if $enable-inset {
   @include inset-css;
 }
 
-@if $order {
+@if $enable-order {
   @include order-css;
 }
 
-@if $position {
+@if $enable-position {
   @include position-css;
 }
 
-@if $sizes {
+@if $enable-sizes {
   @include sizes-css;
 }
 
-@if $z-index {
+@if $enable-z-index {
   @include z-index-css;
 }
 
-@if $margins {
+@if $enable-margins {
   @include margins-css;
 }
 
-@if $padding {
+@if $enable-padding {
   @include padding-css;
 }
 
 :where(html) {
-  @if $grid {@include grid-variables;}
-  @if $autogrid {@include autogrid-variables;}  
+  @if $enable-grid {@include grid-variables;}
+  @if $enable-autogrid {@include autogrid-variables;}  
 }
 
-@if $grid or $autogrid {
+@if $enable-grid or $enable-autogrid {
   @include grid-utility-css;
 }
 
-@if $grid {
+@if $enable-grid {
   @include grid-css;
 }
 
-@if $autogrid {
+@if $enable-autogrid {
   @include autogrid-css;
 }
 
-@if $gaps {
+@if $enable-gaps {
   @include gaps-css;
 }
 
-@if $breakpoint-xl {
+@if $enable-breakpoint-xl {
   @media (max-width: #{$system-breakpoint-xl}) {
-    @if $grid-breakpoints {@include grid-xl-css;}
-    @if $autogrid-breakpoints {@include autogrid-xl-css;}
-    @if $gaps-breakpoints {@include gaps-xl-css;}
-    @if $alignment-breakpoints {@include alignment-xl-css;}
-    @if $block-breakpoints {@include block-xl-css;}
-    @if $flex-breakpoints {@include flex-xl-css;}
-    @if $inset-breakpoints {@include inset-xl-css;}
-    @if $position-breakpoints {@include position-xl-css;}
-    @if $order-breakpoints {@include order-xl-css;}
-    @if $sizes-breakpoints {@include sizes-xl-css;}
-    @if $margins-breakpoints {@include margins-xl-css;}
-    @if $padding-breakpoints {@include padding-xl-css;}
+    @if $enable-grid-breakpoints {@include grid-xl-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-xl-css;}
+    @if $enable-gaps-breakpoints {@include gaps-xl-css;}
+    @if $enable-alignment-breakpoints {@include alignment-xl-css;}
+    @if $enable-block-breakpoints {@include block-xl-css;}
+    @if $enable-flex-breakpoints {@include flex-xl-css;}
+    @if $enable-inset-breakpoints {@include inset-xl-css;}
+    @if $enable-position-breakpoints {@include position-xl-css;}
+    @if $enable-order-breakpoints {@include order-xl-css;}
+    @if $enable-sizes-breakpoints {@include sizes-xl-css;}
+    @if $enable-margins-breakpoints {@include margins-xl-css;}
+    @if $enable-padding-breakpoints {@include padding-xl-css;}
   }
 }
 
-@if $breakpoint-lg {
+@if $enable-breakpoint-lg {
   @media (max-width: #{$system-breakpoint-lg}) {
-    @if $grid-breakpoints {@include grid-lg-css;}
-    @if $autogrid-breakpoints {@include autogrid-lg-css;}
-    @if $gaps-breakpoints {@include gaps-lg-css;}
-    @if $alignment-breakpoints {@include alignment-lg-css;}
-    @if $block-breakpoints {@include block-lg-css;}
-    @if $flex-breakpoints {@include flex-lg-css;}
-    @if $inset-breakpoints {@include inset-lg-css;}
-    @if $position-breakpoints {@include position-lg-css;}
-    @if $order-breakpoints {@include order-lg-css;}
-    @if $sizes-breakpoints {@include sizes-lg-css;}
-    @if $margins-breakpoints {@include margins-lg-css;}
-    @if $padding-breakpoints {@include padding-lg-css;}
+    @if $enable-grid-breakpoints {@include grid-lg-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-lg-css;}
+    @if $enable-gaps-breakpoints {@include gaps-lg-css;}
+    @if $enable-alignment-breakpoints {@include alignment-lg-css;}
+    @if $enable-block-breakpoints {@include block-lg-css;}
+    @if $enable-flex-breakpoints {@include flex-lg-css;}
+    @if $enable-inset-breakpoints {@include inset-lg-css;}
+    @if $enable-position-breakpoints {@include position-lg-css;}
+    @if $enable-order-breakpoints {@include order-lg-css;}
+    @if $enable-sizes-breakpoints {@include sizes-lg-css;}
+    @if $enable-margins-breakpoints {@include margins-lg-css;}
+    @if $enable-padding-breakpoints {@include padding-lg-css;}
   }
 }
 
-@if $breakpoint-md {
+@if $enable-breakpoint-md {
   @media (max-width: #{$system-breakpoint-md}) {
-    @if $grid-breakpoints {@include grid-md-css;}
-    @if $autogrid-breakpoints {@include autogrid-md-css;}
-    @if $gaps-breakpoints {@include gaps-md-css;}
-    @if $alignment-breakpoints {@include alignment-md-css;}
-    @if $block-breakpoints {@include block-md-css;}
-    @if $flex-breakpoints {@include flex-md-css;}
-    @if $inset-breakpoints {@include inset-md-css;}
-    @if $position-breakpoints {@include position-md-css;}
-    @if $order-breakpoints {@include order-md-css;}
-    @if $sizes-breakpoints {@include sizes-md-css;}
-    @if $margins-breakpoints {@include margins-md-css;}
-    @if $padding-breakpoints {@include padding-md-css;}
+    @if $enable-grid-breakpoints {@include grid-md-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-md-css;}
+    @if $enable-gaps-breakpoints {@include gaps-md-css;}
+    @if $enable-alignment-breakpoints {@include alignment-md-css;}
+    @if $enable-block-breakpoints {@include block-md-css;}
+    @if $enable-flex-breakpoints {@include flex-md-css;}
+    @if $enable-inset-breakpoints {@include inset-md-css;}
+    @if $enable-position-breakpoints {@include position-md-css;}
+    @if $enable-order-breakpoints {@include order-md-css;}
+    @if $enable-sizes-breakpoints {@include sizes-md-css;}
+    @if $enable-margins-breakpoints {@include margins-md-css;}
+    @if $enable-padding-breakpoints {@include padding-md-css;}
   }
 }
 
-@if $breakpoint-sm {
+@if $enable-breakpoint-sm {
   @media (max-width: #{$system-breakpoint-sm}) {
-    @if $grid-breakpoints {@include grid-sm-css;}
-    @if $autogrid-breakpoints {@include autogrid-sm-css;}
-    @if $gaps-breakpoints {@include gaps-sm-css;}
-    @if $alignment-breakpoints {@include alignment-sm-css;}
-    @if $block-breakpoints {@include block-sm-css;}
-    @if $flex-breakpoints {@include flex-sm-css;}
-    @if $inset-breakpoints {@include inset-sm-css;}
-    @if $position-breakpoints {@include position-sm-css;}
-    @if $order-breakpoints {@include order-sm-css;}
-    @if $sizes-breakpoints {@include sizes-sm-css;}
-    @if $margins-breakpoints {@include margins-sm-css;}
-    @if $padding-breakpoints {@include padding-sm-css;}
+    @if $enable-grid-breakpoints {@include grid-sm-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-sm-css;}
+    @if $enable-gaps-breakpoints {@include gaps-sm-css;}
+    @if $enable-alignment-breakpoints {@include alignment-sm-css;}
+    @if $enable-block-breakpoints {@include block-sm-css;}
+    @if $enable-flex-breakpoints {@include flex-sm-css;}
+    @if $enable-inset-breakpoints {@include inset-sm-css;}
+    @if $enable-position-breakpoints {@include position-sm-css;}
+    @if $enable-order-breakpoints {@include order-sm-css;}
+    @if $enable-sizes-breakpoints {@include sizes-sm-css;}
+    @if $enable-margins-breakpoints {@include margins-sm-css;}
+    @if $enable-padding-breakpoints {@include padding-sm-css;}
   }
 }
 
-@if $breakpoint-xs {
+@if $enable-breakpoint-xs {
   @media (max-width: #{$system-breakpoint-xs}) {
-    @if $grid-breakpoints {@include grid-xs-css;}
-    @if $autogrid-breakpoints {@include autogrid-xs-css;}
-    @if $gaps-breakpoints {@include gaps-xs-css;}
-    @if $alignment-breakpoints {@include alignment-xs-css;}
-    @if $block-breakpoints {@include block-xs-css;}
-    @if $flex-breakpoints {@include flex-xs-css;}
-    @if $inset-breakpoints {@include inset-xs-css;}
-    @if $position-breakpoints {@include position-xs-css;}
-    @if $order-breakpoints {@include order-xs-css;}
-    @if $sizes-breakpoints {@include sizes-xs-css;}
-    @if $margins-breakpoints {@include margins-xs-css;}
-    @if $padding-breakpoints {@include padding-xs-css;}
+    @if $enable-grid-breakpoints {@include grid-xs-css;}
+    @if $enable-autogrid-breakpoints {@include autogrid-xs-css;}
+    @if $enable-gaps-breakpoints {@include gaps-xs-css;}
+    @if $enable-alignment-breakpoints {@include alignment-xs-css;}
+    @if $enable-block-breakpoints {@include block-xs-css;}
+    @if $enable-flex-breakpoints {@include flex-xs-css;}
+    @if $enable-inset-breakpoints {@include inset-xs-css;}
+    @if $enable-position-breakpoints {@include position-xs-css;}
+    @if $enable-order-breakpoints {@include order-xs-css;}
+    @if $enable-sizes-breakpoints {@include sizes-xs-css;}
+    @if $enable-margins-breakpoints {@include margins-xs-css;}
+    @if $enable-padding-breakpoints {@include padding-xs-css;}
   }
 }
 
-@if $icon-utilities {
+@if $enable-icon-utilities {
   @include icon-utilities;
 }
 
-@if $icon-links-buttons {
+@if $enable-icon-links-buttons {
   @include icon-links-buttons;
 }
 
-@if $icon-variables {
+@if $enable-icon-variables {
   :where(html) {
-    @if $custom-icons {
+    @if $enable-custom-icons {
       @include custom-icons-variables;
     }
    
-    @if $house-svg {
+    @if $enable-house-svg {
       --house: #{$house};
     }
     
-    @if $email-svg {
+    @if $enable-email-svg {
       --email: #{$email};
     }
     
-    @if $plus-svg {
+    @if $enable-plus-svg {
       --plus: #{$plus};
     }
     
-    @if $minus-svg {
+    @if $enable-minus-svg {
       --minus: #{$minus};
     }
     
-    @if $bars-svg {
+    @if $enable-bars-svg {
       --bars: #{$bars};
     }
     
-    @if $dots-h-svg {
+    @if $enable-dots-h-svg {
       --dots-h: #{$dots-h};
     }
     
-    @if $dots-v-svg {
+    @if $enable-dots-v-svg {
       --dots-v: #{$dots-v};
     }
     
-    @if $caret-down-svg {
+    @if $enable-caret-down-svg {
       --caret-down: #{$caret-down};
     }
     
-    @if $caret-up-svg {
+    @if $enable-caret-up-svg {
       --caret-up: #{$caret-up};
     }
     
-    @if $caret-left-svg {
+    @if $enable-caret-left-svg {
       --caret-left: #{$caret-left};
     }
     
-    @if $caret-right-svg {
+    @if $enable-caret-right-svg {
       --caret-right: #{$caret-right};
     }
     
-    @if $close-svg {
+    @if $enable-close-svg {
       --close: #{$close};
     }
     
-    @if $ext-link-svg {
+    @if $enable-ext-link-svg {
       --ext-link: #{$ext-link};
     }
     
-    @if $pg-link-svg {
+    @if $enable-pg-link-svg {
       --pg-link: #{$pg-link};
     }
     
-    @if $search-svg {
+    @if $enable-search-svg {
       --search: #{$search};
     }
     
-    @if $box-svg {
+    @if $enable-box-svg {
       --box: #{$box};
     }
     
-    @if $pen-box-svg {
+    @if $enable-pen-box-svg {
       --pen-box: #{$pen-box};
     }
     
-    @if $tick-box-svg {
+    @if $enable-tick-box-svg {
       --tick-box: #{$tick-box};
     }
     
-    @if $close-box-svg {
+    @if $enable-close-box-svg {
       --close-box: #{$close-box};
     }
     
-    @if $close-box-fill-svg {
+    @if $enable-close-box-fill-svg {
       --close-box-fill: #{$close-box-fill};
     }
     
-    @if $download-svg {
+    @if $enable-download-svg {
       --download: #{$download};
     }
     
-    @if $user-svg {
+    @if $enable-user-svg {
       --user: #{$user};
     }
     
-    @if $question-svg {
+    @if $enable-question-svg {
       --question: #{$question};
     }
     
-    @if $sun-svg {
+    @if $enable-sun-svg {
       --sun: #{$sun};
     }
     
-    @if $moon-svg {
+    @if $enable-moon-svg {
       --moon: #{$moon};
     }
     
-    @if $rss-svg {
+    @if $enable-rss-svg {
       --rss: #{$rss};
     }
     
-    @if $github-svg {
+    @if $enable-github-svg {
       --github: #{$github};
     }
     
-    @if $twitter-svg {
+    @if $enable-twitter-svg {
       --twitter: #{$twitter};
     }
     
-    @if $mastodon-svg {
+    @if $enable-mastodon-svg {
       --mastodon: #{$mastodon};
     }
   
-    @if $tiktok-svg {
+    @if $enable-tiktok-svg {
       --tiktok: #{$tiktok};
     }
       
-    @if $facebook-svg {
+    @if $enable-facebook-svg {
       --facebook: #{$facebook};
     }
     
-    @if $instagram-svg {
+    @if $enable-instagram-svg {
       --instagram: #{$instagram};
     }
     
-    @if $pinterest-svg {
+    @if $enable-pinterest-svg {
       --pinterest: #{$pinterest};
     }
     
-    @if $codepen-svg {
+    @if $enable-codepen-svg {
       --codepen: #{$codepen};
     }
     
-    @if $reddit-svg {
+    @if $enable-reddit-svg {
       --reddit: #{$reddit};
     }
   }
@@ -602,216 +474,216 @@ $reddit-svg:             true !default;
 // Utility classes
 // ----------------------------------------------------------
 
-@if $icon-classes {
-  @if $custom-icons {
+@if $enable-icon-classes {
+  @if $enable-custom-icons {
     @include custom-icons-classes;
   }
 
-  @if $house-svg {
+  @if $enable-house-svg {
     .house {
       --svg: var(--house);        
     }
   }
   
-  @if $email-svg {
+  @if $enable-email-svg {
     .email {
       --svg: var(--email);        
     }
   }
   
-  @if $plus-svg {
+  @if $enable-plus-svg {
     .plus {
       --svg: var(--plus);        
     }
   }
   
-  @if $minus-svg {
+  @if $enable-minus-svg {
     .minus {
       --svg: var(--minus);        
     }
   }
   
-  @if $ext-link-svg {
+  @if $enable-ext-link-svg {
     .ext-link {
       --svg: var(--ext-link);        
     }
   }
   
-  @if $pg-link-svg {
+  @if $enable-pg-link-svg {
     .pg-link {
       --svg: var(--pg-link);        
     }
   }
   
-  @if $bars-svg {
+  @if $enable-bars-svg {
     .bars {
       --svg: var(--bars);        
     }
   }
   
-  @if $dots-h-svg {
+  @if $enable-dots-h-svg {
     .dots-h {
       --svg: var(--dots-h);        
     }
   }
   
-  @if $dots-v-svg {
+  @if $enable-dots-v-svg {
     .dots-v {
       --svg: var(--dots-v);        
     }
   }
   
-  @if $caret-down-svg {
+  @if $enable-caret-down-svg {
     .caret-down {
       --svg: var(--caret-down);        
     }
   }
   
-  @if $caret-up-svg {
+  @if $enable-caret-up-svg {
     .caret-up {
       --svg: var(--caret-up);        
     }
   }
   
-  @if $caret-left-svg {
+  @if $enable-caret-left-svg {
     .caret-left {
       --svg: var(--caret-left);        
     }
   }
   
-  @if $caret-right-svg {
+  @if $enable-caret-right-svg {
     .caret-right {
       --svg: var(--caret-right);        
     }
   }
   
-  @if $box-svg {
+  @if $enable-box-svg {
     .box {
       --svg: var(--box);        
     }
   }
   
-  @if $pen-box-svg {
+  @if $enable-pen-box-svg {
     .pen-box {
       --svg: var(--pen-box);        
     }
   }
   
-  @if $close-svg {
+  @if $enable-close-svg {
     .close {
       --svg: var(--close);        
     }
   }
   
-  @if $close-box-svg {
+  @if $enable-close-box-svg {
     .close-box {
       --svg: var(--close-box);        
     }
   }
   
-  @if $close-box-fill-svg {
+  @if $enable-close-box-fill-svg {
     .close-box-fill {
       --svg: var(--close-box-fill);        
     }
   }
   
-  @if $tick-box-svg {
+  @if $enable-tick-box-svg {
     .tick-box {
       --svg: var(--tick-box);        
     }
   }
   
-  @if $search-svg {
+  @if $enable-search-svg {
     .search {
       --svg: var(--search);        
     }
   }
   
-  @if $download-svg {
+  @if $enable-download-svg {
     .download {
       --svg: var(--download);        
     }
   }
   
-  @if $user-svg {
+  @if $enable-user-svg {
     .user {
       --svg: var(--user);        
     }
   }
   
-  @if $question-svg {
+  @if $enable-question-svg {
     .question {
       --svg: var(--question);        
     }
   }
   
-  @if $sun-svg {
+  @if $enable-sun-svg {
     .sun {
       --svg: var(--sun);        
     }
   }
   
-  @if $moon-svg {
+  @if $enable-moon-svg {
     .moon {
       --svg: var(--moon);        
     }
   }
   
-  @if $rss-svg {
+  @if $enable-rss-svg {
     .rss {
       --svg: var(--rss);        
     }
   }
   
-  @if $github-svg {
+  @if $enable-github-svg {
     .github {
       --svg: var(--github);        
     }
   }
   
-  @if $twitter-svg {
+  @if $enable-twitter-svg {
     .twitter {
       --svg: var(--twitter);        
     }
   }
   
-  @if $mastodon-svg {
+  @if $enable-mastodon-svg {
     .mastodon {
       --svg: var(--mastodon);        
     }
   }
   
-  @if $tiktok-svg {
+  @if $enable-tiktok-svg {
     .tiktok {
       --svg: var(--tiktok);        
     }
   }
   
-  @if $facebook-svg {
+  @if $enable-facebook-svg {
     .facebook {
       --svg: var(--facebook);        
     }
   }
   
-  @if $instagram-svg {
+  @if $enable-instagram-svg {
     .instagram {
       --svg: var(--instagram);        
     }
   }
   
-  @if $pinterest-svg {
+  @if $enable-pinterest-svg {
     .pinterest {
       --svg: var(--pinterest);        
     }
   }
   
-  @if $codepen-svg {
+  @if $enable-codepen-svg {
     .codepen {
       --svg: var(--codepen);        
     }
   }
   
-  @if $reddit-svg {
+  @if $enable-reddit-svg {
     .reddit {
       --svg: var(--reddit);        
     }
