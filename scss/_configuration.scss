@@ -1,8 +1,7 @@
 // ---------------------------------------------------------- 
 // System configuration
 // - Edit directly or use the _overrides.scss document.
-// - IMPORTANT: Make backups of changes made when/if updating
-//   SassMods source files and be mindful of new additions.  
+// - Make backups of changes made if updating SassMods.
 // ----------------------------------------------------------
 $system-breakpoint-xl:          1601px !default;
 $system-breakpoint-lg:          1281px !default;
@@ -140,5 +139,4 @@ $enable-instagram-svg:          true !default;
 $enable-pinterest-svg:          true !default;
 $enable-codepen-svg:            true !default;
 $enable-reddit-svg:             true !default;
-
 

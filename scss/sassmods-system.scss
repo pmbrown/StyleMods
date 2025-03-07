@@ -1,19 +1,9 @@
 // ---------------------------------------------------------- 
 // SassMods system
 // ----------------------------------------------------------
-// - Edit the _configuration.scss to enable or disable the
-//   individual modules and/or customize breakpoints. 
-// - Use the _overrides.scss to customize Sass variable
-//   properties used within the style documents and/or to 
-//   override values from the _configuration.scss document.
-// - IMPORTANT: Make backups of each file when/if updating 
-//   SassMods source files.
-// ----------------------------------------------------------
 @use "sassmods" as *;
 @use "overrides" as *;
 @use "configuration" as *;
-
-@include license;
 
 // HTML
 @if $enable-typography {
