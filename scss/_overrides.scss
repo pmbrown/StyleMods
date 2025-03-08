@@ -1,6 +1,13 @@
 // ---------------------------------------------------------- 
-// System overrides
-// - Make backups of changes made if updating SassMods.
+// System overrides - Make backups if updating SassMods.
 // ----------------------------------------------------------
-@use "sassmods" as *;
+// Override Sass variable values from the individual style
+// modules by including them with a @use map as follows:
+
+// @use "sassmods" with (
+//  $body-font-size: 2rem,
+//  $blue: skyblue,
+// );
+
+// Override true and false values from _configuration.scss below.
 @use "configuration" as *;
