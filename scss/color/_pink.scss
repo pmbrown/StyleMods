@@ -1,0 +1,195 @@
+// ---------------------------------------------------------- 
+// Pink
+// ----------------------------------------------------------
+// Variable colors
+$pink:      #ff1493 !default;
+$pink-1:    color-mix(in srgb, var(--pink) 40%, white) !default;
+$pink-2:    color-mix(in srgb, var(--pink) 50%, white) !default;
+$pink-3:    color-mix(in srgb, var(--pink) 60%, white) !default;
+$pink-4:    color-mix(in srgb, var(--pink) 70%, white) !default;
+$pink-5:    color-mix(in srgb, var(--pink) 80%, white) !default;
+$pink-6:    var(--pink) !default;  
+$pink-7:    color-mix(in srgb, var(--pink) 75%, black) !default;
+$pink-8:    color-mix(in srgb, var(--pink) 65%, black) !default;
+$pink-9:    color-mix(in srgb, var(--pink) 55%, black) !default;
+$pink-10:   color-mix(in srgb, var(--pink) 45%, black) !default;
+$pink-11:   color-mix(in srgb, var(--pink) 35%, black) !default;
+
+// Utility colors
+$pink-bg-text:      #000 !default;
+$pink-bg:           var(--pink-6) !default;
+$pink-bg-dark:      var(--pink-7) !default;
+$pink-bg-light:     var(--pink-5) !default;
+
+// Variables map
+$pink-variables: (
+  "pink": $pink,
+  "pink-1": $pink-1,
+  "pink-2": $pink-2,
+  "pink-3": $pink-3,
+  "pink-4": $pink-4,
+  "pink-5": $pink-5,
+  "pink-6": $pink-6,
+  "pink-7": $pink-7,
+  "pink-8": $pink-8,
+  "pink-9": $pink-9,
+  "pink-10": $pink-10,
+  "pink-11": $pink-11,
+) !default;
+
+
+// Utility maps
+$accordion-pink: (
+  "summary-text": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "summary-bg": $pink-bg,
+  "summary-focus": $pink-bg-dark,
+  "accordion-bd-color": $pink-bg-light,
+) !default;
+
+$alert-pink: (
+  "alert-text": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "alert-bg": $pink-bg,
+  "alert-bd-color": $pink-bg-light,
+) !default;
+
+$badge-pink: (
+  "badge-text": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "badge-bg": $pink-bg,
+) !default;
+
+$bg-pink: (
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "ico": $pink-bg-text,
+) !default;
+
+$btn-pink: (
+  "btn-text": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "btn-bg": $pink-bg,
+  "btn-bd-color": $pink-bg-light,
+  "btn-hover": $pink-bg-dark,
+  "focus-color": $pink-bg-light,
+) !default;
+
+$card-pink: (
+  "card-text": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "card-bg": $pink-bg,
+  "card-text-hover": $pink-bg-text,
+  "card-hover": $pink-bg-dark,
+  "card-bd-color": $pink-bg-light,
+  "card-focus-color": $pink-bg-light,
+) !default;
+
+$dialog-pink: (
+  "dialog-text": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "dialog-bg": $pink-bg,
+  "dialog-bd-color": $pink-bg-light,
+) !default;
+
+$list-group-pink: (
+  "list-group-text": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "list-group-bg": $pink-bg,
+  "list-group-dt-bg": $pink-bg,
+  "list-group-hover": $pink-bg-dark,
+  "list-group-bd-color": $pink-bg-light,
+) !default;
+
+$popover-pink: (
+  "popover-text": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "popover-bg": $pink-bg,
+  "popover-bd-color": $pink-bg-light,
+) !default;
+
+// Variables mixins
+@mixin pink-variables {
+  @each $name, $value in $pink-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin pink-variables-css {
+  :where(html) {
+    @include pink-variables;
+  }
+}
+
+// Utilities mixins
+@mixin accordion-pink-css {
+  @each $name, $value in $accordion-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin alert-pink-css {
+  @each $name, $value in $alert-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin badge-pink-css {
+  @each $name, $value in $badge-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin bg-pink-css {
+  @each $name, $value in $bg-pink {
+    --#{$name}: #{$value};
+  }
+  color: #{$pink-bg-text};
+  background-color: #{$pink-bg};
+}
+
+@mixin btn-pink-css {
+  @each $name, $value in $btn-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin card-pink-css {
+  @each $name, $value in $card-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin dialog-pink-css {
+  @each $name, $value in $dialog-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin list-group-pink-css {
+  @each $name, $value in $list-group-pink {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin popover-pink-css {
+  @each $name, $value in $popover-pink {
+    --#{$name}: #{$value};
+  }
+}

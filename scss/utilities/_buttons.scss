@@ -3,50 +3,51 @@
 // ----------------------------------------------------------
 $btn-text-color:          var(--btn-text, CanvasText) !default;
 $btn-font-size:           var(--btn-fs, inherit) !default;
+$btn-line-height:         var(--btn-lh, inherit) !default;
 $btn-padding-block:       var(--btn-py, 0.313rem) !default;
 $btn-padding-inline:      var(--btn-px, 0.75rem) !default;  
 $btn-border-color:        var(--btn-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $btn-radius:              var(--btn-radius, 0.125em) !default;
 $btn-background-color:    var(--btn-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
-$btn-text-hover:          var(--btn-text-hover, var(--btn-text)) !default;
 $btn-background-hover:    var(--btn-hover, color-mix(in srgb, CanvasText 6%, Canvas)) !default;
-$btn-focus-shadow:        var(--btn-focus, 0 0 0 0.12rem) !default;
-$btn-focus-shadow-color:  var(--btn-focus-color, color-mix(in srgb, CanvasText 16%, Canvas)) !default;
+$btn-focus-shadow:        var(--focus-shadow, 0 0 0 0.12rem) !default;
+$btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 16%, Canvas)) !default;
 
 @mixin buttons-css {
 
 .btn {
-  color: #{$btn-text-color};
-  font-size: #{$btn-font-size};
+  color: $btn-text-color;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
   text-align: center;
   text-decoration: none;
   display: var(--btn-d, inline-block); 
-  padding-block: #{$btn-padding-block};
-  padding-inline: #{$btn-padding-inline};  
-  border: 1px solid #{$btn-border-color};
-  border-radius: #{$btn-radius};
-  background-color: #{$btn-background-color};
+  padding-block: $btn-padding-block;
+  padding-inline: $btn-padding-inline;  
+  border: 1px solid $btn-border-color;
+  border-radius: $btn-radius;
+  background-color: $btn-background-color;
   cursor: pointer;
   -webkit-appearance: button;
 }
 
-.btn:is(:hover, :focus) { 
-  color: #{$btn-text-hover};
-  background-color: #{$btn-background-hover};
+.btn:is(:hover, :focus, :active) { 
+  color: $btn-text-color;
+  background-color: $btn-background-hover;
 }
 
 .btn:focus {
   outline: none;
-  box-shadow: #{$btn-focus-shadow} #{$btn-focus-shadow-color};
+  box-shadow: $btn-focus-shadow $btn-focus-shadow-color;
 }
 
 .btn:focus:not(:focus-visible) {  
   box-shadow: none;
-  background-color: #{$btn-background-color};
+  background-color: $btn-background-color;
 }
   
 .btn:focus:not(:focus-visible):hover {
-  background-color: #{$btn-background-hover};
+  background-color: $btn-background-hover;
 }
 
 .btn-xs {
@@ -86,13 +87,13 @@ $btn-focus-shadow-color:  var(--btn-focus-color, color-mix(in srgb, CanvasText 1
 }
 
 .btn-group *:first-child {
-  border-start-start-radius: #{$btn-radius};
-  border-end-start-radius: #{$btn-radius};
+  border-start-start-radius: $btn-radius;
+  border-end-start-radius: $btn-radius;
 }
 
 .btn-group *:last-child {
-  border-start-end-radius: #{$btn-radius};
-  border-end-end-radius: #{$btn-radius};
+  border-start-end-radius: $btn-radius;
+  border-end-end-radius: $btn-radius;
 }
 
 .btn-group *:is(:focus) {

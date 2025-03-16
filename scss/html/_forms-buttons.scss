@@ -2,20 +2,20 @@
 // Forms and buttons
 // ----------------------------------------------------------
 $button-form-font-family:  inherit !default;
-$input-focus-shadow:       var(--input-focus, 0 0 0 0.12rem) !default;
-$input-focus-color:        var(--input-focus-color, color-mix(in srgb, CanvasText 16%, Canvas)) !default;
+$input-focus-shadow:       var(--focus-shadow, 0 0 0 0.12rem) !default;
+$input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 16%, Canvas)) !default;
 
-$button-text-color:        var(--button-color, inherit) !default;
-$button-font-size:         var(--button-fs, inherit) !default;
-$button-line-height:       var(--button-lh, inherit) !default;
-$button-padding-block:     var(--button-py, 0.313rem) !default;
-$button-padding-inline:    var(--button-px, 0.75rem) !default;
-$button-border-color:      var(--button-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
-$button-radius:            var(--button-radius, 0.188rem) !default;
-$button-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
-$button-background-hover:  var(--button-hover, color-mix(in srgb, CanvasText 6%, Canvas)) !default;
+$button-text-color:        var(--btn-text, CanvasText) !default;
+$button-font-size:         var(--btn-fs, inherit) !default;
+$button-line-height:       var(--btn-lh, inherit) !default;
+$button-padding-block:     var(--btn-py, 0.313rem) !default;
+$button-padding-inline:    var(--btn-px, 0.75rem) !default;
+$button-border-color:      var(--btn-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
+$button-radius:            var(--btn-radius, 0.188rem) !default;
+$button-background-color:  var(--btn-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
+$button-background-hover:  var(--btn-hover, color-mix(in srgb, CanvasText 6%, Canvas)) !default;
 
-$form-text-color:          var(--form-color, inherit) !default;
+$form-text-color:          var(--form-text, inherit) !default;
 $form-font-size:           var(--form-fs, inherit) !default;
 $form-line-height:         var(--form-lh, inherit) !default;
 $form-padding-block:       var(--form-py, 0.313rem) !default;
@@ -31,37 +31,37 @@ $fieldset-padding-inline:  1.25rem !default;
 $legend-margin-bottom:     0.25rem !default;
 $legend-padding-block:     var(--form-py, 0.313rem) !default;
 $legend-padding-inline:    0.75rem !default;
-$legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
+$legend-background-color:  var(--btn-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 
 @mixin forms-buttons-css {
 
 :where(input, button, select, optgroup, textarea),
 ::file-selector-button {
-  font-family: #{$button-form-font-family};
+  font-family: $button-form-font-family;
 }
 
 :where(button, [type=button], [type=submit], [type=reset]),
 ::file-selector-button {
-  color: #{$button-text-color};
-  font-size: #{$button-font-size};
-  line-height: #{$button-line-height};
-  padding-block: #{$button-padding-block};
-  padding-inline: #{$button-padding-inline};
-  border: 1px solid #{$button-border-color};
-  border-radius: #{$button-radius};
-  background-color: #{$button-background-color};
+  color: $button-text-color;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  padding-block: $button-padding-block;
+  padding-inline: $button-padding-inline;
+  border: 1px solid $button-border-color;
+  border-radius: $button-radius;
+  background-color: $button-background-color;
   -webkit-appearance: button;
 }
 
 :where(select, optgroup, textarea, input:not([type=button], [type=submit], [type=reset])) {
-  color: #{$form-text-color};
-  font-size: #{$form-font-size};
-  line-height: #{$form-line-height};
-  padding-block: #{$form-padding-block};
-  padding-inline: #{$form-padding-inline};
-  border: 1px solid #{$form-border-color};
-  border-radius: #{$form-radius};
-  background-color: #{$form-background-color};
+  color: $form-text-color;
+  font-size: $form-font-size;
+  line-height: $form-line-height;
+  padding-block: $form-padding-block;
+  padding-inline: $form-padding-inline;
+  border: 1px solid $form-border-color;
+  border-radius: $form-radius;
+  background-color: $form-background-color;
 }
 
 :where(input, button, select, optgroup, textarea):disabled,
@@ -88,7 +88,7 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 
 :where(input, button, select, optgroup, textarea):focus {
   outline: none;
-  box-shadow: #{$input-focus-shadow} #{$input-focus-color};
+  box-shadow: $input-focus-shadow $input-focus-color;
 }
 
 :where(input, button, select, optgroup, textarea):focus:not(:focus-visible) {
@@ -96,16 +96,16 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 }
 
 :where(button, [type=button], [type=submit], [type=reset]):is(:hover, :focus) {
-  background-color: #{$button-background-hover};
+  background-color: $button-background-hover;
 }
 
-:where(button, [type=button], [type=submit], [type=reset]):focus:not(:focus-visible) {
-  background-color: #{$button-background-color};
+:where(button, [type=button], [type=submit], [type=reset], .btn):focus:not(:focus-visible) {
+  background-color: $button-background-color;
 }
 
 :where(button, [type=button], [type=submit], [type=reset]):focus:not(:focus-visible):hover,
 ::file-selector-button:hover {
-  background-color: #{$button-background-hover};
+  background-color: $button-background-hover;
 }
 
 :where(textarea) {
@@ -114,12 +114,12 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 }
 
 ::-webkit-input-placeholder {
-  color: var(--button-text, inherit);
+  color: var(--btn-text, inherit);
   opacity: 0.5;
 }
 
 :where([type=radio], [type=checkbox], [type=range], [progress]) {
-  accent-color: #{$accent-color};
+  accent-color: $accent-color;
 }
 
 :where([type=checkbox], [type=radio]) {
@@ -137,20 +137,20 @@ $legend-background-color:  var(--button-bg, color-mix(in srgb, CanvasText 3%, Ca
 }
 
 :where(fieldset, legend) {
-  border: 1px solid #{$fieldset-border-color};
-  border-radius: #{$fieldset-radius};
+  border: 1px solid $fieldset-border-color;
+  border-radius: $fieldset-radius;
 }
 
 :where(fieldset) {
-  margin-block-end: #{$fieldset-margin-bottom};
-  padding-inline: #{$fieldset-padding-inline};
+  margin-block-end: $fieldset-margin-bottom;
+  padding-inline: $fieldset-padding-inline;
 }
 
 :where(legend) {
-  margin-block-end: #{$legend-margin-bottom};
-  padding-block: #{$legend-padding-block};
-  padding-inline: #{$legend-padding-inline};
-  background-color: #{$legend-background-color};
+  margin-block-end: $legend-margin-bottom;
+  padding-block: $legend-padding-block;
+  padding-inline: $legend-padding-inline;
+  background-color: $legend-background-color;
 }
 
 :where([type=color]) {

@@ -1,15 +1,15 @@
 // ---------------------------------------------------------- 
 // Tables
 // ----------------------------------------------------------
-$table-margin-bottom:             var(--table-mb, 1rem) !default;
-$table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
-$table-padding-block:             var(--table-py, 0.313rem) !default;
-$table-padding-inline:            var(--table-px, 0.75rem) !default;
-$table-caption-font-weight:       var(--table-caption-fw, bold) !default;
-$table-caption-padding-bottom:    0.5rem !default;
-$thead-text-color:                var(--thead-txt, inherit) !default;
+$thead-text-color:                var(--thead-text, inherit) !default;
 $thead-font-weight:               var(--thead-fw, bold) !default;
 $thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
+$table-caption-font-weight:       var(--table-caption-fw, bold) !default;
+$table-caption-padding-bottom:    0.5rem !default;
+$table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
+$table-margin-bottom:             var(--table-mb, 1rem) !default;
+$table-padding-block:             var(--table-py, 0.313rem) !default;
+$table-padding-inline:            var(--table-px, 0.75rem) !default;
 $table-stripes-color:             var(--table-stripes-text, inherit) !default;
 $table-stripes-background-color:  var(--table-stripes, color-mix(in srgb, CanvasText 1%, Canvas)) !default;
 $table-hover-color:               var(--table-hover-text, inherit) !default;
@@ -20,52 +20,52 @@ $table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasTe
 :where(table) {
   border-collapse: collapse;
   inline-size: 100%;
-  margin-block-end: #{$table-margin-bottom};
+  margin-block-end: $table-margin-bottom;
   font-variant-numeric: tabular-nums;
 }
 
 :where(caption) {
-  font-weight: #{$table-caption-font-weight};
+  font-weight: $table-caption-font-weight;
   text-align: left;
-  padding-block-end: #{$table-caption-padding-bottom};
+  padding-block-end: $table-caption-padding-bottom;
 }
 
 :where(thead) th {
-  color: #{$thead-text-color};
-  background-color: #{$thead-background-color};
+  color: $thead-text-color;
+  background-color: $thead-background-color;
 }
 
 :where(thead) th:last-child {
-  border-inline-end-color: #{$table-border-color};
+  border-inline-end-color: $table-border-color;
 }
 
 :where(th) {
-  font-weight: #{$thead-font-weight};
+  font-weight: $thead-font-weight;
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
 
 :where(thead, tbody, tfoot, tr, td, th) {
-  border: 1px solid #{$table-border-color};
+  border: 1px solid $table-border-color;
   vertical-align: top;
 }
 
 :where(tbody, thead) th, td {
-  padding-block: #{$table-padding-block};
-  padding-inline: #{$table-padding-inline};
+  padding-block: $table-padding-block;
+  padding-inline: $table-padding-inline;
   white-space: nowrap;
 }
 
 :where(.table-striped tr):nth-child(even),
 :where(.table-combo tr):nth-child(even) {
-  color: #{$table-stripes-color};
-  background-color: #{$table-stripes-background-color};
+  color: $table-stripes-color;
+  background-color: $table-stripes-background-color;
 }
 
 :where(.table-hover tbody tr):hover,
 :where(.table-combo tbody tr):hover {
-  color: #{$table-hover-color};
-  background-color: #{$table-hover-background-color};
+  color: $table-hover-color;
+  background-color: $table-hover-background-color;
 }
 
 :where(.table-wrap) {

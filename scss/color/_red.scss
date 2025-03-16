@@ -1,0 +1,194 @@
+// ---------------------------------------------------------- 
+// Red
+// ----------------------------------------------------------
+// Variable colors
+$red:      #ff0000 !default;
+$red-1:    color-mix(in srgb, var(--red) 40%, white) !default;
+$red-2:    color-mix(in srgb, var(--red) 50%, white) !default;
+$red-3:    color-mix(in srgb, var(--red) 60%, white) !default;
+$red-4:    color-mix(in srgb, var(--red) 70%, white) !default;
+$red-5:    color-mix(in srgb, var(--red) 80%, white) !default;
+$red-6:    var(--red) !default;  
+$red-7:    color-mix(in srgb, var(--red) 80%, black) !default;
+$red-8:    color-mix(in srgb, var(--red) 60%, black) !default;
+$red-9:    color-mix(in srgb, var(--red) 50%, black) !default;
+$red-10:   color-mix(in srgb, var(--red) 40%, black) !default;
+$red-11:   color-mix(in srgb, var(--red) 30%, black) !default;
+
+// Utility colors
+$red-bg-text:      #fff !default;
+$red-bg:           var(--red-6) !default;
+$red-bg-dark:      var(--red-7) !default;
+$red-bg-light:     var(--red-5) !default;
+
+// Variables map
+$red-variables: (
+  "red": $red,
+  "red-1": $red-1,
+  "red-2": $red-2,
+  "red-3": $red-3,
+  "red-4": $red-4,
+  "red-5": $red-5,
+  "red-6": $red-6,
+  "red-7": $red-7,
+  "red-8": $red-8,
+  "red-9": $red-9,
+  "red-10": $red-10,
+  "red-11": $red-11,
+) !default;
+
+// Utility maps
+$accordion-red: (
+  "summary-text": $red-bg-text,
+  "ico": $red-bg-text,
+  "summary-bg": $red-bg,
+  "summary-focus": $red-bg-dark,
+  "accordion-bd-color": $red-bg-light,
+) !default;
+
+$alert-red: (
+  "alert-text": $red-bg-text,
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "ico": $red-bg-text,
+  "alert-bg": $red-bg,
+  "alert-bd-color": $red-bg-light,
+) !default;
+
+$badge-red: (
+  "badge-text": $red-bg-text,
+  "ico": $red-bg-text,
+  "badge-bg": $red-bg,
+) !default;
+
+$bg-red: (
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "ico": $red-bg-text,
+) !default;
+
+$btn-red: (
+  "btn-text": $red-bg-text,
+  "ico": $red-bg-text,
+  "btn-bg": $red-bg,
+  "btn-bd-color": $red-bg-light,
+  "btn-hover": $red-bg-dark,
+  "focus-color": $red-bg-light,
+) !default;
+
+$card-red: (
+  "card-text": $red-bg-text,
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "ico": $red-bg-text,
+  "card-bg": $red-bg,
+  "card-text-hover": $red-bg-text,
+  "card-hover": $red-bg-dark,
+  "card-bd-color": $red-bg-light,
+  "card-focus-color": $red-bg-light,
+) !default;
+
+$dialog-red: (
+  "dialog-text": $red-bg-text,
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "ico": $red-bg-text,
+  "dialog-bg": $red-bg,
+  "dialog-bd-color": $red-bg-light,
+) !default;
+
+$list-group-red: (
+  "list-group-text": $red-bg-text,
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "ico": $red-bg-text,
+  "list-group-bg": $red-bg,
+  "list-group-dt-bg": $red-bg,
+  "list-group-hover": $red-bg-dark,
+  "list-group-bd-color": $red-bg-light,
+) !default;
+
+$popover-red: (
+  "popover-text": $red-bg-text,
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "ico": $red-bg-text,
+  "popover-bg": $red-bg,
+  "popover-bd-color": $red-bg-light,
+) !default;
+
+// Variables mixins
+@mixin red-variables {
+  @each $name, $value in $red-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin red-variables-css {
+  :where(html) {
+    @include red-variables;
+  }
+}
+
+// Utilities mixins
+@mixin accordion-red-css {
+  @each $name, $value in $accordion-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin alert-red-css {
+  @each $name, $value in $alert-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin badge-red-css {
+  @each $name, $value in $badge-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin bg-red-css {
+  @each $name, $value in $bg-red {
+    --#{$name}: #{$value};
+  }
+  color: #{$red-bg-text};
+  background-color: #{$red-bg};
+}
+
+@mixin btn-red-css {
+  @each $name, $value in $btn-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin card-red-css {
+  @each $name, $value in $card-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin dialog-red-css {
+  @each $name, $value in $dialog-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin list-group-red-css {
+  @each $name, $value in $list-group-red {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin popover-red-css {
+  @each $name, $value in $popover-red {
+    --#{$name}: #{$value};
+  }
+}

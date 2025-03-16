@@ -1,0 +1,194 @@
+// ---------------------------------------------------------- 
+// Green
+// ----------------------------------------------------------
+// Variable colors
+$green:      #006400 !default;
+$green-1:    color-mix(in srgb, var(--green) 40%, white) !default;
+$green-2:    color-mix(in srgb, var(--green) 50%, white) !default;
+$green-3:    color-mix(in srgb, var(--green) 60%, white) !default;
+$green-4:    color-mix(in srgb, var(--green) 70%, white) !default;
+$green-5:    color-mix(in srgb, var(--green) 80%, white) !default;
+$green-6:    var(--green) !default;  
+$green-7:    color-mix(in srgb, var(--green) 80%, black) !default;
+$green-8:    color-mix(in srgb, var(--green) 60%, black) !default;
+$green-9:    color-mix(in srgb, var(--green) 50%, black) !default;
+$green-10:   color-mix(in srgb, var(--green) 40%, black) !default;
+$green-11:   color-mix(in srgb, var(--green) 30%, black) !default;
+
+// Utility colors
+$green-bg-text:      #fff !default;
+$green-bg:           var(--green-6) !default;
+$green-bg-dark:      var(--green-7) !default;
+$green-bg-light:     var(--green-5) !default;
+
+// Variables map
+$green-variables: (
+  "green": $green,
+  "green-1": $green-1,
+  "green-2": $green-2,
+  "green-3": $green-3,
+  "green-4": $green-4,
+  "green-5": $green-5,
+  "green-6": $green-6,
+  "green-7": $green-7,
+  "green-8": $green-8,
+  "green-9": $green-9,
+  "green-10": $green-10,
+  "green-11": $green-11,
+) !default;
+
+// Utility maps
+$accordion-green: (
+  "summary-text": $green-bg-text,
+  "ico": $green-bg-text,
+  "summary-bg": $green-bg,
+  "summary-focus": $green-bg-dark,
+  "accordion-bd-color": $green-bg-light,
+) !default;
+
+$alert-green: (
+  "alert-text": $green-bg-text,
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "ico": $green-bg-text,
+  "alert-bg": $green-bg,
+  "alert-bd-color": $green-bg-light,
+) !default;
+
+$badge-green: (
+  "badge-text": $green-bg-text,
+  "ico": $green-bg-text,
+  "badge-bg": $green-bg,
+) !default;
+
+$bg-green: (
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "ico": $green-bg-text,
+) !default;
+
+$btn-green: (
+  "btn-text": $green-bg-text,
+  "ico": $green-bg-text,
+  "btn-bg": $green-bg,
+  "btn-bd-color": $green-bg-light,
+  "btn-hover": $green-bg-dark,
+  "focus-color": $green-bg-light,
+) !default;
+
+$card-green: (
+  "card-text": $green-bg-text,
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "ico": $green-bg-text,
+  "card-bg": $green-bg,
+  "card-text-hover": $green-bg-text,
+  "card-hover": $green-bg-dark,
+  "card-bd-color": $green-bg-light,
+  "card-focus-color": $green-bg-light,
+) !default;
+
+$dialog-green: (
+  "dialog-text": $green-bg-text,
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "ico": $green-bg-text,
+  "dialog-bg": $green-bg,
+  "dialog-bd-color": $green-bg-light,
+) !default;
+
+$list-group-green: (
+  "list-group-text": $green-bg-text,
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "ico": $green-bg-text,
+  "list-group-bg": $green-bg,
+  "list-group-dt-bg": $green-bg,
+  "list-group-hover": $green-bg-dark,
+  "list-group-bd-color": $green-bg-light,
+) !default;
+
+$popover-green: (
+  "popover-text": $green-bg-text,
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "ico": $green-bg-text,
+  "popover-bg": $green-bg,
+  "popover-bd-color": $green-bg-light,
+) !default;
+
+// Variables mixins
+@mixin green-variables {
+  @each $name, $value in $green-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin green-variables-css {
+  :where(html) {
+    @include green-variables;
+  }
+}
+
+// Utilities mixins
+@mixin accordion-green-css {
+  @each $name, $value in $accordion-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin alert-green-css {
+  @each $name, $value in $alert-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin badge-green-css {
+  @each $name, $value in $badge-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin bg-green-css {
+  @each $name, $value in $bg-green {
+    --#{$name}: #{$value};
+  }
+  color: #{$green-bg-text};
+  background-color: #{$green-bg};
+}
+
+@mixin btn-green-css {
+  @each $name, $value in $btn-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin card-green-css {
+  @each $name, $value in $card-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin dialog-green-css {
+  @each $name, $value in $dialog-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin list-group-green-css {
+  @each $name, $value in $list-group-green {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin popover-green-css {
+  @each $name, $value in $popover-green {
+    --#{$name}: #{$value};
+  }
+}

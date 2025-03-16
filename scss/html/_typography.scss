@@ -67,34 +67,34 @@ $blockquote-border-left:      10px !default;
 
 :where(html) {
   color-scheme: light dark;
-  color: #{$text-color};
-  font-size: #{$html-font-size};
-  font-family: #{$font-family};  
-  background-color: #{$background-color};
+  color: $text-color;
+  font-size: $html-font-size;
+  font-family: $font-family;  
+  background-color: $background-color;
   block-size: 100%;
 }
 
 :where(body) {
-  font-size: #{$body-font-size};
-  font-weight: #{$body-font-weight};
-  line-height: #{$body-line-height};
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
 }
 
 :where(a) {
-  color: #{$link-color};
+  color: $link-color;
   overflow-wrap: break-word;
-  text-decoration-color: #{$link-decoration-color};
-  text-decoration-thickness: #{$link-decoration-width};
-  text-underline-offset: #{$link-underline-offset};
+  text-decoration-color: $link-decoration-color;
+  text-decoration-thickness: $link-decoration-width;
+  text-underline-offset: $link-underline-offset;
 }
 
 :where(a:visited) {
-  color: #{$visited-color};
-  text-decoration-color: #{$visited-decoration-color};
+  color: $visited-color;
+  text-decoration-color: $visited-decoration-color;
 }
 
 :where(a:hover) {
-  color: #{$hover-color};
+  color: $hover-color;
   text-decoration: none;
 }
 
@@ -103,50 +103,50 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-  font-weight: #{$heading-font-weight};
-  line-height: #{$heading-line-height};
-  text-wrap: #{$heading-text-wrap};
-  margin-block-end: #{$heading-margin-bottom};
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  text-wrap: $heading-text-wrap;
+  margin-block-end: $heading-margin-bottom;
 }
 
 :where(h1) {
-  font-size: #{$h1-font-size};
+  font-size: $h1-font-size;
 }
 
 :where(h2) {
-  font-size: #{$h2-font-size};
+  font-size: $h2-font-size;
 }
 
 :where(h3) {
-  font-size: #{$h3-font-size};
+  font-size: $h3-font-size;
 }
 
 :where(h4) {
-  font-size: #{$h4-font-size};
+  font-size: $h4-font-size;
 }
 
 :where(h5) {
-  font-size: #{$h5-font-size};
+  font-size: $h5-font-size;
 }
 
 :where(h6) {
   --heading-lh: 1.25;
-  font-size: #{$h6-font-size};
+  font-size: $h6-font-size;
 }
 
 :where(p) {
-  font-size: #{$para-font-size};
-  text-wrap: #{$para-text-wrap};
-  margin-block-end: #{$para-margin-bottom};
+  font-size: $para-font-size;
+  text-wrap: $para-text-wrap;
+  margin-block-end: $para-margin-bottom;
 }
 
 :where(ol, ul, dl) {
-  text-wrap: #{$list-text-wrap};
-  margin-block-end: #{$list-margin-bottom};
+  text-wrap: $list-text-wrap;
+  margin-block-end: $list-margin-bottom;
 }
 
 :where(ol, ul) {
-  padding-inline-start: #{$list-indent};
+  padding-inline-start: $list-indent;
 }
 
 :where(ol) {
@@ -170,15 +170,15 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(dd) {
-  margin-inline-start: #{$dl-list-indent};
+  margin-inline-start: $dl-list-indent;
 }
 
 :where(small) {
-  font-size: #{$small-font-size};
+  font-size: $small-font-size;
 }
 
 :where(h1, h2, h3, h4, h5, h6) small {
-  font-size: #{$small-font-size-heading};
+  font-size: $small-font-size-heading;
 }
 
 :where(bold, strong) {
@@ -190,7 +190,7 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(code) {
-  color: #{$code-color};
+  color: $code-color;
   word-wrap: break-word;
 }
 
@@ -199,18 +199,18 @@ a > :where(code) {
 }
 
 :where(kbd) {
-  padding-block: #{$kbd-padding-block};
-  padding-inline: #{$kbd-padding-inline};
-  background-color: #{$kbd-background-color};
-  border-radius: #{$kbd-radius};
+  padding-block: $kbd-padding-block;
+  padding-inline: $kbd-padding-inline;
+  background-color: $kbd-background-color;
+  border-radius: $kbd-radius;
 }
 
 :where(pre) {
   overflow: auto;
-  padding: #{$pre-padding};
-  margin-block-end: #{$pre-margin-bottom};
-  border: 1px solid #{$pre-border-color};
-  background-color: #{$pre-background-color};
+  padding: $pre-padding;
+  margin-block-end: $pre-margin-bottom;
+  border: 1px solid $pre-border-color;
+  background-color: $pre-background-color;
 }
 
 :where(pre code) {
@@ -224,11 +224,11 @@ a > :where(code) {
 }
 
 :where(blockquote) {
-  padding-block: #{$blockquote-padding-block};
-  padding-inline: #{$blockquote-padding-inline};
-  margin-block-end: #{$blockquote-margin-bottom};
-  border: #{$blockquote-border} solid #{$blockquote-border-color};
-  border-inline-start-width: #{$blockquote-border-left};
+  padding-block: $blockquote-padding-block;
+  padding-inline: $blockquote-padding-inline;
+  margin-block-end: $blockquote-margin-bottom;
+  border: $blockquote-border solid $blockquote-border-color;
+  border-inline-start-width: $blockquote-border-left;
 }
 
 :where(blockquote p) {

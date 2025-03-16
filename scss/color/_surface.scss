@@ -1,0 +1,42 @@
+// ---------------------------------------------------------- 
+// Surface
+// ----------------------------------------------------------
+$surface:      Canvas !default;
+$surface-1:    color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
+$surface-2:    color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
+$surface-3:    color-mix(in srgb, CanvasText 14%, var(--surface)) !default;
+$surface-4:    color-mix(in srgb, CanvasText 20%, var(--surface)) !default;
+$surface-5:    color-mix(in srgb, CanvasText 26%, var(--surface)) !default;
+$surface-6:    color-mix(in srgb, CanvasText 32%, var(--surface)) !default;
+$surface-7:    color-mix(in srgb, CanvasText 38%, var(--surface)) !default;
+$surface-8:    color-mix(in srgb, CanvasText 44%, var(--surface)) !default;
+$surface-9:    color-mix(in srgb, CanvasText 50%, var(--surface)) !default;
+$surface-10:   color-mix(in srgb, CanvasText 56%, var(--surface)) !default;
+$surface-11:   color-mix(in srgb, CanvasText 62%, var(--surface)) !default;
+
+$surface-variables: (
+  "surface": $surface,
+  "surf-1": $surface-1,
+  "surf-2": $surface-2,
+  "surf-3": $surface-3,
+  "surf-4": $surface-4,
+  "surf-5": $surface-5,
+  "surf-6": $surface-6,
+  "surf-7": $surface-7,
+  "surf-8": $surface-8,
+  "surf-9": $surface-9,
+  "surf-10": $surface-10,
+  "surf-11": $surface-11,
+) !default;
+
+@mixin surface-variables {
+  @each $name, $value in $surface-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin surface-variables-css {
+  :where(html) {
+    @include surface-variables;
+  }
+}

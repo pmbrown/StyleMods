@@ -1,8 +1,9 @@
 // ---------------------------------------------------------- 
 // List groups
 // ----------------------------------------------------------
-$list-group-text-color:           var(--list-group-txt) !default;
+$list-group-text-color:           var(--list-group-text) !default;
 $list-group-background-color:     var(--list-group-bg) !default;
+$list-group-link-color:           var(--link, LinkText) !default;
 $list-links-background-hover:     var(--list-group-hover, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
 $list-group-padding-block:        var(--list-group-py, 0.5rem) !default;
 $list-group-padding-inline:       var(--list-group-px, 0.75rem) !default;
@@ -15,12 +16,12 @@ $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, Can
 @mixin list-groups-css {
 
 :where(.list-group, .list-links) {
-  --list-group-inner-radius: #{$list-group-inner-radius};
-  color: #{$list-group-text-color};
+  --list-group-inner-radius: $list-group-inner-radius;
+  color: $list-group-text-color;
   max-inline-size: var(--list-group-width);
-  border: 1px solid #{$list-group-border-color};
-  border-radius: #{$list-group-radius};
-  background-color: #{$list-group-background-color};
+  border: 1px solid $list-group-border-color;
+  border-radius: $list-group-radius;
+  background-color: $list-group-background-color;
 }
 
 :where(.list-group, .list-links):is(ul, ol) {
@@ -33,18 +34,18 @@ $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, Can
 }
 
 :where(.list-group, .list-links) :is(li, dd):not(:last-child) {
-  border-block-end: 1px solid #{$list-group-border-color};
+  border-block-end: 1px solid $list-group-border-color;
 }
 
 :where(.list-group :is(li, dt, dd), .list-links dt) {
-  padding-block: #{$list-group-padding-block};
-  padding-inline: #{$list-group-padding-inline};
+  padding-block: $list-group-padding-block;
+  padding-inline: $list-group-padding-inline;
 }
 
 :where(.list-group, .list-links) dt {
-  font-weight: #{$list-group-dt-font-weight};
-  border-block-end: 1px solid #{$list-group-border-color};
-  background-color: #{$list-group-dt-background-color};
+  font-weight: $list-group-dt-font-weight;
+  border-block-end: 1px solid $list-group-border-color;
+  background-color: $list-group-dt-background-color;
 }
 
 :where(.list-group, .list-links) dt:first-child {
@@ -53,14 +54,15 @@ $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, Can
 
 // List links
 :where(.list-links a) {
+  color: $list-group-link-color;
   text-decoration: none;
   display: block;
-  padding-block: #{$list-group-padding-block};
-  padding-inline: #{$list-group-padding-inline};
+  padding-block: $list-group-padding-block;
+  padding-inline: $list-group-padding-inline;
 }
 
 :where(.list-links a:is(:hover, :focus)) {
-  background-color: #{$list-links-background-hover};
+  background-color: $list-links-background-hover;
 }
 
 :where(.list-links a:focus-visible) {

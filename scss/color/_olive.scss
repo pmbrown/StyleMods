@@ -1,0 +1,194 @@
+// ---------------------------------------------------------- 
+// Olive
+// ----------------------------------------------------------
+// Variable colors
+$olive:      #556b2f !default;
+$olive-1:    color-mix(in srgb, var(--olive) 40%, white) !default;
+$olive-2:    color-mix(in srgb, var(--olive) 50%, white) !default;
+$olive-3:    color-mix(in srgb, var(--olive) 60%, white) !default;
+$olive-4:    color-mix(in srgb, var(--olive) 70%, white) !default;
+$olive-5:    color-mix(in srgb, var(--olive) 80%, white) !default;
+$olive-6:    var(--olive) !default;  
+$olive-7:    color-mix(in srgb, var(--olive) 80%, black) !default;
+$olive-8:    color-mix(in srgb, var(--olive) 60%, black) !default;
+$olive-9:    color-mix(in srgb, var(--olive) 50%, black) !default;
+$olive-10:   color-mix(in srgb, var(--olive) 40%, black) !default;
+$olive-11:   color-mix(in srgb, var(--olive) 30%, black) !default;
+
+// Utility colors
+$olive-bg-text:      #fff !default;
+$olive-bg:           var(--olive-6) !default;
+$olive-bg-dark:      var(--olive-7) !default;
+$olive-bg-light:     var(--olive-5) !default;
+
+// Variables map
+$olive-variables: (
+  "olive": $olive,
+  "olive-1": $olive-1,
+  "olive-2": $olive-2,
+  "olive-3": $olive-3,
+  "olive-4": $olive-4,
+  "olive-5": $olive-5,
+  "olive-6": $olive-6,
+  "olive-7": $olive-7,
+  "olive-8": $olive-8,
+  "olive-9": $olive-9,
+  "olive-10": $olive-10,
+  "olive-11": $olive-11,
+) !default;
+
+// Utility maps
+$accordion-olive: (
+  "summary-text": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "summary-bg": $olive-bg,
+  "summary-focus": $olive-bg-dark,
+  "accordion-bd-color": $olive-bg-light,
+) !default;
+
+$alert-olive: (
+  "alert-text": $olive-bg-text,
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "alert-bg": $olive-bg,
+  "alert-bd-color": $olive-bg-light,
+) !default;
+
+$badge-olive: (
+  "badge-text": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "badge-bg": $olive-bg,
+) !default;
+
+$bg-olive: (
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "ico": $olive-bg-text,
+) !default;
+
+$btn-olive: (
+  "btn-text": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "btn-bg": $olive-bg,
+  "btn-bd-color": $olive-bg-light,
+  "btn-hover": $olive-bg-dark,
+  "focus-color": $olive-bg-light,
+) !default;
+
+$card-olive: (
+  "card-text": $olive-bg-text,
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "card-bg": $olive-bg,
+  "card-text-hover": $olive-bg-text,
+  "card-hover": $olive-bg-dark,
+  "card-bd-color": $olive-bg-light,
+  "card-focus-color": $olive-bg-light,
+) !default;
+
+$dialog-olive: (
+  "dialog-text": $olive-bg-text,
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "dialog-bg": $olive-bg,
+  "dialog-bd-color": $olive-bg-light,
+) !default;
+
+$list-group-olive: (
+  "list-group-text": $olive-bg-text,
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "list-group-bg": $olive-bg,
+  "list-group-dt-bg": $olive-bg,
+  "list-group-hover": $olive-bg-dark,
+  "list-group-bd-color": $olive-bg-light,
+) !default;
+
+$popover-olive: (
+  "popover-text": $olive-bg-text,
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "popover-bg": $olive-bg,
+  "popover-bd-color": $olive-bg-light,
+) !default;
+
+// Variables mixins
+@mixin olive-variables {
+  @each $name, $value in $olive-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin olive-variables-css {
+  :where(html) {
+    @include olive-variables;
+  }
+}
+
+// Utilities mixins
+@mixin accordion-olive-css {
+  @each $name, $value in $accordion-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin alert-olive-css {
+  @each $name, $value in $alert-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin badge-olive-css {
+  @each $name, $value in $badge-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin bg-olive-css {
+  @each $name, $value in $bg-olive {
+    --#{$name}: #{$value};
+  }
+  color: #{$olive-bg-text};
+  background-color: #{$olive-bg};
+}
+
+@mixin btn-olive-css {
+  @each $name, $value in $btn-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin card-olive-css {
+  @each $name, $value in $card-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin dialog-olive-css {
+  @each $name, $value in $dialog-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin list-group-olive-css {
+  @each $name, $value in $list-group-olive {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin popover-olive-css {
+  @each $name, $value in $popover-olive {
+    --#{$name}: #{$value};
+  }
+}

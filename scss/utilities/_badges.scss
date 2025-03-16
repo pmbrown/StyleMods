@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Badges
 // ----------------------------------------------------------
-$badge-text-color:        var(--badge-txt, inherit) !default;
+$badge-text-color:        var(--badge-text, inherit) !default;
 $badge-font-size:         var(--badge-fs, 0.65em) !default;
 $badge-font-weight:       var(--badge-fw, 600) !default;
 $badge-padding-block:     var(--badge-py, 0.375em) !default;
@@ -12,19 +12,19 @@ $badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 6%, Canv
 @mixin badges-css {
 
 :where(.badge) {
-  color: #{$badge-text-color};
-  font-size: #{$badge-font-size};
-  font-weight: #{$badge-font-weight};
+  color: $badge-text-color;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
   text-align: center;
   line-height: 1;
   position: relative;
   inset-block-start: -1px;
   display: inline-block;
   vertical-align: baseline;
-  padding-block: #{$badge-padding-block};
-  padding-inline: #{$badge-padding-inline};
-  border-radius: #{$badge-radius};
-  background-color: #{$badge-background-color};
+  padding-block: $badge-padding-block;
+  padding-inline: $badge-padding-inline;
+  border-radius: $badge-radius;
+  background-color: $badge-background-color;
 }
 
 } // end badges-css

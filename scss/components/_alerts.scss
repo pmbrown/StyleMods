@@ -6,19 +6,19 @@ $alert-margin-bottom:     var(--alert-mb, 1rem);
 $alert-padding-block:     var(--alert-py, 0.66rem);
 $alert-padding-inline:    var(--alert-px, 1rem);
 $alert-border-color:      var(--alert-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
-$alert-radius:            var(--alert-radius); 
+$alert-radius:            var(--alert-radius, 0.188rem); 
 $alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canvas));
 
 @mixin alerts-css {
 
 .alert {
-  color: #{$alert-text-color};
-  margin-block-end: #{$alert-margin-bottom};
-  padding-block: #{$alert-padding-block};
-  padding-inline: #{$alert-padding-inline};
-  border: 1px solid #{$alert-border-color};
-  border-radius: #{$alert-radius}; 
-  background-color: #{$alert-background-color};
+  color: $alert-text-color;
+  margin-block-end: $alert-margin-bottom;
+  padding-block: $alert-padding-block;
+  padding-inline: $alert-padding-inline;
+  border: 1px solid $alert-border-color;
+  border-radius: $alert-radius; 
+  background-color: $alert-background-color;
 }
 
 .alert * {
@@ -33,9 +33,9 @@ $alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canv
   inline-size: 100%;
   max-inline-size: 100%;  
   margin: initial;
-  margin-block-end: #{$alert-margin-bottom};
-  padding-block: #{$alert-padding-block};
-  padding-inline-end: #{$alert-padding-inline};
+  margin-block-end: $alert-margin-bottom;
+  padding-block: $alert-padding-block;
+  padding-inline-end: $alert-padding-inline;
   transition: none;
 }
 
@@ -51,8 +51,13 @@ $alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canv
   margin-inline-start: auto;
 }
 
+.alert [method="dialog"] button:is(:hover, :focus, :active) {
+  background-color: transparent;
+  border: none;
+}
+
 .alert [method="dialog"] button:before {
-  --ico: var(--alert-txt, CanvasText);
+  --ico: var(--alert-text, CanvasText);
   display: inline-block;
   content: "";
   block-size: 1em;

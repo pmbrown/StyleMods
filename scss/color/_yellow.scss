@@ -1,0 +1,194 @@
+// ---------------------------------------------------------- 
+// Yellow
+// ----------------------------------------------------------
+// Variable colors
+$yellow:      #ffff00 !default;
+$yellow-1:    color-mix(in srgb, var(--yellow) 25%, white) !default;
+$yellow-2:    color-mix(in srgb, var(--yellow) 35%, white) !default;
+$yellow-3:    color-mix(in srgb, var(--yellow) 45%, white) !default;
+$yellow-4:    color-mix(in srgb, var(--yellow) 55%, white) !default;
+$yellow-5:    color-mix(in srgb, var(--yellow) 70%, white) !default;
+$yellow-6:    var(--yellow) !default;  
+$yellow-7:    color-mix(in srgb, var(--yellow) 85%, black) !default;
+$yellow-8:    color-mix(in srgb, var(--yellow) 75%, black) !default;
+$yellow-9:    color-mix(in srgb, var(--yellow) 62%, black) !default;
+$yellow-10:   color-mix(in srgb, var(--yellow) 55%, black) !default;
+$yellow-11:   color-mix(in srgb, var(--yellow) 45%, black) !default;
+
+// Utility colors
+$yellow-bg-text:      #000 !default;
+$yellow-bg:           var(--yellow-6) !default;
+$yellow-bg-dark:      var(--yellow-7) !default;
+$yellow-bg-light:     var(--yellow-5) !default;
+
+// Variables map
+$yellow-variables: (
+  "yellow": $yellow,
+  "yellow-1": $yellow-1,
+  "yellow-2": $yellow-2,
+  "yellow-3": $yellow-3,
+  "yellow-4": $yellow-4,
+  "yellow-5": $yellow-5,
+  "yellow-6": $yellow-6,
+  "yellow-7": $yellow-7,
+  "yellow-8": $yellow-8,
+  "yellow-9": $yellow-9,
+  "yellow-10": $yellow-10,
+  "yellow-11": $yellow-11,
+) !default;
+
+// Utility maps
+$accordion-yellow: (
+  "summary-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "summary-bg": $yellow-bg,
+  "summary-focus": $yellow-bg-dark,
+  "accordion-bd-color": $yellow-bg-light,
+) !default;
+
+$alert-yellow: (
+  "alert-text": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "alert-bg": $yellow-bg,
+  "alert-bd-color": $yellow-bg-light,
+) !default;
+
+$badge-yellow: (
+  "badge-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "badge-bg": $yellow-bg,
+) !default;
+
+$bg-yellow: (
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+) !default;
+
+$btn-yellow: (
+  "btn-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "btn-bg": $yellow-bg,
+  "btn-bd-color": $yellow-bg-light,
+  "btn-hover": $yellow-bg-dark,
+  "focus-color": $yellow-bg-light,
+) !default;
+
+$card-yellow: (
+  "card-text": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "card-bg": $yellow-bg,
+  "card-text-hover": $yellow-bg-text,
+  "card-hover": $yellow-bg-dark,
+  "card-bd-color": $yellow-bg-light,
+  "card-focus-color": $yellow-bg-light,
+) !default;
+
+$dialog-yellow: (
+  "dialog-text": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "dialog-bg": $yellow-bg,
+  "dialog-bd-color": $yellow-bg-light,
+) !default;
+
+$list-group-yellow: (
+  "list-group-text": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "list-group-bg": $yellow-bg,
+  "list-group-dt-bg": $yellow-bg,
+  "list-group-hover": $yellow-bg-dark,
+  "list-group-bd-color": $yellow-bg-light,
+) !default;
+
+$popover-yellow: (
+  "popover-text": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "popover-bg": $yellow-bg,
+  "popover-bd-color": $yellow-bg-light,
+) !default;
+
+// Variables mixins
+@mixin yellow-variables {
+  @each $name, $value in $yellow-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin yellow-variables-css {
+  :where(html) {
+    @include yellow-variables;
+  }
+}
+
+// Utilities mixins
+@mixin accordion-yellow-css {
+  @each $name, $value in $accordion-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin alert-yellow-css {
+  @each $name, $value in $alert-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin badge-yellow-css {
+  @each $name, $value in $badge-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin bg-yellow-css {
+  @each $name, $value in $bg-yellow {
+    --#{$name}: #{$value};
+  }
+  color: #{$yellow-bg-text};
+  background-color: #{$yellow-bg};
+}
+
+@mixin btn-yellow-css {
+  @each $name, $value in $btn-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin card-yellow-css {
+  @each $name, $value in $card-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin dialog-yellow-css {
+  @each $name, $value in $dialog-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin list-group-yellow-css {
+  @each $name, $value in $list-group-yellow {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin popover-yellow-css {
+  @each $name, $value in $popover-yellow {
+    --#{$name}: #{$value};
+  }
+}

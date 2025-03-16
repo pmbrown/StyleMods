@@ -1,0 +1,194 @@
+// ---------------------------------------------------------- 
+// Cyan
+// ----------------------------------------------------------
+// Variable colors
+$cyan:      #00e6e6 !default;
+$cyan-1:    color-mix(in srgb, var(--cyan) 40%, white) !default;
+$cyan-2:    color-mix(in srgb, var(--cyan) 50%, white) !default;
+$cyan-3:    color-mix(in srgb, var(--cyan) 60%, white) !default;
+$cyan-4:    color-mix(in srgb, var(--cyan) 70%, white) !default;
+$cyan-5:    color-mix(in srgb, var(--cyan) 80%, white) !default;
+$cyan-6:    var(--cyan) !default;  
+$cyan-7:    color-mix(in srgb, var(--cyan) 85%, black) !default;
+$cyan-8:    color-mix(in srgb, var(--cyan) 70%, black) !default;
+$cyan-9:    color-mix(in srgb, var(--cyan) 60%, black) !default;
+$cyan-10:   color-mix(in srgb, var(--cyan) 50%, black) !default;
+$cyan-11:   color-mix(in srgb, var(--cyan) 40%, black) !default;
+
+// Utility colors
+$cyan-bg-text:      #000 !default;
+$cyan-bg:           var(--cyan-6) !default;
+$cyan-bg-dark:      var(--cyan-7) !default;
+$cyan-bg-light:     var(--cyan-5) !default;
+
+// Variables map
+$cyan-variables: (
+  "cyan": $cyan,
+  "cyan-1": $cyan-1,
+  "cyan-2": $cyan-2,
+  "cyan-3": $cyan-3,
+  "cyan-4": $cyan-4,
+  "cyan-5": $cyan-5,
+  "cyan-6": $cyan-6,
+  "cyan-7": $cyan-7,
+  "cyan-8": $cyan-8,
+  "cyan-9": $cyan-9,
+  "cyan-10": $cyan-10,
+  "cyan-11": $cyan-11,
+) !default;
+
+// Utility maps
+$accordion-cyan: (
+  "summary-text": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "summary-bg": $cyan-bg,
+  "summary-focus": $cyan-bg-dark,
+  "accordion-bd-color": $cyan-bg-light,
+) !default;
+
+$alert-cyan: (
+  "alert-text": $cyan-bg-text,
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "alert-bg": $cyan-bg,
+  "alert-bd-color": $cyan-bg-light,
+) !default;
+
+$badge-cyan: (
+  "badge-text": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "badge-bg": $cyan-bg,
+) !default;
+
+$bg-cyan: (
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+) !default;
+
+$btn-cyan: (
+  "btn-text": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "btn-bg": $cyan-bg,
+  "btn-bd-color": $cyan-bg-light,
+  "btn-hover": $cyan-bg-dark,
+  "focus-color": $cyan-bg-light,
+) !default;
+
+$card-cyan: (
+  "card-text": $cyan-bg-text,
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "card-bg": $cyan-bg,
+  "card-text-hover": $cyan-bg-text,
+  "card-hover": $cyan-bg-dark,
+  "card-bd-color": $cyan-bg-light,
+  "card-focus-color": $cyan-bg-light,
+) !default;
+
+$dialog-cyan: (
+  "dialog-text": $cyan-bg-text,
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "dialog-bg": $cyan-bg,
+  "dialog-bd-color": $cyan-bg-light,
+) !default;
+
+$list-group-cyan: (
+  "list-group-text": $cyan-bg-text,
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "list-group-bg": $cyan-bg,
+  "list-group-dt-bg": $cyan-bg,
+  "list-group-hover": $cyan-bg-dark,
+  "list-group-bd-color": $cyan-bg-light,
+) !default;
+
+$popover-cyan: (
+  "popover-text": $cyan-bg-text,
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "popover-bg": $cyan-bg,
+  "popover-bd-color": $cyan-bg-light,
+) !default;
+
+// Variables mixins
+@mixin cyan-variables {
+  @each $name, $value in $cyan-variables {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin cyan-variables-css {
+  :where(html) {
+    @include cyan-variables;
+  }
+}
+
+// Utilities mixins
+@mixin accordion-cyan-css {
+  @each $name, $value in $accordion-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin alert-cyan-css {
+  @each $name, $value in $alert-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin badge-cyan-css {
+  @each $name, $value in $badge-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin bg-cyan-css {
+  @each $name, $value in $bg-cyan {
+    --#{$name}: #{$value};
+  }
+  color: #{$cyan-bg-text};
+  background-color: #{$cyan-bg};
+}
+
+@mixin btn-cyan-css {
+  @each $name, $value in $btn-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin card-cyan-css {
+  @each $name, $value in $card-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin dialog-cyan-css {
+  @each $name, $value in $dialog-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin list-group-cyan-css {
+  @each $name, $value in $list-group-cyan {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin popover-cyan-css {
+  @each $name, $value in $popover-cyan {
+    --#{$name}: #{$value};
+  }
+}

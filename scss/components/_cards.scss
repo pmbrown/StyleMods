@@ -5,7 +5,7 @@ $card-text-color:             var(--card-text, inherit) !default;
 $card-padding-block:          var(--card-py, 1rem) !default;
 $card-padding-inline:         var(--card-px, 1rem) !default;
 $card-border-color:           var(--card-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
-$card-radius:                 var(--card-radius) !default;
+$card-radius:                 var(--card-radius, 0.188rem) !default;
 $card-background-color:       var(--card-bg) !default;
 $card-link-hover-text-color:  var(--card-text-hover, inherit) !default;
 $card-link-hover-background:  var(--card-hover, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
@@ -15,13 +15,13 @@ $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasT
 @mixin cards-css {
 
 :where(.card, .card-link) {
-  color: #{$card-text-color}; 
+  color: $card-text-color; 
   max-inline-size: var(--card-width); 
-  padding-block: #{$card-padding-block};
-  padding-inline: #{$card-padding-inline};
-  border: 1px solid #{$card-border-color};
-  border-radius: #{$card-radius};
-  background-color: #{$card-background-color};
+  padding-block: $card-padding-block;
+  padding-inline: $card-padding-inline;
+  border: 1px solid $card-border-color;
+  border-radius: $card-radius;
+  background-color: $card-background-color;
 }
 
 :where(.card, .card-link) * {
@@ -45,7 +45,7 @@ $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasT
   margin-block-end: 0;
 }
 
-.card-link a:before {
+.card-link a:after {
   content: "";
   display: block;
   position: absolute;
@@ -57,13 +57,13 @@ $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasT
 }
 
 :where(.card-link:is(:focus-within, :hover)) {
-  color: #{$card-link-hover-text-color};
-  background-color: #{$card-link-hover-background};
+  color: $card-link-hover-text-color;
+  background-color: $card-link-hover-background;
   cursor: pointer;
 }
 
 :where(.card-link:focus-within) {
-  outline: #{$card-link-focus-width} solid #{$card-link-focus-color};
+  outline: $card-link-focus-width solid $card-link-focus-color;
 }
 
 :where(.card, .card-link) img {

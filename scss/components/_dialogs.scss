@@ -1,11 +1,11 @@
 // ---------------------------------------------------------- 
 // Dialogs
 // ----------------------------------------------------------
-$dialog-text-color:         var(--dialog-txt) !default;
+$dialog-text-color:         var(--dialog-text) !default;
 $dialog-margin-top:         var(--dialog-mt, 1rem) !default;
 $dialog-padding-block:      var(--dialog-py, 0.75rem) !default;
 $dialog-padding-inline:     var(--dialog-px, 1rem) !default;
-$dialog-border-color:       var(--dialog-bd-col, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
+$dialog-border-color:       var(--dialog-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $dialog-radius:             var(--dialog-radius, 0.125em) !default;
 $dialog-background-color:   var(--dialog-bg, Canvas) !default; 
 $dialog-transition:         var(--dialog-transition, 0.25s) !default;
@@ -14,17 +14,17 @@ $dialog-backdrop:           color-mix(in srgb, black 50%, transparent) !default;
 @mixin dialogs-css {
 
 :where(dialog) {
-  color: #{$dialog-text-color};
+  color: $dialog-text-color;
   block-size: fit-content;
   max-block-size: calc(100vh - 2rem);
   inline-size: calc((100% - 6px) - 2em);
   max-inline-size: var(--dialog-width, fit-content);
-  margin-block-start: #{$dialog-margin-top};
-  padding-block: #{$dialog-padding-block};
-  padding-inline: #{$dialog-padding-inline};
-  border: 1px solid #{$dialog-border-color};
-  border-radius: #{$dialog-radius};
-  background-color: #{$dialog-background-color}; 
+  margin-block-start: $dialog-margin-top;
+  padding-block: $dialog-padding-block;
+  padding-inline: $dialog-padding-inline;
+  border: 1px solid $dialog-border-color;
+  border-radius: $dialog-radius;
+  background-color: $dialog-background-color; 
   overflow: auto;
   overscroll-behavior: contain; 
 }
@@ -38,7 +38,7 @@ dialog div[class="close-dialog"] {
 }
 
 dialog[open]::backdrop {
-  background-color: #{$dialog-backdrop};
+  background-color: $dialog-backdrop;
 }
 
 } // end dialogs-css
@@ -47,7 +47,7 @@ dialog[open]::backdrop {
 
 @media screen and (prefers-reduced-motion: no-preference) {
   dialog[open] {
-    transition: #{$dialog-transition};
+    transition: $dialog-transition;
     opacity: 1; 
   }
 }
