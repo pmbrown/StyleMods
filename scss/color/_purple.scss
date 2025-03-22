@@ -48,28 +48,31 @@ $accordion-purple: (
 
 $alert-purple: (
   "alert-text": $purple-bg-text,
+  "ico": $purple-bg-text,
   "link": $purple-bg-text,
   "visited": $purple-bg-text,
   "hover": $purple-bg-text,
-  "ico": $purple-bg-text,
   "alert-bg": $purple-bg,
   "alert-bd-color": $purple-bg-light,
+) !default;
+
+$background-purple: (
+  "bg-text": $purple-bg-text,
+  "ico": $purple-bg-text,
+  "link": $purple-bg-text,
+  "visited": $purple-bg-text,
+  "hover": $purple-bg-text,
+  "bg-col": $purple-bg,
 ) !default;
 
 $badge-purple: (
   "badge-text": $purple-bg-text,
   "ico": $purple-bg-text,
   "badge-bg": $purple-bg,
+  "badge-bd-color": $purple-bg-light,
 ) !default;
 
-$bg-purple: (
-  "link": $purple-bg-text,
-  "visited": $purple-bg-text,
-  "hover": $purple-bg-text,
-  "ico": $purple-bg-text,
-) !default;
-
-$btn-purple: (
+$button-purple: (
   "btn-text": $purple-bg-text,
   "ico": $purple-bg-text,
   "btn-bg": $purple-bg,
@@ -80,10 +83,10 @@ $btn-purple: (
 
 $card-purple: (
   "card-text": $purple-bg-text,
+  "ico": $purple-bg-text,
   "link": $purple-bg-text,
   "visited": $purple-bg-text,
   "hover": $purple-bg-text,
-  "ico": $purple-bg-text,
   "card-bg": $purple-bg,
   "card-text-hover": $purple-bg-text,
   "card-hover": $purple-bg-dark,
@@ -93,20 +96,20 @@ $card-purple: (
 
 $dialog-purple: (
   "dialog-text": $purple-bg-text,
+  "ico": $purple-bg-text,
   "link": $purple-bg-text,
   "visited": $purple-bg-text,
   "hover": $purple-bg-text,
-  "ico": $purple-bg-text,
   "dialog-bg": $purple-bg,
   "dialog-bd-color": $purple-bg-light,
 ) !default;
 
 $list-group-purple: (
   "list-group-text": $purple-bg-text,
+  "ico": $purple-bg-text,
   "link": $purple-bg-text,
   "visited": $purple-bg-text,
   "hover": $purple-bg-text,
-  "ico": $purple-bg-text,
   "list-group-bg": $purple-bg,
   "list-group-dt-bg": $purple-bg,
   "list-group-hover": $purple-bg-dark,
@@ -115,10 +118,10 @@ $list-group-purple: (
 
 $popover-purple: (
   "popover-text": $purple-bg-text,
+  "ico": $purple-bg-text,
   "link": $purple-bg-text,
   "visited": $purple-bg-text,
   "hover": $purple-bg-text,
-  "ico": $purple-bg-text,
   "popover-bg": $purple-bg,
   "popover-bd-color": $purple-bg-light,
 ) !default;
@@ -136,59 +139,101 @@ $popover-purple: (
   }
 }
 
-// Utilities mixins
+// Utility mixins
 @mixin accordion-purple-css {
-  @each $name, $value in $accordion-purple {
-    --#{$name}: #{$value};
+  .accordion-purple {
+    @each $name, $value in $accordion-purple {
+      --#{$name}: #{$value};
+    }  
   }
 }
 
 @mixin alert-purple-css {
-  @each $name, $value in $alert-purple {
-    --#{$name}: #{$value};
+  .alert-purple {
+    @each $name, $value in $alert-purple {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin background-purple-css {
+  .bg-purple {
+    @each $name, $value in $background-purple {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin badge-purple-css {
-  @each $name, $value in $badge-purple {
-    --#{$name}: #{$value};
+  .badge-purple {
+    @each $name, $value in $badge-purple {
+      --#{$name}: #{$value};
+    }
   }
 }
 
-@mixin bg-purple-css {
-  @each $name, $value in $bg-purple {
-    --#{$name}: #{$value};
-  }
-  color: #{$purple-bg-text};
-  background-color: #{$purple-bg};
-}
-
-@mixin btn-purple-css {
-  @each $name, $value in $btn-purple {
-    --#{$name}: #{$value};
+@mixin button-purple-css {
+  .btn-purple {
+    @each $name, $value in $button-purple {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin card-purple-css {
-  @each $name, $value in $card-purple {
-    --#{$name}: #{$value};
+  .card-purple {
+    @each $name, $value in $card-purple {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin dialog-purple-css {
-  @each $name, $value in $dialog-purple {
-    --#{$name}: #{$value};
-  }
+  .dialog-purple {
+    @each $name, $value in $dialog-purple {
+      --#{$name}: #{$value};
+    }
+  } 
 }
 
 @mixin list-group-purple-css {
-  @each $name, $value in $list-group-purple {
-    --#{$name}: #{$value};
+  .list-group-purple {
+    @each $name, $value in $list-group-purple {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin popover-purple-css {
-  @each $name, $value in $popover-purple {
-    --#{$name}: #{$value};
+  .popover-purple {
+    @each $name, $value in $popover-purple {
+      --#{$name}: #{$value};
+    }
   }
+}
+
+// Combined mixins
+@mixin purple-module-css {
+  @include purple-variables-css;
+  @include accordion-purple-css;
+  @include alert-purple-css;
+  @include background-purple-css;
+  @include badge-purple-css;
+  @include button-purple-css;
+  @include card-purple-css;
+  @include dialog-purple-css;
+  @include list-group-purple-css;
+  @include popover-purple-css;
+}
+
+@mixin purple-utilities-css {
+  @include accordion-purple-css;
+  @include alert-purple-css;
+  @include background-purple-css;
+  @include badge-purple-css;
+  @include button-purple-css;
+  @include card-purple-css;
+  @include dialog-purple-css;
+  @include list-group-purple-css;
+  @include popover-purple-css;
 }

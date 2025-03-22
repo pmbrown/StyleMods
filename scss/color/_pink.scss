@@ -3,17 +3,17 @@
 // ----------------------------------------------------------
 // Variable colors
 $pink:      #ff1493 !default;
-$pink-1:    color-mix(in srgb, var(--pink) 40%, white) !default;
-$pink-2:    color-mix(in srgb, var(--pink) 50%, white) !default;
-$pink-3:    color-mix(in srgb, var(--pink) 60%, white) !default;
-$pink-4:    color-mix(in srgb, var(--pink) 70%, white) !default;
-$pink-5:    color-mix(in srgb, var(--pink) 80%, white) !default;
+$pink-1:    color-mix(in srgb, var(--pink) 48%, white) !default;
+$pink-2:    color-mix(in srgb, var(--pink) 58%, white) !default;
+$pink-3:    color-mix(in srgb, var(--pink) 68%, white) !default;
+$pink-4:    color-mix(in srgb, var(--pink) 78%, white) !default;
+$pink-5:    color-mix(in srgb, var(--pink) 88%, white) !default;
 $pink-6:    var(--pink) !default;  
-$pink-7:    color-mix(in srgb, var(--pink) 75%, black) !default;
-$pink-8:    color-mix(in srgb, var(--pink) 65%, black) !default;
-$pink-9:    color-mix(in srgb, var(--pink) 55%, black) !default;
-$pink-10:   color-mix(in srgb, var(--pink) 45%, black) !default;
-$pink-11:   color-mix(in srgb, var(--pink) 35%, black) !default;
+$pink-7:    color-mix(in srgb, var(--pink) 88%, black) !default;
+$pink-8:    color-mix(in srgb, var(--pink) 78%, black) !default;
+$pink-9:    color-mix(in srgb, var(--pink) 68%, black) !default;
+$pink-10:   color-mix(in srgb, var(--pink) 58%, black) !default;
+$pink-11:   color-mix(in srgb, var(--pink) 48%, black) !default;
 
 // Utility colors
 $pink-bg-text:      #000 !default;
@@ -37,7 +37,6 @@ $pink-variables: (
   "pink-11": $pink-11,
 ) !default;
 
-
 // Utility maps
 $accordion-pink: (
   "summary-text": $pink-bg-text,
@@ -49,28 +48,31 @@ $accordion-pink: (
 
 $alert-pink: (
   "alert-text": $pink-bg-text,
+  "ico": $pink-bg-text,
   "link": $pink-bg-text,
   "visited": $pink-bg-text,
   "hover": $pink-bg-text,
-  "ico": $pink-bg-text,
   "alert-bg": $pink-bg,
   "alert-bd-color": $pink-bg-light,
+) !default;
+
+$background-pink: (
+  "bg-text": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "bg-col": $pink-bg,
 ) !default;
 
 $badge-pink: (
   "badge-text": $pink-bg-text,
   "ico": $pink-bg-text,
   "badge-bg": $pink-bg,
+  "badge-bd-color": $pink-bg-light,
 ) !default;
 
-$bg-pink: (
-  "link": $pink-bg-text,
-  "visited": $pink-bg-text,
-  "hover": $pink-bg-text,
-  "ico": $pink-bg-text,
-) !default;
-
-$btn-pink: (
+$button-pink: (
   "btn-text": $pink-bg-text,
   "ico": $pink-bg-text,
   "btn-bg": $pink-bg,
@@ -81,10 +83,10 @@ $btn-pink: (
 
 $card-pink: (
   "card-text": $pink-bg-text,
+  "ico": $pink-bg-text,
   "link": $pink-bg-text,
   "visited": $pink-bg-text,
   "hover": $pink-bg-text,
-  "ico": $pink-bg-text,
   "card-bg": $pink-bg,
   "card-text-hover": $pink-bg-text,
   "card-hover": $pink-bg-dark,
@@ -94,20 +96,20 @@ $card-pink: (
 
 $dialog-pink: (
   "dialog-text": $pink-bg-text,
+  "ico": $pink-bg-text,
   "link": $pink-bg-text,
   "visited": $pink-bg-text,
   "hover": $pink-bg-text,
-  "ico": $pink-bg-text,
   "dialog-bg": $pink-bg,
   "dialog-bd-color": $pink-bg-light,
 ) !default;
 
 $list-group-pink: (
   "list-group-text": $pink-bg-text,
+  "ico": $pink-bg-text,
   "link": $pink-bg-text,
   "visited": $pink-bg-text,
   "hover": $pink-bg-text,
-  "ico": $pink-bg-text,
   "list-group-bg": $pink-bg,
   "list-group-dt-bg": $pink-bg,
   "list-group-hover": $pink-bg-dark,
@@ -116,10 +118,10 @@ $list-group-pink: (
 
 $popover-pink: (
   "popover-text": $pink-bg-text,
+  "ico": $pink-bg-text,
   "link": $pink-bg-text,
   "visited": $pink-bg-text,
   "hover": $pink-bg-text,
-  "ico": $pink-bg-text,
   "popover-bg": $pink-bg,
   "popover-bd-color": $pink-bg-light,
 ) !default;
@@ -137,59 +139,101 @@ $popover-pink: (
   }
 }
 
-// Utilities mixins
+// Utility mixins
 @mixin accordion-pink-css {
-  @each $name, $value in $accordion-pink {
-    --#{$name}: #{$value};
+  .accordion-pink {
+    @each $name, $value in $accordion-pink {
+      --#{$name}: #{$value};
+    }  
   }
 }
 
 @mixin alert-pink-css {
-  @each $name, $value in $alert-pink {
-    --#{$name}: #{$value};
+  .alert-pink {
+    @each $name, $value in $alert-pink {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin background-pink-css {
+  .bg-pink {
+    @each $name, $value in $background-pink {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin badge-pink-css {
-  @each $name, $value in $badge-pink {
-    --#{$name}: #{$value};
+  .badge-pink {
+    @each $name, $value in $badge-pink {
+      --#{$name}: #{$value};
+    }
   }
 }
 
-@mixin bg-pink-css {
-  @each $name, $value in $bg-pink {
-    --#{$name}: #{$value};
-  }
-  color: #{$pink-bg-text};
-  background-color: #{$pink-bg};
-}
-
-@mixin btn-pink-css {
-  @each $name, $value in $btn-pink {
-    --#{$name}: #{$value};
+@mixin button-pink-css {
+  .btn-pink {
+    @each $name, $value in $button-pink {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin card-pink-css {
-  @each $name, $value in $card-pink {
-    --#{$name}: #{$value};
+  .card-pink {
+    @each $name, $value in $card-pink {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin dialog-pink-css {
-  @each $name, $value in $dialog-pink {
-    --#{$name}: #{$value};
-  }
+  .dialog-pink {
+    @each $name, $value in $dialog-pink {
+      --#{$name}: #{$value};
+    }
+  } 
 }
 
 @mixin list-group-pink-css {
-  @each $name, $value in $list-group-pink {
-    --#{$name}: #{$value};
+  .list-group-pink {
+    @each $name, $value in $list-group-pink {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin popover-pink-css {
-  @each $name, $value in $popover-pink {
-    --#{$name}: #{$value};
+  .popover-pink {
+    @each $name, $value in $popover-pink {
+      --#{$name}: #{$value};
+    }
   }
+}
+
+// Combined mixins
+@mixin pink-module-css {
+  @include pink-variables-css;
+  @include accordion-pink-css;
+  @include alert-pink-css;
+  @include background-pink-css;
+  @include badge-pink-css;
+  @include button-pink-css;
+  @include card-pink-css;
+  @include dialog-pink-css;
+  @include list-group-pink-css;
+  @include popover-pink-css;
+}
+
+@mixin pink-utilities-css {
+  @include accordion-pink-css;
+  @include alert-pink-css;
+  @include background-pink-css;
+  @include badge-pink-css;
+  @include button-pink-css;
+  @include card-pink-css;
+  @include dialog-pink-css;
+  @include list-group-pink-css;
+  @include popover-pink-css;
 }

@@ -221,7 +221,7 @@
 }
 
 @if $enable-breakpoint-xl {
-  @media (max-width: #{$system-breakpoint-xl}) {
+  @media (width <= #{$system-breakpoint-xl}) {
     @if $enable-grid-breakpoints {@include grid-xl-css;}
     @if $enable-autogrid-breakpoints {@include autogrid-xl-css;}
     @if $enable-gaps-breakpoints {@include gaps-xl-css;}
@@ -238,7 +238,7 @@
 }
 
 @if $enable-breakpoint-lg {
-  @media (max-width: #{$system-breakpoint-lg}) {
+  @media (width <= #{$system-breakpoint-lg}) {
     @if $enable-grid-breakpoints {@include grid-lg-css;}
     @if $enable-autogrid-breakpoints {@include autogrid-lg-css;}
     @if $enable-gaps-breakpoints {@include gaps-lg-css;}
@@ -255,7 +255,7 @@
 }
 
 @if $enable-breakpoint-md {
-  @media (max-width: #{$system-breakpoint-md}) {
+  @media (width <= #{$system-breakpoint-md}) {
     @if $enable-grid-breakpoints {@include grid-md-css;}
     @if $enable-autogrid-breakpoints {@include autogrid-md-css;}
     @if $enable-gaps-breakpoints {@include gaps-md-css;}
@@ -272,7 +272,7 @@
 }
 
 @if $enable-breakpoint-sm {
-  @media (max-width: #{$system-breakpoint-sm}) {
+  @media (width <= #{$system-breakpoint-sm}) {
     @if $enable-grid-breakpoints {@include grid-sm-css;}
     @if $enable-autogrid-breakpoints {@include autogrid-sm-css;}
     @if $enable-gaps-breakpoints {@include gaps-sm-css;}
@@ -289,7 +289,7 @@
 }
 
 @if $enable-breakpoint-xs {
-  @media (max-width: #{$system-breakpoint-xs}) {
+  @media (width <= #{$system-breakpoint-xs}) {
     @if $enable-grid-breakpoints {@include grid-xs-css;}
     @if $enable-autogrid-breakpoints {@include autogrid-xs-css;}
     @if $enable-gaps-breakpoints {@include gaps-xs-css;}

@@ -6,6 +6,7 @@ $badge-font-size:         var(--badge-fs, 0.65em) !default;
 $badge-font-weight:       var(--badge-fw, 600) !default;
 $badge-padding-block:     var(--badge-py, 0.375em) !default;
 $badge-padding-inline:    var(--badge-px, 0.65em) !default;
+$badge-border-color:      var(--badge-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
 $badge-radius:            var(--badge-radius, 0.188rem) !default;
 $badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 6%, Canvas)) !default;
 
@@ -18,11 +19,12 @@ $badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 6%, Canv
   text-align: center;
   line-height: 1;
   position: relative;
-  inset-block-start: -1px;
+  inset-block-start: -0.125em;
   display: inline-block;
   vertical-align: baseline;
   padding-block: $badge-padding-block;
   padding-inline: $badge-padding-inline;
+  border: 1px solid $badge-border-color;
   border-radius: $badge-radius;
   background-color: $badge-background-color;
 }

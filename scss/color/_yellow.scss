@@ -3,17 +3,17 @@
 // ----------------------------------------------------------
 // Variable colors
 $yellow:      #ffff00 !default;
-$yellow-1:    color-mix(in srgb, var(--yellow) 25%, white) !default;
-$yellow-2:    color-mix(in srgb, var(--yellow) 35%, white) !default;
-$yellow-3:    color-mix(in srgb, var(--yellow) 45%, white) !default;
-$yellow-4:    color-mix(in srgb, var(--yellow) 55%, white) !default;
+$yellow-1:    color-mix(in srgb, var(--yellow) 30%, white) !default;
+$yellow-2:    color-mix(in srgb, var(--yellow) 40%, white) !default;
+$yellow-3:    color-mix(in srgb, var(--yellow) 50%, white) !default;
+$yellow-4:    color-mix(in srgb, var(--yellow) 60%, white) !default;
 $yellow-5:    color-mix(in srgb, var(--yellow) 70%, white) !default;
 $yellow-6:    var(--yellow) !default;  
-$yellow-7:    color-mix(in srgb, var(--yellow) 85%, black) !default;
-$yellow-8:    color-mix(in srgb, var(--yellow) 75%, black) !default;
-$yellow-9:    color-mix(in srgb, var(--yellow) 62%, black) !default;
-$yellow-10:   color-mix(in srgb, var(--yellow) 55%, black) !default;
-$yellow-11:   color-mix(in srgb, var(--yellow) 45%, black) !default;
+$yellow-7:    color-mix(in srgb, var(--yellow) 88%, black) !default;
+$yellow-8:    color-mix(in srgb, var(--yellow) 78%, black) !default;
+$yellow-9:    color-mix(in srgb, var(--yellow) 68%, black) !default;
+$yellow-10:   color-mix(in srgb, var(--yellow) 58%, black) !default;
+$yellow-11:   color-mix(in srgb, var(--yellow) 50%, black) !default;
 
 // Utility colors
 $yellow-bg-text:      #000 !default;
@@ -48,28 +48,31 @@ $accordion-yellow: (
 
 $alert-yellow: (
   "alert-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
   "link": $yellow-bg-text,
   "visited": $yellow-bg-text,
   "hover": $yellow-bg-text,
-  "ico": $yellow-bg-text,
   "alert-bg": $yellow-bg,
   "alert-bd-color": $yellow-bg-light,
+) !default;
+
+$background-yellow: (
+  "bg-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "bg-col": $yellow-bg,
 ) !default;
 
 $badge-yellow: (
   "badge-text": $yellow-bg-text,
   "ico": $yellow-bg-text,
   "badge-bg": $yellow-bg,
+  "badge-bd-color": $yellow-bg-light,
 ) !default;
 
-$bg-yellow: (
-  "link": $yellow-bg-text,
-  "visited": $yellow-bg-text,
-  "hover": $yellow-bg-text,
-  "ico": $yellow-bg-text,
-) !default;
-
-$btn-yellow: (
+$button-yellow: (
   "btn-text": $yellow-bg-text,
   "ico": $yellow-bg-text,
   "btn-bg": $yellow-bg,
@@ -80,10 +83,10 @@ $btn-yellow: (
 
 $card-yellow: (
   "card-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
   "link": $yellow-bg-text,
   "visited": $yellow-bg-text,
   "hover": $yellow-bg-text,
-  "ico": $yellow-bg-text,
   "card-bg": $yellow-bg,
   "card-text-hover": $yellow-bg-text,
   "card-hover": $yellow-bg-dark,
@@ -93,20 +96,20 @@ $card-yellow: (
 
 $dialog-yellow: (
   "dialog-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
   "link": $yellow-bg-text,
   "visited": $yellow-bg-text,
   "hover": $yellow-bg-text,
-  "ico": $yellow-bg-text,
   "dialog-bg": $yellow-bg,
   "dialog-bd-color": $yellow-bg-light,
 ) !default;
 
 $list-group-yellow: (
   "list-group-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
   "link": $yellow-bg-text,
   "visited": $yellow-bg-text,
   "hover": $yellow-bg-text,
-  "ico": $yellow-bg-text,
   "list-group-bg": $yellow-bg,
   "list-group-dt-bg": $yellow-bg,
   "list-group-hover": $yellow-bg-dark,
@@ -115,10 +118,10 @@ $list-group-yellow: (
 
 $popover-yellow: (
   "popover-text": $yellow-bg-text,
+  "ico": $yellow-bg-text,
   "link": $yellow-bg-text,
   "visited": $yellow-bg-text,
   "hover": $yellow-bg-text,
-  "ico": $yellow-bg-text,
   "popover-bg": $yellow-bg,
   "popover-bd-color": $yellow-bg-light,
 ) !default;
@@ -136,59 +139,101 @@ $popover-yellow: (
   }
 }
 
-// Utilities mixins
+// Utility mixins
 @mixin accordion-yellow-css {
-  @each $name, $value in $accordion-yellow {
-    --#{$name}: #{$value};
+  .accordion-yellow {
+    @each $name, $value in $accordion-yellow {
+      --#{$name}: #{$value};
+    }  
   }
 }
 
 @mixin alert-yellow-css {
-  @each $name, $value in $alert-yellow {
-    --#{$name}: #{$value};
+  .alert-yellow {
+    @each $name, $value in $alert-yellow {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin background-yellow-css {
+  .bg-yellow {
+    @each $name, $value in $background-yellow {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin badge-yellow-css {
-  @each $name, $value in $badge-yellow {
-    --#{$name}: #{$value};
+  .badge-yellow {
+    @each $name, $value in $badge-yellow {
+      --#{$name}: #{$value};
+    }
   }
 }
 
-@mixin bg-yellow-css {
-  @each $name, $value in $bg-yellow {
-    --#{$name}: #{$value};
-  }
-  color: #{$yellow-bg-text};
-  background-color: #{$yellow-bg};
-}
-
-@mixin btn-yellow-css {
-  @each $name, $value in $btn-yellow {
-    --#{$name}: #{$value};
+@mixin button-yellow-css {
+  .btn-yellow {
+    @each $name, $value in $button-yellow {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin card-yellow-css {
-  @each $name, $value in $card-yellow {
-    --#{$name}: #{$value};
+  .card-yellow {
+    @each $name, $value in $card-yellow {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin dialog-yellow-css {
-  @each $name, $value in $dialog-yellow {
-    --#{$name}: #{$value};
-  }
+  .dialog-yellow {
+    @each $name, $value in $dialog-yellow {
+      --#{$name}: #{$value};
+    }
+  } 
 }
 
 @mixin list-group-yellow-css {
-  @each $name, $value in $list-group-yellow {
-    --#{$name}: #{$value};
+  .list-group-yellow {
+    @each $name, $value in $list-group-yellow {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin popover-yellow-css {
-  @each $name, $value in $popover-yellow {
-    --#{$name}: #{$value};
+  .popover-yellow {
+    @each $name, $value in $popover-yellow {
+      --#{$name}: #{$value};
+    }
   }
+}
+
+// Combined mixins
+@mixin yellow-module-css {
+  @include yellow-variables-css;
+  @include accordion-yellow-css;
+  @include alert-yellow-css;
+  @include background-yellow-css;
+  @include badge-yellow-css;
+  @include button-yellow-css;
+  @include card-yellow-css;
+  @include dialog-yellow-css;
+  @include list-group-yellow-css;
+  @include popover-yellow-css;
+}
+
+@mixin yellow-utilities-css {
+  @include accordion-yellow-css;
+  @include alert-yellow-css;
+  @include background-yellow-css;
+  @include badge-yellow-css;
+  @include button-yellow-css;
+  @include card-yellow-css;
+  @include dialog-yellow-css;
+  @include list-group-yellow-css;
+  @include popover-yellow-css;
 }

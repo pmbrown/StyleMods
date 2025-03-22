@@ -101,6 +101,7 @@ $brand-icons: (
   background-color: var(--ico, CanvasText);
   mask-image: var(--svg);
   mask-repeat: no-repeat;
+  opacity: var(--ico-op, 1);
 }
 
 @mixin icon-utilities {

@@ -10,10 +10,10 @@ $blue-4:    color-mix(in srgb, var(--blue) 70%, white) !default;
 $blue-5:    color-mix(in srgb, var(--blue) 80%, white) !default;
 $blue-6:    var(--blue) !default;  
 $blue-7:    color-mix(in srgb, var(--blue) 80%, black) !default;
-$blue-8:    color-mix(in srgb, var(--blue) 60%, black) !default;
-$blue-9:    color-mix(in srgb, var(--blue) 50%, black) !default;
-$blue-10:   color-mix(in srgb, var(--blue) 40%, black) !default;
-$blue-11:   color-mix(in srgb, var(--blue) 30%, black) !default;
+$blue-8:    color-mix(in srgb, var(--blue) 70%, black) !default;
+$blue-9:    color-mix(in srgb, var(--blue) 60%, black) !default;
+$blue-10:   color-mix(in srgb, var(--blue) 50%, black) !default;
+$blue-11:   color-mix(in srgb, var(--blue) 40%, black) !default;
 
 // Utility colors
 $blue-bg-text:      #fff !default;
@@ -48,28 +48,31 @@ $accordion-blue: (
 
 $alert-blue: (
   "alert-text": $blue-bg-text,
+  "ico": $blue-bg-text,
   "link": $blue-bg-text,
   "visited": $blue-bg-text,
   "hover": $blue-bg-text,
-  "ico": $blue-bg-text,
   "alert-bg": $blue-bg,
   "alert-bd-color": $blue-bg-light,
+) !default;
+
+$background-blue: (
+  "bg-text": $blue-bg-text,
+  "ico": $blue-bg-text,
+  "link": $blue-bg-text,
+  "visited": $blue-bg-text,
+  "hover": $blue-bg-text,
+  "bg-col": $blue-bg,
 ) !default;
 
 $badge-blue: (
   "badge-text": $blue-bg-text,
   "ico": $blue-bg-text,
   "badge-bg": $blue-bg,
+  "badge-bd-color": $blue-bg-light,
 ) !default;
 
-$bg-blue: (
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "ico": $blue-bg-text,
-) !default;
-
-$btn-blue: (
+$button-blue: (
   "btn-text": $blue-bg-text,
   "ico": $blue-bg-text,
   "btn-bg": $blue-bg,
@@ -80,10 +83,10 @@ $btn-blue: (
 
 $card-blue: (
   "card-text": $blue-bg-text,
+  "ico": $blue-bg-text,
   "link": $blue-bg-text,
   "visited": $blue-bg-text,
   "hover": $blue-bg-text,
-  "ico": $blue-bg-text,
   "card-bg": $blue-bg,
   "card-text-hover": $blue-bg-text,
   "card-hover": $blue-bg-dark,
@@ -93,20 +96,20 @@ $card-blue: (
 
 $dialog-blue: (
   "dialog-text": $blue-bg-text,
+  "ico": $blue-bg-text,
   "link": $blue-bg-text,
   "visited": $blue-bg-text,
   "hover": $blue-bg-text,
-  "ico": $blue-bg-text,
   "dialog-bg": $blue-bg,
   "dialog-bd-color": $blue-bg-light,
 ) !default;
 
 $list-group-blue: (
   "list-group-text": $blue-bg-text,
+  "ico": $blue-bg-text,
   "link": $blue-bg-text,
   "visited": $blue-bg-text,
   "hover": $blue-bg-text,
-  "ico": $blue-bg-text,
   "list-group-bg": $blue-bg,
   "list-group-dt-bg": $blue-bg,
   "list-group-hover": $blue-bg-dark,
@@ -115,10 +118,10 @@ $list-group-blue: (
 
 $popover-blue: (
   "popover-text": $blue-bg-text,
+  "ico": $blue-bg-text,
   "link": $blue-bg-text,
   "visited": $blue-bg-text,
   "hover": $blue-bg-text,
-  "ico": $blue-bg-text,
   "popover-bg": $blue-bg,
   "popover-bd-color": $blue-bg-light,
 ) !default;
@@ -136,59 +139,101 @@ $popover-blue: (
   }
 }
 
-// Utilities mixins
+// Utility mixins
 @mixin accordion-blue-css {
-  @each $name, $value in $accordion-blue {
-    --#{$name}: #{$value};
+  .accordion-blue {
+    @each $name, $value in $accordion-blue {
+      --#{$name}: #{$value};
+    }  
   }
 }
 
 @mixin alert-blue-css {
-  @each $name, $value in $alert-blue {
-    --#{$name}: #{$value};
+  .alert-blue {
+    @each $name, $value in $alert-blue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin background-blue-css {
+  .bg-blue {
+    @each $name, $value in $background-blue {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin badge-blue-css {
-  @each $name, $value in $badge-blue {
-    --#{$name}: #{$value};
+  .badge-blue {
+    @each $name, $value in $badge-blue {
+      --#{$name}: #{$value};
+    }
   }
 }
 
-@mixin bg-blue-css {
-  @each $name, $value in $bg-blue {
-    --#{$name}: #{$value};
-  }
-  color: #{$blue-bg-text};
-  background-color: #{$blue-bg};
-}
-
-@mixin btn-blue-css {
-  @each $name, $value in $btn-blue {
-    --#{$name}: #{$value};
+@mixin button-blue-css {
+  .btn-blue {
+    @each $name, $value in $button-blue {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin card-blue-css {
-  @each $name, $value in $card-blue {
-    --#{$name}: #{$value};
+  .card-blue {
+    @each $name, $value in $card-blue {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin dialog-blue-css {
-  @each $name, $value in $dialog-blue {
-    --#{$name}: #{$value};
-  }
+  .dialog-blue {
+    @each $name, $value in $dialog-blue {
+      --#{$name}: #{$value};
+    }
+  } 
 }
 
 @mixin list-group-blue-css {
-  @each $name, $value in $list-group-blue {
-    --#{$name}: #{$value};
+  .list-group-blue {
+    @each $name, $value in $list-group-blue {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin popover-blue-css {
-  @each $name, $value in $popover-blue {
-    --#{$name}: #{$value};
+  .popover-blue {
+    @each $name, $value in $popover-blue {
+      --#{$name}: #{$value};
+    }
   }
+}
+
+// Combined mixins
+@mixin blue-module-css {
+  @include blue-variables-css;
+  @include accordion-blue-css;
+  @include alert-blue-css;
+  @include background-blue-css;
+  @include badge-blue-css;
+  @include button-blue-css;
+  @include card-blue-css;
+  @include dialog-blue-css;
+  @include list-group-blue-css;
+  @include popover-blue-css;
+}
+
+@mixin blue-utilities-css {
+  @include accordion-blue-css;
+  @include alert-blue-css;
+  @include background-blue-css;
+  @include badge-blue-css;
+  @include button-blue-css;
+  @include card-blue-css;
+  @include dialog-blue-css;
+  @include list-group-blue-css;
+  @include popover-blue-css;
 }

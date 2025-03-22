@@ -48,28 +48,31 @@ $accordion-gray: (
 
 $alert-gray: (
   "alert-text": $gray-bg-text,
+  "ico": $gray-bg-text,
   "link": $gray-bg-text,
   "visited": $gray-bg-text,
   "hover": $gray-bg-text,
-  "ico": $gray-bg-text,
   "alert-bg": $gray-bg,
   "alert-bd-color": $gray-bg-light,
+) !default;
+
+$background-gray: (
+  "bg-text": $gray-bg-text,
+  "ico": $gray-bg-text,
+  "link": $gray-bg-text,
+  "visited": $gray-bg-text,
+  "hover": $gray-bg-text,
+  "bg-col": $gray-bg,
 ) !default;
 
 $badge-gray: (
   "badge-text": $gray-bg-text,
   "ico": $gray-bg-text,
   "badge-bg": $gray-bg,
+  "badge-bd-color": $gray-bg-light,
 ) !default;
 
-$bg-gray: (
-  "link": $gray-bg-text,
-  "visited": $gray-bg-text,
-  "hover": $gray-bg-text,
-  "ico": $gray-bg-text,
-) !default;
-
-$btn-gray: (
+$button-gray: (
   "btn-text": $gray-bg-text,
   "ico": $gray-bg-text,
   "btn-bg": $gray-bg,
@@ -80,10 +83,10 @@ $btn-gray: (
 
 $card-gray: (
   "card-text": $gray-bg-text,
+  "ico": $gray-bg-text,
   "link": $gray-bg-text,
   "visited": $gray-bg-text,
   "hover": $gray-bg-text,
-  "ico": $gray-bg-text,
   "card-bg": $gray-bg,
   "card-text-hover": $gray-bg-text,
   "card-hover": $gray-bg-dark,
@@ -93,20 +96,20 @@ $card-gray: (
 
 $dialog-gray: (
   "dialog-text": $gray-bg-text,
+  "ico": $gray-bg-text,
   "link": $gray-bg-text,
   "visited": $gray-bg-text,
   "hover": $gray-bg-text,
-  "ico": $gray-bg-text,
   "dialog-bg": $gray-bg,
   "dialog-bd-color": $gray-bg-light,
 ) !default;
 
 $list-group-gray: (
   "list-group-text": $gray-bg-text,
+  "ico": $gray-bg-text,
   "link": $gray-bg-text,
   "visited": $gray-bg-text,
   "hover": $gray-bg-text,
-  "ico": $gray-bg-text,
   "list-group-bg": $gray-bg,
   "list-group-dt-bg": $gray-bg,
   "list-group-hover": $gray-bg-dark,
@@ -115,10 +118,10 @@ $list-group-gray: (
 
 $popover-gray: (
   "popover-text": $gray-bg-text,
+  "ico": $gray-bg-text,
   "link": $gray-bg-text,
   "visited": $gray-bg-text,
   "hover": $gray-bg-text,
-  "ico": $gray-bg-text,
   "popover-bg": $gray-bg,
   "popover-bd-color": $gray-bg-light,
 ) !default;
@@ -136,59 +139,101 @@ $popover-gray: (
   }
 }
 
-// Utilities mixins
+// Utility mixins
 @mixin accordion-gray-css {
-  @each $name, $value in $accordion-gray {
-    --#{$name}: #{$value};
+  .accordion-gray {
+    @each $name, $value in $accordion-gray {
+      --#{$name}: #{$value};
+    }  
   }
 }
 
 @mixin alert-gray-css {
-  @each $name, $value in $alert-gray {
-    --#{$name}: #{$value};
+  .alert-gray {
+    @each $name, $value in $alert-gray {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin background-gray-css {
+  .bg-gray {
+    @each $name, $value in $background-gray {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin badge-gray-css {
-  @each $name, $value in $badge-gray {
-    --#{$name}: #{$value};
+  .badge-gray {
+    @each $name, $value in $badge-gray {
+      --#{$name}: #{$value};
+    }
   }
 }
 
-@mixin bg-gray-css {
-  @each $name, $value in $bg-gray {
-    --#{$name}: #{$value};
-  }
-  color: #{$gray-bg-text};
-  background-color: #{$gray-bg};
-}
-
-@mixin btn-gray-css {
-  @each $name, $value in $btn-gray {
-    --#{$name}: #{$value};
+@mixin button-gray-css {
+  .btn-gray {
+    @each $name, $value in $button-gray {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin card-gray-css {
-  @each $name, $value in $card-gray {
-    --#{$name}: #{$value};
+  .card-gray {
+    @each $name, $value in $card-gray {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin dialog-gray-css {
-  @each $name, $value in $dialog-gray {
-    --#{$name}: #{$value};
-  }
+  .dialog-gray {
+    @each $name, $value in $dialog-gray {
+      --#{$name}: #{$value};
+    }
+  } 
 }
 
 @mixin list-group-gray-css {
-  @each $name, $value in $list-group-gray {
-    --#{$name}: #{$value};
+  .list-group-gray {
+    @each $name, $value in $list-group-gray {
+      --#{$name}: #{$value};
+    }
   }
 }
 
 @mixin popover-gray-css {
-  @each $name, $value in $popover-gray {
-    --#{$name}: #{$value};
+  .popover-gray {
+    @each $name, $value in $popover-gray {
+      --#{$name}: #{$value};
+    }
   }
+}
+
+// Combined mixins
+@mixin gray-module-css {
+  @include gray-variables-css;
+  @include accordion-gray-css;
+  @include alert-gray-css;
+  @include background-gray-css;
+  @include badge-gray-css;
+  @include button-gray-css;
+  @include card-gray-css;
+  @include dialog-gray-css;
+  @include list-group-gray-css;
+  @include popover-gray-css;
+}
+
+@mixin gray-utilities-css {
+  @include accordion-gray-css;
+  @include alert-gray-css;
+  @include background-gray-css;
+  @include badge-gray-css;
+  @include button-gray-css;
+  @include card-gray-css;
+  @include dialog-gray-css;
+  @include list-group-gray-css;
+  @include popover-gray-css;
 }
