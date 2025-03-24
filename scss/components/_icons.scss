@@ -141,7 +141,11 @@ $brand-icons: (
     --ico: var(--link, LinkText);
   }
   
-  :where(button) {
+  :where(a:is(:hover, :focus)) {
+    --ico: var(--hover, color-mix(in srgb, LinkText 75%, white));
+  }
+    
+  :where(button, .btn) {
     --ico: var(--btn-text, buttontext);
   }
 }

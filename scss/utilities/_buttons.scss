@@ -31,7 +31,7 @@ $btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 16%, 
   -webkit-appearance: button;
 }
 
-.btn:is(:hover, :focus, :active) { 
+.btn:is(:hover, :focus, :active) {
   color: $btn-text-color;
   background-color: $btn-background-hover;
 }

@@ -2,9 +2,9 @@
 // Surface
 // ----------------------------------------------------------
 $surface:      Canvas !default;
-$surface-1:    color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
-$surface-2:    color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
-$surface-3:    color-mix(in srgb, CanvasText 14%, var(--surface)) !default;
+$surface-1:    color-mix(in srgb, CanvasText 3%, var(--surface)) !default;
+$surface-2:    color-mix(in srgb, CanvasText 6%, var(--surface)) !default;
+$surface-3:    color-mix(in srgb, CanvasText 12%, var(--surface)) !default;
 $surface-4:    color-mix(in srgb, CanvasText 20%, var(--surface)) !default;
 $surface-5:    color-mix(in srgb, CanvasText 26%, var(--surface)) !default;
 $surface-6:    color-mix(in srgb, CanvasText 32%, var(--surface)) !default;

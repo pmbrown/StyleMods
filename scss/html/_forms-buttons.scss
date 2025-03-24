@@ -23,7 +23,7 @@ $form-padding-inline:      var(--form-px, 0.5rem) !default;
 $form-border-color:        var(--form-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $form-radius:              var(--form-radius, 0.188rem) !default;
 $form-background-color:    var(--form-bg, Canvas) !default;
-$accent-color:             var(--accent, initial) !default;
+$form-accent-color:        var(--accent, initial) !default;
 $fieldset-border-color:    var(--form-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
 $fieldset-radius:          0.125em !default;
 $fieldset-margin-bottom:   1.25rem !default;
@@ -119,7 +119,7 @@ $legend-background-color:  var(--btn-bg, color-mix(in srgb, CanvasText 3%, Canva
 }
 
 :where([type=radio], [type=checkbox], [type=range], [progress]) {
-  accent-color: $accent-color;
+  accent-color: $form-accent-color;
 }
 
 :where([type=checkbox], [type=radio]) {
