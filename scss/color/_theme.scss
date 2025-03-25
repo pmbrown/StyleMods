@@ -3,11 +3,11 @@
 // ----------------------------------------------------------
 $theme-text:          light-dark(#000, #fff) !default;
 $theme-background:    light-dark(#eaecee, #1f2428) !default;
-$theme-surface:       light-dark(#eaecee, #1f2428) !default;
 $theme-link:          light-dark(#1c3db5, #9fbfdf) !default;
 $theme-link-visited:  light-dark(#4f6fe3, #b3cce6) !default;
 $theme-link-hover:    light-dark(#4f6fe3, #b3cce6) !default;
 
+$theme-surface:       light-dark(#eaecee, #1f2428) !default;
 $theme-base:          var(--background) !default;
 $theme-1:             var(--surf-1) !default;
 $theme-2:             var(--surf-2) !default;
@@ -16,10 +16,13 @@ $theme-4:             var(--surf-4) !default;
 $theme-light:         color-mix(in srgb, var(--surf-1) 50%, var(--background)) !default;
 $theme-lighter:       color-mix(in srgb, var(--surf-1) 30%, var(--background)) !default;
 
+$theme-surface-colors: (
+  "surface": $theme-surface,
+) !default;
+
 $theme-typography: (
   "text": $theme-text,
   "background": $theme-background,
-  "surface": $theme-surface,
   "link": $theme-link,
   "visited": $theme-link-visited,
   "hover": $theme-link-hover,
@@ -87,6 +90,17 @@ $theme-popover: (
   "popover-bd-color": $theme-3,
 ) !default;
 
+@mixin theme-surface-variables {
+  @each $name, $value in $theme-surface-colors {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin theme-surface-css {
+  :where(html) {
+    @include theme-surface-variables;
+  }
+}
 
 @mixin theme-typography-variables {
   @each $name, $value in $theme-typography {
@@ -99,7 +113,6 @@ $theme-popover: (
     @include theme-typography-variables;
   }
 }
-
 
 @mixin theme-forms-buttons-variables {
   @each $name, $value in $theme-forms-buttons {
@@ -221,18 +234,29 @@ $theme-popover: (
   }
 }
 
-@mixin theme-utilities-css {
+@mixin theme-variables {
+  @include theme-typography-variables;
+  @include theme-forms-buttons-variables;
+  @include theme-tables-variables;
+  @include theme-accordion-variables;
+  @include theme-alert-variables;
+  @include theme-badge-variables;
+  @include theme-border-variables;
+  @include theme-dialog-variables;
+  @include theme-card-variables;
+  @include theme-list-group-variables;
+  @include theme-popover-variables;
+}
+
+@mixin theme-variables-css {
   :where(html) {
-    @include theme-typography-variables;
-    @include theme-forms-buttons-variables;
-    @include theme-tables-variables;
-    @include theme-accordion-variables;
-    @include theme-alert-variables;
-    @include theme-badge-variables;
-    @include theme-border-variables;
-    @include theme-dialog-variables;
-    @include theme-card-variables;
-    @include theme-list-group-variables;
-    @include theme-popover-variables;
+    @include theme-variables;
+  }
+}
+
+@mixin theme-variables-surface-css {
+  :where(html) {
+    @include theme-surface-variables;
+    @include theme-variables;
   }
 }

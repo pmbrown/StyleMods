@@ -1,0 +1,61 @@
+// ---------------------------------------------------------- 
+// All colors
+// ----------------------------------------------------------
+@use "surface" as *;
+@use "gray" as *;
+@use "blue" as *;
+@use "green" as *;
+@use "red" as *;
+@use "orange" as *;
+@use "cyan" as *;
+@use "yellow" as *;
+@use "pink" as *;
+@use "purple" as *;
+@use "olive" as *;
+
+@mixin all-colors-variables {
+  @include surface-variables;
+  @include gray-variables;
+  @include blue-variables;
+  @include blue-variables;
+  @include red-variables;
+  @include green-variables;
+  @include orange-variables;
+  @include cyan-variables;
+  @include yellow-variables;
+  @include purple-variables;
+  @include pink-variables;
+  @include olive-variables;
+}
+
+@mixin all-colors-variables-css {
+  :where(html) {
+    @include all-colors-variables;  
+  }
+}
+
+@mixin all-colors-utilities-css {
+  @include gray-utilities-css;
+  @include blue-utilities-css;
+  @include red-utilities-css;
+  @include green-utilities-css;
+  @include orange-utilities-css;
+  @include cyan-utilities-css;
+  @include yellow-utilities-css;
+  @include purple-utilities-css;
+  @include pink-utilities-css;
+  @include olive-utilities-css;
+}
+
+@mixin all-colors-modules-css {
+  @include gray-module-css;
+  @include blue-module-css;
+  @include red-module-css;
+  @include green-module-css;
+  @include orange-module-css;
+  @include cyan-module-css;
+  @include yellow-module-css;
+  @include purple-module-css;
+  @include pink-module-css;
+  @include olive-module-css;
+}
