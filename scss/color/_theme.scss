@@ -1,20 +1,19 @@
 // ---------------------------------------------------------- 
 // Theme colors
 // ----------------------------------------------------------
-$theme-text:          light-dark(#000, #fff) !default;
-$theme-background:    light-dark(#eaecee, #1f2428) !default;
-$theme-link:          light-dark(#1c3db5, #9fbfdf) !default;
-$theme-link-visited:  light-dark(#4f6fe3, #b3cce6) !default;
-$theme-link-hover:    light-dark(#4f6fe3, #b3cce6) !default;
+$theme-text:            light-dark(#000, #fff) !default;
+$theme-background:      light-dark(#eaecee, #1f2428) !default;
+$theme-link:            light-dark(#1c3db5, #9fbfdf) !default;
+$theme-link-visited:    light-dark(#4f6fe3, #b3cce6) !default;
+$theme-link-hover:      light-dark(#4f6fe3, #b3cce6) !default;
 
-$theme-surface:       light-dark(#eaecee, #1f2428) !default;
-$theme-base:          var(--background) !default;
-$theme-1:             var(--surf-1) !default;
-$theme-2:             var(--surf-2) !default;
-$theme-3:             var(--surf-3) !default;
-$theme-4:             var(--surf-4) !default;
-$theme-light:         color-mix(in srgb, var(--surf-1) 50%, var(--background)) !default;
-$theme-lighter:       color-mix(in srgb, var(--surf-1) 30%, var(--background)) !default;
+$theme-surface:         var(--background) !default;
+$theme-surface-1:       var(--surf-1) !default;
+$theme-surface-2:       var(--surf-2) !default;
+$theme-surface-3:       var(--surf-3) !default;
+$theme-surface-4:       var(--surf-4) !default;
+$theme-surface-tint-1:  color-mix(in srgb, var(--surf-1) 30%, var(--background)) !default;
+$theme-surface-tint-2:  color-mix(in srgb, var(--surf-1) 50%, var(--background)) !default;
 
 $theme-surface-colors: (
   "surface": $theme-surface,
@@ -26,68 +25,68 @@ $theme-typography: (
   "link": $theme-link,
   "visited": $theme-link-visited,
   "hover": $theme-link-hover,
-  "kbd-bg": $theme-2,
-  "pre-bd-color": $theme-3,
-  "pre-bg": $theme-1,
-  "blockquote-bd-color": $theme-3,
+  "kbd-bg": $theme-surface-2,
+  "pre-bd-color": $theme-surface-3,
+  "pre-bg": $theme-surface-1,
+  "blockquote-bd-color": $theme-surface-3,
 ) !default;
 
 $theme-forms-buttons: (
-  "btn-bd-color": $theme-3,
-  "btn-bg": $theme-1,
-  "btn-hover": $theme-2,
-  "form-bd-color": $theme-3,
-  "form-bg": $theme-base,
+  "btn-bd-color": $theme-surface-3,
+  "btn-bg": $theme-surface-1,
+  "btn-hover": $theme-surface-2,
+  "form-bd-color": $theme-surface-3,
+  "form-bg": $theme-surface,
   "form-accent": $theme-link,
 ) !default;
 
 $theme-tables: (
-  "thead-bg": $theme-1,
-  "table-bd-color": $theme-3,
-  "table-stripes": $theme-lighter,
-  "table-hover": $theme-light,
+  "thead-bg": $theme-surface-1,
+  "table-bd-color": $theme-surface-3,
+  "table-stripes": $theme-surface-tint-1,
+  "table-hover": $theme-surface-tint-2,
 ) !default;
 
 $theme-accordion: (
-  "summary-bg": $theme-1,
-  "summary-focus": $theme-2,
-  "accordion-bd-color": $theme-3,
+  "summary-bg": $theme-surface-1,
+  "summary-focus": $theme-surface-2,
+  "accordion-bd-color": $theme-surface-3,
 ) !default;
 
 $theme-alert: (
-  "alert-bg": $theme-1,
-  "alert-bd-color": $theme-2,
+  "alert-bg": $theme-surface-1,
+  "alert-bd-color": $theme-surface-2,
 ) !default;
 
 $theme-badge: (
-  "badge-bg": $theme-1,
-  "badge-bd-color": $theme-3,
+  "badge-bg": $theme-surface-1,
+  "badge-bd-color": $theme-surface-3,
 ) !default;
 
 $theme-border: (
-  "bd-color": $theme-3,
+  "bd-color": $theme-surface-3,
 ) !default;
 
 $theme-card: (
-  "card-bd-color": $theme-3,
-  "card-hover": $theme-1,
-  "card-focus-color": $theme-4,
+  "card-bd-color": $theme-surface-3,
+  "card-hover": $theme-surface-1,
+  "card-focus-color": $theme-surface-4,
 ) !default;
 
 $theme-dialog: (
-  "dialog-bg": $theme-1,
-  "dialog-bd-color": $theme-3,
+  "dialog-bg": $theme-surface-1,
+  "dialog-bd-color": $theme-surface-3,
 ) !default;
 
 $theme-list-group: (
-  "list-group-dt-bg": $theme-2,
-  "list-group-hover": $theme-1,
-  "list-group-bd-color": $theme-3,
+  "list-group-dt-bg": $theme-surface-2,
+  "list-group-hover": $theme-surface-1,
+  "list-group-bd-color": $theme-surface-3,
 ) !default;
 
 $theme-popover: (
-  "popover-bg": $theme-1,
-  "popover-bd-color": $theme-3,
+  "popover-bg": $theme-surface-1,
+  "popover-bd-color": $theme-surface-3,
 ) !default;
 
 @mixin theme-surface-variables {

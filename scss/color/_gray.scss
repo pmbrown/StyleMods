@@ -3,11 +3,11 @@
 // ----------------------------------------------------------
 // Variable colors
 $gray:      #808080 !default;
-$gray-1:    color-mix(in srgb, var(--gray) 40%, white) !default;
-$gray-2:    color-mix(in srgb, var(--gray) 50%, white) !default;
-$gray-3:    color-mix(in srgb, var(--gray) 60%, white) !default;
-$gray-4:    color-mix(in srgb, var(--gray) 70%, white) !default;
-$gray-5:    color-mix(in srgb, var(--gray) 80%, white) !default;
+$gray-1:    color-mix(in srgb, var(--gray) 25%, white) !default;
+$gray-2:    color-mix(in srgb, var(--gray) 35%, white) !default;
+$gray-3:    color-mix(in srgb, var(--gray) 55%, white) !default;
+$gray-4:    color-mix(in srgb, var(--gray) 65%, white) !default;
+$gray-5:    color-mix(in srgb, var(--gray) 75%, white) !default;
 $gray-6:    var(--gray) !default;
 $gray-7:    color-mix(in srgb, var(--gray) 80%, black) !default;
 $gray-8:    color-mix(in srgb, var(--gray) 70%, black) !default;

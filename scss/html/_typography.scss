@@ -36,8 +36,8 @@ $list-text-wrap:              var(--list-tw, pretty) !default;
 $list-indent:                 var(--li-ps, 2rem) !default;
 $dl-list-indent:              var(--dd-ms, 1rem) !default;
 
-$small-font-size:             0.906em !default;
-$small-font-size-heading:     0.75em !default;
+$small-font-size:             var(--sm-fs, 0.906em) !default;
+$small-font-size-heading:     var(--sm-fs-heading, 0.75em) !default;
 $code-color:                  var(--code, color-mix(in srgb, CanvasText 60%, Canvas)) !default;
 $kbd-padding-block:           0.1em !default;
 $kbd-padding-inline:          0.35em !default;
@@ -91,6 +91,11 @@ $blockquote-border-left:      10px !default;
 :where(a:visited) {
   color: $visited-color;
   text-decoration-color: $visited-decoration-color;
+}
+
+:where(a:focus-visible) {
+  outline: auto 1px $link-color;
+  outline-offset: 3px;
 }
 
 :where(a:hover) {
