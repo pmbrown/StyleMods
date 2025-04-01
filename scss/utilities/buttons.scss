@@ -50,6 +50,10 @@ $btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 16%, 
   background-color: $btn-background-hover;
 }
 
+.btn-outline {
+  --btn-bg: transparent;
+}
+
 .btn-xs {
   --btn-fs: 0.75em;
   --btn-py: .15rem;

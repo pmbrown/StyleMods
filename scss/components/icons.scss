@@ -193,7 +193,7 @@ $brand-icons: (
   }
 }
 
-@mixin icons-utilities {
+@mixin icons-utilities-css {
   @include icon-utilities;
   @include icon-links-buttons;
   

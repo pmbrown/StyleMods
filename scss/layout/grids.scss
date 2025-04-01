@@ -75,9 +75,28 @@ $autogrid-values: (
   }
 }
 
+@mixin grid-variables-css {
+  :where(html) {
+    @include grid-variables;
+  }
+}
+
 @mixin autogrid-variables {
   @each $name, $value in $autogrid-values {
     --#{$name}: #{$value};
+  }
+}
+
+@mixin autogrid-variables-css {
+  :where(html) {
+    @include autogrid-variables;
+  }
+}
+
+@mixin allgrids-variables-css {
+  :where(html) {
+    @include grid-variables;
+    @include autogrid-variables;
   }
 }
 
@@ -131,6 +150,7 @@ $autogrid-values: (
   }
 }
 
+// Autogrid
 @mixin autogrid-css {
   @each $name, $value in $autogrid-values {
     .#{$name} {
@@ -139,7 +159,6 @@ $autogrid-values: (
   }
 }
 
-// Autogrid
 @mixin autogrid-xl-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-xl {
