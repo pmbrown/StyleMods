@@ -5,9 +5,9 @@ $alert-text-color:        var(--alert-text, inherit);
 $alert-margin-bottom:     var(--alert-mb, 1rem);
 $alert-padding-block:     var(--alert-py, 0.66rem);
 $alert-padding-inline:    var(--alert-px, 1rem);
-$alert-border-color:      var(--alert-bd-color, color-mix(in srgb, CanvasText 12%, Canvas));
+$alert-border-color:      var(--alert-bd-color, color-mix(in srgb, CanvasText 15%, Canvas));
 $alert-radius:            var(--alert-radius, 0.188rem); 
-$alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 3%, Canvas));
+$alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 4%, Canvas));
 
 @mixin alerts-css {
 

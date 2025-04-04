@@ -41,17 +41,17 @@ $small-font-size-heading:     var(--sm-fs-heading, 0.75em) !default;
 $code-color:                  var(--code, color-mix(in srgb, CanvasText 60%, Canvas)) !default;
 $kbd-padding-block:           0.1em !default;
 $kbd-padding-inline:          0.35em !default;
-$kbd-background-color:        var(--kbd-bg, color-mix(in srgb, CanvasText 5%, Canvas)) !default;
+$kbd-background-color:        var(--kbd-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
 $kbd-radius:                  0.125em !default;
 
 $pre-padding:                 1rem !default;
 $pre-margin-bottom:           1rem !default;
-$pre-border-color:            var(--pre-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
-$pre-background-color:        var(--pre-bg, color-mix(in srgb, CanvasText 1%, Canvas)) !default;
+$pre-border-color:            var(--pre-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$pre-background-color:        var(--pre-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $blockquote-padding-block:    0.75rem !default;
 $blockquote-padding-inline:   1rem !default;
 $blockquote-margin-bottom:    1rem !default;
-$blockquote-border-color:     var(--blockquote-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
+$blockquote-border-color:     var(--blockquote-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $blockquote-border:           1px !default;
 $blockquote-border-left:      10px !default;
 

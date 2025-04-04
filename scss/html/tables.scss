@@ -1,27 +1,31 @@
 // ---------------------------------------------------------- 
 // Tables
 // ----------------------------------------------------------
-$thead-text-color:                var(--thead-text, inherit) !default;
-$thead-font-weight:               var(--thead-fw, bold) !default;
-$thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 3%, Canvas)) !default;
+$table-text-color:                var(--table-text, inherit) !default;
+$table-background-color:          var(--table-bg, Canvas) !default;
 $table-caption-font-weight:       var(--table-caption-fw, bold) !default;
 $table-caption-padding-bottom:    0.5rem !default;
-$table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 10%, Canvas)) !default;
 $table-margin-bottom:             var(--table-mb, 1rem) !default;
 $table-padding-block:             var(--table-py, 0.313rem) !default;
 $table-padding-inline:            var(--table-px, 0.75rem) !default;
+$table-border-color:              var(--table-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $table-stripes-color:             var(--table-stripes-text, inherit) !default;
 $table-stripes-background-color:  var(--table-stripes, color-mix(in srgb, CanvasText 1%, Canvas)) !default;
 $table-hover-color:               var(--table-hover-text, inherit) !default;
 $table-hover-background-color:    var(--table-hover, color-mix(in srgb, CanvasText 2%, Canvas)) !default;
+$thead-text-color:                var(--thead-text, inherit) !default;
+$thead-font-weight:               var(--thead-fw, bold) !default;
+$thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 
 @mixin tables-css {
 
 :where(table) {
+  color: $table-text-color;
   border-collapse: collapse;
   inline-size: 100%;
   margin-block-end: $table-margin-bottom;
   font-variant-numeric: tabular-nums;
+  background-color: $table-background-color;
 }
 
 :where(caption) {

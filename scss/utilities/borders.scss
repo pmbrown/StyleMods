@@ -2,7 +2,7 @@
 // Borders
 // ----------------------------------------------------------
 $border-width:    var(--bd-width, 1px) !default;
-$border-color:    var(--bd-color, light-dark(#ddd, #333)) !default;
+$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $border-default:  $border-width solid $border-color !default;
 
 $radius-1:        0.188rem !default;

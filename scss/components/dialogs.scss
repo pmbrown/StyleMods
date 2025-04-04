@@ -5,7 +5,7 @@ $dialog-text-color:         var(--dialog-text) !default;
 $dialog-margin-top:         var(--dialog-mt, 1rem) !default;
 $dialog-padding-block:      var(--dialog-py, 0.75rem) !default;
 $dialog-padding-inline:     var(--dialog-px, 1rem) !default;
-$dialog-border-color:       var(--dialog-bd-color, color-mix(in srgb, CanvasText 12%, Canvas)) !default;
+$dialog-border-color:       var(--dialog-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $dialog-radius:             var(--dialog-radius, 0.125em) !default;
 $dialog-background-color:   var(--dialog-bg, Canvas) !default; 
 $dialog-transition:         var(--dialog-transition, 0.25s) !default;
