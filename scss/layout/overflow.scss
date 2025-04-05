@@ -1,0 +1,115 @@
+//  ------------------------------------------------------------
+//  Overflow
+//  ------------------------------------------------------------
+$overflow-auto:                         auto;
+$overflow-scroll:                       scroll;
+$overflow-hidden:                       hidden;
+$overflow-visible:                      visible;
+
+$overflow: (
+  "auto": $overflow-auto,
+  "scroll": $overflow-scroll,
+  "hidden": $overflow-hidden,
+  "visible": $overflow-visible,
+) !default;
+
+@mixin overflow-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name} {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name} {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name} {
+      overflow-y: #{$value};
+    }
+  }
+}
+
+// Breakpoint XL
+@mixin overflow-xl-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-xl {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-xl {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-xl {
+      overflow-y: #{$value};
+    }
+  }
+}
+
+// Breakpoint LG
+@mixin overflow-lg-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-lg {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-lg {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-lg {
+      overflow-y: #{$value};
+    }
+  }
+}
+
+// Breakpoint MD
+@mixin overflow-md-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-md {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-md {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-md {
+      overflow-y: #{$value};
+    }
+  }
+}
+
+// Breakpoint SM
+@mixin overflow-sm-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-sm {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-sm {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-sm {
+      overflow-y: #{$value};
+    }
+  }
+}
+
+// Breakpoint XS
+@mixin overflow-xs-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-xs {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-xs {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-xs {
+      overflow-y: #{$value};
+    }
+  }
+}

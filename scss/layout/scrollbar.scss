@@ -1,0 +1,120 @@
+//  ------------------------------------------------------------
+//  Scrollbar
+//  ------------------------------------------------------------
+$scrollbar-gutter-auto:                 auto;
+$scrollbar-gutter-stable:               stable;
+$scrollbar-gutter-stable-both-edges:    stable both-edges;
+$scrollbar-width-auto:                  auto;
+$scrollbar-width-thin:                  thin;
+
+$scrollbar-gutter: (
+  "scrollbar-gutter-auto": $scrollbar-gutter-auto,
+  "scrollbar-stable": $scrollbar-gutter-stable,
+  "scrollbar-stable-both-edges": $scrollbar-gutter-stable-both-edges,
+) !default;
+
+$scrollbar-width: (
+  "scrollbar-width-auto": $scrollbar-width-auto,
+  "scrollbar-width-thin": $scrollbar-width-thin,
+) !default;
+
+@mixin scrollbar-gutter-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name} {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name} {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
+// Breakpoint XL
+@mixin scrollbar-gutter-xl-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-xl {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-xl-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-xl {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
+// Breakpoint LG
+@mixin scrollbar-gutter-lg-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-lg {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-lg-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-lg {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
+// Breakpoint MD
+@mixin scrollbar-gutter-md-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-md {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-md-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-md {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
+// Breakpoint SM
+@mixin scrollbar-gutter-sm-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-sm {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-sm-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-sm {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
+// Breakpoint XS
+@mixin scrollbar-gutter-xs-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-xs {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-xs-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-xs {
+      scrollbar-width: #{$value};
+    }
+  }
+}

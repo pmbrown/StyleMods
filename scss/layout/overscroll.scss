@@ -1,0 +1,63 @@
+//  ------------------------------------------------------------
+//  Overscroll behavior
+//  ------------------------------------------------------------
+$overscroll-auto:                       auto;
+$overscroll-contain:                    contain;
+
+$overscroll-behavior: (
+  "overscroll-auto": $overscroll-auto,
+  "overscroll-contain": $overscroll-contain,
+) !default;
+
+@mixin overscroll-behavior-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name} {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
+// Breakpoint XL
+@mixin overscroll-behavior-xl-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-xl {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
+// Breakpoint LG
+@mixin overscroll-behavior-lg-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-lg {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
+// Breakpoint MD
+@mixin overscroll-behavior-md-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-md {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
+// Breakpoint SM
+@mixin overscroll-behavior-sm-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-sm {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
+// Breakpoint XS
+@mixin overscroll-behavior-xs-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-xs {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
