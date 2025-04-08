@@ -111,16 +111,6 @@ $text-wrap: (
   }
 }
 
-@mixin text-colors-css {
-  .text-white {
-    color: #fff;
-  }
-  
-  .text-black {
-    color: #000;
-  }
-}
-
 @mixin text-variable-classes-css {
   .line-height {
     line-height: var(--lh);
@@ -140,16 +130,38 @@ $text-wrap: (
   }
 }
 
+@mixin text-colors-css {
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-black {
+    color: #000;
+  }
+}
+
+@mixin links-utilities-css {
+  .decoration-none {
+    text-decoration: none;
+  }
+  
+  .text-link {
+    color: CanvasText;
+    text-decoration-color: CanvasText;
+  }
+}
+
 @mixin text-css {
   @include font-sizes-css;
   @include font-weights-css;
   @include text-align-css;
   @include text-wrap-css;
-  @include text-colors-css;
   @include text-variable-classes-css;
+  @include text-colors-css;
+  @include links-utilities-css;
 }
 
-// Breakpoints (sizes, alignment and wrap utilities only)
+// Breakpoints (sizes, align and wrap utilities only)
 // Extra large
 @mixin font-sizes-xl-css {
   @each $name, $value in $font-sizes {

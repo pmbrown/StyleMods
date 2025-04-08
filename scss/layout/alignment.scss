@@ -30,31 +30,39 @@ $alignment-2: (
 ) !default;
 
 // Mixins
-@mixin alignment-css {
+@mixin place-content-css {
   @each $name, $value in $alignment-1 {
     .pc-#{$name} {
       place-content: #{$value};
     }
   }
-  
+}
+
+@mixin justify-content-css {  
   @each $name, $value in $alignment-1 {
     .jc-#{$name} {
       justify-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-content-css {  
   @each $name, $value in $alignment-1 {
     .ac-#{$name} {
       align-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-items-css {  
   @each $name, $value in $alignment-2 {
     .ai-#{$name} {
       align-items: #{$value};
     }
   }
-  
+}
+
+@mixin align-self-css { 
   @each $name, $value in $alignment-2 {
     .as-#{$name} {
       align-self: #{$value};
@@ -62,33 +70,40 @@ $alignment-2: (
   }
 }
 
-// Mixin breakpoints
-// Extra large
-@mixin alignment-xl-css {
+// Breakpoint XL
+@mixin place-content-xl-css {
   @each $name, $value in $alignment-1 {
     .pc-#{$name}-xl {
       place-content: #{$value};
     }
   }
-  
+}
+
+@mixin justify-content-xl-css {  
   @each $name, $value in $alignment-1 {
     .jc-#{$name}-xl {
       justify-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-content-xl-css {  
   @each $name, $value in $alignment-1 {
     .ac-#{$name}-xl {
       align-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-items-xl-css {  
   @each $name, $value in $alignment-2 {
     .ai-#{$name}-xl {
       align-items: #{$value};
     }
   }
-  
+}
+
+@mixin align-self-xl-css { 
   @each $name, $value in $alignment-2 {
     .as-#{$name}-xl {
       align-self: #{$value};
@@ -96,32 +111,40 @@ $alignment-2: (
   }
 }
 
-// Large
-@mixin alignment-lg-css {
+// Breakpoint LG
+@mixin place-content-lg-css {
   @each $name, $value in $alignment-1 {
     .pc-#{$name}-lg {
       place-content: #{$value};
     }
   }
-  
+}
+
+@mixin justify-content-lg-css {  
   @each $name, $value in $alignment-1 {
     .jc-#{$name}-lg {
       justify-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-content-lg-css {  
   @each $name, $value in $alignment-1 {
     .ac-#{$name}-lg {
       align-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-items-lg-css {  
   @each $name, $value in $alignment-2 {
     .ai-#{$name}-lg {
       align-items: #{$value};
     }
   }
-  
+}
+
+@mixin align-self-lg-css { 
   @each $name, $value in $alignment-2 {
     .as-#{$name}-lg {
       align-self: #{$value};
@@ -129,32 +152,40 @@ $alignment-2: (
   }
 }
 
-// Medium
-@mixin alignment-md-css {
+// Breakpoint MD
+@mixin place-content-md-css {
   @each $name, $value in $alignment-1 {
     .pc-#{$name}-md {
       place-content: #{$value};
     }
   }
-  
+}
+
+@mixin justify-content-md-css {  
   @each $name, $value in $alignment-1 {
     .jc-#{$name}-md {
       justify-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-content-md-css {  
   @each $name, $value in $alignment-1 {
     .ac-#{$name}-md {
       align-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-items-md-css {  
   @each $name, $value in $alignment-2 {
     .ai-#{$name}-md {
       align-items: #{$value};
     }
   }
-  
+}
+
+@mixin align-self-md-css { 
   @each $name, $value in $alignment-2 {
     .as-#{$name}-md {
       align-self: #{$value};
@@ -162,32 +193,40 @@ $alignment-2: (
   }
 }
 
-// Small
-@mixin alignment-sm-css {
+// Breakpoint SM
+@mixin place-content-sm-css {
   @each $name, $value in $alignment-1 {
     .pc-#{$name}-sm {
       place-content: #{$value};
     }
   }
-  
+}
+
+@mixin justify-content-sm-css {  
   @each $name, $value in $alignment-1 {
     .jc-#{$name}-sm {
       justify-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-content-sm-css {  
   @each $name, $value in $alignment-1 {
     .ac-#{$name}-sm {
       align-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-items-sm-css {  
   @each $name, $value in $alignment-2 {
     .ai-#{$name}-sm {
       align-items: #{$value};
     }
   }
-  
+}
+
+@mixin align-self-sm-css { 
   @each $name, $value in $alignment-2 {
     .as-#{$name}-sm {
       align-self: #{$value};
@@ -195,35 +234,92 @@ $alignment-2: (
   }
 }
 
-// Extra small
-@mixin alignment-xs-css {
+// Breakpoint XS
+@mixin place-content-xs-css {
   @each $name, $value in $alignment-1 {
     .pc-#{$name}-xs {
       place-content: #{$value};
     }
   }
-  
+}
+
+@mixin justify-content-xs-css {  
   @each $name, $value in $alignment-1 {
     .jc-#{$name}-xs {
       justify-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-content-xs-css {  
   @each $name, $value in $alignment-1 {
     .ac-#{$name}-xs {
       align-content: #{$value};
     }
   }
-  
+}
+
+@mixin align-items-xs-css {  
   @each $name, $value in $alignment-2 {
     .ai-#{$name}-xs {
       align-items: #{$value};
     }
   }
-  
+}
+
+@mixin align-self-xs-css { 
   @each $name, $value in $alignment-2 {
     .as-#{$name}-xs {
       align-self: #{$value};
     }
   }
+}
+
+// Grouped mixins
+@mixin alignment-css {
+  @include place-content-css;
+  @include justify-content-css;
+  @include align-content-css;
+  @include align-items-css;
+  @include align-self-css;
+}
+
+@mixin alignment-xl-css {
+  @include place-content-xl-css;
+  @include justify-content-xl-css;
+  @include align-content-xl-css;
+  @include align-items-xl-css;
+  @include align-self-xl-css;
+}
+
+@mixin alignment-lg-css {
+  @include place-content-lg-css;
+  @include justify-content-lg-css;
+  @include align-content-lg-css;
+  @include align-items-lg-css;
+  @include align-self-lg-css;
+}
+
+@mixin alignment-md-css {
+  @include place-content-md-css;
+  @include justify-content-md-css;
+  @include align-content-md-css;
+  @include align-items-md-css;
+  @include align-self-md-css;
+}
+
+@mixin alignment-sm-css {
+  @include place-content-sm-css;
+  @include justify-content-sm-css;
+  @include align-content-sm-css;
+  @include align-items-sm-css;
+  @include align-self-sm-css;
+}
+
+@mixin alignment-xs-css {
+  @include place-content-xs-css;
+  @include justify-content-xs-css;
+  @include align-content-xs-css;
+  @include align-items-xs-css;
+  @include align-self-xs-css;
 }
