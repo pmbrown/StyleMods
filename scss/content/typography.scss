@@ -167,7 +167,7 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(dt) {
-  font-weight: var(--fw);
+  font-weight: var(--dt-fw);
 }
 
 :where(dt):not(:first-child) {

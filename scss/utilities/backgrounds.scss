@@ -1,7 +1,19 @@
 // ---------------------------------------------------------- 
 // Backgrounds
 // ----------------------------------------------------------
-$gradient:    linear-gradient(180deg, rgba(white, .15), rgba(white, 0)) !default;
+$gradient:          linear-gradient(180deg, rgba(white, .15), rgba(white, 0)) !default;
+$gradient-light:    linear-gradient(180deg, rgba(white, .125), rgba(white, 0)) !default;
+
+@mixin gradient-variables {
+  --gradient: #{$gradient};
+  --gradient-light: #{$gradient-light};
+}
+
+@mixin gradient-variables-css {
+  :where(html) {
+    @include gradient-variables;
+  }
+}
 
 @mixin background {
   color: var(--bg-text);
@@ -18,8 +30,28 @@ $gradient:    linear-gradient(180deg, rgba(white, .15), rgba(white, 0)) !default
   background-image: $gradient;
 }
 
+@mixin gradient-variable {
+  background-image: var(--gradient);
+}
+
 @mixin gradient-css {
   .gradient {
     @include gradient;
+  }
+}
+
+@mixin gradient-variable-css {
+  .gradient {
+    @include gradient-variable;
+  }
+}
+
+@mixin gradients-css {
+  :where(html) {
+    @include gradient-variables;
+  }
+  
+  .gradient {
+    @include gradient-variable;
   }
 }
