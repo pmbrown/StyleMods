@@ -57,7 +57,6 @@ $thead-background-color:          var(--thead-bg, color-mix(in srgb, CanvasText 
 :where(tbody, thead) th, td {
   padding-block: $table-padding-block;
   padding-inline: $table-padding-inline;
-  white-space: nowrap;
 }
 
 :where(.table-striped tr):nth-child(even),
