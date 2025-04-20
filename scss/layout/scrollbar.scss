@@ -34,6 +34,23 @@ $scrollbar-width: (
   }
 }
 
+// Breakpoint XXL
+@mixin scrollbar-gutter-xxl-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-xxl {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-xxl-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-xxl {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
 // Breakpoint XL
 @mixin scrollbar-gutter-xl-css {
   @each $name, $value in $scrollbar-gutter {
@@ -114,6 +131,23 @@ $scrollbar-width: (
 @mixin scrollbar-width-xs-css {
   @each $name, $value in $scrollbar-width {
     .#{$name}-xs {
+      scrollbar-width: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXS
+@mixin scrollbar-gutter-xxs-css {
+  @each $name, $value in $scrollbar-gutter {
+    .#{$name}-xxs {
+      scrollbar-gutter: #{$value};
+    }
+  }
+}
+
+@mixin scrollbar-width-xs-css {
+  @each $name, $value in $scrollbar-width {
+    .#{$name}-xxs {
       scrollbar-width: #{$value};
     }
   }

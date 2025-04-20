@@ -29,6 +29,23 @@ $overflow: (
   }
 }
 
+// Breakpoint XXL
+@mixin overflow-xxl-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-xxl {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-xxl {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-xxl {
+      overflow-y: #{$value};
+    }
+  }
+}
+
 // Breakpoint XL
 @mixin overflow-xl-css {
   @each $name, $value in $overflow {
@@ -109,6 +126,23 @@ $overflow: (
     }
 
     .overflow-y-#{$name}-xs {
+      overflow-y: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXS
+@mixin overflow-xxs-css {
+  @each $name, $value in $overflow {
+    .overflow-#{$name}-xxs {
+      overflow: #{$value};
+    }
+    
+    .overflow-x-#{$name}-xxs {
+      overflow-x: #{$value};
+    }
+
+    .overflow-y-#{$name}-xxs {
       overflow-y: #{$value};
     }
   }

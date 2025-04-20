@@ -37,6 +37,26 @@ $gap-value: (
   }
 }
 
+@mixin gaps-xxl-css {  
+  @each $name, $value in $gap-value {
+  .gap-#{$name}-xxl {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gap-value {
+  .gap-c-#{$name}-xxl {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gap-value {
+  .gap-r-#{$name}-xxl {
+      row-gap: #{$value};        
+    }
+  }
+}
+
 @mixin gaps-xl-css {  
   @each $name, $value in $gap-value {
   .gap-#{$name}-xl {
@@ -132,6 +152,26 @@ $gap-value: (
   
   @each $name, $value in $gap-value {
   .gap-r-#{$name}-xs {
+      row-gap: #{$value};        
+    }
+  }
+}
+
+@mixin gaps-xxs-css {  
+  @each $name, $value in $gap-value {
+  .gap-#{$name}-xxs {
+      gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gap-value {
+  .gap-c-#{$name}-xxs {
+      column-gap: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $gap-value {
+  .gap-r-#{$name}-xxs {
       row-gap: #{$value};        
     }
   }

@@ -1,255 +1,290 @@
 //  ------------------------------------------------------------
 //  Flex
 //  ------------------------------------------------------------
-  
+$flex-display: (
+  "flex": flex,
+  "flex-inline": inline-flex,
+) !default;
+
+$flex-direction: (
+  "flex-row": row,
+  "flex-column": column,
+) !default;
+
+$flex-wrap: (
+  "flex-wrap": wrap,
+  "flex-nowrap": nowrap,
+) !default;
+
+$flex-grow: (
+  "flex-grow-0": 0,
+  "flex-grow-1": 1,
+) !default;
+
+$flex-shrink: (
+  "flex-shrink-0": 0,
+  "flex-shrink-1": 1,
+) !default;
+
 @mixin flex-css {
-  .flex {
-    display: flex;
+  @each $name, $value in $flex-display {
+    .#{$name} {
+      display: #{$value};
+    }
   }
-  
-  .flex-inline {
-    display: inline-flex;
+
+  @each $name, $value in $flex-direction {
+    .#{$name} {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-row {
-    flex-direction: row;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name} {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-column {
-    flex-direction: column;
+
+  @each $name, $value in $flex-grow {
+    .#{$name} {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  
-  .flex-nowrap {
-    flex-wrap: nowrap;
-  }
-  
-  .flex-grow-0 {
-    flex-grow: 0;
-  }
-  
-  .flex-grow-1 {
-    flex-grow: 1;
-  }
-  
-  .flex-shrink-0 {
-    flex-shrink: 0;
-  }
-  
-  .flex-shrink-1 {
-    flex-shrink: 1;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name} {
+      flex-shrink: #{$value};
+    }
   }
 }
 
+// XXL
+@mixin flex-xxl-css {
+  @each $name, $value in $flex-display {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
+  }
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-xxl {
+      flex-direction: #{$value};
+    }
+  }
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-xxl {
+      flex-wrap: #{$value};
+    }
+  }
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-xxl {
+      flex-grow: #{$value};
+    }
+  }
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-xxl {
+      flex-shrink: #{$value};
+    }
+  }
+}
+
+// XL
 @mixin flex-xl-css {
-  .flex-xl {
-    display: flex;
+  @each $name, $value in $flex-display {
+    .#{$name}-xl {
+      display: #{$value};
+    }
   }
-  
-  .flex-inline-xl {
-    display: inline-flex;
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-xl {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-row-xl {
-    flex-direction: row;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-xl {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-column-xl {
-    flex-direction: column;
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-xl {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-wrap-xl {
-    flex-wrap: wrap;
-  }
-  
-  .flex-nowrap-xl {
-    flex-wrap: nowrap;
-  }
-  
-  .flex-grow-0-xl {
-    flex-grow: 0;
-  }
-  
-  .flex-grow-1-xl {
-    flex-grow: 1;
-  }
-  
-  .flex-shrink-0-xl {
-    flex-shrink: 0;
-  }
-  
-  .flex-shrink-1-xl {
-    flex-shrink: 1;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-xl {
+      flex-shrink: #{$value};
+    }
   }
 }
 
+// LG
 @mixin flex-lg-css {
-  .flex-lg {
-    display: flex;
+  @each $name, $value in $flex-display {
+    .#{$name}-lg {
+      display: #{$value};
+    }
   }
-  
-  .flex-inline-lg {
-    display: inline-flex;
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-lg {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-row-lg {
-    flex-direction: row;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-lg {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-column-lg {
-    flex-direction: column;
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-lg {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-wrap-lg {
-    flex-wrap: wrap;
-  }
-  
-  .flex-nowrap-lg {
-    flex-wrap: nowrap;
-  }
-  
-  .flex-grow-0-lg {
-    flex-grow: 0;
-  }
-  
-  .flex-grow-1-lg {
-    flex-grow: 1;
-  }
-  
-  .flex-shrink-0-lg {
-    flex-shrink: 0;
-  }
-  
-  .flex-shrink-1-lg {
-    flex-shrink: 1;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-lg {
+      flex-shrink: #{$value};
+    }
   }
 }
 
+// MD
 @mixin flex-md-css {
-  .flex-md {
-    display: flex;
+  @each $name, $value in $flex-display {
+    .#{$name}-md {
+      display: #{$value};
+    }
   }
-  
-  .flex-inline-md {
-    display: inline-flex;
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-md {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-row-md {
-    flex-direction: row;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-md {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-column-md {
-    flex-direction: column;
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-md {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-wrap-md {
-    flex-wrap: wrap;
-  }
-  
-  .flex-nowrap-md {
-    flex-wrap: nowrap;
-  }
-  
-  .flex-grow-0-md {
-    flex-grow: 0;
-  }
-  
-  .flex-grow-1-md {
-    flex-grow: 1;
-  }
-  
-  .flex-shrink-0-md {
-    flex-shrink: 0;
-  }
-  
-  .flex-shrink-1-md {
-    flex-shrink: 1;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-md {
+      flex-shrink: #{$value};
+    }
   }
 }
 
+// SM
 @mixin flex-sm-css {
-  .flex-sm {
-    display: flex;
+  @each $name, $value in $flex-display {
+    .#{$name}-sm {
+      display: #{$value};
+    }
   }
-  
-  .flex-inline-sm {
-    display: inline-flex;
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-sm {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-row-sm {
-    flex-direction: row;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-sm {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-column-sm {
-    flex-direction: column;
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-sm {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-wrap-sm {
-    flex-wrap: wrap;
-  }
-  
-  .flex-nowrap-sm {
-    flex-wrap: nowrap;
-  }
-  
-  .flex-grow-0-sm {
-    flex-grow: 0;
-  }
-  
-  .flex-grow-1-sm {
-    flex-grow: 1;
-  }
-  
-  .flex-shrink-0-sm {
-    flex-shrink: 0;
-  }
-  
-  .flex-shrink-1-sm {
-    flex-shrink: 1;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-sm {
+      flex-shrink: #{$value};
+    }
   }
 }
 
+// XS
 @mixin flex-xs-css {
-  .flex-xs {
-    display: flex;
+  @each $name, $value in $flex-display {
+    .#{$name}-xs {
+      display: #{$value};
+    }
   }
-  
-  .flex-inline-xs {
-    display: inline-flex;
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-xs {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-row-xs {
-    flex-direction: row;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-xs {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-column-xs {
-    flex-direction: column;
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-xs {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-wrap-xs {
-    flex-wrap: wrap;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-xs {
+      flex-shrink: #{$value};
+    }
   }
-  
-  .flex-nowrap-xs {
-    flex-wrap: nowrap;
+}
+
+// XXS
+@mixin flex-xxs-css {
+  @each $name, $value in $flex-display {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
   }
-  
-  .flex-grow-0-xs {
-    flex-grow: 0;
+
+  @each $name, $value in $flex-direction {
+    .#{$name}-xxs {
+      flex-direction: #{$value};
+    }
   }
-  
-  .flex-grow-1-xs {
-    flex-grow: 1;
+
+  @each $name, $value in $flex-wrap {
+    .#{$name}-xxs {
+      flex-wrap: #{$value};
+    }
   }
-  
-  .flex-shrink-0-xs {
-    flex-shrink: 0;
+
+  @each $name, $value in $flex-grow {
+    .#{$name}-xxs {
+      flex-grow: #{$value};
+    }
   }
-  
-  .flex-shrink-1-xs {
-    flex-shrink: 1;
+
+  @each $name, $value in $flex-shrink {
+    .#{$name}-xxs {
+      flex-shrink: #{$value};
+    }
   }
 }

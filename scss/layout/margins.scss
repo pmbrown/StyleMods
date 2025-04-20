@@ -64,7 +64,52 @@ $margins-sizes: (
 }
 
 // Breakpoints
-// Extra large
+// XXL
+@mixin margins-xxl-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-xxl {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-xxl {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-xxl {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-xxl {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-xxl {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-xxl {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-xxl {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+// XL
 @mixin margins-xl-css {
   @each $name, $value in $margins-sizes {
     .m-#{$name}-xl {
@@ -109,7 +154,7 @@ $margins-sizes: (
   }
 }
 
-// Large
+// LG
 @mixin margins-lg-css {
   @each $name, $value in $margins-sizes {
     .m-#{$name}-lg {
@@ -154,7 +199,7 @@ $margins-sizes: (
   }
 }
 
-// Medium
+// MD
 @mixin margins-md-css {
   @each $name, $value in $margins-sizes {
     .m-#{$name}-md {
@@ -199,7 +244,7 @@ $margins-sizes: (
   }
 }
 
-// Small
+// SM
 @mixin margins-sm-css {
   @each $name, $value in $margins-sizes {
     .m-#{$name}-sm {
@@ -245,8 +290,7 @@ $margins-sizes: (
 }
 
 
-// Extra small
-
+// XS
 @mixin margins-xs-css {
   @each $name, $value in $margins-sizes {
     .m-#{$name}-xs {
@@ -286,6 +330,51 @@ $margins-sizes: (
     
   @each $name, $value in $margins-sizes {
     .mx-#{$name}-xs {
+      margin-inline: #{$value};        
+    }
+  }
+}
+
+// XXS
+@mixin margins-xxs-css {
+  @each $name, $value in $margins-sizes {
+    .m-#{$name}-xxs {
+      margin: #{$value};        
+    }
+  }  
+  
+  @each $name, $value in $margins-sizes {
+    .mt-#{$name}-xxs {
+      margin-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .mb-#{$name}-xxs {
+      margin-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .ms-#{$name}-xxs {
+      margin-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $margins-sizes {
+    .me-#{$name}-xxs {
+      margin-inline-end: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .my-#{$name}-xxs {
+      margin-block: #{$value};        
+    }
+  }
+    
+  @each $name, $value in $margins-sizes {
+    .mx-#{$name}-xxs {
       margin-inline: #{$value};        
     }
   }

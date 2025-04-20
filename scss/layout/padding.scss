@@ -1,5 +1,5 @@
 // ------------------------------------------------------------
-// Margins and padding utilities
+// Padding
 // ------------------------------------------------------------
 $padding-0: 0;
 $padding-1: 0.25rem !default;
@@ -62,7 +62,52 @@ $padding-sizes: (
 }
 
 // Breakpoints
-// Large
+// XXL
+@mixin padding-xxl-css {
+  @each $name, $value in $padding-sizes {
+    .p-#{$name}-xxl {
+      padding: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .pt-#{$name}-xxl {
+      padding-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .pb-#{$name}-xxl {
+      padding-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .ps-#{$name}-xxl {
+      padding-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .pe-#{$name}-xxl {
+      padding-inline-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .py-#{$name}-xxl {
+      padding-block: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .px-#{$name}-xxl {
+      padding-inline: #{$value};        
+    }
+  }
+}
+
+// XL
 @mixin padding-xl-css {
   @each $name, $value in $padding-sizes {
     .p-#{$name}-xl {
@@ -107,7 +152,7 @@ $padding-sizes: (
   }
 }
 
-// Large
+// LG
 @mixin padding-lg-css {
   @each $name, $value in $padding-sizes {
     .p-#{$name}-lg {
@@ -152,7 +197,7 @@ $padding-sizes: (
   }
 }
 
-// Medium
+// MD
 @mixin padding-md-css {
   @each $name, $value in $padding-sizes {
     .p-#{$name}-md {
@@ -197,7 +242,7 @@ $padding-sizes: (
   }
 }
 
-// Small
+// SM
 @mixin padding-sm-css {
   @each $name, $value in $padding-sizes {
     .p-#{$name}-sm {
@@ -242,7 +287,7 @@ $padding-sizes: (
   }
 }
 
-// Extra small
+// XS
 @mixin padding-xs-css {
   @each $name, $value in $padding-sizes {
     .p-#{$name}-xs {
@@ -282,6 +327,50 @@ $padding-sizes: (
   
   @each $name, $value in $padding-sizes {
     .px-#{$name}-xs {
+      padding-inline: #{$value};        
+    }
+  }
+}
+// XXS
+@mixin padding-xxs-css {
+  @each $name, $value in $padding-sizes {
+    .p-#{$name}-xxs {
+      padding: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .pt-#{$name}-xxs {
+      padding-block-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .pb-#{$name}-xxs {
+      padding-block-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .ps-#{$name}-xxs {
+      padding-inline-start: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .pe-#{$name}-xxs {
+      padding-inline-end: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .py-#{$name}-xxs {
+      padding-block: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $padding-sizes {
+    .px-#{$name}-xxs {
       padding-inline: #{$value};        
     }
   }

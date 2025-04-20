@@ -17,6 +17,15 @@ $overscroll-behavior: (
   }
 }
 
+// Breakpoint XXL
+@mixin overscroll-behavior-xxl-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-xxl {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
 // Breakpoint XL
 @mixin overscroll-behavior-xl-css {
   @each $name, $value in $overscroll-behavior {
@@ -57,6 +66,15 @@ $overscroll-behavior: (
 @mixin overscroll-behavior-xs-css {
   @each $name, $value in $overscroll-behavior {
     .#{$name}-xs {
+      overscroll-behavior: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXS
+@mixin overscroll-behavior-xxs-css {
+  @each $name, $value in $overscroll-behavior {
+    .#{$name}-xxs {
       overscroll-behavior: #{$value};
     }
   }

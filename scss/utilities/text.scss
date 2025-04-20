@@ -162,7 +162,32 @@ $text-wrap: (
 }
 
 // Breakpoints (sizes, align and wrap utilities only)
-// Extra large
+// XXL
+@mixin font-sizes-xxl-css {
+  @each $name, $value in $font-sizes {
+    .fs-#{$name}-xxl {
+      font-size: #{$value};        
+    }
+  }
+}
+
+@mixin text-align-xxl-css {
+  @each $name, $value in $text-align {
+    .text-#{$name}-xxl {
+      text-align: #{$value};        
+    }
+  }
+}
+
+@mixin text-wrap-xxl-css {
+  @each $name, $value in $text-wrap {
+    .text-#{$name}-xxl {
+      text-wrap: #{$value};        
+    }
+  }
+}
+
+// XL
 @mixin font-sizes-xl-css {
   @each $name, $value in $font-sizes {
     .fs-#{$name}-xl {
@@ -187,7 +212,7 @@ $text-wrap: (
   }
 }
 
-// Large
+// LG
 @mixin font-sizes-lg-css {
   @each $name, $value in $font-sizes {
     .fs-#{$name}-lg {
@@ -212,7 +237,7 @@ $text-wrap: (
   }
 }
 
-// Medium
+// MD
 @mixin font-sizes-md-css {
   @each $name, $value in $font-sizes {
     .fs-#{$name}-md {
@@ -237,7 +262,7 @@ $text-wrap: (
   }
 }
 
-// Small
+// SM
 @mixin font-sizes-sm-css {
   @each $name, $value in $font-sizes {
     .fs-#{$name}-sm {
@@ -262,7 +287,7 @@ $text-wrap: (
   }
 }
 
-// Extra small
+// XS
 @mixin font-sizes-xs-css {
   @each $name, $value in $font-sizes {
     .fs-#{$name}-xs {
@@ -282,6 +307,31 @@ $text-wrap: (
 @mixin text-wrap-xs-css {
   @each $name, $value in $text-wrap {
     .text-#{$name}-xs {
+      text-wrap: #{$value};        
+    }
+  }
+}
+
+// XXS
+@mixin font-sizes-xxs-css {
+  @each $name, $value in $font-sizes {
+    .fs-#{$name}-xxs {
+      font-size: #{$value};        
+    }
+  }
+}
+
+@mixin text-align-xxs-css {
+  @each $name, $value in $text-align {
+    .text-#{$name}-xxs {
+      text-align: #{$value};        
+    }
+  }
+}
+
+@mixin text-wrap-xxs-css {
+  @each $name, $value in $text-wrap {
+    .text-#{$name}-xxs {
       text-wrap: #{$value};        
     }
   }

@@ -28,6 +28,21 @@ $inset-position: (
   }
 }
 
+@mixin inset-xxl-css { 
+  @each $name, $value in $inset-position {
+    .inset-#{$name}-xxl {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset-position {
+    .inset-#{$name}-unset-xxl {
+      #{$value}: unset;
+    }
+  }
+}
+
 @mixin inset-xl-css { 
   @each $name, $value in $inset-position {
     .inset-#{$name}-xl {
@@ -98,6 +113,21 @@ $inset-position: (
   
   @each $name, $value in $inset-position {
     .#{$name}-unset-xs {
+      #{$value}: unset;
+    }
+  }
+}
+
+@mixin inset-xxs-css {  
+  @each $name, $value in $inset-position {
+    .#{$name}-xxs {
+      --#{$name}: 0;
+      #{$value}: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $inset-position {
+    .#{$name}-unset-xxs {
       #{$value}: unset;
     }
   }

@@ -70,6 +70,47 @@ $alignment-2: (
   }
 }
 
+// Breakpoint XXL
+@mixin place-content-xxl-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-xxl {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-content-xxl-css {  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-xxl {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin align-content-xxl-css {  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-xxl {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-xxl-css {  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-xxl {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-xxl-css { 
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-xxl {
+      align-self: #{$value};
+    }
+  }
+}
+
 // Breakpoint XL
 @mixin place-content-xl-css {
   @each $name, $value in $alignment-1 {
@@ -275,6 +316,47 @@ $alignment-2: (
   }
 }
 
+// Breakpoint XXS
+@mixin place-content-xxs-css {
+  @each $name, $value in $alignment-1 {
+    .pc-#{$name}-xxs {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-content-xxs-css {  
+  @each $name, $value in $alignment-1 {
+    .jc-#{$name}-xxs {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin align-content-xxs-css {  
+  @each $name, $value in $alignment-1 {
+    .ac-#{$name}-xxs {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-xxs-css {  
+  @each $name, $value in $alignment-2 {
+    .ai-#{$name}-xxs {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-xxs-css { 
+  @each $name, $value in $alignment-2 {
+    .as-#{$name}-xxs {
+      align-self: #{$value};
+    }
+  }
+}
+
 // Grouped mixins
 @mixin alignment-css {
   @include place-content-css;
@@ -282,6 +364,14 @@ $alignment-2: (
   @include align-content-css;
   @include align-items-css;
   @include align-self-css;
+}
+
+@mixin alignment-xxl-css {
+  @include place-content-xxl-css;
+  @include justify-content-xxl-css;
+  @include align-content-xxl-css;
+  @include align-items-xxl-css;
+  @include align-self-xxl-css;
 }
 
 @mixin alignment-xl-css {
@@ -322,4 +412,12 @@ $alignment-2: (
   @include align-content-xs-css;
   @include align-items-xs-css;
   @include align-self-xs-css;
+}
+
+@mixin alignment-xxs-css {
+  @include place-content-xxs-css;
+  @include justify-content-xxs-css;
+  @include align-content-xxs-css;
+  @include align-items-xxs-css;
+  @include align-self-xxs-css;
 }

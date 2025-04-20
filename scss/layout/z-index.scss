@@ -27,6 +27,14 @@ $z-index-value: (
   }
 }
 
+@mixin z-index-xxl-css {  
+  @each $name, $value in $z-index-value {
+    .#{$name}-xxl {
+      z-index: #{$value};
+    }
+  }
+}
+
 @mixin z-index-xl-css {  
   @each $name, $value in $z-index-value {
     .#{$name}-xl {
@@ -62,6 +70,14 @@ $z-index-value: (
 @mixin z-index-xs-css {  
   @each $name, $value in $z-index-value {
     .#{$name}-xs {
+      z-index: #{$value};
+    }
+  }
+}
+
+@mixin z-index-xss-css {  
+  @each $name, $value in $z-index-value {
+    .#{$name}-xxs {
       z-index: #{$value};
     }
   }

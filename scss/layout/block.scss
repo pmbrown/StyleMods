@@ -12,6 +12,16 @@
   }
 }
 
+@mixin block-xxl-css {
+  .block-xxl {
+    display: block;
+  }
+  
+  .block-inline-xxl {
+    display: inline-block;
+  }
+}
+
 @mixin block-xl-css {
   .block-xl {
     display: block;
@@ -58,6 +68,16 @@
   }
   
   .block-inline-xs {
+    display: inline-block;
+  }
+}
+
+@mixin block-xxs-css {
+  .block-xxs {
+    display: block;
+  }
+  
+  .block-inline-xxs {
     display: inline-block;
   }
 }

@@ -23,6 +23,14 @@ $position-value: (
   }
 }
 
+@mixin position-xxl-css {
+  @each $name, $value in $position-value {
+    .#{$name}-xxl {
+      position: #{$value};
+    }
+  }
+}
+
 @mixin position-xl-css {
   @each $name, $value in $position-value {
     .#{$name}-xl {
@@ -58,6 +66,14 @@ $position-value: (
 @mixin position-xs-css {
   @each $name, $value in $position-value {
     .#{$name}-xs {
+      position: #{$value};
+    }
+  }
+}
+
+@mixin position-xxs-css {
+  @each $name, $value in $position-value {
+    .#{$name}-xxs {
       position: #{$value};
     }
   }

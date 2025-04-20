@@ -28,6 +28,32 @@
   }
 }
 
+@mixin order-xXl-css {
+  .order-0-xXl {
+    order: 0;
+  }
+  
+  .order-1-Xxl {
+    order: 1;
+  }
+  
+  .order-2-xXl {
+    order: 2;
+  }
+  
+  .order-3-xXl {
+    order: 3;
+  }
+  
+  .order-4-xxl {
+    order: 4;
+  }
+  
+  .order-5-xxl {
+    order: 5;
+  }
+}
+
 @mixin order-xl-css {
   .order-0-xl {
     order: 0;
@@ -154,6 +180,32 @@
   }
   
   .order-5-xs {
+    order: 5;
+  }
+}
+
+@mixin order-xxs-css {
+  .order-0-xxs {
+    order: 0;
+  }
+  
+  .order-1-xxs {
+    order: 1;
+  }
+  
+  .order-2-xxs {
+    order: 2;
+  }
+  
+  .order-3-xxs {
+    order: 3;
+  }
+  
+  .order-4-xxs {
+    order: 4;
+  }
+  
+  .order-5-xxs {
     order: 5;
   }
 }

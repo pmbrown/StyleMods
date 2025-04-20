@@ -110,6 +110,14 @@ $autogrid-values: (
 }
 
 // Breakpoints
+@mixin grid-xxl-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xxl {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
 @mixin grid-xl-css {
   @each $name, $value in $grid-values {
     .#{$name}-xl {
@@ -150,10 +158,26 @@ $autogrid-values: (
   }
 }
 
+@mixin grid-xxs-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xxs {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
 // Autogrid
 @mixin autogrid-css {
   @each $name, $value in $autogrid-values {
     .#{$name} {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-xxl-css {
+  @each $name, $value in $autogrid-values {
+    .#{$name}-xxl {
       --gtc: var(--#{$name});        
     }
   }
@@ -194,6 +218,14 @@ $autogrid-values: (
 @mixin autogrid-xs-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-xs {
+      --gtc: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-xxs-css {
+  @each $name, $value in $autogrid-values {
+    .#{$name}-xxs {
       --gtc: var(--#{$name});        
     }
   }

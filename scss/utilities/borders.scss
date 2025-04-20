@@ -92,7 +92,16 @@ $border-position: (
 } // end borders-css
 
 // Border breakpoints
-// Extra large
+// XXL
+@mixin borders-xxl-css {
+  @each $name, $value in $border-position {
+    .#{$name}-xxl {
+      #{$value}: $border-default;        
+    }
+  }
+}
+
+// XL
 @mixin borders-xl-css {
   @each $name, $value in $border-position {
     .#{$name}-xl {
@@ -101,7 +110,7 @@ $border-position: (
   }
 }
 
-// Large
+// LG
 @mixin borders-lg-css {
   @each $name, $value in $border-position {
     .#{$name}-lg {
@@ -110,7 +119,7 @@ $border-position: (
   }
 }
 
-// Medium
+// MD
 @mixin borders-md-css {
   @each $name, $value in $border-position {
     .#{$name}-md {
@@ -119,7 +128,7 @@ $border-position: (
   }
 }
 
-// Small
+// SM
 @mixin borders-sm-css {
   @each $name, $value in $border-position {
     .#{$name}-sm {
@@ -128,7 +137,7 @@ $border-position: (
   }
 }
 
-// Extra small
+// XS
 @mixin borders-xs-css {
   @each $name, $value in $border-position {
     .#{$name}-xs {
@@ -137,8 +146,60 @@ $border-position: (
   }
 }
 
+// XXS
+@mixin borders-xxs-css {
+  @each $name, $value in $border-position {
+    .#{$name}-xxs {
+      #{$value}: $border-default;        
+    }
+  }
+}
+
 // Border radius breakpoints
-// Extra large
+// XXL
+@mixin border-radius-xxl-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-xxl {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-xxl {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-xxl {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-xxl {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-xxl {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-xxl {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}
+
+// XL
 @mixin border-radius-xl-css {
   @each $name, $value in $border-radius {
     .#{$name}-xl {
@@ -181,7 +242,7 @@ $border-position: (
   }
 }
 
-// Large
+// LG
 @mixin border-radius-lg-css {
   @each $name, $value in $border-radius {
     .#{$name}-lg {
@@ -224,7 +285,7 @@ $border-position: (
   }
 }
 
-// Medium
+// MD
 @mixin border-radius-md-css {
   @each $name, $value in $border-radius {
     .#{$name}-md {
@@ -268,7 +329,7 @@ $border-position: (
 }
 
 
-// Small
+// SM
 @mixin border-radius-sm-css {
   @each $name, $value in $border-radius {
     .#{$name}-sm {
@@ -311,7 +372,7 @@ $border-position: (
   }
 }
 
-// Extra small
+// XS
 @mixin border-radius-xs-css {
   @each $name, $value in $border-radius {
     .#{$name}-xs {
@@ -348,6 +409,49 @@ $border-position: (
   
   @each $name, $value in $border-radius {
     .#{$name}-end-xs {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
+  }
+}
+
+// XXS
+@mixin border-radius-xxs-css {
+  @each $name, $value in $border-radius {
+    .#{$name}-xxs {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-xxs {
+      border-radius: #{$value};        
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top-xxs {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom-xxs {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start-xxs {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+  }
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end-xxs {
       border-start-end-radius: #{$value};
       border-end-end-radius: #{$value};    
     }
