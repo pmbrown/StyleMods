@@ -41,6 +41,26 @@ dialog[open]::backdrop {
   background-color: $dialog-backdrop;
 }
 
+// Offcanvas
+.dialog-offcanvas-start, .dialog-offcanvas-end {
+  --dialog-width: 24rem;
+  --dialog-radius: 0;
+  margin: 0;
+  block-size: 100dvh;
+  max-block-size: 100%;
+  border: none;
+}
+
+.dialog-offcanvas-start {
+  margin-inline-end: auto;
+  border-inline-end: 1px solid $dialog-border-color;
+}
+
+.dialog-offcanvas-end {
+  margin-inline-start: auto;
+  border-inline-start: 1px solid $dialog-border-color;
+}
+
 } // end dialogs-css
 
 @mixin dialogs-animation-css {
