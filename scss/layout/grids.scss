@@ -57,15 +57,16 @@ $autogrid-values: (
   "ga-12": $ga-12,
 ) !default;
 
-@mixin grid-utility {
-  display: grid;
-  grid-template-columns: var(--gtc);
-  grid-template-rows: var(--gtr);
-}
+$grid-utilities-values: (
+  "grid": grid,
+  "grid-inline": inline-grid,
+) !default;
 
-@mixin grid-utility-css {
-  .grid {
-    @include grid-utility;
+@mixin grid-utilities-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name} {
+      display: #{$value};        
+    }
   }
 }
 
@@ -100,11 +101,18 @@ $autogrid-values: (
   }
 }
 
-// Default grid
 @mixin grid-css {
   @each $name, $value in $grid-values {
     .#{$name} {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin autogrid-css {
+  @each $name, $value in $autogrid-values {
+    .#{$name} {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -113,64 +121,7 @@ $autogrid-values: (
 @mixin grid-xxl-css {
   @each $name, $value in $grid-values {
     .#{$name}-xxl {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-@mixin grid-xl-css {
-  @each $name, $value in $grid-values {
-    .#{$name}-xl {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-@mixin grid-lg-css {
-  @each $name, $value in $grid-values {
-    .#{$name}-lg {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-@mixin grid-md-css {
-  @each $name, $value in $grid-values {
-    .#{$name}-md {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-@mixin grid-sm-css {
-  @each $name, $value in $grid-values {
-    .#{$name}-sm {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-@mixin grid-xs-css {
-  @each $name, $value in $grid-values {
-    .#{$name}-xs {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-@mixin grid-xxs-css {
-  @each $name, $value in $grid-values {
-    .#{$name}-xxs {
-      --gtc: var(--#{$name});        
-    }
-  }
-}
-
-// Autogrid
-@mixin autogrid-css {
-  @each $name, $value in $autogrid-values {
-    .#{$name} {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -178,7 +129,15 @@ $autogrid-values: (
 @mixin autogrid-xxl-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-xxl {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-xl-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xl {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -186,7 +145,15 @@ $autogrid-values: (
 @mixin autogrid-xl-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-xl {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-lg-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-lg {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -194,7 +161,15 @@ $autogrid-values: (
 @mixin autogrid-lg-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-lg {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-md-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-md {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -202,7 +177,15 @@ $autogrid-values: (
 @mixin autogrid-md-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-md {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-sm-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-sm {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -210,7 +193,15 @@ $autogrid-values: (
 @mixin autogrid-sm-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-sm {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-xs-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xs {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -218,7 +209,15 @@ $autogrid-values: (
 @mixin autogrid-xs-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-xs {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
+    }
+  }
+}
+
+@mixin grid-xxs-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xxs {
+      grid-template-columns: var(--#{$name});        
     }
   }
 }
@@ -226,7 +225,7 @@ $autogrid-values: (
 @mixin autogrid-xxs-css {
   @each $name, $value in $autogrid-values {
     .#{$name}-xxs {
-      --gtc: var(--#{$name});        
+      grid-template-columns: var(--#{$name});        
     }
   }
 }

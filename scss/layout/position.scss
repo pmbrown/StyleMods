@@ -1,18 +1,13 @@
 //  ------------------------------------------------------------
 //  Position
 //  ------------------------------------------------------------
-$unset:     unset;
-$relative:  relative;
-$absolute:  absolute;
-$fixed:     fixed;
-$sticky:    sticky;
-
 $position-value: (
-  "pos-unset": $unset,
-  "pos-relative": $relative,
-  "pos-absolute": $absolute,
-  "pos-fixed": $fixed,
-  "pos-sticky": $sticky,
+  "absolute": absolute,
+  "fixed": fixed,
+  "relative": relative,
+  "static": static,
+  "sticky": sticky,
+  "position-unset": unset,
 ) !default;
 
 @mixin position-css {
@@ -59,7 +54,7 @@ $position-value: (
   @each $name, $value in $position-value {
     .#{$name}-sm {
       position: #{$value};
-    }
+    }    
   }
 }
 
@@ -67,7 +62,7 @@ $position-value: (
   @each $name, $value in $position-value {
     .#{$name}-xs {
       position: #{$value};
-    }
+    } 
   }
 }
 

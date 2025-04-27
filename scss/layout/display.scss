@@ -1,0 +1,420 @@
+//  ------------------------------------------------------------
+//  Display
+//  ------------------------------------------------------------
+$display-block: (
+  "block": block,
+  "inline": inline,
+  "block-inline": inline-block,
+) !default;
+
+$display-flex: (
+  "flex": flex,
+  "flex-inline": inline-flex,
+) !default;
+
+$display-grid: (
+  "grid": grid,
+  "grid-inline": inline-grid,
+) !default;
+
+$display-flow-root: (
+  "flow-root": flow-root,
+) !default;
+
+$display-resets: (
+  "display-none": none,
+  "display-initial": initial,
+  "display-revert": revert,
+) !default;
+
+@mixin display-block-css {
+  @each $name, $value in $display-block {
+    .#{$name} {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-css {
+  @each $name, $value in $display-flex {
+    .#{$name} {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-css {
+  @each $name, $value in $display-grid {
+    .#{$name} {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name} {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-css {
+  @each $name, $value in $display-resets {
+    .#{$name} {
+      display: #{$value};
+    }
+  }
+}
+
+// XXL
+@mixin display-block-xxl-css {
+  @each $name, $value in $display-block {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-xxl-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-xxl-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-xxl-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-xxl-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
+  }
+}
+
+// XL
+@mixin display-block-xl-css {
+  @each $name, $value in $display-block {
+    .#{$name}-xl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-xl-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-xl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-xl-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-xl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-xl-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-xl {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-xl-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-xl {
+      display: #{$value};
+    }
+  }
+}
+
+// LG
+@mixin display-block-lg-css {
+  @each $name, $value in $display-block {
+    .#{$name}-lg {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-lg-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-lg {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-lg-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-lg {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-lg-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-lg {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-lg-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-lg {
+      display: #{$value};
+    }
+  }
+}
+
+// MD
+@mixin display-block-md-css {
+  @each $name, $value in $display-block {
+    .#{$name}-md {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-md-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-md {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-md-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-md {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-md-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-md {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-md-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-md {
+      display: #{$value};
+    }
+  }
+}
+
+// SM
+@mixin display-block-sm-css {
+  @each $name, $value in $display-block {
+    .#{$name}-sm {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-sm-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-sm {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-sm-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-sm {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-sm-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-sm {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-sm-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-sm {
+      display: #{$value};
+    }
+  }
+}
+
+// XS
+@mixin display-block-xs-css {
+  @each $name, $value in $display-block {
+    .#{$name}-xs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-xs-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-xs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-xs-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-xs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-xs-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-xs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-xs-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-xs {
+      display: #{$value};
+    }
+  }
+}
+
+// XXS
+@mixin display-block-xxs-css {
+  @each $name, $value in $display-block {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flex-xxs-css {
+  @each $name, $value in $display-flex {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-grid-xxs-css {
+  @each $name, $value in $display-grid {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-flow-root-xxs-css {
+  @each $name, $value in $display-flow-root {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
+  }
+}
+
+@mixin display-resets-xxs-css {
+  @each $name, $value in $display-resets {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
+  }
+}
+
+// Combined
+@mixin display-utilities-css {
+  @include display-block-css;
+  @include display-flex-css;
+  @include display-grid-css;
+  @include display-flow-root-css;
+  @include display-resets-css;
+}
+
+@mixin display-utilities-xxl-css {
+  @include display-block-xxl-css;
+  @include display-flex-xxl-css;
+  @include display-grid-xxl-css;
+  @include display-flow-root-xxl-css;
+  @include display-resets-xxl-css;
+}
+
+@mixin display-utilities-xl-css {
+  @include display-block-xl-css;
+  @include display-flex-xl-css;
+  @include display-grid-xl-css;
+  @include display-flow-root-xl-css;
+  @include display-resets-xl-css;
+}
+
+@mixin display-utilities-lg-css {
+  @include display-block-lg-css;
+  @include display-flex-lg-css;
+  @include display-grid-lg-css;
+  @include display-flow-root-lg-css;
+  @include display-resets-lg-css;
+}
+
+@mixin display-utilities-md-css {
+  @include display-block-md-css;
+  @include display-flex-md-css;
+  @include display-grid-md-css;
+  @include display-flow-root-md-css;
+  @include display-resets-md-css;
+}
+
+@mixin display-utilities-sm-css {
+  @include display-block-sm-css;
+  @include display-flex-sm-css;
+  @include display-grid-sm-css;
+  @include display-flow-root-sm-css;
+  @include display-resets-sm-css;
+}
+
+@mixin display-utilities-xs-css {
+  @include display-block-xs-css;
+  @include display-flex-xs-css;
+  @include display-grid-xs-css;
+  @include display-flow-root-xs-css;
+  @include display-resets-xs-css;
+}
+
+@mixin display-utilities-xxs-css {
+  @include display-block-xxs-css;
+  @include display-flex-xxs-css;
+  @include display-grid-xxs-css;
+  @include display-flow-root-xxs-css;
+  @include display-resets-xxs-css;
+}

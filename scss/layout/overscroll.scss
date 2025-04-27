@@ -1,12 +1,14 @@
 //  ------------------------------------------------------------
 //  Overscroll behavior
 //  ------------------------------------------------------------
-$overscroll-auto:                       auto;
-$overscroll-contain:                    contain;
+$overscroll-auto:       auto;
+$overscroll-contain:    contain;
+$overscroll-initial:    initial;
 
 $overscroll-behavior: (
   "overscroll-auto": $overscroll-auto,
   "overscroll-contain": $overscroll-contain,
+  "overscroll-initial": $overscroll-initial,
 ) !default;
 
 @mixin overscroll-behavior-css {

@@ -1,134 +1,132 @@
 //  ------------------------------------------------------------
 //  Inset
 //  ------------------------------------------------------------
-$top:     inset-block-start;
-$bottom:  inset-block-end;
-$left:    inset-inline-start;
-$right:   inset-inline-end;
+$inset-all:       inset;
+$inset-block:     inset-block;
+$inset-inline:    inset-inline;
+$inset-top:       inset-block-start;
+$inset-bottom:    inset-block-end;
+$inset-left:      inset-inline-start;
+$inset-right:     inset-inline-end;
 
-$inset-position: (
-  "top": $top,
-  "bottom": $bottom,
-  "left": $left,
-  "right": $right,
+$inset-values: (
+  "all": $inset-all,
+  "block": $inset-block,
+  "inline": $inset-inline,
+  "top": $inset-top,
+  "bottom": $inset-bottom,
+  "left": $inset-left,
+  "right": $inset-right,
 );
 
 @mixin inset-css {  
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .inset-#{$name} {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .inset-#{$name}-unset {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .inset-#{$name}-initial {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-xxl-css { 
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .inset-#{$name}-xxl {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .inset-#{$name}-unset-xxl {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .inset-#{$name}-initial-xxl {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-xl-css { 
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .inset-#{$name}-xl {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .inset-#{$name}-unset-xl {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .inset-#{$name}-initial-xl {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-lg-css {  
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .inset-#{$name}-lg {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .inset-#{$name}-unset-lg {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .inset-#{$name}-initial-lg {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-md-css {  
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .inset-#{$name}-md {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .inset-#{$name}-unset-md {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .inset-#{$name}-initial-md {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-sm-css {  
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .#{$name}-sm {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .#{$name}-unset-sm {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .#{$name}-initial-sm {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-xs-css {  
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .#{$name}-xs {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .#{$name}-unset-xs {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .#{$name}-initial-xs {
+      #{$value}: initial;
     }
   }
 }
 
 @mixin inset-xxs-css {  
-  @each $name, $value in $inset-position {
+  @each $name, $value in $inset-values {
     .#{$name}-xxs {
-      --#{$name}: 0;
-      #{$value}: var(--#{$name});
+      #{$value}: var(--#{$name}, 0);
     }
   }
   
-  @each $name, $value in $inset-position {
-    .#{$name}-unset-xxs {
-      #{$value}: unset;
+  @each $name, $value in $inset-values {
+    .#{$name}-initial-xxs {
+      #{$value}: initial;
     }
   }
 }

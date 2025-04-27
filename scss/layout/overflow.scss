@@ -1,16 +1,18 @@
 //  ------------------------------------------------------------
 //  Overflow
 //  ------------------------------------------------------------
-$overflow-auto:                         auto;
-$overflow-scroll:                       scroll;
-$overflow-hidden:                       hidden;
-$overflow-visible:                      visible;
+$overflow-auto:       auto;
+$overflow-scroll:     scroll;
+$overflow-hidden:     hidden;
+$overflow-visible:    visible;
+$overflow-initial:    initial;
 
 $overflow: (
   "auto": $overflow-auto,
   "scroll": $overflow-scroll,
   "hidden": $overflow-hidden,
   "visible": $overflow-visible,
+  "initial": $overflow-initial,
 ) !default;
 
 @mixin overflow-css {

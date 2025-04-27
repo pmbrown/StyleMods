@@ -1,32 +1,28 @@
 //  ------------------------------------------------------------
 //  Sizes
 //  ------------------------------------------------------------
-$size-auto:           auto;
-$size-fit:            fit-content;
-$size-100:            100%;
-$inline-100vw:        100vw;
-$inline-100dvw:       100dvw;
-$inline-calc-vw:      calc(100vw - var(--vw)) !default;
-$inline-calc-dvw:     calc(100dvw - var(--dvw)) !default;
 $inline-size:         var(--width) !default;
 $inline-size-min:     var(--min-width) !default;
 $inline-size-max:     var(--max-width) !default;
-$block-100vh:         100vh;
-$block-100dvh:        100dvh;
-$block-calc-vh:       calc(100vh - var(--vh)) !default;
-$block-calc-dvh:      calc(100dvh - var(--dvh)) !default;
+$inline-calc-vw:      calc(100vw - var(--vw)) !default;
+$inline-calc-dvw:     calc(100dvw - var(--dvw)) !default;
 $block-size:          var(--height) !default;
 $block-size-min:      var(--min-height) !default;
 $block-size-max:      var(--max-height) !default;
+$block-calc-vh:       calc(100vh - var(--vh)) !default;
+$block-calc-dvh:      calc(100dvh - var(--dvh)) !default;
 
 $inline-sizes: (
-  "w-auto": $size-auto,
-  "w-fit": $size-fit,
-  "w-100": $size-100,
-  "w-100vw": $inline-100vw,
-  "w-100dvw": $inline-100dvw,
+  "w-auto": auto,
+  "w-fit-content": fit-content,
+  "w-min-content": min-content,
+  "w-max-content": max-content,
+  "w-100": 100%,
+  "w-100vw": 100vw,
+  "w-100dvw": 100dvw,
   "w-vw-calc": $inline-calc-vw,
   "w-dvw-calc": $inline-calc-dvw,
+  "w-initial": initial,
 ) !default;
 
 $inline-variable-sizes: (
@@ -35,13 +31,16 @@ $inline-variable-sizes: (
 ) !default;
 
 $block-sizes: (
-  "h-auto": $size-auto,
-  "h-fit": $size-fit,
-  "h-100": $size-100,
-  "h-100vh": $block-100vh,
-  "h-100dvh": $block-100dvh,
+  "h-auto": auto,
+  "h-fit-content": fit-content,
+  "h-min-content": min-content,
+  "h-max-content": max-content,
+  "h-100": 100%,
+  "h-100vh": 100vh,
+  "h-100dvh": 100dvh,
   "h-vh-calc": $block-calc-vh,
   "h-dvh-calc": $block-calc-dvh,
+  "h-initial": initial,
 ) !default;
 
 $block-variable-sizes: (
@@ -49,139 +48,129 @@ $block-variable-sizes: (
   "max": $block-size-max,
 ) !default;
 
-@mixin inline-size-css {
+@mixin inline-size-css {   
+  @each $name, $value in $inline-sizes {
+    .#{$name} {
+      inline-size: #{$value};
+    }
+  }
+
+  @each $name, $value in $inline-sizes {
+    .#{$name}-min {
+      min-inline-size: #{$value};
+    }
+  }
+
+  @each $name, $value in $inline-sizes {
+    .#{$name}-max {
+      max-inline-size: #{$value};
+    }
+  }
+
   .width {
     inline-size: $inline-size;
   }
-  
+
   @each $name, $value in $inline-variable-sizes {
     .#{$name}-width {
       #{$name}-inline-size: #{$value};
     }
   }
-  
-  @each $name, $value in $inline-sizes {
-    .#{$name} {
-      inline-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $inline-sizes {
-    .#{$name}-min {
-      min-inline-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $inline-sizes {
-    .#{$name}-max {
-      max-inline-size: #{$value};
-    }
-  }
 }
 
-@mixin block-size-css {
-  .height {
-    block-size: $inline-size;
+@mixin block-size-css {  
+  @each $name, $value in $block-sizes {
+    .#{$name} {
+      block-size: #{$value};
+    }
   }
-  
+
+  @each $name, $value in $block-sizes {
+    .#{$name}-min {
+      min-block-size: #{$value};
+    }
+  }
+
+  @each $name, $value in $block-sizes {
+    .#{$name}-max {
+      max-block-size: #{$value};
+    }
+  }
+
+  .height {
+    block-size: $block-size;
+  }
+
   @each $name, $value in $block-variable-sizes {
     .#{$name}-height {
       #{$name}-block-size: #{$value};
     }
   }
-
-  @each $name, $value in $block-sizes {
-    .#{$name} {
-      block-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $block-sizes {
-    .#{$name}-min {
-      min-block-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $block-sizes {
-    .#{$name}-max {
-      max-block-size: #{$value};
-    }
-  }
 }
 
 // XXL
-@mixin inline-size-xxl-css {
+@mixin inline-size-xxl-css {  
+  @each $name, $value in $inline-sizes {
+    .#{$name}-xxl {
+      inline-size: #{$value};
+    }
+  }
+
+  @each $name, $value in $inline-sizes {
+    .#{$name}-min-xxl {
+      min-inline-size: #{$value};
+    }
+  }
+
+  @each $name, $value in $inline-sizes {
+    .#{$name}-max-xxl {
+      max-inline-size: #{$value};
+    }
+  }
+
   .width-xxl {
     inline-size: $inline-size;
   }
-  
+
   @each $name, $value in $inline-variable-sizes {
     .#{$name}-width-xxl {
       #{$name}-inline-size: #{$value};
     }
   }
-  
-  @each $name, $value in $inline-sizes {
-    .#{$name}-xxl {
-      inline-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $inline-sizes {
-    .#{$name}-min-xxl {
-      min-inline-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $inline-sizes {
-    .#{$name}-max-xxl {
-      max-inline-size: #{$value};
-    }
-  }
 }
 
 @mixin block-size-xxl-css {
-  .height-xxl {
-    block-size: $inline-size;
+  @each $name, $value in $block-sizes {
+    .#{$name}-xxl {
+      block-size: #{$value};
+    }
   }
-  
+
+  @each $name, $value in $block-sizes {
+    .#{$name}-min-xxl {
+      min-block-size: #{$value};
+    }
+  }
+
+  @each $name, $value in $block-sizes {
+    .#{$name}-max-xxl {
+      max-block-size: #{$value};
+    }
+  }
+
+  .height-xxl {
+    block-size: $block-size;
+  }
+
   @each $name, $value in $block-variable-sizes {
     .#{$name}-height-xxl {
       #{$name}-block-size: #{$value};
     }
   }
-
-  @each $name, $value in $block-sizes {
-    .#{$name}-xxl {
-      block-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $block-sizes {
-    .#{$name}-min-xxl {
-      min-block-size: #{$value};
-    }
-  }
-
-  @each $name, $value in $block-sizes {
-    .#{$name}-max-xxl {
-      max-block-size: #{$value};
-    }
-  }
 }
 
 // XL
-@mixin inline-size-xl-css {
-  .width-xl {
-    inline-size: $inline-size;
-  }
-  
-  @each $name, $value in $inline-variable-sizes {
-    .#{$name}-width-xl {
-      #{$name}-inline-size: #{$value};
-    }
-  }
-  
+@mixin inline-size-xl-css {  
   @each $name, $value in $inline-sizes {
     .#{$name}-xl {
       inline-size: #{$value};
@@ -199,19 +188,19 @@ $block-variable-sizes: (
       max-inline-size: #{$value};
     }
   }
+
+  .width-xl {
+    inline-size: $inline-size;
+  }
+
+  @each $name, $value in $inline-variable-sizes {
+    .#{$name}-width-xl {
+      #{$name}-inline-size: #{$value};
+    }
+  }
 }
 
 @mixin block-size-xl-css {
-  .height-xl {
-    block-size: $inline-size;
-  }
-  
-  @each $name, $value in $block-variable-sizes {
-    .#{$name}-height-xl {
-      #{$name}-block-size: #{$value};
-    }
-  }
-
   @each $name, $value in $block-sizes {
     .#{$name}-xl {
       block-size: #{$value};
@@ -227,22 +216,22 @@ $block-variable-sizes: (
   @each $name, $value in $block-sizes {
     .#{$name}-max-xl {
       max-block-size: #{$value};
+    }
+  }
+
+  .height-xl {
+    block-size: $block-size;
+  }
+
+  @each $name, $value in $block-variable-sizes {
+    .#{$name}-height-xl {
+      #{$name}-block-size: #{$value};
     }
   }
 }
 
 // LG
 @mixin inline-size-lg-css {
-  .width-lg {
-    inline-size: $inline-size;
-  }
-  
-  @each $name, $value in $inline-variable-sizes {
-    .#{$name}-width-lg {
-      #{$name}-inline-size: #{$value};
-    }
-  }
-
   @each $name, $value in $inline-sizes {
     .#{$name}-lg {
       inline-size: #{$value};
@@ -260,19 +249,19 @@ $block-variable-sizes: (
       max-inline-size: #{$value};
     }
   }
+
+  .width-lg {
+    inline-size: $inline-size;
+  }
+
+  @each $name, $value in $inline-variable-sizes {
+    .#{$name}-width-lg {
+      #{$name}-inline-size: #{$value};
+    }
+  }
 }
 
 @mixin block-size-lg-css {
-  .height-lg {
-    block-size: $inline-size;
-  }
-  
-  @each $name, $value in $block-variable-sizes {
-    .#{$name}-height-lg {
-      #{$name}-block-size: #{$value};
-    }
-  }
-
   @each $name, $value in $block-sizes {
     .#{$name}-lg {
       block-size: #{$value};
@@ -288,22 +277,22 @@ $block-variable-sizes: (
   @each $name, $value in $block-sizes {
     .#{$name}-max-lg {
       max-block-size: #{$value};
+    }
+  }
+
+  .height-lg {
+    block-size: $block-size;
+  }
+
+  @each $name, $value in $block-variable-sizes {
+    .#{$name}-height-lg {
+      #{$name}-block-size: #{$value};
     }
   }
 }
 
 // MD
 @mixin inline-size-md-css {
-  .width-md {
-    inline-size: $inline-size;
-  }
-  
-  @each $name, $value in $inline-variable-sizes {
-    .#{$name}-width-md {
-      #{$name}-inline-size: #{$value};
-    }
-  }
-
   @each $name, $value in $inline-sizes {
     .#{$name}-md {
       inline-size: #{$value};
@@ -321,19 +310,19 @@ $block-variable-sizes: (
       max-inline-size: #{$value};
     }
   }
+
+  .width-md {
+    inline-size: $inline-size;
+  }
+
+  @each $name, $value in $inline-variable-sizes {
+    .#{$name}-width-md {
+      #{$name}-inline-size: #{$value};
+    }
+  }
 }
 
 @mixin block-size-md-css {
-  .height-md {
-    block-size: $inline-size;
-  }
-  
-  @each $name, $value in $block-variable-sizes {
-    .#{$name}-height-md {
-      #{$name}-block-size: #{$value};
-    }
-  }
-
   @each $name, $value in $block-sizes {
     .#{$name}-md {
       block-size: #{$value};
@@ -349,22 +338,22 @@ $block-variable-sizes: (
   @each $name, $value in $block-sizes {
     .#{$name}-max-md {
       max-block-size: #{$value};
+    }
+  }
+
+  .height-md {
+    block-size: $block-size;
+  }
+
+  @each $name, $value in $block-variable-sizes {
+    .#{$name}-height-md {
+      #{$name}-block-size: #{$value};
     }
   }
 }
 
 // SM
 @mixin inline-size-sm-css {
-  .width-sm {
-    inline-size: $inline-size;
-  }
-  
-  @each $name, $value in $inline-variable-sizes {
-    .#{$name}-width-sm {
-      #{$name}-inline-size: #{$value};
-    }
-  }
-
   @each $name, $value in $inline-sizes {
     .#{$name}-sm {
       inline-size: #{$value};
@@ -382,19 +371,19 @@ $block-variable-sizes: (
       max-inline-size: #{$value};
     }
   }
+  
+  .width-sm {
+    inline-size: $inline-size;
+  }
+
+  @each $name, $value in $inline-variable-sizes {
+    .#{$name}-width-sm {
+      #{$name}-inline-size: #{$value};
+    }
+  }
 }
 
 @mixin block-size-sm-css {
-  .height-sm {
-    block-size: $inline-size;
-  }
-  
-  @each $name, $value in $block-variable-sizes {
-    .#{$name}-height-sm {
-      #{$name}-block-size: #{$value};
-    }
-  }
-
   @each $name, $value in $block-sizes {
     .#{$name}-sm {
       block-size: #{$value};
@@ -410,22 +399,22 @@ $block-variable-sizes: (
   @each $name, $value in $block-sizes {
     .#{$name}-max-sm {
       max-block-size: #{$value};
+    }
+  }
+  
+  .height-sm {
+    block-size: $block-size;
+  }
+
+  @each $name, $value in $block-variable-sizes {
+    .#{$name}-height-sm {
+      #{$name}-block-size: #{$value};
     }
   }
 }
 
 // XS
 @mixin inline-size-xs-css {
-  .width-xs {
-    inline-size: $inline-size;
-  }
-  
-  @each $name, $value in $inline-variable-sizes {
-    .#{$name}-width-xs {
-      #{$name}-inline-size: #{$value};
-    }
-  }
-
   @each $name, $value in $inline-sizes {
     .#{$name}-xs {
       inline-size: #{$value};
@@ -443,19 +432,19 @@ $block-variable-sizes: (
       max-inline-size: #{$value};
     }
   }
+  
+  .width-xs {
+    inline-size: $inline-size;
+  }
+
+  @each $name, $value in $inline-variable-sizes {
+    .#{$name}-width-xs {
+      #{$name}-inline-size: #{$value};
+    }
+  }
 }
 
 @mixin block-size-xs-css {
-  .height-xs {
-    block-size: $inline-size;
-  }
-  
-  @each $name, $value in $block-variable-sizes {
-    .#{$name}-height-xs {
-      #{$name}-block-size: #{$value};
-    }
-  }
-
   @each $name, $value in $block-sizes {
     .#{$name}-xs {
       block-size: #{$value};
@@ -471,22 +460,22 @@ $block-variable-sizes: (
   @each $name, $value in $block-sizes {
     .#{$name}-max-xs {
       max-block-size: #{$value};
+    }
+  }
+  
+  .height-xs {
+    block-size: $block-size;
+  }
+
+  @each $name, $value in $block-variable-sizes {
+    .#{$name}-height-xs {
+      #{$name}-block-size: #{$value};
     }
   }
 }
 
 // XXS
 @mixin inline-size-xxs-css {
-  .width-xxs {
-    inline-size: $inline-size;
-  }
-  
-  @each $name, $value in $inline-variable-sizes {
-    .#{$name}-width-xxs {
-      #{$name}-inline-size: #{$value};
-    }
-  }
-
   @each $name, $value in $inline-sizes {
     .#{$name}-xxs {
       inline-size: #{$value};
@@ -504,19 +493,19 @@ $block-variable-sizes: (
       max-inline-size: #{$value};
     }
   }
+
+  .width-xxs {
+    inline-size: $inline-size;
+  }
+
+  @each $name, $value in $inline-variable-sizes {
+    .#{$name}-width-xxs {
+      #{$name}-inline-size: #{$value};
+    }
+  }
 }
 
 @mixin block-size-xxs-css {
-  .height-xxs {
-    block-size: $inline-size;
-  }
-  
-  @each $name, $value in $block-variable-sizes {
-    .#{$name}-height-xxs {
-      #{$name}-block-size: #{$value};
-    }
-  }
-
   @each $name, $value in $block-sizes {
     .#{$name}-xxs {
       block-size: #{$value};
@@ -532,6 +521,16 @@ $block-variable-sizes: (
   @each $name, $value in $block-sizes {
     .#{$name}-max-xxs {
       max-block-size: #{$value};
+    }
+  }
+  
+  .height-xxs {
+    block-size: $block-size;
+  }
+
+  @each $name, $value in $block-variable-sizes {
+    .#{$name}-height-xxs {
+      #{$name}-block-size: #{$value};
     }
   }
 }

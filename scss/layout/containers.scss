@@ -1,39 +1,52 @@
 // ---------------------------------------------------------- 
 // Containers
 // ----------------------------------------------------------
-$container-xl:  1600px !default;
-$container-lg:  1280px !default;
-$container-md:  1024px !default;
-$container-sm:  768px !default;
-$container-xs:  480px !default;
+$container-xxl:       1920px !default;
+$container-xl:        1600px !default;
+$container-lg:        1280px !default;
+$container-md:        1024px !default;
+$container-sm:        768px !default;
+$container-xs:        480px !default;
+$container-xxs:       360px !default;
+$container-rem-xxl:   120rem !default;
+$container-rem-xl:    100rem !default;
+$container-rem-lg:    80rem !default;
+$container-rem-md:    64rem !default;
+$container-rem-sm:    48rem !default;
+$container-rem-xs:    30rem !default;
+$container-rem-xxs:   22.5rem !default;
+
+$container-values: (
+  "xxl": $container-xxl,
+  "xl": $container-xl,
+  "lg": $container-lg,
+  "md": $container-md,
+  "sm": $container-sm,
+  "xs": $container-xs,
+  "xxs": $container-xxs,
+  "rem-xxl": $container-rem-xxl,
+  "rem-xl": $container-rem-xl,
+  "rem-lg": $container-rem-lg,
+  "rem-md": $container-rem-md,
+  "rem-sm": $container-rem-sm,
+  "rem-xs": $container-rem-xs,
+  "rem-xxs": $container-rem-xxs,
+) !default;
 
 @mixin containers-css {
 
-.container, .container-xl, .container-lg, .container-md, .container-sm, .container-xs {
+.container, .container-xxl .container-xl, .container-lg, .container-md, .container-sm, .container-xs, .container-xxs,
+.container-rem-xxl .container-rem-xl, .container-rem-lg, .container-rem-md, .container-rem-sm, .container-rem-xs, .container-rem-xxs {
   inline-size: 100%;
   max-inline-size: var(--size);
   margin-inline: var(--mx, auto);
   padding-inline: var(--px);
 }
 
-.container-xl {
-  --size: #{$container-xl};
-}
-
-.container-lg {
-  --size: #{$container-lg};
-}
-
-.container-md {
-  --size: #{$container-md};
-}
-
-.container-sm {
-  --size: #{$container-sm};
-}
-
-.container-xs {
-  --size: #{$container-xs};
-}
-
+  @each $name, $value in $container-values {
+    .container-#{$name} {
+      --size: #{$value};
+    }
+  }
+  
 } // end containers-css

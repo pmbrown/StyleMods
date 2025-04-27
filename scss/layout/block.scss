@@ -1,83 +1,72 @@
 //  ------------------------------------------------------------
 //  Block
 //  ------------------------------------------------------------
+$block-values: (
+  "block": block,
+  "inline": inline,
+  "block-inline": inline-block,
+) !default;
 
 @mixin block-css {
-  .block {
-    display: block;
-  }
-  
-  .block-inline {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name} {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-xxl-css {
-  .block-xxl {
-    display: block;
-  }
-  
-  .block-inline-xxl {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-xxl {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-xl-css {
-  .block-xl {
-    display: block;
-  }
-  
-  .block-inline-xl {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-xl {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-lg-css {
-  .block-lg {
-    display: block;
-  }
-  
-  .block-inline-lg {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-lg {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-md-css {
-  .block-md {
-    display: block;
-  }
-  
-  .block-inline-md {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-md {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-sm-css {
-  .block-sm {
-    display: block;
-  }
-  
-  .block-inline-sm {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-sm {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-xs-css {
-  .block-xs {
-    display: block;
-  }
-  
-  .block-inline-xs {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-xs {
+      display: #{$value};
+    }
   }
 }
 
 @mixin block-xxs-css {
-  .block-xxs {
-    display: block;
-  }
-  
-  .block-inline-xxs {
-    display: inline-block;
+  @each $name, $value in $block-values {
+    .#{$name}-xxs {
+      display: #{$value};
+    }
   }
 }
