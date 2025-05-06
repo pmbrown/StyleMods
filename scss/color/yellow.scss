@@ -21,8 +21,11 @@ $yellow-bg:           var(--yellow-6) !default;
 $yellow-bg-dark:      var(--yellow-7) !default;
 $yellow-bg-light:     var(--yellow-5) !default;
 
-// Variables map
-$yellow-variables: (
+// Tokens style
+$yellow-tokens:       where(html) !default;
+
+// Variables tokens map
+$yellow-token-values: (
   "yellow": $yellow,
   "yellow-1": $yellow-1,
   "yellow-2": $yellow-2,
@@ -128,13 +131,13 @@ $popover-yellow: (
 
 // Variables mixins
 @mixin yellow-variables {
-  @each $name, $value in $yellow-variables {
+  @each $name, $value in $yellow-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin yellow-variables-css {
-  :where(html) {
+  :#{$yellow-tokens} {
     @include yellow-variables;
   }
 }

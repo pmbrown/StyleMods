@@ -21,8 +21,11 @@ $blue-bg:           var(--blue-6) !default;
 $blue-bg-dark:      var(--blue-7) !default;
 $blue-bg-light:     var(--blue-5) !default;
 
-// Variables map
-$blue-variables: (
+// Tokens style
+$blue-tokens:       where(html) !default;
+
+// Variables tokens map
+$blue-token-values: (
   "blue": $blue,
   "blue-1": $blue-1,
   "blue-2": $blue-2,
@@ -128,13 +131,13 @@ $popover-blue: (
 
 // Variables mixins
 @mixin blue-variables {
-  @each $name, $value in $blue-variables {
+  @each $name, $value in $blue-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin blue-variables-css {
-  :where(html) {
+  :#{$blue-tokens} {
     @include blue-variables;
   }
 }

@@ -104,4 +104,12 @@ $btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 15%, 
   box-shadow: none;
 }
 
+.btn-light {
+  color-scheme: light;
+}
+
+.btn-dark {
+  color-scheme: dark;
+}
+
 } // end buttons-css

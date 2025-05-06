@@ -21,8 +21,11 @@ $cyan-bg:           var(--cyan-6) !default;
 $cyan-bg-dark:      var(--cyan-7) !default;
 $cyan-bg-light:     var(--cyan-5) !default;
 
-// Variables map
-$cyan-variables: (
+// Tokens style
+$cyan-tokens:       where(html) !default;
+
+// Variables tokens map
+$cyan-token-values: (
   "cyan": $cyan,
   "cyan-1": $cyan-1,
   "cyan-2": $cyan-2,
@@ -128,13 +131,13 @@ $popover-cyan: (
 
 // Variables mixins
 @mixin cyan-variables {
-  @each $name, $value in $cyan-variables {
+  @each $name, $value in $cyan-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin cyan-variables-css {
-  :where(html) {
+  :#{$cyan-tokens} {
     @include cyan-variables;
   }
 }

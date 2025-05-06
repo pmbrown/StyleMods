@@ -1,13 +1,13 @@
 // ---------------------------------------------------------- 
 // Cards
 // ----------------------------------------------------------
-$card-text-color:             var(--card-text, inherit) !default; 
+$card-text-color:             var(--card-text, CanvasText) !default; 
 $card-padding-block:          var(--card-py, 1rem) !default;
 $card-padding-inline:         var(--card-px, 1rem) !default;
 $card-border-color:           var(--card-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $card-radius:                 var(--card-radius, 0.188rem) !default;
-$card-background-color:       var(--card-bg) !default;
-$card-link-hover-text-color:  var(--card-text-hover, inherit) !default;
+$card-background-color:       var(--card-bg, Canvas) !default;
+$card-link-hover-text-color:  var(--card-text-hover, CanvasText) !default;
 $card-link-hover-background:  var(--card-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $card-link-focus-width:       var(--card-focus, 0.188rem) !default;
 $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
@@ -73,6 +73,23 @@ $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasT
   aspect-ratio: var(--img-ratio, auto);
   block-size: 100%;
   margin-block-end: var(--card-img-mb, 0.75rem);
+}
+
+.card-light {
+  color-scheme: light;
+}
+
+.card-dark {
+  color-scheme: dark;
+}
+
+
+.card-link-light {
+  color-scheme: light;
+}
+
+.card-link-dark {
+  color-scheme: dark;
 }
 
 } // end cards-css

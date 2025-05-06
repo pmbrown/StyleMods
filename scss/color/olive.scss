@@ -21,8 +21,11 @@ $olive-bg:           var(--olive-6) !default;
 $olive-bg-dark:      var(--olive-7) !default;
 $olive-bg-light:     var(--olive-5) !default;
 
-// Variables map
-$olive-variables: (
+// Tokens style
+$olive-tokens:       where(html) !default;
+
+// Variables tokens map
+$olive-token-values: (
   "olive": $olive,
   "olive-1": $olive-1,
   "olive-2": $olive-2,
@@ -128,13 +131,13 @@ $popover-olive: (
 
 // Variables mixins
 @mixin olive-variables {
-  @each $name, $value in $olive-variables {
+  @each $name, $value in $olive-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin olive-variables-css {
-  :where(html) {
+  :#{$olive-tokens} {
     @include olive-variables;
   }
 }

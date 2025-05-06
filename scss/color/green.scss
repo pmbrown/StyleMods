@@ -21,8 +21,11 @@ $green-bg:           var(--green-6) !default;
 $green-bg-dark:      var(--green-7) !default;
 $green-bg-light:     var(--green-5) !default;
 
-// Variables map
-$green-variables: (
+// Tokens style
+$green-tokens:       where(html) !default;
+
+// Variables tokens map
+$green-token-values: (
   "green": $green,
   "green-1": $green-1,
   "green-2": $green-2,
@@ -128,13 +131,13 @@ $popover-green: (
 
 // Variables mixins
 @mixin green-variables {
-  @each $name, $value in $green-variables {
+  @each $name, $value in $green-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin green-variables-css {
-  :where(html) {
+  :#{$green-tokens} {
     @include green-variables;
   }
 }

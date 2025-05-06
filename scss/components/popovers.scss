@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Popovers
 // ----------------------------------------------------------
-$popover-text-color:        var(--popover-text) !default;
+$popover-text-color:        var(--popover-text, CanvasText) !default;
 $popover-margin-top:        var(--popover-mt, 1rem) !default;
 $popover-padding-block:     var(--popover-py, 0.75rem) !default;
 $popover-padding-inline:    var(--popover-px, 1rem) !default;
@@ -52,6 +52,14 @@ $popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
   [popover] {
     opacity: 0;    
   }
+}
+
+.popover-light {
+  color-scheme: light;
+}
+
+.popover-dark {
+  color-scheme: dark;
 }
 
 }

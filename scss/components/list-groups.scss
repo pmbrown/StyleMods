@@ -1,8 +1,8 @@
 // ---------------------------------------------------------- 
 // List groups
 // ----------------------------------------------------------
-$list-group-text-color:           var(--list-group-text) !default;
-$list-group-background-color:     var(--list-group-bg) !default;
+$list-group-text-color:           var(--list-group-text, CanvasText) !default;
+$list-group-background-color:     var(--list-group-bg, Canvas) !default;
 $list-group-link-color:           var(--link, LinkText) !default;
 $list-links-background-hover:     var(--list-group-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $list-group-padding-block:        var(--list-group-py, 0.5rem) !default;
@@ -94,6 +94,22 @@ $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, Can
 :where(.list-links):is(ol) li a:before {
   content: counter(ol-list) ". "; 
   margin-inline-end: 0.25rem;
+}
+
+.list-group-light {
+  color-scheme: light;
+}
+
+.list-group-dark {
+  color-scheme: dark;
+}
+
+.list-links-light {
+  color-scheme: light;
+}
+
+.list-links-dark {
+  color-scheme: dark;
 }
 
 }

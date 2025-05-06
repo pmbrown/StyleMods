@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Badges
 // ----------------------------------------------------------
-$badge-text-color:        var(--badge-text, inherit) !default;
+$badge-text-color:        var(--badge-text, CanvasText) !default;
 $badge-font-size:         var(--badge-fs, 0.65em) !default;
 $badge-font-weight:       var(--badge-fw, 600) !default;
 $badge-padding-block:     var(--badge-py, 0.375em) !default;
@@ -27,6 +27,14 @@ $badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 4%, Canv
   border: 1px solid $badge-border-color;
   border-radius: $badge-radius;
   background-color: $badge-background-color;
+}
+
+.badge-light {
+  color-scheme: light;
+}
+
+.badge-dark {
+  color-scheme: dark;
 }
 
 } // end badges-css

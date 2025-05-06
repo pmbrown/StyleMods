@@ -21,8 +21,11 @@ $pink-bg:           var(--pink-6) !default;
 $pink-bg-dark:      var(--pink-7) !default;
 $pink-bg-light:     var(--pink-5) !default;
 
-// Variables map
-$pink-variables: (
+// Tokens style
+$pink-tokens:       where(html) !default;
+
+// Variables tokens map
+$pink-token-values: (
   "pink": $pink,
   "pink-1": $pink-1,
   "pink-2": $pink-2,
@@ -128,13 +131,13 @@ $popover-pink: (
 
 // Variables mixins
 @mixin pink-variables {
-  @each $name, $value in $pink-variables {
+  @each $name, $value in $pink-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin pink-variables-css {
-  :where(html) {
+  :#{$pink-tokens} {
     @include pink-variables;
   }
 }

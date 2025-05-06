@@ -21,8 +21,11 @@ $orange-bg:           var(--orange-6) !default;
 $orange-bg-dark:      var(--orange-7) !default;
 $orange-bg-light:     var(--orange-5) !default;
 
-// Variables map
-$orange-variables: (
+// Tokens style
+$orange-tokens:       where(html) !default;
+
+// Variables tokens map
+$orange-token-values: (
   "orange": $orange,
   "orange-1": $orange-1,
   "orange-2": $orange-2,
@@ -128,13 +131,13 @@ $popover-orange: (
 
 // Variables mixins
 @mixin orange-variables {
-  @each $name, $value in $orange-variables {
+  @each $name, $value in $orange-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin orange-variables-css {
-  :where(html) {
+  :#{$orange-tokens} {
     @include orange-variables;
   }
 }

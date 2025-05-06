@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Alerts
 // ----------------------------------------------------------
-$alert-text-color:        var(--alert-text, inherit);
+$alert-text-color:        var(--alert-text, CanvasText);
 $alert-margin-bottom:     var(--alert-mb, 1rem);
 $alert-padding-block:     var(--alert-py, 0.66rem);
 $alert-padding-inline:    var(--alert-px, 1rem);
@@ -76,6 +76,14 @@ $alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 4%, Canv
   overflow: hidden;
   clip: rect(0,0,0,0);
   white-space: nowrap;
+}
+
+.alert-light {
+  color-scheme: light;
+}
+
+.alert-dark {
+  color-scheme: dark;
 }
 
 } // End alerts-css

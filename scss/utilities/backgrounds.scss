@@ -1,57 +1,58 @@
 // ---------------------------------------------------------- 
 // Backgrounds
 // ----------------------------------------------------------
-$gradient:          linear-gradient(180deg, rgba(white, .15), rgba(white, 0)) !default;
-$gradient-light:    linear-gradient(180deg, rgba(white, .125), rgba(white, 0)) !default;
-
-@mixin gradient-variables {
-  --gradient: #{$gradient};
-  --gradient-light: #{$gradient-light};
-}
-
-@mixin gradient-variables-css {
-  :where(html) {
-    @include gradient-variables;
-  }
-}
-
-@mixin background {
-  color: var(--bg-text);
-  background-color: var(--bg-col);
-}
+$background-utility:              bg !default;
+$background-text-variable:        var(--bg-text) !default;
+$background-color-variable:       var(--bg-col) !default;
+$gradient-tokens:                 where(html) !default;
+$gradient-default:                linear-gradient(180deg, rgba(white, .225), rgba(white, 0)) !default;
+$gradient-light:                  linear-gradient(180deg, rgba(white, .175), rgba(white, 0)) !default;
+$gradient-heavy:                  linear-gradient(180deg, rgba(white, .33), rgba(white, 0)) !default;
 
 @mixin background-css {
-  .bg {
-    @include background;
+  .#{$background-utility} {
+    color: $background-text-variable;
+    background-color: $background-color-variable;
   }
 }
 
-@mixin gradient {
-  background-image: $gradient;
+@mixin gradient-variables {
+  --gradient: #{$gradient-default};
+  --gradient-light: #{$gradient-light};
+  --gradient-heavy: #{$gradient-heavy};
 }
 
-@mixin gradient-variable {
-  background-image: var(--gradient);
-}
-
-@mixin gradient-css {
+@mixin gradient-classes {
   .gradient {
-    @include gradient;
+    background-image: var(--gradient);
+  }
+
+  .gradient-light {
+    background-image: var(--gradient-light);
+  }
+
+  .gradient-heavy {
+    background-image: var(--gradient-heavy);
   }
 }
 
-@mixin gradient-variable-css {
+@mixin gradient-novariables-css {
   .gradient {
-    @include gradient-variable;
+    background-image: $gradient-default;
+  }
+
+  .gradient-light {
+    background-image: $gradient-light;
+  }
+
+  .gradient-heavy {
+    background-image: $gradient-heavy;
   }
 }
 
 @mixin gradients-css {
-  :where(html) {
+  :#{$gradient-tokens} {
     @include gradient-variables;
-  }
-  
-  .gradient {
-    @include gradient-variable;
-  }
+  }  
+  @include gradient-classes;
 }

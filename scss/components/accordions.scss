@@ -96,4 +96,12 @@ $accordion-open-icon:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fil
   --svg: #{$accordion-open-icon};
 }
 
+.accordion-light {
+  color-scheme: light;
+}
+
+.accordion-dark {
+  color-scheme: dark;
+}
+
 } // end accordions-css

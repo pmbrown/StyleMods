@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Dialogs
 // ----------------------------------------------------------
-$dialog-text-color:         var(--dialog-text) !default;
+$dialog-text-color:         var(--dialog-text, CanvasText) !default;
 $dialog-margin-top:         var(--dialog-mt, 1rem) !default;
 $dialog-padding-block:      var(--dialog-py, 0.75rem) !default;
 $dialog-padding-inline:     var(--dialog-px, 1rem) !default;
@@ -76,6 +76,14 @@ dialog[open]::backdrop {
   dialog[open] {
     opacity: 0;    
   }
+}
+
+.dialog-light {
+  color-scheme: light;
+}
+
+.dialog-dark {
+  color-scheme: dark;
 }
 
 }

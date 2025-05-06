@@ -21,8 +21,11 @@ $purple-bg:           var(--purple-6) !default;
 $purple-bg-dark:      var(--purple-7) !default;
 $purple-bg-light:     var(--purple-5) !default;
 
-// Variables map
-$purple-variables: (
+// Tokens style
+$purple-tokens:       where(html) !default;
+
+// Variables tokens map
+$purple-token-values: (
   "purple": $purple,
   "purple-1": $purple-1,
   "purple-2": $purple-2,
@@ -128,13 +131,13 @@ $popover-purple: (
 
 // Variables mixins
 @mixin purple-variables {
-  @each $name, $value in $purple-variables {
+  @each $name, $value in $purple-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin purple-variables-css {
-  :where(html) {
+  :#{$purple-tokens} {
     @include purple-variables;
   }
 }

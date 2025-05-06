@@ -16,14 +16,16 @@ $link-hover-dark:       #c6d8ec !default;
 $background-dark:       #1f2428 !default;
 
 // Theme typography
-$theme-text:            light-dark(var(--text-light), var(--text-dark)) !default;
-$theme-background:      light-dark(var(--background-light), var(--background-dark)) !default;
-$theme-link:            light-dark(var(--link-light), var(--link-dark)) !default;
-$theme-link-visited:    light-dark(var(--visited-light), var(--visited-dark)) !default;
-$theme-link-hover:      light-dark(var(--hover-light), var(--hover-dark)) !default;
+$theme-text:            light-dark($text-light, $text-dark) !default;
+$theme-background:      light-dark($background-light, $background-dark) !default;
+$theme-link:            light-dark($link-light, $link-dark) !default;
+$theme-link-visited:    light-dark($link-visited-light, $link-visited-dark) !default;
+$theme-link-hover:      light-dark($link-hover-light, $link-hover-dark) !default;
+
+// Theme variables
 
 // Theme surfaces
-$theme-surface:         var(--background) !default;
+$theme-surface:         var(--surface) !default;
 $theme-surface-1:       var(--surf-1) !default;
 $theme-surface-2:       var(--surf-2) !default;
 $theme-surface-3:       var(--surf-3) !default;
@@ -31,65 +33,23 @@ $theme-surface-4:       var(--surf-4) !default;
 $theme-surface-tint-1:  color-mix(in srgb, var(--surf-1) 30%, var(--background)) !default;
 $theme-surface-tint-2:  color-mix(in srgb, var(--surf-1) 50%, var(--background)) !default;
 
-// Light surfaces
-$surface-1-light:        color-mix(in srgb, black 4%, var(--background-light)) !default;
-$surface-2-light:        color-mix(in srgb, black 8%, var(--background-light)) !default;
-$surface-3-light:        color-mix(in srgb, black 15%, var(--background-light)) !default;
-$surface-4-light:        color-mix(in srgb, black 22%, var(--background-light)) !default;
+// Use if surface.scss module not included.
+$base-surface:          $theme-background !default;
+$base-surface-1:        color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
+$base-surface-2:        color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
+$base-surface-3:        color-mix(in srgb, CanvasText 15%, var(--surface)) !default;
+$base-surface-4:        color-mix(in srgb, CanvasText 22%, var(--surface)) !default;
 
-// Dark surfaces
-$surface-1-dark:        color-mix(in srgb, white 4%, var(--background-dark)) !default;
-$surface-2-dark:        color-mix(in srgb, white 8%, var(--background-dark)) !default;
-$surface-3-dark:        color-mix(in srgb, white 15%, var(--background-dark)) !default;
-$surface-4-dark:        color-mix(in srgb, white 22%, var(--background-dark)) !default;
+// Tokens style
+$theme-tokens:          where(html) !default;
 
-// Light utility colors
-$light-text:            var(--text-light) !default;
-$light-link:            var(--link-light) !default;
-$light-visited:         var(--visited-light) !default;
-$light-hover:           var(--hover-light) !default;
-$light-bg-1:            var(--surf-1-light) !default;
-$light-bg-2:            var(--surf-2-light) !default;
-$light-bg-3:            var(--surf-3-light) !default;
-$light-bg-4:            var(--surf-4-light) !default;
-
-// Dark utility colors
-$dark-text:             var(--text-dark) !default;
-$dark-link:             var(--link-dark) !default;
-$dark-visited:          var(--visited-dark) !default;
-$dark-hover:            var(--hover-dark) !default;
-$dark-bg-1:             var(--surf-1-dark) !default;
-$dark-bg-2:             var(--surf-2-dark) !default;
-$dark-bg-3:             var(--surf-3-dark) !default;
-$dark-bg-4:             var(--surf-4-dark) !default;
-
-// Variables maps
-$light-theme-colors: (
-  "text-light": $text-light,
-  "link-light": $link-light,
-  "visited-light": $link-visited-light,
-  "hover-light": $link-hover-light,
-  "background-light": $background-light,
-  "surf-1-light": $surface-1-light,
-  "surf-2-light": $surface-2-light,
-  "surf-3-light": $surface-3-light,
-  "surf-4-light": $surface-4-light,
-) !default;
-  
-$dark-theme-colors: (  
-  "text-dark": $text-dark,
-  "link-dark": $link-dark,
-  "visited-dark": $link-visited-dark,
-  "hover-dark": $link-hover-dark,
-  "background-dark": $background-dark,
-  "surf-1-dark": $surface-1-dark,
-  "surf-2-dark": $surface-2-dark,
-  "surf-3-dark": $surface-3-dark,
-  "surf-4-dark": $surface-4-dark,
-) !default;
-
-$theme-surface-color: (
-  "surface": $theme-surface,
+// Variables tokens maps
+$theme-surfaces: (
+  "surface": $base-surface,
+  "surf-1": $base-surface-1,
+  "surf-2": $base-surface-2,
+  "surf-3": $base-surface-3,
+  "surf-4": $base-surface-4,
 ) !default;
 
 $theme-typography: (
@@ -144,6 +104,7 @@ $theme-border: (
 
 $theme-card: (
   "card-bd-color": $theme-surface-3,
+  "card-bg": $theme-surface,
   "card-hover": $theme-surface-1,
   "card-focus-color": $theme-surface-4,
 ) !default;
@@ -157,6 +118,7 @@ $theme-list-group: (
   "list-group-dt-bg": $theme-surface-2,
   "list-group-hover": $theme-surface-1,
   "list-group-bd-color": $theme-surface-3,
+  "list-group-bg": $theme-surface,
 ) !default;
 
 $theme-popover: (
@@ -164,231 +126,19 @@ $theme-popover: (
   "popover-bd-color": $theme-surface-3,
 ) !default;
 
-
-// Light utility maps
-$accordion-light: (
-  "summary-text": $light-text,
-  "ico": $light-text,
-  "summary-bg": $light-bg-1,
-  "summary-focus": $light-bg-2,
-  "accordion-bd-color": $light-bg-3,
-) !default;
-
-$alert-light: (
-  "alert-text": $light-text,
-  "ico": $light-text,
-  "link": $light-link,
-  "visited": $light-visited,
-  "hover": $light-hover,
-  "alert-bg": $light-bg-1,
-  "alert-bd-color": $light-bg-3,
-) !default;
-
-$background-color-light: (
-  "bg-text": $light-text,
-  "ico": $light-text,
-  "link": $light-link,
-  "visited": $light-visited,
-  "hover": $light-hover,
-  "bg-col": $light-bg-1,
-) !default;
-
-$badge-light: (
-  "badge-text": $light-text,
-  "ico": $light-text,
-  "badge-bg": $light-bg-1,
-  "badge-bd-color": $light-bg-3,
-) !default;
-
-$button-light: (
-  "btn-text": $light-text,
-  "ico": $light-text,
-  "btn-bg": $light-bg-1,
-  "btn-bd-color": $light-bg-3,
-  "btn-hover": $light-bg-2,
-  "focus-color": $light-bg-3,
-) !default;
-
-$card-light: (
-  "card-text": $light-text,
-  "ico": $light-text,
-  "link": $light-link,
-  "visited": $light-visited,
-  "hover": $light-hover,
-  "card-bg": $light-bg-1,
-  "card-text-hover": $light-text,
-  "card-hover": $light-bg-2,
-  "card-bd-color": $light-bg-3,
-  "card-focus-color": $light-bg-3,
-) !default;
-
-$dialog-light: (
-  "dialog-text": $light-text,
-  "ico": $light-text,
-  "link": $light-link,
-  "visited": $light-visited,
-  "hover": $light-hover,
-  "dialog-bg": $light-bg-1,
-  "dialog-bd-color": $light-bg-3,
-) !default;
-
-$list-group-light: (
-  "list-group-text": $light-text,
-  "ico": $light-text,
-  "link": $light-link,
-  "visited": $light-visited,
-  "hover": $light-hover,
-  "list-group-bg": $light-bg-1,
-  "list-group-dt-bg": $light-bg-1,
-  "list-group-hover": $light-bg-2,
-  "list-group-bd-color": $light-bg-3,
-) !default;
-
-$popover-light: (
-  "popover-text": $light-text,
-  "ico": $light-text,
-  "link": $light-link,
-  "visited": $light-visited,
-  "hover": $light-hover,
-  "popover-bg": $light-bg-1,
-  "popover-bd-color": $light-bg-3,
-) !default;
-
-// Dark utility maps
-$accordion-dark: (
-  "summary-text": $dark-text,
-  "ico": $dark-text,
-  "summary-bg": $dark-bg-1,
-  "summary-focus": $dark-bg-2,
-  "accordion-bd-color": $dark-bg-3,
-) !default;
-
-$alert-dark: (
-  "alert-text": $dark-text,
-  "ico": $dark-text,
-  "link": $dark-link,
-  "visited": $dark-visited,
-  "hover": $dark-hover,
-  "alert-bg": $dark-bg-1,
-  "alert-bd-color": $dark-bg-3,
-) !default;
-
-$background-color-dark: (
-  "bg-text": $dark-text,
-  "ico": $dark-text,
-  "link": $dark-link,
-  "visited": $dark-visited,
-  "hover": $dark-hover,
-  "bg-col": $dark-bg-1,
-) !default;
-
-$badge-dark: (
-  "badge-text": $dark-text,
-  "ico": $dark-text,
-  "badge-bg": $dark-bg-1,
-  "badge-bd-color": $dark-bg-3,
-) !default;
-
-$button-dark: (
-  "btn-text": $dark-text,
-  "ico": $dark-text,
-  "btn-bg": $dark-bg-1,
-  "btn-bd-color": $dark-bg-3,
-  "btn-hover": $dark-bg-2,
-  "focus-color": $dark-bg-3,
-) !default;
-
-$card-dark: (
-  "card-text": $dark-text,
-  "ico": $dark-text,
-  "link": $dark-link,
-  "visited": $dark-visited,
-  "hover": $dark-hover,
-  "card-bg": $dark-bg-1,
-  "card-text-hover": $dark-text,
-  "card-hover": $dark-bg-2,
-  "card-bd-color": $dark-bg-3,
-  "card-focus-color": $dark-bg-3,
-) !default;
-
-$dialog-dark: (
-  "dialog-text": $dark-text,
-  "ico": $dark-text,
-  "link": $dark-link,
-  "visited": $dark-visited,
-  "hover": $dark-hover,
-  "dialog-bg": $dark-bg-1,
-  "dialog-bd-color": $dark-bg-3,
-) !default;
-
-$list-group-dark: (
-  "list-group-text": $dark-text,
-  "ico": $dark-text,
-  "link": $dark-link,
-  "visited": $dark-visited,
-  "hover": $dark-hover,
-  "list-group-bg": $dark-bg-1,
-  "list-group-dt-bg": $dark-bg-1,
-  "list-group-hover": $dark-bg-2,
-  "list-group-bd-color": $dark-bg-3,
-) !default;
-
-$popover-dark: (
-  "popover-text": $dark-text,
-  "ico": $dark-text,
-  "link": $dark-link,
-  "visited": $dark-visited,
-  "hover": $dark-hover,
-  "popover-bg": $dark-bg-1,
-  "popover-bd-color": $dark-bg-3,
-) !default;
-
-// Light and dark color variable tokens
-@mixin light-theme-variables {
-  @each $name, $value in $light-theme-colors {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin dark-theme-variables {
-  @each $name, $value in $dark-theme-colors {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin light-theme-variables-css {
-  :where(html) {
-    @include light-theme-variables;
-  }
-}
-
-@mixin dark-theme-variables-css {
-  :where(html) {
-    @include dark-theme-variables;
-  }
-}
-
-@mixin light-dark-theme-variables-css {
-  :where(html) {
-    @include light-theme-variables;
-    @include dark-theme-variables;
-  }
-}
-
-// Surface color variable token
-@mixin theme-surface-variable {
-  @each $name, $value in $theme-surface-color {
+// Style and utility variable tokens
+@mixin theme-surface-variables {
+  @each $name, $value in $theme-surfaces {
     --#{$name}: #{$value};
   }
 }
 
 @mixin theme-surface-css {
-  :where(html) {
-    @include theme-surface-variable;
+  :#{$theme-tokens} {
+    @include theme-surface-variables;
   }
 }
 
-// Style and utility variable tokens
 @mixin theme-typography-variables {
   @each $name, $value in $theme-typography {
     --#{$name}: #{$value};
@@ -396,7 +146,7 @@ $popover-dark: (
 }
 
 @mixin theme-typography-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-typography-variables;
   }
 }
@@ -408,7 +158,7 @@ $popover-dark: (
 }
 
 @mixin theme-forms-buttons-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-forms-buttons-variables;
   }
 }
@@ -420,19 +170,19 @@ $popover-dark: (
 }
 
 @mixin theme-tables-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-tables-variables;
   }
 }
 
-@mixin theme-accordion-variables {
+@mixin theme-accordions-variables {
   @each $name, $value in $theme-accordion {
     --#{$name}: #{$value};
   }
 }
 
 @mixin theme-accordions-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-accordions-variables;
   }
 }
@@ -444,7 +194,7 @@ $popover-dark: (
 }
 
 @mixin theme-alert-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-alert-variables;
   }
 }
@@ -456,7 +206,7 @@ $popover-dark: (
 }
 
 @mixin theme-badge-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-badge-variables;
   }
 }
@@ -468,7 +218,7 @@ $popover-dark: (
 }
 
 @mixin theme-border-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-border-variables;
   }
 }
@@ -480,7 +230,7 @@ $popover-dark: (
 }
 
 @mixin theme-card-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-card-variables;
   }
 }
@@ -492,7 +242,7 @@ $popover-dark: (
 }
 
 @mixin theme-dialog-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-dialog-variables;
   }
 }
@@ -504,7 +254,7 @@ $popover-dark: (
 }
 
 @mixin theme-list-group-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-dialog-list-group;
   }
 }
@@ -516,26 +266,16 @@ $popover-dark: (
 }
 
 @mixin theme-popover-css {
-  :where(html) {
+  :#{$theme-tokens} {
     @include theme-popover-variables;
   }
 }
 
-@mixin light-dark-theme-variables-css {
-  :where(html) {
-    @include light-theme-variables;
-    @include dark-theme-variables;
-  }
-}
-
-// Grouped variable mixins
-@mixin theme-variables {
-  @include light-theme-variables;
-  @include dark-theme-variables;
+@mixin all-theme-variables {
   @include theme-typography-variables;
   @include theme-forms-buttons-variables;
   @include theme-tables-variables;
-  @include theme-accordion-variables;
+  @include theme-accordions-variables;
   @include theme-alert-variables;
   @include theme-badge-variables;
   @include theme-border-variables;
@@ -545,191 +285,21 @@ $popover-dark: (
   @include theme-popover-variables;
 }
 
-@mixin theme-variables-css {
-  :where(html) {
-    @include theme-surface-variable;
-    @include theme-variables;
+
+@mixin all-theme-variables-css {
+  :#{$theme-tokens} {
+    @include all-theme-variables;
   }
 }
 
-@mixin theme-variables-nosurface-css {
-  :where(html) {
-    @include theme-variables;
+// Use if surface.scss module not included.
+@mixin all-theme-surface-variables {
+  @include theme-surface-variables;
+  @include all-theme-variables;
+}
+
+@mixin all-theme-surface-variables-css {
+  :#{$theme-tokens} {
+    @include all-theme-surface-variables;
   }
-}
-
-// Light utility mixins
-@mixin accordion-light-css {
-  .accordion-light {
-    @each $name, $value in $accordion-light {
-      --#{$name}: #{$value};
-    }  
-  }
-}
-
-@mixin alert-light-css {
-  .alert-light {
-    @each $name, $value in $alert-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin background-light-css {
-  .bg-light {
-    @each $name, $value in $background-color-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin badge-light-css {
-  .badge-light {
-    @each $name, $value in $badge-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin button-light-css {
-  .btn-light {
-    @each $name, $value in $button-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin card-light-css {
-  .card-light {
-    @each $name, $value in $card-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin dialog-light-css {
-  .dialog-light {
-    @each $name, $value in $dialog-light {
-      --#{$name}: #{$value};
-    }
-  } 
-}
-
-@mixin list-group-light-css {
-  .list-group-light {
-    @each $name, $value in $list-group-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin popover-light-css {
-  .popover-light {
-    @each $name, $value in $popover-light {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-// Dark utility mixins
-@mixin accordion-dark-css {
-  .accordion-dark {
-    @each $name, $value in $accordion-dark {
-      --#{$name}: #{$value};
-    }  
-  }
-}
-
-@mixin alert-dark-css {
-  .alert-dark {
-    @each $name, $value in $alert-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin background-dark-css {
-  .bg-dark {
-    @each $name, $value in $background-color-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin badge-dark-css {
-  .badge-dark {
-    @each $name, $value in $badge-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin button-dark-css {
-  .btn-dark {
-    @each $name, $value in $button-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin card-dark-css {
-  .card-dark {
-    @each $name, $value in $card-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin dialog-dark-css {
-  .dialog-dark {
-    @each $name, $value in $dialog-dark {
-      --#{$name}: #{$value};
-    }
-  } 
-}
-
-@mixin list-group-dark-css {
-  .list-group-dark {
-    @each $name, $value in $list-group-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin popover-dark-css {
-  .popover-dark {
-    @each $name, $value in $popover-dark {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-// Combined utility mixins
-@mixin light-utilities-css {
-  @include accordion-light-css;
-  @include alert-light-css;
-  @include background-light-css;
-  @include badge-light-css;
-  @include button-light-css;
-  @include card-light-css;
-  @include dialog-light-css;
-  @include list-group-light-css;
-  @include popover-light-css;
-}
-
-@mixin dark-utilities-css {
-  @include accordion-dark-css;
-  @include alert-dark-css;
-  @include background-dark-css;
-  @include badge-dark-css;
-  @include button-dark-css;
-  @include card-dark-css;
-  @include dialog-dark-css;
-  @include list-group-dark-css;
-  @include popover-dark-css;
-}
-
-@mixin light-dark-utilities-css {
-  @include light-utilities-css;
-  @include dark-utilities-css;
 }

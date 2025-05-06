@@ -21,8 +21,11 @@ $gray-bg:           var(--gray-6) !default;
 $gray-bg-dark:      var(--gray-7) !default;
 $gray-bg-light:     var(--gray-5) !default;
 
-// Variables map
-$gray-variables: (
+// Tokens style
+$gray-tokens:       where(html) !default;
+
+// Variables tokens map
+$gray-token-values: (
   "gray": $gray,
   "gray-1": $gray-1,
   "gray-2": $gray-2,
@@ -128,13 +131,13 @@ $popover-gray: (
 
 // Variables mixins
 @mixin gray-variables {
-  @each $name, $value in $gray-variables {
+  @each $name, $value in $gray-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin gray-variables-css {
-  :where(html) {
+  :#{$gray-tokens} {
     @include gray-variables;
   }
 }

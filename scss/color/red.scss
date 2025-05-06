@@ -21,8 +21,11 @@ $red-bg:           var(--red-6) !default;
 $red-bg-dark:      var(--red-7) !default;
 $red-bg-light:     var(--red-5) !default;
 
-// Variables map
-$red-variables: (
+// Tokens style
+$red-tokens:       where(html) !default;
+
+// Variables tokens map
+$red-token-values: (
   "red": $red,
   "red-1": $red-1,
   "red-2": $red-2,
@@ -128,13 +131,13 @@ $popover-red: (
 
 // Variables mixins
 @mixin red-variables {
-  @each $name, $value in $red-variables {
+  @each $name, $value in $red-token-values {
     --#{$name}: #{$value};
   }
 }
 
 @mixin red-variables-css {
-  :where(html) {
+  :#{$red-tokens} {
     @include red-variables;
   }
 }
