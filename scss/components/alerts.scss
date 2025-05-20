@@ -1,13 +1,21 @@
 // ---------------------------------------------------------- 
 // Alerts
 // ----------------------------------------------------------
-$alert-text-color:        var(--alert-text, CanvasText);
-$alert-margin-bottom:     var(--alert-mb, 1rem);
-$alert-padding-block:     var(--alert-py, 0.66rem);
-$alert-padding-inline:    var(--alert-px, 1rem);
-$alert-border-color:      var(--alert-bd-color, color-mix(in srgb, CanvasText 15%, Canvas));
-$alert-radius:            var(--alert-radius, 0.188rem); 
-$alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 4%, Canvas));
+$alert-text-color:            var(--alert-text, CanvasText) !default;
+$alert-margin-bottom:         var(--alert-mb, 1rem) !default;
+$alert-padding-block:         var(--alert-py, 0.66rem) !default;
+$alert-padding-inline:        var(--alert-px, 1rem) !default;
+$alert-border-color:          var(--alert-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$alert-radius:                var(--alert-radius, 0.188rem) !default; 
+$alert-background-color:      var(--alert-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+
+// Icon options
+$alert-close-icon:            url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>") !default;
+$alert-close-box-icon:        url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4.82 5.53s-0.354-0.354 0-0.707 0.707 0 0.707 0l2.47 2.47 2.47-2.47s0.354-0.354 0.707 0c0.354 0.354 0 0.707 0 0.707l-2.47 2.47 2.47 2.47s0.354 0.354 0 0.707c-0.354 0.354-0.707 0-0.707 0l-2.47-2.47-2.47 2.47s-0.354 0.354-0.707 0c-0.354-0.354 0-0.707 0-0.707l2.47-2.47zm-3.31-5.51c-0.911-0.0389-1.61 0.85-1.5 1.73 0.00311 4.3-0.00623 8.6 0.00467 12.9 0.0329 0.888 0.925 1.49 1.77 1.38 4.28-0.0031 8.57 0.0062 12.9-0.0047 0.888-0.0329 1.49-0.925 1.38-1.77-0.0031-4.28 0.0062-8.57-0.0047-12.9-0.0329-0.888-0.925-1.49-1.77-1.38h-12.7zm0 1h13c0.583-0.0209 0.508 0.598 0.5 0.998v12.5c0.0209 0.583-0.598 0.508-0.998 0.5h-12.5c-0.583 0.0209-0.508-0.598-0.5-0.998v-12.5c0.0112-0.281 0.181-0.553 0.5-0.5z'/></svg>") !default;
+$alert-close-box-fill-icon:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2 0c-2 0-2 2-2 2v12c0 2 2 2 2 2h12c2 0 2-2 2-2v-12c0-2-2-2-2-2h-12zm3.08 4.67c0.249-0.0497 0.447 0.15 0.447 0.15l2.47 2.47 2.47-2.47s0.353-0.354 0.707 0c0.354 0.354 0 0.707 0 0.707l-2.47 2.47 2.47 2.47s0.354 0.353 0 0.707c-0.354 0.354-0.707 0-0.707 0l-2.47-2.47-2.47 2.47s-0.353 0.354-0.707 0c-0.354-0.354 0-0.707 0-0.707l2.47-2.47-2.47-2.47s-0.354-0.353 0-0.707c0.0884-0.0884 0.177-0.134 0.26-0.15z'/></svg>") !default;
+
+// Close icon
+$close-alert:                 $alert-close-icon !default;
 
 @mixin alerts-css {
 
@@ -64,7 +72,7 @@ $alert-background-color:  var(--alert-bg, color-mix(in srgb, CanvasText 4%, Canv
   inline-size: 1em;  
   vertical-align: -.115em;
   background-color: var(--ico);
-  mask-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m13 3-10 10zm-10 0 10 10z' fill='none' stroke='currentColor' stroke-width='1.5'/></svg>");
+  mask-image: #{$close-alert};
   mask-repeat: no-repeat;
 }
 

@@ -11,6 +11,7 @@ $card-link-hover-text-color:  var(--card-text-hover, CanvasText) !default;
 $card-link-hover-background:  var(--card-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $card-link-focus-width:       var(--card-focus, 0.188rem) !default;
 $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$card-para-margin-bottom:     var(--card-para-mb, 0.5rem) !default;
 
 @mixin cards-css {
 
@@ -24,13 +25,8 @@ $card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasT
   background-color: $card-background-color;
 }
 
-:where(.card, .card-link) * {
-  text-align: var(--card-align, initial);
-  text-wrap: var(--card-wrap, initial);
-}
-
 :where(.card, .card-link) p:not(:last-child) {
-  margin-block-end: var(--card-p-mb, 0.5rem);
+  margin-block-end: $card-para-margin-bottom;
 }
 
 :where(.card-link) {

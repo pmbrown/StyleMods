@@ -237,11 +237,11 @@ a > :where(code) {
 }
 
 :where(blockquote p) {
-  --mb: 0;
+  --para-mb: 0;
 }
 
 :where(blockquote p:first-of-type) {
-  --mb: 0.25rem;
+  --para-mb: 0.25rem;
 }
 
 :where(details) {

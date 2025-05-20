@@ -1,15 +1,23 @@
 // ---------------------------------------------------------- 
 // Accordions
 // ----------------------------------------------------------
-$summary-text-color:        var(--summary-text, CanvasText) !default;
-$summary-background-color:  var(--summary-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$summary-focus-color:       var(--summary-focus, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
-$accordion-padding-block:   var(--accordion-py, 0.75rem) !default;
-$accordion-padding-inline:  var(--accordion-px, 1rem) !default;
-$accordion-border-color:    var(--accordion-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
-$accordion-radius:          var(--accordion-radius, 0.188rem) !default;
-$accordion-closed-icon:     url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m7 2v5h-5v2h5v5h2v-5h5v-2h-5v-5h-2z'/></svg>") !default;
-$accordion-open-icon:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2 9v-2h12v2z'/></svg>") !default;
+$summary-text-color:          var(--summary-text, CanvasText) !default;
+$summary-background-color:    var(--summary-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$summary-focus-color:         var(--summary-focus, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$accordion-padding-block:     var(--accordion-py, 0.75rem) !default;
+$accordion-padding-inline:    var(--accordion-px, 1rem) !default;
+$accordion-border-color:      var(--accordion-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$accordion-radius:            var(--accordion-radius, 0.188rem) !default;
+
+// Icon options
+$accordion-plus-icon:         url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m7 2v5h-5v2h5v5h2v-5h5v-2h-5v-5h-2z'/></svg>") !default;
+$accordion-minus-icon:        url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2 9v-2h12v2z'/></svg>") !default;
+$accordion-caret-down-icon:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 10-4-4h8z'/></svg>") !default;
+$accordion-caret-up-icon:     url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 6 4 4-8 7e-7z'/></svg>") !default;
+
+// Open/close icons
+$open-accordion:              $accordion-plus-icon !default;
+$close-accordion:             $accordion-minus-icon !default;
 
 @mixin accordions-css {
 
@@ -79,7 +87,7 @@ $accordion-open-icon:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fil
 }
 
 .accordion details summary:after {
-  --svg: #{$accordion-closed-icon};
+  --svg: #{$open-accordion};
   display: inline-block;
   content: "";
   block-size: 1em;
@@ -93,7 +101,7 @@ $accordion-open-icon:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fil
 }
 
 .accordion details[open] summary:after {
-  --svg: #{$accordion-open-icon};
+  --svg: #{$close-accordion};
 }
 
 .accordion-light {
