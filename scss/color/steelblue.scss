@@ -1,0 +1,242 @@
+// ---------------------------------------------------------- 
+// Steelblue
+// ----------------------------------------------------------
+// Variable colors
+$steelblue:      #4682b4 !default;
+$steelblue-1:    color-mix(in srgb, var(--steelblue) 45%, white) !default;
+$steelblue-2:    color-mix(in srgb, var(--steelblue) 55%, white) !default;
+$steelblue-3:    color-mix(in srgb, var(--steelblue) 65%, white) !default;
+$steelblue-4:    color-mix(in srgb, var(--steelblue) 75%, white) !default;
+$steelblue-5:    color-mix(in srgb, var(--steelblue) 85%, white) !default;
+$steelblue-6:    var(--steelblue) !default;  
+$steelblue-7:    color-mix(in srgb, var(--steelblue) 92%, black) !default;
+$steelblue-8:    color-mix(in srgb, var(--steelblue) 82%, black) !default;
+$steelblue-9:    color-mix(in srgb, var(--steelblue) 72%, black) !default;
+$steelblue-10:   color-mix(in srgb, var(--steelblue) 62%, black) !default;
+$steelblue-11:   color-mix(in srgb, var(--steelblue) 52%, black) !default;
+
+// Utility colors
+$steelblue-bg-text:      #000 !default;
+$steelblue-bg:           var(--steelblue-6) !default;
+$steelblue-bg-dark:      var(--steelblue-7) !default;
+$steelblue-bg-light:     var(--steelblue-5) !default;
+
+// Tokens style
+$steelblue-tokens:       where(html) !default;
+
+// Variables tokens map
+$steelblue-token-values: (
+  "steelblue": $steelblue,
+  "steelblue-1": $steelblue-1,
+  "steelblue-2": $steelblue-2,
+  "steelblue-3": $steelblue-3,
+  "steelblue-4": $steelblue-4,
+  "steelblue-5": $steelblue-5,
+  "steelblue-6": $steelblue-6,
+  "steelblue-7": $steelblue-7,
+  "steelblue-8": $steelblue-8,
+  "steelblue-9": $steelblue-9,
+  "steelblue-10": $steelblue-10,
+  "steelblue-11": $steelblue-11,
+) !default;
+
+// Utility maps
+$accordion-steelblue: (
+  "summary-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "summary-bg": $steelblue-bg,
+  "summary-focus": $steelblue-bg-dark,
+  "accordion-bd-color": $steelblue-bg-light,
+) !default;
+
+$alert-steelblue: (
+  "alert-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "alert-bg": $steelblue-bg,
+  "alert-bd-color": $steelblue-bg-light,
+) !default;
+
+$background-steelblue: (
+  "bg-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "bg-col": $steelblue-bg,
+) !default;
+
+$badge-steelblue: (
+  "badge-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "badge-bg": $steelblue-bg,
+  "badge-bd-color": $steelblue-bg-light,
+) !default;
+
+$button-steelblue: (
+  "btn-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "btn-bg": $steelblue-bg,
+  "btn-bd-color": $steelblue-bg-light,
+  "btn-hover": $steelblue-bg-dark,
+  "focus-color": $steelblue-bg-light,
+) !default;
+
+$card-steelblue: (
+  "card-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "card-bg": $steelblue-bg,
+  "card-text-hover": $steelblue-bg-text,
+  "card-hover": $steelblue-bg-dark,
+  "card-bd-color": $steelblue-bg-light,
+  "card-focus-color": $steelblue-bg-light,
+) !default;
+
+$dialog-steelblue: (
+  "dialog-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "dialog-bg": $steelblue-bg,
+  "dialog-bd-color": $steelblue-bg-light,
+) !default;
+
+$list-group-steelblue: (
+  "list-group-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "list-group-bg": $steelblue-bg,
+  "list-group-dt-bg": $steelblue-bg,
+  "list-group-hover": $steelblue-bg-dark,
+  "list-group-bd-color": $steelblue-bg-light,
+) !default;
+
+$popover-steelblue: (
+  "popover-text": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "popover-bg": $steelblue-bg,
+  "popover-bd-color": $steelblue-bg-light,
+) !default;
+
+// Variables mixins
+@mixin steelblue-variables {
+  @each $name, $value in $steelblue-token-values {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin steelblue-variables-css {
+  :#{$steelblue-tokens} {
+    @include steelblue-variables;
+  }
+}
+
+// Utility mixins
+@mixin accordion-steelblue-css {
+  .accordion-steelblue {
+    @each $name, $value in $accordion-steelblue {
+      --#{$name}: #{$value};
+    }  
+  }
+}
+
+@mixin alert-steelblue-css {
+  .alert-steelblue {
+    @each $name, $value in $alert-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin background-steelblue-css {
+  .bg-steelblue {
+    @each $name, $value in $background-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin badge-steelblue-css {
+  .badge-steelblue {
+    @each $name, $value in $badge-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin button-steelblue-css {
+  .btn-steelblue {
+    @each $name, $value in $button-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin card-steelblue-css {
+  .card-steelblue {
+    @each $name, $value in $card-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin dialog-steelblue-css {
+  .dialog-steelblue {
+    @each $name, $value in $dialog-steelblue {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
+@mixin list-group-steelblue-css {
+  .list-group-steelblue {
+    @each $name, $value in $list-group-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin popover-steelblue-css {
+  .popover-steelblue {
+    @each $name, $value in $popover-steelblue {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+// Combined mixins
+@mixin steelblue-module-css {
+  @include steelblue-variables-css;
+  @include accordion-steelblue-css;
+  @include alert-steelblue-css;
+  @include background-steelblue-css;
+  @include badge-steelblue-css;
+  @include button-steelblue-css;
+  @include card-steelblue-css;
+  @include dialog-steelblue-css;
+  @include list-group-steelblue-css;
+  @include popover-steelblue-css;
+}
+
+@mixin steelblue-utilities-css {
+  @include accordion-steelblue-css;
+  @include alert-steelblue-css;
+  @include background-steelblue-css;
+  @include badge-steelblue-css;
+  @include button-steelblue-css;
+  @include card-steelblue-css;
+  @include dialog-steelblue-css;
+  @include list-group-steelblue-css;
+  @include popover-steelblue-css;
+}

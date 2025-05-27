@@ -3,14 +3,14 @@
 // ----------------------------------------------------------
 $button-form-font-family:  inherit !default;
 $input-focus-shadow:       var(--focus-shadow, 0 0 0 0.12rem) !default;
-$input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
 
 $button-text-color:        var(--btn-text, CanvasText) !default;
 $button-font-size:         var(--btn-fs, inherit) !default;
 $button-line-height:       var(--btn-lh, inherit) !default;
 $button-padding-block:     var(--btn-py, 0.313rem) !default;
 $button-padding-inline:    var(--btn-px, 0.75rem) !default;
-$button-border-color:      var(--btn-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$button-border-color:      var(--btn-bd-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
 $button-radius:            var(--btn-radius, 0.188rem) !default;
 $button-background-color:  var(--btn-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $button-background-hover:  var(--btn-hover, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
@@ -20,11 +20,11 @@ $form-font-size:           var(--form-fs, inherit) !default;
 $form-line-height:         var(--form-lh, inherit) !default;
 $form-padding-block:       var(--form-py, 0.313rem) !default;
 $form-padding-inline:      var(--form-px, 0.5rem) !default;
-$form-border-color:        var(--form-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$form-border-color:        var(--form-bd-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
 $form-radius:              var(--form-radius, 0.188rem) !default;
 $form-background-color:    var(--form-bg, Canvas) !default;
 $form-accent-color:        var(--accent, initial) !default;
-$fieldset-border-color:    var(--form-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$fieldset-border-color:    var(--form-bd-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
 $fieldset-radius:          0.125em !default;
 $fieldset-margin-bottom:   1.25rem !default;
 $fieldset-padding-inline:  1.25rem !default;

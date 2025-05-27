@@ -12,6 +12,9 @@
 @use "pink" as *;
 @use "purple" as *;
 @use "olive" as *;
+@use "tan" as *;
+@use "rosewood" as *;
+@use "steelblue" as *;
 
 $color-tokens:    where(html) !default;
 
@@ -28,6 +31,9 @@ $color-tokens:    where(html) !default;
   @include purple-variables;
   @include pink-variables;
   @include olive-variables;
+  @include tan-variables;
+  @include rosewood-variables;
+  @include steelblue-variables;
 }
 
 @mixin all-color-variables-css {
@@ -47,6 +53,9 @@ $color-tokens:    where(html) !default;
   @include purple-utilities-css;
   @include pink-utilities-css;
   @include olive-utilities-css;
+  @include tan-utilities-css;
+  @include rosewood-utilities-css;
+  @include steelblue-utilities-css;
 }
 
 @mixin color-modules-css {
@@ -60,4 +69,7 @@ $color-tokens:    where(html) !default;
   @include purple-module-css;
   @include pink-module-css;
   @include olive-module-css;
+  @include tan-module-css;
+  @include rosewood-module-css;
+  @include steelblue-module-css;
 }

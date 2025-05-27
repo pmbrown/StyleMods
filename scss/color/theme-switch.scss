@@ -26,6 +26,7 @@ $dark-scheme-icon:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='cur
 }
 
 #themes span {
+  all: initial;
   position: absolute;
   block-size: 1px;
   inline-size: 1px;
