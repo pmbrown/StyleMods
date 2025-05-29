@@ -1,0 +1,48 @@
+// ---------------------------------------------------------- 
+// Gradients
+// ----------------------------------------------------------
+$gradient-tokens:                 where(html) !default;
+$gradient-default:                linear-gradient(180deg, rgba(white, .225), rgba(white, 0)) !default;
+$gradient-light:                  linear-gradient(180deg, rgba(white, .175), rgba(white, 0)) !default;
+$gradient-heavy:                  linear-gradient(180deg, rgba(white, .33), rgba(white, 0)) !default;
+
+@mixin gradient-variables {
+  --gradient: #{$gradient-default};
+  --gradient-light: #{$gradient-light};
+  --gradient-heavy: #{$gradient-heavy};
+}
+
+@mixin gradient-classes {
+  .gradient {
+    background-image: var(--gradient);
+  }
+
+  .gradient-light {
+    background-image: var(--gradient-light);
+  }
+
+  .gradient-heavy {
+    background-image: var(--gradient-heavy);
+  }
+}
+
+@mixin gradient-novariables-css {
+  .gradient {
+    background-image: $gradient-default;
+  }
+
+  .gradient-light {
+    background-image: $gradient-light;
+  }
+
+  .gradient-heavy {
+    background-image: $gradient-heavy;
+  }
+}
+
+@mixin gradients-css {
+  :#{$gradient-tokens} {
+    @include gradient-variables;
+  }  
+  @include gradient-classes;
+}

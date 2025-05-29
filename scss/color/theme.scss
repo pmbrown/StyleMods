@@ -22,8 +22,6 @@ $theme-link:            light-dark($link-light, $link-dark) !default;
 $theme-link-visited:    light-dark($link-visited-light, $link-visited-dark) !default;
 $theme-link-hover:      light-dark($link-hover-light, $link-hover-dark) !default;
 
-// Theme variables
-
 // Theme surfaces
 $theme-surface:         var(--surface) !default;
 $theme-surface-1:       var(--surf-1) !default;

@@ -1,0 +1,80 @@
+// ---------------------------------------------------------- 
+// Opacity
+// ----------------------------------------------------------
+$opacity-100:         1 !default;
+$opacity-75:          0.75 !default;
+$opacity-50:          0.5 !default;
+$opacity-25:          0.25 !default;
+$opacity-variable:    var(--op) !default;
+
+$opacity: (
+  "100": $opacity-100,
+  "75": $opacity-75,
+  "50": $opacity-50,
+  "25": $opacity-25,
+  "v": $opacity-variable,
+) !default;
+
+@mixin opacity-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name} {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-xxl-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-xxl {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-xl-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-xl {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-lg-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-lg {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-md-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-md {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-sm-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-sm {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-xs-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-xs {
+      opacity: #{$value};        
+    }
+  }
+}
+
+@mixin opacity-xxs-css {
+  @each $name, $value in $opacity {
+    .opacity-#{$name}-xxs {
+      opacity: #{$value};        
+    }
+  }
+}

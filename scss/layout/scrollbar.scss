@@ -1,6 +1,14 @@
 //  ------------------------------------------------------------
 //  Scrollbar
 //  ------------------------------------------------------------
+$scrollbar-thumb-color:     var(--scroll-thumb, initial) !default;
+$scrollbar-track-color:     var(--scroll-track, initial) !default;
+
+$scrollbar-color: (
+  "scroll-color": $scrollbar-thumb-color $scrollbar-track-color,
+  "scroll-color-initial": initial,
+) !default;
+
 $scrollbar-gutter: (
   "stable": stable,
   "stable-edges": stable both-edges,
@@ -13,6 +21,14 @@ $scrollbar-width: (
   "thin": thin,
   "initial": initial,
 ) !default;
+
+@mixin scrollbar-color-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
 
 @mixin scrollbar-gutter-css {
   @each $name, $value in $scrollbar-gutter {
@@ -31,6 +47,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint XXL
+@mixin scrollbar-color-xxl-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-xxl-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-xxl {
@@ -48,6 +72,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint XL
+@mixin scrollbar-color-xl-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-xl-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-xl {
@@ -65,6 +97,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint LG
+@mixin scrollbar-color-lg-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-lg-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-lg {
@@ -82,6 +122,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint MD
+@mixin scrollbar-color-md-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-md-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-md {
@@ -99,6 +147,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint SM
+@mixin scrollbar-color-sm-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-sm-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-sm {
@@ -116,6 +172,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint XS
+@mixin scrollbar-color-xs-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-xs-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-xs {
@@ -133,6 +197,14 @@ $scrollbar-width: (
 }
 
 // Breakpoint XXS
+@mixin scrollbar-color-xxs-css {
+  @each $name, $value in $scrollbar-color {
+    .#{$name} {
+      scrollbar-color: #{$value};
+    }
+  }
+}
+
 @mixin scrollbar-gutter-xxs-css {
   @each $name, $value in $scrollbar-gutter {
     .scroll-gutter-#{$name}-xxs {
@@ -147,4 +219,53 @@ $scrollbar-width: (
       scrollbar-width: #{$value};
     }
   }
+}
+
+// Grouped mixins
+@mixin scrollbars-css {
+  @include scrollbar-gutter-css;
+  @include scrollbar-width-css;
+  @include scrollbar-color-css;
+}
+
+@mixin scrollbars-xxl-css {
+  @include scrollbar-gutter-xxl-css;
+  @include scrollbar-width-xxl-css;
+  @include scrollbar-color-xxl-css;
+}
+
+@mixin scrollbars-xl-css {
+  @include scrollbar-gutter-xl-css;
+  @include scrollbar-width-xl-css;
+  @include scrollbar-color-xl-css;
+}
+
+@mixin scrollbars-lg-css {
+  @include scrollbar-gutter-lg-css;
+  @include scrollbar-width-lg-css;
+  @include scrollbar-color-lg-css;
+}
+
+@mixin scrollbars-md-css {
+  @include scrollbar-gutter-md-css;
+  @include scrollbar-width-md-css;
+  @include scrollbar-color-md-css;
+}
+
+@mixin scrollbars-sm-css {
+  @include scrollbar-gutter-sm-css;
+  @include scrollbar-width-sm-css;
+  @include scrollbar-color-sm-css;
+}
+
+@mixin scrollbars-xs-css {
+  @include scrollbar-gutter-xs-css;
+  @include scrollbar-width-xs-css;
+  @include scrollbar-color-xs-css;
+}
+
+@mixin scrollbars-xxs-css {
+  @include scrollbar-gutter-xxs-css;
+  @include scrollbar-width-xxs-css;
+  @include scrollbar-color-xxs-css;
 }
