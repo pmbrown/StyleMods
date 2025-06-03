@@ -8,9 +8,7 @@
 }
 
 @mixin lists-css {
-
 // Ordered <ol> and unordered <ul>
-
 :where(.ul-none, .ol-none, .ul-inline, .ol-inline, .list-comma, .list-divider) {
   @include list-reset;
 }
@@ -46,7 +44,6 @@
 }
 
 // Definition <dl>
-
 .dl-meta {
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1fr);

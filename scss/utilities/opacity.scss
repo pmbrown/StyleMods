@@ -7,7 +7,7 @@ $opacity-50:          0.5 !default;
 $opacity-25:          0.25 !default;
 $opacity-variable:    var(--op) !default;
 
-$opacity: (
+$opacity-values: (
   "100": $opacity-100,
   "75": $opacity-75,
   "50": $opacity-50,
@@ -16,7 +16,7 @@ $opacity: (
 ) !default;
 
 @mixin opacity-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name} {
       opacity: #{$value};        
     }
@@ -24,7 +24,7 @@ $opacity: (
 }
 
 @mixin opacity-xxl-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-xxl {
       opacity: #{$value};        
     }
@@ -32,7 +32,7 @@ $opacity: (
 }
 
 @mixin opacity-xl-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-xl {
       opacity: #{$value};        
     }
@@ -40,7 +40,7 @@ $opacity: (
 }
 
 @mixin opacity-lg-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-lg {
       opacity: #{$value};        
     }
@@ -48,7 +48,7 @@ $opacity: (
 }
 
 @mixin opacity-md-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-md {
       opacity: #{$value};        
     }
@@ -56,7 +56,7 @@ $opacity: (
 }
 
 @mixin opacity-sm-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-sm {
       opacity: #{$value};        
     }
@@ -64,7 +64,7 @@ $opacity: (
 }
 
 @mixin opacity-xs-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-xs {
       opacity: #{$value};        
     }
@@ -72,7 +72,7 @@ $opacity: (
 }
 
 @mixin opacity-xxs-css {
-  @each $name, $value in $opacity {
+  @each $name, $value in $opacity-values {
     .opacity-#{$name}-xxs {
       opacity: #{$value};        
     }

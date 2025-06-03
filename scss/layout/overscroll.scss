@@ -1,18 +1,14 @@
 //  ------------------------------------------------------------
 //  Overscroll behavior
 //  ------------------------------------------------------------
-$overscroll-auto:       auto;
-$overscroll-contain:    contain;
-$overscroll-initial:    initial;
-
-$overscroll-behavior: (
-  "overscroll-auto": $overscroll-auto,
-  "overscroll-contain": $overscroll-contain,
-  "overscroll-initial": $overscroll-initial,
+$overscroll-values: (
+  "overscroll-auto": auto,
+  "overscroll-contain": contain,
+  "overscroll-initial": initial,
 ) !default;
 
-@mixin overscroll-behavior-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-css {
+  @each $name, $value in $overscroll-values {
     .#{$name} {
       overscroll-behavior: #{$value};
     }
@@ -20,8 +16,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint XXL
-@mixin overscroll-behavior-xxl-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-xxl-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-xxl {
       overscroll-behavior: #{$value};
     }
@@ -29,8 +25,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint XL
-@mixin overscroll-behavior-xl-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-xl-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-xl {
       overscroll-behavior: #{$value};
     }
@@ -38,8 +34,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint LG
-@mixin overscroll-behavior-lg-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-lg-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-lg {
       overscroll-behavior: #{$value};
     }
@@ -47,8 +43,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint MD
-@mixin overscroll-behavior-md-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-md-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-md {
       overscroll-behavior: #{$value};
     }
@@ -56,8 +52,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint SM
-@mixin overscroll-behavior-sm-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-sm-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-sm {
       overscroll-behavior: #{$value};
     }
@@ -65,8 +61,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint XS
-@mixin overscroll-behavior-xs-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-xs-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-xs {
       overscroll-behavior: #{$value};
     }
@@ -74,8 +70,8 @@ $overscroll-behavior: (
 }
 
 // Breakpoint XXS
-@mixin overscroll-behavior-xxs-css {
-  @each $name, $value in $overscroll-behavior {
+@mixin overscroll-xxs-css {
+  @each $name, $value in $overscroll-values {
     .#{$name}-xxs {
       overscroll-behavior: #{$value};
     }

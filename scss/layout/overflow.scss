@@ -7,7 +7,7 @@ $overflow-hidden:     hidden;
 $overflow-visible:    visible;
 $overflow-initial:    initial;
 
-$overflow: (
+$overflow-values: (
   "auto": $overflow-auto,
   "scroll": $overflow-scroll,
   "hidden": $overflow-hidden,
@@ -16,7 +16,7 @@ $overflow: (
 ) !default;
 
 @mixin overflow-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name} {
       overflow: #{$value};
     }
@@ -33,7 +33,7 @@ $overflow: (
 
 // Breakpoint XXL
 @mixin overflow-xxl-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-xxl {
       overflow: #{$value};
     }
@@ -50,7 +50,7 @@ $overflow: (
 
 // Breakpoint XL
 @mixin overflow-xl-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-xl {
       overflow: #{$value};
     }
@@ -67,7 +67,7 @@ $overflow: (
 
 // Breakpoint LG
 @mixin overflow-lg-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-lg {
       overflow: #{$value};
     }
@@ -84,7 +84,7 @@ $overflow: (
 
 // Breakpoint MD
 @mixin overflow-md-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-md {
       overflow: #{$value};
     }
@@ -101,7 +101,7 @@ $overflow: (
 
 // Breakpoint SM
 @mixin overflow-sm-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-sm {
       overflow: #{$value};
     }
@@ -118,7 +118,7 @@ $overflow: (
 
 // Breakpoint XS
 @mixin overflow-xs-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-xs {
       overflow: #{$value};
     }
@@ -135,7 +135,7 @@ $overflow: (
 
 // Breakpoint XXS
 @mixin overflow-xxs-css {
-  @each $name, $value in $overflow {
+  @each $name, $value in $overflow-values {
     .overflow-#{$name}-xxs {
       overflow: #{$value};
     }

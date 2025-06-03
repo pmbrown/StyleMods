@@ -1,0 +1,87 @@
+// ---------------------------------------------------------- 
+// Columns
+// ----------------------------------------------------------
+$column-values: (
+  "col-1": 1,
+  "col-2": 2,
+  "col-3": 3,
+  "col-4": 4,
+  "col-5": 5,
+  "col-6": 6,
+  "col-7": 7,
+  "col-8": 8,
+  "col-9": 9,
+  "col-10": 10,
+  "col-11": 11,
+  "col-12": 12,
+) !default;
+
+@mixin columns-css {
+  .columns {
+    columns: var(--cols);
+  }
+}
+
+@mixin column-values-css {
+  @each $name, $value in $column-values {
+    .#{$name} {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-xxl-css {
+  @each $name, $value in $column-values {
+    .#{$name}-xxl {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-xl-css {
+  @each $name, $value in $column-values {
+    .#{$name}-xl {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-lg-css {
+  @each $name, $value in $column-values {
+    .#{$name}-lg {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-md-css {
+  @each $name, $value in $column-values {
+    .#{$name}-md {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-sm-css {
+  @each $name, $value in $column-values {
+    .#{$name}-sm {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-xs-css {
+  @each $name, $value in $column-values {
+    .#{$name}-xs {
+      columns: $value;        
+    }
+  }
+}
+
+@mixin column-values-xxs-css {
+  @each $name, $value in $column-values {
+    .#{$name}-xxs {
+      columns: $value;        
+    }
+  }
+}
