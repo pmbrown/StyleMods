@@ -1,0 +1,134 @@
+// ---------------------------------------------------------- 
+// Aspect ratio
+// ----------------------------------------------------------
+$aspect-ratio-values: (
+  "auto": auto,
+  "1x1": #{"1 / 1"},
+  "16x9": #{"16 / 9"},
+  "5x2": #{"5 / 2"},
+  "4x1": #{"4 / 1"},
+  "3x4": #{"3 / 4"},
+  "4x6": #{"4 / 6"},
+) !default;
+
+@mixin aspect-ratio-css {
+  .ratio {
+    aspect-ratio: var(--ratio);
+  }
+  
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name} {
+      aspect-ratio: $value;     
+    }   
+  }
+  
+  .child-ratio *:not(figcaption) {
+    aspect-ratio: var(--ratio);
+  }
+  
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name} *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+
+// Breakpoints
+@mixin aspect-ratio-xxl-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-xxl {
+      aspect-ratio: #{$value};        
+    }    
+  }
+  
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-xxl *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+@mixin aspect-ratio-xl-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-xl {
+      aspect-ratio: #{$value};        
+    }    
+  }
+
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-xl *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+@mixin aspect-ratio-lg-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-lg {
+      aspect-ratio: #{$value};        
+    }    
+  }
+
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-lg *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+@mixin aspect-ratio-md-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-md {
+      aspect-ratio: #{$value};        
+    }    
+  }
+
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-md *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+@mixin aspect-ratio-sm-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-sm {
+      aspect-ratio: #{$value};        
+    }    
+  }
+
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-sm *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+@mixin aspect-ratio-xs-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-xs {
+      aspect-ratio: #{$value};        
+    }    
+  }
+
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-xs *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}
+
+@mixin aspect-ratio-xxs-css {
+  @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name}-xxs {
+      aspect-ratio: #{$value};        
+    }    
+  }
+
+  @each $name, $value in $aspect-ratio-values {
+    .child-ratio-#{$name}-xxs *:not(figcaption) {
+      aspect-ratio: $value;   
+    }  
+  }
+}

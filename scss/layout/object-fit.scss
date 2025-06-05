@@ -1,0 +1,123 @@
+// ---------------------------------------------------------- 
+// Object-fit
+// ----------------------------------------------------------
+$object-fit-values: (
+  "contain": contain,
+  "cover": cover,
+  "fill": fill,
+  "scale": scale-down,
+  "none": none,
+  "initial": initial,
+) !default;
+
+@mixin object-fit-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name} {
+      object-fit: $value;       
+    }   
+  }
+
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name} * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-xxl-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-xxl {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-xxl * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-xl-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-xl {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-xl * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-lg-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-lg {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-lg * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-md-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-md {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-md * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-sm-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-sm {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-sm * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-xxl-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-xs {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-xs * {
+      object-fit: $value;       
+    }   
+  }  
+}
+
+@mixin object-fit-xxl-css {
+  @each $name, $value in $object-fit-values {
+    .object-#{$name}-xxs {
+      object-fit: $value;       
+    }   
+  }
+  
+  @each $name, $value in $object-fit-values {
+    .child-object-#{$name}-xxs * {
+      object-fit: $value;       
+    }   
+  }  
+}

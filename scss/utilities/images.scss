@@ -1,49 +1,84 @@
 // ---------------------------------------------------------- 
 // Images
 // ----------------------------------------------------------
+$background-repeat-values: (
+  "no-repeat": no-repeat,
+  "repeat-x": repeat-x,
+  "repeat-y": repeat-y,
+  "space": space,
+) !default;
 
+$background-position-values: (
+  "top": top,
+  "bottom": bottom,
+  "left": left,
+  "right": right,
+  "center": center,
+) !default;
+
+$image-rendering-values: (
+  "auto": auto,
+  "smooth": smooth,
+  "crisp": crisp-edges,
+  "pixelated": pixelated,
+) !default;
+
+@mixin responsive-image-css {
+  .img-responsive {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+}
+
+@mixin background-image-css {
+  .bg-image {
+    background-image: var(--bg-img);
+  }
+}
+
+@mixin list-style-image-css {
+  .list-style-image {
+    list-style-image: var(--list-img);
+  }
+}
+
+@mixin border-image-css {
+  .border-image {
+    border-image-source: var(--bd-img);
+  }
+}
+
+@mixin background-repeat-css {
+  @each $name, $value in $background-repeat-values {
+    .bg-img-#{$name} {
+      background-repeat: $value;        
+    }
+  }
+}
+
+@mixin background-position-css {
+  @each $name, $value in $background-position-values {
+    .bg-img-#{$name} {
+      background-position: $value;        
+    }
+  }
+}
+
+@mixin image-rendering-css {
+  @each $name, $value in $image-rendering-values {
+    .img-render-#{$name} {
+      image-rendering: $value;        
+    }
+  }
+}
+
+// Grouped mixins 
 @mixin images-css {
-
-figure:is(.auto, .passport, .landscape, .landscape-sm, .landscape-xs, .portrait, .portrait-sm) {
-  margin: 0;
+  @include responsive-image-css;
+  @include background-image-css;
+  @include list-style-image-css;
+  @include border-image-css;
+  @include background-repeat-css;
+  @include background-position-css;
+  @include image-rendering-css;
 }
-.auto, .passport, .landscape, .landscape-sm, .landscape-xs, .portrait, .portrait-sm {
-  max-inline-size: var(--width);
-}
-
-:where(.auto, .passport, .landscape, .landscape-sm, .landscape-xs, .portrait, .portrait-sm) img {
-  object-fit: cover;
-  aspect-ratio: var(--aspect-ratio);
-  block-size: 100%;
-  max-inline-size: 100%;
-}
-
-.auto {
-  --aspect-ratio: auto;
-}
-
-.passport {
-  --aspect-ratio: 1 / 1;
-}
-
-.landscape {
-  --aspect-ratio: 16 / 9;
-}
-
-.landscape-sm {
-  --aspect-ratio: 3 / 1;
-}
-
-.landscape-xs {
-  --aspect-ratio: 4 / 1;
-}
-
-.portrait {
-  --aspect-ratio: 3 / 4;
-}
-
-.portrait-sm {
-  --aspect-ratio: 4 / 6;
-}
-
-} // end image-css
