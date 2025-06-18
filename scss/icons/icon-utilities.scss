@@ -1,0 +1,68 @@
+// ---------------------------------------------------------- 
+// Icon utilities
+// ----------------------------------------------------------
+@mixin icon-mask {
+  display: inline-block;
+  content: "";
+  block-size: var(--ico-xy, 1em);
+  inline-size: var(--ico-xy, 1em);  
+  vertical-align: var(--ico-va, -.115em);
+  background-color: var(--ico, CanvasText);
+  mask-image: var(--svg);
+  mask-repeat: no-repeat;
+  opacity: var(--ico-op, 1);
+}
+
+@mixin icon-utilities-css {
+  %icon-mask {
+    @include icon-mask;
+  }
+  
+  .ico:before {
+    @extend %icon-mask;
+  }
+  
+  .ico-b:before { 
+    @extend %icon-mask;
+    margin-inline-end: var(--ico-mr, calc(1em / 3.75));
+  }
+  
+  .ico-a:after {
+    @extend %icon-mask;
+    margin-inline-start: var(--ico-ml, calc(1em / 3.75));
+  }
+  
+  .ico-block:before, .ico-block-center:before {
+    --ico-va: initial;
+    @extend %icon-mask;
+    display: block;
+    margin-block-end: var(--ico-mb, 0.25rem);
+  }
+  
+  .ico-block-center:before {
+    margin-inline: auto;
+  }
+}
+
+@mixin icon-links-css {
+  :where(a) {
+    --ico: var(--link, LinkText);
+  }
+  
+  :where(a:is(:hover, :focus)) {
+    --ico: var(--hover, color-mix(in srgb, LinkText 75%, white));
+  }
+}
+
+@mixin icon-buttons-css {    
+  :where(button, .btn) {
+    --ico: var(--btn-text, buttontext);
+  }
+}
+
+// Grouped mixins
+@mixin all-icon-utilities-css {
+  @include icon-utilities-css;
+  @include icon-links-css;
+  @include icon-buttons-css;
+}

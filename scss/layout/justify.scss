@@ -1,0 +1,269 @@
+//  ------------------------------------------------------------
+//  Justify
+//  ------------------------------------------------------------
+$justify-content-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+  "around": space-around,
+  "between": space-between,
+  "evenly": space-evenly,
+) !default;
+
+$justify-items-self-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+) !default;
+
+@mixin justify-content-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name} {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name} {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name} {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXL
+@mixin justify-content-xxl-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-xxl {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-xxl-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-xxl {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-xxl-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-xxl {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XL
+@mixin justify-content-xl-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-xl {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-xl-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-xl {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-xl-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-xl {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint LG
+@mixin justify-content-lg-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-lg {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-lg-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-lg {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-lg-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-lg {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint MD
+@mixin justify-content-md-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-md {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-md-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-md {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-md-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-md {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint SM
+@mixin justify-content-sm-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-sm {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-sm-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-sm {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-sm-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-sm {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XS
+@mixin justify-content-xs-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-xs {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-xs-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-xs {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-xs-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-xs {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXS
+@mixin justify-content-xxs-css {  
+  @each $name, $value in $justify-content-values {
+    .justify-content-#{$name}-xxs {
+      justify-content: #{$value};
+    }
+  }
+}
+
+@mixin justify-items-xxs-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-items-#{$name}-xxs {
+      justify-items: #{$value};
+    }
+  }
+}
+
+@mixin justify-self-xxs-css {  
+  @each $name, $value in $justify-items-self-values {
+    .justify-self-#{$name}-xxs {
+      justify-self: #{$value};
+    }
+  }
+}
+
+// Grouped mixins
+@mixin justify-css {
+  @include justify-content-css;
+  @include justify-items-css;
+  @include justify-self-css;
+}
+
+@mixin justify-xxl-css {
+  @include justify-content-xxl-css;
+  @include justify-items-xxl-css;
+  @include justify-self-xxl-css;
+}
+
+@mixin justify-xl-css {
+  @include justify-content-xl-css;
+  @include justify-items-xl-css;
+  @include justify-self-xl-css;
+}
+
+@mixin justify-lg-css {
+  @include justify-content-lg-css;
+  @include justify-items-lg-css;
+  @include justify-self-lg-css;
+}
+
+@mixin justify-md-css {
+  @include justify-content-md-css;
+  @include justify-items-md-css;
+  @include justify-self-md-css;
+}
+
+@mixin justify-sm-css {
+  @include justify-content-sm-css;
+  @include justify-items-sm-css;
+  @include justify-self-sm-css;
+}
+
+@mixin justify-xs-css {
+  @include justify-content-xs-css;
+  @include justify-items-xs-css;
+  @include justify-self-xs-css;
+}
+
+@mixin justify-xxs-css {
+  @include justify-content-xxs-css;
+  @include justify-items-xxs-css;
+  @include justify-self-xxs-css;
+}

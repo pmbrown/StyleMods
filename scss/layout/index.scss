@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Layout
 // ----------------------------------------------------------
-@forward "alignment";
+@forward "align";
 @forward "aspect-ratio";
 @forward "block";
 @forward "columns";
@@ -11,8 +11,10 @@
 @forward "grids";
 @forward "gaps";
 @forward "inset";
+@forward "justify";
 @forward "margins";
 @forward "padding";
+@forward "place";
 @forward "position";
 @forward "object-fit";
 @forward "order";

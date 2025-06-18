@@ -163,7 +163,7 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(ol ol, ul ul, ol ul, ul ol, dl dl) {
-  --mb: 0;
+  margin-block-end: var(--list-child-mb, 0);
 }
 
 :where(dt) {

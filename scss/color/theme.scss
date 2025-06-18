@@ -253,7 +253,7 @@ $theme-popover: (
 
 @mixin theme-list-group-css {
   :#{$theme-tokens} {
-    @include theme-dialog-list-group;
+    @include theme-list-group-variables;
   }
 }
 

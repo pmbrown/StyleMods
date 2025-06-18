@@ -16,6 +16,17 @@ $background-position-values: (
   "center": center,
 ) !default;
 
+$background-size-values: (
+  "cover": cover,
+  "contain": contain,
+) !default;
+
+$background-attachment-values: (
+  "scroll": scroll,
+  "fixed": fixed,
+  "local": local,
+) !default;
+
 $image-rendering-values: (
   "auto": auto,
   "smooth": smooth,
@@ -24,33 +35,33 @@ $image-rendering-values: (
 ) !default;
 
 @mixin responsive-image-css {
-  .img-responsive {
+  .img {
     block-size: auto;
     max-inline-size: 100%;
   }
 }
 
 @mixin background-image-css {
-  .bg-image {
+  .bg-img {
     background-image: var(--bg-img);
   }
 }
 
-@mixin list-style-image-css {
-  .list-style-image {
+@mixin list-image-css {
+  .list-img {
     list-style-image: var(--list-img);
   }
 }
 
 @mixin border-image-css {
-  .border-image {
+  .border-img {
     border-image-source: var(--bd-img);
   }
 }
 
 @mixin background-repeat-css {
   @each $name, $value in $background-repeat-values {
-    .bg-img-#{$name} {
+    .bg-#{$name} {
       background-repeat: $value;        
     }
   }
@@ -58,8 +69,24 @@ $image-rendering-values: (
 
 @mixin background-position-css {
   @each $name, $value in $background-position-values {
-    .bg-img-#{$name} {
+    .bg-#{$name} {
       background-position: $value;        
+    }
+  }
+}
+
+@mixin background-size-css {
+  @each $name, $value in $background-size-values {
+    .bg-#{$name} {
+      background-size: $value;        
+    }
+  }
+}
+
+@mixin background-attachment-css {
+  @each $name, $value in $background-attachment-values {
+    .bg-#{$name} {
+      background-attachment: $value;        
     }
   }
 }
@@ -76,9 +103,11 @@ $image-rendering-values: (
 @mixin images-css {
   @include responsive-image-css;
   @include background-image-css;
-  @include list-style-image-css;
+  @include list-image-css;
   @include border-image-css;
   @include background-repeat-css;
   @include background-position-css;
+  @include background-size-css;
+  @include background-attachment-css;
   @include image-rendering-css;
 }

@@ -1,0 +1,35 @@
+// ---------------------------------------------------------- 
+// Custom icons
+// ----------------------------------------------------------
+// $template:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d=''/></svg>");
+$custom-icon-tokens:           where(html) !default;
+
+$custom-icon-values: ( 
+
+) !default;
+
+@mixin custom-icon-variables {
+  @each $name, $value in $custom-icon-values {
+    --#{$name}: #{$value};
+  }   
+}
+
+@mixin custom-icon-variables-css {
+  :#{$custom-icon-tokens} {
+    @include custom-icon-variables;
+  }
+}
+
+@mixin custom-icon-classes-css {
+  @each $name, $value in $custom-icon-values {
+    .#{$name} {
+      --svg: var(--#{$name});        
+    }
+  }
+}
+
+// Grouped mixins
+@mixin custom-icons-css {
+  @include custom-icon-variables-css;
+  @include custom-icon-classes-css;
+}

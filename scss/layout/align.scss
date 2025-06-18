@@ -1,0 +1,269 @@
+//  ------------------------------------------------------------
+//  Align
+//  ------------------------------------------------------------
+$align-content-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+  "around": space-around,
+  "between": space-between,
+  "evenly": space-evenly,
+) !default;
+
+$align-items-self-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+) !default;
+
+@mixin align-content-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name} {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name} {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name} {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXL
+@mixin align-content-xxl-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-xxl {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-xxl-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-xxl {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-xxl-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-xxl {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XL
+@mixin align-content-xl-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-xl {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-xl-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-xl {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-xl-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-xl {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint LG
+@mixin align-content-lg-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-lg {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-lg-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-lg {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-lg-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-lg {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint MD
+@mixin align-content-md-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-md {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-md-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-md {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-md-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-md {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint SM
+@mixin align-content-sm-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-sm {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-sm-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-sm {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-sm-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-sm {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XS
+@mixin align-content-xs-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-xs {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-xs-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-xs {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-xs-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-xs {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXS
+@mixin align-content-xxs-css {  
+  @each $name, $value in $align-content-values {
+    .align-content-#{$name}-xxs {
+      align-content: #{$value};
+    }
+  }
+}
+
+@mixin align-items-xxs-css {  
+  @each $name, $value in $align-items-self-values {
+    .align-items-#{$name}-xxs {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin align-self-xxs-css { 
+  @each $name, $value in $align-items-self-values {
+    .align-self-#{$name}-xxs {
+      align-self: #{$value};
+    }
+  }
+}
+
+// Grouped mixins
+@mixin align-css {
+  @include align-content-css;
+  @include align-items-css;
+  @include align-self-css;
+}
+
+@mixin align-xxl-css {
+  @include align-content-xxl-css;
+  @include align-items-xxl-css;
+  @include align-self-xxl-css;
+}
+
+@mixin align-xl-css {
+  @include align-content-xl-css;
+  @include align-items-xl-css;
+  @include align-self-xl-css;
+}
+
+@mixin align-lg-css {
+  @include align-content-lg-css;
+  @include align-items-lg-css;
+  @include align-self-lg-css;
+}
+
+@mixin align-md-css {
+  @include align-content-md-css;
+  @include align-items-md-css;
+  @include align-self-md-css;
+}
+
+@mixin align-sm-css {
+  @include align-content-sm-css;
+  @include align-items-sm-css;
+  @include align-self-sm-css;
+}
+
+@mixin align-xs-css {
+  @include align-content-xs-css;
+  @include align-items-xs-css;
+  @include align-self-xs-css;
+}
+
+@mixin align-xxs-css {
+  @include align-content-xxs-css;
+  @include align-items-xxs-css;
+  @include align-self-xxs-css;
+}

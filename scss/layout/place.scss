@@ -1,0 +1,269 @@
+//  ------------------------------------------------------------
+//  Place
+//  ------------------------------------------------------------
+$place-content-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+  "around": space-around,
+  "between": space-between,
+  "evenly": space-evenly,
+) !default;
+
+$place-item-self-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,  
+) !default;
+
+@mixin place-content-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name} {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name} {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name} {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXL
+@mixin place-content-xxl-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-xxl {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-xxl-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-xxl {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-xxl-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-xxl {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XL
+@mixin place-content-xl-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-xl {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-xl-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-xl {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-xl-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-xl {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint LG
+@mixin place-content-lg-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-lg {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-lg-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-lg {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-lg-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-lg {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint MD
+@mixin place-content-md-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-md {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-md-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-md {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-md-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-md {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint SM
+@mixin place-content-sm-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-sm {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-sm-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-sm {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-sm-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-sm {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XS
+@mixin place-content-xs-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-xs {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-xs-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-xs {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-xs-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-xs {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Breakpoint XXS
+@mixin place-content-xxs-css {
+  @each $name, $value in $place-content-values {
+    .place-content-#{$name}-xxs {
+      place-content: #{$value};
+    }
+  }
+}
+
+@mixin place-items-xxs-css {
+  @each $name, $value in $place-item-self-values {
+    .place-items-#{$name}-xxs {
+      place-items: #{$value};
+    }
+  }
+}
+
+@mixin place-self-xxs-css {
+  @each $name, $value in $place-item-self-values {
+    .place-self-#{$name}-xxs {
+      place-self: #{$value};
+    }
+  }
+}
+
+// Grouped mixins
+@mixin place-css {
+  @include place-content-css;
+  @include place-items-css;
+  @include place-self-css;
+}
+
+@mixin place-xxl-css {
+  @include place-content-xxl-css;
+  @include place-items-xxl-css;
+  @include place-self-xxl-css;
+}
+
+@mixin place-xl-css {
+  @include place-content-xl-css;
+  @include place-items-xl-css;
+  @include place-self-xl-css;
+}
+
+@mixin place-lg-css {
+  @include place-content-lg-css;
+  @include place-items-lg-css;
+  @include place-self-lg-css;
+}
+
+@mixin place-md-css {
+  @include place-content-md-css;
+  @include place-items-md-css;
+  @include place-self-md-css;
+}
+
+@mixin place-sm-css {
+  @include place-content-sm-css;
+  @include place-items-sm-css;
+  @include place-self-sm-css;
+}
+
+@mixin place-xs-css {
+  @include place-content-xs-css;
+  @include place-items-xs-css;
+  @include place-self-xs-css;
+}
+
+@mixin place-xxs-css {
+  @include place-content-xxs-css;
+  @include place-items-xxs-css;
+  @include place-self-xxs-css;
+}
