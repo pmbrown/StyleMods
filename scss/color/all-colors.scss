@@ -15,12 +15,12 @@
 @use "tan" as *;
 @use "rosewood" as *;
 @use "steelblue" as *;
+@use "theme" as *;
+@use "theme-switch" as *;
 
 $color-tokens:    where(html) !default;
 
-@mixin all-color-variables {
-  @include surface-variables;
-  @include gray-variables;
+@mixin all-primary-color-variables {
   @include blue-variables;
   @include red-variables;
   @include green-variables;
@@ -35,13 +35,20 @@ $color-tokens:    where(html) !default;
   @include steelblue-variables;
 }
 
+@mixin all-color-variables {
+  @include surface-variables;
+  @include gray-variables;
+  @include all-primary-color-variables;
+  @include all-theme-variables;
+}
+
 @mixin all-color-variables-css {
   :#{$color-tokens} {
     @include all-color-variables;
   }
 }
 
-@mixin color-utilities-css {
+@mixin all-color-utilities-css {
   @include gray-utilities-css;
   @include blue-utilities-css;
   @include red-utilities-css;
@@ -57,7 +64,8 @@ $color-tokens:    where(html) !default;
   @include steelblue-utilities-css;
 }
 
-@mixin color-modules-css {
+// Variables and utilities
+@mixin all-color-modules-css {
   @include gray-module-css;
   @include blue-module-css;
   @include red-module-css;
@@ -71,4 +79,11 @@ $color-tokens:    where(html) !default;
   @include tan-module-css;
   @include rosewood-module-css;
   @include steelblue-module-css;
+}
+
+// Variables, utilities and theme switch
+@mixin all-color-css {
+  @include all-color-variables-css;
+  @include all-color-utilities-css;
+  @include theme-switch-css;
 }

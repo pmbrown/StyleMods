@@ -79,7 +79,7 @@ $zindex-values: (
   }
 }
 
-@mixin z-index-xss-css {  
+@mixin z-index-xxs-css {  
   @each $name, $value in $zindex-values {
     .#{$name}-xxs {
       z-index: #{$value};

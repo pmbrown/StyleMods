@@ -20,9 +20,7 @@ $column-values: (
   .columns {
     columns: var(--cols);
   }
-}
-
-@mixin column-values-css {
+  
   @each $name, $value in $column-values {
     .#{$name} {
       columns: $value;        
@@ -30,7 +28,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-xxl-css {
+@mixin columns-xxl-css {
   @each $name, $value in $column-values {
     .#{$name}-xxl {
       columns: $value;        
@@ -38,7 +36,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-xl-css {
+@mixin columns-xl-css {
   @each $name, $value in $column-values {
     .#{$name}-xl {
       columns: $value;        
@@ -46,7 +44,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-lg-css {
+@mixin columns-lg-css {
   @each $name, $value in $column-values {
     .#{$name}-lg {
       columns: $value;        
@@ -54,7 +52,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-md-css {
+@mixin columns-md-css {
   @each $name, $value in $column-values {
     .#{$name}-md {
       columns: $value;        
@@ -62,7 +60,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-sm-css {
+@mixin columns-sm-css {
   @each $name, $value in $column-values {
     .#{$name}-sm {
       columns: $value;        
@@ -70,7 +68,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-xs-css {
+@mixin columns-xs-css {
   @each $name, $value in $column-values {
     .#{$name}-xs {
       columns: $value;        
@@ -78,7 +76,7 @@ $column-values: (
   }
 }
 
-@mixin column-values-xxs-css {
+@mixin columns-xxs-css {
   @each $name, $value in $column-values {
     .#{$name}-xxs {
       columns: $value;        

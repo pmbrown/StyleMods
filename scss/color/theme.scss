@@ -23,13 +23,13 @@ $theme-link-visited:    light-dark($link-visited-light, $link-visited-dark) !def
 $theme-link-hover:      light-dark($link-hover-light, $link-hover-dark) !default;
 
 // Theme surfaces
-$theme-surface:         var(--surface) !default;
+$theme-surface:         var(--background) !default;
 $theme-surface-1:       var(--surf-1) !default;
 $theme-surface-2:       var(--surf-2) !default;
 $theme-surface-3:       var(--surf-3) !default;
 $theme-surface-4:       var(--surf-4) !default;
-$theme-surface-tint-1:  color-mix(in srgb, var(--surf-1) 30%, var(--background)) !default;
-$theme-surface-tint-2:  color-mix(in srgb, var(--surf-1) 50%, var(--background)) !default;
+$theme-surface-tint-1:  color-mix(in srgb, CanvasText 1%, var(--background)) !default;
+$theme-surface-tint-2:  color-mix(in srgb, CanvasText 2%, var(--background)) !default;
 
 // Use if surface.scss module not included.
 $base-surface:          $theme-background !default;

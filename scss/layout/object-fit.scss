@@ -94,7 +94,7 @@ $object-fit-values: (
   }  
 }
 
-@mixin object-fit-xxl-css {
+@mixin object-fit-xs-css {
   @each $name, $value in $object-fit-values {
     .object-#{$name}-xs {
       object-fit: $value;       
@@ -108,7 +108,7 @@ $object-fit-values: (
   }  
 }
 
-@mixin object-fit-xxl-css {
+@mixin object-fit-xxs-css {
   @each $name, $value in $object-fit-values {
     .object-#{$name}-xxs {
       object-fit: $value;       

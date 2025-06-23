@@ -1,0 +1,22 @@
+// ---------------------------------------------------------- 
+// All components
+// ----------------------------------------------------------
+@use "accordions" as *;
+@use "alerts" as *;
+@use "badges" as *;
+@use "buttons" as *;
+@use "cards" as *;
+@use "dialogs" as *;
+@use "list-groups" as *;
+@use "popovers" as *;
+
+@mixin all-components-css {
+  @include accordions-css;
+  @include alerts-css;
+  @include badges-css;
+  @include buttons-css;
+  @include cards-css;
+  @include dialogs-css;
+  @include list-groups-css;
+  @include popovers-css;
+}

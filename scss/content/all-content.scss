@@ -1,0 +1,21 @@
+// ---------------------------------------------------------- 
+// All content
+// ----------------------------------------------------------
+@use "typography" as *;
+@use "forms-buttons" as *;
+@use "tables" as *;
+@use "accessibility" as *;
+
+@mixin all-content-css {
+  @include typography-css;
+  @include forms-buttons-css;
+  @include tables-css;
+  @include vis-hidden-css;
+  @include combined-motion-no-preference-css;
+}
+
+@mixin all-content-basic-css {
+  @include typography-css;
+  @include forms-buttons-css;
+  @include tables-css;
+}

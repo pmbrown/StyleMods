@@ -1,0 +1,22 @@
+// ---------------------------------------------------------- 
+// All utilities
+// ----------------------------------------------------------
+@use "backgrounds" as *;
+@use "borders" as *;
+@use "gradients" as *;
+@use "images" as *;
+@use "lists" as *;
+@use "opacity" as *;
+@use "shadows" as *;
+@use "text" as *;
+
+@mixin all-utilities-css {
+  @include background-css;
+  @include borders-css;
+  @include gradients-css;
+  @include images-css;
+  @include lists-css;
+  @include opacity-css;
+  @include shadows-css;
+  @include text-css;
+}

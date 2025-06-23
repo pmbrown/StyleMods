@@ -8,7 +8,7 @@ $grid-utilities-values: (
   "grid-inline": inline-grid,
 ) !default;
 
-$grid-values: (
+$fraction-grid-values: (
   "g-1": minmax(0, 1fr),
   "g-2": repeat(2, minmax(0, 1fr)),
   "g-3": repeat(3, minmax(0, 1fr)),
@@ -23,7 +23,7 @@ $grid-values: (
   "g-12": repeat(12, minmax(0, 1fr)),
 ) !default;
 
-$autogrid-values: (
+$auto-grid-values: (
   "ga-1": auto,
   "ga-2": repeat(2, minmax(0, auto)),
   "ga-3": repeat(3, minmax(0, auto)),
@@ -47,162 +47,273 @@ $autogrid-values: (
   }
 }
 
-@mixin grid-variables {
-  @each $name, $value in $grid-values {
+@mixin fraction-grid-variables {
+  @each $name, $value in $fraction-grid-values {
     --#{$name}: #{$value};
   }
 }
 
-@mixin grid-variables-css {
+@mixin fraction-grid-variables-css {
   :#{$grid-tokens} {
-    @include grid-variables;
+    @include fraction-grid-variables;
   }
 }
 
-@mixin autogrid-variables {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-variables {
+  @each $name, $value in $auto-grid-values {
     --#{$name}: #{$value};
   }
 }
 
-@mixin autogrid-variables-css {
+@mixin auto-grid-variables-css {
   :#{$grid-tokens} {
-    @include autogrid-variables;
+    @include auto-grid-variables;
   }
 }
 
-@mixin allgrids-variables-css {
+@mixin all-grid-variables-css {
   :#{$grid-tokens} {
-    @include grid-variables;
-    @include autogrid-variables;
+    @include fraction-grid-variables;
+    @include auto-grid-variables;
   }
 }
 
-@mixin grid-css {
-  @each $name, $value in $grid-values {
+@mixin fraction-grid-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name} {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name} {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-// Breakpoints
-@mixin grid-xxl-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-css {
+  @include all-grid-variables-css;
+  @include grid-utilities-css;
+  @include fraction-grid-css;
+  @include auto-grid-css;
+}
+
+// XXL
+@mixin grid-utilities-xxl-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xxl {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xxl-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-xxl {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-xxl-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-xxl-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-xxl {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin grid-xl-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-xxl-css {
+  @include grid-utilities-xxl-css;
+  @include fraction-grid-xxl-css;
+  @include auto-grid-xxl-css;
+}
+
+// XL
+@mixin grid-utilities-xl-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xl {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xl-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-xl {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-xl-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-xl-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-xl {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin grid-lg-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-xl-css {
+  @include grid-utilities-xl-css;
+  @include fraction-grid-xl-css;
+  @include auto-grid-xl-css;
+}
+
+// LG
+@mixin grid-utilities-lg-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-lg {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-lg-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-lg {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-lg-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-lg-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-lg {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin grid-md-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-lg-css {
+  @include grid-utilities-lg-css;
+  @include fraction-grid-lg-css;
+  @include auto-grid-lg-css;
+}
+
+// MD
+@mixin grid-utilities-md-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-md {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-md-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-md {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-md-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-md-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-md {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin grid-sm-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-md-css {
+  @include grid-utilities-md-css;
+  @include fraction-grid-md-css;
+  @include auto-grid-md-css;
+}
+
+// SM
+@mixin grid-utilities-sm-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-sm {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-sm-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-sm {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-sm-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-sm-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-sm {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin grid-xs-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-sm-css {
+  @include grid-utilities-sm-css;
+  @include fraction-grid-sm-css;
+  @include auto-grid-sm-css;
+}
+
+// XS
+@mixin grid-utilities-xs-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xs {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xs-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-xs {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-xs-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-xs-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-xs {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin grid-xxs-css {
-  @each $name, $value in $grid-values {
+@mixin all-grids-xs-css {
+  @include grid-utilities-xs-css;
+  @include fraction-grid-xs-css;
+  @include auto-grid-xs-css;
+}
+
+// XXS
+@mixin grid-utilities-xxs-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xxs {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xxs-css {
+  @each $name, $value in $fraction-grid-values {
     .#{$name}-xxs {
       grid-template-columns: var(--#{$name});        
     }
   }
 }
 
-@mixin autogrid-xxs-css {
-  @each $name, $value in $autogrid-values {
+@mixin auto-grid-xxs-css {
+  @each $name, $value in $auto-grid-values {
     .#{$name}-xxs {
       grid-template-columns: var(--#{$name});        
     }
   }
+}
+
+@mixin all-grids-xxs-css {
+  @include grid-utilities-xxs-css;
+  @include fraction-grid-xxs-css;
+  @include auto-grid-xxs-css;
 }

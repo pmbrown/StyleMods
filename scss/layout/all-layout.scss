@@ -1,0 +1,221 @@
+// ---------------------------------------------------------- 
+// All layout
+// ----------------------------------------------------------
+@use "align" as *;
+@use "aspect-ratio" as *;
+@use "block" as *;
+@use "columns" as *;
+@use "containers" as *;
+@use "display" as *;
+@use "flex" as *;
+@use "grids" as *;
+@use "gaps" as *;
+@use "inset" as *;
+@use "justify" as *;
+@use "margins" as *;
+@use "padding" as *;
+@use "place" as *;
+@use "position" as *;
+@use "object-fit" as *;
+@use "order" as *;
+@use "overflow" as *;
+@use "overscroll" as *;
+@use "scrollbar" as *;
+@use "sizes" as *;
+@use "z-index" as *;
+
+@mixin all-layout-css {
+  @include align-css;
+  @include aspect-ratio-css;
+  @include block-css;
+  @include columns-css;
+  @include containers-css;
+  @include display-utilities-css;
+  @include flex-css;
+  @include allgrids-variables-css;
+  @include all-grids-css;
+  @include gaps-css;
+  @include inset-css;
+  @include justify-css;
+  @include margins-css;
+  @include padding-css;
+  @include place-css;
+  @include position-css;
+  @include object-fit-css;
+  @include order-css;
+  @include overflow-css;
+  @include overscroll-css;
+  @include scrollbars-css;
+  @include sizes-css;
+  @include z-index-css;
+}
+
+@mixin all-layout-xxl-css {
+  @include align-xxl-css;
+  @include aspect-ratio-xxl-css;
+  @include block-xxl-css;
+  @include columns-xxl-css;
+  @include display-utilities-xxl-css;
+  @include flex-xxl-css;
+  @include all-grids-xxl-css;
+  @include gaps-xxl-css;
+  @include inset-xxl-css;
+  @include justify-xxl-css;
+  @include margins-xxl-css;
+  @include padding-xxl-css;
+  @include place-xxl-css;
+  @include position-xxl-css;
+  @include object-fit-xxl-css;
+  @include order-xxl-css;
+  @include overflow-xxl-css;
+  @include overscroll-xxl-css;
+  @include scrollbars-xxl-css;
+  @include sizes-xxl-css;
+  @include z-index-xxl-css;
+}
+
+@mixin all-layout-xl-css {
+  @include align-xl-css;
+  @include aspect-ratio-xl-css;
+  @include block-xl-css;
+  @include columns-xl-css;
+  @include display-utilities-xl-css;
+  @include flex-xl-css;
+  @include all-grids-xl-css;
+  @include gaps-xl-css;
+  @include inset-xl-css;
+  @include justify-xl-css;
+  @include margins-xl-css;
+  @include padding-xl-css;
+  @include place-xl-css;
+  @include position-xl-css;
+  @include object-fit-xl-css;
+  @include order-xl-css;
+  @include overflow-xl-css;
+  @include overscroll-xl-css;
+  @include scrollbars-xl-css;
+  @include sizes-xl-css;
+  @include z-index-xl-css;
+}
+
+@mixin all-layout-lg-css {
+  @include align-lg-css;
+  @include aspect-ratio-lg-css;
+  @include block-lg-css;
+  @include columns-lg-css;
+  @include display-utilities-lg-css;
+  @include flex-lg-css;
+  @include all-grids-lg-css;
+  @include gaps-lg-css;
+  @include inset-lg-css;
+  @include justify-lg-css;
+  @include margins-lg-css;
+  @include padding-lg-css;
+  @include place-lg-css;
+  @include position-lg-css;
+  @include object-fit-lg-css;
+  @include order-lg-css;
+  @include overflow-lg-css;
+  @include overscroll-lg-css;
+  @include scrollbars-lg-css;
+  @include sizes-lg-css;
+  @include z-index-lg-css;
+}
+
+@mixin all-layout-md-css {
+  @include align-md-css;
+  @include aspect-ratio-md-css;
+  @include block-md-css;
+  @include columns-md-css;
+  @include display-utilities-md-css;
+  @include flex-md-css;
+  @include all-grids-md-css;
+  @include gaps-md-css;
+  @include inset-md-css;
+  @include justify-md-css;
+  @include margins-md-css;
+  @include padding-md-css;
+  @include place-md-css;
+  @include position-md-css;
+  @include object-fit-md-css;
+  @include order-md-css;
+  @include overflow-md-css;
+  @include overscroll-md-css;
+  @include scrollbars-md-css;
+  @include sizes-md-css;
+  @include z-index-md-css;
+}
+
+@mixin all-layout-sm-css {
+  @include align-sm-css;
+  @include aspect-ratio-sm-css;
+  @include block-sm-css;
+  @include columns-sm-css;
+  @include display-utilities-sm-css;
+  @include flex-sm-css;
+  @include all-grids-sm-css;
+  @include gaps-sm-css;
+  @include inset-sm-css;
+  @include justify-sm-css;
+  @include margins-sm-css;
+  @include padding-sm-css;
+  @include place-sm-css;
+  @include position-sm-css;
+  @include object-fit-sm-css;
+  @include order-sm-css;
+  @include overflow-sm-css;
+  @include overscroll-sm-css;
+  @include scrollbars-sm-css;
+  @include sizes-sm-css;
+  @include z-index-sm-css;
+}
+
+@mixin all-layout-xs-css {
+  @include align-xs-css;
+  @include aspect-ratio-xs-css;
+  @include block-xs-css;
+  @include columns-xs-css;
+  @include display-utilities-xs-css;
+  @include flex-xs-css;
+  @include all-grids-xs-css;
+  @include gaps-xs-css;
+  @include inset-xs-css;
+  @include justify-xs-css;
+  @include margins-xs-css;
+  @include padding-xs-css;
+  @include place-xs-css;
+  @include position-xs-css;
+  @include object-fit-xs-css;
+  @include order-xs-css;
+  @include overflow-xs-css;
+  @include overscroll-xs-css;
+  @include scrollbars-xs-css;
+  @include sizes-xs-css;
+  @include z-index-xs-css;
+}
+
+@mixin all-layout-xxs-css {
+  @include align-xxs-css;
+  @include aspect-ratio-xxs-css;
+  @include block-xxs-css;
+  @include columns-xxs-css;
+  @include display-utilities-xxs-css;
+  @include flex-xxs-css;
+  @include all-grids-xxs-css;
+  @include gaps-xxs-css;
+  @include inset-xxs-css;
+  @include justify-xxs-css;
+  @include margins-xxs-css;
+  @include padding-xxs-css;
+  @include place-xxs-css;
+  @include position-xxs-css;
+  @include object-fit-xxs-css;
+  @include order-xxs-css;
+  @include overflow-xxs-css;
+  @include overscroll-xxs-css;
+  @include scrollbars-xxs-css;
+  @include sizes-xxs-css;
+  @include z-index-xxs-css;
+}
+
+
