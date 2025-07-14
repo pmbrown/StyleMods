@@ -3,7 +3,7 @@
 // ----------------------------------------------------------
 // Font sizes
 $font-size-xxs:       0.75rem !default;
-$font-size-xs:        0.875rem !default;
+$font-size-xs:        0.85rem !default;
 $font-size-sm:        0.938rem !default;
 $font-size-body:      1rem !default;
 $font-size-lg:        1.063rem !default;
@@ -120,7 +120,7 @@ $text-wrap: (
   }
 }
 
-@mixin links-utilities-css {
+@mixin text-links-css {
   .decoration-none {
     text-decoration: none;
   }
@@ -129,16 +129,6 @@ $text-wrap: (
     color: CanvasText;
     text-decoration-color: CanvasText;
   }
-}
-
-@mixin text-css {
-  @include font-sizes-css;
-  @include font-weights-css;
-  @include text-align-css;
-  @include text-wrap-css;
-  @include text-variable-classes-css;
-  @include text-colors-css;
-  @include links-utilities-css;
 }
 
 // Breakpoints
@@ -371,4 +361,64 @@ $text-wrap: (
       text-wrap: #{$value};        
     }
   }
+}
+
+// Grouped mixins
+@mixin text-css {
+  @include font-sizes-css;
+  @include font-weights-css;
+  @include text-align-css;
+  @include text-wrap-css;
+  @include text-variable-classes-css;
+  @include text-colors-css;
+  @include text-links-css;
+}
+
+@mixin text-xxl-css {
+  @include font-sizes-xxl-css;
+  @include font-weights-xxl-css;
+  @include text-align-xxl-css;
+  @include text-wrap-xxl-css;
+}
+
+@mixin text-xl-css {
+  @include font-sizes-xl-css;
+  @include font-weights-xl-css;
+  @include text-align-xl-css;
+  @include text-wrap-xl-css;
+}
+
+@mixin text-lg-css {
+  @include font-sizes-lg-css;
+  @include font-weights-lg-css;
+  @include text-align-lg-css;
+  @include text-wrap-lg-css;
+}
+
+@mixin text-md-css {
+  @include font-sizes-md-css;
+  @include font-weights-md-css;
+  @include text-align-md-css;
+  @include text-wrap-md-css;
+}
+
+@mixin text-sm-css {
+  @include font-sizes-sm-css;
+  @include font-weights-sm-css;
+  @include text-align-sm-css;
+  @include text-wrap-sm-css;
+}
+
+@mixin text-xs-css {
+  @include font-sizes-xs-css;
+  @include font-weights-xs-css;
+  @include text-align-xs-css;
+  @include text-wrap-xs-css;
+}
+
+@mixin text-xxs-css {
+  @include font-sizes-xxs-css;
+  @include font-weights-xxs-css;
+  @include text-align-xxs-css;
+  @include text-wrap-xxs-css;
 }

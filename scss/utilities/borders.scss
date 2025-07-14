@@ -5,6 +5,16 @@ $border-width:    var(--bd-width, 1px) !default;
 $border-color:    var(--bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $border-default:  $border-width solid $border-color !default;
 
+$border-position: (
+  "bd": border,
+  "bd-t": border-block-start,
+  "bd-b": border-block-end,
+  "bd-y": border-block,
+  "bd-x": border-inline,
+  "bd-s": border-inline-start,
+  "bd-e": border-inline-end,
+) !default;
+
 $radius-1:        0.188rem !default;
 $radius-2:        0.313rem !default;
 $radius-3:        0.5rem !default;
@@ -26,74 +36,63 @@ $border-radius-circle: (
   "rd-circle": $radius-circle,
 ) !default;
 
-$border-position: (
-  "bd": border,
-  "bd-t": border-block-start,
-  "bd-b": border-block-end,
-  "bd-y": border-block,
-  "bd-x": border-inline,
-  "bd-s": border-inline-start,
-  "bd-e": border-inline-end,
-) !default;
-
-@mixin borders-css {
-
-@each $name, $value in $border-position {
-  .#{$name} {
-    #{$value}: $border-default;        
+@mixin border-position-css {
+  @each $name, $value in $border-position {
+    .#{$name} {
+      #{$value}: $border-default;        
+    }
+  }
+  
+  .bd-child * {
+    border: $border-default;
   }
 }
 
-.bd-child * {
-  border: $border-default;
-}
-
-// Radius
-@each $name, $value in $border-radius {
-  .#{$name} {
-    border-radius: #{$value};        
+@mixin border-radius-css {
+  @each $name, $value in $border-radius {
+    .#{$name} {
+      border-radius: #{$value};        
+    }
   }
-}
-
-@each $name, $value in $border-radius-circle {
-  .#{$name} {
-    border-radius: #{$value};        
+  
+  @each $name, $value in $border-radius-circle {
+    .#{$name} {
+      border-radius: #{$value};        
+    }
   }
-}
-
-@each $name, $value in $border-radius {
-  .#{$name}-top {
-    border-start-start-radius: #{$value};
-    border-start-end-radius: #{$value};     
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-top {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
   }
-}
-
-@each $name, $value in $border-radius {
-  .#{$name}-bottom {
-    border-end-start-radius: #{$value};
-    border-end-end-radius: #{$value};     
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-bottom {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
   }
-}
-
-@each $name, $value in $border-radius {
-  .#{$name}-start {
-    border-start-start-radius: #{$value};
-    border-end-start-radius: #{$value};   
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-start {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
   }
-}
-
-@each $name, $value in $border-radius {
-  .#{$name}-end {
-    border-start-end-radius: #{$value};
-    border-end-end-radius: #{$value};    
+  
+  @each $name, $value in $border-radius {
+    .#{$name}-end {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
-}
-
-} // end borders-css
+} // end border-radius-css
 
 // Border breakpoints
 // XXL
-@mixin borders-xxl-css {
+@mixin border-position-xxl-css {
   @each $name, $value in $border-position {
     .#{$name}-xxl {
       #{$value}: $border-default;        
@@ -102,7 +101,7 @@ $border-position: (
 }
 
 // XL
-@mixin borders-xl-css {
+@mixin border-position-xl-css {
   @each $name, $value in $border-position {
     .#{$name}-xl {
       #{$value}: $border-default;        
@@ -111,7 +110,7 @@ $border-position: (
 }
 
 // LG
-@mixin borders-lg-css {
+@mixin border-position-lg-css {
   @each $name, $value in $border-position {
     .#{$name}-lg {
       #{$value}: $border-default;        
@@ -120,7 +119,7 @@ $border-position: (
 }
 
 // MD
-@mixin borders-md-css {
+@mixin border-position-md-css {
   @each $name, $value in $border-position {
     .#{$name}-md {
       #{$value}: $border-default;        
@@ -129,7 +128,7 @@ $border-position: (
 }
 
 // SM
-@mixin borders-sm-css {
+@mixin border-position-sm-css {
   @each $name, $value in $border-position {
     .#{$name}-sm {
       #{$value}: $border-default;        
@@ -138,7 +137,7 @@ $border-position: (
 }
 
 // XS
-@mixin borders-xs-css {
+@mixin border-position-xs-css {
   @each $name, $value in $border-position {
     .#{$name}-xs {
       #{$value}: $border-default;        
@@ -147,7 +146,7 @@ $border-position: (
 }
 
 // XXS
-@mixin borders-xxs-css {
+@mixin border-position-xxs-css {
   @each $name, $value in $border-position {
     .#{$name}-xxs {
       #{$value}: $border-default;        
@@ -456,4 +455,45 @@ $border-position: (
       border-end-end-radius: #{$value};    
     }
   }
+}
+
+// Grouped mixins
+@mixin borders-css {
+  @include border-position-css;
+  @include border-radius-css;
+}
+
+@mixin borders-xxl-css {
+  @include border-position-xxl-css;
+  @include border-radius-xxl-css;
+}
+
+@mixin borders-xl-css {
+  @include border-position-xl-css;
+  @include border-radius-xl-css;
+}
+
+@mixin borders-lg-css {
+  @include border-position-lg-css;
+  @include border-radius-lg-css;
+}
+
+@mixin borders-md-css {
+  @include border-position-md-css;
+  @include border-radius-md-css;
+}
+
+@mixin borders-sm-css {
+  @include border-position-sm-css;
+  @include border-radius-sm-css;
+}
+
+@mixin borders-xs-css {
+  @include border-position-xs-css;
+  @include border-radius-xs-css;
+}
+
+@mixin borders-xxs-css {
+  @include border-position-xxs-css;
+  @include border-radius-xxs-css;
 }

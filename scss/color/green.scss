@@ -22,7 +22,7 @@ $green-bg-dark:      var(--green-7) !default;
 $green-bg-light:     var(--green-5) !default;
 
 // Tokens style
-$green-tokens:       where(html) !default;
+$green-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $green-token-values: (
@@ -95,6 +95,7 @@ $card-green: (
   "card-hover": $green-bg-dark,
   "card-bd-color": $green-bg-light,
   "card-focus-color": $green-bg-light,
+  "card-title-bg": $green-bg,
 ) !default;
 
 $dialog-green: (
@@ -137,7 +138,7 @@ $popover-green: (
 }
 
 @mixin green-variables-css {
-  :#{$green-tokens} {
+  #{$green-tokens} {
     @include green-variables;
   }
 }

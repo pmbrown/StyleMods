@@ -22,7 +22,7 @@ $rosewood-bg-dark:      var(--rosewood-7) !default;
 $rosewood-bg-light:     var(--rosewood-5) !default;
 
 // Tokens style
-$rosewood-tokens:       where(html) !default;
+$rosewood-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $rosewood-token-values: (
@@ -95,6 +95,7 @@ $card-rosewood: (
   "card-hover": $rosewood-bg-dark,
   "card-bd-color": $rosewood-bg-light,
   "card-focus-color": $rosewood-bg-light,
+  "card-title-bg": $rosewood-bg,
 ) !default;
 
 $dialog-rosewood: (
@@ -137,7 +138,7 @@ $popover-rosewood: (
 }
 
 @mixin rosewood-variables-css {
-  :#{$rosewood-tokens} {
+  #{$rosewood-tokens} {
     @include rosewood-variables;
   }
 }

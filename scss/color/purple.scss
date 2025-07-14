@@ -22,7 +22,7 @@ $purple-bg-dark:      var(--purple-7) !default;
 $purple-bg-light:     var(--purple-5) !default;
 
 // Tokens style
-$purple-tokens:       where(html) !default;
+$purple-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $purple-token-values: (
@@ -95,6 +95,7 @@ $card-purple: (
   "card-hover": $purple-bg-dark,
   "card-bd-color": $purple-bg-light,
   "card-focus-color": $purple-bg-light,
+  "card-title-bg": $purple-bg,
 ) !default;
 
 $dialog-purple: (
@@ -137,7 +138,7 @@ $popover-purple: (
 }
 
 @mixin purple-variables-css {
-  :#{$purple-tokens} {
+  #{$purple-tokens} {
     @include purple-variables;
   }
 }

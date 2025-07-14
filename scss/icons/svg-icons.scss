@@ -2,7 +2,7 @@
 // Icons
 // ----------------------------------------------------------
 // Variables
-$svg-icon-tokens:           where(html) !default;
+$svg-icon-tokens:       ':where(html)' !default;
 
 // Default icons
 $house:                 url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m1 15v-7l7-7 3 3v-2h2v4l2 2v7h-5v-5h-4v5z'/></svg>") !default;
@@ -133,7 +133,7 @@ $brand-icon-values: (
 }
 
 @mixin default-svg-icon-variables-css {
-  :#{$svg-icon-tokens} {
+  #{$svg-icon-tokens} {
     @include default-svg-icon-variables;
   }
 }
@@ -154,7 +154,7 @@ $brand-icon-values: (
 }
 
 @mixin brand-svg-icon-variables-css {
-  :#{$svg-icon-tokens} {
+  #{$svg-icon-tokens} {
     @include brand-svg-icon-variables;
   }
 }
@@ -169,7 +169,7 @@ $brand-icon-values: (
 
 // Grouped mixins
 @mixin all-svg-icon-variables-css {
-  :#{$svg-icon-tokens} {
+  #{$svg-icon-tokens} {
     @include default-svg-icon-variables;
     @include brand-svg-icon-variables;
   }

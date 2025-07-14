@@ -2,7 +2,7 @@
 // Custom icons
 // ----------------------------------------------------------
 // $template:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d=''/></svg>");
-$custom-icon-tokens:           where(html) !default;
+$custom-icon-tokens:  ':where(html)' !default;
 
 $custom-icon-values: ( 
 
@@ -15,7 +15,7 @@ $custom-icon-values: (
 }
 
 @mixin custom-icon-variables-css {
-  :#{$custom-icon-tokens} {
+  #{$custom-icon-tokens} {
     @include custom-icon-variables;
   }
 }

@@ -22,7 +22,7 @@ $gray-bg-dark:      var(--gray-7) !default;
 $gray-bg-light:     var(--gray-5) !default;
 
 // Tokens style
-$gray-tokens:       where(html) !default;
+$gray-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $gray-token-values: (
@@ -95,6 +95,7 @@ $card-gray: (
   "card-hover": $gray-bg-dark,
   "card-bd-color": $gray-bg-light,
   "card-focus-color": $gray-bg-light,
+  "card-title-bg": $gray-bg,
 ) !default;
 
 $dialog-gray: (
@@ -137,7 +138,7 @@ $popover-gray: (
 }
 
 @mixin gray-variables-css {
-  :#{$gray-tokens} {
+  #{$gray-tokens} {
     @include gray-variables;
   }
 }

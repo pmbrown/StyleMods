@@ -22,7 +22,7 @@ $steelblue-bg-dark:      var(--steelblue-7) !default;
 $steelblue-bg-light:     var(--steelblue-5) !default;
 
 // Tokens style
-$steelblue-tokens:       where(html) !default;
+$steelblue-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $steelblue-token-values: (
@@ -95,6 +95,7 @@ $card-steelblue: (
   "card-hover": $steelblue-bg-dark,
   "card-bd-color": $steelblue-bg-light,
   "card-focus-color": $steelblue-bg-light,
+  "card-title-bg": $steelblue-bg,
 ) !default;
 
 $dialog-steelblue: (
@@ -137,7 +138,7 @@ $popover-steelblue: (
 }
 
 @mixin steelblue-variables-css {
-  :#{$steelblue-tokens} {
+  #{$steelblue-tokens} {
     @include steelblue-variables;
   }
 }

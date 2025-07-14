@@ -22,7 +22,7 @@ $olive-bg-dark:      var(--olive-7) !default;
 $olive-bg-light:     var(--olive-5) !default;
 
 // Tokens style
-$olive-tokens:       where(html) !default;
+$olive-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $olive-token-values: (
@@ -95,6 +95,7 @@ $card-olive: (
   "card-hover": $olive-bg-dark,
   "card-bd-color": $olive-bg-light,
   "card-focus-color": $olive-bg-light,
+  "card-title-bg": $olive-bg,
 ) !default;
 
 $dialog-olive: (
@@ -137,7 +138,7 @@ $popover-olive: (
 }
 
 @mixin olive-variables-css {
-  :#{$olive-tokens} {
+  #{$olive-tokens} {
     @include olive-variables;
   }
 }

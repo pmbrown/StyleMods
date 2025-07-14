@@ -22,7 +22,7 @@ $pink-bg-dark:      var(--pink-7) !default;
 $pink-bg-light:     var(--pink-5) !default;
 
 // Tokens style
-$pink-tokens:       where(html) !default;
+$pink-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $pink-token-values: (
@@ -95,6 +95,7 @@ $card-pink: (
   "card-hover": $pink-bg-dark,
   "card-bd-color": $pink-bg-light,
   "card-focus-color": $pink-bg-light,
+  "card-title-bg": $pink-bg,
 ) !default;
 
 $dialog-pink: (
@@ -137,7 +138,7 @@ $popover-pink: (
 }
 
 @mixin pink-variables-css {
-  :#{$pink-tokens} {
+  #{$pink-tokens} {
     @include pink-variables;
   }
 }

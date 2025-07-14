@@ -39,7 +39,7 @@ $base-surface-3:        color-mix(in srgb, CanvasText 15%, var(--surface)) !defa
 $base-surface-4:        color-mix(in srgb, CanvasText 22%, var(--surface)) !default;
 
 // Tokens style
-$theme-tokens:          where(html) !default;
+$theme-tokens:          ':where(html)' !default;
 
 // Variables tokens maps
 $theme-surfaces: (
@@ -105,6 +105,7 @@ $theme-card: (
   "card-bg": $theme-surface,
   "card-hover": $theme-surface-1,
   "card-focus-color": $theme-surface-4,
+  "card-title-bg": $theme-surface-1,
 ) !default;
 
 $theme-dialog: (
@@ -132,7 +133,7 @@ $theme-popover: (
 }
 
 @mixin theme-surface-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-surface-variables;
   }
 }
@@ -144,7 +145,7 @@ $theme-popover: (
 }
 
 @mixin theme-typography-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-typography-variables;
   }
 }
@@ -156,7 +157,7 @@ $theme-popover: (
 }
 
 @mixin theme-forms-buttons-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-forms-buttons-variables;
   }
 }
@@ -168,7 +169,7 @@ $theme-popover: (
 }
 
 @mixin theme-tables-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-tables-variables;
   }
 }
@@ -180,7 +181,7 @@ $theme-popover: (
 }
 
 @mixin theme-accordions-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-accordions-variables;
   }
 }
@@ -192,7 +193,7 @@ $theme-popover: (
 }
 
 @mixin theme-alert-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-alert-variables;
   }
 }
@@ -204,7 +205,7 @@ $theme-popover: (
 }
 
 @mixin theme-badge-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-badge-variables;
   }
 }
@@ -216,7 +217,7 @@ $theme-popover: (
 }
 
 @mixin theme-border-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-border-variables;
   }
 }
@@ -228,7 +229,7 @@ $theme-popover: (
 }
 
 @mixin theme-card-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-card-variables;
   }
 }
@@ -240,7 +241,7 @@ $theme-popover: (
 }
 
 @mixin theme-dialog-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-dialog-variables;
   }
 }
@@ -252,7 +253,7 @@ $theme-popover: (
 }
 
 @mixin theme-list-group-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-list-group-variables;
   }
 }
@@ -264,7 +265,7 @@ $theme-popover: (
 }
 
 @mixin theme-popover-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include theme-popover-variables;
   }
 }
@@ -285,7 +286,7 @@ $theme-popover: (
 
 
 @mixin all-theme-variables-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include all-theme-variables;
   }
 }
@@ -297,7 +298,7 @@ $theme-popover: (
 }
 
 @mixin all-theme-surface-variables-css {
-  :#{$theme-tokens} {
+  #{$theme-tokens} {
     @include all-theme-surface-variables;
   }
 }

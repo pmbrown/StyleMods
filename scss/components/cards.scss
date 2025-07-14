@@ -1,17 +1,23 @@
 // ---------------------------------------------------------- 
 // Cards
 // ----------------------------------------------------------
-$card-text-color:             var(--card-text, CanvasText) !default; 
-$card-padding-block:          var(--card-py, 1rem) !default;
-$card-padding-inline:         var(--card-px, 1rem) !default;
-$card-border-color:           var(--card-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
-$card-radius:                 var(--card-radius, 0.188rem) !default;
-$card-background-color:       var(--card-bg, Canvas) !default;
-$card-link-hover-text-color:  var(--card-text-hover, CanvasText) !default;
-$card-link-hover-background:  var(--card-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$card-link-focus-width:       var(--card-focus, 0.188rem) !default;
-$card-link-focus-color:       var(--card-focus-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
-$card-para-margin-bottom:     var(--card-para-mb, 0.5rem) !default;
+$card-text-color:               var(--card-text, CanvasText) !default;
+$card-text-margin-bottom:       var(--card-text-mb, 0.5rem) !default; // paragraphs & lists
+$card-padding-block:            var(--card-py, 1rem) !default;
+$card-padding-inline:           var(--card-px, 1rem) !default;
+$card-border-color:             var(--card-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$card-radius:                   var(--card-radius, 0.188rem) !default;
+$card-background-color:         var(--card-bg, Canvas) !default;
+$card-title-background:         var(--card-title-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$card-link-hover-text-color:    var(--card-text-hover, CanvasText) !default;
+$card-link-hover-background:    var(--card-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$card-link-focus-width:         var(--card-focus, 0.188rem) !default;
+$card-link-focus-color:         var(--card-focus-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$card-link-img-hover-filter:    var(--card-img-hover, opacity(75%)) !default;
+$card-inner-radius:             calc($card-radius - 1px) !default;
+$card-title-padding-block:      calc($card-padding-block - 0.125em) !default;
+$card-image-margin-top:         calc($card-text-margin-bottom + 0.5rem) !default;
+$card-image-margin-bottom:      calc($card-text-margin-bottom + 0.25rem) !default;
 
 @mixin cards-css {
 
@@ -25,20 +31,8 @@ $card-para-margin-bottom:     var(--card-para-mb, 0.5rem) !default;
   background-color: $card-background-color;
 }
 
-:where(.card, .card-link) p:not(:last-child) {
-  margin-block-end: $card-para-margin-bottom;
-}
-
 :where(.card-link) {
   position: relative;
-}
-
-:where(.card :last-child, .card-link :last-child)  {
-  margin-block-end: 0;
-}
-
-:where(.card, .card-link:is(:last-child))  {
-  margin-block-end: 0;
 }
 
 .card-link a:after {
@@ -58,33 +52,88 @@ $card-para-margin-bottom:     var(--card-para-mb, 0.5rem) !default;
   cursor: pointer;
 }
 
+:where(.card-link:is(:focus-within, :hover)) img {
+  filter: $card-link-img-hover-filter;
+}
+
 :where(.card-link:focus-within) {
   outline: $card-link-focus-width solid $card-link-focus-color;
 }
 
-:where(.card, .card-link) img {
-  display: block;
-  max-inline-size: 100%;
-  object-fit: cover;
-  aspect-ratio: var(--img-ratio, auto);
-  block-size: 100%;
-  margin-block-end: var(--card-img-mb, 0.75rem);
+:where(.card, .card-link) :is(p, ol, ul, dl)  {
+  margin-block-end: $card-text-margin-bottom;
 }
 
+:where(.card, .card-link) :is(:last-child)  {
+  margin-block-end: 0;
+}
+
+:where(.card, .card-link):has(.card-title, .card-body) {
+  padding: 0;
+}
+
+.card-body {
+  padding-block: $card-padding-block;
+  padding-inline: $card-padding-inline;
+}
+
+.card-body:is(h1, h2, h3, h4, h5, h6) {
+  margin-block-end: 0;
+}
+
+.card-title {
+  margin-block-end: 0;
+  padding-block: $card-title-padding-block;
+  padding-inline: $card-padding-inline;
+  border-block-end: 1px solid $card-border-color;
+  border-start-start-radius: $card-inner-radius;
+  border-start-end-radius: $card-inner-radius;
+  background-color: $card-title-background;
+}
+
+img + .card-title, .card-body + .card-title {
+  border-block-start: 1px solid $card-border-color;
+  border-radius: 0;
+}
+
+:where(.card, .card-link) .card-title:is(:last-child) {
+  border-block-end: none;
+  border-end-start-radius: $card-inner-radius;
+  border-end-end-radius: $card-inner-radius;
+}
+
+.card-title:is(strong:not(p + strong)) {
+  display: block;
+}
+
+:where(.card, .card-link) img {
+  margin-block-end: $card-image-margin-bottom;
+}
+
+:where(.card, .card-link) * + img:not(.card-title + img, .card-body + img) {
+  margin-block-start: $card-image-margin-top;
+}
+
+:where(.card, .card-link):has(.card-title, .card-body) img:not(.card-body img) {
+  margin-block-end: 0;
+}
+
+:where(.card, .card-link):has(.card-title, .card-body) img:not(.card-body img):first-child {
+  border-start-start-radius: $card-inner-radius;
+  border-start-end-radius: $card-inner-radius;
+}
+
+:where(.card, .card-link):has(.card-title, .card-body) img:last-child {
+  border-end-start-radius: $card-inner-radius;
+  border-end-end-radius: $card-inner-radius;
+}
+
+// Color-scheme
 .card-light {
   color-scheme: light;
 }
 
 .card-dark {
-  color-scheme: dark;
-}
-
-
-.card-link-light {
-  color-scheme: light;
-}
-
-.card-link-dark {
   color-scheme: dark;
 }
 

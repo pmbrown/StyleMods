@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // Grids
 // ----------------------------------------------------------
-$grid-tokens:     where(html) !default;
+$grid-tokens:     ':where(html)' !default;
 
 $grid-utilities-values: (
   "grid": grid,
@@ -39,7 +39,7 @@ $auto-grid-values: (
 ) !default;
 
 
-@mixin grid-utilities-css {
+@mixin grid-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name} {
       display: #{$value};        
@@ -54,7 +54,7 @@ $auto-grid-values: (
 }
 
 @mixin fraction-grid-variables-css {
-  :#{$grid-tokens} {
+  #{$grid-tokens} {
     @include fraction-grid-variables;
   }
 }
@@ -66,13 +66,13 @@ $auto-grid-values: (
 }
 
 @mixin auto-grid-variables-css {
-  :#{$grid-tokens} {
+  #{$grid-tokens} {
     @include auto-grid-variables;
   }
 }
 
 @mixin all-grid-variables-css {
-  :#{$grid-tokens} {
+  #{$grid-tokens} {
     @include fraction-grid-variables;
     @include auto-grid-variables;
   }
@@ -94,15 +94,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-css {
-  @include all-grid-variables-css;
-  @include grid-utilities-css;
-  @include fraction-grid-css;
-  @include auto-grid-css;
-}
-
 // XXL
-@mixin grid-utilities-xxl-css {
+@mixin grid-xxl-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-xxl {
       display: #{$value};        
@@ -126,14 +119,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-xxl-css {
-  @include grid-utilities-xxl-css;
-  @include fraction-grid-xxl-css;
-  @include auto-grid-xxl-css;
-}
-
 // XL
-@mixin grid-utilities-xl-css {
+@mixin grid-xl-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-xl {
       display: #{$value};        
@@ -157,14 +144,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-xl-css {
-  @include grid-utilities-xl-css;
-  @include fraction-grid-xl-css;
-  @include auto-grid-xl-css;
-}
-
 // LG
-@mixin grid-utilities-lg-css {
+@mixin grid-lg-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-lg {
       display: #{$value};        
@@ -188,14 +169,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-lg-css {
-  @include grid-utilities-lg-css;
-  @include fraction-grid-lg-css;
-  @include auto-grid-lg-css;
-}
-
 // MD
-@mixin grid-utilities-md-css {
+@mixin grid-md-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-md {
       display: #{$value};        
@@ -219,14 +194,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-md-css {
-  @include grid-utilities-md-css;
-  @include fraction-grid-md-css;
-  @include auto-grid-md-css;
-}
-
 // SM
-@mixin grid-utilities-sm-css {
+@mixin grid-sm-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-sm {
       display: #{$value};        
@@ -250,14 +219,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-sm-css {
-  @include grid-utilities-sm-css;
-  @include fraction-grid-sm-css;
-  @include auto-grid-sm-css;
-}
-
 // XS
-@mixin grid-utilities-xs-css {
+@mixin grid-xs-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-xs {
       display: #{$value};        
@@ -281,14 +244,8 @@ $auto-grid-values: (
   }
 }
 
-@mixin all-grids-xs-css {
-  @include grid-utilities-xs-css;
-  @include fraction-grid-xs-css;
-  @include auto-grid-xs-css;
-}
-
 // XXS
-@mixin grid-utilities-xxs-css {
+@mixin grid-xxs-css {
   @each $name, $value in $grid-utilities-values {
     .#{$name}-xxs {
       display: #{$value};        
@@ -312,8 +269,52 @@ $auto-grid-values: (
   }
 }
 
+// Grouped mixins
+@mixin all-grids-css {
+  @include all-grid-variables-css;
+  @include grid-css;
+  @include fraction-grid-css;
+  @include auto-grid-css;
+}
+
+@mixin all-grids-xxl-css {
+  @include grid-xxl-css;
+  @include fraction-grid-xxl-css;
+  @include auto-grid-xxl-css;
+}
+
+@mixin all-grids-xl-css {
+  @include grid-xl-css;
+  @include fraction-grid-xl-css;
+  @include auto-grid-xl-css;
+}
+
+@mixin all-grids-lg-css {
+  @include grid-lg-css;
+  @include fraction-grid-lg-css;
+  @include auto-grid-lg-css;
+}
+
+@mixin all-grids-md-css {
+  @include grid-md-css;
+  @include fraction-grid-md-css;
+  @include auto-grid-md-css;
+}
+
+@mixin all-grids-sm-css {
+  @include grid-sm-css;
+  @include fraction-grid-sm-css;
+  @include auto-grid-sm-css;
+}
+
+@mixin all-grids-xs-css {
+  @include grid-xs-css;
+  @include fraction-grid-xs-css;
+  @include auto-grid-xs-css;
+}
+
 @mixin all-grids-xxs-css {
-  @include grid-utilities-xxs-css;
+  @include grid-xxs-css;
   @include fraction-grid-xxs-css;
   @include auto-grid-xxs-css;
 }

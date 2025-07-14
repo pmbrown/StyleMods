@@ -22,7 +22,7 @@ $yellow-bg-dark:      var(--yellow-7) !default;
 $yellow-bg-light:     var(--yellow-5) !default;
 
 // Tokens style
-$yellow-tokens:       where(html) !default;
+$yellow-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $yellow-token-values: (
@@ -95,6 +95,7 @@ $card-yellow: (
   "card-hover": $yellow-bg-dark,
   "card-bd-color": $yellow-bg-light,
   "card-focus-color": $yellow-bg-light,
+  "card-title-bg": $yellow-bg,
 ) !default;
 
 $dialog-yellow: (
@@ -137,7 +138,7 @@ $popover-yellow: (
 }
 
 @mixin yellow-variables-css {
-  :#{$yellow-tokens} {
+  #{$yellow-tokens} {
     @include yellow-variables;
   }
 }

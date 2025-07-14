@@ -22,7 +22,7 @@ $orange-bg-dark:      var(--orange-7) !default;
 $orange-bg-light:     var(--orange-5) !default;
 
 // Tokens style
-$orange-tokens:       where(html) !default;
+$orange-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $orange-token-values: (
@@ -95,6 +95,7 @@ $card-orange: (
   "card-hover": $orange-bg-dark,
   "card-bd-color": $orange-bg-light,
   "card-focus-color": $orange-bg-light,
+  "card-title-bg": $orange-bg,
 ) !default;
 
 $dialog-orange: (
@@ -137,7 +138,7 @@ $popover-orange: (
 }
 
 @mixin orange-variables-css {
-  :#{$orange-tokens} {
+  #{$orange-tokens} {
     @include orange-variables;
   }
 }

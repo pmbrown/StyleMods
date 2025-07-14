@@ -11,7 +11,7 @@ $dialog-background-color:   var(--dialog-bg, Canvas) !default;
 $dialog-transition:         var(--dialog-transition, 0.25s) !default;
 $dialog-backdrop:           color-mix(in srgb, black 50%, transparent) !default;
 
-@mixin dialogs-css {
+@mixin dialog-styles-css {
 
 :where(dialog) {
   color: $dialog-text-color;
@@ -61,23 +61,7 @@ dialog[open]::backdrop {
   border-inline-start: 1px solid $dialog-border-color;
 }
 
-} // end dialogs-css
-
-@mixin dialogs-animation-css {
-
-@media screen and (prefers-reduced-motion: no-preference) {
-  dialog[open] {
-    transition: $dialog-transition;
-    opacity: 1; 
-  }
-}
-
-@starting-style {
-  dialog[open] {
-    opacity: 0;    
-  }
-}
-
+// Color-scheme
 .dialog-light {
   color-scheme: light;
 }
@@ -86,4 +70,28 @@ dialog[open]::backdrop {
   color-scheme: dark;
 }
 
+}
+
+@mixin dialog-transition-css {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    dialog[open] {
+      transition: $dialog-transition;
+      opacity: 1; 
+    }
+  }
+  
+  @starting-style {
+    dialog[open] {
+      opacity: 0;    
+    }
+  }
+}
+
+@mixin dialogs-css {
+  @include dialog-styles-css;
+  @include dialog-transition-css;
+}
+
+@mixin dialogs-no-transition-css {
+  @include dialog-styles-css;
 }

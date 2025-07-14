@@ -4,19 +4,18 @@
 $list-group-text-color:           var(--list-group-text, CanvasText) !default;
 $list-group-background-color:     var(--list-group-bg, Canvas) !default;
 $list-group-link-color:           var(--link, LinkText) !default;
+$list-group-dt-font-weight:       var(--dt-fw, 500) !default;
+$list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
 $list-links-background-hover:     var(--list-group-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $list-group-padding-block:        var(--list-group-py, 0.5rem) !default;
 $list-group-padding-inline:       var(--list-group-px, 0.75rem) !default;
 $list-group-border-color:         var(--list-group-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $list-group-radius:               var(--list-group-radius, 0.188rem) !default;
-$list-group-inner-radius:         calc(var(--list-group-radius, 0.188rem) - 1px) !default;
-$list-group-dt-font-weight:       var(--dt-fw, 500) !default;
-$list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$list-group-inner-radius:         calc($list-group-radius - 1px) !default;
 
 @mixin list-groups-css {
 
 :where(.list-group, .list-links) {
-  --list-group-inner-radius: $list-group-inner-radius;
   color: $list-group-text-color;
   max-inline-size: var(--list-group-width);
   border: 1px solid $list-group-border-color;
@@ -49,7 +48,8 @@ $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, Can
 }
 
 :where(.list-group, .list-links) dt:first-child {
-  border-radius: var(--list-group-inner-radius) var(--list-group-inner-radius) 0 0;
+  border-start-start-radius: $list-group-inner-radius;
+  border-start-end-radius: $list-group-inner-radius;
 }
 
 // List links
@@ -70,11 +70,13 @@ $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, Can
 }
 
 :where(.list-links *:first-child a:is(:hover, :focus)) {
-  border-radius: var(--list-group-inner-radius) var(--list-group-inner-radius) 0 0;
+  border-start-start-radius: $list-group-inner-radius;
+  border-start-end-radius: $list-group-inner-radius;
 }
 
 :where(.list-links *:last-child a:is(:hover, :focus)) {
-  border-radius: 0 0 var(--list-group-inner-radius) var(--list-group-inner-radius);
+  border-end-start-radius: $list-group-inner-radius;
+  border-end-end-radius: $list-group-inner-radius;
 }
 
 // Ordered lists, inserts counter-increment to replace list-style-type.

@@ -22,7 +22,7 @@ $blue-bg-dark:      var(--blue-7) !default;
 $blue-bg-light:     var(--blue-5) !default;
 
 // Tokens style
-$blue-tokens:       where(html) !default;
+$blue-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $blue-token-values: (
@@ -95,6 +95,7 @@ $card-blue: (
   "card-hover": $blue-bg-dark,
   "card-bd-color": $blue-bg-light,
   "card-focus-color": $blue-bg-light,
+  "card-title-bg": $blue-bg,
 ) !default;
 
 $dialog-blue: (
@@ -137,7 +138,7 @@ $popover-blue: (
 }
 
 @mixin blue-variables-css {
-  :#{$blue-tokens} {
+  #{$blue-tokens} {
     @include blue-variables;
   }
 }

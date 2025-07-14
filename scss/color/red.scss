@@ -22,7 +22,7 @@ $red-bg-dark:      var(--red-7) !default;
 $red-bg-light:     var(--red-5) !default;
 
 // Tokens style
-$red-tokens:       where(html) !default;
+$red-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $red-token-values: (
@@ -95,6 +95,7 @@ $card-red: (
   "card-hover": $red-bg-dark,
   "card-bd-color": $red-bg-light,
   "card-focus-color": $red-bg-light,
+  "card-title-bg": $red-bg,
 ) !default;
 
 $dialog-red: (
@@ -137,7 +138,7 @@ $popover-red: (
 }
 
 @mixin red-variables-css {
-  :#{$red-tokens} {
+  #{$red-tokens} {
     @include red-variables;
   }
 }

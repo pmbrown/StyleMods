@@ -22,7 +22,7 @@ $cyan-bg-dark:      var(--cyan-7) !default;
 $cyan-bg-light:     var(--cyan-5) !default;
 
 // Tokens style
-$cyan-tokens:       where(html) !default;
+$cyan-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $cyan-token-values: (
@@ -95,6 +95,7 @@ $card-cyan: (
   "card-hover": $cyan-bg-dark,
   "card-bd-color": $cyan-bg-light,
   "card-focus-color": $cyan-bg-light,
+  "card-title-bg": $cyan-bg,
 ) !default;
 
 $dialog-cyan: (
@@ -137,7 +138,7 @@ $popover-cyan: (
 }
 
 @mixin cyan-variables-css {
-  :#{$cyan-tokens} {
+  #{$cyan-tokens} {
     @include cyan-variables;
   }
 }

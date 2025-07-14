@@ -22,7 +22,7 @@ $tan-bg-dark:      var(--tan-7) !default;
 $tan-bg-light:     var(--tan-5) !default;
 
 // Tokens style
-$tan-tokens:       where(html) !default;
+$tan-tokens:       ':where(html)' !default;
 
 // Variables tokens map
 $tan-token-values: (
@@ -95,6 +95,7 @@ $card-tan: (
   "card-hover": $tan-bg-dark,
   "card-bd-color": $tan-bg-light,
   "card-focus-color": $tan-bg-light,
+  "card-title-bg": $tan-bg,
 ) !default;
 
 $dialog-tan: (
@@ -137,7 +138,7 @@ $popover-tan: (
 }
 
 @mixin tan-variables-css {
-  :#{$tan-tokens} {
+  #{$tan-tokens} {
     @include tan-variables;
   }
 }

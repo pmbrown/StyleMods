@@ -11,7 +11,7 @@ $popover-background-color:  var(--popover-bg, Canvas) !default;
 $popover-transition:        var(--popover-transition, 0.25s) !default;
 $popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
 
-@mixin popovers-css {
+@mixin popover-styles-css {
 
 :where([popover]) {
   color: $popover-text-color;
@@ -37,23 +37,6 @@ $popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
   background-color: $popover-backdrop;
 }
 
-} // end popovers-css
-
-@mixin popovers-animation-css {
-
-@media screen and (prefers-reduced-motion: no-preference) {
-  [popover] {
-    transition: $popover-transition;
-    opacity: 1; 
-  }
-}
-
-@starting-style {
-  [popover] {
-    opacity: 0;    
-  }
-}
-
 .popover-light {
   color-scheme: light;
 }
@@ -62,4 +45,28 @@ $popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
   color-scheme: dark;
 }
 
+}
+
+@mixin popover-transition-css {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    [popover] {
+      transition: $popover-transition;
+      opacity: 1; 
+    }
+  }
+  
+  @starting-style {
+    [popover] {
+      opacity: 0;    
+    }
+  }
+}
+
+@mixin popovers-css {
+  @include popover-styles-css;
+  @include popover-transition-css;
+}
+
+@mixin popovers-no-transition-css {
+  @include popover-styles-css;
 }

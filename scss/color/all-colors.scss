@@ -18,7 +18,7 @@
 @use "theme" as *;
 @use "theme-switch" as *;
 
-$color-tokens:    where(html) !default;
+$color-tokens:  ':where(html)' !default;
 
 @mixin all-primary-color-variables {
   @include blue-variables;
@@ -43,7 +43,7 @@ $color-tokens:    where(html) !default;
 }
 
 @mixin all-color-variables-css {
-  :#{$color-tokens} {
+  #{$color-tokens} {
     @include all-color-variables;
   }
 }
