@@ -1,0 +1,80 @@
+// ---------------------------------------------------------- 
+// Grid
+// ----------------------------------------------------------
+$grid-values: (
+  "grid": grid,
+  "grid-inline": inline-grid,
+  "grid-reset": initial,
+) !default;
+
+// Grid utilities
+@mixin grid-css {
+  @each $name, $value in $grid-values {
+    .#{$name} {
+      display: #{$value};        
+    }
+  }
+}
+
+// XXL
+@mixin grid-xxl-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xxl {
+      display: #{$value};        
+    }
+  }
+}
+
+// XL
+@mixin grid-xl-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xl {
+      display: #{$value};        
+    }
+  }
+}
+
+// LG
+@mixin grid-lg-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-lg {
+      display: #{$value};        
+    }
+  }
+}
+
+// MD
+@mixin grid-md-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-md {
+      display: #{$value};        
+    }
+  }
+}
+
+// SM
+@mixin grid-sm-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-sm {
+      display: #{$value};        
+    }
+  }
+}
+
+// XS
+@mixin grid-xs-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xs {
+      display: #{$value};        
+    }
+  }
+}
+
+// XXS
+@mixin grid-xxs-css {
+  @each $name, $value in $grid-values {
+    .#{$name}-xxs {
+      display: #{$value};        
+    }
+  }
+}

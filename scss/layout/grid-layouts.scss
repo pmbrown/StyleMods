@@ -1,0 +1,627 @@
+// ---------------------------------------------------------- 
+// Grid layouts
+// ----------------------------------------------------------
+$grid-column-values:    12 !default;
+$grid-row-values:       6 !default;
+
+$grid-column-utility-values: (
+  "display": grid,
+  "grid-template-columns": repeat(var(--columns, $grid-column-values), minmax(0, 1fr)),
+  "grid-template-rows": repeat(var(--rows, 1), minmax(0, 1fr)),
+) !default;
+
+// ---------------------------------------------------------- 
+// Grid columns
+// ----------------------------------------------------------
+@mixin grid-column-utility-css {
+  .grid-col {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value} {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value} {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value} {
+      grid-column-end: $value;
+    }  
+  }
+}
+
+// XXL
+@mixin grid-column-utility-xxl-css {
+  .grid-col-xxl {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-xxl-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-xxl {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-xxl-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-xxl {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-xxl-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-xxl {
+      grid-column-end: $value;
+    }  
+  }
+} 
+
+// XL
+@mixin grid-column-utility-xl-css {
+  .grid-col-xl {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-xl-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-xl {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-xl-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-xl {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-xl-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-xl {
+      grid-column-end: $value;
+    }  
+  }
+} 
+
+// LG
+@mixin grid-column-utility-lg-css {
+  .grid-col-lg {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-lg-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-lg {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-lg-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-lg {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-lg-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-lg {
+      grid-column-end: $value;
+    }  
+  }
+} 
+
+// MD
+@mixin grid-column-utility-md-css {
+  .grid-col-md {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-md-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-md {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-md-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-md {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-md-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-md {
+      grid-column-end: $value;
+    }  
+  }
+} 
+
+// SM
+@mixin grid-column-utility-sm-css {
+  .grid-col-sm {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-sm-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-sm {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-sm-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-sm {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-sm-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-sm {
+      grid-column-end: $value;
+    }  
+  }
+} 
+
+// XS
+@mixin grid-column-utility-xs-css {
+  .grid-col-xs {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-xs-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-xs {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-xs-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-xs {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-xs-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-xs {
+      grid-column-end: $value;
+    }  
+  }
+} 
+
+// XXS
+@mixin grid-column-utility-xxs-css {
+  .grid-col-xxs {
+    @each $name, $value in $grid-column-utility-values {
+      #{$name}: #{$value};        
+    }
+  }
+}
+
+@mixin grid-column-span-xxs-css {
+  @for $value from 1 through $grid-column-values {
+    .col-#{$value}-xxs {
+      grid-column: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-column-start-xxs-css {
+  @for $value from 1 through $grid-column-values {    
+    .col-start-#{$value}-xxs {
+      grid-column-start: $value;
+    }
+  }
+}
+
+@mixin grid-column-end-xxs-css {
+  @for $value from 1 through $grid-column-values {     
+    .col-end-#{$value}-xxs {
+      grid-column-end: $value;
+    }  
+  }
+}
+
+// ---------------------------------------------------------- 
+// Grid rows
+// ----------------------------------------------------------
+@mixin grid-row-span-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value} {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value} {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value} {
+      grid-row-end: $value;
+    }  
+  }
+}
+
+// XXL
+@mixin grid-row-span-xxl-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-xxl {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-xxl-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-xxl {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-xxl-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-xxl {
+      grid-row-end: $value;
+    }  
+  }
+} 
+
+// XL
+@mixin grid-row-span-xl-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-xl {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-xl-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-xl {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-xl-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-xl {
+      grid-row-end: $value;
+    }  
+  }
+} 
+
+// LG
+@mixin grid-row-span-lg-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-lg {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-lg-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-lg {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-lg-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-lg {
+      grid-row-end: $value;
+    }  
+  }
+} 
+
+// MD
+@mixin grid-row-span-md-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-md {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-md-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-md {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-md-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-md {
+      grid-row-end: $value;
+    }  
+  }
+} 
+
+// SM
+@mixin grid-row-span-sm-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-sm {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-sm-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-sm {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-sm-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-sm {
+      grid-row-end: $value;
+    }  
+  }
+} 
+
+// XS
+@mixin grid-row-span-xs-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-xs {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-xs-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-xs {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-xs-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-xs {
+      grid-row-end: $value;
+    }  
+  }
+} 
+
+// XXS
+@mixin grid-row-span-xxs-css {
+  @for $value from 1 through $grid-row-values {
+    .row-#{$value}-xxs {
+      grid-row: auto / span $value;
+    }
+  }
+}
+
+@mixin grid-row-start-xxs-css {
+  @for $value from 1 through $grid-row-values {    
+    .row-start-#{$value}-xxs {
+      grid-row-start: $value;
+    }
+  }
+}
+
+@mixin grid-row-end-xxs-css {
+  @for $value from 1 through $grid-row-values {     
+    .row-end-#{$value}-xxs {
+      grid-row-end: $value;
+    }  
+  }
+}
+
+// Grouped mixins
+// Grid columns
+@mixin grid-columns-css {
+  @include grid-column-utility-css;
+  @include grid-column-span-css;
+  @include grid-column-start-css;
+  @include grid-column-end-css;
+}
+
+@mixin grid-columns-xxl-css {
+  @include grid-column-utility-xxl-css;
+  @include grid-column-span-xxl-css;
+  @include grid-column-start-xxl-css;
+  @include grid-column-end-xxl-css;
+}
+
+@mixin grid-columns-xl-css {
+  @include grid-column-utility-xl-css;
+  @include grid-column-span-xl-css;
+  @include grid-column-start-xl-css;
+  @include grid-column-end-xl-css;
+}
+
+@mixin grid-columns-lg-css {
+  @include grid-column-utility-lg-css;
+  @include grid-column-span-lg-css;
+  @include grid-column-start-lg-css;
+  @include grid-column-end-lg-css;
+}
+
+@mixin grid-columns-md-css {
+  @include grid-column-utility-md-css;
+  @include grid-column-span-md-css;
+  @include grid-column-start-md-css;
+  @include grid-column-end-md-css;
+}
+
+@mixin grid-columns-sm-css {
+  @include grid-column-utility-sm-css;
+  @include grid-column-span-sm-css;
+  @include grid-column-start-sm-css;
+  @include grid-column-end-sm-css;
+}
+
+@mixin grid-columns-xs-css {
+  @include grid-column-utility-xs-css;
+  @include grid-column-span-xs-css;
+  @include grid-column-start-xs-css;
+  @include grid-column-end-xs-css;
+}
+
+@mixin grid-columns-xxs-css {
+  @include grid-column-utility-xxs-css;
+  @include grid-column-span-xxs-css;
+  @include grid-column-start-xxs-css;
+  @include grid-column-end-xxs-css;
+}
+
+// Grid rows
+@mixin grid-rows-css {
+  @include grid-row-span-css;
+  @include grid-row-start-css;
+  @include grid-row-end-css;
+}
+
+@mixin grid-rows-xxl-css {
+  @include grid-row-span-xxl-css;
+  @include grid-row-start-xxl-css;
+  @include grid-row-end-xxl-css;
+}
+
+@mixin grid-rows-xl-css {
+  @include grid-row-span-xl-css;
+  @include grid-row-start-xl-css;
+  @include grid-row-end-xl-css;
+}
+
+@mixin grid-rows-lg-css {
+  @include grid-row-span-lg-css;
+  @include grid-row-start-lg-css;
+  @include grid-row-end-lg-css;
+}
+
+@mixin grid-rows-md-css {
+  @include grid-row-span-md-css;
+  @include grid-row-start-md-css;
+  @include grid-row-end-md-css;
+}
+
+@mixin grid-rows-sm-css {
+  @include grid-row-span-sm-css;
+  @include grid-row-start-sm-css;
+  @include grid-row-end-sm-css;
+}
+
+@mixin grid-rows-xs-css {
+  @include grid-row-span-xs-css;
+  @include grid-row-start-xs-css;
+  @include grid-row-end-xs-css;
+}
+
+@mixin grid-rows-xxs-css {
+  @include grid-row-span-xxs-css;
+  @include grid-row-start-xxs-css;
+  @include grid-row-end-xxs-css;
+}
+
+// Both
+@mixin grid-layouts-css {
+  @include grid-columns-css;
+  @include grid-rows-css;
+}
+
+@mixin grid-layouts-xxl-css {
+  @include grid-columns-xxl-css;
+  @include grid-rows-xxl-css;
+}
+
+@mixin grid-layouts-xl-css {
+  @include grid-columns-xl-css;
+  @include grid-rows-xl-css;
+}
+
+@mixin grid-layouts-lg-css {
+  @include grid-columns-lg-css;
+  @include grid-rows-lg-css;
+}
+
+@mixin grid-layouts-md-css {
+  @include grid-columns-md-css;
+  @include grid-rows-md-css;
+}
+
+@mixin grid-layouts-sm-css {
+  @include grid-columns-sm-css;
+  @include grid-rows-sm-css;
+}
+
+@mixin grid-layouts-xs-css {
+  @include grid-columns-xs-css;
+  @include grid-rows-xs-css;
+}
+
+@mixin grid-layouts-xxs-css {
+  @include grid-columns-xxs-css;
+  @include grid-rows-xxs-css;
+}

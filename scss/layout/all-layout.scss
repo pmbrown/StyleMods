@@ -8,7 +8,9 @@
 @use "containers" as *;
 @use "display" as *;
 @use "flex" as *;
-@use "grids" as *;
+@use "grid" as *;
+@use "grid-layouts" as *;
+@use "grid-templates" as *;
 @use "gaps" as *;
 @use "inset" as *;
 @use "justify" as *;
@@ -30,11 +32,12 @@
   @include block-css;
   @include columns-css;
   @include containers-css;
-  @include display-utilities-css;
+  @include display-css;
   @include flex-css;
-  @include allgrids-variables-css;
-  @include all-grids-css;
   @include gaps-css;
+  @include grid-css;
+  @include grid-layouts-css;
+  @include grid-templates-css;
   @include inset-css;
   @include justify-css;
   @include margins-css;
@@ -55,10 +58,12 @@
   @include aspect-ratio-xxl-css;
   @include block-xxl-css;
   @include columns-xxl-css;
-  @include display-utilities-xxl-css;
+  @include display-xxl-css;
   @include flex-xxl-css;
-  @include all-grids-xxl-css;
   @include gaps-xxl-css;
+  @include grid-xxl-css;
+  @include grid-layouts-xxl-css;
+  @include grid-templates-xxl-css;
   @include inset-xxl-css;
   @include justify-xxl-css;
   @include margins-xxl-css;
@@ -79,10 +84,12 @@
   @include aspect-ratio-xl-css;
   @include block-xl-css;
   @include columns-xl-css;
-  @include display-utilities-xl-css;
+  @include display-xl-css;
   @include flex-xl-css;
-  @include all-grids-xl-css;
   @include gaps-xl-css;
+  @include grid-xl-css;
+  @include grid-layouts-xl-css;
+  @include grid-templates-xl-css;
   @include inset-xl-css;
   @include justify-xl-css;
   @include margins-xl-css;
@@ -103,10 +110,12 @@
   @include aspect-ratio-lg-css;
   @include block-lg-css;
   @include columns-lg-css;
-  @include display-utilities-lg-css;
+  @include display-lg-css;
   @include flex-lg-css;
-  @include all-grids-lg-css;
   @include gaps-lg-css;
+  @include grid-lg-css;
+  @include grid-layouts-lg-css;
+  @include grid-templates-lg-css;
   @include inset-lg-css;
   @include justify-lg-css;
   @include margins-lg-css;
@@ -127,10 +136,12 @@
   @include aspect-ratio-md-css;
   @include block-md-css;
   @include columns-md-css;
-  @include display-utilities-md-css;
+  @include display-md-css;
   @include flex-md-css;
-  @include all-grids-md-css;
   @include gaps-md-css;
+  @include grid-xl-css;
+  @include grid-layouts-md-css;
+  @include grid-templates-md-css;
   @include inset-md-css;
   @include justify-md-css;
   @include margins-md-css;
@@ -151,10 +162,12 @@
   @include aspect-ratio-sm-css;
   @include block-sm-css;
   @include columns-sm-css;
-  @include display-utilities-sm-css;
+  @include display-sm-css;
   @include flex-sm-css;
-  @include all-grids-sm-css;
   @include gaps-sm-css;
+  @include grid-sm-css;
+  @include grid-layouts-sm-css;
+  @include grid-templates-sm-css;
   @include inset-sm-css;
   @include justify-sm-css;
   @include margins-sm-css;
@@ -175,10 +188,12 @@
   @include aspect-ratio-xs-css;
   @include block-xs-css;
   @include columns-xs-css;
-  @include display-utilities-xs-css;
+  @include display-xs-css;
   @include flex-xs-css;
-  @include all-grids-xs-css;
   @include gaps-xs-css;
+  @include grid-xs-css;
+  @include grid-layouts-xs-css;
+  @include grid-templates-xs-css;
   @include inset-xs-css;
   @include justify-xs-css;
   @include margins-xs-css;
@@ -199,10 +214,12 @@
   @include aspect-ratio-xxs-css;
   @include block-xxs-css;
   @include columns-xxs-css;
-  @include display-utilities-xxs-css;
+  @include display-xxs-css;
   @include flex-xxs-css;
-  @include all-grids-xxs-css;
   @include gaps-xxs-css;
+  @include grid-xxs-css;
+  @include grid-layouts-xxs-css;
+  @include grid-templates-xxs-css;
   @include inset-xxs-css;
   @include justify-xxs-css;
   @include margins-xxs-css;
@@ -217,5 +234,3 @@
   @include sizes-xxs-css;
   @include z-index-xxs-css;
 }
-
-

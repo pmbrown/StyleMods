@@ -355,7 +355,7 @@ $display-resets: (
 }
 
 // Combined
-@mixin display-utilities-css {
+@mixin display-css {
   @include display-block-css;
   @include display-flex-css;
   @include display-grid-css;
@@ -363,7 +363,7 @@ $display-resets: (
   @include display-resets-css;
 }
 
-@mixin display-utilities-xxl-css {
+@mixin display-xxl-css {
   @include display-block-xxl-css;
   @include display-flex-xxl-css;
   @include display-grid-xxl-css;
@@ -371,7 +371,7 @@ $display-resets: (
   @include display-resets-xxl-css;
 }
 
-@mixin display-utilities-xl-css {
+@mixin display-xl-css {
   @include display-block-xl-css;
   @include display-flex-xl-css;
   @include display-grid-xl-css;
@@ -379,7 +379,7 @@ $display-resets: (
   @include display-resets-xl-css;
 }
 
-@mixin display-utilities-lg-css {
+@mixin display-lg-css {
   @include display-block-lg-css;
   @include display-flex-lg-css;
   @include display-grid-lg-css;
@@ -387,7 +387,7 @@ $display-resets: (
   @include display-resets-lg-css;
 }
 
-@mixin display-utilities-md-css {
+@mixin display-md-css {
   @include display-block-md-css;
   @include display-flex-md-css;
   @include display-grid-md-css;
@@ -395,7 +395,7 @@ $display-resets: (
   @include display-resets-md-css;
 }
 
-@mixin display-utilities-sm-css {
+@mixin display-sm-css {
   @include display-block-sm-css;
   @include display-flex-sm-css;
   @include display-grid-sm-css;
@@ -403,7 +403,7 @@ $display-resets: (
   @include display-resets-sm-css;
 }
 
-@mixin display-utilities-xs-css {
+@mixin display-xs-css {
   @include display-block-xs-css;
   @include display-flex-xs-css;
   @include display-grid-xs-css;
@@ -411,7 +411,7 @@ $display-resets: (
   @include display-resets-xs-css;
 }
 
-@mixin display-utilities-xxs-css {
+@mixin display-xxs-css {
   @include display-block-xxs-css;
   @include display-flex-xxs-css;
   @include display-grid-xxs-css;

@@ -1,0 +1,298 @@
+// ---------------------------------------------------------- 
+// Grid templates
+// ----------------------------------------------------------
+$grid-tokens:             ':where(html)' !default;
+$fraction-grid-values:    12 !default;
+$auto-grid-values:        12 !default;
+
+$grid-utilities-values: (
+  "grid": grid,
+  "grid-inline": inline-grid,
+) !default;
+
+// Grid utilities
+@mixin grid-utilities-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name} {
+      display: #{$value};        
+    }
+  }
+}
+
+// Variables
+@mixin fraction-grid-variables {
+  @for $value from 1 through $fraction-grid-values {
+    --g-#{$value}: repeat(#{$value}, minmax(0, 1fr));
+  }
+}
+
+@mixin fraction-grid-variables-css {
+  #{$grid-tokens} {
+    @include fraction-grid-variables;
+  }
+}
+
+@mixin auto-grid-variables {
+  @for $value from 1 through $auto-grid-values {
+    --ga-#{$value}: repeat(#{$value}, minmax(0, auto));
+  }
+}
+
+@mixin auto-grid-variables-css {
+  #{$grid-tokens} {
+    @include auto-grid-variables;
+  }
+}
+
+// Grid classes
+@mixin fraction-grid-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value} {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value} {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// XXL
+@mixin grid-utilities-xxl-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xxl {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xxl-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-xxl {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-xxl-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-xxl {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// XL
+@mixin grid-utilities-xl-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xl {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xl-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-xl {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-xl-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-xl {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// LG
+@mixin grid-utilities-lg-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-lg {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-lg-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-lg {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-lg-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-lg {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// MD
+@mixin grid-utilities-md-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-md {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-md-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-md {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-md-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-md {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// SM
+@mixin grid-utilities-sm-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-sm {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-sm-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-sm {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-sm-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-sm {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// XS
+@mixin grid-utilities-xs-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xs {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xs-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-xs {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-xs-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-xs {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// XXS
+@mixin grid-utilities-xxs-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name}-xxs {
+      display: #{$value};        
+    }
+  }
+}
+
+@mixin fraction-grid-xxs-css {
+  @for $value from 1 through $fraction-grid-values {
+    .g-#{$value}-xxs {
+      grid-template-columns: var(--g-#{$value});
+    }
+  }
+}
+
+@mixin auto-grid-xxs-css {
+  @for $value from 1 through $auto-grid-values {
+    .ga-#{$value}-xxs {
+      grid-template-columns: var(--ga-#{$value});
+    }
+  }
+}
+
+// Grouped mixins
+@mixin grid-templates-variables {
+  @include fraction-grid-variables;
+  @include auto-grid-variables;
+}
+
+@mixin grid-templates-variables-css {
+  #{$grid-tokens} {
+    @include grid-templates-variables;
+  }
+}
+
+@mixin grid-templates-css {
+  @include grid-templates-variables-css;
+  @include grid-utilities-css;
+  @include fraction-grid-css;
+  @include auto-grid-css;
+}
+
+@mixin grid-templates-xxl-css {
+  @include grid-utilities-xxl-css;
+  @include fraction-grid-xxl-css;
+  @include auto-grid-xxl-css;
+}
+
+@mixin grid-templates-xl-css {
+  @include grid-utilities-xl-css;
+  @include fraction-grid-xl-css;
+  @include auto-grid-xl-css;
+}
+
+@mixin grid-templates-lg-css {
+  @include grid-utilities-lg-css;
+  @include fraction-grid-lg-css;
+  @include auto-grid-lg-css;
+}
+
+@mixin grid-templates-md-css {
+  @include grid-utilities-md-css;
+  @include fraction-grid-md-css;
+  @include auto-grid-md-css;
+}
+
+@mixin grid-templates-sm-css {
+  @include grid-utilities-sm-css;
+  @include fraction-grid-sm-css;
+  @include auto-grid-sm-css;
+}
+
+@mixin grid-templates-xs-css {
+  @include grid-utilities-xs-css;
+  @include fraction-grid-xs-css;
+  @include auto-grid-xs-css;
+}
+
+@mixin grid-templates-xxs-css {
+  @include grid-utilities-xxs-css;
+  @include fraction-grid-xxs-css;
+  @include auto-grid-xxs-css;
+}

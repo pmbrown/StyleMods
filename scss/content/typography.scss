@@ -3,7 +3,7 @@
 // ----------------------------------------------------------
 $text-color:                  var(--text, CanvasText) !default;
 $background-color:            var(--background, Canvas) !default;
-$font-family:                 system-ui, -apple-system, Arial, Helvetica, sans-serif !default;
+$font-family:                 'system-ui, -apple-system, Arial, Helvetica, sans-serif' !default;
 $html-font-size:              var(--html-fs, clamp(100%, 40% + 0.666vw, 140%)) !default;
 $body-font-size:              var(--body-fs, 1rem) !default;
 $body-font-weight:            var(--body-fw, normal) !default;
@@ -17,22 +17,22 @@ $visited-color:               var(--visited, color-mix(in srgb, LinkText 75%, wh
 $visited-decoration-color:    color-mix(in srgb, var(--visited, LinkText) 50%, Canvas);
 $hover-color:                 var(--hover, color-mix(in srgb, LinkText 75%, white)) !default;
 
-$heading-font-weight:         var(--heading-fw, 700) !default;
-$heading-line-height:         var(--heading-lh, 1.2) !default;
-$heading-text-wrap:           var(--heading-tw, pretty) !default;
-$heading-margin-bottom:       var(--heading-mb, 0.75rem) !default;
 $h1-font-size:                var(--h1-fs, 2.125rem) !default;
 $h2-font-size:                var(--h2-fs, 1.75rem) !default;
 $h3-font-size:                var(--h3-fs, 1.5rem) !default;
 $h4-font-size:                var(--h4-fs, 1.375rem) !default;
 $h5-font-size:                var(--h5-fs, 1.25rem) !default;
 $h6-font-size:                var(--h6-fs, 1.063rem) !default;
+$heading-font-weight:         var(--heading-fw, 700) !default;
+$heading-line-height:         var(--heading-lh, 1.2) !default;
+$heading-text-wrap:           var(--heading-tw, pretty) !default;
+$heading-margin-bottom:       var(--heading-mb, 0.75rem) !default;
 
 $para-font-size:              var(--para-fs, inherit) !default;
-$para-margin-bottom:          var(--para-mb, 1rem) !default;
 $para-text-wrap:              var(--para-tw, pretty) !default;
-$list-margin-bottom:          var(--list-mb, 1rem) !default;
+$para-margin-bottom:          var(--para-mb, 1rem) !default;
 $list-text-wrap:              var(--list-tw, pretty) !default;
+$list-margin-bottom:          var(--list-mb, 1rem) !default;
 $list-indent:                 var(--li-ps, 2rem) !default;
 $dl-list-indent:              var(--dd-ms, 1rem) !default;
 
@@ -69,7 +69,7 @@ $blockquote-border-left:      10px !default;
   color-scheme: light dark;
   color: $text-color;
   font-size: $html-font-size;
-  font-family: $font-family;  
+  font-family: #{$font-family};  
   background-color: $background-color;
   block-size: 100%;
 }
