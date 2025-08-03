@@ -3,19 +3,20 @@
 // ----------------------------------------------------------
 $text-color:                  var(--text, CanvasText) !default;
 $background-color:            var(--background, Canvas) !default;
-$font-family:                 'system-ui, -apple-system, Arial, Helvetica, sans-serif' !default;
+$font-family:                 'system-ui, -apple-system, sans-serif' !default;
 $html-font-size:              var(--html-fs, clamp(100%, 40% + 0.666vw, 140%)) !default;
 $body-font-size:              var(--body-fs, 1rem) !default;
 $body-font-weight:            var(--body-fw, normal) !default;
 $body-line-height:            var(--body-lh, 1.5) !default;
 
-$link-color:                  var(--link, LinkText) !default;
+$link-color:                  var(--link, light-dark(#1c3db5, #9fbfdf)) !default;
+$visited-color:               var(--visited, color-mix(in srgb, $link-color 65%, white)) !default;
+$hover-color:                 var(--hover, color-mix(in srgb, $link-color 75%, white)) !default;
+$link-decoration-color:       color-mix(in srgb, $link-color 75%, Canvas) !default;
+$visited-decoration-color:    color-mix(in srgb, $visited-color 50%, Canvas);
 $link-decoration-width:       1px !default;
-$link-decoration-color:       color-mix(in srgb, var(--link, LinkText) 75%, Canvas) !default;
-$link-underline-offset:       0.1175em !default;
-$visited-color:               var(--visited, color-mix(in srgb, LinkText 75%, white)) !default;
-$visited-decoration-color:    color-mix(in srgb, var(--visited, LinkText) 50%, Canvas);
-$hover-color:                 var(--hover, color-mix(in srgb, LinkText 75%, white)) !default;
+$link-underline-offset:       var(--link-offset, 0.1175em) !default;
+$link-focus-offset:           var(--focus-offset, 2px) !default;
 
 $h1-font-size:                var(--h1-fs, 2.125rem) !default;
 $h2-font-size:                var(--h2-fs, 1.75rem) !default;
@@ -38,22 +39,30 @@ $dl-list-indent:              var(--dd-ms, 1rem) !default;
 
 $small-font-size:             var(--sm-fs, 0.906em) !default;
 $small-font-size-heading:     var(--sm-fs-heading, 0.75em) !default;
+$strong-font-weight:          bold !default;
 $code-color:                  var(--code, color-mix(in srgb, CanvasText 60%, Canvas)) !default;
 $kbd-padding-block:           0.1em !default;
-$kbd-padding-inline:          0.35em !default;
-$kbd-background-color:        var(--kbd-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$kbd-padding-inline:          0.3em !default;
 $kbd-radius:                  0.125em !default;
+$kbd-background-color:        var(--kbd-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
 
 $pre-padding:                 1rem !default;
 $pre-margin-bottom:           1rem !default;
 $pre-border-color:            var(--pre-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $pre-background-color:        var(--pre-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$address-margin-bottom:       1rem !default;
 $blockquote-padding-block:    0.75rem !default;
 $blockquote-padding-inline:   1rem !default;
 $blockquote-margin-bottom:    1rem !default;
 $blockquote-border-color:     var(--blockquote-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
 $blockquote-border:           1px !default;
 $blockquote-border-left:      10px !default;
+$details-margin-bottom:       1rem !default;
+$summary-open-margin-bottom:  0.75rem !default;
+$figure-margin-bottom:        1rem !default;
+$figcaption-padding-top:      0.25em !default;
+$hr-color:                    color-mix(in srgb, CanvasText 22%, Canvas) !default;
+$hr-margin-bottom:            1rem !default;
 
 @mixin typography-css {
 
@@ -94,8 +103,9 @@ $blockquote-border-left:      10px !default;
 }
 
 :where(a:focus-visible) {
-  outline: auto 1px $link-color;
-  outline-offset: 3px;
+  outline: 1px solid $link-color;
+  outline-offset: $link-focus-offset;
+  border-radius: 0.125em;
 }
 
 :where(a:hover) {
@@ -186,8 +196,8 @@ $blockquote-border-left:      10px !default;
   font-size: $small-font-size-heading;
 }
 
-:where(bold, strong) {
-  font-weight: var(--fw, bold);
+:where(strong, bold) {
+  font-weight: $strong-font-weight;
 }
 
 :where(abbr[title]) {
@@ -225,7 +235,7 @@ a > :where(code) {
 
 :where(address) {
   font-style: normal;
-  margin-block-end: var(--mb, 1rem);
+  margin-block-end: $address-margin-bottom;
 }
 
 :where(blockquote) {
@@ -237,15 +247,15 @@ a > :where(code) {
 }
 
 :where(blockquote p) {
-  --para-mb: 0;
+  margin-block-end: 0.25rem;
 }
 
-:where(blockquote p:first-of-type) {
-  --para-mb: 0.25rem;
+:where(blockquote :last-child) {
+  margin-block-end: 0;
 }
 
 :where(details) {
-  margin-block-end: 1rem;
+  margin-block-end: $details-margin-bottom;
 }
 
 :where(summary) {
@@ -253,20 +263,23 @@ a > :where(code) {
 }
 
 :where(details[open] summary) {
-  margin-block-end: var(--mb-open, 0.75rem);
+  margin-block-end: $summary-open-margin-bottom;
 }
 
 :where(hr) {
-  box-sizing: content-box;
-  block-size: 0;
-  overflow: visible;
   border: none;
-  border-block-start: 1px solid color-mix(in srgb, CanvasText 22%, Canvas);
-  margin-block-end: 1rem;
+  border-block-start: 1px solid $hr-color;
+  margin-block-end: $hr-margin-bottom;
 }
 
 :where(figure) {
-  margin-block-end: var(--fig-mb, 1rem);
+  inline-size: fit-content;
+  margin-block-end: $figure-margin-bottom;
+}
+
+:where(figcaption) {
+  contain: inline-size;
+  padding-block-start: $figcaption-padding-top;
 }
 
 :where(img, svg, video, audio, iframe, embed, object) {

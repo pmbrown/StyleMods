@@ -36,6 +36,6 @@ reflectPreference(),
 }),
   
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({matches: e}) => {
-  (theme.value = e ? "true" : "false"),
+  (theme.value = e ? "dark" : "light"),
   setPreference();
 });

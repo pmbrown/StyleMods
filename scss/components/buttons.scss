@@ -3,7 +3,6 @@
 // ----------------------------------------------------------
 $btn-text-color:          var(--btn-text, CanvasText) !default;
 $btn-font-size:           var(--btn-fs, inherit) !default;
-$btn-line-height:         var(--btn-lh, inherit) !default;
 $btn-padding-block:       var(--btn-py, 0.313rem) !default;
 $btn-padding-inline:      var(--btn-px, 0.75rem) !default;  
 $btn-border-color:        var(--btn-bd-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
@@ -18,7 +17,7 @@ $btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 22%, 
 .btn {
   color: $btn-text-color;
   font-size: $btn-font-size;
-  line-height: $btn-line-height;
+  line-height: inherit;
   text-align: center;
   text-decoration: none;
   display: var(--btn-d, inline-block); 

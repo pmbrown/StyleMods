@@ -2,44 +2,44 @@
 // Theme colors
 // ----------------------------------------------------------
 // Light typography
-$text-light:            #000 !default;
-$link-light:            #1c3db5 !default;
-$link-visited-light:    #4f6fe3 !default;
-$link-hover-light:      #385de0 !default;
-$background-light:      #eaecee !default;
+$theme-text-light:            #000 !default;
+$theme-link-light:            #1c3db5 !default;
+$theme-link-visited-light:    #4f6fe3 !default;
+$theme-link-hover-light:      #385de0 !default;
+$theme-background-light:      #eaecee !default;
 
 // Dark typography
-$text-dark:             #fff !default;
-$link-dark:             #9fbfdf !default;
-$link-visited-dark:     #b3cce6 !default;
-$link-hover-dark:       #c6d8ec !default;
-$background-dark:       #1f2428 !default;
+$theme-text-dark:             #fff !default;
+$theme-link-dark:             #9fbfdf !default;
+$theme-link-visited-dark:     #b3cce6 !default;
+$theme-link-hover-dark:       #c6d8ec !default;
+$theme-background-dark:       #1f2428 !default;
 
 // Theme typography
-$theme-text:            light-dark($text-light, $text-dark) !default;
-$theme-background:      light-dark($background-light, $background-dark) !default;
-$theme-link:            light-dark($link-light, $link-dark) !default;
-$theme-link-visited:    light-dark($link-visited-light, $link-visited-dark) !default;
-$theme-link-hover:      light-dark($link-hover-light, $link-hover-dark) !default;
+$theme-text:                  light-dark($theme-text-light, $theme-text-dark) !default;
+$theme-background:            light-dark($theme-background-light, $theme-background-dark) !default;
+$theme-link:                  light-dark($theme-link-light, $theme-link-dark) !default;
+$theme-link-visited:          light-dark($theme-link-visited-light, $theme-link-visited-dark) !default;
+$theme-link-hover:            light-dark($theme-link-hover-light, $theme-link-hover-dark) !default;
 
 // Theme surfaces
-$theme-surface:         var(--background) !default;
-$theme-surface-1:       var(--surf-1) !default;
-$theme-surface-2:       var(--surf-2) !default;
-$theme-surface-3:       var(--surf-3) !default;
-$theme-surface-4:       var(--surf-4) !default;
-$theme-surface-tint-1:  color-mix(in srgb, CanvasText 1%, var(--background)) !default;
-$theme-surface-tint-2:  color-mix(in srgb, CanvasText 2%, var(--background)) !default;
+$theme-surface:               var(--background) !default;
+$theme-surface-1:             var(--surf-1) !default;
+$theme-surface-2:             var(--surf-2) !default;
+$theme-surface-3:             var(--surf-3) !default;
+$theme-surface-4:             var(--surf-4) !default;
+$theme-surface-tint-1:        color-mix(in srgb, CanvasText 1%, var(--background)) !default;
+$theme-surface-tint-2:        color-mix(in srgb, CanvasText 2%, var(--background)) !default;
 
 // Use if surface.scss module not included.
-$base-surface:          $theme-background !default;
-$base-surface-1:        color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
-$base-surface-2:        color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
-$base-surface-3:        color-mix(in srgb, CanvasText 15%, var(--surface)) !default;
-$base-surface-4:        color-mix(in srgb, CanvasText 22%, var(--surface)) !default;
+$base-surface:                $theme-background !default;
+$base-surface-1:              color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
+$base-surface-2:              color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
+$base-surface-3:              color-mix(in srgb, CanvasText 15%, var(--surface)) !default;
+$base-surface-4:              color-mix(in srgb, CanvasText 22%, var(--surface)) !default;
 
 // Tokens style
-$theme-tokens:          ':where(html)' !default;
+$theme-tokens:                ':where(html)' !default;
 
 // Variables tokens maps
 $theme-surfaces: (
