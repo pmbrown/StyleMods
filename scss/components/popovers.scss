@@ -19,6 +19,7 @@ $popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
   max-block-size: calc(100vh - 2rem);
   inline-size: calc((100% - 6px) - 2em);
   max-inline-size: var(--popover-width, fit-content);
+  margin: auto;
   margin-block-start: $popover-margin-top;
   padding-block: $popover-padding-block;
   padding-inline: $popover-padding-inline;

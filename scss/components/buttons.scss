@@ -1,16 +1,23 @@
 // ---------------------------------------------------------- 
 // Buttons
 // ----------------------------------------------------------
-$btn-text-color:          var(--btn-text, CanvasText) !default;
-$btn-font-size:           var(--btn-fs, inherit) !default;
-$btn-padding-block:       var(--btn-py, 0.313rem) !default;
-$btn-padding-inline:      var(--btn-px, 0.75rem) !default;  
-$btn-border-color:        var(--btn-bd-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
-$btn-radius:              var(--btn-radius, 0.188rem) !default;
-$btn-background-color:    var(--btn-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$btn-background-hover:    var(--btn-hover, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
-$btn-focus-shadow:        var(--focus-shadow, 0 0 0 0.12rem) !default;
-$btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
+$btn-text-color:            var(--btn-text, CanvasText) !default;
+$btn-font-size:             var(--btn-fs, inherit) !default;
+$btn-padding-block:         var(--btn-py, 0.313rem) !default;
+$btn-padding-inline:        var(--btn-px, 0.9rem) !default;  
+$btn-border-color:          var(--btn-bd-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
+$btn-radius:                var(--btn-radius, 0.188rem) !default;
+$btn-background-color:      var(--btn-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$btn-background-hover:      var(--btn-hover, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$btn-focus-shadow:          var(--focus-shadow, 0 0 0 0.12rem) !default;
+$btn-focus-shadow-color:    var(--focus-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
+
+// Pagination buttons
+$btn-pagination-previous:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m6 8 4-4v8z'/></svg>") !default;
+$btn-pagination-next:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m10 8-4 4-9e-7 -8z'/></svg>");
+$btn-pagination-up:         url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 6 4 4-8 7e-7z'/></svg>") !default;
+$btn-pagination-down:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 10-4-4h8z'/></svg>") !default;
+
 
 @mixin buttons-css {
 
@@ -53,54 +60,81 @@ $btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 22%, 
   --btn-bg: transparent;
 }
 
+// Button sizes
 .btn-xs {
   --btn-fs: 0.75em;
-  --btn-py: .15rem;
-  --btn-px: .35rem;
+  --btn-py: .188rem;
+  --btn-px: .625rem;
 }
 
 .btn-sm {
   --btn-fs: 0.88em;
   --btn-py: .25rem;
-  --btn-px: .5rem;
+  --btn-px: .75rem;
 }
 
 .btn-lg {
   --btn-fs: 1.1em;
-  --btn-py: .35rem;
-  --btn-px: .85rem;
+  --btn-py: 0.4rem;
+  --btn-px: 1rem;
 }
 
 .btn-xl {
   --btn-fs: 1.25em;
   --btn-py: .5rem;
-  --btn-px: 1rem;
+  --btn-px: 1.125rem;
 }
 
+.btn-img {
+  padding: 0;
+}
+
+.btn-img img {
+  border-radius: calc($btn-radius - 1px);
+}
+
+.btn-img:hover {
+  cursor: zoom-in;
+}
+
+// Button groups
 .btn-group, .btn-group-column {
   display: flex;
 }
 
-.btn-group *, .btn-group-column * {
+:where(.btn-group, .btn-group-column, .btn-flex, .btn-flex-column):is(ol, ul) {
+  list-style-type: "";
+  padding-inline-start: 0;
+}
+
+:is(.btn-group, .btn-group-column) *,
+:is(.btn-group, .btn-group-column) *:is(li) :is(.btn, button) {
   border-radius: 0;
+}
+
+:is(.btn-group, .btn-group-column) :focus {
+  box-shadow: none;
+}
+
+:where(.btn-group, .btn-group-column, .btn-flex, .btn-flex-column) [aria-current="page"] {
+  color: $btn-text-color;
+  background-color: $btn-background-hover;
 }
 
 .btn-group *:not(:first-child) {
   margin-inline-start: -1px;
 }
 
-.btn-group *:first-child {
+.btn-group *:first-child,
+.btn-group *:is(li):first-child * {
   border-start-start-radius: $btn-radius;
   border-end-start-radius: $btn-radius;
 }
 
-.btn-group *:last-child {
+.btn-group *:last-child,
+.btn-group *:is(li):last-child * {
   border-start-end-radius: $btn-radius;
   border-end-end-radius: $btn-radius;
-}
-
-.btn-group *:is(:focus), .btn-group-column *:is(:focus) {
-  box-shadow: none;
 }
 
 .btn-group-column {
@@ -112,18 +146,71 @@ $btn-focus-shadow-color:  var(--focus-color, color-mix(in srgb, CanvasText 22%, 
   margin-block-start: -1px;
 }
 
-.btn-group-column *:first-child {
+.btn-group-column *:first-child,
+.btn-group-column *:is(li):first-child * {
   border-start-start-radius: $btn-radius;
   border-start-end-radius: $btn-radius;
 }
 
-.btn-group-column *:last-child {
+.btn-group-column *:last-child,
+.btn-group-column *:is(li):last-child * {
   border-end-start-radius: $btn-radius;
   border-end-end-radius: $btn-radius;
 }
 
-.btn-group-column *:is(:focus) {
- // box-shadow: none;
+.btn-flex, .btn-flex-column {
+  display: flex;
+  gap: var(--btn-gap, 0.33rem);
+}
+
+.btn-flex {
+  flex-wrap: wrap;
+}
+
+.btn-flex-column {
+  flex-direction: column;
+  inline-size: fit-content;
+}
+
+.btn-previous, .btn-next, .btn-up, .btn-down, .btn-ico {
+  padding-inline: calc($btn-padding-inline * 0.66); 
+}
+
+:where(.btn-previous, .btn-next, .btn-up, .btn-down):before {
+  display: inline-block;
+  content: "";
+  block-size: 1em;
+  inline-size: 1em;  
+  vertical-align: -0.115em;
+  background-color: $btn-text-color;
+  mask-image: var(--svg);
+  mask-repeat: no-repeat;
+}
+
+.btn-previous {
+  --svg: #{$btn-pagination-previous};
+}
+
+.btn-next {
+  --svg: #{$btn-pagination-next};
+}
+
+.btn-up {
+  --svg: #{$btn-pagination-up};
+}
+
+.btn-down {
+  --svg: #{$btn-pagination-down};
+}
+
+:is(.btn-previous, .btn-next, .btn-up, .btn-down) span {
+  position: absolute;
+  block-size: 1px;
+  inline-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .btn-light {

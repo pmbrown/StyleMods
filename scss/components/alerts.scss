@@ -29,7 +29,8 @@ $close-alert:                 $alert-close-icon !default;
   background-color: $alert-background-color;
 }
 
-.alert * {
+.alert :last-of-type:is(p, ol, ul, dl, figure, address),
+.alert :last-of-type:is(p, ol, ul, dl, figure, address):has(+ [method="dialog"]) {
   margin-block-end: 0;
 }
 

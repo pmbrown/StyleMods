@@ -1,15 +1,22 @@
 // ---------------------------------------------------------- 
 // Dialogs
 // ----------------------------------------------------------
-$dialog-text-color:         var(--dialog-text, CanvasText) !default;
-$dialog-margin-top:         var(--dialog-mt, 1rem) !default;
-$dialog-padding-block:      var(--dialog-py, 0.75rem) !default;
-$dialog-padding-inline:     var(--dialog-px, 1rem) !default;
-$dialog-border-color:       var(--dialog-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
-$dialog-radius:             var(--dialog-radius, 0.125em) !default;
-$dialog-background-color:   var(--dialog-bg, Canvas) !default; 
-$dialog-transition:         var(--dialog-transition, 0.25s) !default;
-$dialog-backdrop:           color-mix(in srgb, black 50%, transparent) !default;
+$dialog-text-color:               var(--dialog-text, CanvasText) !default;
+$dialog-margin-top:               var(--dialog-mt, 1rem) !default;
+$dialog-padding-block:            var(--dialog-py, 1rem) !default;
+$dialog-padding-inline:           var(--dialog-px, 1rem) !default;
+$dialog-border-color:             var(--dialog-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$dialog-radius:                   var(--dialog-radius, 0.188rem) !default;
+$dialog-inner-radius:             calc($dialog-radius - 1px) !default;
+$dialog-background-color:         var(--dialog-bg, Canvas) !default; 
+$dialog-transition:               var(--dialog-transition, 0.25s) !default;
+$dialog-backdrop:                 color-mix(in srgb, black 50%, transparent) !default;
+$dialog-title-background-color:   var(--dialog-title-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$dialog-focus-shadow:             var(--dialog-focus-shadow, 0 0 0 0.12rem) !default;
+$dialog-focus-color:              var(--dialog-focus-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
+
+// Close button
+$dialog-close-icon:               url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>") !default;
 
 @mixin dialog-styles-css {
 
@@ -19,6 +26,7 @@ $dialog-backdrop:           color-mix(in srgb, black 50%, transparent) !default;
   max-block-size: calc(100vh - 2rem);
   inline-size: calc((100% - 6px) - 2em);
   max-inline-size: var(--dialog-width, fit-content);
+  margin: auto;
   margin-block-start: $dialog-margin-top;
   padding-block: $dialog-padding-block;
   padding-inline: $dialog-padding-inline;
@@ -29,6 +37,15 @@ $dialog-backdrop:           color-mix(in srgb, black 50%, transparent) !default;
   overscroll-behavior: contain; 
 }
 
+dialog:focus-visible {
+  outline: none;
+  box-shadow: $dialog-focus-shadow $dialog-focus-color;
+}
+
+dialog[open]::backdrop {
+  background-color: $dialog-backdrop;
+}
+
 dialog div[class="close-dialog"] {
   position: fixed;
   inset: 0;
@@ -37,8 +54,16 @@ dialog div[class="close-dialog"] {
   content: "";
 }
 
-dialog[open]::backdrop {
-  background-color: $dialog-backdrop;
+dialog :last-of-type:is(p, ol, ul, dl, figure, address) {
+  margin-block-end: 0;
+}
+
+dialog :last-of-type:is(p, ol, ul, dl, figure, address):has(+ [method="dialog"], + button:not(dialog .close-hidden, .close-dialog-ico)) {
+  margin-block-end: 1rem;
+}
+
+dialog:not(.dialog-img, .dialog-figure, :has(.dialog-header)):has(.close-dialog-ico) :first-child {
+  margin-inline-end: 3rem;
 }
 
 // Offcanvas
@@ -59,6 +84,128 @@ dialog[open]::backdrop {
 .dialog-offcanvas-end {
   margin-inline-start: auto;
   border-inline-start: 1px solid $dialog-border-color;
+}
+
+// Dialog header, image and figure padding reset
+dialog:has(.dialog-header), .dialog-img, .dialog-figure {
+  padding: 0;
+}
+
+// Dialog header
+.dialog-header {
+  position: sticky;
+  align-self: start;
+  inset-block-start: 0;
+  display: flex;
+  align-items: center;
+  align-content: start;
+  gap: 1rem;
+  padding-block: calc($dialog-padding-block * 0.66);
+  padding-inline: $dialog-padding-inline;
+  border-block-end: 1px solid $dialog-border-color;
+  border-start-start-radius: $dialog-inner-radius;
+  border-start-end-radius: $dialog-inner-radius;
+  background-color: $dialog-title-background-color;
+}
+
+.dialog-header:has(h1, h2, h3, h4, h5, h6) {
+  padding-block: calc($dialog-padding-block * 0.85);
+}
+
+.dialog-header .close-dialog-ico {
+  align-self: start;
+  margin-inline-start: auto;
+}
+
+.dialog-header :first-child {
+  margin-block-end: 0;
+}
+
+.dialog-body {
+  padding-block: $dialog-padding-block;
+  padding-inline: $dialog-padding-inline;
+}
+
+// Dialog images and figures
+.dialog-img img {
+  border-radius: $dialog-inner-radius;
+}
+
+.dialog-figure img {
+  border-start-start-radius: $dialog-inner-radius;
+  border-start-end-radius: $dialog-inner-radius;
+}
+
+:is(.dialog-img, .dialog-figure):has(.dialog-header) img {
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+}
+
+.dialog-figure figcaption {
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+}
+
+// Dialog image button
+.dialog-btn-img {
+  padding: 0;
+}
+
+.dialog-btn-img img {
+  border-radius: calc($dialog-radius - 1px);
+}
+
+.dialog-btn-img:hover {
+  cursor: zoom-in;
+}
+
+// Dialog icon close buttons
+.close-dialog-ico {
+  padding-block: 0.25rem;
+  padding-inline: 0.55rem;
+}
+
+.close-dialog-ico:not(.dialog-header .close-dialog-ico) {
+  position: absolute;
+  inset-block-start: calc($dialog-padding-block * 0.66);
+  inset-inline-end: calc($dialog-padding-block * 0.75);
+}
+
+.close-dialog-ico:is(.dialog-offcanvas-start .close-dialog-ico, .dialog-offcanvas-end .close-dialog-ico) {
+  inset-block-start: $dialog-padding-block;
+  inset-inline-end: $dialog-padding-block;
+}
+
+.close-dialog-ico:before, .close-dialog-ico-b:before, .close-dialog-ico-a:after {
+  --ico: var(--dialog-text, CanvasText);
+  display: inline-block;
+  content: "";
+  block-size: 1em;
+  inline-size: 1em;  
+  vertical-align: -.115em;
+  background-color: var(--ico);
+  mask-image: #{$dialog-close-icon};
+  mask-repeat: no-repeat;
+}
+
+.close-dialog-ico-b:before {
+  vertical-align: -.15em;
+  margin-inline-end: 0.33rem;
+}
+
+.close-dialog-ico-a:after {
+  vertical-align: -.175em;
+  margin-inline-start: 0.33rem;
+}
+
+dialog .close-hidden, .close-dialog-ico span, .dialog-btn-img span {
+  position: absolute;
+  block-size: 1px;
+  inline-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 // Color-scheme
