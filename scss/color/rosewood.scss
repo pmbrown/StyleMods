@@ -109,6 +109,22 @@ $dialog-rosewood: (
   "dialog-title-bg": $rosewood-bg,
 ) !default;
 
+$dropdown-rosewood: (
+  "dropdown-text": $rosewood-bg-text,
+  "dropdown-btn-text": $rosewood-bg-text,
+  "dropdown-ico": $rosewood-bg-text,
+  "ico": $rosewood-bg-text,
+  "link": $rosewood-bg-text,
+  "visited": $rosewood-bg-text,
+  "hover": $rosewood-bg-text,
+  "dropdown-bg": $rosewood-bg,
+  "dropdown-btn-bg": $rosewood-bg,
+  "dropdown-link-hover": $rosewood-bg-dark,
+  "dropdown-btn-hover": $rosewood-bg-dark,
+  "dropdown-bd-color": $rosewood-bg-light,
+  "dropdown-focus-color": $rosewood-bg-light,
+) !default;
+
 $list-group-rosewood: (
   "list-group-text": $rosewood-bg-text,
   "ico": $rosewood-bg-text,
@@ -201,6 +217,14 @@ $popover-rosewood: (
   } 
 }
 
+@mixin dropdown-rosewood-css {
+  .dropdown-rosewood {
+    @each $name, $value in $dropdown-rosewood {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-rosewood-css {
   .list-group-rosewood {
     @each $name, $value in $list-group-rosewood {
@@ -227,6 +251,7 @@ $popover-rosewood: (
   @include button-rosewood-css;
   @include card-rosewood-css;
   @include dialog-rosewood-css;
+  @include dropdown-rosewood-css;
   @include list-group-rosewood-css;
   @include popover-rosewood-css;
 }
@@ -239,6 +264,7 @@ $popover-rosewood: (
   @include button-rosewood-css;
   @include card-rosewood-css;
   @include dialog-rosewood-css;
+  @include dropdown-rosewood-css;
   @include list-group-rosewood-css;
   @include popover-rosewood-css;
 }

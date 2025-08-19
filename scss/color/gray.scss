@@ -109,6 +109,22 @@ $dialog-gray: (
   "dialog-title-bg": $gray-bg,
 ) !default;
 
+$dropdown-gray: (
+  "dropdown-text": $gray-bg-text,
+  "dropdown-btn-text": $gray-bg-text,
+  "dropdown-ico": $gray-bg-text,
+  "ico": $gray-bg-text,
+  "link": $gray-bg-text,
+  "visited": $gray-bg-text,
+  "hover": $gray-bg-text,
+  "dropdown-bg": $gray-bg,
+  "dropdown-btn-bg": $gray-bg,
+  "dropdown-link-hover": $gray-bg-dark,
+  "dropdown-btn-hover": $gray-bg-dark,
+  "dropdown-bd-color": $gray-bg-light,
+  "dropdown-focus-color": $gray-bg-light,
+) !default;
+
 $list-group-gray: (
   "list-group-text": $gray-bg-text,
   "ico": $gray-bg-text,
@@ -201,6 +217,14 @@ $popover-gray: (
   } 
 }
 
+@mixin dropdown-gray-css {
+  .dropdown-gray {
+    @each $name, $value in $dropdown-gray {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-gray-css {
   .list-group-gray {
     @each $name, $value in $list-group-gray {
@@ -227,6 +251,7 @@ $popover-gray: (
   @include button-gray-css;
   @include card-gray-css;
   @include dialog-gray-css;
+  @include dropdown-gray-css;
   @include list-group-gray-css;
   @include popover-gray-css;
 }
@@ -239,6 +264,7 @@ $popover-gray: (
   @include button-gray-css;
   @include card-gray-css;
   @include dialog-gray-css;
+  @include dropdown-gray-css;
   @include list-group-gray-css;
   @include popover-gray-css;
 }

@@ -109,6 +109,22 @@ $dialog-green: (
   "dialog-title-bg": $green-bg,
 ) !default;
 
+$dropdown-green: (
+  "dropdown-text": $green-bg-text,
+  "dropdown-btn-text": $green-bg-text,
+  "dropdown-ico": $green-bg-text,
+  "ico": $green-bg-text,
+  "link": $green-bg-text,
+  "visited": $green-bg-text,
+  "hover": $green-bg-text,
+  "dropdown-bg": $green-bg,
+  "dropdown-btn-bg": $green-bg,
+  "dropdown-link-hover": $green-bg-dark,
+  "dropdown-btn-hover": $green-bg-dark,
+  "dropdown-bd-color": $green-bg-light,
+  "dropdown-focus-color": $green-bg-light,
+) !default;
+
 $list-group-green: (
   "list-group-text": $green-bg-text,
   "ico": $green-bg-text,
@@ -201,6 +217,14 @@ $popover-green: (
   } 
 }
 
+@mixin dropdown-green-css {
+  .dropdown-green {
+    @each $name, $value in $dropdown-green {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-green-css {
   .list-group-green {
     @each $name, $value in $list-group-green {
@@ -227,6 +251,7 @@ $popover-green: (
   @include button-green-css;
   @include card-green-css;
   @include dialog-green-css;
+  @include dropdown-green-css;
   @include list-group-green-css;
   @include popover-green-css;
 }
@@ -239,6 +264,7 @@ $popover-green: (
   @include button-green-css;
   @include card-green-css;
   @include dialog-green-css;
+  @include dropdown-green-css;
   @include list-group-green-css;
   @include popover-green-css;
 }

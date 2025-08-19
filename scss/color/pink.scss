@@ -109,6 +109,22 @@ $dialog-pink: (
   "dialog-title-bg": $pink-bg,
 ) !default;
 
+$dropdown-pink: (
+  "dropdown-text": $pink-bg-text,
+  "dropdown-btn-text": $pink-bg-text,
+  "dropdown-ico": $pink-bg-text,
+  "ico": $pink-bg-text,
+  "link": $pink-bg-text,
+  "visited": $pink-bg-text,
+  "hover": $pink-bg-text,
+  "dropdown-bg": $pink-bg,
+  "dropdown-btn-bg": $pink-bg,
+  "dropdown-link-hover": $pink-bg-dark,
+  "dropdown-btn-hover": $pink-bg-dark,
+  "dropdown-bd-color": $pink-bg-light,
+  "dropdown-focus-color": $pink-bg-light,
+) !default;
+
 $list-group-pink: (
   "list-group-text": $pink-bg-text,
   "ico": $pink-bg-text,
@@ -201,6 +217,14 @@ $popover-pink: (
   } 
 }
 
+@mixin dropdown-pink-css {
+  .dropdown-pink {
+    @each $name, $value in $dropdown-pink {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-pink-css {
   .list-group-pink {
     @each $name, $value in $list-group-pink {
@@ -227,6 +251,7 @@ $popover-pink: (
   @include button-pink-css;
   @include card-pink-css;
   @include dialog-pink-css;
+  @include dropdown-pink-css;
   @include list-group-pink-css;
   @include popover-pink-css;
 }
@@ -239,6 +264,7 @@ $popover-pink: (
   @include button-pink-css;
   @include card-pink-css;
   @include dialog-pink-css;
+  @include dropdown-pink-css;
   @include list-group-pink-css;
   @include popover-pink-css;
 }

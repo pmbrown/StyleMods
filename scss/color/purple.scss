@@ -109,6 +109,22 @@ $dialog-purple: (
   "dialog-title-bg": $purple-bg,
 ) !default;
 
+$dropdown-purple: (
+  "dropdown-text": $purple-bg-text,
+  "dropdown-btn-text": $purple-bg-text,
+  "dropdown-ico": $purple-bg-text,
+  "ico": $purple-bg-text,
+  "link": $purple-bg-text,
+  "visited": $purple-bg-text,
+  "hover": $purple-bg-text,
+  "dropdown-bg": $purple-bg,
+  "dropdown-btn-bg": $purple-bg,
+  "dropdown-link-hover": $purple-bg-dark,
+  "dropdown-btn-hover": $purple-bg-dark,
+  "dropdown-bd-color": $purple-bg-light,
+  "dropdown-focus-color": $purple-bg-light,
+) !default;
+
 $list-group-purple: (
   "list-group-text": $purple-bg-text,
   "ico": $purple-bg-text,
@@ -201,6 +217,14 @@ $popover-purple: (
   } 
 }
 
+@mixin dropdown-purple-css {
+  .dropdown-purple {
+    @each $name, $value in $dropdown-purple {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-purple-css {
   .list-group-purple {
     @each $name, $value in $list-group-purple {
@@ -227,6 +251,7 @@ $popover-purple: (
   @include button-purple-css;
   @include card-purple-css;
   @include dialog-purple-css;
+  @include dropdown-purple-css;
   @include list-group-purple-css;
   @include popover-purple-css;
 }
@@ -239,6 +264,7 @@ $popover-purple: (
   @include button-purple-css;
   @include card-purple-css;
   @include dialog-purple-css;
+  @include dropdown-purple-css;
   @include list-group-purple-css;
   @include popover-purple-css;
 }

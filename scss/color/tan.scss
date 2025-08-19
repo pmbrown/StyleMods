@@ -109,6 +109,22 @@ $dialog-tan: (
   "dialog-title-bg": $tan-bg,
 ) !default;
 
+$dropdown-tan: (
+  "dropdown-text": $tan-bg-text,
+  "dropdown-btn-text": $tan-bg-text,
+  "dropdown-ico": $tan-bg-text,
+  "ico": $tan-bg-text,
+  "link": $tan-bg-text,
+  "visited": $tan-bg-text,
+  "hover": $tan-bg-text,
+  "dropdown-bg": $tan-bg,
+  "dropdown-btn-bg": $tan-bg,
+  "dropdown-link-hover": $tan-bg-dark,
+  "dropdown-btn-hover": $tan-bg-dark,
+  "dropdown-bd-color": $tan-bg-light,
+  "dropdown-focus-color": $tan-bg-light,
+) !default;
+
 $list-group-tan: (
   "list-group-text": $tan-bg-text,
   "ico": $tan-bg-text,
@@ -201,6 +217,14 @@ $popover-tan: (
   } 
 }
 
+@mixin dropdown-tan-css {
+  .dropdown-tan {
+    @each $name, $value in $dropdown-tan {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-tan-css {
   .list-group-tan {
     @each $name, $value in $list-group-tan {
@@ -227,6 +251,7 @@ $popover-tan: (
   @include button-tan-css;
   @include card-tan-css;
   @include dialog-tan-css;
+  @include dropdown-tan-css;
   @include list-group-tan-css;
   @include popover-tan-css;
 }
@@ -239,6 +264,7 @@ $popover-tan: (
   @include button-tan-css;
   @include card-tan-css;
   @include dialog-tan-css;
+  @include dropdown-tan-css;
   @include list-group-tan-css;
   @include popover-tan-css;
 }

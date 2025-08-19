@@ -114,6 +114,15 @@ $theme-dialog: (
   "dialog-title-bg": $theme-surface-2,
 ) !default;
 
+$theme-dropdown: (
+  "dropdown-bg": $theme-surface,
+  "dropdown-bd-color": $theme-surface-3,
+  "dropdown-btn-bg": $theme-surface-1,
+  "dropdown-btn-hover": $theme-surface-2,
+  "dropdown-focus-color": $theme-surface-4,
+  "dropdown-link-hover": $theme-surface-1,
+) !default;
+
 $theme-list-group: (
   "list-group-dt-bg": $theme-surface-2,
   "list-group-hover": $theme-surface-1,
@@ -247,6 +256,18 @@ $theme-popover: (
   }
 }
 
+@mixin theme-dropdown-variables {
+  @each $name, $value in $theme-dropdown {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin theme-dropdown-css {
+  #{$theme-tokens} {
+    @include theme-dropdown-variables;
+  }
+}
+
 @mixin theme-list-group-variables {
   @each $name, $value in $theme-list-group {
     --#{$name}: #{$value};
@@ -280,6 +301,7 @@ $theme-popover: (
   @include theme-badge-variables;
   @include theme-border-variables;
   @include theme-dialog-variables;
+  @include theme-dropdown-variables;
   @include theme-card-variables;
   @include theme-list-group-variables;
   @include theme-popover-variables;

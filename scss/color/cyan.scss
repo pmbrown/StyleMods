@@ -109,6 +109,22 @@ $dialog-cyan: (
   "dialog-title-bg": $cyan-bg,
 ) !default;
 
+$dropdown-cyan: (
+  "dropdown-text": $cyan-bg-text,
+  "dropdown-btn-text": $cyan-bg-text,
+  "dropdown-ico": $cyan-bg-text,
+  "ico": $cyan-bg-text,
+  "link": $cyan-bg-text,
+  "visited": $cyan-bg-text,
+  "hover": $cyan-bg-text,
+  "dropdown-bg": $cyan-bg,
+  "dropdown-btn-bg": $cyan-bg,
+  "dropdown-link-hover": $cyan-bg-dark,
+  "dropdown-btn-hover": $cyan-bg-dark,
+  "dropdown-bd-color": $cyan-bg-light,
+  "dropdown-focus-color": $cyan-bg-light,
+) !default;
+
 $list-group-cyan: (
   "list-group-text": $cyan-bg-text,
   "ico": $cyan-bg-text,

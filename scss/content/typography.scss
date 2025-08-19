@@ -59,6 +59,8 @@ $blockquote-border:           1px !default;
 $blockquote-border-left:      10px !default;
 $details-margin-bottom:       1rem !default;
 $summary-open-margin-bottom:  0.75rem !default;
+$summary-focus-shadow:        var(--summary-shadow, 0 0 0 0.12rem) !default;
+$summary-focus-color:         var(--summary-color, color-mix(in srgb, CanvasText 22%, var(--background))) !default;
 $figure-margin-bottom:        1rem !default;
 $figcaption-padding-top:      0.25em !default;
 $hr-color:                    color-mix(in srgb, CanvasText 22%, Canvas) !default;
@@ -256,6 +258,12 @@ a > :where(code) {
 
 :where(details) {
   margin-block-end: $details-margin-bottom;
+}
+
+:where(summary:focus-visible) {
+  outline: none;
+  border-radius: 0.125em;
+  box-shadow: $summary-focus-shadow $summary-focus-color;
 }
 
 :where(summary) {

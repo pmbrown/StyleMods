@@ -109,6 +109,22 @@ $dialog-blue: (
   "dialog-title-bg": $blue-bg,
 ) !default;
 
+$dropdown-blue: (
+  "dropdown-text": $blue-bg-text,
+  "dropdown-btn-text": $blue-bg-text,
+  "dropdown-ico": $blue-bg-text,
+  "ico": $blue-bg-text,
+  "link": $blue-bg-text,
+  "visited": $blue-bg-text,
+  "hover": $blue-bg-text,
+  "dropdown-bg": $blue-bg,
+  "dropdown-btn-bg": $blue-bg,
+  "dropdown-link-hover": $blue-bg-dark,
+  "dropdown-btn-hover": $blue-bg-dark,
+  "dropdown-bd-color": $blue-bg-light,
+  "dropdown-focus-color": $blue-bg-light,
+) !default;
+
 $list-group-blue: (
   "list-group-text": $blue-bg-text,
   "ico": $blue-bg-text,
@@ -201,6 +217,14 @@ $popover-blue: (
   } 
 }
 
+@mixin dropdown-blue-css {
+  .dropdown-blue {
+    @each $name, $value in $dropdown-blue {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-blue-css {
   .list-group-blue {
     @each $name, $value in $list-group-blue {
@@ -227,6 +251,7 @@ $popover-blue: (
   @include button-blue-css;
   @include card-blue-css;
   @include dialog-blue-css;
+  @include dropdown-blue-css;
   @include list-group-blue-css;
   @include popover-blue-css;
 }
@@ -239,6 +264,7 @@ $popover-blue: (
   @include button-blue-css;
   @include card-blue-css;
   @include dialog-blue-css;
+  @include dropdown-blue-css;
   @include list-group-blue-css;
   @include popover-blue-css;
 }

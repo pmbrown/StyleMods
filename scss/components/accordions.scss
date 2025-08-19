@@ -3,7 +3,8 @@
 // ----------------------------------------------------------
 $summary-text-color:          var(--summary-text, CanvasText) !default;
 $summary-background-color:    var(--summary-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$summary-focus-color:         var(--summary-focus, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$summary-background-focus:    var(--summary-focus, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+
 $accordion-padding-block:     var(--accordion-py, 0.75rem) !default;
 $accordion-padding-inline:    var(--accordion-px, 1rem) !default;
 $accordion-border-color:      var(--accordion-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
@@ -48,7 +49,7 @@ $close-accordion:             $accordion-minus-icon !default;
 
 .accordion details summary:focus-visible {
   outline: none;
-  background-color: $summary-focus-color;
+  background-color: $summary-background-focus;
 }
 
 .accordion details:first-child summary {

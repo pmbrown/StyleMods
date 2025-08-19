@@ -3,7 +3,6 @@
 // ----------------------------------------------------------
 $list-group-text-color:           var(--list-group-text, CanvasText) !default;
 $list-group-background-color:     var(--list-group-bg, Canvas) !default;
-$list-group-link-color:           var(--link, LinkText) !default;
 $list-group-dt-font-weight:       var(--dt-fw, 500) !default;
 $list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
 $list-links-background-hover:     var(--list-group-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
@@ -54,7 +53,6 @@ $list-group-inner-radius:         calc($list-group-radius - 1px) !default;
 
 // List links
 :where(.list-links a) {
-  color: $list-group-link-color;
   text-decoration: none;
   display: block;
   padding-block: $list-group-padding-block;

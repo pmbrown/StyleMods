@@ -17,7 +17,7 @@ $button-border-color:      var(--btn-bd-color, color-mix(in srgb, CanvasText 22%
 $button-radius:            var(--btn-radius, 0.188rem) !default;
 $button-background-color:  var(--btn-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
 $button-background-hover:  var(--btn-hover, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
-$input-focus-shadow:       var(--focus-shadow, 0 0 0 0.12rem) !default;
+$input-focus-shadow:       var(--focus-shadow, 0 0 0 0.06rem) !default;
 $input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
 
 @mixin forms-buttons-css {

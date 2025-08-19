@@ -109,6 +109,22 @@ $dialog-steelblue: (
   "dialog-title-bg": $steelblue-bg,
 ) !default;
 
+$dropdown-steelblue: (
+  "dropdown-text": $steelblue-bg-text,
+  "dropdown-btn-text": $steelblue-bg-text,
+  "dropdown-ico": $steelblue-bg-text,
+  "ico": $steelblue-bg-text,
+  "link": $steelblue-bg-text,
+  "visited": $steelblue-bg-text,
+  "hover": $steelblue-bg-text,
+  "dropdown-bg": $steelblue-bg,
+  "dropdown-btn-bg": $steelblue-bg,
+  "dropdown-link-hover": $steelblue-bg-dark,
+  "dropdown-btn-hover": $steelblue-bg-dark,
+  "dropdown-bd-color": $steelblue-bg-light,
+  "dropdown-focus-color": $steelblue-bg-light,
+) !default;
+
 $list-group-steelblue: (
   "list-group-text": $steelblue-bg-text,
   "ico": $steelblue-bg-text,
@@ -201,6 +217,14 @@ $popover-steelblue: (
   } 
 }
 
+@mixin dropdown-steelblue-css {
+  .dropdown-steelblue {
+    @each $name, $value in $dropdown-steelblue {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-steelblue-css {
   .list-group-steelblue {
     @each $name, $value in $list-group-steelblue {
@@ -227,6 +251,7 @@ $popover-steelblue: (
   @include button-steelblue-css;
   @include card-steelblue-css;
   @include dialog-steelblue-css;
+  @include dropdown-steelblue-css;
   @include list-group-steelblue-css;
   @include popover-steelblue-css;
 }
@@ -239,6 +264,7 @@ $popover-steelblue: (
   @include button-steelblue-css;
   @include card-steelblue-css;
   @include dialog-steelblue-css;
+  @include dropdown-steelblue-css;
   @include list-group-steelblue-css;
   @include popover-steelblue-css;
 }

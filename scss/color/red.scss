@@ -109,6 +109,22 @@ $dialog-red: (
   "dialog-title-bg": $red-bg,
 ) !default;
 
+$dropdown-red: (
+  "dropdown-text": $red-bg-text,
+  "dropdown-btn-text": $red-bg-text,
+  "dropdown-ico": $red-bg-text,
+  "ico": $red-bg-text,
+  "link": $red-bg-text,
+  "visited": $red-bg-text,
+  "hover": $red-bg-text,
+  "dropdown-bg": $red-bg,
+  "dropdown-btn-bg": $red-bg,
+  "dropdown-link-hover": $red-bg-dark,
+  "dropdown-btn-hover": $red-bg-dark,
+  "dropdown-bd-color": $red-bg-light,
+  "dropdown-focus-color": $red-bg-light,
+) !default;
+
 $list-group-red: (
   "list-group-text": $red-bg-text,
   "ico": $red-bg-text,
@@ -201,6 +217,14 @@ $popover-red: (
   } 
 }
 
+@mixin dropdown-red-css {
+  .dropdown-red {
+    @each $name, $value in $dropdown-red {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-red-css {
   .list-group-red {
     @each $name, $value in $list-group-red {
@@ -227,6 +251,7 @@ $popover-red: (
   @include button-red-css;
   @include card-red-css;
   @include dialog-red-css;
+  @include dropdown-red-css;
   @include list-group-red-css;
   @include popover-red-css;
 }
@@ -239,6 +264,7 @@ $popover-red: (
   @include button-red-css;
   @include card-red-css;
   @include dialog-red-css;
+  @include dropdown-red-css;
   @include list-group-red-css;
   @include popover-red-css;
 }

@@ -109,6 +109,22 @@ $dialog-olive: (
   "dialog-title-bg": $olive-bg,
 ) !default;
 
+$dropdown-olive: (
+  "dropdown-text": $olive-bg-text,
+  "dropdown-btn-text": $olive-bg-text,
+  "dropdown-ico": $olive-bg-text,
+  "ico": $olive-bg-text,
+  "link": $olive-bg-text,
+  "visited": $olive-bg-text,
+  "hover": $olive-bg-text,
+  "dropdown-bg": $olive-bg,
+  "dropdown-btn-bg": $olive-bg,
+  "dropdown-link-hover": $olive-bg-dark,
+  "dropdown-btn-hover": $olive-bg-dark,
+  "dropdown-bd-color": $olive-bg-light,
+  "dropdown-focus-color": $olive-bg-light,
+) !default;
+
 $list-group-olive: (
   "list-group-text": $olive-bg-text,
   "ico": $olive-bg-text,
@@ -201,6 +217,14 @@ $popover-olive: (
   } 
 }
 
+@mixin dropdown-olive-css {
+  .dropdown-olive {
+    @each $name, $value in $dropdown-olive {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-olive-css {
   .list-group-olive {
     @each $name, $value in $list-group-olive {
@@ -227,6 +251,7 @@ $popover-olive: (
   @include button-olive-css;
   @include card-olive-css;
   @include dialog-olive-css;
+  @include dropdown-olive-css;
   @include list-group-olive-css;
   @include popover-olive-css;
 }
@@ -239,6 +264,7 @@ $popover-olive: (
   @include button-olive-css;
   @include card-olive-css;
   @include dialog-olive-css;
+  @include dropdown-olive-css;
   @include list-group-olive-css;
   @include popover-olive-css;
 }

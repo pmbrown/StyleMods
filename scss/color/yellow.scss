@@ -109,6 +109,23 @@ $dialog-yellow: (
   "dialog-title-bg": $yellow-bg,
 ) !default;
 
+$dropdown-yellow: (
+  "dropdown-text": $yellow-bg-text,
+  "dropdown-btn-text": $yellow-bg-text,
+  "dropdown-ico": $yellow-bg-text,
+  "ico": $yellow-bg-text,
+  "link": $yellow-bg-text,
+  "visited": $yellow-bg-text,
+  "hover": $yellow-bg-text,
+  "dropdown-bg": $yellow-bg,
+  "dropdown-btn-bg": $yellow-bg,
+  "dropdown-link-hover": $yellow-bg-dark,
+  "dropdown-btn-hover": $yellow-bg-dark,
+  "dropdown-bd-color": $yellow-bg-light,
+  "dropdown-focus-color": $yellow-bg-light,
+) !default;
+
+
 $list-group-yellow: (
   "list-group-text": $yellow-bg-text,
   "ico": $yellow-bg-text,
@@ -201,6 +218,14 @@ $popover-yellow: (
   } 
 }
 
+@mixin dropdown-yellow-css {
+  .dropdown-steelblue {
+    @each $name, $value in $dropdown-yellow {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-yellow-css {
   .list-group-yellow {
     @each $name, $value in $list-group-yellow {
@@ -227,6 +252,7 @@ $popover-yellow: (
   @include button-yellow-css;
   @include card-yellow-css;
   @include dialog-yellow-css;
+  @include dropdown-yellow-css;
   @include list-group-yellow-css;
   @include popover-yellow-css;
 }
@@ -239,6 +265,7 @@ $popover-yellow: (
   @include button-yellow-css;
   @include card-yellow-css;
   @include dialog-yellow-css;
+  @include dropdown-yellow-css;
   @include list-group-yellow-css;
   @include popover-yellow-css;
 }

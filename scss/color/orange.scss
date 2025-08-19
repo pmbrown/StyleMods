@@ -109,6 +109,23 @@ $dialog-orange: (
   "dialog-title-bg": $orange-bg,
 ) !default;
 
+$dropdown-orange: (
+  "dropdown-text": $orange-bg-text,
+  "dropdown-btn-text": $orange-bg-text,
+  "dropdown-ico": $orange-bg-text,
+  "ico": $orange-bg-text,
+  "link": $orange-bg-text,
+  "visited": $orange-bg-text,
+  "hover": $orange-bg-text,
+  "dropdown-bg": $orange-bg,
+  "dropdown-btn-bg": $orange-bg,
+  "dropdown-link-hover": $orange-bg-dark,
+  "dropdown-btn-hover": $orange-bg-dark,
+  "dropdown-bd-color": $orange-bg-light,
+  "dropdown-focus-color": $orange-bg-light,
+) !default;
+
+
 $list-group-orange: (
   "list-group-text": $orange-bg-text,
   "ico": $orange-bg-text,
@@ -201,6 +218,14 @@ $popover-orange: (
   } 
 }
 
+@mixin dropdown-orange-css {
+  .dropdown-orange {
+    @each $name, $value in $dropdown-orange {
+      --#{$name}: #{$value};
+    }
+  } 
+}
+
 @mixin list-group-orange-css {
   .list-group-orange {
     @each $name, $value in $list-group-orange {
@@ -227,6 +252,7 @@ $popover-orange: (
   @include button-orange-css;
   @include card-orange-css;
   @include dialog-orange-css;
+  @include dropdown-orange-css;
   @include list-group-orange-css;
   @include popover-orange-css;
 }
@@ -239,6 +265,7 @@ $popover-orange: (
   @include button-orange-css;
   @include card-orange-css;
   @include dialog-orange-css;
+  @include dropdown-orange-css;
   @include list-group-orange-css;
   @include popover-orange-css;
 }
