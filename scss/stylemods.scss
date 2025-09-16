@@ -1,0 +1,224 @@
+// ----------------------------------------------------------
+// StyleMods framework
+// ----------------------------------------------------------
+@use "configuration" as *;
+@use "framework" as *;
+
+// ----------------------------------------------------------
+// Cascade layers
+// ----------------------------------------------------------
+@if $enable-layer-order {
+  @include cascade-layers;
+}
+
+// ----------------------------------------------------------
+// Color variable tokens
+// ----------------------------------------------------------
+@if $enable-color-layer {
+  @layer #{$color-layer} {
+    @include color-framework;
+  }
+}
+@else {
+  @include color-framework;
+}
+
+// ----------------------------------------------------------
+// Content
+// ----------------------------------------------------------
+@if $enable-content-layer {
+  @layer #{$content-layer} {
+    @include content-framework;
+  }
+}
+@else {
+  @include content-framework;
+}
+
+// ----------------------------------------------------------
+// Components
+// ----------------------------------------------------------
+@if $enable-components-layer {
+  @layer #{$components-layer} {
+    @include components-framework;
+  }
+}
+@else {
+  @include components-framework;
+}
+
+// ----------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------
+@if $enable-utilities-layer {
+  @layer #{$utilities-layer} {
+    @include utilities-framework;
+  }
+}
+@else {
+  @include utilities-framework;
+}
+
+// ----------------------------------------------------------
+// Layout
+// ----------------------------------------------------------
+@if $enable-layout-layer {
+  @layer #{$layout-layer} {
+    @include layout-framework;
+  }
+}
+@else {
+  @include layout-framework;
+}
+
+// ----------------------------------------------------------
+// XXL breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-xxl}) {
+  @if $enable-utilities-layer-xxl {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-xxl;
+    }
+  }
+  @if $enable-layout-layer-xxl {
+    @layer #{$layout-layer} {
+      @include layout-framework-xxl;
+    }
+  }
+  @else {
+    @include utilities-framework-xxl;
+    @include layout-framework-xxl;
+  }
+}
+
+// ----------------------------------------------------------
+// XL breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-xl}) {
+  @if $enable-utilities-layer-xl {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-xl;
+    }
+  }
+  @if $enable-layout-layer-xl {
+    @layer #{$layout-layer} {
+      @include layout-framework-xl;
+    }
+  }
+  @else {
+    @include utilities-framework-xl;
+    @include layout-framework-xl;
+  }
+}
+
+// ----------------------------------------------------------
+// LG breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-lg}) {
+  @if $enable-utilities-layer-lg {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-lg;
+    }
+  }
+  @if $enable-layout-layer-lg {
+    @layer #{$layout-layer} {
+      @include layout-framework-lg;
+    }
+  }
+  @else {
+    @include utilities-framework-lg;
+    @include layout-framework-lg;
+  }
+}
+
+// ----------------------------------------------------------
+// MD breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-md}) {
+  @if $enable-utilities-layer-md {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-md;
+    }
+  }
+  @if $enable-layout-layer-md {
+    @layer #{$layout-layer} {
+      @include layout-framework-md;
+    }
+  }
+  @else {
+    @include utilities-framework-md;
+    @include layout-framework-md;
+  }
+}
+
+// ----------------------------------------------------------
+// SM breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-sm}) {
+  @if $enable-utilities-layer-sm {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-sm;
+    }
+  }
+  @if $enable-layout-layer-sm {
+    @layer #{$layout-layer} {
+      @include layout-framework-sm;
+    }
+  }
+  @else {
+    @include utilities-framework-sm;
+    @include layout-framework-sm;
+  }
+}
+
+// ----------------------------------------------------------
+// XS breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-xs}) {
+  @if $enable-utilities-layer-xs {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-xs;
+    }
+  }
+  @if $enable-layout-layer-xs {
+    @layer #{$layout-layer} {
+      @include layout-framework-xs;
+    }
+  }
+  @else {
+    @include utilities-framework-xs;
+    @include layout-framework-xs;
+  }
+}
+
+// ----------------------------------------------------------
+// XXS breakpoints
+// ----------------------------------------------------------
+@media (#{$breakpoint-query} #{$breakpoint-xxs}) {
+  @if $enable-utilities-layer-xxs {
+    @layer #{$utilities-layer} {
+      @include utilities-framework-xxs;
+    }
+  }
+  @if $enable-layout-layer-xxs {
+    @layer #{$layout-layer} {
+      @include layout-framework-xxs;
+    }
+  }
+  @else {
+    @include utilities-framework-xxs;
+    @include layout-framework-xxs;
+  }
+}
+
+// ----------------------------------------------------------
+// Icons
+// ----------------------------------------------------------
+@if $enable-icons-layer {
+  @layer #{$icons-layer} {
+    @include icons-framework;
+  }
+}
+@else {
+  @include icons-framework;
+}

@@ -1,0 +1,673 @@
+// ---------------------------------------------------------- 
+// StyleMods framework configuration
+// ----------------------------------------------------------
+// Global variables token container
+$variables-tokens:              ':where(html)' !default;
+
+// ----------------------------------------------------------
+// Cascade layers
+// ----------------------------------------------------------
+$color-layer:                   color !default;
+$content-layer:                 content !default;
+$components-layer:              components !default;
+$utilities-layer:               utilities !default;
+$layout-layer:                  layout !default;
+$icons-layer:                   icons !default;
+$layer-order:                   'color, content, components, utilities, layout, icons' !default;
+
+$enable-layer-order:            false !default;
+$enable-color-layer:            false !default;
+$enable-content-layer:          false !default;
+$enable-components-layer:       false !default;
+$enable-utilities-layer:        false !default;
+$enable-layout-layer:           false !default;
+$enable-icons-layer:            false !default;
+
+$enable-utilities-layer-xxl:    false !default;
+$enable-utilities-layer-xl:     false !default;
+$enable-utilities-layer-lg:     false !default;
+$enable-utilities-layer-md:     false !default;
+$enable-utilities-layer-sm:     false !default;
+$enable-utilities-layer-xs:     false !default;
+$enable-utilities-layer-xxs:    false !default;
+$enable-layout-layer-xxl:       false !default;
+$enable-layout-layer-xl:        false !default;
+$enable-layout-layer-lg:        false !default;
+$enable-layout-layer-md:        false !default;
+$enable-layout-layer-sm:        false !default;
+$enable-layout-layer-xs:        false !default;
+$enable-layout-layer-xxs:       false !default;
+
+// ----------------------------------------------------------
+// Breakpoints for enabled responsive modifiers
+// ----------------------------------------------------------
+$breakpoint-query:              'width <=' !default;
+$breakpoint-xxl:                1920px !default;
+$breakpoint-xl:                 1600px !default;
+$breakpoint-lg:                 1280px !default;
+$breakpoint-md:                 1024px !default;
+$breakpoint-sm:                 768px !default;
+$breakpoint-xs:                 480px !default;
+$breakpoint-xxs:                360px !default;
+
+// ----------------------------------------------------------
+// Content
+// ----------------------------------------------------------
+$enable-typography:             false !default;
+$enable-forms-buttons:          false !default;
+$enable-tables:                 false !default;
+$enable-vis-hidden:             false !default;
+$enable-smooth-scroll:          false !default;
+$enable-view-transition:        false !default;
+
+// ----------------------------------------------------------
+// Components
+// ----------------------------------------------------------
+$enable-accordions:             false !default;
+$enable-alerts:                 false !default;
+$enable-badges:                 false !default;
+$enable-buttons:                false !default;
+$enable-cards:                  false !default;
+$enable-dialogs:                false !default;
+$enable-dialogs-transition:     false !default;
+$enable-dropdowns:              false !default;
+$enable-list-groups:            false !default;
+$enable-popovers:               false !default;
+$enable-popovers-transition:    false !default;
+
+// ----------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------
+$enable-backgrounds:            false !default;
+$enable-borders:                false !default;
+$enable-gradients:              false !default;
+$enable-images:                 false !default;
+$enable-lists:                  false !default;
+$enable-opacity:                false !default;
+$enable-shadows:                false !default;
+$enable-text:                   false !default;
+
+// ---------------------------------------------------------- 
+// Colors
+// ----------------------------------------------------------
+// Color variables
+$enable-surface:                false !default;
+$enable-gray:                   false !default;
+$enable-blue:                   false !default;
+$enable-red:                    false !default;
+$enable-green:                  false !default;
+$enable-orange:                 false !default;
+$enable-cyan:                   false !default;
+$enable-yellow:                 false !default;
+$enable-purple:                 false !default;
+$enable-pink:                   false !default;
+$enable-olive:                  false !default;
+$enable-tan:                    false !default;
+$enable-rosewood:               false !default;
+$enable-steelblue:              false !default;
+
+// Theme color variables
+$enable-theme-surface:          false !default;
+$enable-theme-typography:       false !default;
+$enable-theme-forms-buttons:    false !default;
+$enable-theme-tables:           false !default;
+$enable-theme-accordions:       false !default;
+$enable-theme-alerts:           false !default;
+$enable-theme-badges:           false !default;
+$enable-theme-borders:          false !default;
+$enable-theme-dialogs:          false !default;
+$enable-theme-cards:            false !default;
+$enable-theme-list-groups:      false !default;
+$enable-theme-popovers:         false !default;
+
+// Theme switch
+$enable-theme-switch:           false !default;
+
+// Grouped color utilities
+$enable-gray-utilities:         false !default;
+$enable-blue-utilities:         false !default;
+$enable-red-utilities:          false !default;
+$enable-green-utilities:        false !default;
+$enable-orange-utilities:       false !default;
+$enable-cyan-utilities:         false !default;
+$enable-yellow-utilities:       false !default;
+$enable-purple-utilities:       false !default;
+$enable-pink-utilities:         false !default;
+$enable-olive-utilities:        false !default;
+$enable-tan-utilities:          false !default;
+$enable-rosewood-utilities:     false !default;
+$enable-steelblue-utilities:    false !default;
+
+// Individual color utilities
+$enable-gray-accordions:        false !default;
+$enable-gray-alerts:            false !default;
+$enable-gray-badges:            false !default;
+$enable-gray-backgrounds:       false !default;
+$enable-gray-buttons:           false !default;
+$enable-gray-borders:           false !default;
+$enable-gray-dialogs:           false !default;
+$enable-gray-cards:             false !default;
+$enable-gray-list-groups:       false !default;
+$enable-gray-popovers:          false !default;
+
+$enable-blue-accordions:        false !default;
+$enable-blue-alerts:            false !default;
+$enable-blue-badges:            false !default;
+$enable-blue-backgrounds:       false !default;
+$enable-blue-buttons:           false !default;
+$enable-blue-borders:           false !default;
+$enable-blue-dialogs:           false !default;
+$enable-blue-cards:             false !default;
+$enable-blue-list-groups:       false !default;
+$enable-blue-popovers:          false !default;
+
+$enable-red-accordions:         false !default;
+$enable-red-alerts:             false !default;
+$enable-red-badges:             false !default;
+$enable-red-backgrounds:        false !default;
+$enable-red-buttons:            false !default;
+$enable-red-borders:            false !default;
+$enable-red-dialogs:            false !default;
+$enable-red-cards:              false !default;
+$enable-red-list-groups:        false !default;
+$enable-red-popovers:           false !default;
+
+$enable-green-accordions:       false !default;
+$enable-green-alerts:           false !default;
+$enable-green-badges:           false !default;
+$enable-green-backgrounds:      false !default;
+$enable-green-buttons:          false !default;
+$enable-green-borders:          false !default;
+$enable-green-dialogs:          false !default;
+$enable-green-cards:            false !default;
+$enable-green-list-groups:      false !default;
+$enable-green-popovers:         false !default;
+
+$enable-orange-accordions:      false !default;
+$enable-orange-alerts:          false !default;
+$enable-orange-badges:          false !default;
+$enable-orange-backgrounds:     false !default;
+$enable-orange-buttons:         false !default;
+$enable-orange-borders:         false !default;
+$enable-orange-dialogs:         false !default;
+$enable-orange-cards:           false !default;
+$enable-orange-list-groups:     false !default;
+$enable-orange-popovers:        false !default;
+
+$enable-cyan-accordions:        false !default;
+$enable-cyan-alerts:            false !default;
+$enable-cyan-badges:            false !default;
+$enable-cyan-backgrounds:       false !default;
+$enable-cyan-buttons:           false !default;
+$enable-cyan-borders:           false !default;
+$enable-cyan-dialogs:           false !default;
+$enable-cyan-cards:             false !default;
+$enable-cyan-list-groups:       false !default;
+$enable-cyan-popovers:          false !default;
+
+$enable-yellow-accordions:      false !default;
+$enable-yellow-alerts:          false !default;
+$enable-yellow-badges:          false !default;
+$enable-yellow-backgrounds:     false !default;
+$enable-yellow-buttons:         false !default;
+$enable-yellow-borders:         false !default;
+$enable-yellow-dialogs:         false !default;
+$enable-yellow-cards:           false !default;
+$enable-yellow-list-groups:     false !default;
+$enable-yellow-popovers:        false !default;
+
+$enable-purple-accordions:      false !default;
+$enable-purple-alerts:          false !default;
+$enable-purple-badges:          false !default;
+$enable-purple-backgrounds:     false !default;
+$enable-purple-buttons:         false !default;
+$enable-purple-borders:         false !default;
+$enable-purple-dialogs:         false !default;
+$enable-purple-cards:           false !default;
+$enable-purple-list-groups:     false !default;
+$enable-purple-popovers:        false !default;
+
+$enable-pink-accordions:        false !default;
+$enable-pink-alerts:            false !default;
+$enable-pink-badges:            false !default;
+$enable-pink-backgrounds:       false !default;
+$enable-pink-buttons:           false !default;
+$enable-pink-borders:           false !default;
+$enable-pink-dialogs:           false !default;
+$enable-pink-cards:             false !default;
+$enable-pink-list-groups:       false !default;
+$enable-pink-popovers:          false !default;
+
+$enable-olive-accordions:       false !default;
+$enable-olive-alerts:           false !default;
+$enable-olive-badges:           false !default;
+$enable-olive-backgrounds:      false !default;
+$enable-olive-buttons:          false !default;
+$enable-olive-borders:          false !default;
+$enable-olive-dialogs:          false !default;
+$enable-olive-cards:            false !default;
+$enable-olive-list-groups:      false !default;
+$enable-olive-popovers:         false !default;
+
+$enable-tan-accordions:         false !default;
+$enable-tan-alerts:             false !default;
+$enable-tan-badges:             false !default;
+$enable-tan-backgrounds:        false !default;
+$enable-tan-buttons:            false !default;
+$enable-tan-borders:            false !default;
+$enable-tan-dialogs:            false !default;
+$enable-tan-cards:              false !default;
+$enable-tan-list-groups:        false !default;
+$enable-tan-popovers:           false !default;
+
+$enable-rosewood-accordions:    false !default;
+$enable-rosewood-alerts:        false !default;
+$enable-rosewood-badges:        false !default;
+$enable-rosewood-backgrounds:   false !default;
+$enable-rosewood-buttons:       false !default;
+$enable-rosewood-borders:       false !default;
+$enable-rosewood-dialogs:       false !default;
+$enable-rosewood-cards:         false !default;
+$enable-rosewood-list-groups:   false !default;
+$enable-rosewood-popovers:      false !default;
+
+$enable-steelblue-accordions:   false !default;
+$enable-steelblue-alerts:       false !default;
+$enable-steelblue-badges:       false !default;
+$enable-steelblue-backgrounds:  false !default;
+$enable-steelblue-buttons:      false !default;
+$enable-steelblue-borders:      false !default;
+$enable-steelblue-dialogs:      false !default;
+$enable-steelblue-cards:        false !default;
+$enable-steelblue-list-groups:  false !default;
+$enable-steelblue-popovers:     false !default;
+
+// ---------------------------------------------------------- 
+// Layouts
+// ----------------------------------------------------------
+$enable-align:                  false !default;
+$enable-aspect-ratio:           false !default;
+$enable-block:                  false !default;
+$enable-columns:                false !default;
+$enable-containers:             false !default;
+$enable-display:                false !default;
+$enable-flex:                   false !default;
+$enable-grid:                   false !default;
+$enable-inset:                  false !default;
+$enable-justify:                false !default;
+$enable-object-fit:             false !default;
+$enable-order:                  false !default;
+$enable-overflow:               false !default;
+$enable-overscroll:             false !default;
+$enable-place:                  false !default;
+$enable-position:               false !default;
+$enable-scrollbars:             false !default;
+$enable-sizes:                  false !default;
+$enable-z-index:                false !default;
+
+// Spacing
+$enable-gaps:                   false !default;
+$enable-margins:                false !default;
+$enable-padding:                false !default;
+
+// Grid columns and rows
+$enable-grid-layouts:           false !default;
+
+// Grid templates
+$enable-grid-utility:           false !default;
+$enable-grid-fractions:         false !default;
+$enable-grid-auto:              false !default;
+
+// ----------------------------------------------------------
+// XXL breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-xxl:            false !default;
+$enable-opacity-xxl:            false !default;
+$enable-text-xxl:               false !default;
+
+// Layout
+$enable-align-xxl:              false !default;
+$enable-aspect-ratio-xxl:       false !default;
+$enable-block-xxl:              false !default;
+$enable-columns-xxl:            false !default;
+$enable-display-xxl:            false !default;
+$enable-flex-xxl:               false !default;
+$enable-grid-xxl:               false !default;
+$enable-inset-xxl:              false !default;
+$enable-justify-xxl:            false !default;
+$enable-object-fit-xxl:         false !default;
+$enable-order-xxl:              false !default;
+$enable-overflow-xxl:           false !default;
+$enable-overscroll-xxl:         false !default;
+$enable-place-xxl:              false !default;
+$enable-position-xxl:           false !default;
+$enable-scrollbars-xxl:         false !default;
+$enable-sizes-xxl:              false !default;
+$enable-z-index-xxl:            false !default;
+
+// Spacing
+$enable-gaps-xxl:               false !default;
+$enable-margins-xxl:            false !default;
+$enable-padding-xxl:            false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-xxl:       false !default;
+
+// Grid templates
+$enable-grid-utility-xxl:       false !default;
+$enable-grid-fractions-xxl:     false !default;
+$enable-grid-auto-xxl:          false !default;
+
+// ----------------------------------------------------------
+// XL breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-xl:             false !default;
+$enable-opacity-xl:             false !default;
+$enable-text-xl:                false !default;
+
+// Layout
+$enable-align-xl:               false !default;
+$enable-aspect-ratio-xl:        false !default;
+$enable-block-xl:               false !default;
+$enable-columns-xl:             false !default;
+$enable-display-xl:             false !default;
+$enable-flex-xl:                false !default;
+$enable-grid-xl:                false !default;
+$enable-inset-xl:               false !default;
+$enable-justify-xl:             false !default;
+$enable-object-fit-xl:          false !default;
+$enable-order-xl:               false !default;
+$enable-overflow-xl:            false !default;
+$enable-overscroll-xl:          false !default;
+$enable-place-xl:               false !default;
+$enable-position-xl:            false !default;
+$enable-scrollbars-xl:          false !default;
+$enable-sizes-xl:               false !default;
+$enable-z-index-xl:             false !default;
+
+// Spacing
+$enable-gaps-xl:                false !default;
+$enable-margins-xl:             false !default;
+$enable-padding-xl:             false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-xl:        false !default;
+
+// Grid templates
+$enable-grid-utility-xl:        false !default;
+$enable-grid-fractions-xl:      false !default;
+$enable-grid-auto-xl:           false !default;
+
+// ----------------------------------------------------------
+// LG breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-lg:             false !default;
+$enable-opacity-lg:             false !default;
+$enable-text-lg:                false !default;
+
+// Layout
+$enable-align-lg:               false !default;
+$enable-aspect-ratio-lg:        false !default;
+$enable-block-lg:               false !default;
+$enable-columns-lg:             false !default;
+$enable-display-lg:             false !default;
+$enable-flex-lg:                false !default;
+$enable-grid-lg:                false !default;
+$enable-inset-lg:               false !default;
+$enable-justify-lg:             false !default;
+$enable-object-fit-lg:          false !default;
+$enable-order-lg:               false !default;
+$enable-overflow-lg:            false !default;
+$enable-overscroll-lg:          false !default;
+$enable-place-lg:               false !default;
+$enable-position-lg:            false !default;
+$enable-scrollbars-lg:          false !default;
+$enable-sizes-lg:               false !default;
+$enable-z-index-lg:             false !default;
+
+// Spacing
+$enable-gaps-lg:                false !default;
+$enable-margins-lg:             false !default;
+$enable-padding-lg:             false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-lg:        false !default;
+
+// Grid templates
+$enable-grid-utility-lg:        false !default;
+$enable-grid-fractions-lg:      false !default;
+$enable-grid-auto-lg:           false !default;
+
+// ----------------------------------------------------------
+// MD breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-md:             false !default;
+$enable-opacity-md:             false !default;
+$enable-text-md:                false !default;
+
+// Layout
+$enable-align-md:               false !default;
+$enable-aspect-ratio-md:        false !default;
+$enable-block-md:               false !default;
+$enable-columns-md:             false !default;
+$enable-display-md:             false !default;
+$enable-flex-md:                false !default;
+$enable-grid-md:                false !default;
+$enable-inset-md:               false !default;
+$enable-justify-md:             false !default;
+$enable-object-fit-md:          false !default;
+$enable-order-md:               false !default;
+$enable-overflow-md:            false !default;
+$enable-overscroll-md:          false !default;
+$enable-place-md:               false !default;
+$enable-position-md:            false !default;
+$enable-scrollbars-md:          false !default;
+$enable-sizes-md:               false !default;
+$enable-z-index-md:             false !default;
+
+// Spacing
+$enable-gaps-md:                false !default;
+$enable-margins-md:             false !default;
+$enable-padding-md:             false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-md:        false !default;
+
+// Grid templates
+$enable-grid-utility-md:        false !default;
+$enable-grid-fractions-md:      false !default;
+$enable-grid-auto-md:           false !default;
+
+// ----------------------------------------------------------
+// SM breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-sm:             false !default;
+$enable-opacity-sm:             false !default;
+$enable-text-sm:                false !default;
+
+// Layout
+$enable-align-sm:               false !default;
+$enable-aspect-ratio-sm:        false !default;
+$enable-block-sm:               false !default;
+$enable-columns-sm:             false !default;
+$enable-display-sm:             false !default;
+$enable-flex-sm:                false !default;
+$enable-grid-sm:                false !default;
+$enable-inset-sm:               false !default;
+$enable-justify-sm:             false !default;
+$enable-object-fit-sm:          false !default;
+$enable-order-sm:               false !default;
+$enable-overflow-sm:            false !default;
+$enable-overscroll-sm:          false !default;
+$enable-place-sm:               false !default;
+$enable-position-sm:            false !default;
+$enable-scrollbars-sm:          false !default;
+$enable-sizes-sm:               false !default;
+$enable-z-index-sm:             false !default;
+
+// Spacing
+$enable-gaps-sm:                false !default;
+$enable-margins-sm:             false !default;
+$enable-padding-sm:             false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-sm:        false !default;
+
+// Grid templates
+$enable-grid-utility-sm:        false !default;
+$enable-grid-fractions-sm:      false !default;
+$enable-grid-auto-sm:           false !default;
+
+// ----------------------------------------------------------
+// XS breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-xs:             false !default;
+$enable-opacity-xs:             false !default;
+$enable-text-xs:                false !default;
+
+// Layout
+$enable-align-xs:               false !default;
+$enable-aspect-ratio-xs:        false !default;
+$enable-block-xs:               false !default;
+$enable-columns-xs:             false !default;
+$enable-display-xs:             false !default;
+$enable-flex-xs:                false !default;
+$enable-grid-xs:                false !default;
+$enable-inset-xs:               false !default;
+$enable-justify-xs:             false !default;
+$enable-object-fit-xs:          false !default;
+$enable-order-xs:               false !default;
+$enable-overflow-xs:            false !default;
+$enable-overscroll-xs:          false !default;
+$enable-place-xs:               false !default;
+$enable-position-xs:            false !default;
+$enable-scrollbars-xs:          false !default;
+$enable-sizes-xs:               false !default;
+$enable-z-index-xs:             false !default;
+
+// Spacing
+$enable-gaps-xs:                false !default;
+$enable-margins-xs:             false !default;
+$enable-padding-xs:             false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-xs:        false !default;
+
+// Grid templates
+$enable-grid-utility-xs:        false !default;
+$enable-grid-fractions-xs:      false !default;
+$enable-grid-auto-xs:           false !default;
+
+// ----------------------------------------------------------
+// XXS breakpoints
+// ----------------------------------------------------------
+// Utilities
+$enable-borders-xxs:            false !default;
+$enable-opacity-xxs:            false !default;
+$enable-text-xxs:               false !default;
+
+// Layout
+$enable-align-xxs:              false !default;
+$enable-aspect-ratio-xxs:       false !default;
+$enable-block-xxs:              false !default;
+$enable-columns-xxs:            false !default;
+$enable-display-xxs:            false !default;
+$enable-flex-xxs:               false !default;
+$enable-grid-xxs:               false !default;
+$enable-inset-xxs:              false !default;
+$enable-justify-xxs:            false !default;
+$enable-object-fit-xxs:         false !default;
+$enable-order-xxs:              false !default;
+$enable-overflow-xxs:           false !default;
+$enable-overscroll-xxs:         false !default;
+$enable-place-xxs:              false !default;
+$enable-position-xxs:           false !default;
+$enable-scrollbars-xxs:         false !default;
+$enable-sizes-xxs:              false !default;
+$enable-z-index-xxs:            false !default;
+
+// Spacing
+$enable-gaps-xxs:               false !default;
+$enable-margins-xxs:            false !default;
+$enable-padding-xxs:            false !default;
+
+// Grid columns and rows
+$enable-grid-layouts-xxs:       false !default;
+
+// Grid templates
+$enable-grid-utility-xxs:       false !default;
+$enable-grid-fractions-xxs:     false !default;
+$enable-grid-auto-xxs:          false !default;
+
+// ---------------------------------------------------------- 
+// Icons
+// ----------------------------------------------------------
+// Icon utilities
+$enable-icon-utilities-css:         false !default;
+$enable-icon-links-css:             false !default;
+$enable-icon-buttons-css:           false !default;
+
+// Default icons
+$enable-house-svg:                  false !default;
+$enable-email-svg:                  false !default;
+$enable-bars-svg:                   false !default;
+$enable-dots-horizontal-svg:        false !default;
+$enable-dots-vertical-svg:          false !default;
+$enable-plus-svg:                   false !default;
+$enable-minus-svg:                  false !default;
+$enable-close-svg:                  false !default;
+$enable-search-svg:                 false !default;
+$enable-download-svg:               false !default;
+$enable-info-box-svg:               false !default;
+$enable-info-box-fill-svg:          false !default;
+$enable-info-circle-svg:            false !default;
+$enable-info-circle-fill-svg:       false !default;
+$enable-question-circle-svg:        false !default;
+$enable-question-circle-fill-svg:   false !default;
+$enable-question-box-svg:           false !default;
+$enable-question-box-fill-svg:      false !default;
+$enable-box-svg:                    false !default;
+$enable-pen-box-svg:                false !default;
+$enable-close-box-svg:              false !default;
+$enable-close-box-fill-svg:         false !default;
+$enable-tick-box-svg:               false !default;
+$enable-ext-link-svg:               false !default;
+$enable-pg-link-svg:                false !default;
+$enable-sun-svg:                    false !default;
+$enable-moon-svg:                   false !default;
+$enable-caret-down-svg:             false !default;
+$enable-caret-up-svg:               false !default;
+$enable-caret-left-svg:             false !default;
+$enable-caret-right-svg:            false !default;
+$enable-user-svg:                   false !default;
+$enable-circle-svg:                 false !default;
+$enable-circle-fill-svg:            false !default;
+$enable-circle-inner-svg:           false !default;
+$enable-circle-half-svg:            false !default;
+$enable-circle-sm-svg:              false !default;
+$enable-circle-fill-sm-svg:         false !default;
+$enable-circle-inner-sm-svg:        false !default;
+$enable-circle-half-sm-svg:         false !default;
+$enable-image-svg:                  false !default;
+$enable-image-fill-svg:             false !default;
+
+// Brand icons
+$enable-stylemods-svg:              false !default;
+$enable-sass-svg:                   false !default;
+$enable-github-svg:                 false !default;
+$enable-twitter-svg:                false !default;
+$enable-mastodon-svg:               false !default;
+$enable-tiktok-svg:                 false !default;
+$enable-facebook-svg:               false !default;
+$enable-instagram-svg:              false !default;
+$enable-pinterest-svg:              false !default;
+$enable-codepen-svg:                false !default;
+$enable-reddit-svg:                 false !default;
+$enable-youtube-svg:                false !default;
+$enable-rss-svg:                    false !default;

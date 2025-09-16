@@ -51,6 +51,7 @@ dialog div[class="close-dialog"] {
   inset: 0;
   display: block;
   content: "";
+  z-index: -1;
 }
 
 dialog :last-of-type:is(p, ol, ul, dl, figure, address) {
