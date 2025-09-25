@@ -10,7 +10,7 @@ The Sass methods and language used tries to stay user-friendly to make both opti
 
 
 As a single developer the website by far takes the most time to maintain so although I've done my best to provide consistent documentation that's up-to-date there's bound to be some errors. The repository for the website is private so please email at the address below with any feedback regarding issues.
-=======
+
 As a single developer the website by far takes the most time to maintain so although I've done my best to provide consistent documentation that's up-to-date there's bound to be some errors. The repository for the website is private so please email me at the address below with any feedback regarding issues.
 
 ## Feedback/contribute
