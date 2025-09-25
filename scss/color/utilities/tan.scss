@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Tan utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$tan-bg-text:      #000 !default;
+$tan-bg:           var(--tan-6) !default;
+$tan-bg-dark:      var(--tan-7) !default;
+$tan-bg-light:     var(--tan-5) !default;
+
+// Utility mixins
+@mixin accordion-tan-css {
+  .accordion-tan {
+    @include accordion-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light);
+  }
+}
+
+@mixin alert-tan-css {
+  .alert-tan {
+    @include alert-color-values($tan-bg-text, $tan-bg, $tan-bg-light);
+  }
+}
+
+@mixin background-tan-css {
+  .bg-tan {
+    @include background-color-values($tan-bg-text, $tan-bg);
+  }
+}
+
+@mixin badge-tan-css {
+  .badge-tan {
+    @include badge-color-values($tan-bg-text, $tan-bg, $tan-bg-light);
+  }
+}
+
+@mixin button-tan-css {
+  .btn-tan {
+    @include button-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light, $tan-bg-light);
+  }
+}
+
+@mixin card-tan-css {
+  .card-tan {
+    @include card-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light, $tan-bg-light);
+  }
+}
+
+@mixin dialog-tan-css {
+  .dialog-tan {
+    @include dialog-color-values($tan-bg-text, $tan-bg, $tan-bg-light);
+  } 
+}
+
+@mixin dropdown-tan-css {
+  .dropdown-tan {
+    @include dropdown-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light, $tan-bg-light);
+  } 
+}
+
+@mixin list-group-tan-css {
+  .list-group-tan {
+    @include list-group-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light);
+  }
+}
+
+@mixin popover-tan-css {
+  .popover-tan {
+    @include popover-color-values($tan-bg-text, $tan-bg, $tan-bg-light);
+  }
+}
+
+@mixin tan-utilities-css {
+  @include accordion-tan-css;
+  @include alert-tan-css;
+  @include background-tan-css;
+  @include badge-tan-css;
+  @include button-tan-css;
+  @include card-tan-css;
+  @include dialog-tan-css;
+  @include dropdown-tan-css;
+  @include list-group-tan-css;
+  @include popover-tan-css;
+}

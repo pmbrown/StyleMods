@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Red utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$red-bg-text:      #fff !default;
+$red-bg:           var(--red-6) !default;
+$red-bg-dark:      var(--red-7) !default;
+$red-bg-light:     var(--red-5) !default;
+
+// Utility mixins
+@mixin accordion-red-css {
+  .accordion-red {
+    @include accordion-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light);
+  }
+}
+
+@mixin alert-red-css {
+  .alert-red {
+    @include alert-color-values($red-bg-text, $red-bg, $red-bg-light);
+  }
+}
+
+@mixin background-red-css {
+  .bg-red {
+    @include background-color-values($red-bg-text, $red-bg);
+  }
+}
+
+@mixin badge-red-css {
+  .badge-red {
+    @include badge-color-values($red-bg-text, $red-bg, $red-bg-light);
+  }
+}
+
+@mixin button-red-css {
+  .btn-red {
+    @include button-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light, $red-bg-light);
+  }
+}
+
+@mixin card-red-css {
+  .card-red {
+    @include card-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light, $red-bg-light);
+  }
+}
+
+@mixin dialog-red-css {
+  .dialog-red {
+    @include dialog-color-values($red-bg-text, $red-bg, $red-bg-light);
+  } 
+}
+
+@mixin dropdown-red-css {
+  .dropdown-red {
+    @include dropdown-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light, $red-bg-light);
+  } 
+}
+
+@mixin list-group-red-css {
+  .list-group-red {
+    @include list-group-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light);
+  }
+}
+
+@mixin popover-red-css {
+  .popover-red {
+    @include popover-color-values($red-bg-text, $red-bg, $red-bg-light);
+  }
+}
+
+@mixin red-utilities-css {
+  @include accordion-red-css;
+  @include alert-red-css;
+  @include background-red-css;
+  @include badge-red-css;
+  @include button-red-css;
+  @include card-red-css;
+  @include dialog-red-css;
+  @include dropdown-red-css;
+  @include list-group-red-css;
+  @include popover-red-css;
+}

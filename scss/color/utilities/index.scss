@@ -1,14 +1,13 @@
 // ---------------------------------------------------------- 
-// Color
+// Color utilities
 // ----------------------------------------------------------
-@forward "utilities";
-@forward "surface";
-@forward "gray";
+@forward "color-mixins";
 @forward "blue";
 @forward "green";
 @forward "red";
 @forward "orange";
 @forward "cyan";
+@forward "gray";
 @forward "yellow";
 @forward "pink";
 @forward "purple";
@@ -17,6 +16,3 @@
 @forward "rosewood";
 @forward "steelblue";
 @forward "semantic";
-@forward "theme";
-@forward "all-colors";
-

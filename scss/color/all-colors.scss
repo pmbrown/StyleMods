@@ -16,7 +16,7 @@
 @use "rosewood" as *;
 @use "steelblue" as *;
 @use "theme" as *;
-@use "theme-switch" as *;
+@use "utilities" as *;
 
 $color-tokens:  ':where(html)' !default;
 
@@ -26,6 +26,7 @@ $color-tokens:  ':where(html)' !default;
   @include green-variables;
   @include orange-variables;
   @include cyan-variables;
+  @include gray-variables;
   @include yellow-variables;
   @include purple-variables;
   @include pink-variables;
@@ -37,7 +38,6 @@ $color-tokens:  ':where(html)' !default;
 
 @mixin all-color-variables {
   @include surface-variables;
-  @include gray-variables;
   @include all-primary-color-variables;
   @include all-theme-variables;
 }
@@ -49,12 +49,12 @@ $color-tokens:  ':where(html)' !default;
 }
 
 @mixin all-color-utilities-css {
-  @include gray-utilities-css;
   @include blue-utilities-css;
   @include red-utilities-css;
   @include green-utilities-css;
   @include orange-utilities-css;
   @include cyan-utilities-css;
+  @include gray-utilities-css;
   @include yellow-utilities-css;
   @include purple-utilities-css;
   @include pink-utilities-css;
@@ -64,14 +64,85 @@ $color-tokens:  ':where(html)' !default;
   @include steelblue-utilities-css;
 }
 
-// Variables and utilities
+// Variables, utilities
+@mixin all-color-css {
+  @include all-color-variables-css;
+  @include all-color-utilities-css;
+}
+
+// Modules
+@mixin blue-module-css {
+  @include blue-variables-css;
+  @include blue-utilities-css;
+}
+
+@mixin red-module-css {
+  @include red-variables-css;
+  @include red-utilities-css;
+}
+
+@mixin green-module-css {
+  @include green-variables-css;
+  @include green-utilities-css;
+}
+
+@mixin orange-module-css {
+  @include orange-variables-css;
+  @include orange-utilities-css;
+}
+
+@mixin cyan-module-css {
+  @include cyan-variables-css;
+  @include cyan-utilities-css;
+}
+
+@mixin gray-module-css {
+  @include gray-variables-css;
+  @include gray-utilities-css;
+}
+
+@mixin yellow-module-css {
+  @include yellow-variables-css;
+  @include yellow-utilities-css;
+}
+
+@mixin purple-module-css {
+  @include purple-variables-css;
+  @include purple-utilities-css;
+}
+
+@mixin pink-module-css {
+  @include pink-variables-css;
+  @include pink-utilities-css;
+}
+
+@mixin olive-module-css {
+  @include olive-variables-css;
+  @include olive-utilities-css;
+}
+
+@mixin tan-module-css {
+  @include tan-variables-css;
+  @include tan-utilities-css;
+}
+
+@mixin rosewood-module-css {
+  @include rosewood-variables-css;
+  @include rosewood-utilities-css;
+}
+
+@mixin steelblue-module-css {
+  @include steelblue-variables-css;
+  @include steelblue-utilities-css;
+}
+
 @mixin all-color-modules-css {
-  @include gray-module-css;
   @include blue-module-css;
   @include red-module-css;
   @include green-module-css;
   @include orange-module-css;
   @include cyan-module-css;
+  @include gray-module-css;
   @include yellow-module-css;
   @include purple-module-css;
   @include pink-module-css;
@@ -79,11 +150,4 @@ $color-tokens:  ':where(html)' !default;
   @include tan-module-css;
   @include rosewood-module-css;
   @include steelblue-module-css;
-}
-
-// Variables, utilities and theme switch
-@mixin all-color-css {
-  @include all-color-variables-css;
-  @include all-color-utilities-css;
-  @include theme-switch-css;
 }

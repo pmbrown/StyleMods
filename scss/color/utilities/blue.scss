@@ -1,0 +1,85 @@
+// ---------------------------------------------------------- 
+// Blue utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$blue-bg-text:      #fff !default;
+$blue-bg:           var(--blue) !default;
+$blue-bg-dark:      var(--blue-7) !default;
+$blue-bg-light:     var(--blue-5) !default;
+
+// Utility mixins
+@mixin accordion-blue-css {
+  .accordion-blue {
+    @include accordion-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light);
+  }
+}
+
+@mixin alert-blue-css {
+  .alert-blue {
+    @include alert-color-values($blue-bg-text, $blue-bg, $blue-bg-light);
+  }
+}
+
+@mixin background-blue-css {
+  .bg-blue {
+    @include background-color-values($blue-bg-text, $blue-bg);
+  }
+}
+
+@mixin badge-blue-css {
+  .badge-blue {
+    @include badge-color-values($blue-bg-text, $blue-bg, $blue-bg-light);
+  }
+}
+
+@mixin button-blue-css {
+  .btn-blue {
+    @include button-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light, $blue-bg-light);
+  }
+}
+
+@mixin card-blue-css {
+  .card-blue {
+    @include card-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light, $blue-bg-light);
+  }
+}
+
+@mixin dialog-blue-css {
+  .dialog-blue {
+    @include dialog-color-values($blue-bg-text, $blue-bg, $blue-bg-light);
+  } 
+}
+
+@mixin dropdown-blue-css {
+  .dropdown-blue {
+    @include dropdown-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light, $blue-bg-light);
+  } 
+}
+
+@mixin list-group-blue-css {
+  .list-group-blue {
+    @include list-group-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light);
+  }
+}
+
+@mixin popover-blue-css {
+  .popover-blue {
+    @include popover-color-values($blue-bg-text, $blue-bg, $blue-bg-light);
+  }
+}
+
+// Combined mixins
+@mixin blue-utilities-css {
+  @include accordion-blue-css;
+  @include alert-blue-css;
+  @include background-blue-css;
+  @include badge-blue-css;
+  @include button-blue-css;
+  @include card-blue-css;
+  @include dialog-blue-css;
+  @include dropdown-blue-css;
+  @include list-group-blue-css;
+  @include popover-blue-css;
+}

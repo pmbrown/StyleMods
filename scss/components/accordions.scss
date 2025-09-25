@@ -49,7 +49,9 @@ $close-accordion:             $accordion-minus-icon !default;
 
 .accordion details summary:focus-visible {
   outline: none;
-  background-color: $summary-background-focus;
+  border-radius: initial;
+  box-shadow: initial;
+  background-color: $summary-background-focus; 
 }
 
 .accordion details:first-child summary {

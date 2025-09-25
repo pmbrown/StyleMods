@@ -1,0 +1,83 @@
+// ---------------------------------------------------------- 
+// Cyan utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$cyan-bg-text:      #000 !default;
+$cyan-bg:           var(--cyan-6) !default;
+$cyan-bg-dark:      var(--cyan-7) !default;
+$cyan-bg-light:     var(--cyan-5) !default;
+
+// Utility mixins
+@mixin accordion-cyan-css {
+  .accordion-cyan {
+    @include accordion-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light);
+  }
+}
+
+@mixin alert-cyan-css {
+  .alert-cyan {
+    @include alert-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-light);
+  }
+}
+
+@mixin background-cyan-css {
+  .bg-cyan {
+    @include background-color-values($cyan-bg-text, $cyan-bg);
+  }
+}
+
+@mixin badge-cyan-css {
+  .badge-cyan {
+    @include badge-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-light);
+  }
+}
+
+@mixin button-cyan-css {
+  .btn-cyan {
+    @include button-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light, $cyan-bg-light);
+  }
+}
+
+@mixin card-cyan-css {
+  .card-cyan {
+    @include card-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light, $cyan-bg-light);
+  }
+}
+
+@mixin dialog-cyan-css {
+  .dialog-cyan {
+    @include dialog-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-light);
+  } 
+}
+
+@mixin dropdown-cyan-css {
+  .dropdown-cyan {
+    @include dropdown-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light, $cyan-bg-light);
+  } 
+}
+
+@mixin list-group-cyan-css {
+  .list-group-cyan {
+    @include list-group-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light);
+  }
+}
+
+@mixin popover-cyan-css {
+  .popover-cyan {
+    @include popover-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-light);
+  }
+}
+
+@mixin cyan-utilities-css {
+  @include accordion-cyan-css;
+  @include alert-cyan-css;
+  @include background-cyan-css;
+  @include badge-cyan-css;
+  @include button-cyan-css;
+  @include card-cyan-css;
+  @include dialog-cyan-css;
+  @include list-group-cyan-css;
+  @include popover-cyan-css;
+}

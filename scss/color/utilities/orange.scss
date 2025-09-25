@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Orange utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$orange-bg-text:      #000 !default;
+$orange-bg:           var(--orange-6) !default;
+$orange-bg-dark:      var(--orange-7) !default;
+$orange-bg-light:     var(--orange-5) !default;
+
+// Utility mixins
+@mixin accordion-orange-css {
+  .accordion-orange {
+    @include accordion-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light);
+  }
+}
+
+@mixin alert-orange-css {
+  .alert-orange {
+    @include alert-color-values($orange-bg-text, $orange-bg, $orange-bg-light);
+  }
+}
+
+@mixin background-orange-css {
+  .bg-orange {
+    @include background-color-values($orange-bg-text, $orange-bg);
+  }
+}
+
+@mixin badge-orange-css {
+  .badge-orange {
+    @include badge-color-values($orange-bg-text, $orange-bg, $orange-bg-light);
+  }
+}
+
+@mixin button-orange-css {
+  .btn-orange {
+    @include button-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light, $orange-bg-light);
+  }
+}
+
+@mixin card-orange-css {
+  .card-orange {
+    @include card-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light, $orange-bg-light);
+  }
+}
+
+@mixin dialog-orange-css {
+  .dialog-orange {
+    @include dialog-color-values($orange-bg-text, $orange-bg, $orange-bg-light);
+  } 
+}
+
+@mixin dropdown-orange-css {
+  .dropdown-orange {
+    @include dropdown-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light, $orange-bg-light);
+  } 
+}
+
+@mixin list-group-orange-css {
+  .list-group-orange {
+    @include list-group-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light);
+  }
+}
+
+@mixin popover-orange-css {
+  .popover-orange {
+    @include popover-color-values($orange-bg-text, $orange-bg, $orange-bg-light);
+  }
+}
+
+@mixin orange-utilities-css {
+  @include accordion-orange-css;
+  @include alert-orange-css;
+  @include background-orange-css;
+  @include badge-orange-css;
+  @include button-orange-css;
+  @include card-orange-css;
+  @include dialog-orange-css;
+  @include dropdown-orange-css;
+  @include list-group-orange-css;
+  @include popover-orange-css;
+}

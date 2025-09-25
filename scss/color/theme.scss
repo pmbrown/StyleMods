@@ -1,6 +1,8 @@
 // ---------------------------------------------------------- 
 // Theme colors
 // ----------------------------------------------------------
+@use "surface" as *;
+
 // Light typography
 $theme-text-light:            #000 !default;
 $theme-link-light:            #1c3db5 !default;
@@ -28,15 +30,15 @@ $theme-surface-1:             var(--surf-1) !default;
 $theme-surface-2:             var(--surf-2) !default;
 $theme-surface-3:             var(--surf-3) !default;
 $theme-surface-4:             var(--surf-4) !default;
-$theme-surface-tint-1:        color-mix(in srgb, CanvasText 1%, var(--background)) !default;
-$theme-surface-tint-2:        color-mix(in srgb, CanvasText 2%, var(--background)) !default;
+$theme-table-stripes:         color-mix(in srgb, CanvasText 1%, var(--background)) !default;
+$theme-table-hover:           color-mix(in srgb, CanvasText 2%, var(--background)) !default;
 
-// Use if surface.scss module not included.
+// Theme surfaces (if surface.scss not used)
 $base-surface:                $theme-background !default;
-$base-surface-1:              color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
-$base-surface-2:              color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
-$base-surface-3:              color-mix(in srgb, CanvasText 15%, var(--surface)) !default;
-$base-surface-4:              color-mix(in srgb, CanvasText 22%, var(--surface)) !default;
+$base-surface-1:              $surface-1 !default;
+$base-surface-2:              $surface-2 !default;
+$base-surface-3:              $surface-3 !default;
+$base-surface-4:              $surface-4 !default;
 
 // Tokens style
 $theme-tokens:                ':where(html)' !default;
@@ -76,8 +78,8 @@ $theme-tables: (
   "table-bg": $theme-surface,
   "thead-bg": $theme-surface-1,
   "table-bd-color": $theme-surface-3,
-  "table-stripes": $theme-surface-tint-1,
-  "table-hover": $theme-surface-tint-2,
+  "table-stripes": $theme-table-stripes,
+  "table-hover": $theme-table-hover,
 ) !default;
 
 $theme-accordion: (

@@ -74,6 +74,7 @@ $enable-dropdowns:              false !default;
 $enable-list-groups:            false !default;
 $enable-popovers:               false !default;
 $enable-popovers-transition:    false !default;
+$enable-theme-switch:           false !default;
 
 // ----------------------------------------------------------
 // Utilities
@@ -105,6 +106,7 @@ $enable-olive:                  false !default;
 $enable-tan:                    false !default;
 $enable-rosewood:               false !default;
 $enable-steelblue:              false !default;
+$enable-semantic:               true !default;
 
 // Theme color variables
 $enable-theme-surface:          false !default;
@@ -120,9 +122,6 @@ $enable-theme-cards:            false !default;
 $enable-theme-list-groups:      false !default;
 $enable-theme-popovers:         false !default;
 
-// Theme switch
-$enable-theme-switch:           false !default;
-
 // Grouped color utilities
 $enable-gray-utilities:         false !default;
 $enable-blue-utilities:         false !default;
@@ -137,6 +136,7 @@ $enable-olive-utilities:        false !default;
 $enable-tan-utilities:          false !default;
 $enable-rosewood-utilities:     false !default;
 $enable-steelblue-utilities:    false !default;
+$enable-semantic-utilities:     false !default;
 
 // Individual color utilities
 $enable-gray-accordions:        false !default;
@@ -281,6 +281,73 @@ $enable-steelblue-dialogs:      false !default;
 $enable-steelblue-cards:        false !default;
 $enable-steelblue-list-groups:  false !default;
 $enable-steelblue-popovers:     false !default;
+
+// Semantic
+$enable-primary-accordions:     false !default;
+$enable-primary-alerts:         false !default;
+$enable-primary-badges:         false !default;
+$enable-primary-backgrounds:    false !default;
+$enable-primary-buttons:        false !default;
+$enable-primary-borders:        false !default;
+$enable-primary-dialogs:        false !default;
+$enable-primary-cards:          false !default;
+$enable-primary-list-groups:    false !default;
+$enable-primary-popovers:       false !default;
+
+$enable-info-accordions:        false !default;
+$enable-info-alerts:            false !default;
+$enable-info-badges:            false !default;
+$enable-info-backgrounds:       false !default;
+$enable-info-buttons:           false !default;
+$enable-info-borders:           false !default;
+$enable-info-dialogs:           false !default;
+$enable-info-cards:             false !default;
+$enable-info-list-groups:       false !default;
+$enable-info-popovers:          false !default;
+
+$enable-success-accordions:     false !default;
+$enable-success-alerts:         false !default;
+$enable-success-badges:         false !default;
+$enable-success-backgrounds:    false !default;
+$enable-success-buttons:        false !default;
+$enable-success-borders:        false !default;
+$enable-success-dialogs:        false !default;
+$enable-success-cards:          false !default;
+$enable-success-list-groups:    false !default;
+$enable-success-popovers:       false !default;
+
+$enable-warning-accordions:     false !default;
+$enable-warning-alerts:         false !default;
+$enable-warning-badges:         false !default;
+$enable-warning-backgrounds:    false !default;
+$enable-warning-buttons:        false !default;
+$enable-warning-borders:        false !default;
+$enable-warning-dialogs:        false !default;
+$enable-warning-cards:          false !default;
+$enable-warning-list-groups:    false !default;
+$enable-warning-popovers:       false !default;
+
+$enable-danger-accordions:      false !default;
+$enable-danger-alerts:          false !default;
+$enable-danger-badges:          false !default;
+$enable-danger-backgrounds:     false !default;
+$enable-danger-buttons:         false !default;
+$enable-danger-borders:         false !default;
+$enable-danger-dialogs:         false !default;
+$enable-danger-cards:           false !default;
+$enable-danger-list-groups:     false !default;
+$enable-danger-popovers:        false !default;
+
+$enable-secondary-accordions:   false !default;
+$enable-secondary-alerts:       false !default;
+$enable-secondary-badges:       false !default;
+$enable-secondary-backgrounds:  false !default;
+$enable-secondary-buttons:      false !default;
+$enable-secondary-borders:      false !default;
+$enable-secondary-dialogs:      false !default;
+$enable-secondary-cards:        false !default;
+$enable-secondary-list-groups:  false !default;
+$enable-secondary-popovers:     false !default;
 
 // ---------------------------------------------------------- 
 // Layouts

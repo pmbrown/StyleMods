@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Pink utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$pink-bg-text:      #000 !default;
+$pink-bg:           var(--pink-6) !default;
+$pink-bg-dark:      var(--pink-7) !default;
+$pink-bg-light:     var(--pink-5) !default;
+
+// Utility mixins
+@mixin accordion-pink-css {
+  .accordion-pink {
+    @include accordion-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light);
+  }
+}
+
+@mixin alert-pink-css {
+  .alert-pink {
+    @include alert-color-values($pink-bg-text, $pink-bg, $pink-bg-light);
+  }
+}
+
+@mixin background-pink-css {
+  .bg-pink {
+    @include background-color-values($pink-bg-text, $pink-bg);
+  }
+}
+
+@mixin badge-pink-css {
+  .badge-pink {
+    @include badge-color-values($pink-bg-text, $pink-bg, $pink-bg-light);
+  }
+}
+
+@mixin button-pink-css {
+  .btn-pink {
+    @include button-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light, $pink-bg-light);
+  }
+}
+
+@mixin card-pink-css {
+  .card-pink {
+    @include card-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light, $pink-bg-light);
+  }
+}
+
+@mixin dialog-pink-css {
+  .dialog-pink {
+    @include dialog-color-values($pink-bg-text, $pink-bg, $pink-bg-light);
+  } 
+}
+
+@mixin dropdown-pink-css {
+  .dropdown-pink {
+    @include dropdown-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light, $pink-bg-light);
+  } 
+}
+
+@mixin list-group-pink-css {
+  .list-group-pink {
+    @include list-group-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light);
+  }
+}
+
+@mixin popover-pink-css {
+  .popover-pink {
+    @include popover-color-values($pink-bg-text, $pink-bg, $pink-bg-light);
+  }
+}
+
+@mixin pink-utilities-css {
+  @include accordion-pink-css;
+  @include alert-pink-css;
+  @include background-pink-css;
+  @include badge-pink-css;
+  @include button-pink-css;
+  @include card-pink-css;
+  @include dialog-pink-css;
+  @include dropdown-pink-css;
+  @include list-group-pink-css;
+  @include popover-pink-css;
+}

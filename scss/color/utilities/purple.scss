@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Purple utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$purple-bg-text:      #fff !default;
+$purple-bg:           var(--purple-6) !default;
+$purple-bg-dark:      var(--purple-7) !default;
+$purple-bg-light:     var(--purple-5) !default;
+
+// Utility mixins
+@mixin accordion-purple-css {
+  .accordion-purple {
+    @include accordion-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light);
+  }
+}
+
+@mixin alert-purple-css {
+  .alert-purple {
+    @include alert-color-values($purple-bg-text, $purple-bg, $purple-bg-light);
+  }
+}
+
+@mixin background-purple-css {
+  .bg-purple {
+    @include background-color-values($purple-bg-text, $purple-bg);
+  }
+}
+
+@mixin badge-purple-css {
+  .badge-purple {
+    @include badge-color-values($purple-bg-text, $purple-bg, $purple-bg-light);
+  }
+}
+
+@mixin button-purple-css {
+  .btn-purple {
+    @include button-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light, $purple-bg-light);
+  }
+}
+
+@mixin card-purple-css {
+  .card-purple {
+    @include card-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light, $purple-bg-light);
+  }
+}
+
+@mixin dialog-purple-css {
+  .dialog-purple {
+    @include dialog-color-values($purple-bg-text, $purple-bg, $purple-bg-light);
+  } 
+}
+
+@mixin dropdown-purple-css {
+  .dropdown-purple {
+    @include dropdown-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light, $purple-bg-light);
+  } 
+}
+
+@mixin list-group-purple-css {
+  .list-group-purple {
+    @include list-group-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light);
+  }
+}
+
+@mixin popover-purple-css {
+  .popover-purple {
+    @include popover-color-values($purple-bg-text, $purple-bg, $purple-bg-light);
+  }
+}
+
+@mixin purple-utilities-css {
+  @include accordion-purple-css;
+  @include alert-purple-css;
+  @include background-purple-css;
+  @include badge-purple-css;
+  @include button-purple-css;
+  @include card-purple-css;
+  @include dialog-purple-css;
+  @include dropdown-purple-css;
+  @include list-group-purple-css;
+  @include popover-purple-css;
+}

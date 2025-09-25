@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Yellow utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$yellow-bg-text:      #000 !default;
+$yellow-bg:           var(--yellow) !default;
+$yellow-bg-dark:      var(--yellow-7) !default;
+$yellow-bg-light:     var(--yellow-5) !default;
+
+// Utility mixins
+@mixin accordion-yellow-css {
+  .accordion-yellow {
+    @include accordion-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light);
+  }
+}
+
+@mixin alert-yellow-css {
+  .alert-yellow {
+    @include alert-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-light);
+  }
+}
+
+@mixin background-yellow-css {
+  .bg-yellow {
+    @include background-color-values($yellow-bg-text, $yellow-bg);
+  }
+}
+
+@mixin badge-yellow-css {
+  .badge-yellow {
+    @include badge-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-light);
+  }
+}
+
+@mixin button-yellow-css {
+  .btn-yellow {
+    @include button-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light, $yellow-bg-light);
+  }
+}
+
+@mixin card-yellow-css {
+  .card-yellow {
+    @include card-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light, $yellow-bg-light);
+  }
+}
+
+@mixin dialog-yellow-css {
+  .dialog-yellow {
+    @include dialog-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-light);
+  } 
+}
+
+@mixin dropdown-yellow-css {
+  .dropdown-yellow {
+    @include dropdown-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light, $yellow-bg-light);
+  } 
+}
+
+@mixin list-group-yellow-css {
+  .list-group-yellow {
+    @include list-group-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light);
+  }
+}
+
+@mixin popover-yellow-css {
+  .popover-yellow {
+    @include popover-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-light);
+  }
+}
+
+@mixin yellow-utilities-css {
+  @include accordion-yellow-css;
+  @include alert-yellow-css;
+  @include background-yellow-css;
+  @include badge-yellow-css;
+  @include button-yellow-css;
+  @include card-yellow-css;
+  @include dialog-yellow-css;
+  @include dropdown-yellow-css;
+  @include list-group-yellow-css;
+  @include popover-yellow-css;
+}

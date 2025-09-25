@@ -31,6 +31,7 @@
     @if $enable-tan { @include tan-variables; }
     @if $enable-rosewood { @include rosewood-variables; }
     @if $enable-steelblue { @include steelblue-variables; }
+    @if $enable-semantic { @include semantic-variables; }
     @if $enable-theme-surface { @include theme-surface-variables; }
     @if $enable-theme-typography { @include theme-typography-variables; }
     @if $enable-theme-forms-buttons { @include theme-forms-buttons-variables; }
@@ -105,6 +106,7 @@
   @if $enable-tan-utilities { @include tan-utilities-css; }
   @if $enable-rosewood-utilities { @include rosewood-utilities-css; }
   @if $enable-steelblue-utilities { @include steelblue-utilities-css; }
+  @if $enable-semantic-utilities { @include semantic-utilities-css; }
   
   // Color utilities individual
   // Gray
@@ -249,6 +251,67 @@
   @if $enable-steelblue-dialogs { @include dialog-steelblue-css; }
   @if $enable-steelblue-list-groups { @include list-group-steelblue-css; }
   @if $enable-steelblue-popovers { @include popover-steelblue-css; }
+  
+  // Semantic
+  @if $enable-primary-accordions { @include accordion-primary-css; }
+  @if $enable-primary-alerts { @include alert-primary-css; }
+  @if $enable-primary-backgrounds { @include background-primary-css; }
+  @if $enable-primary-badges { @include badge-primary-css; }
+  @if $enable-primary-buttons { @include button-primary-css; }
+  @if $enable-primary-cards { @include card-primary-css; }
+  @if $enable-primary-dialogs { @include dialog-primary-css; }
+  @if $enable-primary-list-groups { @include list-group-primary-css; }
+  @if $enable-primary-popovers { @include popover-primary-css; }
+
+  @if $enable-info-accordions { @include accordion-info-css; }
+  @if $enable-info-alerts { @include alert-info-css; }
+  @if $enable-info-backgrounds { @include background-info-css; }
+  @if $enable-info-badges { @include badge-info-css; }
+  @if $enable-info-buttons { @include button-info-css; }
+  @if $enable-info-cards { @include card-info-css; }
+  @if $enable-info-dialogs { @include dialog-info-css; }
+  @if $enable-info-list-groups { @include list-group-info-css; }
+  @if $enable-info-popovers { @include popover-info-css; }
+  
+  @if $enable-success-accordions { @include accordion-success-css; }
+  @if $enable-success-alerts { @include alert-success-css; }
+  @if $enable-success-backgrounds { @include background-success-css; }
+  @if $enable-success-badges { @include badge-success-css; }
+  @if $enable-success-buttons { @include button-success-css; }
+  @if $enable-success-cards { @include card-success-css; }
+  @if $enable-success-dialogs { @include dialog-success-css; }
+  @if $enable-success-list-groups { @include list-group-success-css; }
+  @if $enable-success-popovers { @include popover-success-css; }
+  
+  @if $enable-warning-accordions { @include accordion-warning-css; }
+  @if $enable-warning-alerts { @include alert-warning-css; }
+  @if $enable-warning-backgrounds { @include background-warning-css; }
+  @if $enable-warning-badges { @include badge-warning-css; }
+  @if $enable-warning-buttons { @include button-warning-css; }
+  @if $enable-warning-cards { @include card-warning-css; }
+  @if $enable-warning-dialogs { @include dialog-warning-css; }
+  @if $enable-warning-list-groups { @include list-group-warning-css; }
+  @if $enable-warning-popovers { @include popover-warning-css; }
+  
+  @if $enable-danger-accordions { @include accordion-danger-css; }
+  @if $enable-danger-alerts { @include alert-danger-css; }
+  @if $enable-danger-backgrounds { @include background-danger-css; }
+  @if $enable-danger-badges { @include badge-danger-css; }
+  @if $enable-danger-buttons { @include button-danger-css; }
+  @if $enable-danger-cards { @include card-danger-css; }
+  @if $enable-danger-dialogs { @include dialog-danger-css; }
+  @if $enable-danger-list-groups { @include list-group-danger-css; }
+  @if $enable-danger-popovers { @include popover-danger-css; }
+
+  @if $enable-secondary-accordions { @include accordion-secondary-css; }
+  @if $enable-secondary-alerts { @include alert-secondary-css; }
+  @if $enable-secondary-backgrounds { @include background-secondary-css; }
+  @if $enable-secondary-badges { @include badge-secondary-css; }
+  @if $enable-secondary-buttons { @include button-secondary-css; }
+  @if $enable-secondary-cards { @include card-secondary-css; }
+  @if $enable-secondary-dialogs { @include dialog-secondary-css; }
+  @if $enable-secondary-list-groups { @include list-group-secondary-css; }
+  @if $enable-secondary-popovers { @include popover-secondary-css; }
 } // end-utilities
 
 // ---------------------------------------------------------- 

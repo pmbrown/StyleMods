@@ -2,7 +2,7 @@
 // Orange
 // ----------------------------------------------------------
 // Variable colors
-$orange:      #ff8c00 !default;
+$orange:      #ff981a !default;
 $orange-1:    color-mix(in srgb, var(--orange) 45%, white) !default;
 $orange-2:    color-mix(in srgb, var(--orange) 55%, white) !default;
 $orange-3:    color-mix(in srgb, var(--orange) 65%, white) !default;
@@ -14,12 +14,6 @@ $orange-8:    color-mix(in srgb, var(--orange) 82%, black) !default;
 $orange-9:    color-mix(in srgb, var(--orange) 72%, black) !default;
 $orange-10:   color-mix(in srgb, var(--orange) 62%, black) !default;
 $orange-11:   color-mix(in srgb, var(--orange) 52%, black) !default;
-
-// Utility colors
-$orange-bg-text:      #000 !default;
-$orange-bg:           var(--orange-6) !default;
-$orange-bg-dark:      var(--orange-7) !default;
-$orange-bg-light:     var(--orange-5) !default;
 
 // Tokens style
 $orange-tokens:       ':where(html)' !default;
@@ -40,114 +34,6 @@ $orange-token-values: (
   "orange-11": $orange-11,
 ) !default;
 
-// Utility maps
-$accordion-orange: (
-  "summary-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "summary-bg": $orange-bg,
-  "summary-focus": $orange-bg-dark,
-  "accordion-bd-color": $orange-bg-light,
-) !default;
-
-$alert-orange: (
-  "alert-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "alert-bg": $orange-bg,
-  "alert-bd-color": $orange-bg-light,
-) !default;
-
-$background-orange: (
-  "bg-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "bg-col": $orange-bg,
-) !default;
-
-$badge-orange: (
-  "badge-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "badge-bg": $orange-bg,
-  "badge-bd-color": $orange-bg-light,
-) !default;
-
-$button-orange: (
-  "btn-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "btn-bg": $orange-bg,
-  "btn-bd-color": $orange-bg-light,
-  "btn-hover": $orange-bg-dark,
-  "focus-color": $orange-bg-light,
-) !default;
-
-$card-orange: (
-  "card-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "card-bg": $orange-bg,
-  "card-text-hover": $orange-bg-text,
-  "card-hover": $orange-bg-dark,
-  "card-bd-color": $orange-bg-light,
-  "card-focus-color": $orange-bg-light,
-  "card-title-bg": $orange-bg,
-) !default;
-
-$dialog-orange: (
-  "dialog-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "dialog-bg": $orange-bg,
-  "dialog-bd-color": $orange-bg-light,
-  "dialog-title-bg": $orange-bg,
-) !default;
-
-$dropdown-orange: (
-  "dropdown-text": $orange-bg-text,
-  "dropdown-btn-text": $orange-bg-text,
-  "dropdown-ico": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "dropdown-bg": $orange-bg,
-  "dropdown-btn-bg": $orange-bg,
-  "dropdown-link-hover": $orange-bg-dark,
-  "dropdown-btn-hover": $orange-bg-dark,
-  "dropdown-bd-color": $orange-bg-light,
-  "dropdown-focus-color": $orange-bg-light,
-) !default;
-
-
-$list-group-orange: (
-  "list-group-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "list-group-bg": $orange-bg,
-  "list-group-dt-bg": $orange-bg,
-  "list-group-hover": $orange-bg-dark,
-  "list-group-bd-color": $orange-bg-light,
-) !default;
-
-$popover-orange: (
-  "popover-text": $orange-bg-text,
-  "ico": $orange-bg-text,
-  "link": $orange-bg-text,
-  "visited": $orange-bg-text,
-  "hover": $orange-bg-text,
-  "popover-bg": $orange-bg,
-  "popover-bd-color": $orange-bg-light,
-) !default;
-
 // Variables mixins
 @mixin orange-variables {
   @each $name, $value in $orange-token-values {
@@ -159,113 +45,4 @@ $popover-orange: (
   #{$orange-tokens} {
     @include orange-variables;
   }
-}
-
-// Utility mixins
-@mixin accordion-orange-css {
-  .accordion-orange {
-    @each $name, $value in $accordion-orange {
-      --#{$name}: #{$value};
-    }  
-  }
-}
-
-@mixin alert-orange-css {
-  .alert-orange {
-    @each $name, $value in $alert-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin background-orange-css {
-  .bg-orange {
-    @each $name, $value in $background-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin badge-orange-css {
-  .badge-orange {
-    @each $name, $value in $badge-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin button-orange-css {
-  .btn-orange {
-    @each $name, $value in $button-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin card-orange-css {
-  .card-orange {
-    @each $name, $value in $card-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin dialog-orange-css {
-  .dialog-orange {
-    @each $name, $value in $dialog-orange {
-      --#{$name}: #{$value};
-    }
-  } 
-}
-
-@mixin dropdown-orange-css {
-  .dropdown-orange {
-    @each $name, $value in $dropdown-orange {
-      --#{$name}: #{$value};
-    }
-  } 
-}
-
-@mixin list-group-orange-css {
-  .list-group-orange {
-    @each $name, $value in $list-group-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin popover-orange-css {
-  .popover-orange {
-    @each $name, $value in $popover-orange {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-// Combined mixins
-@mixin orange-module-css {
-  @include orange-variables-css;
-  @include accordion-orange-css;
-  @include alert-orange-css;
-  @include background-orange-css;
-  @include badge-orange-css;
-  @include button-orange-css;
-  @include card-orange-css;
-  @include dialog-orange-css;
-  @include dropdown-orange-css;
-  @include list-group-orange-css;
-  @include popover-orange-css;
-}
-
-@mixin orange-utilities-css {
-  @include accordion-orange-css;
-  @include alert-orange-css;
-  @include background-orange-css;
-  @include badge-orange-css;
-  @include button-orange-css;
-  @include card-orange-css;
-  @include dialog-orange-css;
-  @include dropdown-orange-css;
-  @include list-group-orange-css;
-  @include popover-orange-css;
 }

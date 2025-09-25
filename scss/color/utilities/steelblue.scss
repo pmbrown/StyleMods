@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Steelblue utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$steelblue-bg-text:      #000 !default;
+$steelblue-bg:           var(--steelblue-6) !default;
+$steelblue-bg-dark:      var(--steelblue-7) !default;
+$steelblue-bg-light:     var(--steelblue-5) !default;
+
+// Utility mixins
+@mixin accordion-steelblue-css {
+  .accordion-steelblue {
+    @include accordion-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light);
+  }
+}
+
+@mixin alert-steelblue-css {
+  .alert-steelblue {
+    @include alert-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-light);
+  }
+}
+
+@mixin background-steelblue-css {
+  .bg-steelblue {
+    @include background-color-values($steelblue-bg-text, $steelblue-bg);
+  }
+}
+
+@mixin badge-steelblue-css {
+  .badge-steelblue {
+    @include badge-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-light);
+  }
+}
+
+@mixin button-steelblue-css {
+  .btn-steelblue {
+    @include button-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light, $steelblue-bg-light);
+  }
+}
+
+@mixin card-steelblue-css {
+  .card-steelblue {
+    @include card-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light, $steelblue-bg-light);
+  }
+}
+
+@mixin dialog-steelblue-css {
+  .dialog-steelblue {
+    @include dialog-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-light);
+  } 
+}
+
+@mixin dropdown-steelblue-css {
+  .dropdown-steelblue {
+    @include dropdown-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light, $steelblue-bg-light);
+  } 
+}
+
+@mixin list-group-steelblue-css {
+  .list-group-steelblue {
+    @include list-group-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light);
+  }
+}
+
+@mixin popover-steelblue-css {
+  .popover-steelblue {
+    @include popover-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-light);
+  }
+}
+
+@mixin steelblue-utilities-css {
+  @include accordion-steelblue-css;
+  @include alert-steelblue-css;
+  @include background-steelblue-css;
+  @include badge-steelblue-css;
+  @include button-steelblue-css;
+  @include card-steelblue-css;
+  @include dialog-steelblue-css;
+  @include dropdown-steelblue-css;
+  @include list-group-steelblue-css;
+  @include popover-steelblue-css;
+}

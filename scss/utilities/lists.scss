@@ -39,15 +39,23 @@
   padding-inline-start: var(--divider-px, .5rem);
 }
 
+// Definition <dl>
 :where(.dl-none, .dl-meta, .dl-comma, .dl-comma-inline) dd {
   margin-inline-start: 0;
 }
 
-// Definition <dl>
+.dt-bold dt {
+  font-weight: bold;
+}
+
+.dt-bold:is(.dl-meta, .dl-comma-inline) dt:after {
+  font-weight: 400;
+}
+
 .dl-meta {
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1fr);
-  column-gap: var(--dl-meta-gap, .75rem);
+  column-gap: var(--dl-meta-gap, 0.75rem);
 }
 
 :where(.dl-comma, .dl-comma-inline) {
@@ -56,7 +64,7 @@
   column-gap: var(--gap, 0.3rem);
 }
 
-.dl-comma-inline dt {
+:where(.dl-meta, .dl-comma-inline) dt {
   margin-inline-end: var(--dt-me, 0.15rem);
 }
 

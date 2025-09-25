@@ -12,12 +12,32 @@ $btn-background-hover:      var(--btn-hover, color-mix(in srgb, CanvasText 8%, C
 $btn-focus-shadow:          var(--focus-shadow, 0 0 0 0.06rem) !default;
 $btn-focus-shadow-color:    var(--focus-color, color-mix(in srgb, CanvasText 22%, Canvas)) !default;
 
+// Sizes
+$btn-xs-font-size:          0.75em !default;
+$btn-xs-padding-block:      0.188rem !default;
+$btn-xs-padding-inline:     0.625rem !default; 
+$btn-sm-font-size:          0.88em !default;
+$btn-sm-padding-block:      0.25rem !default;
+$btn-sm-padding-inline:     0.75rem !default;   
+$btn-lg-font-size:          1.1em !default;
+$btn-lg-padding-block:      0.4rem !default;
+$btn-lg-padding-inline:     1rem !default; 
+$btn-xl-font-size:          1.25em !default;
+$btn-xl-padding-block:      0.5rem !default;
+$btn-xl-padding-inline:     1.125rem !default;
+
 // Pagination buttons
 $btn-pagination-previous:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m6 8 4-4v8z'/></svg>") !default;
 $btn-pagination-next:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m10 8-4 4-9e-7 -8z'/></svg>");
 $btn-pagination-up:         url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 6 4 4-8 7e-7z'/></svg>") !default;
 $btn-pagination-down:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 10-4-4h8z'/></svg>") !default;
 
+// Button sizes
+@mixin button-sizes($font-size, $padding-y, $padding-x) {
+  --btn-fs: #{$font-size};
+  --btn-py: #{$padding-y};
+  --btn-px: #{$padding-x};
+}
 
 @mixin buttons-css {
 
@@ -62,27 +82,19 @@ $btn-pagination-down:       url("data:image/svg+xml,<svg viewBox='0 0 16 16' fil
 
 // Button sizes
 .btn-xs {
-  --btn-fs: 0.75em;
-  --btn-py: .188rem;
-  --btn-px: .625rem;
+  @include button-sizes($btn-xs-font-size, $btn-xs-padding-block, $btn-xs-padding-inline);
 }
 
 .btn-sm {
-  --btn-fs: 0.88em;
-  --btn-py: .25rem;
-  --btn-px: .75rem;
+  @include button-sizes($btn-sm-font-size, $btn-sm-padding-block, $btn-sm-padding-inline);
 }
 
 .btn-lg {
-  --btn-fs: 1.1em;
-  --btn-py: 0.4rem;
-  --btn-px: 1rem;
+  @include button-sizes($btn-lg-font-size, $btn-lg-padding-block, $btn-lg-padding-inline);
 }
 
 .btn-xl {
-  --btn-fs: 1.25em;
-  --btn-py: .5rem;
-  --btn-px: 1.125rem;
+  @include button-sizes($btn-xl-font-size, $btn-xl-padding-block, $btn-xl-padding-inline);
 }
 
 .btn-img {

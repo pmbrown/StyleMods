@@ -1,5 +1,5 @@
 // ---------------------------------------------------------- 
-// Blue
+// Blue variables
 // ----------------------------------------------------------
 // Variable colors
 $blue:      #0066ff !default;
@@ -8,18 +8,12 @@ $blue-2:    color-mix(in srgb, var(--blue) 50%, white) !default;
 $blue-3:    color-mix(in srgb, var(--blue) 60%, white) !default;
 $blue-4:    color-mix(in srgb, var(--blue) 70%, white) !default;
 $blue-5:    color-mix(in srgb, var(--blue) 80%, white) !default;
-$blue-6:    var(--blue) !default;  
+$blue-6:    var(--blue) !default;
 $blue-7:    color-mix(in srgb, var(--blue) 80%, black) !default;
 $blue-8:    color-mix(in srgb, var(--blue) 70%, black) !default;
 $blue-9:    color-mix(in srgb, var(--blue) 60%, black) !default;
 $blue-10:   color-mix(in srgb, var(--blue) 50%, black) !default;
 $blue-11:   color-mix(in srgb, var(--blue) 44%, black) !default;
-
-// Utility colors
-$blue-bg-text:      #fff !default;
-$blue-bg:           var(--blue-6) !default;
-$blue-bg-dark:      var(--blue-7) !default;
-$blue-bg-light:     var(--blue-5) !default;
 
 // Tokens style
 $blue-tokens:       ':where(html)' !default;
@@ -40,113 +34,6 @@ $blue-token-values: (
   "blue-11": $blue-11,
 ) !default;
 
-// Utility maps
-$accordion-blue: (
-  "summary-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "summary-bg": $blue-bg,
-  "summary-focus": $blue-bg-dark,
-  "accordion-bd-color": $blue-bg-light,
-) !default;
-
-$alert-blue: (
-  "alert-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "alert-bg": $blue-bg,
-  "alert-bd-color": $blue-bg-light,
-) !default;
-
-$background-blue: (
-  "bg-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "bg-col": $blue-bg,
-) !default;
-
-$badge-blue: (
-  "badge-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "badge-bg": $blue-bg,
-  "badge-bd-color": $blue-bg-light,
-) !default;
-
-$button-blue: (
-  "btn-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "btn-bg": $blue-bg,
-  "btn-bd-color": $blue-bg-light,
-  "btn-hover": $blue-bg-dark,
-  "focus-color": $blue-bg-light,
-) !default;
-
-$card-blue: (
-  "card-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "card-bg": $blue-bg,
-  "card-text-hover": $blue-bg-text,
-  "card-hover": $blue-bg-dark,
-  "card-bd-color": $blue-bg-light,
-  "card-focus-color": $blue-bg-light,
-  "card-title-bg": $blue-bg,
-) !default;
-
-$dialog-blue: (
-  "dialog-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "dialog-bg": $blue-bg,
-  "dialog-bd-color": $blue-bg-light,
-  "dialog-title-bg": $blue-bg,
-) !default;
-
-$dropdown-blue: (
-  "dropdown-text": $blue-bg-text,
-  "dropdown-btn-text": $blue-bg-text,
-  "dropdown-ico": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "dropdown-bg": $blue-bg,
-  "dropdown-btn-bg": $blue-bg,
-  "dropdown-link-hover": $blue-bg-dark,
-  "dropdown-btn-hover": $blue-bg-dark,
-  "dropdown-bd-color": $blue-bg-light,
-  "dropdown-focus-color": $blue-bg-light,
-) !default;
-
-$list-group-blue: (
-  "list-group-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "list-group-bg": $blue-bg,
-  "list-group-dt-bg": $blue-bg,
-  "list-group-hover": $blue-bg-dark,
-  "list-group-bd-color": $blue-bg-light,
-) !default;
-
-$popover-blue: (
-  "popover-text": $blue-bg-text,
-  "ico": $blue-bg-text,
-  "link": $blue-bg-text,
-  "visited": $blue-bg-text,
-  "hover": $blue-bg-text,
-  "popover-bg": $blue-bg,
-  "popover-bd-color": $blue-bg-light,
-) !default;
-
 // Variables mixins
 @mixin blue-variables {
   @each $name, $value in $blue-token-values {
@@ -158,113 +45,4 @@ $popover-blue: (
   #{$blue-tokens} {
     @include blue-variables;
   }
-}
-
-// Utility mixins
-@mixin accordion-blue-css {
-  .accordion-blue {
-    @each $name, $value in $accordion-blue {
-      --#{$name}: #{$value};
-    }  
-  }
-}
-
-@mixin alert-blue-css {
-  .alert-blue {
-    @each $name, $value in $alert-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin background-blue-css {
-  .bg-blue {
-    @each $name, $value in $background-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin badge-blue-css {
-  .badge-blue {
-    @each $name, $value in $badge-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin button-blue-css {
-  .btn-blue {
-    @each $name, $value in $button-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin card-blue-css {
-  .card-blue {
-    @each $name, $value in $card-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin dialog-blue-css {
-  .dialog-blue {
-    @each $name, $value in $dialog-blue {
-      --#{$name}: #{$value};
-    }
-  } 
-}
-
-@mixin dropdown-blue-css {
-  .dropdown-blue {
-    @each $name, $value in $dropdown-blue {
-      --#{$name}: #{$value};
-    }
-  } 
-}
-
-@mixin list-group-blue-css {
-  .list-group-blue {
-    @each $name, $value in $list-group-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-@mixin popover-blue-css {
-  .popover-blue {
-    @each $name, $value in $popover-blue {
-      --#{$name}: #{$value};
-    }
-  }
-}
-
-// Combined mixins
-@mixin blue-module-css {
-  @include blue-variables-css;
-  @include accordion-blue-css;
-  @include alert-blue-css;
-  @include background-blue-css;
-  @include badge-blue-css;
-  @include button-blue-css;
-  @include card-blue-css;
-  @include dialog-blue-css;
-  @include dropdown-blue-css;
-  @include list-group-blue-css;
-  @include popover-blue-css;
-}
-
-@mixin blue-utilities-css {
-  @include accordion-blue-css;
-  @include alert-blue-css;
-  @include background-blue-css;
-  @include badge-blue-css;
-  @include button-blue-css;
-  @include card-blue-css;
-  @include dialog-blue-css;
-  @include dropdown-blue-css;
-  @include list-group-blue-css;
-  @include popover-blue-css;
 }

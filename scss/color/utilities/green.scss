@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Green utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$green-bg-text:      #fff !default;
+$green-bg:           var(--green-6) !default;
+$green-bg-dark:      var(--green-7) !default;
+$green-bg-light:     var(--green-5) !default;
+
+// Utility mixins
+@mixin accordion-green-css {
+  .accordion-green {
+    @include accordion-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light);
+  }
+}
+
+@mixin alert-green-css {
+  .alert-green {
+    @include alert-color-values($green-bg-text, $green-bg, $green-bg-light);
+  }
+}
+
+@mixin background-green-css {
+  .bg-green {
+    @include background-color-values($green-bg-text, $green-bg);
+  }
+}
+
+@mixin badge-green-css {
+  .badge-green {
+    @include badge-color-values($green-bg-text, $green-bg, $green-bg-light);
+  }
+}
+
+@mixin button-green-css {
+  .btn-green {
+    @include button-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light, $green-bg-light);
+  }
+}
+
+@mixin card-green-css {
+  .card-green {
+    @include card-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light, $green-bg-light);
+  }
+}
+
+@mixin dialog-green-css {
+  .dialog-green {
+    @include dialog-color-values($green-bg-text, $green-bg, $green-bg-light);
+  } 
+}
+
+@mixin dropdown-green-css {
+  .dropdown-green {
+    @include dropdown-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light, $green-bg-light);
+  } 
+}
+
+@mixin list-group-green-css {
+  .list-group-green {
+    @include list-group-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light);
+  }
+}
+
+@mixin popover-green-css {
+  .popover-green {
+    @include popover-color-values($green-bg-text, $green-bg, $green-bg-light);
+  }
+}
+
+@mixin green-utilities-css {
+  @include accordion-green-css;
+  @include alert-green-css;
+  @include background-green-css;
+  @include badge-green-css;
+  @include button-green-css;
+  @include card-green-css;
+  @include dialog-green-css;
+  @include dropdown-green-css;
+  @include list-group-green-css;
+  @include popover-green-css;
+}

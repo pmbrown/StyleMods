@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Rosewood utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$rosewood-bg-text:      #fff !default;
+$rosewood-bg:           var(--rosewood-6) !default;
+$rosewood-bg-dark:      var(--rosewood-7) !default;
+$rosewood-bg-light:     var(--rosewood-5) !default;
+
+// Utility mixins
+@mixin accordion-rosewood-css {
+  .accordion-rosewood {
+    @include accordion-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light);
+  }
+}
+
+@mixin alert-rosewood-css {
+  .alert-rosewood {
+    @include alert-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-light);
+  }
+}
+
+@mixin background-rosewood-css {
+  .bg-rosewood {
+    @include background-color-values($rosewood-bg-text, $rosewood-bg);
+  }
+}
+
+@mixin badge-rosewood-css {
+  .badge-rosewood {
+    @include badge-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-light);
+  }
+}
+
+@mixin button-rosewood-css {
+  .btn-rosewood {
+    @include button-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light, $rosewood-bg-light);
+  }
+}
+
+@mixin card-rosewood-css {
+  .card-rosewood {
+    @include card-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light, $rosewood-bg-light);
+  }
+}
+
+@mixin dialog-rosewood-css {
+  .dialog-rosewood {
+    @include dialog-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-light);
+  } 
+}
+
+@mixin dropdown-rosewood-css {
+  .dropdown-rosewood {
+    @include dropdown-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light, $rosewood-bg-light);
+  } 
+}
+
+@mixin list-group-rosewood-css {
+  .list-group-rosewood {
+    @include list-group-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light);
+  }
+}
+
+@mixin popover-rosewood-css {
+  .popover-rosewood {
+    @include popover-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-light);
+  }
+}
+
+@mixin rosewood-utilities-css {
+  @include accordion-rosewood-css;
+  @include alert-rosewood-css;
+  @include background-rosewood-css;
+  @include badge-rosewood-css;
+  @include button-rosewood-css;
+  @include card-rosewood-css;
+  @include dialog-rosewood-css;
+  @include dropdown-rosewood-css;
+  @include list-group-rosewood-css;
+  @include popover-rosewood-css;
+}

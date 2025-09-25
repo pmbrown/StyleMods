@@ -10,6 +10,7 @@
 @use "dropdowns" as *;
 @use "list-groups" as *;
 @use "popovers" as *;
+@use "theme-switch" as *;
 
 @mixin all-components-css {
   @include accordions-css;
@@ -21,4 +22,5 @@
   @include dropdowns-css;
   @include list-groups-css;
   @include popovers-css;
+  @include theme-switch-css;
 }

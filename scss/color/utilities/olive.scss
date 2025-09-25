@@ -1,0 +1,84 @@
+// ---------------------------------------------------------- 
+// Olive utilities
+// ----------------------------------------------------------
+@use "color-mixins" as *;
+
+// Utility colors
+$olive-bg-text:      #fff !default;
+$olive-bg:           var(--olive-6) !default;
+$olive-bg-dark:      var(--olive-7) !default;
+$olive-bg-light:     var(--olive-5) !default;
+
+// Utility mixins
+@mixin accordion-olive-css {
+  .accordion-olive {
+    @include accordion-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light);
+  }
+}
+
+@mixin alert-olive-css {
+  .alert-olive {
+    @include alert-color-values($olive-bg-text, $olive-bg, $olive-bg-light);
+  }
+}
+
+@mixin background-olive-css {
+  .bg-olive {
+    @include background-color-values($olive-bg-text, $olive-bg);
+  }
+}
+
+@mixin badge-olive-css {
+  .badge-olive {
+    @include badge-color-values($olive-bg-text, $olive-bg, $olive-bg-light);
+  }
+}
+
+@mixin button-olive-css {
+  .btn-olive {
+    @include button-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light, $olive-bg-light);
+  }
+}
+
+@mixin card-olive-css {
+  .card-olive {
+    @include card-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light, $olive-bg-light);
+  }
+}
+
+@mixin dialog-olive-css {
+  .dialog-olive {
+    @include dialog-color-values($olive-bg-text, $olive-bg, $olive-bg-light);
+  } 
+}
+
+@mixin dropdown-olive-css {
+  .dropdown-olive {
+    @include dropdown-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light, $olive-bg-light);
+  } 
+}
+
+@mixin list-group-olive-css {
+  .list-group-olive {
+    @include list-group-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light);
+  }
+}
+
+@mixin popover-olive-css {
+  .popover-olive {
+    @include popover-color-values($olive-bg-text, $olive-bg, $olive-bg-light);
+  }
+}
+
+@mixin olive-utilities-css {
+  @include accordion-olive-css;
+  @include alert-olive-css;
+  @include background-olive-css;
+  @include badge-olive-css;
+  @include button-olive-css;
+  @include card-olive-css;
+  @include dialog-olive-css;
+  @include dropdown-olive-css;
+  @include list-group-olive-css;
+  @include popover-olive-css;
+}
