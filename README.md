@@ -1,33 +1,17 @@
-# StyleMods <br>https://stylemods.com
+# StyleMods
 
-### A collection of cohesively designed style sheets setup as Sass modules that can be included individually or together in custom SCSS files using Sass mixins.
+### A growing library of customizable content styles, colors, utilities, components and icons with over 500 different style modules that can be compiled individually or together in 1000s of different combinations.
 
-The website docs attempt to provide consistent information about using and customizing StyleMods but please note they're an ongoing work-in-progress still evolving organically with the project build.
+The styles are designed cohesively to provide consistency if using them together, they can be used as Sass modules in custom style sheets or compiled using a pre-configured framework with both methods offering the option to compile the styles using cascade layers if required.
 
-In general StyleMods has been developed under the following principals:
+The Sass methods and language used tries to stay user-friendly to make both options straight forward to use, and only CSS methods considered baseline by [MDN web docs](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility) have been used. Colored components have been tested with [Wave evaluation tools](https://wave.webaim.org/) to check for sufficient text contrast-ratios but will require re-validating if customizing the colors.
 
-1. All styles must be self-contained documents that work independently.
-2. All styles can be used and customized in a consistent manner.
-3. All styles must be cohesively designed to work together if required.
+## Documentation [[stylemods.com]](https://stylemods.com)
 
-Some of the methods used are a bit unorthodox but nothing new in how CSS and Sass are designed to be used:
+As a single developer the website by far takes the most time to maintain so although I've done my best to provide consistent documentation that's up-to-date there's bound to be some errors. The repository for the website is private so please email me at the address below with any feedback regarding issues.
 
-- The styles and CSS variables are all setup as Sass `@mixin` for selective inclusion in custom SCSS.
-- The default property styles are designed using fallback values for CSS variables without preset tokens.
+## Feedback/contribute
 
+As a solo hobbyist my primary goal is learning so any feedback regarding any of the styles or website as mentioned above would be highly welcomed. I'm pretty open to the idea of having others contribute to the project if anyone was interested, but it's not something I've put a lot of thought into as no-one has ever approached me regarding anything about StyleMods, nor issues or ideas shared via the repository.
 
-The overall use of Sass functionality varies from module to module but could roughly be summarised as follows:
-
-- Content styles and components use Sass variables to enable customizing with overrides.
-- Layout, icons and utility modules use Sass variables and maps to help generate the styles.
-
-
-The following provides an overview of the common principals used when writing the styles.
-
-- Each module is a standalone SCSS file with all the CSS and Sass functionality self-contained within the same document.
-- Common style properties included (e.g. backgrounds and borders) use consistent values to ensure they work together if required.
-- Non-generated styles are written as regular CSS (i.e. without Sass nesting) so what you see in the source code is what's compiled.
-- Sass variables and maps use consistent language and structures to provide continuity if customizing or expanding the styles.
-- All Sass and CSS variable names are unique but follow a consistent naming convention to keep them simple for customizing.
-
-Feedback is welcomed, email to philbrown.canberra@gmail.com is preferred.
+Being old fashioned email to philbrown.canberra@gmail.com is much preferred if you wanted to contact me but I've also now enabled the discussions board so you're welcome to use it, or you can still open an issue if you prefer.
