@@ -15,6 +15,7 @@
 @use "tan" as *;
 @use "rosewood" as *;
 @use "steelblue" as *;
+@use "semantic" as *;
 @use "theme" as *;
 @use "utilities" as *;
 
@@ -134,6 +135,11 @@ $color-tokens:  ':where(html)' !default;
 @mixin steelblue-module-css {
   @include steelblue-variables-css;
   @include steelblue-utilities-css;
+}
+
+@mixin semantic-module {
+  @include semantic-variables-css;
+  @include semantic-utilities-css;
 }
 
 @mixin all-color-modules-css {

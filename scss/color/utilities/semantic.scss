@@ -2,7 +2,38 @@
 // Semantic utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
-@use "../semantic" as *;
+
+// Background colors
+$primary-bg:            var(--primary) !default;
+$info-bg:               var(--info) !default;
+$success-bg:            var(--success) !default;
+$warning-bg:            var(--warning) !default;
+$danger-bg:             var(--danger) !default;
+$secondary-bg:          var(--secondary) !default;
+
+// Text colors
+$primary-bg-text:       #fff !default;
+$info-bg-text:          #000 !default;
+$success-bg-text:       #fff !default;
+$warning-bg-text:       #000 !default;
+$danger-bg-text:        #fff !default;
+$secondary-bg-text:     #000 !default;
+
+// Light accents
+$primary-bg-light:      var(--primary-light) !default;
+$info-bg-light:         var(--info-light) !default;
+$success-bg-light:      var(--success-light) !default;
+$warning-bg-light:      var(--warning-light) !default;
+$danger-bg-light:       var(--danger-light) !default;
+$secondary-bg-light:    var(--secondary-light) !default;
+
+// Dark accents
+$primary-bg-dark:       var(--primary-dark) !default;
+$info-bg-dark:          var(--info-dark) !default;
+$success-bg-dark:       var(--success-dark) !default;
+$warning-bg-dark:       var(--warning-dark) !default;
+$danger-bg-dark:        var(--danger-dark) !default;
+$secondary-bg-dark:     var(--secondary-dark) !default;
 
 // ----------------------------------------------------------
 // Primary mixins
@@ -463,6 +494,96 @@
   @include popover-secondary-css;
 }
 
+@mixin semantic-accordions-css {
+  @include accordion-primary-css;
+  @include accordion-info-css;
+  @include accordion-success-css;
+  @include accordion-warning-css;
+  @include accordion-danger-css;
+  @include accordion-secondary-css;
+}
+
+@mixin semantic-alerts-css {
+  @include alert-primary-css;
+  @include alert-info-css;
+  @include alert-success-css;
+  @include alert-warning-css;
+  @include alert-danger-css;
+  @include alert-secondary-css;
+}
+
+@mixin semantic-backgrounds-css {
+  @include background-primary-css;
+  @include background-info-css;
+  @include background-success-css;
+  @include background-warning-css;
+  @include background-danger-css;
+  @include background-secondary-css;
+}
+
+@mixin semantic-badges-css {
+  @include badge-primary-css;
+  @include badge-info-css;
+  @include badge-success-css;
+  @include badge-warning-css;
+  @include badge-danger-css;
+  @include badge-secondary-css;
+}
+
+@mixin semantic-buttons-css {
+  @include button-primary-css;
+  @include button-info-css;
+  @include button-success-css;
+  @include button-warning-css;
+  @include button-danger-css;
+  @include button-secondary-css;
+}
+
+@mixin semantic-cards-css {
+  @include card-primary-css;
+  @include card-info-css;
+  @include card-success-css;
+  @include card-warning-css;
+  @include card-danger-css;
+  @include card-secondary-css;
+}
+
+@mixin semantic-dialogs-css {
+  @include dialog-primary-css;
+  @include dialog-info-css;
+  @include dialog-success-css;
+  @include dialog-warning-css;
+  @include dialog-danger-css;
+  @include dialog-secondary-css;
+}
+
+@mixin semantic-dropdowns-css {
+  @include dropdown-primary-css;
+  @include dropdown-info-css;
+  @include dropdown-success-css;
+  @include dropdown-warning-css;
+  @include dropdown-danger-css;
+  @include dropdown-secondary-css;
+}
+
+@mixin semantic-list-groups-css {
+  @include list-group-primary-css;
+  @include list-group-info-css;
+  @include list-group-success-css;
+  @include list-group-warning-css;
+  @include list-group-danger-css;
+  @include list-group-secondary-css;
+}
+
+@mixin semantic-popovers-css {
+  @include popover-primary-css;
+  @include popover-info-css;
+  @include popover-success-css;
+  @include popover-warning-css;
+  @include popover-danger-css;
+  @include popover-secondary-css;
+}
+
 @mixin semantic-utilities-css {
   @include primary-utilities-css;
   @include info-utilities-css;
@@ -470,9 +591,4 @@
   @include warning-utilities-css;
   @include danger-utilities-css;
   @include secondary-utilities-css;
-}
-
-@mixin semantic-module {
-  @include semantic-variables-css;
-  @include semantic-utilities-css;
 }

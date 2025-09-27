@@ -251,8 +251,18 @@
   @if $enable-steelblue-dialogs { @include dialog-steelblue-css; }
   @if $enable-steelblue-list-groups { @include list-group-steelblue-css; }
   @if $enable-steelblue-popovers { @include popover-steelblue-css; }
-  
+
   // Semantic
+  @if $enable-semantic-accordions { @include semantic-accordions-css; }
+  @if $enable-semantic-alerts { @include semantic-alerts-css; }
+  @if $enable-semantic-backgrounds { @include semantic-backgrounds-css; }
+  @if $enable-semantic-badges { @include semantic-badges-css; }
+  @if $enable-semantic-buttons { @include semantic-buttons-css; }
+  @if $enable-semantic-cards { @include semantic-cards-css; }
+  @if $enable-semantic-dialogs { @include semantic-dialogs-css; }
+  @if $enable-semantic-list-groups { @include semantic-list-groups-css; }
+  @if $enable-semantic-popovers { @include semantic-popovers-css; }
+
   @if $enable-primary-accordions { @include accordion-primary-css; }
   @if $enable-primary-alerts { @include alert-primary-css; }
   @if $enable-primary-backgrounds { @include background-primary-css; }

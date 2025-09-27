@@ -35,41 +35,6 @@ $secondary-dark:        color-mix(in srgb, var(--secondary) 80%, black) !default
 $semantic-tokens:       ':where(html)' !default;
 
 // ----------------------------------------------------------
-// Utility values
-// ----------------------------------------------------------
-// Background colors
-$primary-bg:            var(--primary) !default;
-$info-bg:               var(--info) !default;
-$success-bg:            var(--success) !default;
-$warning-bg:            var(--warning) !default;
-$danger-bg:             var(--danger) !default;
-$secondary-bg:          var(--secondary) !default;
-
-// Text colors
-$primary-bg-text:       #fff !default;
-$info-bg-text:          #000 !default;
-$success-bg-text:       #fff !default;
-$warning-bg-text:       #000 !default;
-$danger-bg-text:        #fff !default;
-$secondary-bg-text:     #000 !default;
-
-// Light accents
-$primary-bg-light:      var(--primary-light) !default;
-$info-bg-light:         var(--info-light) !default;
-$success-bg-light:      var(--success-light) !default;
-$warning-bg-light:      var(--warning-light) !default;
-$danger-bg-light:       var(--danger-light) !default;
-$secondary-bg-light:    var(--secondary-light) !default;
-
-// Dark accents
-$primary-bg-dark:       var(--primary-dark) !default;
-$info-bg-dark:          var(--info-dark) !default;
-$success-bg-dark:       var(--success-dark) !default;
-$warning-bg-dark:       var(--warning-dark) !default;
-$danger-bg-dark:        var(--danger-dark) !default;
-$secondary-bg-dark:     var(--secondary-dark) !default;
-
-// ----------------------------------------------------------
 // Token names and values
 // ----------------------------------------------------------
 $base-semantic-token-values: (

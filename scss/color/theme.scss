@@ -33,7 +33,7 @@ $theme-surface-4:             var(--surf-4) !default;
 $theme-table-stripes:         color-mix(in srgb, CanvasText 1%, var(--background)) !default;
 $theme-table-hover:           color-mix(in srgb, CanvasText 2%, var(--background)) !default;
 
-// Theme surfaces (if surface.scss not used)
+// Theme surfaces (if surface.scss not compiled)
 $base-surface:                $theme-background !default;
 $base-surface-1:              $surface-1 !default;
 $base-surface-2:              $surface-2 !default;

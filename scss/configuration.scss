@@ -89,7 +89,7 @@ $enable-shadows:                false !default;
 $enable-text:                   false !default;
 
 // ---------------------------------------------------------- 
-// Colors
+// Colors (primary, surface, theme)
 // ----------------------------------------------------------
 // Color variables
 $enable-surface:                false !default;
@@ -106,7 +106,6 @@ $enable-olive:                  false !default;
 $enable-tan:                    false !default;
 $enable-rosewood:               false !default;
 $enable-steelblue:              false !default;
-$enable-semantic:               false !default;
 
 // Theme color variables
 $enable-theme-surface:          false !default;
@@ -136,7 +135,6 @@ $enable-olive-utilities:        false !default;
 $enable-tan-utilities:          false !default;
 $enable-rosewood-utilities:     false !default;
 $enable-steelblue-utilities:    false !default;
-$enable-semantic-utilities:     false !default;
 
 // Individual color utilities
 $enable-gray-accordions:        false !default;
@@ -282,7 +280,28 @@ $enable-steelblue-cards:        false !default;
 $enable-steelblue-list-groups:  false !default;
 $enable-steelblue-popovers:     false !default;
 
-// Semantic
+// ---------------------------------------------------------- 
+// Semantic colors
+// ----------------------------------------------------------
+// Color variables
+$enable-semantic:               false !default;
+
+// All utilities
+$enable-semantic-utilities:     false !default;
+
+// Grouped utilities
+$enable-semantic-accordions:    false !default;
+$enable-semantic-alerts:        false !default;
+$enable-semantic-badges:        false !default;
+$enable-semantic-backgrounds:   false !default;
+$enable-semantic-buttons:       false !default;
+$enable-semantic-borders:       false !default;
+$enable-semantic-dialogs:       false !default;
+$enable-semantic-cards:         false !default;
+$enable-semantic-list-groups:   false !default;
+$enable-semantic-popovers:      false !default;
+
+// Individual utilities
 $enable-primary-accordions:     false !default;
 $enable-primary-alerts:         false !default;
 $enable-primary-badges:         false !default;
