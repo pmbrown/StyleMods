@@ -122,6 +122,7 @@ $enable-theme-list-groups:      false !default;
 $enable-theme-popovers:         false !default;
 
 // Grouped color utilities
+$enable-surface-utilities:      false !default;
 $enable-gray-utilities:         false !default;
 $enable-blue-utilities:         false !default;
 $enable-red-utilities:          false !default;
@@ -137,6 +138,9 @@ $enable-rosewood-utilities:     false !default;
 $enable-steelblue-utilities:    false !default;
 
 // Individual color utilities
+$enable-surface-backgrounds:    false !default;
+$enable-surface-borders:        false !default;
+
 $enable-gray-accordions:        false !default;
 $enable-gray-alerts:            false !default;
 $enable-gray-badges:            false !default;

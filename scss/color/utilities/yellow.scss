@@ -2,14 +2,28 @@
 // Yellow utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../yellow" as *;
 
-// Utility colors
-$yellow-bg-text:      #000 !default;
-$yellow-bg:           var(--yellow) !default;
-$yellow-bg-dark:      var(--yellow-7) !default;
-$yellow-bg-light:     var(--yellow-5) !default;
+// Background color utilities
+@mixin backgrounds-yellow-css {
+  @each $name, $color, $background in $yellow-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-yellow-css {
+  @each $name, $color in $yellow-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-yellow-css {
   .accordion-yellow {
     @include accordion-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light);
@@ -74,7 +88,9 @@ $yellow-bg-light:     var(--yellow-5) !default;
   @include accordion-yellow-css;
   @include alert-yellow-css;
   @include background-yellow-css;
+  @include backgrounds-yellow-css;
   @include badge-yellow-css;
+  @include borders-yellow-css;
   @include button-yellow-css;
   @include card-yellow-css;
   @include dialog-yellow-css;

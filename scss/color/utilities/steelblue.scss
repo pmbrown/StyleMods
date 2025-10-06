@@ -2,14 +2,28 @@
 // Steelblue utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../steelblue" as *;
 
-// Utility colors
-$steelblue-bg-text:      #000 !default;
-$steelblue-bg:           var(--steelblue-6) !default;
-$steelblue-bg-dark:      var(--steelblue-7) !default;
-$steelblue-bg-light:     var(--steelblue-5) !default;
+// Background color utilities
+@mixin backgrounds-steelblue-css {
+  @each $name, $color, $background in $steelblue-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-steelblue-css {
+  @each $name, $color in $steelblue-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-steelblue-css {
   .accordion-steelblue {
     @include accordion-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light);
@@ -74,7 +88,9 @@ $steelblue-bg-light:     var(--steelblue-5) !default;
   @include accordion-steelblue-css;
   @include alert-steelblue-css;
   @include background-steelblue-css;
+  @include backgrounds-steelblue-css;
   @include badge-steelblue-css;
+  @include borders-steelblue-css;
   @include button-steelblue-css;
   @include card-steelblue-css;
   @include dialog-steelblue-css;

@@ -1,0 +1,28 @@
+// ---------------------------------------------------------- 
+// Surface utilities
+// ----------------------------------------------------------
+@use "../surface" as *;
+
+// Background color utilities
+@mixin surface-backgrounds-css {
+  @each $name, $color, $background in $surface-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
+
+// Borders
+@mixin surface-borders-css {
+  @each $name, $value in $surface-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin surface-utilities-css {
+  @include surface-backgrounds-css;
+  @include surface-borders-css;
+}

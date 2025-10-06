@@ -2,14 +2,28 @@
 // Gray utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../gray" as *;
 
-// Utility colors
-$gray-bg-text:      #000 !default;
-$gray-bg:           var(--gray-2) !default;
-$gray-bg-dark:      var(--gray-3) !default;
-$gray-bg-light:     var(--gray-1) !default;
+// Background color utilities
+@mixin backgrounds-gray-css {
+  @each $name, $color, $background in $gray-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-gray-css {
+  @each $name, $color in $gray-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-gray-css {
   .accordion-gray {
     @include accordion-color-values($gray-bg-text, $gray-bg, $gray-bg-dark, $gray-bg-light);
@@ -74,7 +88,9 @@ $gray-bg-light:     var(--gray-1) !default;
   @include accordion-gray-css;
   @include alert-gray-css;
   @include background-gray-css;
+  @include backgrounds-gray-css;
   @include badge-gray-css;
+  @include borders-gray-css;
   @include button-gray-css;
   @include card-gray-css;
   @include dialog-gray-css;

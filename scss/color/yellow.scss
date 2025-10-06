@@ -18,6 +18,41 @@ $yellow-11:   color-mix(in srgb, var(--yellow) 50%, black) !default;
 // Tokens style
 $yellow-tokens:       ':where(html)' !default;
 
+// Utility colors
+$yellow-bg-text:      #000 !default;
+$yellow-bg:           var(--yellow) !default;
+$yellow-bg-dark:      var(--yellow-7) !default;
+$yellow-bg-light:     var(--yellow-5) !default;
+
+// Background text colors
+$yellow-1-bg-text:      #000 !default;
+$yellow-2-bg-text:      #000 !default;
+$yellow-3-bg-text:      #000 !default;
+$yellow-4-bg-text:      #000 !default;
+$yellow-5-bg-text:      #000 !default;
+$yellow-6-bg-text:      #000 !default;
+$yellow-7-bg-text:      #000 !default;
+$yellow-8-bg-text:      #000 !default;
+$yellow-9-bg-text:      #000 !default;
+$yellow-10-bg-text:     #000 !default;
+$yellow-11-bg-text:     #000 !default;
+
+// Background color values
+$yellow-backgrounds:
+  "yellow"    $yellow-bg-text var(--yellow),
+  "yellow-1"  $yellow-1-bg-text var(--yellow-1),
+  "yellow-2"  $yellow-2-bg-text var(--yellow-2),
+  "yellow-3"  $yellow-3-bg-text var(--yellow-3),
+  "yellow-4"  $yellow-4-bg-text var(--yellow-4),
+  "yellow-5"  $yellow-5-bg-text var(--yellow-5),
+  "yellow-6"  $yellow-6-bg-text var(--yellow-6),
+  "yellow-7"  $yellow-7-bg-text var(--yellow-7),
+  "yellow-8"  $yellow-8-bg-text var(--yellow-8),
+  "yellow-9"  $yellow-9-bg-text var(--yellow-9),
+  "yellow-10" $yellow-10-bg-text var(--yellow-10),
+  "yellow-11" $yellow-11-bg-text var(--yellow-11)
+; //
+
 // Variables tokens map
 $yellow-token-values: (
   "yellow": $yellow,

@@ -2,14 +2,28 @@
 // Cyan utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../cyan" as *;
 
-// Utility colors
-$cyan-bg-text:      #000 !default;
-$cyan-bg:           var(--cyan-6) !default;
-$cyan-bg-dark:      var(--cyan-7) !default;
-$cyan-bg-light:     var(--cyan-5) !default;
+// Background color utilities
+@mixin backgrounds-cyan-css {
+  @each $name, $color, $background in $cyan-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-cyan-css {
+  @each $name, $color in $cyan-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-cyan-css {
   .accordion-cyan {
     @include accordion-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light);
@@ -74,7 +88,9 @@ $cyan-bg-light:     var(--cyan-5) !default;
   @include accordion-cyan-css;
   @include alert-cyan-css;
   @include background-cyan-css;
+  @include backgrounds-cyan-css;
   @include badge-cyan-css;
+  @include borders-cyan-css;
   @include button-cyan-css;
   @include card-cyan-css;
   @include dialog-cyan-css;

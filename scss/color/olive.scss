@@ -7,7 +7,7 @@ $olive-1:    color-mix(in srgb, var(--olive) 45%, white) !default;
 $olive-2:    color-mix(in srgb, var(--olive) 55%, white) !default;
 $olive-3:    color-mix(in srgb, var(--olive) 65%, white) !default;
 $olive-4:    color-mix(in srgb, var(--olive) 75%, white) !default;
-$olive-5:    color-mix(in srgb, var(--olive) 85%, white) !default;
+$olive-5:    color-mix(in srgb, var(--olive) 88%, white) !default;
 $olive-6:    var(--olive) !default;  
 $olive-7:    color-mix(in srgb, var(--olive) 85%, black) !default;
 $olive-8:    color-mix(in srgb, var(--olive) 72%, black) !default;
@@ -17,6 +17,41 @@ $olive-11:   color-mix(in srgb, var(--olive) 42%, black) !default;
 
 // Tokens style
 $olive-tokens:       ':where(html)' !default;
+
+// Utility colors
+$olive-bg-text:      #fff !default;
+$olive-bg:           var(--olive-6) !default;
+$olive-bg-dark:      var(--olive-7) !default;
+$olive-bg-light:     var(--olive-5) !default;
+
+// Background text colors
+$olive-1-bg-text:      #000 !default;
+$olive-2-bg-text:      #000 !default;
+$olive-3-bg-text:      #000 !default;
+$olive-4-bg-text:      #000 !default;
+$olive-5-bg-text:      #fff !default;
+$olive-6-bg-text:      #fff !default;
+$olive-7-bg-text:      #fff !default;
+$olive-8-bg-text:      #fff !default;
+$olive-9-bg-text:      #fff !default;
+$olive-10-bg-text:     #fff !default;
+$olive-11-bg-text:     #fff !default;
+
+// Background color values
+$olive-backgrounds:
+  "olive"    $olive-bg-text var(--olive),
+  "olive-1"  $olive-1-bg-text var(--olive-1),
+  "olive-2"  $olive-2-bg-text var(--olive-2),
+  "olive-3"  $olive-3-bg-text var(--olive-3),
+  "olive-4"  $olive-4-bg-text var(--olive-4),
+  "olive-5"  $olive-5-bg-text var(--olive-5),
+  "olive-6"  $olive-6-bg-text var(--olive-6),
+  "olive-7"  $olive-7-bg-text var(--olive-7),
+  "olive-8"  $olive-8-bg-text var(--olive-8),
+  "olive-9"  $olive-9-bg-text var(--olive-9),
+  "olive-10" $olive-10-bg-text var(--olive-10),
+  "olive-11" $olive-11-bg-text var(--olive-11)
+; //
 
 // Variables tokens map
 $olive-token-values: (

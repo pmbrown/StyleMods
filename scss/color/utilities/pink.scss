@@ -2,14 +2,28 @@
 // Pink utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../pink" as *;
 
-// Utility colors
-$pink-bg-text:      #000 !default;
-$pink-bg:           var(--pink-6) !default;
-$pink-bg-dark:      var(--pink-7) !default;
-$pink-bg-light:     var(--pink-5) !default;
+// Background color utilities
+@mixin backgrounds-pink-css {
+  @each $name, $color, $background in $pink-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-pink-css {
+  @each $name, $color in $pink-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-pink-css {
   .accordion-pink {
     @include accordion-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light);
@@ -74,7 +88,9 @@ $pink-bg-light:     var(--pink-5) !default;
   @include accordion-pink-css;
   @include alert-pink-css;
   @include background-pink-css;
+  @include backgrounds-pink-css;
   @include badge-pink-css;
+  @include borders-pink-css;
   @include button-pink-css;
   @include card-pink-css;
   @include dialog-pink-css;

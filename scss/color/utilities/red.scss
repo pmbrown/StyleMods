@@ -2,14 +2,28 @@
 // Red utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../red" as *;
 
-// Utility colors
-$red-bg-text:      #fff !default;
-$red-bg:           var(--red-6) !default;
-$red-bg-dark:      var(--red-7) !default;
-$red-bg-light:     var(--red-5) !default;
+// Background color utilities
+@mixin backgrounds-red-css {
+  @each $name, $color, $background in $red-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-red-css {
+  @each $name, $color in $red-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-red-css {
   .accordion-red {
     @include accordion-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light);
@@ -74,7 +88,9 @@ $red-bg-light:     var(--red-5) !default;
   @include accordion-red-css;
   @include alert-red-css;
   @include background-red-css;
+  @include backgrounds-red-css;
   @include badge-red-css;
+  @include borders-red-css;
   @include button-red-css;
   @include card-red-css;
   @include dialog-red-css;

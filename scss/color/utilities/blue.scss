@@ -2,14 +2,28 @@
 // Blue utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../blue" as *;
 
-// Utility colors
-$blue-bg-text:      #fff !default;
-$blue-bg:           var(--blue) !default;
-$blue-bg-dark:      var(--blue-7) !default;
-$blue-bg-light:     var(--blue-5) !default;
+// Background color utilities
+@mixin backgrounds-blue-css {
+  @each $name, $color, $background in $blue-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-blue-css {
+  @each $name, $color in $blue-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-blue-css {
   .accordion-blue {
     @include accordion-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light);
@@ -75,7 +89,9 @@ $blue-bg-light:     var(--blue-5) !default;
   @include accordion-blue-css;
   @include alert-blue-css;
   @include background-blue-css;
+  @include backgrounds-blue-css;
   @include badge-blue-css;
+  @include borders-blue-css;
   @include button-blue-css;
   @include card-blue-css;
   @include dialog-blue-css;

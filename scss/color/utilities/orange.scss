@@ -2,14 +2,28 @@
 // Orange utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../orange" as *;
 
-// Utility colors
-$orange-bg-text:      #000 !default;
-$orange-bg:           var(--orange-6) !default;
-$orange-bg-dark:      var(--orange-7) !default;
-$orange-bg-light:     var(--orange-5) !default;
+// Background color utilities
+@mixin backgrounds-orange-css {
+  @each $name, $color, $background in $orange-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-orange-css {
+  @each $name, $color in $orange-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-orange-css {
   .accordion-orange {
     @include accordion-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light);
@@ -74,7 +88,9 @@ $orange-bg-light:     var(--orange-5) !default;
   @include accordion-orange-css;
   @include alert-orange-css;
   @include background-orange-css;
+  @include backgrounds-orange-css;
   @include badge-orange-css;
+  @include borders-orange-css;
   @include button-orange-css;
   @include card-orange-css;
   @include dialog-orange-css;

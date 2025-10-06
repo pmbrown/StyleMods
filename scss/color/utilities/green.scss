@@ -2,14 +2,28 @@
 // Green utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../green" as *;
 
-// Utility colors
-$green-bg-text:      #fff !default;
-$green-bg:           var(--green-6) !default;
-$green-bg-dark:      var(--green-7) !default;
-$green-bg-light:     var(--green-5) !default;
+// Background color utilities
+@mixin backgrounds-green-css {
+  @each $name, $color, $background in $green-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-green-css {
+  @each $name, $color in $green-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-green-css {
   .accordion-green {
     @include accordion-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light);
@@ -74,7 +88,9 @@ $green-bg-light:     var(--green-5) !default;
   @include accordion-green-css;
   @include alert-green-css;
   @include background-green-css;
+  @include backgrounds-green-css;
   @include badge-green-css;
+  @include borders-green-css;
   @include button-green-css;
   @include card-green-css;
   @include dialog-green-css;

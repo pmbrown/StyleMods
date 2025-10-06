@@ -2,14 +2,28 @@
 // Tan utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../tan" as *;
 
-// Utility colors
-$tan-bg-text:      #000 !default;
-$tan-bg:           var(--tan-6) !default;
-$tan-bg-dark:      var(--tan-7) !default;
-$tan-bg-light:     var(--tan-5) !default;
+// Background color utilities
+@mixin backgrounds-tan-css {
+  @each $name, $color, $background in $tan-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-tan-css {
+  @each $name, $color in $tan-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-tan-css {
   .accordion-tan {
     @include accordion-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light);
@@ -74,7 +88,9 @@ $tan-bg-light:     var(--tan-5) !default;
   @include accordion-tan-css;
   @include alert-tan-css;
   @include background-tan-css;
+  @include backgrounds-tan-css;
   @include badge-tan-css;
+  @include borders-tan-css;
   @include button-tan-css;
   @include card-tan-css;
   @include dialog-tan-css;

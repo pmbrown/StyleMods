@@ -2,12 +2,12 @@
 // Red
 // ----------------------------------------------------------
 // Variable colors
-$red:      #ff0000 !default;
+$red:      #e60000 !default;
 $red-1:    color-mix(in srgb, var(--red) 40%, white) !default;
 $red-2:    color-mix(in srgb, var(--red) 50%, white) !default;
 $red-3:    color-mix(in srgb, var(--red) 60%, white) !default;
 $red-4:    color-mix(in srgb, var(--red) 70%, white) !default;
-$red-5:    color-mix(in srgb, var(--red) 80%, white) !default;
+$red-5:    color-mix(in srgb, var(--red) 89%, white) !default;
 $red-6:    var(--red) !default;  
 $red-7:    color-mix(in srgb, var(--red) 80%, black) !default;
 $red-8:    color-mix(in srgb, var(--red) 70%, black) !default;
@@ -17,6 +17,41 @@ $red-11:   color-mix(in srgb, var(--red) 44%, black) !default;
 
 // Tokens style
 $red-tokens:       ':where(html)' !default;
+
+// Utility colors
+$red-bg-text:      #fff !default;
+$red-bg:           var(--red-6) !default;
+$red-bg-dark:      var(--red-7) !default;
+$red-bg-light:     var(--red-5) !default;
+
+// Background text colors
+$red-1-bg-text:      #000 !default;
+$red-2-bg-text:      #000 !default;
+$red-3-bg-text:      #000 !default;
+$red-4-bg-text:      #000 !default;
+$red-5-bg-text:      #fff !default;
+$red-6-bg-text:      #fff !default;
+$red-7-bg-text:      #fff !default;
+$red-8-bg-text:      #fff !default;
+$red-9-bg-text:      #fff !default;
+$red-10-bg-text:     #fff !default;
+$red-11-bg-text:     #fff !default;
+
+// Background color values
+$red-backgrounds:
+  "red"    $red-bg-text var(--red),
+  "red-1"  $red-1-bg-text var(--red-1),
+  "red-2"  $red-2-bg-text var(--red-2),
+  "red-3"  $red-3-bg-text var(--red-3),
+  "red-4"  $red-4-bg-text var(--red-4),
+  "red-5"  $red-5-bg-text var(--red-5),
+  "red-6"  $red-6-bg-text var(--red-6),
+  "red-7"  $red-7-bg-text var(--red-7),
+  "red-8"  $red-8-bg-text var(--red-8),
+  "red-9"  $red-9-bg-text var(--red-9),
+  "red-10" $red-10-bg-text var(--red-10),
+  "red-11" $red-11-bg-text var(--red-11)
+; //
 
 // Variables tokens map
 $red-token-values: (

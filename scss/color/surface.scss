@@ -4,8 +4,8 @@
 $surface:      var(--background, Canvas) !default;
 $surface-1:    color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
 $surface-2:    color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
-$surface-3:    color-mix(in srgb, CanvasText 15%, var(--surface)) !default;
-$surface-4:    color-mix(in srgb, CanvasText 22%, var(--surface)) !default;
+$surface-3:    color-mix(in srgb, CanvasText 13%, var(--surface)) !default;
+$surface-4:    color-mix(in srgb, CanvasText 20%, var(--surface)) !default;
 $surface-5:    color-mix(in srgb, CanvasText 28%, var(--surface)) !default;
 $surface-6:    color-mix(in srgb, CanvasText 35%, var(--surface)) !default;
 $surface-7:    color-mix(in srgb, CanvasText 42%, var(--surface)) !default;
@@ -17,6 +17,26 @@ $surface-11:   color-mix(in srgb, CanvasText 72%, var(--surface)) !default;
 // Tokens style
 $surface-tokens: ':where(html)' !default;
 
+// Background text colors
+$text-default:    CanvasText;
+$text-accent:     light-dark(#fff, #000) !default;
+
+// Background color values
+$surface-backgrounds:
+  "surf-1"  $text-default var(--surf-1),
+  "surf-2"  $text-default var(--surf-2),
+  "surf-3"  $text-default var(--surf-3),
+  "surf-4"  $text-default var(--surf-4),
+  "surf-5"  $text-default var(--surf-5),
+  "surf-6"  $text-default var(--surf-6),
+  "surf-7"  $text-accent var(--surf-7),
+  "surf-8"  $text-accent var(--surf-8),
+  "surf-9"  $text-accent var(--surf-9),
+  "surf-10" $text-accent var(--surf-10),
+  "surf-11" $text-accent var(--surf-11)
+; //
+
+// Variables tokens map
 $surface-token-values: (
   "surface": $surface,
   "surf-1": $surface-1,
@@ -32,7 +52,8 @@ $surface-token-values: (
   "surf-11": $surface-11,
 ) !default;
 
-@mixin surface-variables {
+// Variables mixins
+@mixin surface-variables { 
   @each $name, $value in $surface-token-values {
     --#{$name}: #{$value};
   }

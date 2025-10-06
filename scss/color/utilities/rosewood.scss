@@ -2,14 +2,28 @@
 // Rosewood utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../rosewood" as *;
 
-// Utility colors
-$rosewood-bg-text:      #fff !default;
-$rosewood-bg:           var(--rosewood-6) !default;
-$rosewood-bg-dark:      var(--rosewood-7) !default;
-$rosewood-bg-light:     var(--rosewood-5) !default;
+// Background color utilities
+@mixin backgrounds-rosewood-css {
+  @each $name, $color, $background in $rosewood-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-rosewood-css {
+  @each $name, $color in $rosewood-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-rosewood-css {
   .accordion-rosewood {
     @include accordion-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light);
@@ -74,7 +88,9 @@ $rosewood-bg-light:     var(--rosewood-5) !default;
   @include accordion-rosewood-css;
   @include alert-rosewood-css;
   @include background-rosewood-css;
+  @include backgrounds-rosewood-css;
   @include badge-rosewood-css;
+  @include borders-rosewood-css;
   @include button-rosewood-css;
   @include card-rosewood-css;
   @include dialog-rosewood-css;

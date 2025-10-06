@@ -35,6 +35,10 @@
   --badge-bd-color: #{$border};
 }
 
+@mixin border-color-values($border) {
+  --bd-color: #{$border};
+}
+
 @mixin button-color-values($text-color, $background, $hover, $focus, $border) {
   --btn-text: #{$text-color};
   --ico: #{$text-color};

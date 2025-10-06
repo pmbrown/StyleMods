@@ -1,22 +1,57 @@
 // ---------------------------------------------------------- 
 // Blue variables
 // ----------------------------------------------------------
-// Variable colors
-$blue:      #0066ff !default;
-$blue-1:    color-mix(in srgb, var(--blue) 40%, white) !default;
-$blue-2:    color-mix(in srgb, var(--blue) 50%, white) !default;
-$blue-3:    color-mix(in srgb, var(--blue) 60%, white) !default;
-$blue-4:    color-mix(in srgb, var(--blue) 70%, white) !default;
-$blue-5:    color-mix(in srgb, var(--blue) 80%, white) !default;
-$blue-6:    var(--blue) !default;
-$blue-7:    color-mix(in srgb, var(--blue) 80%, black) !default;
-$blue-8:    color-mix(in srgb, var(--blue) 70%, black) !default;
-$blue-9:    color-mix(in srgb, var(--blue) 60%, black) !default;
-$blue-10:   color-mix(in srgb, var(--blue) 50%, black) !default;
-$blue-11:   color-mix(in srgb, var(--blue) 44%, black) !default;
+// Colors
+$blue:                #005ce6 !default;
+$blue-1:              color-mix(in srgb, var(--blue) 40%, white) !default;
+$blue-2:              color-mix(in srgb, var(--blue) 50%, white) !default;
+$blue-3:              color-mix(in srgb, var(--blue) 60%, white) !default;
+$blue-4:              color-mix(in srgb, var(--blue) 70%, white) !default;
+$blue-5:              color-mix(in srgb, var(--blue) 87%, white) !default;
+$blue-6:              var(--blue) !default;
+$blue-7:              color-mix(in srgb, var(--blue) 80%, black) !default;
+$blue-8:              color-mix(in srgb, var(--blue) 70%, black) !default;
+$blue-9:              color-mix(in srgb, var(--blue) 60%, black) !default;
+$blue-10:             color-mix(in srgb, var(--blue) 50%, black) !default;
+$blue-11:             color-mix(in srgb, var(--blue) 44%, black) !default;
 
 // Tokens style
-$blue-tokens:       ':where(html)' !default;
+$blue-tokens:         ':where(html)' !default;
+
+// Modifier class colors
+$blue-bg-text:        #fff !default;
+$blue-bg:             var(--blue) !default;
+$blue-bg-dark:        var(--blue-7) !default;
+$blue-bg-light:       var(--blue-5) !default;
+
+// Background text colors
+$blue-1-bg-text:      #000 !default;
+$blue-2-bg-text:      #000 !default;
+$blue-3-bg-text:      #000 !default;
+$blue-4-bg-text:      #000 !default;
+$blue-5-bg-text:      #fff !default;
+$blue-6-bg-text:      #fff !default;
+$blue-7-bg-text:      #fff !default;
+$blue-8-bg-text:      #fff !default;
+$blue-9-bg-text:      #fff !default;
+$blue-10-bg-text:     #fff !default;
+$blue-11-bg-text:     #fff !default;
+
+// Background color values
+$blue-backgrounds:
+  "blue"    $blue-bg-text var(--blue),
+  "blue-1"  $blue-1-bg-text var(--blue-1),
+  "blue-2"  $blue-2-bg-text var(--blue-2),
+  "blue-3"  $blue-3-bg-text var(--blue-3),
+  "blue-4"  $blue-4-bg-text var(--blue-4),
+  "blue-5"  $blue-5-bg-text var(--blue-5),
+  "blue-6"  $blue-6-bg-text var(--blue-6),
+  "blue-7"  $blue-7-bg-text var(--blue-7),
+  "blue-8"  $blue-8-bg-text var(--blue-8),
+  "blue-9"  $blue-9-bg-text var(--blue-9),
+  "blue-10" $blue-10-bg-text var(--blue-10),
+  "blue-11" $blue-11-bg-text var(--blue-11)
+; //
 
 // Variables tokens map
 $blue-token-values: (

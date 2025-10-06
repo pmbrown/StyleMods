@@ -18,6 +18,41 @@ $cyan-11:   color-mix(in srgb, var(--cyan) 52%, black) !default;
 // Tokens style
 $cyan-tokens:       ':where(html)' !default;
 
+// Utility colors
+$cyan-bg-text:      #000 !default;
+$cyan-bg:           var(--cyan-6) !default;
+$cyan-bg-dark:      var(--cyan-7) !default;
+$cyan-bg-light:     var(--cyan-5) !default;
+
+// Background text colors
+$cyan-1-bg-text:      #000 !default;
+$cyan-2-bg-text:      #000 !default;
+$cyan-3-bg-text:      #000 !default;
+$cyan-4-bg-text:      #000 !default;
+$cyan-5-bg-text:      #000 !default;
+$cyan-6-bg-text:      #000 !default;
+$cyan-7-bg-text:      #000 !default;
+$cyan-8-bg-text:      #000 !default;
+$cyan-9-bg-text:      #fff !default;
+$cyan-10-bg-text:     #fff !default;
+$cyan-11-bg-text:     #fff !default;
+
+// Background color values
+$cyan-backgrounds:
+  "cyan"    $cyan-bg-text var(--cyan),
+  "cyan-1"  $cyan-1-bg-text var(--cyan-1),
+  "cyan-2"  $cyan-2-bg-text var(--cyan-2),
+  "cyan-3"  $cyan-3-bg-text var(--cyan-3),
+  "cyan-4"  $cyan-4-bg-text var(--cyan-4),
+  "cyan-5"  $cyan-5-bg-text var(--cyan-5),
+  "cyan-6"  $cyan-6-bg-text var(--cyan-6),
+  "cyan-7"  $cyan-7-bg-text var(--cyan-7),
+  "cyan-8"  $cyan-8-bg-text var(--cyan-8),
+  "cyan-9"  $cyan-9-bg-text var(--cyan-9),
+  "cyan-10" $cyan-10-bg-text var(--cyan-10),
+  "cyan-11" $cyan-11-bg-text var(--cyan-11)
+; //
+
 // Variables tokens map
 $cyan-token-values: (
   "cyan": $cyan,

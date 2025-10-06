@@ -93,6 +93,7 @@
   @if $enable-text { @include text-css; }
 
   // Color utilities grouped
+  @if $enable-surface-utilities { @include surface-utilities-css; }
   @if $enable-gray-utilities { @include gray-utilities-css; }
   @if $enable-blue-utilities { @include blue-utilities-css; }
   @if $enable-red-utilities { @include red-utilities-css; }
@@ -109,6 +110,10 @@
   @if $enable-semantic-utilities { @include semantic-utilities-css; }
   
   // Color utilities individual
+  // Surface
+  @if $enable-surface-backgrounds { @include surface-backgrounds-css; }
+  @if $enable-surface-borders { @include surface-borders-css; }
+  
   // Gray
   @if $enable-gray-accordions { @include accordion-gray-css; }
   @if $enable-gray-alerts { @include alert-gray-css; }

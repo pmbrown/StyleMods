@@ -18,6 +18,41 @@ $gray-11:   color-mix(in srgb, var(--gray) 40%, black) !default;
 // Tokens style
 $gray-tokens:       ':where(html)' !default;
 
+// Utility colors
+$gray-bg-text:      #000 !default;
+$gray-bg:           var(--gray-2) !default;
+$gray-bg-dark:      var(--gray-3) !default;
+$gray-bg-light:     var(--gray-1) !default;
+
+// Background text colors
+$gray-1-bg-text:      #000 !default;
+$gray-2-bg-text:      #000 !default;
+$gray-3-bg-text:      #000 !default;
+$gray-4-bg-text:      #000 !default;
+$gray-5-bg-text:      #000 !default;
+$gray-6-bg-text:      #000 !default;
+$gray-7-bg-text:      #fff !default;
+$gray-8-bg-text:      #fff !default;
+$gray-9-bg-text:      #fff !default;
+$gray-10-bg-text:     #fff !default;
+$gray-11-bg-text:     #fff !default;
+
+// Background color values
+$gray-backgrounds:
+  "gray"    $gray-bg-text var(--gray),
+  "gray-1"  $gray-1-bg-text var(--gray-1),
+  "gray-2"  $gray-2-bg-text var(--gray-2),
+  "gray-3"  $gray-3-bg-text var(--gray-3),
+  "gray-4"  $gray-4-bg-text var(--gray-4),
+  "gray-5"  $gray-5-bg-text var(--gray-5),
+  "gray-6"  $gray-6-bg-text var(--gray-6),
+  "gray-7"  $gray-7-bg-text var(--gray-7),
+  "gray-8"  $gray-8-bg-text var(--gray-8),
+  "gray-9"  $gray-9-bg-text var(--gray-9),
+  "gray-10" $gray-10-bg-text var(--gray-10),
+  "gray-11" $gray-11-bg-text var(--gray-11)
+; //
+
 // Variables tokens map
 $gray-token-values: (
   "gray": $gray,

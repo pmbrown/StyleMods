@@ -50,6 +50,7 @@ $color-tokens:  ':where(html)' !default;
 }
 
 @mixin all-color-utilities-css {
+  @include surface-utilities-css;
   @include blue-utilities-css;
   @include red-utilities-css;
   @include green-utilities-css;
@@ -72,6 +73,11 @@ $color-tokens:  ':where(html)' !default;
 }
 
 // Modules
+@mixin surface-module-css {
+  @include surface-variables-css;
+  @include surface-utilities-css;
+}
+
 @mixin blue-module-css {
   @include blue-variables-css;
   @include blue-utilities-css;
@@ -137,12 +143,13 @@ $color-tokens:  ':where(html)' !default;
   @include steelblue-utilities-css;
 }
 
-@mixin semantic-module {
+@mixin semantic-module-css {
   @include semantic-variables-css;
   @include semantic-utilities-css;
 }
 
 @mixin all-color-modules-css {
+  @include surface-module-css;
   @include blue-module-css;
   @include red-module-css;
   @include green-module-css;
@@ -156,4 +163,5 @@ $color-tokens:  ':where(html)' !default;
   @include tan-module-css;
   @include rosewood-module-css;
   @include steelblue-module-css;
+  @include semantic-module-css;
 }

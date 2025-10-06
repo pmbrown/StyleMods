@@ -7,7 +7,7 @@ $summary-background-focus:    var(--summary-focus, color-mix(in srgb, CanvasText
 
 $accordion-padding-block:     var(--accordion-py, 0.75rem) !default;
 $accordion-padding-inline:    var(--accordion-px, 1rem) !default;
-$accordion-border-color:      var(--accordion-bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$accordion-border-color:      var(--accordion-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
 $accordion-radius:            var(--accordion-radius, 0.188rem) !default;
 $accordion-inner-radius:      calc($accordion-radius - 1px) !default;
 
@@ -21,7 +21,6 @@ $accordion-caret-up-icon:     url("data:image/svg+xml,<svg viewBox='0 0 16 16' f
 // Open/close icons
 $open-accordion:              $accordion-plus-icon !default;
 $close-accordion:             $accordion-minus-icon !default;
-
 
 @mixin accordions-css {
 

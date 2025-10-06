@@ -2,14 +2,28 @@
 // Olive utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../olive" as *;
 
-// Utility colors
-$olive-bg-text:      #fff !default;
-$olive-bg:           var(--olive-6) !default;
-$olive-bg-dark:      var(--olive-7) !default;
-$olive-bg-light:     var(--olive-5) !default;
+// Background color utilities
+@mixin backgrounds-olive-css {
+  @each $name, $color, $background in $olive-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-olive-css {
+  @each $name, $color in $olive-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-olive-css {
   .accordion-olive {
     @include accordion-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light);
@@ -74,7 +88,9 @@ $olive-bg-light:     var(--olive-5) !default;
   @include accordion-olive-css;
   @include alert-olive-css;
   @include background-olive-css;
+  @include backgrounds-olive-css;
   @include badge-olive-css;
+  @include borders-olive-css;
   @include button-olive-css;
   @include card-olive-css;
   @include dialog-olive-css;

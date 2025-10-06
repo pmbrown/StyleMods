@@ -2,7 +2,7 @@
 // Borders
 // ----------------------------------------------------------
 $border-width:    var(--bd-width, 1px) !default;
-$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 15%, Canvas)) !default;
+$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
 $border-default:  $border-width solid $border-color !default;
 
 $border-position: (
@@ -38,7 +38,7 @@ $border-radius-circle: (
 
 @mixin border-position-css {
   @each $name, $value in $border-position {
-    .#{$name} {
+    :where(.#{$name}) {
       #{$value}: $border-default;        
     }
   }
@@ -94,7 +94,7 @@ $border-radius-circle: (
 // XXL
 @mixin border-position-xxl-css {
   @each $name, $value in $border-position {
-    .#{$name}-xxl {
+    :where(.#{$name}-xxl) {
       #{$value}: $border-default;        
     }
   }
@@ -103,7 +103,7 @@ $border-radius-circle: (
 // XL
 @mixin border-position-xl-css {
   @each $name, $value in $border-position {
-    .#{$name}-xl {
+    :where(.#{$name}-xl) {
       #{$value}: $border-default;        
     }
   }
@@ -112,7 +112,7 @@ $border-radius-circle: (
 // LG
 @mixin border-position-lg-css {
   @each $name, $value in $border-position {
-    .#{$name}-lg {
+    :where(.#{$name}-lg) {
       #{$value}: $border-default;        
     }
   }
@@ -121,7 +121,7 @@ $border-radius-circle: (
 // MD
 @mixin border-position-md-css {
   @each $name, $value in $border-position {
-    .#{$name}-md {
+    :where(.#{$name}-md) {
       #{$value}: $border-default;        
     }
   }
@@ -130,7 +130,7 @@ $border-radius-circle: (
 // SM
 @mixin border-position-sm-css {
   @each $name, $value in $border-position {
-    .#{$name}-sm {
+    :where(.#{$name}-sm) {
       #{$value}: $border-default;        
     }
   }
@@ -139,7 +139,7 @@ $border-radius-circle: (
 // XS
 @mixin border-position-xs-css {
   @each $name, $value in $border-position {
-    .#{$name}-xs {
+    :where(.#{$name}-xs) {
       #{$value}: $border-default;        
     }
   }
@@ -148,7 +148,7 @@ $border-radius-circle: (
 // XXS
 @mixin border-position-xxs-css {
   @each $name, $value in $border-position {
-    .#{$name}-xxs {
+    :where(.#{$name}-xxs) {
       #{$value}: $border-default;        
     }
   }

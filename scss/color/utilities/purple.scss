@@ -2,14 +2,28 @@
 // Purple utilities
 // ----------------------------------------------------------
 @use "color-mixins" as *;
+@use "../purple" as *;
 
-// Utility colors
-$purple-bg-text:      #fff !default;
-$purple-bg:           var(--purple-6) !default;
-$purple-bg-dark:      var(--purple-7) !default;
-$purple-bg-light:     var(--purple-5) !default;
+// Background color utilities
+@mixin backgrounds-purple-css {
+  @each $name, $color, $background in $purple-backgrounds {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
 
-// Utility mixins
+// Border color modifiers
+@mixin borders-purple-css {
+  @each $name, $color in $purple-token-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+// Module modifers
 @mixin accordion-purple-css {
   .accordion-purple {
     @include accordion-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light);
@@ -74,7 +88,9 @@ $purple-bg-light:     var(--purple-5) !default;
   @include accordion-purple-css;
   @include alert-purple-css;
   @include background-purple-css;
+  @include backgrounds-purple-css;
   @include badge-purple-css;
+  @include borders-purple-css;
   @include button-purple-css;
   @include card-purple-css;
   @include dialog-purple-css;

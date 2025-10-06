@@ -18,6 +18,41 @@ $tan-11:   color-mix(in srgb, var(--tan) 52%, black) !default;
 // Tokens style
 $tan-tokens:       ':where(html)' !default;
 
+// Utility colors
+$tan-bg-text:      #000 !default;
+$tan-bg:           var(--tan-6) !default;
+$tan-bg-dark:      var(--tan-7) !default;
+$tan-bg-light:     var(--tan-5) !default;
+
+// Background text colors
+$tan-1-bg-text:      #000 !default;
+$tan-2-bg-text:      #000 !default;
+$tan-3-bg-text:      #000 !default;
+$tan-4-bg-text:      #000 !default;
+$tan-5-bg-text:      #000 !default;
+$tan-6-bg-text:      #000 !default;
+$tan-7-bg-text:      #000 !default;
+$tan-8-bg-text:      #fff !default;
+$tan-9-bg-text:      #fff !default;
+$tan-10-bg-text:     #fff !default;
+$tan-11-bg-text:     #fff !default;
+
+// Background color values
+$tan-backgrounds:
+  "tan"    $tan-bg-text var(--tan),
+  "tan-1"  $tan-1-bg-text var(--tan-1),
+  "tan-2"  $tan-2-bg-text var(--tan-2),
+  "tan-3"  $tan-3-bg-text var(--tan-3),
+  "tan-4"  $tan-4-bg-text var(--tan-4),
+  "tan-5"  $tan-5-bg-text var(--tan-5),
+  "tan-6"  $tan-6-bg-text var(--tan-6),
+  "tan-7"  $tan-7-bg-text var(--tan-7),
+  "tan-8"  $tan-8-bg-text var(--tan-8),
+  "tan-9"  $tan-9-bg-text var(--tan-9),
+  "tan-10" $tan-10-bg-text var(--tan-10),
+  "tan-11" $tan-11-bg-text var(--tan-11)
+; //
+
 // Variables tokens map
 $tan-token-values: (
   "tan": $tan,

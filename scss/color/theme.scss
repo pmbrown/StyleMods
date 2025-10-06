@@ -102,6 +102,12 @@ $theme-border: (
   "bd-color": $theme-surface-3,
 ) !default;
 
+$theme-button: (
+  "btn-bd-color": $theme-surface-4,
+  "btn-bg": $theme-surface-1,
+  "btn-hover": $theme-surface-2,
+) !default;
+
 $theme-card: (
   "card-bd-color": $theme-surface-3,
   "card-bg": $theme-surface,
@@ -231,6 +237,18 @@ $theme-popover: (
 @mixin theme-border-css {
   #{$theme-tokens} {
     @include theme-border-variables;
+  }
+}
+
+@mixin theme-button-variables {
+  @each $name, $value in $theme-button {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin theme-button-css {
+  #{$theme-tokens} {
+    @include theme-button-variables;
   }
 }
 
