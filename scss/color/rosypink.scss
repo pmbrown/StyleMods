@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// Rosypink
+// ----------------------------------------------------------
+$rosypink:                #be4182 !default;
+$rosypink-1:              color-mix(in srgb, var(--rosypink) 31%, #fff) !default;
+$rosypink-2:              color-mix(in srgb, var(--rosypink) 44%, #fff) !default;
+$rosypink-3:              color-mix(in srgb, var(--rosypink) 58%, #fff) !default;
+$rosypink-4:              color-mix(in srgb, var(--rosypink) 72%, #fff) !default;
+$rosypink-5:              color-mix(in srgb, var(--rosypink) 87%, #fff) !default;
+$rosypink-6:              var(--rosypink) !default;
+$rosypink-7:              color-mix(in srgb, var(--rosypink) 85%, #000) !default;
+$rosypink-8:              color-mix(in srgb, var(--rosypink) 72%, #000) !default;
+$rosypink-9:              color-mix(in srgb, var(--rosypink) 60%, #000) !default;
+$rosypink-10:             color-mix(in srgb, var(--rosypink) 50%, #000) !default;
+$rosypink-11:             color-mix(in srgb, var(--rosypink) 44%, #000) !default;
+
+$rosypink-tokens:         ':where(html)' !default;
+
+$rosypink-bg-text:        #fff !default;
+$rosypink-bg:             var(--rosypink) !default;
+$rosypink-bg-dark:        var(--rosypink-7) !default;
+$rosypink-bg-light:       var(--rosypink-5) !default;
+
+$rosypink-gradient:       linear-gradient(180deg, $rosypink-bg-light, $rosypink-bg, $rosypink-bg-dark) !default;
+
+$rosypink-color-values:
+  "rosypink"    $rosypink #fff,
+  "rosypink-1"  $rosypink-1 #000,
+  "rosypink-2"  $rosypink-2 #000,
+  "rosypink-3"  $rosypink-3 #000,
+  "rosypink-4"  $rosypink-4 #000,
+  "rosypink-5"  $rosypink-5 #000,
+  "rosypink-6"  $rosypink-6 #fff,
+  "rosypink-7"  $rosypink-7 #fff,
+  "rosypink-8"  $rosypink-8 #fff,
+  "rosypink-9"  $rosypink-9 #fff,
+  "rosypink-10" $rosypink-10 #fff,
+  "rosypink-11" $rosypink-11 #fff,
+!default;

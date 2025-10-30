@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// Seagreen mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../seagreen" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin seagreen-variables {
+  @each $name, $color in $seagreen-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin seagreen-variables-css {
+  #{$seagreen-tokens} {
+    @include seagreen-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-seagreen-css {
+  @each $name, $color, $text in $seagreen-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-seagreen-css {
+  @each $name, $color in $seagreen-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-seagreen-css {
+  .gradient-seagreen {
+    color: $seagreen-bg-text;
+    background-image: $seagreen-gradient;
+  }
+}
+
+@mixin text-seagreen-css {
+  @each $name, $color in $seagreen-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-seagreen-css {
+  @each $name, $color in $seagreen-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-seagreen-css {
+  .accordion-seagreen {
+    @include accordion-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-dark, $seagreen-bg-light);
+  }
+}
+
+@mixin alert-seagreen-css {
+  .alert-seagreen {
+    @include alert-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-light);
+  }
+}
+
+@mixin badge-seagreen-css {
+  .badge-seagreen {
+    @include badge-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-light);
+  }
+}
+
+@mixin button-seagreen-css {
+  .btn-seagreen {
+    @include button-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-dark, $seagreen-bg-light, $seagreen-bg-light);
+  }
+}
+
+@mixin card-seagreen-css {
+  .card-seagreen {
+    @include card-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-dark, $seagreen-bg-light, $seagreen-bg-light);
+  }
+}
+
+@mixin dialog-seagreen-css {
+  .dialog-seagreen {
+    @include dialog-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-light);
+  } 
+}
+
+@mixin dropdown-seagreen-css {
+  .dropdown-seagreen {
+    @include dropdown-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-dark, $seagreen-bg-light, $seagreen-bg-light);
+  } 
+}
+
+@mixin list-group-seagreen-css {
+  .list-group-seagreen {
+    @include list-group-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-dark, $seagreen-bg-light);
+  }
+}
+
+@mixin popover-seagreen-css {
+  .popover-seagreen {
+    @include popover-color-values($seagreen-bg-text, $seagreen-bg, $seagreen-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin seagreen-utilities-css {
+  @include backgrounds-seagreen-css;
+  @include borders-seagreen-css;
+  @include gradient-seagreen-css;
+  @include text-seagreen-css;
+}
+
+@mixin seagreen-modifiers-css {
+  @include icons-seagreen-css;
+  @include accordion-seagreen-css;
+  @include alert-seagreen-css;
+  @include badge-seagreen-css;
+  @include button-seagreen-css;
+  @include card-seagreen-css;
+  @include dialog-seagreen-css;
+  @include dropdown-seagreen-css;
+  @include list-group-seagreen-css;
+  @include popover-seagreen-css;
+}
+
+@mixin seagreen-module-css {
+  @include seagreen-variables-css;
+  @include seagreen-utilities-css;
+  @include seagreen-modifiers-css;
+}

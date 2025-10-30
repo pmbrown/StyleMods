@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Steelblue
 // ----------------------------------------------------------
-// Variable colors
-$steelblue:      #336699 !default;
-$steelblue-1:    color-mix(in srgb, var(--steelblue) 45%, white) !default;
-$steelblue-2:    color-mix(in srgb, var(--steelblue) 55%, white) !default;
-$steelblue-3:    color-mix(in srgb, var(--steelblue) 65%, white) !default;
-$steelblue-4:    color-mix(in srgb, var(--steelblue) 75%, white) !default;
-$steelblue-5:    color-mix(in srgb, var(--steelblue) 90%, white) !default;
-$steelblue-6:    var(--steelblue) !default;  
-$steelblue-7:    color-mix(in srgb, var(--steelblue) 92%, black) !default;
-$steelblue-8:    color-mix(in srgb, var(--steelblue) 82%, black) !default;
-$steelblue-9:    color-mix(in srgb, var(--steelblue) 72%, black) !default;
-$steelblue-10:   color-mix(in srgb, var(--steelblue) 62%, black) !default;
-$steelblue-11:   color-mix(in srgb, var(--steelblue) 52%, black) !default;
+$steelblue:              #336699 !default;
+$steelblue-1:            color-mix(in srgb, var(--steelblue) 50%, #fff) !default;
+$steelblue-2:            color-mix(in srgb, var(--steelblue) 60%, #fff) !default;
+$steelblue-3:            color-mix(in srgb, var(--steelblue) 70%, #fff) !default;
+$steelblue-4:            color-mix(in srgb, var(--steelblue) 80%, #fff) !default;
+$steelblue-5:            color-mix(in srgb, var(--steelblue) 90%, #fff) !default;
+$steelblue-6:            var(--steelblue) !default;  
+$steelblue-7:            color-mix(in srgb, var(--steelblue) 90%, #000) !default;
+$steelblue-8:            color-mix(in srgb, var(--steelblue) 80%, #000) !default;
+$steelblue-9:            color-mix(in srgb, var(--steelblue) 70%, #000) !default;
+$steelblue-10:           color-mix(in srgb, var(--steelblue) 60%, #000) !default;
+$steelblue-11:           color-mix(in srgb, var(--steelblue) 52%, #000) !default;
 
-// Tokens style
 $steelblue-tokens:       ':where(html)' !default;
 
-// Utility colors
 $steelblue-bg-text:      #000 !default;
 $steelblue-bg:           var(--steelblue-6) !default;
 $steelblue-bg-dark:      var(--steelblue-7) !default;
 $steelblue-bg-light:     var(--steelblue-5) !default;
 
-// Background text colors
-$steelblue-1-bg-text:      #000 !default;
-$steelblue-2-bg-text:      #000 !default;
-$steelblue-3-bg-text:      #000 !default;
-$steelblue-4-bg-text:      #000 !default;
-$steelblue-5-bg-text:      #fff !default;
-$steelblue-6-bg-text:      #fff !default;
-$steelblue-7-bg-text:      #fff !default;
-$steelblue-8-bg-text:      #fff !default;
-$steelblue-9-bg-text:      #fff !default;
-$steelblue-10-bg-text:     #fff !default;
-$steelblue-11-bg-text:     #fff !default;
+$steelblue-gradient:     linear-gradient(180deg, $steelblue-bg-light, $steelblue-bg, $steelblue-bg-dark) !default;
 
-// Background color values
-$steelblue-backgrounds:
-  "steelblue"    $steelblue-bg-text var(--steelblue),
-  "steelblue-1"  $steelblue-1-bg-text var(--steelblue-1),
-  "steelblue-2"  $steelblue-2-bg-text var(--steelblue-2),
-  "steelblue-3"  $steelblue-3-bg-text var(--steelblue-3),
-  "steelblue-4"  $steelblue-4-bg-text var(--steelblue-4),
-  "steelblue-5"  $steelblue-5-bg-text var(--steelblue-5),
-  "steelblue-6"  $steelblue-6-bg-text var(--steelblue-6),
-  "steelblue-7"  $steelblue-7-bg-text var(--steelblue-7),
-  "steelblue-8"  $steelblue-8-bg-text var(--steelblue-8),
-  "steelblue-9"  $steelblue-9-bg-text var(--steelblue-9),
-  "steelblue-10" $steelblue-10-bg-text var(--steelblue-10),
-  "steelblue-11" $steelblue-11-bg-text var(--steelblue-11)
-; //
-
-// Variables tokens map
-$steelblue-token-values: (
-  "steelblue": $steelblue,
-  "steelblue-1": $steelblue-1,
-  "steelblue-2": $steelblue-2,
-  "steelblue-3": $steelblue-3,
-  "steelblue-4": $steelblue-4,
-  "steelblue-5": $steelblue-5,
-  "steelblue-6": $steelblue-6,
-  "steelblue-7": $steelblue-7,
-  "steelblue-8": $steelblue-8,
-  "steelblue-9": $steelblue-9,
-  "steelblue-10": $steelblue-10,
-  "steelblue-11": $steelblue-11,
-) !default;
-
-// Variables mixins
-@mixin steelblue-variables {
-  @each $name, $value in $steelblue-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin steelblue-variables-css {
-  #{$steelblue-tokens} {
-    @include steelblue-variables;
-  }
-}
+$steelblue-color-values:
+  "steelblue"    $steelblue #fff,
+  "steelblue-1"  $steelblue-1 #000,
+  "steelblue-2"  $steelblue-2 #000,
+  "steelblue-3"  $steelblue-3 #000,
+  "steelblue-4"  $steelblue-4 #000,
+  "steelblue-5"  $steelblue-5 #fff,
+  "steelblue-6"  $steelblue-6 #fff,
+  "steelblue-7"  $steelblue-7 #fff,
+  "steelblue-8"  $steelblue-8 #fff,
+  "steelblue-9"  $steelblue-9 #fff,
+  "steelblue-10" $steelblue-10 #fff,
+  "steelblue-11" $steelblue-11 #fff,
+!default;

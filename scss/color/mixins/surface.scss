@@ -1,7 +1,20 @@
 // ---------------------------------------------------------- 
-// Surface utilities
+// Surface mixins
 // ----------------------------------------------------------
 @use "../surface" as *;
+
+// Variables mixins
+@mixin surface-variables { 
+  @each $name, $value in $surface-token-values {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin surface-variables-css {
+  #{$surface-tokens} {
+    @include surface-variables;
+  }
+}
 
 // Background color utilities
 @mixin surface-backgrounds-css {
@@ -22,7 +35,13 @@
   }
 }
 
+// Combined
 @mixin surface-utilities-css {
   @include surface-backgrounds-css;
   @include surface-borders-css;
+}
+
+@mixin surface-module-css {
+  @include surface-variables-css;
+  @include surface-utilities-css;
 }

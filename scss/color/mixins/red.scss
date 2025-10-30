@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Red utilities
+// Red mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../red" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin red-variables {
+  @each $name, $color in $red-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin red-variables-css {
+  #{$red-tokens} {
+    @include red-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-red-css {
-  @each $name, $color, $background in $red-backgrounds {
+  @each $name, $color, $text in $red-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-red-css {
-  @each $name, $color in $red-token-values {
+  @each $name, $color in $red-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-red-css {
+  .gradient-red {
+    color: $red-bg-text;
+    background-image: $red-gradient;
+  }
+}
+
+@mixin text-red-css {
+  @each $name, $color in $red-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-red-css {
+  @each $name, $color in $red-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-red-css {
   .accordion-red {
     @include accordion-color-values($red-bg-text, $red-bg, $red-bg-dark, $red-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-red-css {
   .alert-red {
     @include alert-color-values($red-bg-text, $red-bg, $red-bg-light);
-  }
-}
-
-@mixin background-red-css {
-  .bg-red {
-    @include background-color-values($red-bg-text, $red-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin red-utilities-css {
+  @include backgrounds-red-css;
+  @include borders-red-css;
+  @include gradient-red-css;
+  @include text-red-css;
+}
+
+@mixin red-modifiers-css {
+  @include icons-red-css;
   @include accordion-red-css;
   @include alert-red-css;
-  @include background-red-css;
-  @include backgrounds-red-css;
   @include badge-red-css;
-  @include borders-red-css;
   @include button-red-css;
   @include card-red-css;
   @include dialog-red-css;
   @include dropdown-red-css;
   @include list-group-red-css;
   @include popover-red-css;
+}
+
+@mixin red-module-css {
+  @include red-variables-css;
+  @include red-utilities-css;
+  @include red-modifiers-css;
 }

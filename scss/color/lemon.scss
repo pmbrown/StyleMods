@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// Lemon
+// ----------------------------------------------------------
+$lemon:                #c7c738 !default;
+$lemon-1:              color-mix(in srgb, var(--lemon) 29%, #fff) !default;
+$lemon-2:              color-mix(in srgb, var(--lemon) 44%, #fff) !default;
+$lemon-3:              color-mix(in srgb, var(--lemon) 58%, #fff) !default;
+$lemon-4:              color-mix(in srgb, var(--lemon) 72%, #fff) !default;
+$lemon-5:              color-mix(in srgb, var(--lemon) 87%, #fff) !default;
+$lemon-6:              var(--lemon) !default;
+$lemon-7:              color-mix(in srgb, var(--lemon) 85%, #000) !default;
+$lemon-8:              color-mix(in srgb, var(--lemon) 72%, #000) !default;
+$lemon-9:              color-mix(in srgb, var(--lemon) 60%, #000) !default;
+$lemon-10:             color-mix(in srgb, var(--lemon) 50%, #000) !default;
+$lemon-11:             color-mix(in srgb, var(--lemon) 44%, #000) !default;
+
+$lemon-tokens:         ':where(html)' !default;
+
+$lemon-bg-text:        #fff !default;
+$lemon-bg:             var(--lemon) !default;
+$lemon-bg-dark:        var(--lemon-7) !default;
+$lemon-bg-light:       var(--lemon-5) !default;
+
+$lemon-gradient:       linear-gradient(180deg, $lemon-bg-light, $lemon-bg, $lemon-bg-dark) !default;
+
+$lemon-color-values:
+  "lemon"    $lemon #000,
+  "lemon-1"  $lemon-1 #000,
+  "lemon-2"  $lemon-2 #000,
+  "lemon-3"  $lemon-3 #000,
+  "lemon-4"  $lemon-4 #000,
+  "lemon-5"  $lemon-5 #000,
+  "lemon-6"  $lemon-6 #000,
+  "lemon-7"  $lemon-7 #000,
+  "lemon-8"  $lemon-8 #000,
+  "lemon-9"  $lemon-9 #fff,
+  "lemon-10" $lemon-10 #fff,
+  "lemon-11" $lemon-11 #fff,
+!default;

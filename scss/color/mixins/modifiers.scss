@@ -1,0 +1,99 @@
+// ---------------------------------------------------------- 
+// Color modifiers
+// ----------------------------------------------------------
+@mixin accordion-color-values($color, $background, $focus, $border) {
+  --summary-text: #{$color};
+  --ico: #{$color};
+  --summary-bg: #{$background};
+  --summary-focus: #{$focus};
+  --accordion-bd-color: #{$border};
+}
+
+@mixin alert-color-values($color, $background, $border) {
+  --alert-text: #{$color};
+  --ico: #{$color};
+  --link: #{$color};
+  --visited: #{$color};
+  --hover: #{$color};
+  --alert-bg: #{$background};
+  --alert-bd-color: #{$border};
+}
+
+@mixin badge-color-values($color, $background, $border) {
+  --badge-text: #{$color};
+  --ico: #{$color};
+  --badge-bg: #{$background};
+  --badge-bd-color: #{$border};
+}
+
+@mixin button-color-values($color, $background, $hover, $focus, $border) {
+  --btn-text: #{$color};
+  --ico: #{$color};
+  --btn-bg: #{$background};
+  --btn-bd-color: #{$border};
+  --btn-hover: #{$hover};
+  --focus-color: #{$focus};
+}
+
+@mixin card-color-values($color, $background, $hover, $focus, $border) {
+  --card-text: #{$color};
+  --ico: #{$color};
+  --link: #{$color};
+  --visited: #{$color};
+  --hover: #{$color};
+  --card-bg: #{$background};
+  --card-text-hover: #{$color};
+  --card-hover: #{$hover};
+  --card-bd-color: #{$border};
+  --card-focus-color: #{$focus};
+  --card-title-bg: #{$background};
+}
+
+@mixin dialog-color-values($color, $background, $border) {
+  --dialog-text: #{$color};
+  --ico: #{$color};
+  --link: #{$color};
+  --visited: #{$color};
+  --hover: #{$color};
+  --dialog-bg: #{$background};
+  --dialog-bd-color: #{$border};
+  --dialog-title-bg: #{$background};
+}
+
+@mixin dropdown-color-values($color, $background, $hover, $focus, $border) {
+  --dropdown-text: #{$color};
+  --dropdown-btn-text: #{$color};
+  --dropdown-ico: #{$color};
+  --ico: #{$color};
+  --link: #{$color};
+  --visited: #{$color};
+  --hover: #{$color};
+  --dropdown-bg: #{$background};
+  --dropdown-btn-bg: #{$background};
+  --dropdown-link-hover: #{$hover};
+  --dropdown-btn-hover: #{$hover};
+  --dropdown-bd-color: #{$border};
+  --dropdown-focus-color: #{$focus};
+}
+
+@mixin list-group-color-values($color, $background, $hover, $border) {
+  --list-group-text: #{$color};
+  --ico: #{$color};
+  --link: #{$color};
+  --visited: #{$color};
+  --hover: #{$color};
+  --list-group-bg: #{$background};
+  --list-group-dt-bg: #{$background};
+  --list-group-hover: #{$hover};
+  --list-group-bd-color: #{$border};
+}
+
+@mixin popover-color-values($color, $background, $border) {
+  --popover-text: #{$color};
+  --ico: #{$color};
+  --link: #{$color};
+  --visited: #{$color};
+  --hover: #{$color};
+  --popover-bg: #{$background};
+  --popover-bd-color: #{$border};
+}

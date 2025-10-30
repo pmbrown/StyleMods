@@ -1,0 +1,179 @@
+// ----------------------------------------------------------
+// Styles
+// ----------------------------------------------------------
+// Global
+$variables-tokens:                  ':where(html)' !default;
+
+// ----------------------------------------------------------
+// Cascade layers
+// ----------------------------------------------------------
+$color-layer:                       color !default;
+$content-layer:                     content !default;
+$components-layer:                  components !default;
+$utilities-layer:                   utilities !default;
+$modifiers-layer:                   modifiers !default;
+$layout-layer:                      layout !default;
+$icons-layer:                       icons !default;
+$layer-order:                       '#{$color-layer}, #{$content-layer}, #{$components-layer}, #{$utilities-layer}, #{$modifiers-layer}, #{$layout-layer}, #{$icons-layer}' !default;
+
+$enable-layer-order:                false !default;
+$enable-color-layer:                false !default;
+$enable-content-layer:              false !default;
+$enable-components-layer:           false !default;
+$enable-utilities-layer:            false !default;
+$enable-modifiers-layer:            false !default;
+$enable-layout-layer:               false !default;
+$enable-icons-layer:                false !default;
+
+$enable-utilities-layer-xxl:        false !default;
+$enable-utilities-layer-xl:         false !default;
+$enable-utilities-layer-lg:         false !default;
+$enable-utilities-layer-md:         false !default;
+$enable-utilities-layer-sm:         false !default;
+$enable-utilities-layer-xs:         false !default;
+$enable-utilities-layer-xxs:        false !default;
+$enable-layout-layer-xxl:           false !default;
+$enable-layout-layer-xl:            false !default;
+$enable-layout-layer-lg:            false !default;
+$enable-layout-layer-md:            false !default;
+$enable-layout-layer-sm:            false !default;
+$enable-layout-layer-xs:            false !default;
+$enable-layout-layer-xxs:           false !default;
+
+// ----------------------------------------------------------
+// Content
+// ----------------------------------------------------------
+$enable-typography:                 false !default;
+$enable-forms-buttons:              false !default;
+$enable-tables:                     false !default;
+$enable-vis-hidden:                 false !default;
+$enable-smooth-scroll:              false !default;
+$enable-view-transition:            false !default;
+
+// ----------------------------------------------------------
+// Components
+// ----------------------------------------------------------
+$enable-accordions:                 false !default;
+$enable-alerts:                     false !default;
+$enable-badges:                     false !default;
+$enable-buttons:                    false !default;
+$enable-cards:                      false !default;
+$enable-dialogs:                    false !default;
+$enable-dialogs-transition:         false !default;
+$enable-dropdowns:                  false !default;
+$enable-list-groups:                false !default;
+$enable-popovers:                   false !default;
+$enable-popovers-transition:        false !default;
+$enable-theme-switch:               false !default;
+
+// ----------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------
+$enable-backgrounds:                false !default;
+$enable-borders:                    false !default;
+$enable-gradients:                  false !default;
+$enable-images:                     false !default;
+$enable-lists:                      false !default;
+$enable-opacity:                    false !default;
+$enable-shadows:                    false !default;
+$enable-text:                       false !default;
+
+// ----------------------------------------------------------
+// Layout
+// ----------------------------------------------------------
+$enable-align:                      false !default;
+$enable-aspect-ratio:               false !default;
+$enable-block:                      false !default;
+$enable-columns:                    false !default;
+$enable-containers:                 false !default;
+$enable-display:                    false !default;
+$enable-flex:                       false !default;
+$enable-grid:                       false !default;
+$enable-inset:                      false !default;
+$enable-justify:                    false !default;
+$enable-object-fit:                 false !default;
+$enable-order:                      false !default;
+$enable-overflow:                   false !default;
+$enable-overscroll:                 false !default;
+$enable-place:                      false !default;
+$enable-position:                   false !default;
+$enable-scrollbars:                 false !default;
+$enable-sizes:                      false !default;
+$enable-z-index:                    false !default;
+
+// Grids
+$enable-grid-layouts:               false !default;
+$enable-grid-templates:             false !default;
+
+// Spacing
+$enable-gaps:                       false !default;
+$enable-margins:                    false !default;
+$enable-padding:                    false !default;
+
+// ----------------------------------------------------------
+// Icons
+// ----------------------------------------------------------
+// Utilities
+$enable-icon-utilities-css:         false !default;
+$enable-icon-links-css:             false !default;
+$enable-icon-buttons-css:           false !default;
+
+// Default icons
+$enable-house-svg:                  false !default;
+$enable-email-svg:                  false !default;
+$enable-bars-svg:                   false !default;
+$enable-dots-horizontal-svg:        false !default;
+$enable-dots-vertical-svg:          false !default;
+$enable-plus-svg:                   false !default;
+$enable-minus-svg:                  false !default;
+$enable-close-svg:                  false !default;
+$enable-search-svg:                 false !default;
+$enable-download-svg:               false !default;
+$enable-info-box-svg:               false !default;
+$enable-info-box-fill-svg:          false !default;
+$enable-info-circle-svg:            false !default;
+$enable-info-circle-fill-svg:       false !default;
+$enable-question-circle-svg:        false !default;
+$enable-question-circle-fill-svg:   false !default;
+$enable-question-box-svg:           false !default;
+$enable-question-box-fill-svg:      false !default;
+$enable-box-svg:                    false !default;
+$enable-pen-box-svg:                false !default;
+$enable-close-box-svg:              false !default;
+$enable-close-box-fill-svg:         false !default;
+$enable-tick-box-svg:               false !default;
+$enable-ext-link-svg:               false !default;
+$enable-pg-link-svg:                false !default;
+$enable-sun-svg:                    false !default;
+$enable-moon-svg:                   false !default;
+$enable-caret-down-svg:             false !default;
+$enable-caret-up-svg:               false !default;
+$enable-caret-left-svg:             false !default;
+$enable-caret-right-svg:            false !default;
+$enable-user-svg:                   false !default;
+$enable-circle-svg:                 false !default;
+$enable-circle-fill-svg:            false !default;
+$enable-circle-inner-svg:           false !default;
+$enable-circle-half-svg:            false !default;
+$enable-circle-sm-svg:              false !default;
+$enable-circle-fill-sm-svg:         false !default;
+$enable-circle-inner-sm-svg:        false !default;
+$enable-circle-half-sm-svg:         false !default;
+$enable-image-svg:                  false !default;
+$enable-image-fill-svg:             false !default;
+
+// Brand icons
+$enable-stylemods-svg:              false !default;
+$enable-css-svg:                    false !default;
+$enable-sass-svg:                   false !default;
+$enable-github-svg:                 false !default;
+$enable-twitter-svg:                false !default;
+$enable-mastodon-svg:               false !default;
+$enable-tiktok-svg:                 false !default;
+$enable-facebook-svg:               false !default;
+$enable-instagram-svg:              false !default;
+$enable-pinterest-svg:              false !default;
+$enable-codepen-svg:                false !default;
+$enable-reddit-svg:                 false !default;
+$enable-youtube-svg:                false !default;
+$enable-rss-svg:                    false !default;

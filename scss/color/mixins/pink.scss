@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Pink utilities
+// Pink mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../pink" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin pink-variables {
+  @each $name, $color in $pink-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin pink-variables-css {
+  #{$pink-tokens} {
+    @include pink-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-pink-css {
-  @each $name, $color, $background in $pink-backgrounds {
+  @each $name, $color, $text in $pink-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-pink-css {
-  @each $name, $color in $pink-token-values {
+  @each $name, $color in $pink-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-pink-css {
+  .gradient-pink {
+    color: $pink-bg-text;
+    background-image: $pink-gradient;
+  }
+}
+
+@mixin text-pink-css {
+  @each $name, $color in $pink-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-pink-css {
+  @each $name, $color in $pink-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-pink-css {
   .accordion-pink {
     @include accordion-color-values($pink-bg-text, $pink-bg, $pink-bg-dark, $pink-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-pink-css {
   .alert-pink {
     @include alert-color-values($pink-bg-text, $pink-bg, $pink-bg-light);
-  }
-}
-
-@mixin background-pink-css {
-  .bg-pink {
-    @include background-color-values($pink-bg-text, $pink-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin pink-utilities-css {
+  @include backgrounds-pink-css;
+  @include borders-pink-css;
+  @include gradient-pink-css;
+  @include text-pink-css;
+}
+
+@mixin pink-modifiers-css {
+  @include icons-pink-css;
   @include accordion-pink-css;
   @include alert-pink-css;
-  @include background-pink-css;
-  @include backgrounds-pink-css;
   @include badge-pink-css;
-  @include borders-pink-css;
   @include button-pink-css;
   @include card-pink-css;
   @include dialog-pink-css;
   @include dropdown-pink-css;
   @include list-group-pink-css;
   @include popover-pink-css;
+}
+
+@mixin pink-module-css {
+  @include pink-variables-css;
+  @include pink-utilities-css;
+  @include pink-modifiers-css;
 }

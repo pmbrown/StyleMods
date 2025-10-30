@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Pink
 // ----------------------------------------------------------
-// Variable colors
-$pink:      #ff33a0 !default;
-$pink-1:    color-mix(in srgb, var(--pink) 48%, white) !default;
-$pink-2:    color-mix(in srgb, var(--pink) 58%, white) !default;
-$pink-3:    color-mix(in srgb, var(--pink) 68%, white) !default;
-$pink-4:    color-mix(in srgb, var(--pink) 78%, white) !default;
-$pink-5:    color-mix(in srgb, var(--pink) 85%, white) !default;
-$pink-6:    var(--pink) !default;  
-$pink-7:    color-mix(in srgb, var(--pink) 85%, black) !default;
-$pink-8:    color-mix(in srgb, var(--pink) 78%, black) !default;
-$pink-9:    color-mix(in srgb, var(--pink) 68%, black) !default;
-$pink-10:   color-mix(in srgb, var(--pink) 58%, black) !default;
-$pink-11:   color-mix(in srgb, var(--pink) 48%, black) !default;
+$pink:              #ff33a0 !default;
+$pink-1:            color-mix(in srgb, var(--pink) 50%, #fff) !default;
+$pink-2:            color-mix(in srgb, var(--pink) 60%, #fff) !default;
+$pink-3:            color-mix(in srgb, var(--pink) 70%, #fff) !default;
+$pink-4:            color-mix(in srgb, var(--pink) 80%, #fff) !default;
+$pink-5:            color-mix(in srgb, var(--pink) 90%, #fff) !default;
+$pink-6:            var(--pink) !default;  
+$pink-7:            color-mix(in srgb, var(--pink) 90%, #000) !default;
+$pink-8:            color-mix(in srgb, var(--pink) 80%, #000) !default;
+$pink-9:            color-mix(in srgb, var(--pink) 70%, #000) !default;
+$pink-10:           color-mix(in srgb, var(--pink) 60%, #000) !default;
+$pink-11:           color-mix(in srgb, var(--pink) 50%, #000) !default;
 
-// Tokens style
 $pink-tokens:       ':where(html)' !default;
 
-// Utility colors
 $pink-bg-text:      #000 !default;
 $pink-bg:           var(--pink-6) !default;
 $pink-bg-dark:      var(--pink-7) !default;
 $pink-bg-light:     var(--pink-5) !default;
 
-// Background text colors
-$pink-1-bg-text:      #000 !default;
-$pink-2-bg-text:      #000 !default;
-$pink-3-bg-text:      #000 !default;
-$pink-4-bg-text:      #000 !default;
-$pink-5-bg-text:      #000 !default;
-$pink-6-bg-text:      #000 !default;
-$pink-7-bg-text:      #fff !default;
-$pink-8-bg-text:      #fff !default;
-$pink-9-bg-text:      #fff !default;
-$pink-10-bg-text:     #fff !default;
-$pink-11-bg-text:     #fff !default;
+$pink-gradient:     linear-gradient(180deg, $pink-bg-light, $pink-bg, $pink-bg-dark) !default;
 
-// Background color values
-$pink-backgrounds:
-  "pink"    $pink-bg-text var(--pink),
-  "pink-1"  $pink-1-bg-text var(--pink-1),
-  "pink-2"  $pink-2-bg-text var(--pink-2),
-  "pink-3"  $pink-3-bg-text var(--pink-3),
-  "pink-4"  $pink-4-bg-text var(--pink-4),
-  "pink-5"  $pink-5-bg-text var(--pink-5),
-  "pink-6"  $pink-6-bg-text var(--pink-6),
-  "pink-7"  $pink-7-bg-text var(--pink-7),
-  "pink-8"  $pink-8-bg-text var(--pink-8),
-  "pink-9"  $pink-9-bg-text var(--pink-9),
-  "pink-10" $pink-10-bg-text var(--pink-10),
-  "pink-11" $pink-11-bg-text var(--pink-11)
-; //
-
-// Variables tokens map
-$pink-token-values: (
-  "pink": $pink,
-  "pink-1": $pink-1,
-  "pink-2": $pink-2,
-  "pink-3": $pink-3,
-  "pink-4": $pink-4,
-  "pink-5": $pink-5,
-  "pink-6": $pink-6,
-  "pink-7": $pink-7,
-  "pink-8": $pink-8,
-  "pink-9": $pink-9,
-  "pink-10": $pink-10,
-  "pink-11": $pink-11,
-) !default;
-
-// Variables mixins
-@mixin pink-variables {
-  @each $name, $value in $pink-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin pink-variables-css {
-  #{$pink-tokens} {
-    @include pink-variables;
-  }
-}
+$pink-color-values:
+  "pink"    $pink #000,
+  "pink-1"  $pink-1 #000,
+  "pink-2"  $pink-2 #000,
+  "pink-3"  $pink-3 #000,
+  "pink-4"  $pink-4 #000,
+  "pink-5"  $pink-5 #000,
+  "pink-6"  $pink-6 #000,
+  "pink-7"  $pink-7 #000,
+  "pink-8"  $pink-8 #fff,
+  "pink-9"  $pink-9 #fff,
+  "pink-10" $pink-10 #fff,
+  "pink-11" $pink-11 #fff,
+!default;

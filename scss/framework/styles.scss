@@ -1,0 +1,231 @@
+// ----------------------------------------------------------
+// Styles mixins
+// ----------------------------------------------------------
+@use "../configuration" as *;
+@use "../index" as *;
+@include version;
+
+// ----------------------------------------------------------
+// Cascade layers
+// ----------------------------------------------------------
+@mixin cascade-layers {
+  @layer #{$layer-order};
+}
+
+// ----------------------------------------------------------
+// Content
+// ----------------------------------------------------------
+@mixin content-framework {
+  @if $enable-typography { @include typography-css; }
+  @if $enable-forms-buttons { @include forms-buttons-css; }
+  @if $enable-tables { @include tables-css; }
+  @if $enable-vis-hidden { @include vis-hidden-css; }
+  @media (prefers-reduced-motion: no-preference) { 
+    @if $enable-smooth-scroll { @include smooth-scroll-css; }
+    @if $enable-view-transition { @include view-transition-css; }
+  }
+}
+
+// ----------------------------------------------------------
+// Components
+// ----------------------------------------------------------
+@mixin components-framework {
+  @if $enable-accordions { @include accordions-css; }
+  @if $enable-alerts { @include alerts-css; }
+  @if $enable-badges { @include badges-css; }
+  @if $enable-buttons { @include buttons-css; }
+  @if $enable-cards { @include cards-css; }
+  @if $enable-dialogs { @include dialog-styles-css; }
+  @if $enable-dialogs-transition { @include dialog-transition-css; }
+  @if $enable-dropdowns { @include dropdowns-css; }
+  @if $enable-list-groups { @include list-groups-css; }
+  @if $enable-popovers { @include popover-styles-css; }
+  @if $enable-popovers-transition { @include popover-transition-css; }
+  @if $enable-theme-switch { @include theme-switch-css; }
+}
+
+// ----------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------
+@mixin utilities-framework {
+  @if $enable-backgrounds { @include background-css; }
+  @if $enable-borders { @include borders-css; }
+  @if $enable-gradients { @include gradients-css; }
+  @if $enable-images { @include images-css; }
+  @if $enable-lists { @include lists-css; }
+  @if $enable-opacity { @include opacity-css; }
+  @if $enable-shadows { @include shadows-css; }
+  @if $enable-text { @include text-css; }
+}
+
+// ---------------------------------------------------------- 
+// Layouts
+// ----------------------------------------------------------
+@mixin layout-framework {
+// Grids
+  #{$variables-tokens} { 
+    @if $enable-grid-templates { @include grid-templates-variables; }
+  }
+  @if $enable-grid-templates { @include grid-templates-css; }
+  @if $enable-grid-layouts { @include grid-layouts-css; }
+  
+// Layout
+  @if $enable-align { @include align-css; }
+  @if $enable-aspect-ratio { @include aspect-ratio-css; }
+  @if $enable-block { @include block-css; }
+  @if $enable-columns { @include columns-css; }
+  @if $enable-containers { @include containers-css; }
+  @if $enable-display { @include display-css; }
+  @if $enable-flex { @include flex-css; }
+  @if $enable-grid { @include grid-css; }
+  @if $enable-inset { @include inset-css; }
+  @if $enable-justify { @include justify-css; }
+  @if $enable-object-fit { @include object-fit-css; }
+  @if $enable-order { @include order-css; }
+  @if $enable-overflow { @include overflow-css; }
+  @if $enable-overscroll { @include overscroll-css; }
+  @if $enable-place { @include place-css; }
+  @if $enable-position { @include position-css; }
+  @if $enable-scrollbars { @include scrollbars-css; }
+  @if $enable-sizes { @include sizes-css; }
+  @if $enable-z-index { @include z-index-css; }
+  
+  // Spacing
+  @if $enable-gaps { @include gaps-css; }
+  @if $enable-margins { @include margins-css; }
+  @if $enable-padding { @include padding-css; }
+}
+
+// ----------------------------------------------------------
+// Icons
+// ----------------------------------------------------------
+@mixin icons-framework {
+  // SVG variable tokens
+  #{$variables-tokens} {
+    // Default icons
+    @if $enable-house-svg {--house: #{$house};}
+    @if $enable-email-svg {--email: #{$email};}
+    @if $enable-bars-svg {--bars: #{$bars};}
+    @if $enable-dots-horizontal-svg {--dots-h: #{$dots-h};}
+    @if $enable-dots-vertical-svg {--dots-v: #{$dots-v};}
+    @if $enable-plus-svg {--plus: #{$plus};}
+    @if $enable-minus-svg {--minus: #{$minus};}
+    @if $enable-close-svg {--close: #{$close};}
+    @if $enable-search-svg {--search: #{$search};}
+    @if $enable-download-svg {--download: #{$download};}
+    @if $enable-info-box-svg {--info-box: #{$info-box};}
+    @if $enable-info-box-fill-svg {--info-box-fill: #{$info-box-fill};}
+    @if $enable-info-circle-svg {--info-circle: #{$info-circle};}
+    @if $enable-info-circle-fill-svg {--info-circle-fill: #{$info-circle-fill};}
+    @if $enable-question-circle-svg {--question-circle: #{$question-circle};}
+    @if $enable-question-circle-fill-svg {--question-circle-fill: #{$question-circle-fill};}
+    @if $enable-question-box-svg {--question-box: #{$question-box};}
+    @if $enable-question-box-fill-svg {--question-box-fill: #{$question-box-fill};}
+    @if $enable-box-svg {--box: #{$box};}
+    @if $enable-pen-box-svg {--pen-box: #{$pen-box};}
+    @if $enable-close-box-svg {--close-box: #{$close-box};}
+    @if $enable-close-box-fill-svg {--close-box-fill: #{$close-box-fill};}
+    @if $enable-tick-box-svg {--tick-box: #{$tick-box};}
+    @if $enable-ext-link-svg {--ext-link: #{$ext-link};}
+    @if $enable-pg-link-svg {--pg-link: #{$pg-link};}
+    @if $enable-sun-svg {--sun: #{$sun};}
+    @if $enable-moon-svg {--moon: #{$moon};}
+    @if $enable-caret-down-svg {--caret-down: #{$caret-down};}
+    @if $enable-caret-up-svg {--caret-up: #{$caret-up};}
+    @if $enable-caret-left-svg {--caret-left: #{$caret-left};}
+    @if $enable-caret-right-svg {--caret-right: #{$caret-right};}
+    @if $enable-user-svg {--user: #{$user};}
+    @if $enable-circle-svg {--circle: #{$circle};}
+    @if $enable-circle-fill-svg {--circle-fill: #{$circle-fill};}
+    @if $enable-circle-inner-svg {--circle-inner: #{$circle-inner};}
+    @if $enable-circle-half-svg {--circle-half: #{$circle-half};}
+    @if $enable-circle-sm-svg {--circle-sm: #{$circle-sm};}
+    @if $enable-circle-fill-sm-svg {--circle-fill-sm: #{$circle-fill-sm};}
+    @if $enable-circle-inner-sm-svg {--circle-inner-sm: #{$circle-inner-sm};}
+    @if $enable-circle-half-sm-svg {--circle-half-sm: #{$circle-half-sm};}
+    @if $enable-image-svg {--image: #{$image};}
+    @if $enable-image-fill-svg {--image-fill: #{$image-fill};}
+    
+    // Brand icons
+    @if $enable-rss-svg {--rss: #{$rss};}
+    @if $enable-stylemods-svg {--stylemods: #{$stylemods};}
+    @if $enable-css-svg {--css: #{$css};}
+    @if $enable-sass-svg {--sass: #{$sass};}
+    @if $enable-github-svg {--github: #{$github};}
+    @if $enable-twitter-svg {--twitter: #{$twitter};}
+    @if $enable-mastodon-svg {--mastodon: #{$mastodon};}
+    @if $enable-tiktok-svg {--tiktok: #{$tiktok};}
+    @if $enable-facebook-svg {--facebook: #{$facebook};}
+    @if $enable-instagram-svg {--instagram: #{$instagram};}
+    @if $enable-pinterest-svg {--pinterest: #{$pinterest};}
+    @if $enable-codepen-svg {--codepen: #{$codepen};}
+    @if $enable-reddit-svg {--reddit: #{$reddit};}
+    @if $enable-youtube-svg {--youtube: #{$youtube};}
+  }
+
+  // Icon utility classes
+  @if $enable-icon-utilities-css { @include icon-utilities-css; }
+  @if $enable-icon-links-css { @include icon-links-css; }
+  @if $enable-icon-buttons-css { @include icon-buttons-css; }
+  
+  // SVG classes
+  // Default icons
+  @if $enable-house-svg {.house {--svg: var(--house);}}
+  @if $enable-email-svg {.email {--svg: var(--email);}}
+  @if $enable-bars-svg {.bars {--svg: var(--bars);}}
+  @if $enable-dots-horizontal-svg {.dots-h {--svg: var(--dots-h);}}
+  @if $enable-dots-vertical-svg {.dots-v {--svg: var(--dots-v);}}
+  @if $enable-plus-svg {.plus {--svg: var(--plus);}}
+  @if $enable-minus-svg {.minus {--svg: var(--minus);}}
+  @if $enable-close-svg {.close {--svg: var(--close);}}
+  @if $enable-search-svg {.search {--svg: var(--search);}}
+  @if $enable-download-svg {.download {--svg: var(--download);}}
+  @if $enable-info-box-svg {.info-box {--svg: var(--info-box);}}
+  @if $enable-info-box-fill-svg {.info-box-fill {--svg: var(--info-box-fill);}}
+  @if $enable-info-circle-svg {.info-circle {--svg: var(--info-circle);}}
+  @if $enable-info-circle-fill-svg {.info-circle-fill {--svg: var(--info-circle-fill);}}
+  @if $enable-question-circle-svg {.question-circle {--svg: var(--question-circle);}}
+  @if $enable-question-circle-fill-svg {.question-circle-fill {--svg: var(--question-circle-fill);}}
+  @if $enable-question-box-svg {.question-box {--svg: var(--question-box);}}
+  @if $enable-question-box-fill-svg {.question-box-fill {--svg: var(--question-box-fill);}}
+  @if $enable-box-svg {.box {--svg: var(--box);}}
+  @if $enable-pen-box-svg {.pen-box {--svg: var(--pen-box);}}
+  @if $enable-close-box-svg {.close-box {--svg: var(--close-box);}}
+  @if $enable-close-box-fill-svg {.close-box-fill {--svg: var(--close-box-fill);}}
+  @if $enable-tick-box-svg {.tick-box {--svg: var(--tick-box);}}
+  @if $enable-ext-link-svg {.ext-link {--svg: var(--ext-link);}}
+  @if $enable-pg-link-svg {.pg-link {--svg: var(--pg-link);}}
+  @if $enable-sun-svg {.sun {--svg: var(--sun);}}
+  @if $enable-moon-svg {.moon {--svg: var(--moon);}}
+  @if $enable-caret-down-svg {.caret-down {--svg: var(--caret-down);}}
+  @if $enable-caret-up-svg {.caret-up {--svg: var(--caret-up);}}
+  @if $enable-caret-left-svg {.caret-left {--svg: var(--caret-left);}}
+  @if $enable-caret-right-svg {.caret-right {--svg: var(--caret-right);}}
+  @if $enable-user-svg {.user {--svg: var(--user);}}
+  @if $enable-circle-svg {.circle {--svg: var(--circle);}}
+  @if $enable-circle-fill-svg {.circle-fill {--svg: var(--circle-fill);}}
+  @if $enable-circle-inner-svg {.circle-inner {--svg: var(--circle-inner);}}
+  @if $enable-circle-half-svg {.circle-half {--svg: var(--circle-half);}}
+  @if $enable-circle-sm-svg {.circle-sm {--svg: var(--circle-sm);}}
+  @if $enable-circle-fill-sm-svg {.circle-fill-sm {--svg: var(--circle-fill-sm);}}
+  @if $enable-circle-inner-sm-svg {.circle-inner-sm {--svg: var(--circle-inner-sm);}}
+  @if $enable-circle-half-sm-svg {.circle-half-sm {--svg: var(--circle-half-sm);}}
+  @if $enable-image-svg {.image {--svg: var(--image);}}
+  @if $enable-image-fill-svg {.image-fill {--svg: var(--image-fill);}}
+  
+  // Brand icons
+  @if $enable-rss-svg {.rss {--svg: var(--rss);}}
+  @if $enable-stylemods-svg {.stylemods {--svg: var(--stylemods);}}
+  @if $enable-css-svg {.css {--svg: var(--css);}}
+  @if $enable-sass-svg {.sass {--svg: var(--sass);}}
+  @if $enable-github-svg {.github {--svg: var(--github);}}
+  @if $enable-twitter-svg {.twitter {--svg: var(--twitter);}}
+  @if $enable-mastodon-svg {.mastodon {--svg: var(--mastodon);}}
+  @if $enable-tiktok-svg {.tiktok {--svg: var(--tiktok);}}
+  @if $enable-facebook-svg {.facebook {--svg: var(--facebook);}}
+  @if $enable-instagram-svg {.instagram {--svg: var(--instagram);}}
+  @if $enable-pinterest-svg {.pinterest {--svg: var(--pinterest);}}
+  @if $enable-codepen-svg {.codepen {--svg: var(--codepen);}}
+  @if $enable-reddit-svg {.reddit {--svg: var(--reddit);}}
+  @if $enable-youtube-svg {.youtube {--svg: var(--youtube);}}
+}

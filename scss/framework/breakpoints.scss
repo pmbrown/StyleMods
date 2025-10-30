@@ -1,0 +1,278 @@
+// ----------------------------------------------------------
+// Breakpoints mixins
+// ----------------------------------------------------------
+@use "../configuration" as *;
+@use "../index" as *;
+
+// ----------------------------------------------------------
+// XXL breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-xxl {
+  @if $enable-borders-xxl { @include borders-xxl-css; }
+  @if $enable-text-xxl { @include text-xxl-css; }
+}
+
+@mixin layout-framework-xxl {
+  // Grids
+  @if $enable-grid-templates-xxl { @include grid-templates-xxl-css; }
+  @if $enable-grid-layouts-xxl { @include grid-layouts-xxl-css; }
+  
+  // Layout
+  @if $enable-align-xxl { @include align-xxl-css; }
+  @if $enable-aspect-ratio-xxl { @include aspect-ratio-xxl-css; }
+  @if $enable-block-xxl { @include block-xxl-css; }
+  @if $enable-columns-xxl { @include columns-xxl-css; }
+  @if $enable-display-xxl { @include display-xxl-css; }
+  @if $enable-flex-xxl { @include flex-xxl-css; }
+  @if $enable-grid-xxl { @include grid-xxl-css; }
+  @if $enable-inset-xxl { @include inset-xxl-css; }
+  @if $enable-justify-xxl { @include justify-xxl-css; }
+  @if $enable-object-fit-xxl { @include object-fit-xxl-css; }
+  @if $enable-order-xxl { @include order-xxl-css; }
+  @if $enable-overflow-xxl { @include overflow-xxl-css; }
+  @if $enable-overscroll-xxl { @include overscroll-xxl-css; }
+  @if $enable-place-xxl { @include place-xxl-css; }
+  @if $enable-position-xxl { @include position-xxl-css; }
+  @if $enable-scrollbars-xxl { @include scrollbars-xxl-css; }
+  @if $enable-sizes-xxl { @include sizes-xxl-css; }
+  @if $enable-z-index-xxl { @include z-index-xxl-css; }
+  
+  // Spacing
+  @if $enable-gaps-xxl { @include gaps-xxl-css; }
+  @if $enable-margins-xxl { @include margins-xxl-css; }
+  @if $enable-padding-xxl { @include padding-xxl-css; }
+}
+
+// ----------------------------------------------------------
+// XL breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-xl {
+  @if $enable-borders-xl { @include borders-xl-css; }
+  @if $enable-text-xl { @include text-xl-css; }
+}
+
+@mixin layout-framework-xl {
+  // Grids
+  @if $enable-grid-templates-xl { @include grid-templates-xl-css; }
+  @if $enable-grid-layouts-xl { @include grid-layouts-xl-css; }
+  
+  // Layout
+  @if $enable-align-xl { @include align-xl-css; }
+  @if $enable-aspect-ratio-xl { @include aspect-ratio-xl-css; }
+  @if $enable-block-xl { @include block-xl-css; }
+  @if $enable-columns-xl { @include columns-xl-css; }
+  @if $enable-display-xl { @include display-xl-css; }
+  @if $enable-flex-xl { @include flex-xl-css; }
+  @if $enable-grid-xl { @include grid-xl-css; }
+  @if $enable-inset-xl { @include inset-xl-css; }
+  @if $enable-justify-xl { @include justify-xl-css; }
+  @if $enable-object-fit-xl { @include object-fit-xl-css; }
+  @if $enable-order-xl { @include order-xl-css; }
+  @if $enable-overflow-xl { @include overflow-xl-css; }
+  @if $enable-overscroll-xl { @include overscroll-xl-css; }
+  @if $enable-place-xl { @include place-xl-css; }
+  @if $enable-position-xl { @include position-xl-css; }
+  @if $enable-scrollbars-xl { @include scrollbars-xl-css; }
+  @if $enable-sizes-xl { @include sizes-xl-css; }
+  @if $enable-z-index-xl { @include z-index-xl-css; }
+  
+  // Spacing
+  @if $enable-gaps-xl { @include gaps-xl-css; }
+  @if $enable-margins-xl { @include margins-xl-css; }
+  @if $enable-padding-xl { @include padding-xl-css; }
+}
+
+// ----------------------------------------------------------
+// LG breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-lg {
+  @if $enable-borders-lg { @include borders-lg-css; }
+  @if $enable-text-lg { @include text-lg-css; }
+}
+
+@mixin layout-framework-lg {
+  // Grids
+  @if $enable-grid-templates-lg { @include grid-templates-lg-css; }
+  @if $enable-grid-layouts-lg { @include grid-layouts-lg-css; }
+  
+  // Layout
+  @if $enable-align-lg { @include align-lg-css; }
+  @if $enable-aspect-ratio-lg { @include aspect-ratio-lg-css; }
+  @if $enable-block-lg { @include block-lg-css; }
+  @if $enable-columns-lg { @include columns-lg-css; }
+  @if $enable-display-lg { @include display-lg-css; }
+  @if $enable-flex-lg { @include flex-lg-css; }
+  @if $enable-grid-lg { @include grid-lg-css; }
+  @if $enable-inset-lg { @include inset-lg-css; }
+  @if $enable-justify-lg { @include justify-lg-css; }
+  @if $enable-object-fit-lg { @include object-fit-lg-css; }
+  @if $enable-order-lg { @include order-lg-css; }
+  @if $enable-overflow-lg { @include overflow-lg-css; }
+  @if $enable-overscroll-lg { @include overscroll-lg-css; }
+  @if $enable-place-lg { @include place-lg-css; }
+  @if $enable-position-lg { @include position-lg-css; }
+  @if $enable-scrollbars-lg { @include scrollbars-lg-css; }
+  @if $enable-sizes-lg { @include sizes-lg-css; }
+  @if $enable-z-index-lg { @include z-index-lg-css; }
+  
+  // Spacing
+  @if $enable-gaps-lg { @include gaps-lg-css; }
+  @if $enable-margins-lg { @include margins-lg-css; }
+  @if $enable-padding-lg { @include padding-lg-css; }
+}
+
+// ----------------------------------------------------------
+// MD breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-md {
+  @if $enable-borders-md { @include borders-md-css; }
+  @if $enable-text-md { @include text-md-css; }
+}
+
+@mixin layout-framework-md {
+  // Grids
+  @if $enable-grid-templates-md { @include grid-templates-md-css; }
+  @if $enable-grid-layouts-md { @include grid-layouts-md-css; }
+  
+  // Layout
+  @if $enable-align-md { @include align-md-css; }
+  @if $enable-aspect-ratio-md { @include aspect-ratio-md-css; }
+  @if $enable-block-md { @include block-md-css; }
+  @if $enable-columns-md { @include columns-md-css; }
+  @if $enable-display-md { @include display-md-css; }
+  @if $enable-flex-md { @include flex-md-css; }
+  @if $enable-grid-md { @include grid-md-css; }
+  @if $enable-inset-md { @include inset-md-css; }
+  @if $enable-justify-md { @include justify-md-css; }
+  @if $enable-object-fit-md { @include object-fit-md-css; }
+  @if $enable-order-md { @include order-md-css; }
+  @if $enable-overflow-md { @include overflow-md-css; }
+  @if $enable-overscroll-md { @include overscroll-md-css; }
+  @if $enable-place-md { @include place-md-css; }
+  @if $enable-position-md { @include position-md-css; }
+  @if $enable-scrollbars-md { @include scrollbars-md-css; }
+  @if $enable-sizes-md { @include sizes-md-css; }
+  @if $enable-z-index-md { @include z-index-md-css; }
+  
+  // Spacing
+  @if $enable-gaps-md { @include gaps-md-css; }
+  @if $enable-margins-md { @include margins-md-css; }
+  @if $enable-padding-md { @include padding-md-css; }
+}
+
+// ----------------------------------------------------------
+// SM breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-sm {
+  @if $enable-borders-sm { @include borders-sm-css; }
+  @if $enable-text-sm { @include text-sm-css; }
+}
+
+@mixin layout-framework-sm {
+  // Grids
+  @if $enable-grid-templates-sm { @include grid-templates-sm-css; }
+  @if $enable-grid-layouts-sm { @include grid-layouts-sm-css; }
+  
+  // Layout
+  @if $enable-align-sm { @include align-sm-css; }
+  @if $enable-aspect-ratio-sm { @include aspect-ratio-sm-css; }
+  @if $enable-block-sm { @include block-sm-css; }
+  @if $enable-columns-sm { @include columns-sm-css; }
+  @if $enable-display-sm { @include display-sm-css; }
+  @if $enable-flex-sm { @include flex-sm-css; }
+  @if $enable-grid-sm { @include grid-sm-css; }
+  @if $enable-inset-sm { @include inset-sm-css; }
+  @if $enable-justify-sm { @include justify-sm-css; }
+  @if $enable-object-fit-sm { @include object-fit-sm-css; }
+  @if $enable-order-sm { @include order-sm-css; }
+  @if $enable-overflow-sm { @include overflow-sm-css; }
+  @if $enable-overscroll-sm { @include overscroll-sm-css; }
+  @if $enable-place-sm { @include place-sm-css; }
+  @if $enable-position-sm { @include position-sm-css; }
+  @if $enable-scrollbars-sm { @include scrollbars-sm-css; }
+  @if $enable-sizes-sm { @include sizes-sm-css; }
+  @if $enable-z-index-sm { @include z-index-sm-css; }
+  
+  // Spacing
+  @if $enable-gaps-sm { @include gaps-sm-css; }
+  @if $enable-margins-sm { @include margins-sm-css; }
+  @if $enable-padding-sm { @include padding-sm-css; }
+}
+
+// ----------------------------------------------------------
+// XS breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-xs {
+  @if $enable-borders-xs { @include borders-xs-css; }
+  @if $enable-text-xs { @include text-xs-css; }
+}
+
+@mixin layout-framework-xs {
+  // Grids
+  @if $enable-grid-templates-xs { @include grid-templates-xs-css; }
+  @if $enable-grid-layouts-xs { @include grid-layouts-xs-css; }
+  
+  // Layout
+  @if $enable-align-xs { @include align-xs-css; }
+  @if $enable-aspect-ratio-xs { @include aspect-ratio-xs-css; }
+  @if $enable-block-xs { @include block-xs-css; }
+  @if $enable-columns-xs { @include columns-xs-css; }
+  @if $enable-display-xs { @include display-xs-css; }
+  @if $enable-flex-xs { @include flex-xs-css; }
+  @if $enable-grid-xs { @include grid-xs-css; }
+  @if $enable-inset-xs { @include inset-xs-css; }
+  @if $enable-justify-xs { @include justify-xs-css; }
+  @if $enable-object-fit-xs { @include object-fit-xs-css; }
+  @if $enable-order-xs { @include order-xs-css; }
+  @if $enable-overflow-xs { @include overflow-xs-css; }
+  @if $enable-overscroll-xs { @include overscroll-xs-css; }
+  @if $enable-place-xs { @include place-xs-css; }
+  @if $enable-position-xs { @include position-xs-css; }
+  @if $enable-scrollbars-xs { @include scrollbars-xs-css; }
+  @if $enable-sizes-xs { @include sizes-xs-css; }
+  @if $enable-z-index-xs { @include z-index-xs-css; }
+  
+  // Spacing
+  @if $enable-gaps-xs { @include gaps-xs-css; }
+  @if $enable-margins-xs { @include margins-xs-css; }
+  @if $enable-padding-xs { @include padding-xs-css; }
+}
+
+// ----------------------------------------------------------
+// XXS breakpoints
+// ----------------------------------------------------------
+@mixin utilities-framework-xxs {
+  @if $enable-borders-xxs { @include borders-xxs-css; }
+  @if $enable-text-xxs { @include text-xxs-css; }
+}
+
+@mixin layout-framework-xxs {
+  // Grids
+  @if $enable-grid-templates-xxs { @include grid-templates-xxs-css; }
+  @if $enable-grid-layouts-xxs { @include grid-layouts-xxs-css; }
+  
+  // Layout
+  @if $enable-align-xxs { @include align-xxs-css; }
+  @if $enable-aspect-ratio-xxs { @include aspect-ratio-xxs-css; }
+  @if $enable-block-xxs { @include block-xxs-css; }
+  @if $enable-columns-xxs { @include columns-xxs-css; }
+  @if $enable-display-xxs { @include display-xxs-css; }
+  @if $enable-flex-xxs { @include flex-xxs-css; }
+  @if $enable-grid-xxs { @include grid-xxs-css; }
+  @if $enable-inset-xxs { @include inset-xxs-css; }
+  @if $enable-justify-xxs { @include justify-xxs-css; }
+  @if $enable-object-fit-xxs { @include object-fit-xxs-css; }
+  @if $enable-order-xxs { @include order-xxs-css; }
+  @if $enable-overflow-xxs { @include overflow-xxs-css; }
+  @if $enable-overscroll-xxs { @include overscroll-xxs-css; }
+  @if $enable-place-xxs { @include place-xxs-css; }
+  @if $enable-position-xxs { @include position-xxs-css; }
+  @if $enable-scrollbars-xxs { @include scrollbars-xxs-css; }
+  @if $enable-sizes-xxs { @include sizes-xxs-css; }
+  @if $enable-z-index-xxs { @include z-index-xxs-css; }
+  
+  // Spacing
+  @if $enable-gaps-xxs { @include gaps-xxs-css; }
+  @if $enable-margins-xxs { @include margins-xxs-css; }
+  @if $enable-padding-xxs { @include padding-xxs-css; }
+}

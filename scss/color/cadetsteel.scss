@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// Cadetsteel
+// ----------------------------------------------------------
+$cadetsteel:                #669999 !default;
+$cadetsteel-1:              color-mix(in srgb, var(--cadetsteel) 25%, #fff) !default;
+$cadetsteel-2:              color-mix(in srgb, var(--cadetsteel) 35%, #fff) !default;
+$cadetsteel-3:              color-mix(in srgb, var(--cadetsteel) 45%, #fff) !default;
+$cadetsteel-4:              color-mix(in srgb, var(--cadetsteel) 60%, #fff) !default;
+$cadetsteel-5:              color-mix(in srgb, var(--cadetsteel) 78%, #fff) !default;
+$cadetsteel-6:              var(--cadetsteel) !default;
+$cadetsteel-7:              color-mix(in srgb, var(--cadetsteel) 85%, #000) !default;
+$cadetsteel-8:              color-mix(in srgb, var(--cadetsteel) 72%, #000) !default;
+$cadetsteel-9:              color-mix(in srgb, var(--cadetsteel) 60%, #000) !default;
+$cadetsteel-10:             color-mix(in srgb, var(--cadetsteel) 50%, #000) !default;
+$cadetsteel-11:             color-mix(in srgb, var(--cadetsteel) 44%, #000) !default;
+
+$cadetsteel-tokens:         ':where(html)' !default;
+
+$cadetsteel-bg-text:        #fff !default;
+$cadetsteel-bg:             var(--cadetsteel) !default;
+$cadetsteel-bg-dark:        var(--cadetsteel-7) !default;
+$cadetsteel-bg-light:       var(--cadetsteel-5) !default;
+
+$cadetsteel-gradient:       linear-gradient(180deg, $cadetsteel-bg-light, $cadetsteel-bg, $cadetsteel-bg-dark) !default;
+
+$cadetsteel-color-values:
+  "cadetsteel"    $cadetsteel #000,
+  "cadetsteel-1"  $cadetsteel-1 #000,
+  "cadetsteel-2"  $cadetsteel-2 #000,
+  "cadetsteel-3"  $cadetsteel-3 #000,
+  "cadetsteel-4"  $cadetsteel-4 #000,
+  "cadetsteel-5"  $cadetsteel-5 #000,
+  "cadetsteel-6"  $cadetsteel-6 #000,
+  "cadetsteel-7"  $cadetsteel-7 #000,
+  "cadetsteel-8"  $cadetsteel-8 #fff,
+  "cadetsteel-9"  $cadetsteel-9 #fff,
+  "cadetsteel-10" $cadetsteel-10 #fff,
+  "cadetsteel-11" $cadetsteel-11 #fff,
+!default;

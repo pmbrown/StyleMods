@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Yellow utilities
+// Yellow mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../yellow" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin yellow-variables {
+  @each $name, $color in $yellow-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin yellow-variables-css {
+  #{$yellow-tokens} {
+    @include yellow-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-yellow-css {
-  @each $name, $color, $background in $yellow-backgrounds {
+  @each $name, $color, $text in $yellow-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-yellow-css {
-  @each $name, $color in $yellow-token-values {
+  @each $name, $color in $yellow-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-yellow-css {
+  .gradient-yellow {
+    color: $yellow-bg-text;
+    background-image: $yellow-gradient;
+  }
+}
+
+@mixin text-yellow-css {
+  @each $name, $color in $yellow-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-yellow-css {
+  @each $name, $color in $yellow-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-yellow-css {
   .accordion-yellow {
     @include accordion-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-dark, $yellow-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-yellow-css {
   .alert-yellow {
     @include alert-color-values($yellow-bg-text, $yellow-bg, $yellow-bg-light);
-  }
-}
-
-@mixin background-yellow-css {
-  .bg-yellow {
-    @include background-color-values($yellow-bg-text, $yellow-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin yellow-utilities-css {
+  @include backgrounds-yellow-css;
+  @include borders-yellow-css;
+  @include gradient-yellow-css;
+  @include text-yellow-css;
+}
+
+@mixin yellow-modifiers-css {
+  @include icons-yellow-css;
   @include accordion-yellow-css;
   @include alert-yellow-css;
-  @include background-yellow-css;
-  @include backgrounds-yellow-css;
   @include badge-yellow-css;
-  @include borders-yellow-css;
   @include button-yellow-css;
   @include card-yellow-css;
   @include dialog-yellow-css;
   @include dropdown-yellow-css;
   @include list-group-yellow-css;
   @include popover-yellow-css;
+}
+
+@mixin yellow-module-css {
+  @include yellow-variables-css;
+  @include yellow-utilities-css;
+  @include yellow-modifiers-css;
 }

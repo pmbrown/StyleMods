@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// Firebrick
+// ----------------------------------------------------------
+$firebrick:                #b22222 !default;
+$firebrick-1:              color-mix(in srgb, var(--firebrick) 29%, #fff) !default;
+$firebrick-2:              color-mix(in srgb, var(--firebrick) 44%, #fff) !default;
+$firebrick-3:              color-mix(in srgb, var(--firebrick) 58%, #fff) !default;
+$firebrick-4:              color-mix(in srgb, var(--firebrick) 72%, #fff) !default;
+$firebrick-5:              color-mix(in srgb, var(--firebrick) 87%, #fff) !default;
+$firebrick-6:              var(--firebrick) !default;
+$firebrick-7:              color-mix(in srgb, var(--firebrick) 85%, #000) !default;
+$firebrick-8:              color-mix(in srgb, var(--firebrick) 72%, #000) !default;
+$firebrick-9:              color-mix(in srgb, var(--firebrick) 60%, #000) !default;
+$firebrick-10:             color-mix(in srgb, var(--firebrick) 50%, #000) !default;
+$firebrick-11:             color-mix(in srgb, var(--firebrick) 44%, #000) !default;
+
+$firebrick-tokens:         ':where(html)' !default;
+
+$firebrick-bg-text:        #fff !default;
+$firebrick-bg:             var(--firebrick) !default;
+$firebrick-bg-dark:        var(--firebrick-7) !default;
+$firebrick-bg-light:       var(--firebrick-5) !default;
+
+$firebrick-gradient:       linear-gradient(180deg, $firebrick-bg-light, $firebrick-bg, $firebrick-bg-dark) !default;
+
+$firebrick-color-values:
+  "firebrick"    $firebrick #fff,
+  "firebrick-1"  $firebrick-1 #000,
+  "firebrick-2"  $firebrick-2 #000,
+  "firebrick-3"  $firebrick-3 #000,
+  "firebrick-4"  $firebrick-4 #000,
+  "firebrick-5"  $firebrick-5 #fff,
+  "firebrick-6"  $firebrick-6 #fff,
+  "firebrick-7"  $firebrick-7 #fff,
+  "firebrick-8"  $firebrick-8 #fff,
+  "firebrick-9"  $firebrick-9 #fff,
+  "firebrick-10" $firebrick-10 #fff,
+  "firebrick-11" $firebrick-11 #fff,
+!default;

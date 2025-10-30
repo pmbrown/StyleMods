@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// Rebeccapurple mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../rebeccapurple" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin rebeccapurple-variables {
+  @each $name, $color in $rebeccapurple-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin rebeccapurple-variables-css {
+  #{$rebeccapurple-tokens} {
+    @include rebeccapurple-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-rebeccapurple-css {
+  @each $name, $color, $text in $rebeccapurple-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-rebeccapurple-css {
+  @each $name, $color in $rebeccapurple-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-rebeccapurple-css {
+  .gradient-rebeccapurple {
+    color: $rebeccapurple-bg-text;
+    background-image: $rebeccapurple-gradient;
+  }
+}
+
+@mixin text-rebeccapurple-css {
+  @each $name, $color in $rebeccapurple-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-rebeccapurple-css {
+  @each $name, $color in $rebeccapurple-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-rebeccapurple-css {
+  .accordion-rebeccapurple {
+    @include accordion-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-dark, $rebeccapurple-bg-light);
+  }
+}
+
+@mixin alert-rebeccapurple-css {
+  .alert-rebeccapurple {
+    @include alert-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-light);
+  }
+}
+
+@mixin badge-rebeccapurple-css {
+  .badge-rebeccapurple {
+    @include badge-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-light);
+  }
+}
+
+@mixin button-rebeccapurple-css {
+  .btn-rebeccapurple {
+    @include button-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-dark, $rebeccapurple-bg-light, $rebeccapurple-bg-light);
+  }
+}
+
+@mixin card-rebeccapurple-css {
+  .card-rebeccapurple {
+    @include card-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-dark, $rebeccapurple-bg-light, $rebeccapurple-bg-light);
+  }
+}
+
+@mixin dialog-rebeccapurple-css {
+  .dialog-rebeccapurple {
+    @include dialog-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-light);
+  } 
+}
+
+@mixin dropdown-rebeccapurple-css {
+  .dropdown-rebeccapurple {
+    @include dropdown-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-dark, $rebeccapurple-bg-light, $rebeccapurple-bg-light);
+  } 
+}
+
+@mixin list-group-rebeccapurple-css {
+  .list-group-rebeccapurple {
+    @include list-group-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-dark, $rebeccapurple-bg-light);
+  }
+}
+
+@mixin popover-rebeccapurple-css {
+  .popover-rebeccapurple {
+    @include popover-color-values($rebeccapurple-bg-text, $rebeccapurple-bg, $rebeccapurple-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin rebeccapurple-utilities-css {
+  @include backgrounds-rebeccapurple-css;
+  @include borders-rebeccapurple-css;
+  @include gradient-rebeccapurple-css;
+  @include text-rebeccapurple-css;
+}
+
+@mixin rebeccapurple-modifiers-css {
+  @include icons-rebeccapurple-css;
+  @include accordion-rebeccapurple-css;
+  @include alert-rebeccapurple-css;
+  @include badge-rebeccapurple-css;
+  @include button-rebeccapurple-css;
+  @include card-rebeccapurple-css;
+  @include dialog-rebeccapurple-css;
+  @include dropdown-rebeccapurple-css;
+  @include list-group-rebeccapurple-css;
+  @include popover-rebeccapurple-css;
+}
+
+@mixin rebeccapurple-module-css {
+  @include rebeccapurple-variables-css;
+  @include rebeccapurple-utilities-css;
+  @include rebeccapurple-modifiers-css;
+}

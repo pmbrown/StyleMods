@@ -10,4 +10,12 @@ $background-color-variable:       var(--bg-col) !default;
     color: $background-text-variable;
     background-color: $background-color-variable;
   }
+  
+  .#{$background-utility}-white {
+    background-color: #fff;
+  }
+  
+  .#{$background-utility}-black {
+    background-color: #000;
+  }
 }

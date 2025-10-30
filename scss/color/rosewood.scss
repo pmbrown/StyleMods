@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Rosewood
 // ----------------------------------------------------------
-// Variable colors
-$rosewood:      #9f6060 !default;
-$rosewood-1:    color-mix(in srgb, var(--rosewood) 45%, white) !default;
-$rosewood-2:    color-mix(in srgb, var(--rosewood) 55%, white) !default;
-$rosewood-3:    color-mix(in srgb, var(--rosewood) 65%, white) !default;
-$rosewood-4:    color-mix(in srgb, var(--rosewood) 73%, white) !default;
-$rosewood-5:    color-mix(in srgb, var(--rosewood) 83%, white) !default;
-$rosewood-6:    var(--rosewood) !default;  
-$rosewood-7:    color-mix(in srgb, var(--rosewood) 92%, black) !default;
-$rosewood-8:    color-mix(in srgb, var(--rosewood) 82%, black) !default;
-$rosewood-9:    color-mix(in srgb, var(--rosewood) 72%, black) !default;
-$rosewood-10:   color-mix(in srgb, var(--rosewood) 62%, black) !default;
-$rosewood-11:   color-mix(in srgb, var(--rosewood) 52%, black) !default;
+$rosewood:              #9f6060 !default;
+$rosewood-1:            color-mix(in srgb, var(--rosewood) 47%, #fff) !default;
+$rosewood-2:            color-mix(in srgb, var(--rosewood) 57%, #fff) !default;
+$rosewood-3:            color-mix(in srgb, var(--rosewood) 68%, #fff) !default;
+$rosewood-4:            color-mix(in srgb, var(--rosewood) 80%, #fff) !default;
+$rosewood-5:            color-mix(in srgb, var(--rosewood) 90%, #fff) !default;
+$rosewood-6:            var(--rosewood) !default;  
+$rosewood-7:            color-mix(in srgb, var(--rosewood) 92%, #000) !default;
+$rosewood-8:            color-mix(in srgb, var(--rosewood) 82%, #000) !default;
+$rosewood-9:            color-mix(in srgb, var(--rosewood) 72%, #000) !default;
+$rosewood-10:           color-mix(in srgb, var(--rosewood) 62%, #000) !default;
+$rosewood-11:           color-mix(in srgb, var(--rosewood) 54%, #000) !default;
 
-// Tokens style
 $rosewood-tokens:       ':where(html)' !default;
 
-// Utility colors
 $rosewood-bg-text:      #fff !default;
 $rosewood-bg:           var(--rosewood-6) !default;
 $rosewood-bg-dark:      var(--rosewood-7) !default;
 $rosewood-bg-light:     var(--rosewood-5) !default;
 
-// Background text colors
-$rosewood-1-bg-text:      #000 !default;
-$rosewood-2-bg-text:      #000 !default;
-$rosewood-3-bg-text:      #000 !default;
-$rosewood-4-bg-text:      #000 !default;
-$rosewood-5-bg-text:      #000 !default;
-$rosewood-6-bg-text:      #fff !default;
-$rosewood-7-bg-text:      #fff !default;
-$rosewood-8-bg-text:      #fff !default;
-$rosewood-9-bg-text:      #fff !default;
-$rosewood-10-bg-text:     #fff !default;
-$rosewood-11-bg-text:     #fff !default;
+$rosewood-gradient:     linear-gradient(180deg, $rosewood-bg-light, $rosewood-bg, $rosewood-bg-dark) !default;
 
-// Background color values
-$rosewood-backgrounds:
-  "rosewood"    $rosewood-bg-text var(--rosewood),
-  "rosewood-1"  $rosewood-1-bg-text var(--rosewood-1),
-  "rosewood-2"  $rosewood-2-bg-text var(--rosewood-2),
-  "rosewood-3"  $rosewood-3-bg-text var(--rosewood-3),
-  "rosewood-4"  $rosewood-4-bg-text var(--rosewood-4),
-  "rosewood-5"  $rosewood-5-bg-text var(--rosewood-5),
-  "rosewood-6"  $rosewood-6-bg-text var(--rosewood-6),
-  "rosewood-7"  $rosewood-7-bg-text var(--rosewood-7),
-  "rosewood-8"  $rosewood-8-bg-text var(--rosewood-8),
-  "rosewood-9"  $rosewood-9-bg-text var(--rosewood-9),
-  "rosewood-10" $rosewood-10-bg-text var(--rosewood-10),
-  "rosewood-11" $rosewood-11-bg-text var(--rosewood-11)
-; //
-
-// Variables tokens map
-$rosewood-token-values: (
-  "rosewood": $rosewood,
-  "rosewood-1": $rosewood-1,
-  "rosewood-2": $rosewood-2,
-  "rosewood-3": $rosewood-3,
-  "rosewood-4": $rosewood-4,
-  "rosewood-5": $rosewood-5,
-  "rosewood-6": $rosewood-6,
-  "rosewood-7": $rosewood-7,
-  "rosewood-8": $rosewood-8,
-  "rosewood-9": $rosewood-9,
-  "rosewood-10": $rosewood-10,
-  "rosewood-11": $rosewood-11,
-) !default;
-
-// Variables mixins
-@mixin rosewood-variables {
-  @each $name, $value in $rosewood-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin rosewood-variables-css {
-  #{$rosewood-tokens} {
-    @include rosewood-variables;
-  }
-}
+$rosewood-color-values:
+  "rosewood"    $rosewood #fff,
+  "rosewood-1"  $rosewood-1 #000,
+  "rosewood-2"  $rosewood-2 #000,
+  "rosewood-3"  $rosewood-3 #000,
+  "rosewood-4"  $rosewood-4 #000,
+  "rosewood-5"  $rosewood-5 #000,
+  "rosewood-6"  $rosewood-6 #fff,
+  "rosewood-7"  $rosewood-7 #fff,
+  "rosewood-8"  $rosewood-8 #fff,
+  "rosewood-9"  $rosewood-9 #fff,
+  "rosewood-10" $rosewood-10 #fff,
+  "rosewood-11" $rosewood-11 #fff,
+!default;

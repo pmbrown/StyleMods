@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// cadetsteel mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../cadetsteel" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin cadetsteel-variables {
+  @each $name, $color in $cadetsteel-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin cadetsteel-variables-css {
+  #{$cadetsteel-tokens} {
+    @include cadetsteel-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-cadetsteel-css {
+  @each $name, $color, $text in $cadetsteel-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-cadetsteel-css {
+  @each $name, $color in $cadetsteel-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-cadetsteel-css {
+  .gradient-cadetsteel {
+    color: $cadetsteel-bg-text;
+    background-image: $cadetsteel-gradient;
+  }
+}
+
+@mixin text-cadetsteel-css {
+  @each $name, $color in $cadetsteel-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-cadetsteel-css {
+  @each $name, $color in $cadetsteel-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-cadetsteel-css {
+  .accordion-cadetsteel {
+    @include accordion-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-dark, $cadetsteel-bg-light);
+  }
+}
+
+@mixin alert-cadetsteel-css {
+  .alert-cadetsteel {
+    @include alert-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-light);
+  }
+}
+
+@mixin badge-cadetsteel-css {
+  .badge-cadetsteel {
+    @include badge-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-light);
+  }
+}
+
+@mixin button-cadetsteel-css {
+  .btn-cadetsteel {
+    @include button-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-dark, $cadetsteel-bg-light, $cadetsteel-bg-light);
+  }
+}
+
+@mixin card-cadetsteel-css {
+  .card-cadetsteel {
+    @include card-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-dark, $cadetsteel-bg-light, $cadetsteel-bg-light);
+  }
+}
+
+@mixin dialog-cadetsteel-css {
+  .dialog-cadetsteel {
+    @include dialog-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-light);
+  } 
+}
+
+@mixin dropdown-cadetsteel-css {
+  .dropdown-cadetsteel {
+    @include dropdown-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-dark, $cadetsteel-bg-light, $cadetsteel-bg-light);
+  } 
+}
+
+@mixin list-group-cadetsteel-css {
+  .list-group-cadetsteel {
+    @include list-group-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-dark, $cadetsteel-bg-light);
+  }
+}
+
+@mixin popover-cadetsteel-css {
+  .popover-cadetsteel {
+    @include popover-color-values($cadetsteel-bg-text, $cadetsteel-bg, $cadetsteel-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin cadetsteel-utilities-css {
+  @include backgrounds-cadetsteel-css;
+  @include borders-cadetsteel-css;
+  @include gradient-cadetsteel-css;
+  @include text-cadetsteel-css;
+}
+
+@mixin cadetsteel-modifiers-css {
+  @include icons-cadetsteel-css;
+  @include accordion-cadetsteel-css;
+  @include alert-cadetsteel-css;
+  @include badge-cadetsteel-css;
+  @include button-cadetsteel-css;
+  @include card-cadetsteel-css;
+  @include dialog-cadetsteel-css;
+  @include dropdown-cadetsteel-css;
+  @include list-group-cadetsteel-css;
+  @include popover-cadetsteel-css;
+}
+
+@mixin cadetsteel-module-css {
+  @include cadetsteel-variables-css;
+  @include cadetsteel-utilities-css;
+  @include cadetsteel-modifiers-css;
+}

@@ -2,7 +2,6 @@
 // All colors
 // ----------------------------------------------------------
 @use "surface" as *;
-@use "gray" as *;
 @use "blue" as *;
 @use "green" as *;
 @use "red" as *;
@@ -11,36 +10,61 @@
 @use "yellow" as *;
 @use "pink" as *;
 @use "purple" as *;
-@use "olive" as *;
-@use "tan" as *;
-@use "rosewood" as *;
 @use "steelblue" as *;
+@use "firebrick" as *;
+@use "seagreen" as *;
+@use "darkcoral" as *;
+@use "cadetsteel" as *;
+@use "lemon" as *;
+@use "rebeccapurple" as *;
+@use "rosypink" as *;
+@use "tan" as *;
+@use "olive" as *;
+@use "rosewood" as *;
+@use "gray" as *;
 @use "semantic" as *;
 @use "theme" as *;
-@use "utilities" as *;
+@use "mixins" as *;
 
 $color-tokens:  ':where(html)' !default;
 
+// ----------------------------------------------------------
+// Variables
+// ----------------------------------------------------------
 @mixin all-primary-color-variables {
   @include blue-variables;
   @include red-variables;
   @include green-variables;
   @include orange-variables;
   @include cyan-variables;
-  @include gray-variables;
   @include yellow-variables;
   @include purple-variables;
   @include pink-variables;
-  @include olive-variables;
-  @include tan-variables;
-  @include rosewood-variables;
   @include steelblue-variables;
+  @include firebrick-variables;
+  @include seagreen-variables;
+  @include darkcoral-variables;
+  @include cadetsteel-variables;
+  @include lemon-variables;
+  @include rebeccapurple-variables;
+  @include rosypink-variables;  
+  @include tan-variables;
+  @include olive-variables;
+  @include rosewood-variables;
+  @include gray-variables;
+}
+
+@mixin all-primary-colors-variables-css {
+  #{$color-tokens} {
+    @include primary-colors-variables;
+  }
 }
 
 @mixin all-color-variables {
   @include surface-variables;
-  @include all-primary-color-variables;
-  @include all-theme-variables;
+  @include primary-color-variables;
+  @include theme-variables;
+  @include semantic-variables;
 }
 
 @mixin all-color-variables-css {
@@ -49,119 +73,70 @@ $color-tokens:  ':where(html)' !default;
   }
 }
 
+// ----------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------
+@mixin all-primary-utilities-css {
+  @include blue-utilities-css;
+  @include red-utilities-css;
+  @include green-utilities-css;
+  @include orange-utilities-css;
+  @include cyan-utilities-css;  
+  @include yellow-utilities-css;
+  @include purple-utilities-css;
+  @include pink-utilities-css;
+  @include steelblue-utilities-css;
+  @include firebrick-utilities-css;
+  @include seagreen-utilities-css;
+  @include darkcoral-utilities-css;
+  @include cadetsteel-utilities-css;
+  @include lemon-utilities-css;
+  @include rebeccapurple-utilities-css;
+  @include rosypink-utilities-css;
+  @include tan-utilities-css;
+  @include olive-utilities-css;
+  @include rosewood-utilities-css;
+  @include gray-utilities-css;
+}
+
 @mixin all-color-utilities-css {
   @include surface-utilities-css;
-  @include blue-utilities-css;
-  @include red-utilities-css;
-  @include green-utilities-css;
-  @include orange-utilities-css;
-  @include cyan-utilities-css;
-  @include gray-utilities-css;
-  @include yellow-utilities-css;
-  @include purple-utilities-css;
-  @include pink-utilities-css;
-  @include olive-utilities-css;
-  @include tan-utilities-css;
-  @include rosewood-utilities-css;
-  @include steelblue-utilities-css;
-}
-
-// Variables, utilities
-@mixin all-color-css {
-  @include all-color-variables-css;
-  @include all-color-utilities-css;
-}
-
-// Modules
-@mixin surface-module-css {
-  @include surface-variables-css;
-  @include surface-utilities-css;
-}
-
-@mixin blue-module-css {
-  @include blue-variables-css;
-  @include blue-utilities-css;
-}
-
-@mixin red-module-css {
-  @include red-variables-css;
-  @include red-utilities-css;
-}
-
-@mixin green-module-css {
-  @include green-variables-css;
-  @include green-utilities-css;
-}
-
-@mixin orange-module-css {
-  @include orange-variables-css;
-  @include orange-utilities-css;
-}
-
-@mixin cyan-module-css {
-  @include cyan-variables-css;
-  @include cyan-utilities-css;
-}
-
-@mixin gray-module-css {
-  @include gray-variables-css;
-  @include gray-utilities-css;
-}
-
-@mixin yellow-module-css {
-  @include yellow-variables-css;
-  @include yellow-utilities-css;
-}
-
-@mixin purple-module-css {
-  @include purple-variables-css;
-  @include purple-utilities-css;
-}
-
-@mixin pink-module-css {
-  @include pink-variables-css;
-  @include pink-utilities-css;
-}
-
-@mixin olive-module-css {
-  @include olive-variables-css;
-  @include olive-utilities-css;
-}
-
-@mixin tan-module-css {
-  @include tan-variables-css;
-  @include tan-utilities-css;
-}
-
-@mixin rosewood-module-css {
-  @include rosewood-variables-css;
-  @include rosewood-utilities-css;
-}
-
-@mixin steelblue-module-css {
-  @include steelblue-variables-css;
-  @include steelblue-utilities-css;
-}
-
-@mixin semantic-module-css {
-  @include semantic-variables-css;
+  @include all-primary-utilities-css;
   @include semantic-utilities-css;
 }
 
-@mixin all-color-modules-css {
-  @include surface-module-css;
-  @include blue-module-css;
-  @include red-module-css;
-  @include green-module-css;
-  @include orange-module-css;
-  @include cyan-module-css;
-  @include gray-module-css;
-  @include yellow-module-css;
-  @include purple-module-css;
-  @include pink-module-css;
-  @include olive-module-css;
-  @include tan-module-css;
-  @include rosewood-module-css;
-  @include steelblue-module-css;
-  @include semantic-module-css;
+@mixin all-primary-modifiers-css {
+  @include blue-modifiers-css;
+  @include red-modifiers-css;
+  @include green-modifiers-css;
+  @include orange-modifiers-css;
+  @include cyan-modifiers-css;  
+  @include yellow-modifiers-css;
+  @include purple-modifiers-css;
+  @include pink-modifiers-css;
+  @include steelblue-modifiers-css;
+  @include firebrick-modifiers-css;
+  @include seagreen-modifiers-css;
+  @include darkcoral-modifiers-css;
+  @include cadetsteel-modifiers-css;
+  @include lemon-modifiers-css;
+  @include rebeccapurple-modifiers-css;
+  @include rosypink-modifiers-css;
+  @include tan-modifiers-css;
+  @include olive-modifiers-css;
+  @include rosewood-modifiers-css;
+  @include gray-modifiers-css;
+  @include semantic-modifiers-css;
+}
+
+@mixin all-color-modifiers-css {
+  @include all-primary-modifiers-css;
+  @include semantic-modifiers-css;
+}
+
+// Variables, utilities, modifiers
+@mixin all-colors-css {
+  @include all-color-variables-css;
+  @include all-color-utilities-css;
+  @include all-color-modifiers-css;
 }

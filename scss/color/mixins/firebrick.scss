@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// Firebrick mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../firebrick" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin firebrick-variables {
+  @each $name, $color in $firebrick-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin firebrick-variables-css {
+  #{$firebrick-tokens} {
+    @include firebrick-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-firebrick-css {
+  @each $name, $color, $text in $firebrick-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-firebrick-css {
+  @each $name, $color in $firebrick-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-firebrick-css {
+  .gradient-firebrick {
+    color: $firebrick-bg-text;
+    background-image: $firebrick-gradient;
+  }
+}
+
+@mixin text-firebrick-css {
+  @each $name, $color in $firebrick-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-firebrick-css {
+  @each $name, $color in $firebrick-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-firebrick-css {
+  .accordion-firebrick {
+    @include accordion-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-dark, $firebrick-bg-light);
+  }
+}
+
+@mixin alert-firebrick-css {
+  .alert-firebrick {
+    @include alert-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-light);
+  }
+}
+
+@mixin badge-firebrick-css {
+  .badge-firebrick {
+    @include badge-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-light);
+  }
+}
+
+@mixin button-firebrick-css {
+  .btn-firebrick {
+    @include button-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-dark, $firebrick-bg-light, $firebrick-bg-light);
+  }
+}
+
+@mixin card-firebrick-css {
+  .card-firebrick {
+    @include card-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-dark, $firebrick-bg-light, $firebrick-bg-light);
+  }
+}
+
+@mixin dialog-firebrick-css {
+  .dialog-firebrick {
+    @include dialog-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-light);
+  } 
+}
+
+@mixin dropdown-firebrick-css {
+  .dropdown-firebrick {
+    @include dropdown-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-dark, $firebrick-bg-light, $firebrick-bg-light);
+  } 
+}
+
+@mixin list-group-firebrick-css {
+  .list-group-firebrick {
+    @include list-group-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-dark, $firebrick-bg-light);
+  }
+}
+
+@mixin popover-firebrick-css {
+  .popover-firebrick {
+    @include popover-color-values($firebrick-bg-text, $firebrick-bg, $firebrick-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin firebrick-utilities-css {
+  @include backgrounds-firebrick-css;
+  @include borders-firebrick-css;
+  @include gradient-firebrick-css;
+  @include text-firebrick-css;
+}
+
+@mixin firebrick-modifiers-css {
+  @include icons-firebrick-css;
+  @include accordion-firebrick-css;
+  @include alert-firebrick-css;
+  @include badge-firebrick-css;
+  @include button-firebrick-css;
+  @include card-firebrick-css;
+  @include dialog-firebrick-css;
+  @include dropdown-firebrick-css;
+  @include list-group-firebrick-css;
+  @include popover-firebrick-css;
+}
+
+@mixin firebrick-module-css {
+  @include firebrick-variables-css;
+  @include firebrick-utilities-css;
+  @include firebrick-modifiers-css;
+}

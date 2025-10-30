@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Orange utilities
+// Orange mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../orange" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin orange-variables {
+  @each $name, $color in $orange-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin orange-variables-css {
+  #{$orange-tokens} {
+    @include orange-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-orange-css {
-  @each $name, $color, $background in $orange-backgrounds {
+  @each $name, $color, $text in $orange-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-orange-css {
-  @each $name, $color in $orange-token-values {
+  @each $name, $color in $orange-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-orange-css {
+  .gradient-orange {
+    color: $orange-bg-text;
+    background-image: $orange-gradient;
+  }
+}
+
+@mixin text-orange-css {
+  @each $name, $color in $orange-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-orange-css {
+  @each $name, $color in $orange-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-orange-css {
   .accordion-orange {
     @include accordion-color-values($orange-bg-text, $orange-bg, $orange-bg-dark, $orange-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-orange-css {
   .alert-orange {
     @include alert-color-values($orange-bg-text, $orange-bg, $orange-bg-light);
-  }
-}
-
-@mixin background-orange-css {
-  .bg-orange {
-    @include background-color-values($orange-bg-text, $orange-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin orange-utilities-css {
+  @include backgrounds-orange-css;
+  @include borders-orange-css;
+  @include gradient-orange-css;
+  @include text-orange-css;
+}
+
+@mixin orange-modifiers-css {
+  @include icons-orange-css;
   @include accordion-orange-css;
   @include alert-orange-css;
-  @include background-orange-css;
-  @include backgrounds-orange-css;
   @include badge-orange-css;
-  @include borders-orange-css;
   @include button-orange-css;
   @include card-orange-css;
   @include dialog-orange-css;
   @include dropdown-orange-css;
   @include list-group-orange-css;
   @include popover-orange-css;
+}
+
+@mixin orange-module-css {
+  @include orange-variables-css;
+  @include orange-utilities-css;
+  @include orange-modifiers-css;
 }

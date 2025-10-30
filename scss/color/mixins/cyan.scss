@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Cyan utilities
+// Cyan mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../cyan" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin cyan-variables {
+  @each $name, $color in $cyan-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin cyan-variables-css {
+  #{$cyan-tokens} {
+    @include cyan-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-cyan-css {
-  @each $name, $color, $background in $cyan-backgrounds {
+  @each $name, $color, $text in $cyan-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-cyan-css {
-  @each $name, $color in $cyan-token-values {
+  @each $name, $color in $cyan-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-cyan-css {
+  .gradient-cyan {
+    color: $cyan-bg-text;
+    background-image: $cyan-gradient;
+  }
+}
+
+@mixin text-cyan-css {
+  @each $name, $color in $cyan-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-cyan-css {
+  @each $name, $color in $cyan-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-cyan-css {
   .accordion-cyan {
     @include accordion-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-dark, $cyan-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-cyan-css {
   .alert-cyan {
     @include alert-color-values($cyan-bg-text, $cyan-bg, $cyan-bg-light);
-  }
-}
-
-@mixin background-cyan-css {
-  .bg-cyan {
-    @include background-color-values($cyan-bg-text, $cyan-bg);
   }
 }
 
@@ -84,16 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin cyan-utilities-css {
+  @include backgrounds-cyan-css;
+  @include borders-cyan-css;
+  @include gradient-cyan-css;
+  @include text-cyan-css;
+}
+
+@mixin cyan-modifiers-css {
+  @include icons-cyan-css;
   @include accordion-cyan-css;
   @include alert-cyan-css;
-  @include background-cyan-css;
-  @include backgrounds-cyan-css;
   @include badge-cyan-css;
-  @include borders-cyan-css;
   @include button-cyan-css;
   @include card-cyan-css;
   @include dialog-cyan-css;
+  @include dropdown-cyan-css;
   @include list-group-cyan-css;
   @include popover-cyan-css;
+}
+
+@mixin cyan-module-css {
+  @include cyan-variables-css;
+  @include cyan-utilities-css;
+  @include cyan-modifiers-css;
 }

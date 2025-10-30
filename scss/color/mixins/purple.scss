@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Purple utilities
+// Purple mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../purple" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin purple-variables {
+  @each $name, $color in $purple-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin purple-variables-css {
+  #{$purple-tokens} {
+    @include purple-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-purple-css {
-  @each $name, $color, $background in $purple-backgrounds {
+  @each $name, $color, $text in $purple-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-purple-css {
-  @each $name, $color in $purple-token-values {
+  @each $name, $color in $purple-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-purple-css {
+  .gradient-purple {
+    color: $purple-bg-text;
+    background-image: $purple-gradient;
+  }
+}
+
+@mixin text-purple-css {
+  @each $name, $color in $purple-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-purple-css {
+  @each $name, $color in $purple-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-purple-css {
   .accordion-purple {
     @include accordion-color-values($purple-bg-text, $purple-bg, $purple-bg-dark, $purple-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-purple-css {
   .alert-purple {
     @include alert-color-values($purple-bg-text, $purple-bg, $purple-bg-light);
-  }
-}
-
-@mixin background-purple-css {
-  .bg-purple {
-    @include background-color-values($purple-bg-text, $purple-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin purple-utilities-css {
+  @include backgrounds-purple-css;
+  @include borders-purple-css;
+  @include gradient-purple-css;
+  @include text-purple-css;
+}
+
+@mixin purple-modifiers-css {
+  @include icons-purple-css;
   @include accordion-purple-css;
   @include alert-purple-css;
-  @include background-purple-css;
-  @include backgrounds-purple-css;
   @include badge-purple-css;
-  @include borders-purple-css;
   @include button-purple-css;
   @include card-purple-css;
   @include dialog-purple-css;
   @include dropdown-purple-css;
   @include list-group-purple-css;
   @include popover-purple-css;
+}
+
+@mixin purple-module-css {
+  @include purple-variables-css;
+  @include purple-utilities-css;
+  @include purple-modifiers-css;
 }

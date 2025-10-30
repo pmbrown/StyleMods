@@ -1,0 +1,210 @@
+// ---------------------------------------------------------- 
+// Semantic utilities
+// ----------------------------------------------------------
+@use "../semantic" as *;
+
+// ----------------------------------------------------------
+// Variables
+// ----------------------------------------------------------
+@mixin semantic-variables {
+  @each $name, $color in $semantic-token-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin semantic-variables-css {
+  #{$semantic-tokens} {
+    @include semantic-variables;
+  }
+}
+
+// ----------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------
+@mixin semantic-backgrounds-css {
+  @each $name, $text, $background in $semantic-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: $background;
+    }
+  }
+}
+
+@mixin semantic-borders-css {
+  @each $name, $color in $semantic-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin semantic-gradients-css {
+  @each $name, $text, $background, $darken, $lighten, $gradient in $semantic-color-values {
+    .gradient-#{$name} {
+      color: $text;
+      background-image: $gradient;
+    }
+  }
+}
+
+// ----------------------------------------------------------
+// Modifiers
+// ----------------------------------------------------------
+@mixin semantic-accordions-css {
+  @each $name, $color, $background, $focus, $border in $semantic-color-values {
+    .accordion-#{$name} {
+      --summary-text: #{$color};
+      --ico: #{$color};
+      --summary-bg: #{$background};
+      --summary-focus: #{$focus};
+      --accordion-bd-color: #{$border};
+    }
+  }
+}
+
+@mixin semantic-alerts-css {
+  @each $name, $color, $background, $border in $semantic-color-values {
+    .alert-#{$name} {
+      --alert-text: #{$color};
+      --ico: #{$color};
+      --link: #{$color};
+      --visited: #{$color};
+      --hover: #{$color};
+      --alert-bg: #{$background};
+      --alert-bd-color: #{$border};
+    }
+  }
+}
+
+@mixin semantic-badges-css {
+  @each $name, $color, $background, $border in $semantic-color-values {
+    .badge-#{$name} {
+      --badge-text: #{$color};
+      --ico: #{$color};
+      --badge-bg: #{$background};
+      --badge-bd-color: #{$border};
+    }
+  }
+}
+
+@mixin semantic-buttons-css {
+  @each $name, $color, $background, $hover, $border in $semantic-color-values {
+    .btn-#{$name} {
+      --btn-text: #{$color};
+      --ico: #{$color};
+      --btn-bg: #{$background};
+      --btn-bd-color: #{$border};
+      --btn-hover: #{$hover};
+      --focus-color: #{$border};
+    }
+  }
+}
+
+@mixin semantic-cards-css {
+  @each $name, $color, $background, $hover, $border in $semantic-color-values {
+    .card-#{$name} {
+      --card-text: #{$color};
+      --ico: #{$color};
+      --link: #{$color};
+      --visited: #{$color};
+      --hover: #{$color};
+      --card-bg: #{$background};
+      --card-text-hover: #{$color};
+      --card-hover: #{$hover};
+      --card-bd-color: #{$border};
+      --card-focus-color: #{$border};
+      --card-title-bg: #{$background};
+    }
+  }
+}
+
+@mixin semantic-dialogs-css {
+  @each $name, $color, $background, $border in $semantic-color-values {
+    .dialog-#{$name} {
+      --dialog-text: #{$color};
+      --ico: #{$color};
+      --link: #{$color};
+      --visited: #{$color};
+      --hover: #{$color};
+      --dialog-bg: #{$background};
+      --dialog-bd-color: #{$border};
+      --dialog-title-bg: #{$background};
+    }
+  }
+}
+
+@mixin semantic-dropdowns-css {
+  @each $name, $color, $background, $hover, $border in $semantic-color-values {
+    .dropdown-#{$name} {
+      --dropdown-text: #{$color};
+      --dropdown-btn-text: #{$color};
+      --dropdown-ico: #{$color};
+      --ico: #{$color};
+      --link: #{$color};
+      --visited: #{$color};
+      --hover: #{$color};
+      --dropdown-bg: #{$background};
+      --dropdown-btn-bg: #{$background};
+      --dropdown-link-hover: #{$hover};
+      --dropdown-btn-hover: #{$hover};
+      --dropdown-bd-color: #{$border};
+      --dropdown-focus-color: #{$border};
+    }
+  }
+}
+
+@mixin semantic-list-groups-css {
+  @each $name, $color, $background, $hover, $border in $semantic-color-values {
+    .list-group-#{$name} {
+      --list-group-text: #{$color};
+      --ico: #{$color};
+      --link: #{$color};
+      --visited: #{$color};
+      --hover: #{$color};
+      --list-group-bg: #{$background};
+      --list-group-dt-bg: #{$background};
+      --list-group-hover: #{$hover};
+      --list-group-bd-color: #{$border};
+    }
+  }
+}
+
+@mixin semantic-popovers-css {
+  @each $name, $color, $background, $border in $semantic-color-values {
+    .popover-#{$name} {
+      --popover-text: #{$color};
+      --ico: #{$color};
+      --link: #{$color};
+      --visited: #{$color};
+      --hover: #{$color};
+      --popover-bg: #{$background};
+      --popover-bd-color: #{$border};
+    }
+  }
+}
+
+// Grouped mixins
+@mixin semantic-utilities-css {
+  @include semantic-backgrounds-css;
+  @include semantic-borders-css;
+  @include semantic-gradients-css;
+}
+
+@mixin semantic-modifiers-css {
+  @include semantic-accordions-css;
+  @include semantic-alerts-css;
+  @include semantic-badges-css;
+  @include semantic-buttons-css;
+  @include semantic-cards-css;
+  @include semantic-dialogs-css;
+  @include semantic-dropdowns-css;
+  @include semantic-list-groups-css;
+  @include semantic-popovers-css;
+}
+
+// All
+@mixin semantic-colors-css {
+  @include semantic-variables-css;
+  @include semantic-utilities-css;
+  @include semantic-modifiers-css;
+}

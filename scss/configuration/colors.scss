@@ -1,0 +1,461 @@
+// ---------------------------------------------------------- 
+// Colors
+// ----------------------------------------------------------
+// Theme colors (variables only)
+$enable-theme-surface:                false !default; // 5 colors
+$enable-theme-surface-palette:        false !default; // 12 colors
+$enable-theme-typography:             false !default;
+$enable-theme-forms-buttons:          false !default;
+$enable-theme-tables:                 false !default;
+$enable-theme-accordions:             false !default;
+$enable-theme-alerts:                 false !default;
+$enable-theme-badges:                 false !default;
+$enable-theme-borders:                false !default;
+$enable-theme-dialogs:                false !default;
+$enable-theme-dropdowns:              false !default;
+$enable-theme-cards:                  false !default;
+$enable-theme-list-groups:            false !default;
+$enable-theme-popovers:               false !default;
+
+// ----------------------------------------------------------
+// Semantic colors
+// ----------------------------------------------------------
+$enable-semantic-variables:           false !default;
+$enable-semantic-utilities:           false !default;
+$enable-semantic-modifiers:           false !default;
+
+// Individual utilities
+$enable-semantic-backgrounds:         false !default;
+$enable-semantic-borders:             false !default;
+$enable-semantic-gradients:           false !default;
+
+// Individual modifiers
+$enable-semantic-accordions:          false !default;
+$enable-semantic-alerts:              false !default;
+$enable-semantic-badges:              false !default;
+$enable-semantic-buttons:             false !default;
+$enable-semantic-dialogs:             false !default;
+$enable-semantic-dropdowns:           false !default;
+$enable-semantic-cards:               false !default;
+$enable-semantic-list-groups:         false !default;
+$enable-semantic-popovers:            false !default;
+
+// ----------------------------------------------------------
+// Surface colors
+// ----------------------------------------------------------
+$enable-surface-variables:            false !default;
+$enable-surface-utilities:            false !default;
+
+// Individual utilities
+$enable-surface-backgrounds:          false !default;
+$enable-surface-borders:              false !default;
+
+// ----------------------------------------------------------
+// Primary colors
+// ----------------------------------------------------------
+// Variables
+$enable-blue-variables:               false !default;
+$enable-red-variables:                false !default;
+$enable-green-variables:              false !default;
+$enable-orange-variables:             false !default;
+$enable-cyan-variables:               false !default;
+$enable-yellow-variables:             false !default;
+$enable-purple-variables:             false !default;
+$enable-pink-variables:               false !default;
+$enable-steelblue-variables:          false !default;
+$enable-firebrick-variables:          false !default;
+$enable-seagreen-variables:           false !default;
+$enable-darkcoral-variables:          false !default;
+$enable-cadetsteel-variables:         false !default;
+$enable-lemon-variables:              false !default;
+$enable-rebeccapurple-variables:      false !default;
+$enable-rosypink-variables:           false !default;
+$enable-olive-variables:              false !default;
+$enable-tan-variables:                false !default;
+$enable-rosewood-variables:           false !default;
+$enable-gray-variables:               false !default;
+
+// Grouped utilities
+$enable-blue-utilities:               false !default;
+$enable-red-utilities:                false !default;
+$enable-green-utilities:              false !default;
+$enable-orange-utilities:             false !default;
+$enable-cyan-utilities:               false !default;
+$enable-yellow-utilities:             false !default;
+$enable-purple-utilities:             false !default;
+$enable-pink-utilities:               false !default;
+$enable-steelblue-utilities:          false !default;
+$enable-firebrick-utilities:          false !default;
+$enable-seagreen-utilities:           false !default;
+$enable-darkcoral-utilities:          false !default;
+$enable-cadetsteel-utilities:         false !default;
+$enable-lemon-utilities:              false !default;
+$enable-rebeccapurple-utilities:      false !default;
+$enable-rosypink-utilities:           false !default;
+$enable-olive-utilities:              false !default;
+$enable-tan-utilities:                false !default;
+$enable-rosewood-utilities:           false !default;
+$enable-gray-utilities:               false !default;
+
+// Grouped modifiers
+$enable-blue-modifiers:               false !default;
+$enable-red-modifiers:                false !default;
+$enable-green-modifiers:              false !default;
+$enable-orange-modifiers:             false !default;
+$enable-cyan-modifiers:               false !default;
+$enable-yellow-modifiers:             false !default;
+$enable-purple-modifiers:             false !default;
+$enable-pink-modifiers:               false !default;
+$enable-steelblue-modifiers:          false !default;
+$enable-firebrick-modifiers:          false !default;
+$enable-seagreen-modifiers:           false !default;
+$enable-darkcoral-modifiers:          false !default;
+$enable-cadetsteel-modifiers:         false !default;
+$enable-lemon-modifiers:              false !default;
+$enable-rebeccapurple-modifiers:      false !default;
+$enable-rosypink-modifiers:           false !default;
+$enable-olive-modifiers:              false !default;
+$enable-tan-modifiers:                false !default;
+$enable-rosewood-modifiers:           false !default;
+$enable-gray-modifiers:               false !default;
+
+// Individual utilities and modifier classes
+// Blue
+$enable-blue-backgrounds:             false !default;
+$enable-blue-borders:                 false !default;
+$enable-blue-gradient:                false !default;
+$enable-blue-text:                    false !default;
+$enable-blue-icons:                   false !default;
+$enable-blue-accordions:              false !default;
+$enable-blue-alerts:                  false !default;
+$enable-blue-badges:                  false !default;
+$enable-blue-buttons:                 false !default;
+$enable-blue-borders:                 false !default;
+$enable-blue-dialogs:                 false !default;
+$enable-blue-dropdowns:               false !default;
+$enable-blue-cards:                   false !default;
+$enable-blue-list-groups:             false !default;
+$enable-blue-popovers:                false !default;
+
+// Red
+$enable-red-backgrounds:              false !default;
+$enable-red-borders:                  false !default;
+$enable-red-gradient:                 false !default;
+$enable-red-text:                     false !default;
+$enable-red-icons:                    false !default;
+$enable-red-accordions:               false !default;
+$enable-red-alerts:                   false !default;
+$enable-red-badges:                   false !default;
+$enable-red-buttons:                  false !default;
+$enable-red-borders:                  false !default;
+$enable-red-dialogs:                  false !default;
+$enable-red-dropdowns:                false !default;
+$enable-red-cards:                    false !default;
+$enable-red-list-groups:              false !default;
+$enable-red-popovers:                 false !default;
+
+// Green
+$enable-green-backgrounds:            false !default;
+$enable-green-borders:                false !default;
+$enable-green-gradient:               false !default;
+$enable-green-text:                   false !default;
+$enable-green-icons:                  false !default;
+$enable-green-accordions:             false !default;
+$enable-green-alerts:                 false !default;
+$enable-green-badges:                 false !default;
+$enable-green-buttons:                false !default;
+$enable-green-borders:                false !default;
+$enable-green-dialogs:                false !default;
+$enable-green-dropdowns:              false !default;
+$enable-green-cards:                  false !default;
+$enable-green-list-groups:            false !default;
+$enable-green-popovers:               false !default;
+
+// Orange
+$enable-orange-backgrounds:           false !default;
+$enable-orange-borders:               false !default;
+$enable-orange-gradient:              false !default;
+$enable-orange-text:                  false !default;
+$enable-orange-icons:                 false !default;
+$enable-orange-accordions:            false !default;
+$enable-orange-alerts:                false !default;
+$enable-orange-badges:                false !default;
+$enable-orange-buttons:               false !default;
+$enable-orange-borders:               false !default;
+$enable-orange-dialogs:               false !default;
+$enable-orange-dropdowns:             false !default;
+$enable-orange-cards:                 false !default;
+$enable-orange-list-groups:           false !default;
+$enable-orange-popovers:              false !default;
+
+// Cyan
+$enable-cyan-backgrounds:             false !default;
+$enable-cyan-borders:                 false !default;
+$enable-cyan-gradient:                false !default;
+$enable-cyan-text:                    false !default;
+$enable-cyan-icons:                   false !default;
+$enable-cyan-accordions:              false !default;
+$enable-cyan-alerts:                  false !default;
+$enable-cyan-badges:                  false !default;
+$enable-cyan-buttons:                 false !default;
+$enable-cyan-borders:                 false !default;
+$enable-cyan-dialogs:                 false !default;
+$enable-cyan-dropdowns:               false !default;
+$enable-cyan-cards:                   false !default;
+$enable-cyan-list-groups:             false !default;
+$enable-cyan-popovers:                false !default;
+
+// Yellow
+$enable-yellow-backgrounds:           false !default;
+$enable-yellow-borders:               false !default;
+$enable-yellow-gradient:              false !default;
+$enable-yellow-text:                  false !default;
+$enable-yellow-icons:                 false !default;
+$enable-yellow-accordions:            false !default;
+$enable-yellow-alerts:                false !default;
+$enable-yellow-badges:                false !default;
+$enable-yellow-buttons:               false !default;
+$enable-yellow-borders:               false !default;
+$enable-yellow-dialogs:               false !default;
+$enable-yellow-dropdowns:             false !default;
+$enable-yellow-cards:                 false !default;
+$enable-yellow-list-groups:           false !default;
+$enable-yellow-popovers:              false !default;
+
+// Purple
+$enable-purple-backgrounds:           false !default;
+$enable-purple-borders:               false !default;
+$enable-purple-gradient:              false !default;
+$enable-purple-text:                  false !default;
+$enable-purple-icons:                 false !default;
+$enable-purple-accordions:            false !default;
+$enable-purple-alerts:                false !default;
+$enable-purple-badges:                false !default;
+$enable-purple-buttons:               false !default;
+$enable-purple-borders:               false !default;
+$enable-purple-dialogs:               false !default;
+$enable-purple-dropdowns:             false !default;
+$enable-purple-cards:                 false !default;
+$enable-purple-list-groups:           false !default;
+$enable-purple-popovers:              false !default;
+
+// Pink
+$enable-pink-backgrounds:             false !default;
+$enable-pink-borders:                 false !default;
+$enable-pink-gradient:                false !default;
+$enable-pink-text:                    false !default;
+$enable-pink-icons:                   false !default;
+$enable-pink-accordions:              false !default;
+$enable-pink-alerts:                  false !default;
+$enable-pink-badges:                  false !default;
+$enable-pink-buttons:                 false !default;
+$enable-pink-borders:                 false !default;
+$enable-pink-dialogs:                 false !default;
+$enable-pink-dropdowns:               false !default;
+$enable-pink-cards:                   false !default;
+$enable-pink-list-groups:             false !default;
+$enable-pink-popovers:                false !default;
+
+// Steelblue
+$enable-steelblue-backgrounds:        false !default;
+$enable-steelblue-borders:            false !default;
+$enable-steelblue-gradient:           false !default;
+$enable-steelblue-text:               false !default;
+$enable-steelblue-icons:              false !default;
+$enable-steelblue-accordions:         false !default;
+$enable-steelblue-alerts:             false !default;
+$enable-steelblue-badges:             false !default;
+$enable-steelblue-buttons:            false !default;
+$enable-steelblue-borders:            false !default;
+$enable-steelblue-dialogs:            false !default;
+$enable-steelblue-dropdowns:          false !default;
+$enable-steelblue-cards:              false !default;
+$enable-steelblue-list-groups:        false !default;
+$enable-steelblue-popovers:           false !default;
+
+// Firebrick
+$enable-firebrick-backgrounds:        false !default;
+$enable-firebrick-borders:            false !default;
+$enable-firebrick-gradient:           false !default;
+$enable-firebrick-text:               false !default;
+$enable-firebrick-icons:              false !default;
+$enable-firebrick-accordions:         false !default;
+$enable-firebrick-alerts:             false !default;
+$enable-firebrick-badges:             false !default;
+$enable-firebrick-buttons:            false !default;
+$enable-firebrick-borders:            false !default;
+$enable-firebrick-dialogs:            false !default;
+$enable-firebrick-dropdowns:          false !default;
+$enable-firebrick-cards:              false !default;
+$enable-firebrick-list-groups:        false !default;
+$enable-firebrick-popovers:           false !default;
+
+// Seagreen
+$enable-seagreen-backgrounds:         false !default;
+$enable-seagreen-borders:             false !default;
+$enable-seagreen-gradient:            false !default;
+$enable-seagreen-text:                false !default;
+$enable-seagreen-icons:               false !default;
+$enable-seagreen-accordions:          false !default;
+$enable-seagreen-alerts:              false !default;
+$enable-seagreen-badges:              false !default;
+$enable-seagreen-buttons:             false !default;
+$enable-seagreen-borders:             false !default;
+$enable-seagreen-dialogs:             false !default;
+$enable-seagreen-dropdowns:           false !default;
+$enable-seagreen-cards:               false !default;
+$enable-seagreen-list-groups:         false !default;
+$enable-seagreen-popovers:            false !default;
+
+// Darkcoral
+$enable-darkcoral-backgrounds:        false !default;
+$enable-darkcoral-borders:            false !default;
+$enable-darkcoral-gradient:           false !default;
+$enable-darkcoral-text:               false !default;
+$enable-darkcoral-icons:              false !default;
+$enable-darkcoral-accordions:         false !default;
+$enable-darkcoral-alerts:             false !default;
+$enable-darkcoral-badges:             false !default;
+$enable-darkcoral-buttons:            false !default;
+$enable-darkcoral-borders:            false !default;
+$enable-darkcoral-dialogs:            false !default;
+$enable-darkcoral-dropdowns:          false !default;
+$enable-darkcoral-cards:              false !default;
+$enable-darkcoral-list-groups:        false !default;
+$enable-darkcoral-popovers:           false !default;
+
+// Cadetsteel
+$enable-cadetsteel-backgrounds:       false !default;
+$enable-cadetsteel-borders:           false !default;
+$enable-cadetsteel-gradient:          false !default;
+$enable-cadetsteel-text:              false !default;
+$enable-cadetsteel-icons:             false !default;
+$enable-cadetsteel-accordions:        false !default;
+$enable-cadetsteel-alerts:            false !default;
+$enable-cadetsteel-badges:            false !default;
+$enable-cadetsteel-buttons:           false !default;
+$enable-cadetsteel-borders:           false !default;
+$enable-cadetsteel-dialogs:           false !default;
+$enable-cadetsteel-dropdowns:         false !default;
+$enable-cadetsteel-cards:             false !default;
+$enable-cadetsteel-list-groups:       false !default;
+$enable-cadetsteel-popovers:          false !default;
+
+// Lemon
+$enable-lemon-backgrounds:            false !default;
+$enable-lemon-borders:                false !default;
+$enable-lemon-gradient:               false !default;
+$enable-lemon-text:                   false !default;
+$enable-lemon-icons:                  false !default;
+$enable-lemon-accordions:             false !default;
+$enable-lemon-alerts:                 false !default;
+$enable-lemon-badges:                 false !default;
+$enable-lemon-buttons:                false !default;
+$enable-lemon-borders:                false !default;
+$enable-lemon-dialogs:                false !default;
+$enable-lemon-dropdowns:              false !default;
+$enable-lemon-cards:                  false !default;
+$enable-lemon-list-groups:            false !default;
+$enable-lemon-popovers:               false !default;
+
+// Rebeccapurple
+$enable-rebeccapurple-backgrounds:    false !default;
+$enable-rebeccapurple-borders:        false !default;
+$enable-rebeccapurple-gradient:       false !default;
+$enable-rebeccapurple-text:           false !default;
+$enable-rebeccapurple-icons:          false !default;
+$enable-rebeccapurple-accordions:     false !default;
+$enable-rebeccapurple-alerts:         false !default;
+$enable-rebeccapurple-badges:         false !default;
+$enable-rebeccapurple-buttons:        false !default;
+$enable-rebeccapurple-borders:        false !default;
+$enable-rebeccapurple-dialogs:        false !default;
+$enable-rebeccapurple-dropdowns:      false !default;
+$enable-rebeccapurple-cards:          false !default;
+$enable-rebeccapurple-list-groups:    false !default;
+$enable-rebeccapurple-popovers:       false !default;
+
+// Rosypink
+$enable-rosypink-backgrounds:         false !default;
+$enable-rosypink-borders:             false !default;
+$enable-rosypink-gradient:            false !default;
+$enable-rosypink-text:                false !default;
+$enable-rosypink-icons:               false !default;
+$enable-rosypink-accordions:          false !default;
+$enable-rosypink-alerts:              false !default;
+$enable-rosypink-badges:              false !default;
+$enable-rosypink-buttons:             false !default;
+$enable-rosypink-borders:             false !default;
+$enable-rosypink-dialogs:             false !default;
+$enable-rosypink-dropdowns:           false !default;
+$enable-rosypink-cards:               false !default;
+$enable-rosypink-list-groups:         false !default;
+$enable-rosypink-popovers:            false !default;
+
+// Tan
+$enable-tan-backgrounds:              false !default;
+$enable-tan-borders:                  false !default;
+$enable-tan-gradient:                 false !default;
+$enable-tan-text:                     false !default;
+$enable-tan-icons:                    false !default;
+$enable-tan-accordions:               false !default;
+$enable-tan-alerts:                   false !default;
+$enable-tan-badges:                   false !default;
+$enable-tan-buttons:                  false !default;
+$enable-tan-borders:                  false !default;
+$enable-tan-dialogs:                  false !default;
+$enable-tan-dropdowns:                false !default;
+$enable-tan-cards:                    false !default;
+$enable-tan-list-groups:              false !default;
+$enable-tan-popovers:                 false !default;
+
+// Olive
+$enable-olive-backgrounds:            false !default;
+$enable-olive-borders:                false !default;
+$enable-olive-gradient:               false !default;
+$enable-olive-text:                   false !default;
+$enable-olive-icons:                  false !default;
+$enable-olive-accordions:             false !default;
+$enable-olive-alerts:                 false !default;
+$enable-olive-badges:                 false !default;
+$enable-olive-buttons:                false !default;
+$enable-olive-borders:                false !default;
+$enable-olive-dialogs:                false !default;
+$enable-olive-dropdowns:              false !default;
+$enable-olive-cards:                  false !default;
+$enable-olive-list-groups:            false !default;
+$enable-olive-popovers:               false !default;
+
+// Rosewood
+$enable-rosewood-backgrounds:         false !default;
+$enable-rosewood-borders:             false !default;
+$enable-rosewood-gradient:            false !default;
+$enable-rosewood-text:                false !default;
+$enable-rosewood-icons:               false !default;
+$enable-rosewood-accordions:          false !default;
+$enable-rosewood-alerts:              false !default;
+$enable-rosewood-badges:              false !default;
+$enable-rosewood-buttons:             false !default;
+$enable-rosewood-borders:             false !default;
+$enable-rosewood-dialogs:             false !default;
+$enable-rosewood-dropdowns:           false !default;
+$enable-rosewood-cards:               false !default;
+$enable-rosewood-list-groups:         false !default;
+$enable-rosewood-popovers:            false !default;
+
+// Gray
+$enable-gray-backgrounds:             false !default;
+$enable-gray-borders:                 false !default;
+$enable-gray-gradient:                false !default;
+$enable-gray-text:                    false !default;
+$enable-gray-icons:                   false !default;
+$enable-gray-accordions:              false !default;
+$enable-gray-alerts:                  false !default;
+$enable-gray-badges:                  false !default;
+$enable-gray-buttons:                 false !default;
+$enable-gray-borders:                 false !default;
+$enable-gray-dialogs:                 false !default;
+$enable-gray-dropdowns:               false !default;
+$enable-gray-cards:                   false !default;
+$enable-gray-list-groups:             false !default;
+$enable-gray-popovers:                false !default;

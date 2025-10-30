@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Gray
 // ----------------------------------------------------------
-// Variable colors
-$gray:      #808080 !default;
-$gray-1:    color-mix(in srgb, var(--gray) 25%, white) !default;
-$gray-2:    color-mix(in srgb, var(--gray) 35%, white) !default;
-$gray-3:    color-mix(in srgb, var(--gray) 55%, white) !default;
-$gray-4:    color-mix(in srgb, var(--gray) 65%, white) !default;
-$gray-5:    color-mix(in srgb, var(--gray) 75%, white) !default;
-$gray-6:    var(--gray) !default;
-$gray-7:    color-mix(in srgb, var(--gray) 80%, black) !default;
-$gray-8:    color-mix(in srgb, var(--gray) 70%, black) !default;
-$gray-9:    color-mix(in srgb, var(--gray) 60%, black) !default;
-$gray-10:   color-mix(in srgb, var(--gray) 50%, black) !default;
-$gray-11:   color-mix(in srgb, var(--gray) 40%, black) !default;
+$gray:              #808080 !default;
+$gray-1:            color-mix(in srgb, var(--gray) 25%, #fff) !default;
+$gray-2:            color-mix(in srgb, var(--gray) 35%, #fff) !default;
+$gray-3:            color-mix(in srgb, var(--gray) 55%, #fff) !default;
+$gray-4:            color-mix(in srgb, var(--gray) 65%, #fff) !default;
+$gray-5:            color-mix(in srgb, var(--gray) 75%, #fff) !default;
+$gray-6:            var(--gray) !default;
+$gray-7:            color-mix(in srgb, var(--gray) 80%, #000) !default;
+$gray-8:            color-mix(in srgb, var(--gray) 70%, #000) !default;
+$gray-9:            color-mix(in srgb, var(--gray) 60%, #000) !default;
+$gray-10:           color-mix(in srgb, var(--gray) 50%, #000) !default;
+$gray-11:           color-mix(in srgb, var(--gray) 40%, #000) !default;
 
-// Tokens style
 $gray-tokens:       ':where(html)' !default;
 
-// Utility colors
 $gray-bg-text:      #000 !default;
-$gray-bg:           var(--gray-2) !default;
-$gray-bg-dark:      var(--gray-3) !default;
-$gray-bg-light:     var(--gray-1) !default;
+$gray-bg:           var(--gray-6) !default;
+$gray-bg-dark:      var(--gray-7) !default;
+$gray-bg-light:     var(--gray-5) !default;
 
-// Background text colors
-$gray-1-bg-text:      #000 !default;
-$gray-2-bg-text:      #000 !default;
-$gray-3-bg-text:      #000 !default;
-$gray-4-bg-text:      #000 !default;
-$gray-5-bg-text:      #000 !default;
-$gray-6-bg-text:      #000 !default;
-$gray-7-bg-text:      #fff !default;
-$gray-8-bg-text:      #fff !default;
-$gray-9-bg-text:      #fff !default;
-$gray-10-bg-text:     #fff !default;
-$gray-11-bg-text:     #fff !default;
+$gray-gradient:     linear-gradient(180deg, $gray-bg-light, $gray-bg, $gray-bg-dark) !default;
 
-// Background color values
-$gray-backgrounds:
-  "gray"    $gray-bg-text var(--gray),
-  "gray-1"  $gray-1-bg-text var(--gray-1),
-  "gray-2"  $gray-2-bg-text var(--gray-2),
-  "gray-3"  $gray-3-bg-text var(--gray-3),
-  "gray-4"  $gray-4-bg-text var(--gray-4),
-  "gray-5"  $gray-5-bg-text var(--gray-5),
-  "gray-6"  $gray-6-bg-text var(--gray-6),
-  "gray-7"  $gray-7-bg-text var(--gray-7),
-  "gray-8"  $gray-8-bg-text var(--gray-8),
-  "gray-9"  $gray-9-bg-text var(--gray-9),
-  "gray-10" $gray-10-bg-text var(--gray-10),
-  "gray-11" $gray-11-bg-text var(--gray-11)
-; //
-
-// Variables tokens map
-$gray-token-values: (
-  "gray": $gray,
-  "gray-1": $gray-1,
-  "gray-2": $gray-2,
-  "gray-3": $gray-3,
-  "gray-4": $gray-4,
-  "gray-5": $gray-5,
-  "gray-6": $gray-6,
-  "gray-7": $gray-7,
-  "gray-8": $gray-8,
-  "gray-9": $gray-9,
-  "gray-10": $gray-10,
-  "gray-11": $gray-11,
-) !default;
-
-// Variables mixins
-@mixin gray-variables {
-  @each $name, $value in $gray-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin gray-variables-css {
-  #{$gray-tokens} {
-    @include gray-variables;
-  }
-}
+$gray-color-values:
+  "gray"    $gray #000,
+  "gray-1"  $gray-1 #000,
+  "gray-2"  $gray-2 #000,
+  "gray-3"  $gray-3 #000,
+  "gray-4"  $gray-4 #000,
+  "gray-5"  $gray-5 #000,
+  "gray-6"  $gray-6 #000,
+  "gray-7"  $gray-7 #fff,
+  "gray-8"  $gray-8 #fff,
+  "gray-9"  $gray-9 #fff,
+  "gray-10" $gray-10 #fff,
+  "gray-11" $gray-11 #fff,
+!default;

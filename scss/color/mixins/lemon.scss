@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// Lemon mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../lemon" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin lemon-variables {
+  @each $name, $color in $lemon-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin lemon-variables-css {
+  #{$lemon-tokens} {
+    @include lemon-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-lemon-css {
+  @each $name, $color, $text in $lemon-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-lemon-css {
+  @each $name, $color in $lemon-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-lemon-css {
+  .gradient-lemon {
+    color: $lemon-bg-text;
+    background-image: $lemon-gradient;
+  }
+}
+
+@mixin text-lemon-css {
+  @each $name, $color in $lemon-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-lemon-css {
+  @each $name, $color in $lemon-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-lemon-css {
+  .accordion-lemon {
+    @include accordion-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-dark, $lemon-bg-light);
+  }
+}
+
+@mixin alert-lemon-css {
+  .alert-lemon {
+    @include alert-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-light);
+  }
+}
+
+@mixin badge-lemon-css {
+  .badge-lemon {
+    @include badge-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-light);
+  }
+}
+
+@mixin button-lemon-css {
+  .btn-lemon {
+    @include button-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-dark, $lemon-bg-light, $lemon-bg-light);
+  }
+}
+
+@mixin card-lemon-css {
+  .card-lemon {
+    @include card-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-dark, $lemon-bg-light, $lemon-bg-light);
+  }
+}
+
+@mixin dialog-lemon-css {
+  .dialog-lemon {
+    @include dialog-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-light);
+  } 
+}
+
+@mixin dropdown-lemon-css {
+  .dropdown-lemon {
+    @include dropdown-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-dark, $lemon-bg-light, $lemon-bg-light);
+  } 
+}
+
+@mixin list-group-lemon-css {
+  .list-group-lemon {
+    @include list-group-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-dark, $lemon-bg-light);
+  }
+}
+
+@mixin popover-lemon-css {
+  .popover-lemon {
+    @include popover-color-values($lemon-bg-text, $lemon-bg, $lemon-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin lemon-utilities-css {
+  @include backgrounds-lemon-css;
+  @include borders-lemon-css;
+  @include gradient-lemon-css;
+  @include text-lemon-css;
+}
+
+@mixin lemon-modifiers-css {
+  @include icons-lemon-css;
+  @include accordion-lemon-css;
+  @include alert-lemon-css;
+  @include badge-lemon-css;
+  @include button-lemon-css;
+  @include card-lemon-css;
+  @include dialog-lemon-css;
+  @include dropdown-lemon-css;
+  @include list-group-lemon-css;
+  @include popover-lemon-css;
+}
+
+@mixin lemon-module-css {
+  @include lemon-variables-css;
+  @include lemon-utilities-css;
+  @include lemon-modifiers-css;
+}

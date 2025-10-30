@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Orange
 // ----------------------------------------------------------
-// Variable colors
-$orange:      #ff8c00 !default;
-$orange-1:    color-mix(in srgb, var(--orange) 45%, white) !default;
-$orange-2:    color-mix(in srgb, var(--orange) 55%, white) !default;
-$orange-3:    color-mix(in srgb, var(--orange) 65%, white) !default;
-$orange-4:    color-mix(in srgb, var(--orange) 75%, white) !default;
-$orange-5:    color-mix(in srgb, var(--orange) 85%, white) !default;
-$orange-6:    var(--orange) !default;  
-$orange-7:    color-mix(in srgb, var(--orange) 92%, black) !default;
-$orange-8:    color-mix(in srgb, var(--orange) 82%, black) !default;
-$orange-9:    color-mix(in srgb, var(--orange) 70%, black) !default;
-$orange-10:   color-mix(in srgb, var(--orange) 62%, black) !default;
-$orange-11:   color-mix(in srgb, var(--orange) 52%, black) !default;
+$orange:              #ff8c00 !default;
+$orange-1:            color-mix(in srgb, var(--orange) 35%, #fff) !default;
+$orange-2:            color-mix(in srgb, var(--orange) 50%, #fff) !default;
+$orange-3:            color-mix(in srgb, var(--orange) 60%, #fff) !default;
+$orange-4:            color-mix(in srgb, var(--orange) 70%, #fff) !default;
+$orange-5:            color-mix(in srgb, var(--orange) 85%, #fff) !default;
+$orange-6:            var(--orange) !default;
+$orange-7:            color-mix(in srgb, var(--orange) 85%, #000) !default;
+$orange-8:            color-mix(in srgb, var(--orange) 75%, #000) !default;
+$orange-9:            color-mix(in srgb, var(--orange) 65%, #000) !default;
+$orange-10:           color-mix(in srgb, var(--orange) 55%, #000) !default;
+$orange-11:           color-mix(in srgb, var(--orange) 45%, #000) !default;
 
-// Tokens style
 $orange-tokens:       ':where(html)' !default;
 
-// Utility colors
 $orange-bg-text:      #000 !default;
 $orange-bg:           var(--orange-6) !default;
 $orange-bg-dark:      var(--orange-7) !default;
 $orange-bg-light:     var(--orange-5) !default;
 
-// Background text colors
-$orange-1-bg-text:      #000 !default;
-$orange-2-bg-text:      #000 !default;
-$orange-3-bg-text:      #000 !default;
-$orange-4-bg-text:      #000 !default;
-$orange-5-bg-text:      #000 !default;
-$orange-6-bg-text:      #000 !default;
-$orange-7-bg-text:      #000 !default;
-$orange-8-bg-text:      #000 !default;
-$orange-9-bg-text:      #fff !default;
-$orange-10-bg-text:     #fff !default;
-$orange-11-bg-text:     #fff !default;
+$orange-gradient:     linear-gradient(180deg, $orange-bg-light, $orange-bg, $orange-bg-dark) !default;
 
-// Background color values
-$orange-backgrounds:
-  "orange"    $orange-bg-text var(--orange),
-  "orange-1"  $orange-1-bg-text var(--orange-1),
-  "orange-2"  $orange-2-bg-text var(--orange-2),
-  "orange-3"  $orange-3-bg-text var(--orange-3),
-  "orange-4"  $orange-4-bg-text var(--orange-4),
-  "orange-5"  $orange-5-bg-text var(--orange-5),
-  "orange-6"  $orange-6-bg-text var(--orange-6),
-  "orange-7"  $orange-7-bg-text var(--orange-7),
-  "orange-8"  $orange-8-bg-text var(--orange-8),
-  "orange-9"  $orange-9-bg-text var(--orange-9),
-  "orange-10" $orange-10-bg-text var(--orange-10),
-  "orange-11" $orange-11-bg-text var(--orange-11)
-; //
-
-// Variables tokens map
-$orange-token-values: (
-  "orange": $orange,
-  "orange-1": $orange-1,
-  "orange-2": $orange-2,
-  "orange-3": $orange-3,
-  "orange-4": $orange-4,
-  "orange-5": $orange-5,
-  "orange-6": $orange-6,
-  "orange-7": $orange-7,
-  "orange-8": $orange-8,
-  "orange-9": $orange-9,
-  "orange-10": $orange-10,
-  "orange-11": $orange-11,
-) !default;
-
-// Variables mixins
-@mixin orange-variables {
-  @each $name, $value in $orange-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin orange-variables-css {
-  #{$orange-tokens} {
-    @include orange-variables;
-  }
-}
+$orange-color-values:
+  "orange"    $orange #000,
+  "orange-1"  $orange-1 #000,
+  "orange-2"  $orange-2 #000,
+  "orange-3"  $orange-3 #000,
+  "orange-4"  $orange-4 #000,
+  "orange-5"  $orange-5 #000,
+  "orange-6"  $orange-6 #000,
+  "orange-7"  $orange-7 #000,
+  "orange-8"  $orange-8 #000,
+  "orange-9"  $orange-9 #fff,
+  "orange-10" $orange-10 #fff,
+  "orange-11" $orange-11 #fff,
+!default;

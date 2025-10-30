@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Tan
 // ----------------------------------------------------------
-// Variable colors
-$tan:      #b88747 !default;
-$tan-1:    color-mix(in srgb, var(--tan) 45%, white) !default;
-$tan-2:    color-mix(in srgb, var(--tan) 55%, white) !default;
-$tan-3:    color-mix(in srgb, var(--tan) 65%, white) !default;
-$tan-4:    color-mix(in srgb, var(--tan) 75%, white) !default;
-$tan-5:    color-mix(in srgb, var(--tan) 85%, white) !default;
-$tan-6:    var(--tan) !default;  
-$tan-7:    color-mix(in srgb, var(--tan) 92%, black) !default;
-$tan-8:    color-mix(in srgb, var(--tan) 82%, black) !default;
-$tan-9:    color-mix(in srgb, var(--tan) 72%, black) !default;
-$tan-10:   color-mix(in srgb, var(--tan) 62%, black) !default;
-$tan-11:   color-mix(in srgb, var(--tan) 52%, black) !default;
+$tan:              #b88747 !default;
+$tan-1:            color-mix(in srgb, var(--tan) 46%, #fff) !default;
+$tan-2:            color-mix(in srgb, var(--tan) 56%, #fff) !default;
+$tan-3:            color-mix(in srgb, var(--tan) 67%, #fff) !default;
+$tan-4:            color-mix(in srgb, var(--tan) 80%, #fff) !default;
+$tan-5:            color-mix(in srgb, var(--tan) 90%, #fff) !default;
+$tan-6:            var(--tan) !default;  
+$tan-7:            color-mix(in srgb, var(--tan) 92%, #000) !default;
+$tan-8:            color-mix(in srgb, var(--tan) 82%, #000) !default;
+$tan-9:            color-mix(in srgb, var(--tan) 72%, #000) !default;
+$tan-10:           color-mix(in srgb, var(--tan) 62%, #000) !default;
+$tan-11:           color-mix(in srgb, var(--tan) 55%, #000) !default;
 
-// Tokens style
 $tan-tokens:       ':where(html)' !default;
 
-// Utility colors
 $tan-bg-text:      #000 !default;
 $tan-bg:           var(--tan-6) !default;
 $tan-bg-dark:      var(--tan-7) !default;
 $tan-bg-light:     var(--tan-5) !default;
 
-// Background text colors
-$tan-1-bg-text:      #000 !default;
-$tan-2-bg-text:      #000 !default;
-$tan-3-bg-text:      #000 !default;
-$tan-4-bg-text:      #000 !default;
-$tan-5-bg-text:      #000 !default;
-$tan-6-bg-text:      #000 !default;
-$tan-7-bg-text:      #000 !default;
-$tan-8-bg-text:      #fff !default;
-$tan-9-bg-text:      #fff !default;
-$tan-10-bg-text:     #fff !default;
-$tan-11-bg-text:     #fff !default;
+$tan-gradient:     linear-gradient(180deg, $tan-bg-light, $tan-bg, $tan-bg-dark) !default;
 
-// Background color values
-$tan-backgrounds:
-  "tan"    $tan-bg-text var(--tan),
-  "tan-1"  $tan-1-bg-text var(--tan-1),
-  "tan-2"  $tan-2-bg-text var(--tan-2),
-  "tan-3"  $tan-3-bg-text var(--tan-3),
-  "tan-4"  $tan-4-bg-text var(--tan-4),
-  "tan-5"  $tan-5-bg-text var(--tan-5),
-  "tan-6"  $tan-6-bg-text var(--tan-6),
-  "tan-7"  $tan-7-bg-text var(--tan-7),
-  "tan-8"  $tan-8-bg-text var(--tan-8),
-  "tan-9"  $tan-9-bg-text var(--tan-9),
-  "tan-10" $tan-10-bg-text var(--tan-10),
-  "tan-11" $tan-11-bg-text var(--tan-11)
-; //
-
-// Variables tokens map
-$tan-token-values: (
-  "tan": $tan,
-  "tan-1": $tan-1,
-  "tan-2": $tan-2,
-  "tan-3": $tan-3,
-  "tan-4": $tan-4,
-  "tan-5": $tan-5,
-  "tan-6": $tan-6,
-  "tan-7": $tan-7,
-  "tan-8": $tan-8,
-  "tan-9": $tan-9,
-  "tan-10": $tan-10,
-  "tan-11": $tan-11,
-) !default;
-
-// Variables mixins
-@mixin tan-variables {
-  @each $name, $value in $tan-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin tan-variables-css {
-  #{$tan-tokens} {
-    @include tan-variables;
-  }
-}
+$tan-color-values:
+  "tan"    $tan #000,
+  "tan-1"  $tan-1 #000,
+  "tan-2"  $tan-2 #000,
+  "tan-3"  $tan-3 #000,
+  "tan-4"  $tan-4 #000,
+  "tan-5"  $tan-5 #000,
+  "tan-6"  $tan-6 #000,
+  "tan-7"  $tan-7 #000,
+  "tan-8"  $tan-8 #000,
+  "tan-9"  $tan-9 #fff,
+  "tan-10" $tan-10 #fff,
+  "tan-11" $tan-11 #fff,
+!default;

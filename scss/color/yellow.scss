@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Yellow
 // ----------------------------------------------------------
-// Variable colors
-$yellow:      #ffff00 !default;
-$yellow-1:    color-mix(in srgb, var(--yellow) 30%, white) !default;
-$yellow-2:    color-mix(in srgb, var(--yellow) 40%, white) !default;
-$yellow-3:    color-mix(in srgb, var(--yellow) 50%, white) !default;
-$yellow-4:    color-mix(in srgb, var(--yellow) 60%, white) !default;
-$yellow-5:    color-mix(in srgb, var(--yellow) 70%, white) !default;
-$yellow-6:    var(--yellow) !default;  
-$yellow-7:    color-mix(in srgb, var(--yellow) 88%, black) !default;
-$yellow-8:    color-mix(in srgb, var(--yellow) 78%, black) !default;
-$yellow-9:    color-mix(in srgb, var(--yellow) 68%, black) !default;
-$yellow-10:   color-mix(in srgb, var(--yellow) 58%, black) !default;
-$yellow-11:   color-mix(in srgb, var(--yellow) 50%, black) !default;
+$yellow:              #ffff00 !default;
+$yellow-1:            color-mix(in srgb, var(--yellow) 27%, #fff) !default;
+$yellow-2:            color-mix(in srgb, var(--yellow) 37%, #fff) !default;
+$yellow-3:            color-mix(in srgb, var(--yellow) 47%, #fff) !default;
+$yellow-4:            color-mix(in srgb, var(--yellow) 57%, #fff) !default;
+$yellow-5:            color-mix(in srgb, var(--yellow) 70%, #fff) !default;
+$yellow-6:            var(--yellow) !default;  
+$yellow-7:            color-mix(in srgb, var(--yellow) 85%, #000) !default;
+$yellow-8:            color-mix(in srgb, var(--yellow) 78%, #000) !default;
+$yellow-9:            color-mix(in srgb, var(--yellow) 68%, #000) !default;
+$yellow-10:           color-mix(in srgb, var(--yellow) 58%, #000) !default;
+$yellow-11:           color-mix(in srgb, var(--yellow) 50%, #000) !default;
 
-// Tokens style
 $yellow-tokens:       ':where(html)' !default;
 
-// Utility colors
 $yellow-bg-text:      #000 !default;
 $yellow-bg:           var(--yellow) !default;
 $yellow-bg-dark:      var(--yellow-7) !default;
 $yellow-bg-light:     var(--yellow-5) !default;
 
-// Background text colors
-$yellow-1-bg-text:      #000 !default;
-$yellow-2-bg-text:      #000 !default;
-$yellow-3-bg-text:      #000 !default;
-$yellow-4-bg-text:      #000 !default;
-$yellow-5-bg-text:      #000 !default;
-$yellow-6-bg-text:      #000 !default;
-$yellow-7-bg-text:      #000 !default;
-$yellow-8-bg-text:      #000 !default;
-$yellow-9-bg-text:      #000 !default;
-$yellow-10-bg-text:     #000 !default;
-$yellow-11-bg-text:     #000 !default;
+$yellow-gradient:     linear-gradient(180deg, $yellow-bg-light, $yellow-bg, $yellow-bg-dark) !default;
 
-// Background color values
-$yellow-backgrounds:
-  "yellow"    $yellow-bg-text var(--yellow),
-  "yellow-1"  $yellow-1-bg-text var(--yellow-1),
-  "yellow-2"  $yellow-2-bg-text var(--yellow-2),
-  "yellow-3"  $yellow-3-bg-text var(--yellow-3),
-  "yellow-4"  $yellow-4-bg-text var(--yellow-4),
-  "yellow-5"  $yellow-5-bg-text var(--yellow-5),
-  "yellow-6"  $yellow-6-bg-text var(--yellow-6),
-  "yellow-7"  $yellow-7-bg-text var(--yellow-7),
-  "yellow-8"  $yellow-8-bg-text var(--yellow-8),
-  "yellow-9"  $yellow-9-bg-text var(--yellow-9),
-  "yellow-10" $yellow-10-bg-text var(--yellow-10),
-  "yellow-11" $yellow-11-bg-text var(--yellow-11)
-; //
-
-// Variables tokens map
-$yellow-token-values: (
-  "yellow": $yellow,
-  "yellow-1": $yellow-1,
-  "yellow-2": $yellow-2,
-  "yellow-3": $yellow-3,
-  "yellow-4": $yellow-4,
-  "yellow-5": $yellow-5,
-  "yellow-6": $yellow-6,
-  "yellow-7": $yellow-7,
-  "yellow-8": $yellow-8,
-  "yellow-9": $yellow-9,
-  "yellow-10": $yellow-10,
-  "yellow-11": $yellow-11,
-) !default;
-
-// Variables mixins
-@mixin yellow-variables {
-  @each $name, $value in $yellow-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin yellow-variables-css {
-  #{$yellow-tokens} {
-    @include yellow-variables;
-  }
-}
+$yellow-color-values:
+  "yellow"    $yellow #000,
+  "yellow-1"  $yellow-1 #000,
+  "yellow-2"  $yellow-2 #000,
+  "yellow-3"  $yellow-3 #000,
+  "yellow-4"  $yellow-4 #000,
+  "yellow-5"  $yellow-5 #000,
+  "yellow-6"  $yellow-6 #000,
+  "yellow-7"  $yellow-7 #000,
+  "yellow-8"  $yellow-8 #000,
+  "yellow-9"  $yellow-9 #000,
+  "yellow-10" $yellow-10 #000,
+  "yellow-11" $yellow-11 #000,
+!default;

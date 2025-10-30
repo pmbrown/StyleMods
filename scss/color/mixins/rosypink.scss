@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// Rosypink mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../rosypink" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin rosypink-variables {
+  @each $name, $color in $rosypink-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin rosypink-variables-css {
+  #{$rosypink-tokens} {
+    @include rosypink-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-rosypink-css {
+  @each $name, $color, $text in $rosypink-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-rosypink-css {
+  @each $name, $color in $rosypink-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-rosypink-css {
+  .gradient-rosypink {
+    color: $rosypink-bg-text;
+    background-image: $rosypink-gradient;
+  }
+}
+
+@mixin text-rosypink-css {
+  @each $name, $color in $rosypink-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-rosypink-css {
+  @each $name, $color in $rosypink-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-rosypink-css {
+  .accordion-rosypink {
+    @include accordion-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-dark, $rosypink-bg-light);
+  }
+}
+
+@mixin alert-rosypink-css {
+  .alert-rosypink {
+    @include alert-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-light);
+  }
+}
+
+@mixin badge-rosypink-css {
+  .badge-rosypink {
+    @include badge-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-light);
+  }
+}
+
+@mixin button-rosypink-css {
+  .btn-rosypink {
+    @include button-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-dark, $rosypink-bg-light, $rosypink-bg-light);
+  }
+}
+
+@mixin card-rosypink-css {
+  .card-rosypink {
+    @include card-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-dark, $rosypink-bg-light, $rosypink-bg-light);
+  }
+}
+
+@mixin dialog-rosypink-css {
+  .dialog-rosypink {
+    @include dialog-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-light);
+  } 
+}
+
+@mixin dropdown-rosypink-css {
+  .dropdown-rosypink {
+    @include dropdown-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-dark, $rosypink-bg-light, $rosypink-bg-light);
+  } 
+}
+
+@mixin list-group-rosypink-css {
+  .list-group-rosypink {
+    @include list-group-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-dark, $rosypink-bg-light);
+  }
+}
+
+@mixin popover-rosypink-css {
+  .popover-rosypink {
+    @include popover-color-values($rosypink-bg-text, $rosypink-bg, $rosypink-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin rosypink-utilities-css {
+  @include backgrounds-rosypink-css;
+  @include borders-rosypink-css;
+  @include gradient-rosypink-css;
+  @include text-rosypink-css;
+}
+
+@mixin rosypink-modifiers-css {
+  @include icons-rosypink-css;
+  @include accordion-rosypink-css;
+  @include alert-rosypink-css;
+  @include badge-rosypink-css;
+  @include button-rosypink-css;
+  @include card-rosypink-css;
+  @include dialog-rosypink-css;
+  @include dropdown-rosypink-css;
+  @include list-group-rosypink-css;
+  @include popover-rosypink-css;
+}
+
+@mixin rosypink-module-css {
+  @include rosypink-variables-css;
+  @include rosypink-utilities-css;
+  @include rosypink-modifiers-css;
+}

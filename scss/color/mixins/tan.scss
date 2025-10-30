@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Tan utilities
+// Tan mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../tan" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin tan-variables {
+  @each $name, $color in $tan-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin tan-variables-css {
+  #{$tan-tokens} {
+    @include tan-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-tan-css {
-  @each $name, $color, $background in $tan-backgrounds {
+  @each $name, $color, $text in $tan-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-tan-css {
-  @each $name, $color in $tan-token-values {
+  @each $name, $color in $tan-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-tan-css {
+  .gradient-tan {
+    color: $tan-bg-text;
+    background-image: $tan-gradient;
+  }
+}
+
+@mixin text-tan-css {
+  @each $name, $color in $tan-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-tan-css {
+  @each $name, $color in $tan-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-tan-css {
   .accordion-tan {
     @include accordion-color-values($tan-bg-text, $tan-bg, $tan-bg-dark, $tan-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-tan-css {
   .alert-tan {
     @include alert-color-values($tan-bg-text, $tan-bg, $tan-bg-light);
-  }
-}
-
-@mixin background-tan-css {
-  .bg-tan {
-    @include background-color-values($tan-bg-text, $tan-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin tan-utilities-css {
+  @include backgrounds-tan-css;
+  @include borders-tan-css;
+  @include gradient-tan-css;
+  @include text-tan-css;
+}
+
+@mixin tan-modifiers-css {
+  @include icons-tan-css;
   @include accordion-tan-css;
   @include alert-tan-css;
-  @include background-tan-css;
-  @include backgrounds-tan-css;
   @include badge-tan-css;
-  @include borders-tan-css;
   @include button-tan-css;
   @include card-tan-css;
   @include dialog-tan-css;
   @include dropdown-tan-css;
   @include list-group-tan-css;
   @include popover-tan-css;
+}
+
+@mixin tan-module-css {
+  @include tan-variables-css;
+  @include tan-utilities-css;
+  @include tan-modifiers-css;
 }

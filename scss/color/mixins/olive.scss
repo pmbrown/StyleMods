@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Olive utilities
+// Olive mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../olive" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin olive-variables {
+  @each $name, $color in $olive-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin olive-variables-css {
+  #{$olive-tokens} {
+    @include olive-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-olive-css {
-  @each $name, $color, $background in $olive-backgrounds {
+  @each $name, $color, $text in $olive-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-olive-css {
-  @each $name, $color in $olive-token-values {
+  @each $name, $color in $olive-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-olive-css {
+  .gradient-olive {
+    color: $olive-bg-text;
+    background-image: $olive-gradient;
+  }
+}
+
+@mixin text-olive-css {
+  @each $name, $color in $olive-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-olive-css {
+  @each $name, $color in $olive-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-olive-css {
   .accordion-olive {
     @include accordion-color-values($olive-bg-text, $olive-bg, $olive-bg-dark, $olive-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-olive-css {
   .alert-olive {
     @include alert-color-values($olive-bg-text, $olive-bg, $olive-bg-light);
-  }
-}
-
-@mixin background-olive-css {
-  .bg-olive {
-    @include background-color-values($olive-bg-text, $olive-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin olive-utilities-css {
+  @include backgrounds-olive-css;
+  @include borders-olive-css;
+  @include gradient-olive-css;
+  @include text-olive-css;
+}
+
+@mixin olive-modifiers-css {
+  @include icons-olive-css;
   @include accordion-olive-css;
   @include alert-olive-css;
-  @include background-olive-css;
-  @include backgrounds-olive-css;
   @include badge-olive-css;
-  @include borders-olive-css;
   @include button-olive-css;
   @include card-olive-css;
   @include dialog-olive-css;
   @include dropdown-olive-css;
   @include list-group-olive-css;
   @include popover-olive-css;
+}
+
+@mixin olive-module-css {
+  @include olive-variables-css;
+  @include olive-utilities-css;
+  @include olive-modifiers-css;
 }

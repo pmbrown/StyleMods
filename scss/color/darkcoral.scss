@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// Darkcoral
+// ----------------------------------------------------------
+$darkcoral:              #ff571a !default;
+$darkcoral-1:            color-mix(in srgb, var(--darkcoral) 30%, #fff) !default;
+$darkcoral-2:            color-mix(in srgb, var(--darkcoral) 42%, #fff) !default;
+$darkcoral-3:            color-mix(in srgb, var(--darkcoral) 55%, #fff) !default;
+$darkcoral-4:            color-mix(in srgb, var(--darkcoral) 70%, #fff) !default;
+$darkcoral-5:            color-mix(in srgb, var(--darkcoral) 85%, #fff) !default;
+$darkcoral-6:            var(--darkcoral) !default;
+$darkcoral-7:            color-mix(in srgb, var(--darkcoral) 85%, #000) !default;
+$darkcoral-8:            color-mix(in srgb, var(--darkcoral) 75%, #000) !default;
+$darkcoral-9:            color-mix(in srgb, var(--darkcoral) 65%, #000) !default;
+$darkcoral-10:           color-mix(in srgb, var(--darkcoral) 55%, #000) !default;
+$darkcoral-11:           color-mix(in srgb, var(--darkcoral) 45%, #000) !default;
+
+$darkcoral-tokens:       ':where(html)' !default;
+
+$darkcoral-bg-text:      #000 !default;
+$darkcoral-bg:           var(--darkcoral-6) !default;
+$darkcoral-bg-dark:      var(--darkcoral-7) !default;
+$darkcoral-bg-light:     var(--darkcoral-5) !default;
+
+$darkcoral-gradient:     linear-gradient(180deg, $darkcoral-bg-light, $darkcoral-bg, $darkcoral-bg-dark) !default;
+
+$darkcoral-color-values:
+  "darkcoral"    $darkcoral #000,
+  "darkcoral-1"  $darkcoral-1 #000,
+  "darkcoral-2"  $darkcoral-2 #000,
+  "darkcoral-3"  $darkcoral-3 #000,
+  "darkcoral-4"  $darkcoral-4 #000,
+  "darkcoral-5"  $darkcoral-5 #000,
+  "darkcoral-6"  $darkcoral-6 #000,
+  "darkcoral-7"  $darkcoral-7 #000,
+  "darkcoral-8"  $darkcoral-8 #fff,
+  "darkcoral-9"  $darkcoral-9 #fff,
+  "darkcoral-10" $darkcoral-10 #fff,
+  "darkcoral-11" $darkcoral-11 #fff,
+!default;

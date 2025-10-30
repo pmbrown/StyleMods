@@ -60,6 +60,18 @@
 }
 
 // ----------------------------------------------------------
+// Modifiers (color utilities and component classes)
+// ----------------------------------------------------------
+@if $enable-modifiers-layer {
+  @layer #{$modifiers-layer} {
+    @include modifiers-framework;
+  }
+}
+@else {
+  @include modifiers-framework;
+}
+
+// ----------------------------------------------------------
 // Layout
 // ----------------------------------------------------------
 @if $enable-layout-layer {

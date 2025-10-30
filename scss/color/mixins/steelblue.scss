@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Steelblue utilities
+// Steelblue mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../steelblue" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin steelblue-variables {
+  @each $name, $color in $steelblue-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin steelblue-variables-css {
+  #{$steelblue-tokens} {
+    @include steelblue-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-steelblue-css {
-  @each $name, $color, $background in $steelblue-backgrounds {
+  @each $name, $color, $text in $steelblue-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-steelblue-css {
-  @each $name, $color in $steelblue-token-values {
+  @each $name, $color in $steelblue-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-steelblue-css {
+  .gradient-steelblue {
+    color: $steelblue-bg-text;
+    background-image: $steelblue-gradient;
+  }
+}
+
+@mixin text-steelblue-css {
+  @each $name, $color in $steelblue-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-steelblue-css {
+  @each $name, $color in $steelblue-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-steelblue-css {
   .accordion-steelblue {
     @include accordion-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-dark, $steelblue-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-steelblue-css {
   .alert-steelblue {
     @include alert-color-values($steelblue-bg-text, $steelblue-bg, $steelblue-bg-light);
-  }
-}
-
-@mixin background-steelblue-css {
-  .bg-steelblue {
-    @include background-color-values($steelblue-bg-text, $steelblue-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin steelblue-utilities-css {
+  @include backgrounds-steelblue-css;
+  @include borders-steelblue-css;
+  @include gradient-steelblue-css;
+  @include text-steelblue-css;
+}
+
+@mixin steelblue-modifiers-css {
+  @include icons-steelblue-css;
   @include accordion-steelblue-css;
   @include alert-steelblue-css;
-  @include background-steelblue-css;
-  @include backgrounds-steelblue-css;
   @include badge-steelblue-css;
-  @include borders-steelblue-css;
   @include button-steelblue-css;
   @include card-steelblue-css;
   @include dialog-steelblue-css;
   @include dropdown-steelblue-css;
   @include list-group-steelblue-css;
   @include popover-steelblue-css;
+}
+
+@mixin steelblue-module-css {
+  @include steelblue-variables-css;
+  @include steelblue-utilities-css;
+  @include steelblue-modifiers-css;
 }

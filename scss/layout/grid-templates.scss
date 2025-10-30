@@ -10,14 +10,6 @@ $grid-utilities-values: (
   "grid-inline": inline-grid,
 ) !default;
 
-// Grid utilities
-@mixin grid-utilities-css {
-  @each $name, $value in $grid-utilities-values {
-    .#{$name} {
-      display: #{$value};        
-    }
-  }
-}
 
 // Variables
 @mixin fraction-grid-variables {
@@ -46,6 +38,12 @@ $grid-utilities-values: (
 
 // Grid classes
 @mixin fraction-grid-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name} {
+      display: #{$value};        
+    }
+  }
+
   @for $value from 1 through $fraction-grid-values {
     .g-#{$value} {
       grid-template-columns: var(--g-#{$value});
@@ -54,6 +52,12 @@ $grid-utilities-values: (
 }
 
 @mixin auto-grid-css {
+  @each $name, $value in $grid-utilities-values {
+    .#{$name} {
+      display: #{$value};        
+    }
+  }
+
   @for $value from 1 through $auto-grid-values {
     .ga-#{$value} {
       grid-template-columns: var(--ga-#{$value});
@@ -250,49 +254,41 @@ $grid-utilities-values: (
 
 @mixin grid-templates-css {
   @include grid-templates-variables-css;
-  @include grid-utilities-css;
   @include fraction-grid-css;
   @include auto-grid-css;
 }
 
 @mixin grid-templates-xxl-css {
-  @include grid-utilities-xxl-css;
   @include fraction-grid-xxl-css;
   @include auto-grid-xxl-css;
 }
 
 @mixin grid-templates-xl-css {
-  @include grid-utilities-xl-css;
   @include fraction-grid-xl-css;
   @include auto-grid-xl-css;
 }
 
 @mixin grid-templates-lg-css {
-  @include grid-utilities-lg-css;
   @include fraction-grid-lg-css;
   @include auto-grid-lg-css;
 }
 
 @mixin grid-templates-md-css {
-  @include grid-utilities-md-css;
   @include fraction-grid-md-css;
   @include auto-grid-md-css;
 }
 
 @mixin grid-templates-sm-css {
-  @include grid-utilities-sm-css;
   @include fraction-grid-sm-css;
   @include auto-grid-sm-css;
 }
 
 @mixin grid-templates-xs-css {
-  @include grid-utilities-xs-css;
   @include fraction-grid-xs-css;
   @include auto-grid-xs-css;
 }
 
 @mixin grid-templates-xxs-css {
-  @include grid-utilities-xxs-css;
   @include fraction-grid-xxs-css;
   @include auto-grid-xxs-css;
 }

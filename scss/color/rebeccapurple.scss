@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// Rebeccapurple
+// ----------------------------------------------------------
+$rebeccapurple:                #663399 !default;
+$rebeccapurple-1:              color-mix(in srgb, var(--rebeccapurple) 29%, #fff) !default;
+$rebeccapurple-2:              color-mix(in srgb, var(--rebeccapurple) 44%, #fff) !default;
+$rebeccapurple-3:              color-mix(in srgb, var(--rebeccapurple) 58%, #fff) !default;
+$rebeccapurple-4:              color-mix(in srgb, var(--rebeccapurple) 72%, #fff) !default;
+$rebeccapurple-5:              color-mix(in srgb, var(--rebeccapurple) 87%, #fff) !default;
+$rebeccapurple-6:              var(--rebeccapurple) !default;
+$rebeccapurple-7:              color-mix(in srgb, var(--rebeccapurple) 85%, #000) !default;
+$rebeccapurple-8:              color-mix(in srgb, var(--rebeccapurple) 72%, #000) !default;
+$rebeccapurple-9:              color-mix(in srgb, var(--rebeccapurple) 60%, #000) !default;
+$rebeccapurple-10:             color-mix(in srgb, var(--rebeccapurple) 50%, #000) !default;
+$rebeccapurple-11:             color-mix(in srgb, var(--rebeccapurple) 44%, #000) !default;
+
+$rebeccapurple-tokens:         ':where(html)' !default;
+
+$rebeccapurple-bg-text:        #fff !default;
+$rebeccapurple-bg:             var(--rebeccapurple) !default;
+$rebeccapurple-bg-dark:        var(--rebeccapurple-7) !default;
+$rebeccapurple-bg-light:       var(--rebeccapurple-5) !default;
+
+$rebeccapurple-gradient:       linear-gradient(180deg, $rebeccapurple-bg-light, $rebeccapurple-bg, $rebeccapurple-bg-dark) !default;
+
+$rebeccapurple-color-values:
+  "rebeccapurple"    $rebeccapurple #fff,
+  "rebeccapurple-1"  $rebeccapurple-1 #000,
+  "rebeccapurple-2"  $rebeccapurple-2 #000,
+  "rebeccapurple-3"  $rebeccapurple-3 #000,
+  "rebeccapurple-4"  $rebeccapurple-4 #000,
+  "rebeccapurple-5"  $rebeccapurple-5 #fff,
+  "rebeccapurple-6"  $rebeccapurple-6 #fff,
+  "rebeccapurple-7"  $rebeccapurple-7 #fff,
+  "rebeccapurple-8"  $rebeccapurple-8 #fff,
+  "rebeccapurple-9"  $rebeccapurple-9 #fff,
+  "rebeccapurple-10" $rebeccapurple-10 #fff,
+  "rebeccapurple-11" $rebeccapurple-11 #fff,
+!default;

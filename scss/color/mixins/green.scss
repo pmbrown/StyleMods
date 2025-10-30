@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Green utilities
+// green mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../green" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin green-variables {
+  @each $name, $color in $green-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin green-variables-css {
+  #{$green-tokens} {
+    @include green-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-green-css {
-  @each $name, $color, $background in $green-backgrounds {
+  @each $name, $color, $text in $green-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-green-css {
-  @each $name, $color in $green-token-values {
+  @each $name, $color in $green-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-green-css {
+  .gradient-green {
+    color: $green-bg-text;
+    background-image: $green-gradient;
+  }
+}
+
+@mixin text-green-css {
+  @each $name, $color in $green-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-green-css {
+  @each $name, $color in $green-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-green-css {
   .accordion-green {
     @include accordion-color-values($green-bg-text, $green-bg, $green-bg-dark, $green-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-green-css {
   .alert-green {
     @include alert-color-values($green-bg-text, $green-bg, $green-bg-light);
-  }
-}
-
-@mixin background-green-css {
-  .bg-green {
-    @include background-color-values($green-bg-text, $green-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin green-utilities-css {
+  @include backgrounds-green-css;
+  @include borders-green-css;
+  @include gradient-green-css;
+  @include text-green-css;
+}
+
+@mixin green-modifiers-css {
+  @include icons-green-css;
   @include accordion-green-css;
   @include alert-green-css;
-  @include background-green-css;
-  @include backgrounds-green-css;
   @include badge-green-css;
-  @include borders-green-css;
   @include button-green-css;
   @include card-green-css;
   @include dialog-green-css;
   @include dropdown-green-css;
   @include list-group-green-css;
   @include popover-green-css;
+}
+
+@mixin green-module-css {
+  @include green-variables-css;
+  @include green-utilities-css;
+  @include green-modifiers-css;
 }

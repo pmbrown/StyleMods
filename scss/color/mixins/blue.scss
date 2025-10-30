@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Blue utilities
+// Blue mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../blue" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin blue-variables {
+  @each $name, $color in $blue-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin blue-variables-css {
+  #{$blue-tokens} {
+    @include blue-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-blue-css {
-  @each $name, $color, $background in $blue-backgrounds {
+  @each $name, $color, $text in $blue-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-blue-css {
-  @each $name, $color in $blue-token-values {
+  @each $name, $color in $blue-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-blue-css {
+  .gradient-blue {
+    color: $blue-bg-text;
+    background-image: $blue-gradient;
+  }
+}
+
+@mixin text-blue-css {
+  @each $name, $color in $blue-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-blue-css {
+  @each $name, $color in $blue-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-blue-css {
   .accordion-blue {
     @include accordion-color-values($blue-bg-text, $blue-bg, $blue-bg-dark, $blue-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-blue-css {
   .alert-blue {
     @include alert-color-values($blue-bg-text, $blue-bg, $blue-bg-light);
-  }
-}
-
-@mixin background-blue-css {
-  .bg-blue {
-    @include background-color-values($blue-bg-text, $blue-bg);
   }
 }
 
@@ -84,18 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
 // Combined mixins
+// ----------------------------------------------------------
 @mixin blue-utilities-css {
+  @include backgrounds-blue-css;
+  @include borders-blue-css;
+  @include gradient-blue-css;
+  @include text-blue-css;
+}
+
+@mixin blue-modifiers-css {
+  @include icons-blue-css;
   @include accordion-blue-css;
   @include alert-blue-css;
-  @include background-blue-css;
-  @include backgrounds-blue-css;
   @include badge-blue-css;
-  @include borders-blue-css;
   @include button-blue-css;
   @include card-blue-css;
   @include dialog-blue-css;
   @include dropdown-blue-css;
   @include list-group-blue-css;
   @include popover-blue-css;
+}
+
+@mixin blue-module-css {
+  @include blue-variables-css;
+  @include blue-utilities-css;
+  @include blue-modifiers-css;
 }

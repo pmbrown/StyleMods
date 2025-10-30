@@ -1,0 +1,152 @@
+// ---------------------------------------------------------- 
+// Darkcoral mixins
+// ----------------------------------------------------------
+@use "modifiers" as *;
+@use "../darkcoral" as *;
+
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin darkcoral-variables {
+  @each $name, $color in $darkcoral-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin darkcoral-variables-css {
+  #{$darkcoral-tokens} {
+    @include darkcoral-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
+@mixin backgrounds-darkcoral-css {
+  @each $name, $color, $text in $darkcoral-color-values {
+    .bg-#{$name} {
+      color: $text;
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin borders-darkcoral-css {
+  @each $name, $color in $darkcoral-color-values {
+    .bd-#{$name} {
+      border-color: var(--#{$name});
+    }
+  }
+}
+
+@mixin gradient-darkcoral-css {
+  .gradient-darkcoral {
+    color: $darkcoral-bg-text;
+    background-image: $darkcoral-gradient;
+  }
+}
+
+@mixin text-darkcoral-css {
+  @each $name, $color in $darkcoral-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-darkcoral-css {
+  @each $name, $color in $darkcoral-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
+@mixin accordion-darkcoral-css {
+  .accordion-darkcoral {
+    @include accordion-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-dark, $darkcoral-bg-light);
+  }
+}
+
+@mixin alert-darkcoral-css {
+  .alert-darkcoral {
+    @include alert-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-light);
+  }
+}
+
+@mixin badge-darkcoral-css {
+  .badge-darkcoral {
+    @include badge-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-light);
+  }
+}
+
+@mixin button-darkcoral-css {
+  .btn-darkcoral {
+    @include button-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-dark, $darkcoral-bg-light, $darkcoral-bg-light);
+  }
+}
+
+@mixin card-darkcoral-css {
+  .card-darkcoral {
+    @include card-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-dark, $darkcoral-bg-light, $darkcoral-bg-light);
+  }
+}
+
+@mixin dialog-darkcoral-css {
+  .dialog-darkcoral {
+    @include dialog-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-light);
+  } 
+}
+
+@mixin dropdown-darkcoral-css {
+  .dropdown-darkcoral {
+    @include dropdown-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-dark, $darkcoral-bg-light, $darkcoral-bg-light);
+  } 
+}
+
+@mixin list-group-darkcoral-css {
+  .list-group-darkcoral {
+    @include list-group-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-dark, $darkcoral-bg-light);
+  }
+}
+
+@mixin popover-darkcoral-css {
+  .popover-darkcoral {
+    @include popover-color-values($darkcoral-bg-text, $darkcoral-bg, $darkcoral-bg-light);
+  }
+}
+
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
+@mixin darkcoral-utilities-css {
+  @include backgrounds-darkcoral-css;
+  @include borders-darkcoral-css;
+  @include gradient-darkcoral-css;
+  @include text-darkcoral-css;
+}
+
+@mixin darkcoral-modifiers-css {
+  @include icons-darkcoral-css;
+  @include accordion-darkcoral-css;
+  @include alert-darkcoral-css;
+  @include badge-darkcoral-css;
+  @include button-darkcoral-css;
+  @include card-darkcoral-css;
+  @include dialog-darkcoral-css;
+  @include dropdown-darkcoral-css;
+  @include list-group-darkcoral-css;
+  @include popover-darkcoral-css;
+}
+
+@mixin darkcoral-module-css {
+  @include darkcoral-variables-css;
+  @include darkcoral-utilities-css;
+  @include darkcoral-modifiers-css;
+}

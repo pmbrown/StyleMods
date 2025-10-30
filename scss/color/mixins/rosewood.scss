@@ -1,29 +1,73 @@
 // ---------------------------------------------------------- 
-// Rosewood utilities
+// Rosewood mixins
 // ----------------------------------------------------------
-@use "color-mixins" as *;
+@use "modifiers" as *;
 @use "../rosewood" as *;
 
-// Background color utilities
+// ---------------------------------------------------------- 
+// Variables
+// ----------------------------------------------------------
+@mixin rosewood-variables {
+  @each $name, $color in $rosewood-color-values {
+    --#{$name}: #{$color};
+  }
+}
+
+@mixin rosewood-variables-css {
+  #{$rosewood-tokens} {
+    @include rosewood-variables;
+  }
+}
+
+// ---------------------------------------------------------- 
+// Utilities
+// ----------------------------------------------------------
 @mixin backgrounds-rosewood-css {
-  @each $name, $color, $background in $rosewood-backgrounds {
+  @each $name, $color, $text in $rosewood-color-values {
     .bg-#{$name} {
-      color: $color;
-      background-color: $background;
+      color: $text;
+      background-color: var(--#{$name});
     }
   }
 }
 
-// Border color modifiers
 @mixin borders-rosewood-css {
-  @each $name, $color in $rosewood-token-values {
+  @each $name, $color in $rosewood-color-values {
     .bd-#{$name} {
       border-color: var(--#{$name});
     }
   }
 }
 
-// Module modifers
+@mixin gradient-rosewood-css {
+  .gradient-rosewood {
+    color: $rosewood-bg-text;
+    background-image: $rosewood-gradient;
+  }
+}
+
+@mixin text-rosewood-css {
+  @each $name, $color in $rosewood-color-values {
+    .text-#{$name} {
+      color: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Icons modifiers
+// ----------------------------------------------------------
+@mixin icons-rosewood-css {
+  @each $name, $color in $rosewood-color-values {
+    .ico-#{$name} {
+      --ico: var(--#{$name});
+    }
+  }
+}
+
+// ---------------------------------------------------------- 
+// Component modifiers
+// ----------------------------------------------------------
 @mixin accordion-rosewood-css {
   .accordion-rosewood {
     @include accordion-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-dark, $rosewood-bg-light);
@@ -33,12 +77,6 @@
 @mixin alert-rosewood-css {
   .alert-rosewood {
     @include alert-color-values($rosewood-bg-text, $rosewood-bg, $rosewood-bg-light);
-  }
-}
-
-@mixin background-rosewood-css {
-  .bg-rosewood {
-    @include background-color-values($rosewood-bg-text, $rosewood-bg);
   }
 }
 
@@ -84,17 +122,31 @@
   }
 }
 
+// ---------------------------------------------------------- 
+// Combined mixins
+// ----------------------------------------------------------
 @mixin rosewood-utilities-css {
+  @include backgrounds-rosewood-css;
+  @include borders-rosewood-css;
+  @include gradient-rosewood-css;
+  @include text-rosewood-css;
+}
+
+@mixin rosewood-modifiers-css {
+  @include icons-rosewood-css;
   @include accordion-rosewood-css;
   @include alert-rosewood-css;
-  @include background-rosewood-css;
-  @include backgrounds-rosewood-css;
   @include badge-rosewood-css;
-  @include borders-rosewood-css;
   @include button-rosewood-css;
   @include card-rosewood-css;
   @include dialog-rosewood-css;
   @include dropdown-rosewood-css;
   @include list-group-rosewood-css;
   @include popover-rosewood-css;
+}
+
+@mixin rosewood-module-css {
+  @include rosewood-variables-css;
+  @include rosewood-utilities-css;
+  @include rosewood-modifiers-css;
 }

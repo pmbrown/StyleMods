@@ -1,0 +1,39 @@
+// ---------------------------------------------------------- 
+// seagreen
+// ----------------------------------------------------------
+$seagreen:              #2e8b57 !default;
+$seagreen-1:            color-mix(in srgb, var(--seagreen) 22%, #fff) !default;
+$seagreen-2:            color-mix(in srgb, var(--seagreen) 32%, #fff) !default;
+$seagreen-3:            color-mix(in srgb, var(--seagreen) 50%, #fff) !default;
+$seagreen-4:            color-mix(in srgb, var(--seagreen) 65%, #fff) !default;
+$seagreen-5:            color-mix(in srgb, var(--seagreen) 85%, #fff) !default;
+$seagreen-6:            var(--seagreen) !default;  
+$seagreen-7:            color-mix(in srgb, var(--seagreen) 86%, #000) !default;
+$seagreen-8:            color-mix(in srgb, var(--seagreen) 72%, #000) !default;
+$seagreen-9:            color-mix(in srgb, var(--seagreen) 61%, #000) !default;
+$seagreen-10:           color-mix(in srgb, var(--seagreen) 53%, #000) !default;
+$seagreen-11:           color-mix(in srgb, var(--seagreen) 45%, #000) !default;
+
+$seagreen-tokens:       ':where(html)' !default;
+
+$seagreen-bg-text:      #000 !default;
+$seagreen-bg:           var(--seagreen-6) !default;
+$seagreen-bg-dark:      var(--seagreen-7) !default;
+$seagreen-bg-light:     var(--seagreen-5) !default;
+
+$seagreen-gradient:     linear-gradient(180deg, $seagreen-bg-light, $seagreen-bg, $seagreen-bg-dark) !default;
+
+$seagreen-color-values:
+  "seagreen"    $seagreen #000,
+  "seagreen-1"  $seagreen-1 #000,
+  "seagreen-2"  $seagreen-2 #000,
+  "seagreen-3"  $seagreen-3 #000,
+  "seagreen-4"  $seagreen-4 #000,
+  "seagreen-5"  $seagreen-5 #000,
+  "seagreen-6"  $seagreen-6 #000,
+  "seagreen-7"  $seagreen-7 #fff,
+  "seagreen-8"  $seagreen-8 #fff,
+  "seagreen-9"  $seagreen-9 #fff,
+  "seagreen-10" $seagreen-10 #fff,
+  "seagreen-11" $seagreen-11 #fff,
+!default;

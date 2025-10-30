@@ -3,53 +3,46 @@
 // ----------------------------------------------------------
 @use "surface" as *;
 
-// Light typography
-$theme-text-light:            #000 !default;
-$theme-link-light:            #1c3db5 !default;
-$theme-link-visited-light:    #4f6fe3 !default;
-$theme-link-hover-light:      #385de0 !default;
-$theme-background-light:      #eaecee !default;
+// Tokens style
+$theme-tokens:                ':where(html)' !default;
 
-// Dark typography
-$theme-text-dark:             #fff !default;
-$theme-link-dark:             #9fbfdf !default;
-$theme-link-visited-dark:     #b3cce6 !default;
-$theme-link-hover-dark:       #c6d8ec !default;
-$theme-background-dark:       #1f2428 !default;
+// Colors
+$theme-text:                  light-dark(#000, #fff) !default;
+$theme-link:                  light-dark(#1c3db5, #9fbfdf) !default;
+$theme-link-visited:          light-dark(#4f6fe3, #b3cce6) !default;
+$theme-link-hover:            light-dark(#385de0, #c6d8ec) !default;
+$theme-background:            light-dark(#eaecee, #1f2428) !default;
 
-// Theme typography
-$theme-text:                  light-dark($theme-text-light, $theme-text-dark) !default;
-$theme-background:            light-dark($theme-background-light, $theme-background-dark) !default;
-$theme-link:                  light-dark($theme-link-light, $theme-link-dark) !default;
-$theme-link-visited:          light-dark($theme-link-visited-light, $theme-link-visited-dark) !default;
-$theme-link-hover:            light-dark($theme-link-hover-light, $theme-link-hover-dark) !default;
-
-// Theme surfaces
-$theme-surface:               var(--background) !default;
+$theme-surface:               var(--surface) !default;
 $theme-surface-1:             var(--surf-1) !default;
 $theme-surface-2:             var(--surf-2) !default;
 $theme-surface-3:             var(--surf-3) !default;
 $theme-surface-4:             var(--surf-4) !default;
-$theme-table-stripes:         color-mix(in srgb, CanvasText 1%, var(--background)) !default;
-$theme-table-hover:           color-mix(in srgb, CanvasText 2%, var(--background)) !default;
+$theme-table-stripes:         color-mix(in srgb, CanvasText 1%, var(--surface)) !default;
+$theme-table-hover:           color-mix(in srgb, CanvasText 2%, var(--surface)) !default;
 
-// Theme surfaces (if surface.scss not compiled)
-$base-surface:                $theme-background !default;
-$base-surface-1:              $surface-1 !default;
-$base-surface-2:              $surface-2 !default;
-$base-surface-3:              $surface-3 !default;
-$base-surface-4:              $surface-4 !default;
-
-// Tokens style
-$theme-tokens:                ':where(html)' !default;
-
-// Variables tokens maps
+// Variables
 $theme-surfaces: (
-  "surface": $base-surface,
-  "surf-1": $base-surface-1,
-  "surf-2": $base-surface-2,
-  "surf-3": $base-surface-3,
-  "surf-4": $base-surface-4,
+  "surface": $theme-background,
+  "surf-1": $surface-1,
+  "surf-2": $surface-2,
+  "surf-3": $surface-3,
+  "surf-4": $surface-4,
+) !default;
+
+$theme-surfaces-palette: (
+  "surface": $theme-background,
+  "surf-1": $surface-1,
+  "surf-2": $surface-2,
+  "surf-3": $surface-3,
+  "surf-4": $surface-4,
+  "surf-5": $surface-5,
+  "surf-6": $surface-6,
+  "surf-7": $surface-7,
+  "surf-8": $surface-8,
+  "surf-9": $surface-9,
+  "surf-10": $surface-10,
+  "surf-11": $surface-11,
 ) !default;
 
 $theme-typography: (
@@ -106,6 +99,7 @@ $theme-button: (
   "btn-bd-color": $theme-surface-4,
   "btn-bg": $theme-surface-1,
   "btn-hover": $theme-surface-2,
+  "focus-color": $theme-surface-4,
 ) !default;
 
 $theme-card: (
@@ -142,206 +136,3 @@ $theme-popover: (
   "popover-bg": $theme-surface-1,
   "popover-bd-color": $theme-surface-3,
 ) !default;
-
-// Style and utility variable tokens
-@mixin theme-surface-variables {
-  @each $name, $value in $theme-surfaces {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-surface-css {
-  #{$theme-tokens} {
-    @include theme-surface-variables;
-  }
-}
-
-@mixin theme-typography-variables {
-  @each $name, $value in $theme-typography {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-typography-css {
-  #{$theme-tokens} {
-    @include theme-typography-variables;
-  }
-}
-
-@mixin theme-forms-buttons-variables {
-  @each $name, $value in $theme-forms-buttons {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-forms-buttons-css {
-  #{$theme-tokens} {
-    @include theme-forms-buttons-variables;
-  }
-}
-
-@mixin theme-tables-variables {
-  @each $name, $value in $theme-tables {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-tables-css {
-  #{$theme-tokens} {
-    @include theme-tables-variables;
-  }
-}
-
-@mixin theme-accordions-variables {
-  @each $name, $value in $theme-accordion {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-accordions-css {
-  #{$theme-tokens} {
-    @include theme-accordions-variables;
-  }
-}
-
-@mixin theme-alert-variables {
-  @each $name, $value in $theme-alert {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-alert-css {
-  #{$theme-tokens} {
-    @include theme-alert-variables;
-  }
-}
-
-@mixin theme-badge-variables {
-  @each $name, $value in $theme-badge {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-badge-css {
-  #{$theme-tokens} {
-    @include theme-badge-variables;
-  }
-}
-
-@mixin theme-border-variables {
-  @each $name, $value in $theme-border {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-border-css {
-  #{$theme-tokens} {
-    @include theme-border-variables;
-  }
-}
-
-@mixin theme-button-variables {
-  @each $name, $value in $theme-button {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-button-css {
-  #{$theme-tokens} {
-    @include theme-button-variables;
-  }
-}
-
-@mixin theme-card-variables {
-  @each $name, $value in $theme-card {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-card-css {
-  #{$theme-tokens} {
-    @include theme-card-variables;
-  }
-}
-
-@mixin theme-dialog-variables {
-  @each $name, $value in $theme-dialog {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-dialog-css {
-  #{$theme-tokens} {
-    @include theme-dialog-variables;
-  }
-}
-
-@mixin theme-dropdown-variables {
-  @each $name, $value in $theme-dropdown {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-dropdown-css {
-  #{$theme-tokens} {
-    @include theme-dropdown-variables;
-  }
-}
-
-@mixin theme-list-group-variables {
-  @each $name, $value in $theme-list-group {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-list-group-css {
-  #{$theme-tokens} {
-    @include theme-list-group-variables;
-  }
-}
-
-@mixin theme-popover-variables {
-  @each $name, $value in $theme-popover {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin theme-popover-css {
-  #{$theme-tokens} {
-    @include theme-popover-variables;
-  }
-}
-
-@mixin all-theme-variables {
-  @include theme-typography-variables;
-  @include theme-forms-buttons-variables;
-  @include theme-tables-variables;
-  @include theme-accordions-variables;
-  @include theme-alert-variables;
-  @include theme-badge-variables;
-  @include theme-border-variables;
-  @include theme-dialog-variables;
-  @include theme-dropdown-variables;
-  @include theme-card-variables;
-  @include theme-list-group-variables;
-  @include theme-popover-variables;
-}
-
-
-@mixin all-theme-variables-css {
-  #{$theme-tokens} {
-    @include all-theme-variables;
-  }
-}
-
-// Use if surface.scss module not included.
-@mixin all-theme-surface-variables {
-  @include theme-surface-variables;
-  @include all-theme-variables;
-}
-
-@mixin all-theme-surface-variables-css {
-  #{$theme-tokens} {
-    @include all-theme-surface-variables;
-  }
-}

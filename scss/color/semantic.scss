@@ -7,7 +7,8 @@
 @use "orange" as *;
 @use "cyan" as *;
 
-// Base values
+$semantic-tokens:       ':where(html)' !default;
+
 $primary:               $blue !default;
 $info:                  $cyan !default;
 $success:               $green !default;
@@ -15,29 +16,37 @@ $warning:               $orange !default;
 $danger:                $red !default;
 $secondary:             #d3d3d3 !default; // HEX equivalent of $gray-2
 
-// Light accents
-$primary-light:         color-mix(in srgb, var(--primary) 80%, white) !default;
-$info-light:            color-mix(in srgb, var(--info) 60%, white) !default; 
-$success-light:         color-mix(in srgb, var(--success) 80%, white) !default;
-$warning-light:         color-mix(in srgb, var(--warning) 85%, white) !default;
-$danger-light:          color-mix(in srgb, var(--danger) 80%, white) !default;  
-$secondary-light:       color-mix(in srgb, var(--secondary) 80%, white) !default;
+$primary-light:         color-mix(in srgb, var(--primary) 78%, #fff) !default;
+$info-light:            color-mix(in srgb, var(--info) 50%, #fff) !default; 
+$success-light:         color-mix(in srgb, var(--success) 80%, #fff) !default;
+$warning-light:         color-mix(in srgb, var(--warning) 75%, #fff) !default;
+$danger-light:          color-mix(in srgb, var(--danger) 82%, #fff) !default;  
+$secondary-light:       color-mix(in srgb, var(--secondary) 80%, #fff) !default;
 
-// Dark accents
-$primary-dark:          color-mix(in srgb, var(--primary) 80%, black) !default;
-$info-dark:             color-mix(in srgb, var(--info) 82%, black) !default;
-$success-dark:          color-mix(in srgb, var(--success) 80%, black) !default;
-$warning-dark:          color-mix(in srgb, var(--warning) 82%, black) !default;
-$danger-dark:           color-mix(in srgb, var(--danger) 70%, black) !default;
-$secondary-dark:        color-mix(in srgb, var(--secondary) 80%, black) !default;
+$primary-dark:          color-mix(in srgb, var(--primary) 78%, #000) !default;
+$info-dark:             color-mix(in srgb, var(--info) 82%, #000) !default;
+$success-dark:          color-mix(in srgb, var(--success) 80%, #000) !default;
+$warning-dark:          color-mix(in srgb, var(--warning) 87%, #000) !default;
+$danger-dark:           color-mix(in srgb, var(--danger) 84%, #000) !default;
+$secondary-dark:        color-mix(in srgb, var(--secondary) 80%, #000) !default;
 
-// Tokens style
-$semantic-tokens:       ':where(html)' !default;
+$primary-gradient:      linear-gradient(180deg, var(--primary-light), var(--primary), var(--primary-dark)) !default;
+$info-gradient:         linear-gradient(180deg, var(--info-light), var(--info), var(--info-dark)) !default;
+$success-gradient:      linear-gradient(180deg, var(--success-light), var(--success), var(--success-dark)) !default;
+$warning-gradient:      linear-gradient(180deg, var(--warning-light), var(--warning), var(--warning-dark)) !default;
+$danger-gradient:       linear-gradient(180deg, var(--danger-light), var(--danger), var(--danger-dark)) !default;
+$secondary-gradient:    linear-gradient(180deg, var(--secondary-light), var(--secondary), var(--secondary-dark)) !default;
 
-// ----------------------------------------------------------
-// Token names and values
-// ----------------------------------------------------------
-$base-semantic-token-values: (
+$semantic-color-values:
+  "primary"   #fff var(--primary) var(--primary-dark) var(--primary-light) $primary-gradient,
+  "info"      #000 var(--info) var(--info-dark) var(--info-light) $info-gradient,
+  "success"   #fff var(--success) var(--success-dark) var(--success-light) $success-gradient,
+  "warning"   #000 var(--warning) var(--warning-dark) var(--warning-light) $warning-gradient,
+  "danger"    #fff var(--danger) var(--danger-dark) var(--danger-light) $danger-gradient,
+  "secondary" #000 var(--secondary) var(--secondary-dark) var(--secondary-light) $secondary-gradient,
+!default;
+
+$semantic-token-values: (
   "primary": $primary,
   "info": $info,
   "success": $success,
@@ -57,18 +66,3 @@ $base-semantic-token-values: (
   "danger-dark": $danger-dark,
   "secondary-dark": $secondary-dark,
 ) !default;
-
-// ----------------------------------------------------------
-// Variable mixins
-// ----------------------------------------------------------
-@mixin semantic-variables {
-  @each $name, $value in $base-semantic-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin semantic-variables-css {
-  #{$semantic-tokens} {
-    @include semantic-variables;
-  }
-}

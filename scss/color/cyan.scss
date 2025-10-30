@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Cyan
 // ----------------------------------------------------------
-// Variable colors
-$cyan:      #00e6e6 !default;
-$cyan-1:    color-mix(in srgb, var(--cyan) 20%, white) !default;
-$cyan-2:    color-mix(in srgb, var(--cyan) 30%, white) !default;
-$cyan-3:    color-mix(in srgb, var(--cyan) 40%, white) !default;
-$cyan-4:    color-mix(in srgb, var(--cyan) 50%, white) !default;
-$cyan-5:    color-mix(in srgb, var(--cyan) 60%, white) !default;
-$cyan-6:    var(--cyan) !default;  
-$cyan-7:    color-mix(in srgb, var(--cyan) 92%, black) !default;
-$cyan-8:    color-mix(in srgb, var(--cyan) 82%, black) !default;
-$cyan-9:    color-mix(in srgb, var(--cyan) 72%, black) !default;
-$cyan-10:   color-mix(in srgb, var(--cyan) 62%, black) !default;
-$cyan-11:   color-mix(in srgb, var(--cyan) 52%, black) !default;
+$cyan:              #00e6e6 !default;
+$cyan-1:            color-mix(in srgb, var(--cyan) 19%, #fff) !default;
+$cyan-2:            color-mix(in srgb, var(--cyan) 26%, #fff) !default;
+$cyan-3:            color-mix(in srgb, var(--cyan) 35%, #fff) !default;
+$cyan-4:            color-mix(in srgb, var(--cyan) 45%, #fff) !default;
+$cyan-5:            color-mix(in srgb, var(--cyan) 60%, #fff) !default;
+$cyan-6:            var(--cyan) !default;
+$cyan-7:            color-mix(in srgb, var(--cyan) 90%, #000) !default;
+$cyan-8:            color-mix(in srgb, var(--cyan) 80%, #000) !default;
+$cyan-9:            color-mix(in srgb, var(--cyan) 70%, #000) !default;
+$cyan-10:           color-mix(in srgb, var(--cyan) 60%, #000) !default;
+$cyan-11:           color-mix(in srgb, var(--cyan) 54%, #000) !default;
 
-// Tokens style
 $cyan-tokens:       ':where(html)' !default;
 
-// Utility colors
 $cyan-bg-text:      #000 !default;
 $cyan-bg:           var(--cyan-6) !default;
 $cyan-bg-dark:      var(--cyan-7) !default;
 $cyan-bg-light:     var(--cyan-5) !default;
 
-// Background text colors
-$cyan-1-bg-text:      #000 !default;
-$cyan-2-bg-text:      #000 !default;
-$cyan-3-bg-text:      #000 !default;
-$cyan-4-bg-text:      #000 !default;
-$cyan-5-bg-text:      #000 !default;
-$cyan-6-bg-text:      #000 !default;
-$cyan-7-bg-text:      #000 !default;
-$cyan-8-bg-text:      #000 !default;
-$cyan-9-bg-text:      #fff !default;
-$cyan-10-bg-text:     #fff !default;
-$cyan-11-bg-text:     #fff !default;
+$cyan-gradient:     linear-gradient(180deg, $cyan-bg-light, $cyan-bg, $cyan-bg-dark) !default;
 
-// Background color values
-$cyan-backgrounds:
-  "cyan"    $cyan-bg-text var(--cyan),
-  "cyan-1"  $cyan-1-bg-text var(--cyan-1),
-  "cyan-2"  $cyan-2-bg-text var(--cyan-2),
-  "cyan-3"  $cyan-3-bg-text var(--cyan-3),
-  "cyan-4"  $cyan-4-bg-text var(--cyan-4),
-  "cyan-5"  $cyan-5-bg-text var(--cyan-5),
-  "cyan-6"  $cyan-6-bg-text var(--cyan-6),
-  "cyan-7"  $cyan-7-bg-text var(--cyan-7),
-  "cyan-8"  $cyan-8-bg-text var(--cyan-8),
-  "cyan-9"  $cyan-9-bg-text var(--cyan-9),
-  "cyan-10" $cyan-10-bg-text var(--cyan-10),
-  "cyan-11" $cyan-11-bg-text var(--cyan-11)
-; //
-
-// Variables tokens map
-$cyan-token-values: (
-  "cyan": $cyan,
-  "cyan-1": $cyan-1,
-  "cyan-2": $cyan-2,
-  "cyan-3": $cyan-3,
-  "cyan-4": $cyan-4,
-  "cyan-5": $cyan-5,
-  "cyan-6": $cyan-6,
-  "cyan-7": $cyan-7,
-  "cyan-8": $cyan-8,
-  "cyan-9": $cyan-9,
-  "cyan-10": $cyan-10,
-  "cyan-11": $cyan-11,
-) !default;
-
-// Variables mixins
-@mixin cyan-variables {
-  @each $name, $value in $cyan-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin cyan-variables-css {
-  #{$cyan-tokens} {
-    @include cyan-variables;
-  }
-}
+$cyan-color-values:
+  "cyan"    $cyan #000,
+  "cyan-1"  $cyan-1 #000,
+  "cyan-2"  $cyan-2 #000,
+  "cyan-3"  $cyan-3 #000,
+  "cyan-4"  $cyan-4 #000,
+  "cyan-5"  $cyan-5 #000,
+  "cyan-6"  $cyan-6 #000,
+  "cyan-7"  $cyan-7 #000,
+  "cyan-8"  $cyan-8 #000,
+  "cyan-9"  $cyan-9 #000,
+  "cyan-10" $cyan-10 #000,
+  "cyan-11" $cyan-11 #fff,
+!default;

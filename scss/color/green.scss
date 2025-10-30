@@ -1,83 +1,39 @@
 // ---------------------------------------------------------- 
 // Green
 // ----------------------------------------------------------
-// Variable colors
-$green:      #006400 !default;
-$green-1:    color-mix(in srgb, var(--green) 40%, white) !default;
-$green-2:    color-mix(in srgb, var(--green) 50%, white) !default;
-$green-3:    color-mix(in srgb, var(--green) 60%, white) !default;
-$green-4:    color-mix(in srgb, var(--green) 70%, white) !default;
-$green-5:    color-mix(in srgb, var(--green) 80%, white) !default;
-$green-6:    var(--green) !default;  
-$green-7:    color-mix(in srgb, var(--green) 80%, black) !default;
-$green-8:    color-mix(in srgb, var(--green) 70%, black) !default;
-$green-9:    color-mix(in srgb, var(--green) 60%, black) !default;
-$green-10:   color-mix(in srgb, var(--green) 50%, black) !default;
-$green-11:   color-mix(in srgb, var(--green) 44%, black) !default;
+$green:               #006400 !default;
+$green-1:             color-mix(in srgb, var(--green) 34%, #fff) !default;
+$green-2:             color-mix(in srgb, var(--green) 47%, #fff) !default;
+$green-3:             color-mix(in srgb, var(--green) 60%, #fff) !default;
+$green-4:             color-mix(in srgb, var(--green) 75%, #fff) !default;
+$green-5:             color-mix(in srgb, var(--green) 87%, #fff) !default;
+$green-6:             var(--green) !default;  
+$green-7:             color-mix(in srgb, var(--green) 80%, #000) !default;
+$green-8:             color-mix(in srgb, var(--green) 62%, #000) !default;
+$green-9:             color-mix(in srgb, var(--green) 47%, #000) !default;
+$green-10:            color-mix(in srgb, var(--green) 33%, #000) !default;
+$green-11:            color-mix(in srgb, var(--green) 24%, #000) !default;
 
-// Tokens style
-$green-tokens:       ':where(html)' !default;
+$green-tokens:        ':where(html)' !default;
 
-// Utility colors
-$green-bg-text:      #fff !default;
-$green-bg:           var(--green-6) !default;
-$green-bg-dark:      var(--green-7) !default;
-$green-bg-light:     var(--green-5) !default;
+$green-bg-text:       #fff !default;
+$green-bg:            var(--green-6) !default;
+$green-bg-dark:       var(--green-7) !default;
+$green-bg-light:      var(--green-5) !default;
 
-// Background text colors
-$green-1-bg-text:      #000 !default;
-$green-2-bg-text:      #000 !default;
-$green-3-bg-text:      #000 !default;
-$green-4-bg-text:      #000 !default;
-$green-5-bg-text:      #fff !default;
-$green-6-bg-text:      #fff !default;
-$green-7-bg-text:      #fff !default;
-$green-8-bg-text:      #fff !default;
-$green-9-bg-text:      #fff !default;
-$green-10-bg-text:     #fff !default;
-$green-11-bg-text:     #fff !default;
+$green-gradient:      linear-gradient(180deg, $green-bg-light, $green-bg, $green-bg-dark) !default;
 
-// Background color values
-$green-backgrounds:
-  "green"    $green-bg-text var(--green),
-  "green-1"  $green-1-bg-text var(--green-1),
-  "green-2"  $green-2-bg-text var(--green-2),
-  "green-3"  $green-3-bg-text var(--green-3),
-  "green-4"  $green-4-bg-text var(--green-4),
-  "green-5"  $green-5-bg-text var(--green-5),
-  "green-6"  $green-6-bg-text var(--green-6),
-  "green-7"  $green-7-bg-text var(--green-7),
-  "green-8"  $green-8-bg-text var(--green-8),
-  "green-9"  $green-9-bg-text var(--green-9),
-  "green-10" $green-10-bg-text var(--green-10),
-  "green-11" $green-11-bg-text var(--green-11)
-; //
-
-// Variables tokens map
-$green-token-values: (
-  "green": $green,
-  "green-1": $green-1,
-  "green-2": $green-2,
-  "green-3": $green-3,
-  "green-4": $green-4,
-  "green-5": $green-5,
-  "green-6": $green-6,
-  "green-7": $green-7,
-  "green-8": $green-8,
-  "green-9": $green-9,
-  "green-10": $green-10,
-  "green-11": $green-11,
-) !default;
-
-// Variables mixins
-@mixin green-variables {
-  @each $name, $value in $green-token-values {
-    --#{$name}: #{$value};
-  }
-}
-
-@mixin green-variables-css {
-  #{$green-tokens} {
-    @include green-variables;
-  }
-}
+$green-color-values:
+  "green"    $green #fff,
+  "green-1"  $green-1 #000,
+  "green-2"  $green-2 #000,
+  "green-3"  $green-3 #000,
+  "green-4"  $green-4 #000,
+  "green-5"  $green-5 #fff,
+  "green-6"  $green-6 #fff,
+  "green-7"  $green-7 #fff,
+  "green-8"  $green-8 #fff,
+  "green-9"  $green-9 #fff,
+  "green-10" $green-10 #fff,
+  "green-11" $green-11 #fff,
+!default;

@@ -1,0 +1,237 @@
+// ----------------------------------------------------------
+// Breakpoints
+// ----------------------------------------------------------
+// Values
+$breakpoint-query:              'width <=' !default;
+$breakpoint-xxl:                1920px !default;
+$breakpoint-xl:                 1600px !default;
+$breakpoint-lg:                 1280px !default;
+$breakpoint-md:                 1024px !default;
+$breakpoint-sm:                 768px !default;
+$breakpoint-xs:                 480px !default;
+$breakpoint-xxs:                360px !default;
+
+// Border utilities
+$enable-borders-xxl:            false !default;
+$enable-borders-xl:             false !default;
+$enable-borders-lg:             false !default;
+$enable-borders-md:             false !default;
+$enable-borders-sm:             false !default;
+$enable-borders-xs:             false !default;
+$enable-borders-xxs:            false !default;
+
+// Text utilities
+$enable-text-xxl:               false !default;
+$enable-text-xl:                false !default;
+$enable-text-lg:                false !default;
+$enable-text-md:                false !default;
+$enable-text-sm:                false !default;
+$enable-text-xs:                false !default;
+$enable-text-xxs:               false !default;
+
+// Grid layouts
+$enable-grid-layouts-xxl:       false !default;
+$enable-grid-layouts-xl:        false !default;
+$enable-grid-layouts-lg:        false !default;
+$enable-grid-layouts-md:        false !default;
+$enable-grid-layouts-sm:        false !default;
+$enable-grid-layouts-xs:        false !default;
+$enable-grid-layouts-xxs:       false !default;
+
+// Grid templates
+$enable-grid-templates-xxl:     false !default;
+$enable-grid-templates-xl:      false !default;
+$enable-grid-templates-lg:      false !default;
+$enable-grid-templates-md:      false !default;
+$enable-grid-templates-sm:      false !default;
+$enable-grid-templates-xs:      false !default;
+$enable-grid-templates-xxs:     false !default;
+
+// Gaps
+$enable-gaps-xxl:               false !default;
+$enable-gaps-xl:                false !default;
+$enable-gaps-lg:                false !default;
+$enable-gaps-md:                false !default;
+$enable-gaps-sm:                false !default;
+$enable-gaps-xs:                false !default;
+$enable-gaps-xxs:               false !default;
+
+// Margins
+$enable-margins-xxl:            false !default;
+$enable-margins-xl:             false !default;
+$enable-margins-lg:             false !default;
+$enable-margins-md:             false !default;
+$enable-margins-sm:             false !default;
+$enable-margins-xs:             false !default;
+$enable-margins-xxs:            false !default;
+
+// Padding
+$enable-padding-xxl:            false !default;
+$enable-padding-xl:             false !default;
+$enable-padding-lg:             false !default;
+$enable-padding-md:             false !default;
+$enable-padding-sm:             false !default;
+$enable-padding-xs:             false !default;
+$enable-padding-xxs:            false !default;
+
+// Align
+$enable-align-xxl:              false !default;
+$enable-align-xl:               false !default;
+$enable-align-lg:               false !default;
+$enable-align-md:               false !default;
+$enable-align-sm:               false !default;
+$enable-align-xs:               false !default;
+$enable-align-xxs:              false !default;
+
+// Aspect-ratio
+$enable-aspect-ratio-xxl:       false !default;
+$enable-aspect-ratio-xl:        false !default;
+$enable-aspect-ratio-lg:        false !default;
+$enable-aspect-ratio-md:        false !default;
+$enable-aspect-ratio-sm:        false !default;
+$enable-aspect-ratio-xs:        false !default;
+$enable-aspect-ratio-xxs:       false !default;
+
+// Block
+$enable-block-xxl:              false !default;
+$enable-block-xl:               false !default;
+$enable-block-lg:               false !default;
+$enable-block-md:               false !default;
+$enable-block-sm:               false !default;
+$enable-block-xs:               false !default;
+$enable-block-xxs:              false !default;
+
+// Columns
+$enable-columns-xxl:            false !default;
+$enable-columns-xl:             false !default;
+$enable-columns-lg:             false !default;
+$enable-columns-md:             false !default;
+$enable-columns-sm:             false !default;
+$enable-columns-xs:             false !default;
+$enable-columns-xxs:            false !default;
+
+// Display
+$enable-display-xxl:            false !default;
+$enable-display-xl:             false !default;
+$enable-display-lg:             false !default;
+$enable-display-md:             false !default;
+$enable-display-sm:             false !default;
+$enable-display-xs:             false !default;
+$enable-display-xxs:            false !default;
+
+// Flex
+$enable-flex-xxl:               false !default;
+$enable-flex-xl:                false !default;
+$enable-flex-lg:                false !default;
+$enable-flex-md:                false !default;
+$enable-flex-sm:                false !default;
+$enable-flex-xs:                false !default;
+$enable-flex-xxs:               false !default;
+
+// Grid
+$enable-grid-xxl:               false !default;
+$enable-grid-xl:                false !default;
+$enable-grid-lg:                false !default;
+$enable-grid-md:                false !default;
+$enable-grid-sm:                false !default;
+$enable-grid-xs:                false !default;
+$enable-grid-xxs:               false !default;
+
+// Inset
+$enable-inset-xxl:              false !default;
+$enable-inset-xl:               false !default;
+$enable-inset-lg:               false !default;
+$enable-inset-md:               false !default;
+$enable-inset-sm:               false !default;
+$enable-inset-xs:               false !default;
+$enable-inset-xxs:              false !default;
+
+// Justify
+$enable-justify-xxl:            false !default;
+$enable-justify-xl:             false !default;
+$enable-justify-lg:             false !default;
+$enable-justify-md:             false !default;
+$enable-justify-sm:             false !default;
+$enable-justify-xs:             false !default;
+$enable-justify-xxs:            false !default;
+
+// Object-fit
+$enable-object-fit-xxl:         false !default;
+$enable-object-fit-xl:          false !default;
+$enable-object-fit-lg:          false !default;
+$enable-object-fit-md:          false !default;
+$enable-object-fit-sm:          false !default;
+$enable-object-fit-xs:          false !default;
+$enable-object-fit-xxs:         false !default;
+
+// Order
+$enable-order-xxl:              false !default;
+$enable-order-xl:               false !default;
+$enable-order-lg:               false !default;
+$enable-order-md:               false !default;
+$enable-order-sm:               false !default;
+$enable-order-xs:               false !default;
+$enable-order-xxs:              false !default;
+
+// Overflow
+$enable-overflow-xxl:           false !default;
+$enable-overflow-xl:            false !default;
+$enable-overflow-lg:            false !default;
+$enable-overflow-md:            false !default;
+$enable-overflow-sm:            false !default;
+$enable-overflow-xs:            false !default;
+$enable-overflow-xxs:           false !default;
+
+// Overscroll
+$enable-overscroll-xxl:         false !default;
+$enable-overscroll-xl:          false !default;
+$enable-overscroll-lg:          false !default;
+$enable-overscroll-md:          false !default;
+$enable-overscroll-sm:          false !default;
+$enable-overscroll-xs:          false !default;
+$enable-overscroll-xxs:         false !default;
+
+// Place
+$enable-place-xxl:              false !default;
+$enable-place-xl:               false !default;
+$enable-place-lg:               false !default;
+$enable-place-md:               false !default;
+$enable-place-sm:               false !default;
+$enable-place-xs:               false !default;
+$enable-place-xxs:              false !default;
+
+// Position
+$enable-position-xxl:           false !default;
+$enable-position-xl:            false !default;
+$enable-position-lg:            false !default;
+$enable-position-md:            false !default;
+$enable-position-sm:            false !default;
+$enable-position-xs:            false !default;
+$enable-position-xxs:           false !default;
+
+// Scrollbars
+$enable-scrollbars-xxl:         false !default;
+$enable-scrollbars-xl:          false !default;
+$enable-scrollbars-lg:          false !default;
+$enable-scrollbars-md:          false !default;
+$enable-scrollbars-sm:          false !default;
+$enable-scrollbars-xs:          false !default;
+$enable-scrollbars-xxs:         false !default;
+
+// Sizes
+$enable-sizes-xxl:              false !default;
+$enable-sizes-xl:               false !default;
+$enable-sizes-lg:               false !default;
+$enable-sizes-md:               false !default;
+$enable-sizes-sm:               false !default;
+$enable-sizes-xs:               false !default;
+$enable-sizes-xxs:              false !default;
+
+// Z-index
+$enable-z-index-xxl:            false !default;
+$enable-z-index-xl:             false !default;
+$enable-z-index-lg:             false !default;
+$enable-z-index-md:             false !default;
+$enable-z-index-sm:             false !default;
+$enable-z-index-xs:             false !default;
+$enable-z-index-xxs:            false !default;
