@@ -102,130 +102,124 @@
 @mixin icons-framework {
   // SVG variable tokens
   #{$variables-tokens} {
-    // Default icons
-    @if $enable-house-svg {--house: #{$house};}
-    @if $enable-email-svg {--email: #{$email};}
-    @if $enable-bars-svg {--bars: #{$bars};}
-    @if $enable-dots-horizontal-svg {--dots-h: #{$dots-h};}
-    @if $enable-dots-vertical-svg {--dots-v: #{$dots-v};}
-    @if $enable-plus-svg {--plus: #{$plus};}
-    @if $enable-minus-svg {--minus: #{$minus};}
-    @if $enable-close-svg {--close: #{$close};}
-    @if $enable-search-svg {--search: #{$search};}
-    @if $enable-download-svg {--download: #{$download};}
-    @if $enable-info-box-svg {--info-box: #{$info-box};}
-    @if $enable-info-box-fill-svg {--info-box-fill: #{$info-box-fill};}
-    @if $enable-info-circle-svg {--info-circle: #{$info-circle};}
-    @if $enable-info-circle-fill-svg {--info-circle-fill: #{$info-circle-fill};}
-    @if $enable-question-circle-svg {--question-circle: #{$question-circle};}
-    @if $enable-question-circle-fill-svg {--question-circle-fill: #{$question-circle-fill};}
-    @if $enable-question-box-svg {--question-box: #{$question-box};}
-    @if $enable-question-box-fill-svg {--question-box-fill: #{$question-box-fill};}
-    @if $enable-box-svg {--box: #{$box};}
-    @if $enable-pen-box-svg {--pen-box: #{$pen-box};}
-    @if $enable-close-box-svg {--close-box: #{$close-box};}
-    @if $enable-close-box-fill-svg {--close-box-fill: #{$close-box-fill};}
-    @if $enable-tick-box-svg {--tick-box: #{$tick-box};}
-    @if $enable-ext-link-svg {--ext-link: #{$ext-link};}
-    @if $enable-pg-link-svg {--pg-link: #{$pg-link};}
-    @if $enable-sun-svg {--sun: #{$sun};}
-    @if $enable-moon-svg {--moon: #{$moon};}
-    @if $enable-caret-down-svg {--caret-down: #{$caret-down};}
-    @if $enable-caret-up-svg {--caret-up: #{$caret-up};}
-    @if $enable-caret-left-svg {--caret-left: #{$caret-left};}
-    @if $enable-caret-right-svg {--caret-right: #{$caret-right};}
-    @if $enable-user-svg {--user: #{$user};}
-    @if $enable-circle-svg {--circle: #{$circle};}
-    @if $enable-circle-fill-svg {--circle-fill: #{$circle-fill};}
-    @if $enable-circle-inner-svg {--circle-inner: #{$circle-inner};}
-    @if $enable-circle-half-svg {--circle-half: #{$circle-half};}
-    @if $enable-circle-sm-svg {--circle-sm: #{$circle-sm};}
-    @if $enable-circle-fill-sm-svg {--circle-fill-sm: #{$circle-fill-sm};}
-    @if $enable-circle-inner-sm-svg {--circle-inner-sm: #{$circle-inner-sm};}
-    @if $enable-circle-half-sm-svg {--circle-half-sm: #{$circle-half-sm};}
-    @if $enable-image-svg {--image: #{$image};}
-    @if $enable-image-fill-svg {--image-fill: #{$image-fill};}
-    
-    // Brand icons
-    @if $enable-rss-svg {--rss: #{$rss};}
-    @if $enable-stylemods-svg {--stylemods: #{$stylemods};}
-    @if $enable-css-svg {--css: #{$css};}
-    @if $enable-sass-svg {--sass: #{$sass};}
-    @if $enable-github-svg {--github: #{$github};}
-    @if $enable-twitter-svg {--twitter: #{$twitter};}
-    @if $enable-mastodon-svg {--mastodon: #{$mastodon};}
-    @if $enable-tiktok-svg {--tiktok: #{$tiktok};}
-    @if $enable-facebook-svg {--facebook: #{$facebook};}
-    @if $enable-instagram-svg {--instagram: #{$instagram};}
-    @if $enable-pinterest-svg {--pinterest: #{$pinterest};}
-    @if $enable-codepen-svg {--codepen: #{$codepen};}
-    @if $enable-reddit-svg {--reddit: #{$reddit};}
-    @if $enable-youtube-svg {--youtube: #{$youtube};}
+    @if $enable-house-svg {@include house-icon-token;}   
+    @if $enable-email-svg {@include email-icon-token;}
+    @if $enable-bars-svg {@include bars-icon-token;}    
+    @if $enable-dots-horizontal-svg {@include dots-horizontal-icon-token;}
+    @if $enable-dots-vertical-svg {@include dots-vertical-icon-token;}
+    @if $enable-plus-svg {@include plus-icon-token;}
+    @if $enable-minus-svg {@include minus-icon-token;}
+    @if $enable-close-svg {@include close-icon-token;}
+    @if $enable-search-svg {@include search-icon-token;}
+    @if $enable-download-svg {@include download-icon-token;}
+    @if $enable-info-box-svg {@include info-box-icon-token;}
+    @if $enable-info-box-fill-svg {@include info-box-fill-icon-token;}
+    @if $enable-info-circle-svg {@include info-circle-icon-token;}
+    @if $enable-info-circle-fill-svg {@include info-circle-fill-icon-token;}
+    @if $enable-question-circle-svg {@include question-circle-icon-token;}
+    @if $enable-question-circle-fill-svg {@include question-circle-fill-icon-token;}
+    @if $enable-question-box-svg {@include question-box-icon-token;}
+    @if $enable-question-box-fill-svg {@include question-box-fill-icon-token;}
+    @if $enable-box-svg {@include box-icon-token;}
+    @if $enable-pen-box-svg {@include pen-box-icon-token;}
+    @if $enable-close-box-svg {@include close-box-icon-token;}
+    @if $enable-close-box-fill-svg {@include close-box-fill-icon-token;}
+    @if $enable-tick-box-svg {@include tick-box-icon-token;}
+    @if $enable-ext-link-svg {@include ext-link-icon-token;}
+    @if $enable-pg-link-svg {@include pg-link-icon-token;}
+    @if $enable-sun-svg {@include sun-icon-token;}
+    @if $enable-moon-svg {@include moon-icon-token;}
+    @if $enable-caret-down-svg {@include caret-down-icon-token;}
+    @if $enable-caret-up-svg {@include caret-up-icon-token;}
+    @if $enable-caret-left-svg {@include caret-left-icon-token;}
+    @if $enable-caret-right-svg {@include caret-right-icon-token;}
+    @if $enable-user-svg {@include user-icon-token;}
+    @if $enable-circle-svg {@include circle-icon-token;}
+    @if $enable-circle-fill-svg {@include circle-fill-icon-token;}
+    @if $enable-circle-inner-svg {@include circle-inner-icon-token;}
+    @if $enable-circle-half-svg {@include circle-half-icon-token;}
+    @if $enable-circle-sm-svg {@include circle-sm-icon-token;}
+    @if $enable-circle-fill-sm-svg {@include circle-fill-sm-icon-token;}
+    @if $enable-circle-inner-sm-svg {@include circle-inner-sm-icon-token;}
+    @if $enable-circle-half-sm-svg {@include circle-half-sm-icon-token;}
+    @if $enable-image-svg {@include image-icon-token;}
+    @if $enable-image-fill-svg {@include image-fill-icon-token;}
+    @if $enable-rss-svg {@include rss-icon-token;}
+    @if $enable-stylemods-svg {@include stylemods-icon-token;}
+    @if $enable-css-svg {@include css-icon-token;}
+    @if $enable-sass-svg {@include sass-icon-token;}
+    @if $enable-github-svg {@include github-icon-token;}
+    @if $enable-twitter-svg {@include twitter-icon-token;}
+    @if $enable-mastodon-svg {@include mastodon-icon-token;}
+    @if $enable-tiktok-svg {@include tiktok-icon-token;}
+    @if $enable-facebook-svg {@include facebook-icon-token;}
+    @if $enable-instagram-svg {@include instagram-icon-token;}
+    @if $enable-pinterest-svg {@include pinterest-icon-token;}
+    @if $enable-codepen-svg {@include codepen-icon-token;}
+    @if $enable-reddit-svg {@include reddit-icon-token;}
+    @if $enable-youtube-svg {@include youtube-icon-token;}
   }
-
-  // Icon utility classes
-  @if $enable-icon-utilities-css { @include icon-utilities-css; }
-  @if $enable-icon-links-css { @include icon-links-css; }
-  @if $enable-icon-buttons-css { @include icon-buttons-css; }
   
   // SVG classes
-  // Default icons
-  @if $enable-house-svg {.house {--svg: var(--house);}}
-  @if $enable-email-svg {.email {--svg: var(--email);}}
-  @if $enable-bars-svg {.bars {--svg: var(--bars);}}
-  @if $enable-dots-horizontal-svg {.dots-h {--svg: var(--dots-h);}}
-  @if $enable-dots-vertical-svg {.dots-v {--svg: var(--dots-v);}}
-  @if $enable-plus-svg {.plus {--svg: var(--plus);}}
-  @if $enable-minus-svg {.minus {--svg: var(--minus);}}
-  @if $enable-close-svg {.close {--svg: var(--close);}}
-  @if $enable-search-svg {.search {--svg: var(--search);}}
-  @if $enable-download-svg {.download {--svg: var(--download);}}
-  @if $enable-info-box-svg {.info-box {--svg: var(--info-box);}}
-  @if $enable-info-box-fill-svg {.info-box-fill {--svg: var(--info-box-fill);}}
-  @if $enable-info-circle-svg {.info-circle {--svg: var(--info-circle);}}
-  @if $enable-info-circle-fill-svg {.info-circle-fill {--svg: var(--info-circle-fill);}}
-  @if $enable-question-circle-svg {.question-circle {--svg: var(--question-circle);}}
-  @if $enable-question-circle-fill-svg {.question-circle-fill {--svg: var(--question-circle-fill);}}
-  @if $enable-question-box-svg {.question-box {--svg: var(--question-box);}}
-  @if $enable-question-box-fill-svg {.question-box-fill {--svg: var(--question-box-fill);}}
-  @if $enable-box-svg {.box {--svg: var(--box);}}
-  @if $enable-pen-box-svg {.pen-box {--svg: var(--pen-box);}}
-  @if $enable-close-box-svg {.close-box {--svg: var(--close-box);}}
-  @if $enable-close-box-fill-svg {.close-box-fill {--svg: var(--close-box-fill);}}
-  @if $enable-tick-box-svg {.tick-box {--svg: var(--tick-box);}}
-  @if $enable-ext-link-svg {.ext-link {--svg: var(--ext-link);}}
-  @if $enable-pg-link-svg {.pg-link {--svg: var(--pg-link);}}
-  @if $enable-sun-svg {.sun {--svg: var(--sun);}}
-  @if $enable-moon-svg {.moon {--svg: var(--moon);}}
-  @if $enable-caret-down-svg {.caret-down {--svg: var(--caret-down);}}
-  @if $enable-caret-up-svg {.caret-up {--svg: var(--caret-up);}}
-  @if $enable-caret-left-svg {.caret-left {--svg: var(--caret-left);}}
-  @if $enable-caret-right-svg {.caret-right {--svg: var(--caret-right);}}
-  @if $enable-user-svg {.user {--svg: var(--user);}}
-  @if $enable-circle-svg {.circle {--svg: var(--circle);}}
-  @if $enable-circle-fill-svg {.circle-fill {--svg: var(--circle-fill);}}
-  @if $enable-circle-inner-svg {.circle-inner {--svg: var(--circle-inner);}}
-  @if $enable-circle-half-svg {.circle-half {--svg: var(--circle-half);}}
-  @if $enable-circle-sm-svg {.circle-sm {--svg: var(--circle-sm);}}
-  @if $enable-circle-fill-sm-svg {.circle-fill-sm {--svg: var(--circle-fill-sm);}}
-  @if $enable-circle-inner-sm-svg {.circle-inner-sm {--svg: var(--circle-inner-sm);}}
-  @if $enable-circle-half-sm-svg {.circle-half-sm {--svg: var(--circle-half-sm);}}
-  @if $enable-image-svg {.image {--svg: var(--image);}}
-  @if $enable-image-fill-svg {.image-fill {--svg: var(--image-fill);}}
+  @if $enable-house-svg {@include house-icon-class;}
+  @if $enable-email-svg {@include email-icon-class;}
+  @if $enable-bars-svg {@include bars-icon-class;}
+  @if $enable-dots-horizontal-svg {@include dots-horizontal-icon-class;}
+  @if $enable-dots-vertical-svg {@include dots-vertical-icon-class;}
+  @if $enable-plus-svg {@include plus-icon-class;}
+  @if $enable-minus-svg {@include minus-icon-class;}
+  @if $enable-close-svg {@include close-icon-class;}
+  @if $enable-search-svg {@include search-icon-class;}
+  @if $enable-download-svg {@include download-icon-class;}
+  @if $enable-info-box-svg {@include info-box-icon-class;}
+  @if $enable-info-box-fill-svg {@include info-box-fill-icon-class;}
+  @if $enable-info-circle-svg {@include info-circle-icon-class;}
+  @if $enable-info-circle-fill-svg {@include info-circle-fill-icon-class;}
+  @if $enable-question-circle-svg {@include question-circle-icon-class;}
+  @if $enable-question-circle-fill-svg {@include question-circle-fill-icon-class;}
+  @if $enable-question-box-svg {@include question-box-icon-class;}
+  @if $enable-question-box-fill-svg {@include question-box-fill-icon-class;}
+  @if $enable-box-svg {@include box-icon-class;}
+  @if $enable-pen-box-svg {@include pen-box-icon-class;}
+  @if $enable-close-box-svg {@include close-box-icon-class;}
+  @if $enable-close-box-fill-svg {@include close-box-fill-icon-class;}
+  @if $enable-tick-box-svg {@include tick-box-icon-class;}
+  @if $enable-ext-link-svg {@include ext-link-icon-class;}
+  @if $enable-pg-link-svg {@include pg-link-icon-class;}
+  @if $enable-sun-svg {@include sun-icon-class;}
+  @if $enable-moon-svg {@include moon-icon-class;}
+  @if $enable-caret-down-svg {@include caret-down-icon-class;}
+  @if $enable-caret-up-svg {@include caret-up-icon-class;}
+  @if $enable-caret-left-svg {@include caret-left-icon-class;}
+  @if $enable-caret-right-svg {@include caret-right-icon-class;}
+  @if $enable-user-svg {@include user-icon-class;}
+  @if $enable-circle-svg {@include circle-icon-class;}
+  @if $enable-circle-fill-svg {@include circle-fill-icon-class;}
+  @if $enable-circle-inner-svg {@include circle-inner-icon-class;}
+  @if $enable-circle-half-svg {@include circle-half-icon-class;}
+  @if $enable-circle-sm-svg {@include circle-sm-icon-class;}
+  @if $enable-circle-fill-sm-svg {@include circle-fill-sm-icon-class;}
+  @if $enable-circle-inner-sm-svg {@include circle-inner-sm-icon-class;}
+  @if $enable-circle-half-sm-svg {@include circle-half-sm-icon-class;}
+  @if $enable-image-svg {@include image-icon-class;}
+  @if $enable-image-fill-svg {@include image-fill-icon-class;}
+  @if $enable-rss-svg {@include rss-icon-class;}
+  @if $enable-stylemods-svg {@include stylemods-icon-class;}
+  @if $enable-css-svg {@include css-icon-class;}
+  @if $enable-sass-svg {@include sass-icon-class;}
+  @if $enable-github-svg {@include github-icon-class;}
+  @if $enable-twitter-svg {@include twitter-icon-class;}
+  @if $enable-mastodon-svg {@include mastodon-icon-class;}
+  @if $enable-tiktok-svg {@include tiktok-icon-class;}
+  @if $enable-facebook-svg {@include facebook-icon-class;}
+  @if $enable-instagram-svg {@include instagram-icon-class;}
+  @if $enable-pinterest-svg {@include pinterest-icon-class;}
+  @if $enable-codepen-svg {@include codepen-icon-class;}
+  @if $enable-reddit-svg {@include reddit-icon-class;}
+  @if $enable-youtube-svg {@include youtube-icon-class;}
   
-  // Brand icons
-  @if $enable-rss-svg {.rss {--svg: var(--rss);}}
-  @if $enable-stylemods-svg {.stylemods {--svg: var(--stylemods);}}
-  @if $enable-css-svg {.css {--svg: var(--css);}}
-  @if $enable-sass-svg {.sass {--svg: var(--sass);}}
-  @if $enable-github-svg {.github {--svg: var(--github);}}
-  @if $enable-twitter-svg {.twitter {--svg: var(--twitter);}}
-  @if $enable-mastodon-svg {.mastodon {--svg: var(--mastodon);}}
-  @if $enable-tiktok-svg {.tiktok {--svg: var(--tiktok);}}
-  @if $enable-facebook-svg {.facebook {--svg: var(--facebook);}}
-  @if $enable-instagram-svg {.instagram {--svg: var(--instagram);}}
-  @if $enable-pinterest-svg {.pinterest {--svg: var(--pinterest);}}
-  @if $enable-codepen-svg {.codepen {--svg: var(--codepen);}}
-  @if $enable-reddit-svg {.reddit {--svg: var(--reddit);}}
-  @if $enable-youtube-svg {.youtube {--svg: var(--youtube);}}
+  // Icon utility classes
+  @if $enable-icon-utilities-css {@include icon-utilities-css;}
+  @if $enable-icon-links-css {@include icon-links-css;}
+  @if $enable-icon-buttons-css {@include icon-buttons-css;}
 }

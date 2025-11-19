@@ -89,7 +89,7 @@ $input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 20%,
   background-color: $button-background-hover;
 }
 
-:where(button, [type=button], [type=submit], [type=reset], .btn):focus:not(:focus-visible) {
+:where(button, [type=button], [type=submit], [type=reset]):focus:not(:focus-visible) {
   background-color: $button-background-color;
 }
 

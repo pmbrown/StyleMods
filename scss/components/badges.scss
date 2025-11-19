@@ -12,7 +12,8 @@ $badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 4%, Canv
 
 @mixin badges-css {
 
-:where(.badge) {
+:where(.badge),
+:where([class*="badge-"]) {
   color: $badge-text-color;
   font-size: $badge-font-size;
   font-weight: $badge-font-weight;

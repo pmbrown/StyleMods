@@ -1,7 +1,7 @@
 // ---------------------------------------------------------- 
 // All icons
 // ----------------------------------------------------------
-@use "svg-icons" as *;
+@use "icon-variables" as *;
 @use "custom-icons" as *;
 @use "icon-utilities" as *;
 
@@ -9,13 +9,11 @@ $all-icons-tokens: ':where(html)' !default;
 
 @mixin all-icons-css {
   #{$all-icons-tokens} {
-    @include default-svg-icon-variables;
-    @include brand-svg-icon-variables;
+    @include icon-variables;
     @include custom-icon-variables;
   }
   
-  @include default-svg-icon-classes-css;
-  @include brand-svg-icon-classes-css;
+  @include icon-classes-css;
   @include custom-icon-classes-css;
   @include all-icon-utilities-css;
 }
