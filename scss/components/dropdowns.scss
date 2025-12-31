@@ -57,8 +57,7 @@ details:has(.dropdown, .dropdown-list, .dropdown-body) summary:after {
   inline-size: 1em;
   vertical-align: -.115em;
   background-color: $dropdown-icon-color;
-  mask-image: var(--svg);
-  mask-repeat: no-repeat;
+  mask: var(--svg) no-repeat;
   margin-inline-start: 0.2rem;
 }
 

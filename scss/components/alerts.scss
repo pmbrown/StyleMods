@@ -64,8 +64,7 @@ $close-alert:                 $alert-close-icon !default;
   inline-size: 1em;  
   vertical-align: -.115em;
   background-color: var(--ico);
-  mask-image: #{$close-alert};
-  mask-repeat: no-repeat;
+  mask: #{$close-alert} no-repeat;
 }
 
 .alert [method="dialog"] button span {

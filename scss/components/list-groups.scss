@@ -35,7 +35,7 @@ $list-group-inner-radius:         calc($list-group-radius - 1px) !default;
   border-block-end: 1px solid $list-group-border-color;
 }
 
-:where(.list-group :is(li, dt, dd), .list-links dt) {
+:where(.list-group :is(li, dt, dd), .list-links dt:not(:has(a))) {
   padding-block: $list-group-padding-block;
   padding-inline: $list-group-padding-inline;
 }
@@ -43,12 +43,6 @@ $list-group-inner-radius:         calc($list-group-radius - 1px) !default;
 :where(.list-group, .list-links) dt {
   font-weight: $list-group-dt-font-weight;
   border-block-end: 1px solid $list-group-border-color;
-  background-color: $list-group-dt-background-color;
-}
-
-:where(.list-group, .list-links) dt:first-child {
-  border-start-start-radius: $list-group-inner-radius;
-  border-start-end-radius: $list-group-inner-radius;
 }
 
 // List links

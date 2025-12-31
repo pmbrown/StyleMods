@@ -6,11 +6,13 @@ $dark-scheme-icon:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='cur
 
 @mixin theme-switch-css {
 
-[style="color-scheme: light;"] #themes {
+[style="color-scheme: light;"] #themes:before {
+  content: "" / "Light ";
   --svg: #{$light-scheme-icon};
 }
   
-[style="color-scheme: dark;"] #themes {
+[style="color-scheme: dark;"] #themes:before {
+  content: "" / "Dark ";
   --svg: #{$dark-scheme-icon};
 }
 
@@ -21,8 +23,7 @@ $dark-scheme-icon:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='cur
   inline-size: 1em;  
   vertical-align: -.12em;
   background-color: var(--ico, buttontext);
-  mask-image: var(--svg);
-  mask-repeat: no-repeat;
+  mask: var(--svg) no-repeat;
 }
 
 #themes span {

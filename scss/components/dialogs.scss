@@ -184,8 +184,7 @@ dialog:has(.dialog-header), .dialog-img, .dialog-figure {
   inline-size: 1em;  
   vertical-align: -.115em;
   background-color: var(--ico);
-  mask-image: #{$dialog-close-icon};
-  mask-repeat: no-repeat;
+  mask: #{$dialog-close-icon} no-repeat;
 }
 
 .close-dialog-ico-b:before {

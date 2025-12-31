@@ -8,8 +8,7 @@
   inline-size: var(--ico-xy, 1em);  
   vertical-align: var(--ico-va, -.115em);
   background-color: var(--ico, CanvasText);
-  mask-image: var(--svg);
-  mask-repeat: no-repeat;
+  mask: var(--svg) no-repeat;
   opacity: var(--ico-op, 1);
 }
 
