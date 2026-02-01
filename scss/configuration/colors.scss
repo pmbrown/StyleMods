@@ -1,21 +1,10 @@
 // ---------------------------------------------------------- 
 // Colors
 // ----------------------------------------------------------
-// Theme colors (variables only)
-$enable-theme-surface:                false !default; // 5 colors
-$enable-theme-surface-palette:        false !default; // 12 colors
-$enable-theme-typography:             false !default;
-$enable-theme-forms-buttons:          false !default;
-$enable-theme-tables:                 false !default;
-$enable-theme-accordions:             false !default;
-$enable-theme-alerts:                 false !default;
-$enable-theme-badges:                 false !default;
-$enable-theme-borders:                false !default;
-$enable-theme-dialogs:                false !default;
-$enable-theme-dropdowns:              false !default;
-$enable-theme-cards:                  false !default;
-$enable-theme-list-groups:            false !default;
-$enable-theme-popovers:               false !default;
+// Theme colors
+$enable-theme-background-color:       false !default;
+$enable-theme-reset-colors:           false !default; // Requires typography enabled, includes theme-background-color
+$enable-theme-color-scheme:           false !default; // Not required if typography enabled.
 
 // ----------------------------------------------------------
 // Semantic colors

@@ -16,6 +16,7 @@
 // Content
 // ----------------------------------------------------------
 @mixin content-framework {
+  @if $enable-theme-color-scheme { @include theme-color-scheme-css; }
   @if $enable-typography { @include typography-css; }
   @if $enable-forms-buttons { @include forms-buttons-css; }
   @if $enable-tables { @include tables-css; }

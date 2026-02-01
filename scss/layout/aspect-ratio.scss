@@ -16,17 +16,15 @@ $aspect-ratio-values: (
     aspect-ratio: var(--ratio);
   }
   
-  @each $name, $value in $aspect-ratio-values {
-    .ratio-#{$name} {
-      aspect-ratio: $value;     
-    }   
-  }
-  
   .child-ratio *:not(figcaption) {
     aspect-ratio: var(--ratio);
   }
   
   @each $name, $value in $aspect-ratio-values {
+    .ratio-#{$name} {
+      aspect-ratio: $value;     
+    }   
+
     .child-ratio-#{$name} *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -40,9 +38,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-xxl {
       aspect-ratio: #{$value};        
     }    
-  }
-  
-  @each $name, $value in $aspect-ratio-values {
+
     .child-ratio-#{$name}-xxl *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -54,9 +50,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-xl {
       aspect-ratio: #{$value};        
     }    
-  }
 
-  @each $name, $value in $aspect-ratio-values {
     .child-ratio-#{$name}-xl *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -68,9 +62,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-lg {
       aspect-ratio: #{$value};        
     }    
-  }
 
-  @each $name, $value in $aspect-ratio-values {
     .child-ratio-#{$name}-lg *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -82,9 +74,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-md {
       aspect-ratio: #{$value};        
     }    
-  }
 
-  @each $name, $value in $aspect-ratio-values {
     .child-ratio-#{$name}-md *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -96,9 +86,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-sm {
       aspect-ratio: #{$value};        
     }    
-  }
 
-  @each $name, $value in $aspect-ratio-values {
     .child-ratio-#{$name}-sm *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -110,9 +98,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-xs {
       aspect-ratio: #{$value};        
     }    
-  }
 
-  @each $name, $value in $aspect-ratio-values {
     .child-ratio-#{$name}-xs *:not(figcaption) {
       aspect-ratio: $value;   
     }  
@@ -124,9 +110,7 @@ $aspect-ratio-values: (
     .ratio-#{$name}-xxs {
       aspect-ratio: #{$value};        
     }    
-  }
 
-  @each $name, $value in $aspect-ratio-values {
     .child-ratio-#{$name}-xxs *:not(figcaption) {
       aspect-ratio: $value;   
     }  

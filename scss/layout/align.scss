@@ -1,24 +1,23 @@
 //  ------------------------------------------------------------
 //  Align
 //  ------------------------------------------------------------
-$align-content-values: (
+@use "sass:map";
+
+$align-values: (
   "flex-start": flex-start,
   "flex-end": flex-end,
   "start": start,
   "end": end,
   "center": center,
+) !default;
+
+$align-space-values: (
   "around": space-around,
   "between": space-between,
   "evenly": space-evenly,
 ) !default;
 
-$align-items-self-values: (
-  "flex-start": flex-start,
-  "flex-end": flex-end,
-  "start": start,
-  "end": end,
-  "center": center,
-) !default;
+$align-content-values:  map.merge($align-values, $align-space-values) !default;
 
 @mixin align-content-css {  
   @each $name, $value in $align-content-values {
@@ -29,7 +28,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name} {
       align-items: #{$value};
     }
@@ -37,7 +36,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name} {
       align-self: #{$value};
     }
@@ -54,7 +53,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-xxl-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-xxl {
       align-items: #{$value};
     }
@@ -62,7 +61,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-xxl-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-xxl {
       align-self: #{$value};
     }
@@ -79,7 +78,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-xl-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-xl {
       align-items: #{$value};
     }
@@ -87,7 +86,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-xl-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-xl {
       align-self: #{$value};
     }
@@ -104,7 +103,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-lg-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-lg {
       align-items: #{$value};
     }
@@ -112,7 +111,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-lg-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-lg {
       align-self: #{$value};
     }
@@ -129,7 +128,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-md-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-md {
       align-items: #{$value};
     }
@@ -137,7 +136,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-md-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-md {
       align-self: #{$value};
     }
@@ -154,7 +153,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-sm-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-sm {
       align-items: #{$value};
     }
@@ -162,7 +161,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-sm-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-sm {
       align-self: #{$value};
     }
@@ -179,7 +178,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-xs-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-xs {
       align-items: #{$value};
     }
@@ -187,7 +186,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-xs-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-xs {
       align-self: #{$value};
     }
@@ -204,7 +203,7 @@ $align-items-self-values: (
 }
 
 @mixin align-items-xxs-css {  
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-items-#{$name}-xxs {
       align-items: #{$value};
     }
@@ -212,7 +211,7 @@ $align-items-self-values: (
 }
 
 @mixin align-self-xxs-css { 
-  @each $name, $value in $align-items-self-values {
+  @each $name, $value in $align-values {
     .align-self-#{$name}-xxs {
       align-self: #{$value};
     }

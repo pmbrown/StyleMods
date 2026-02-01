@@ -1,7 +1,25 @@
 //  ------------------------------------------------------------
 //  Justify
 //  ------------------------------------------------------------
-$justify-content-values: (
+@use "sass:map";
+
+$justify-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+) !default;
+
+$justify-space-values: (
+  "around": space-around,
+  "between": space-between,
+  "evenly": space-evenly,
+) !default;
+
+$justify-content-values:  map.merge($justify-values, $justify-space-values) !default;
+
+$justify-content-valuess: (
   "flex-start": flex-start,
   "flex-end": flex-end,
   "start": start,
@@ -29,7 +47,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name} {
       justify-items: #{$value};
     }
@@ -37,7 +55,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name} {
       justify-self: #{$value};
     }
@@ -54,7 +72,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-xxl-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-xxl {
       justify-items: #{$value};
     }
@@ -62,7 +80,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-xxl-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-xxl {
       justify-self: #{$value};
     }
@@ -79,7 +97,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-xl-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-xl {
       justify-items: #{$value};
     }
@@ -87,7 +105,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-xl-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-xl {
       justify-self: #{$value};
     }
@@ -104,7 +122,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-lg-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-lg {
       justify-items: #{$value};
     }
@@ -112,7 +130,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-lg-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-lg {
       justify-self: #{$value};
     }
@@ -129,7 +147,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-md-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-md {
       justify-items: #{$value};
     }
@@ -137,7 +155,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-md-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-md {
       justify-self: #{$value};
     }
@@ -154,7 +172,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-sm-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-sm {
       justify-items: #{$value};
     }
@@ -162,7 +180,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-sm-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-sm {
       justify-self: #{$value};
     }
@@ -179,7 +197,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-xs-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-xs {
       justify-items: #{$value};
     }
@@ -187,7 +205,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-xs-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-xs {
       justify-self: #{$value};
     }
@@ -204,7 +222,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-items-xxs-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-items-#{$name}-xxs {
       justify-items: #{$value};
     }
@@ -212,7 +230,7 @@ $justify-items-self-values: (
 }
 
 @mixin justify-self-xxs-css {  
-  @each $name, $value in $justify-items-self-values {
+  @each $name, $value in $justify-values {
     .justify-self-#{$name}-xxs {
       justify-self: #{$value};
     }

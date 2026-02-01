@@ -16,20 +16,8 @@
     @if $enable-semantic-variables { @include semantic-variables; }
     
     // Theme variables
-    @if $enable-theme-surface { @include theme-surface-variables; }
-    @if $enable-theme-surface-palette { @include theme-surface-palette-variables; }
-    @if $enable-theme-typography { @include theme-typography-variables; }
-    @if $enable-theme-forms-buttons { @include theme-forms-buttons-variables; }
-    @if $enable-theme-tables { @include theme-tables-variables; }
-    @if $enable-theme-accordions { @include theme-accordions-variables; }
-    @if $enable-theme-alerts { @include theme-alert-variables; }
-    @if $enable-theme-badges { @include theme-badge-variables; }
-    @if $enable-theme-borders { @include theme-border-variables; }
-    @if $enable-theme-dialogs { @include theme-dialog-variables; }
-    @if $enable-theme-dropdowns { @include theme-dropdown-variables; }
-    @if $enable-theme-cards { @include theme-card-variables; }
-    @if $enable-theme-list-groups { @include theme-list-group-variables; }
-    @if $enable-theme-popovers { @include theme-popover-variables; }
+    @if $enable-theme-background-color { @include theme-background-color; }
+    @if $enable-theme-reset-colors { @include theme-reset-colors; }
     
     // Primary variables 
     @if $enable-blue-variables { @include blue-variables; }

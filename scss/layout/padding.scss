@@ -22,39 +22,27 @@ $padding-sizes: (
     .p-#{$name} {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name} {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name} {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name} {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name} {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name} {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name} {
       padding-inline: #{$value};        
     }
@@ -68,39 +56,27 @@ $padding-sizes: (
     .p-#{$name}-xxl {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-xxl {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-xxl {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-xxl {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-xxl {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-xxl {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-xxl {
       padding-inline: #{$value};        
     }
@@ -113,39 +89,27 @@ $padding-sizes: (
     .p-#{$name}-xl {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-xl {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-xl {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-xl {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-xl {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-xl {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-xl {
       padding-inline: #{$value};        
     }
@@ -158,39 +122,27 @@ $padding-sizes: (
     .p-#{$name}-lg {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-lg {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-lg {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-lg {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-lg {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-lg {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-lg {
       padding-inline: #{$value};        
     }
@@ -203,39 +155,27 @@ $padding-sizes: (
     .p-#{$name}-md {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-md {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-md {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-md {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-md {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-md {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-md {
       padding-inline: #{$value};        
     }
@@ -248,39 +188,27 @@ $padding-sizes: (
     .p-#{$name}-sm {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-sm {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-sm {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-sm {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-sm {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-sm {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-sm {
       padding-inline: #{$value};        
     }
@@ -293,39 +221,27 @@ $padding-sizes: (
     .p-#{$name}-xs {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-xs {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-xs {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-xs {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-xs {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-xs {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-xs {
       padding-inline: #{$value};        
     }
@@ -337,39 +253,27 @@ $padding-sizes: (
     .p-#{$name}-xxs {
       padding: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pt-#{$name}-xxs {
       padding-block-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pb-#{$name}-xxs {
       padding-block-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .ps-#{$name}-xxs {
       padding-inline-start: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .pe-#{$name}-xxs {
       padding-inline-end: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .py-#{$name}-xxs {
       padding-block: #{$value};        
     }
-  }
-  
-  @each $name, $value in $padding-sizes {
+
     .px-#{$name}-xxs {
       padding-inline: #{$value};        
     }

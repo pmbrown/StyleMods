@@ -24,9 +24,7 @@ $inset-values: (
     .inset-#{$name} {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .inset-#{$name}-initial {
       #{$value}: initial;
     }
@@ -38,9 +36,7 @@ $inset-values: (
     .inset-#{$name}-xxl {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .inset-#{$name}-initial-xxl {
       #{$value}: initial;
     }
@@ -52,9 +48,7 @@ $inset-values: (
     .inset-#{$name}-xl {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .inset-#{$name}-initial-xl {
       #{$value}: initial;
     }
@@ -66,9 +60,7 @@ $inset-values: (
     .inset-#{$name}-lg {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .inset-#{$name}-initial-lg {
       #{$value}: initial;
     }
@@ -80,9 +72,7 @@ $inset-values: (
     .inset-#{$name}-md {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .inset-#{$name}-initial-md {
       #{$value}: initial;
     }
@@ -94,9 +84,7 @@ $inset-values: (
     .#{$name}-sm {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .#{$name}-initial-sm {
       #{$value}: initial;
     }
@@ -108,9 +96,7 @@ $inset-values: (
     .#{$name}-xs {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .#{$name}-initial-xs {
       #{$value}: initial;
     }
@@ -122,9 +108,7 @@ $inset-values: (
     .#{$name}-xxs {
       #{$value}: var(--#{$name}, 0);
     }
-  }
-  
-  @each $name, $value in $inset-values {
+
     .#{$name}-initial-xxs {
       #{$value}: initial;
     }

@@ -5,15 +5,15 @@ $dialog-text-color:               var(--dialog-text, CanvasText) !default;
 $dialog-margin-top:               var(--dialog-mt, 1rem) !default;
 $dialog-padding-block:            var(--dialog-py, 1rem) !default;
 $dialog-padding-inline:           var(--dialog-px, 1rem) !default;
-$dialog-border-color:             var(--dialog-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
+$dialog-border-color:             var(--dialog-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $dialog-radius:                   var(--dialog-radius, 0.188rem) !default;
 $dialog-inner-radius:             calc($dialog-radius - 1px) !default;
-$dialog-background-color:         var(--dialog-bg, Canvas) !default; 
+$dialog-background-color:         var(--dialog-bg, var(--background, Canvas)) !default; 
 $dialog-transition:               var(--dialog-transition, 0.25s) !default;
 $dialog-backdrop:                 color-mix(in srgb, black 50%, transparent) !default;
-$dialog-title-background-color:   var(--dialog-title-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$dialog-title-background-color:   var(--dialog-title-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
 $dialog-focus-shadow:             var(--dialog-focus-shadow, 0 0 0 0.12rem) !default;
-$dialog-focus-color:              var(--dialog-focus-color, color-mix(in srgb, CanvasText 20%, Canvas)) !default;
+$dialog-focus-color:              var(--dialog-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 
 // Close button
 $dialog-close-icon:               url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>") !default;

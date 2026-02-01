@@ -5,9 +5,9 @@ $popover-text-color:        var(--popover-text, CanvasText) !default;
 $popover-margin-top:        var(--popover-mt, 1rem) !default;
 $popover-padding-block:     var(--popover-py, 0.75rem) !default;
 $popover-padding-inline:    var(--popover-px, 1rem) !default;
-$popover-border-color:      var(--popover-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
+$popover-border-color:      var(--popover-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $popover-radius:            var(--popover-radius, 0.125em) !default;
-$popover-background-color:  var(--popover-bg, Canvas) !default; 
+$popover-background-color:  var(--popover-bg, var(--background, Canvas)) !default; 
 $popover-transition:        var(--popover-transition, 0.25s) !default;
 $popover-backdrop:          color-mix(in srgb, black 50%, transparent) !default;
 

@@ -2,12 +2,12 @@
 // Accordions
 // ----------------------------------------------------------
 $summary-text-color:          var(--summary-text, CanvasText) !default;
-$summary-background-color:    var(--summary-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$summary-background-focus:    var(--summary-focus, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$summary-background-color:    var(--summary-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
+$summary-background-focus:    var(--summary-focus, color-mix(in srgb, CanvasText 8%, var(--background, Canvas))) !default;
 
 $accordion-padding-block:     var(--accordion-py, 0.75rem) !default;
 $accordion-padding-inline:    var(--accordion-px, 1rem) !default;
-$accordion-border-color:      var(--accordion-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
+$accordion-border-color:      var(--accordion-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $accordion-radius:            var(--accordion-radius, 0.188rem) !default;
 $accordion-inner-radius:      calc($accordion-radius - 1px) !default;
 

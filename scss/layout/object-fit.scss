@@ -15,9 +15,7 @@ $object-fit-values: (
     .object-#{$name} {
       object-fit: $value;       
     }   
-  }
 
-  @each $name, $value in $object-fit-values {
     .child-object-#{$name} * {
       object-fit: $value;       
     }   
@@ -29,9 +27,7 @@ $object-fit-values: (
     .object-#{$name}-xxl {
       object-fit: $value;       
     }   
-  }
-  
-  @each $name, $value in $object-fit-values {
+
     .child-object-#{$name}-xxl * {
       object-fit: $value;       
     }   
@@ -43,9 +39,7 @@ $object-fit-values: (
     .object-#{$name}-xl {
       object-fit: $value;       
     }   
-  }
-  
-  @each $name, $value in $object-fit-values {
+
     .child-object-#{$name}-xl * {
       object-fit: $value;       
     }   
@@ -71,9 +65,7 @@ $object-fit-values: (
     .object-#{$name}-md {
       object-fit: $value;       
     }   
-  }
-  
-  @each $name, $value in $object-fit-values {
+
     .child-object-#{$name}-md * {
       object-fit: $value;       
     }   
@@ -85,9 +77,7 @@ $object-fit-values: (
     .object-#{$name}-sm {
       object-fit: $value;       
     }   
-  }
-  
-  @each $name, $value in $object-fit-values {
+
     .child-object-#{$name}-sm * {
       object-fit: $value;       
     }   
@@ -99,9 +89,7 @@ $object-fit-values: (
     .object-#{$name}-xs {
       object-fit: $value;       
     }   
-  }
-  
-  @each $name, $value in $object-fit-values {
+
     .child-object-#{$name}-xs * {
       object-fit: $value;       
     }   
@@ -113,9 +101,7 @@ $object-fit-values: (
     .object-#{$name}-xxs {
       object-fit: $value;       
     }   
-  }
-  
-  @each $name, $value in $object-fit-values {
+
     .child-object-#{$name}-xxs * {
       object-fit: $value;       
     }   

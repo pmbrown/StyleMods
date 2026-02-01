@@ -5,12 +5,12 @@ $btn-text-color:            var(--btn-text, CanvasText) !default;
 $btn-font-size:             var(--btn-fs, inherit) !default;
 $btn-padding-block:         var(--btn-py, 0.313rem) !default;
 $btn-padding-inline:        var(--btn-px, 0.9rem) !default;  
-$btn-border-color:          var(--btn-bd-color, color-mix(in srgb, CanvasText 20%, Canvas)) !default;
+$btn-border-color:          var(--btn-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 $btn-radius:                var(--btn-radius, 0.188rem) !default;
-$btn-background-color:      var(--btn-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$btn-background-hover:      var(--btn-hover, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$btn-background-color:      var(--btn-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
+$btn-background-hover:      var(--btn-hover, color-mix(in srgb, CanvasText 8%, var(--background, Canvas))) !default;
 $btn-focus-shadow:          var(--focus-shadow, 0 0 0 0.06rem) !default;
-$btn-focus-shadow-color:    var(--focus-color, color-mix(in srgb, CanvasText 20%, Canvas)) !default;
+$btn-focus-shadow-color:    var(--focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 
 // Sizes
 $btn-xs-font-size:          0.75em !default;

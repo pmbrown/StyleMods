@@ -2,13 +2,13 @@
 // List groups
 // ----------------------------------------------------------
 $list-group-text-color:           var(--list-group-text, CanvasText) !default;
-$list-group-background-color:     var(--list-group-bg, Canvas) !default;
+$list-group-background-color:     var(--list-group-bg, var(--background, Canvas)) !default;
 $list-group-dt-font-weight:       var(--dt-fw, 500) !default;
-$list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
-$list-links-background-hover:     var(--list-group-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$list-group-dt-background-color:  var(--list-group-dt-bg, color-mix(in srgb, CanvasText 8%, var(--background, Canvas))) !default;
+$list-links-background-hover:     var(--list-group-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
 $list-group-padding-block:        var(--list-group-py, 0.5rem) !default;
 $list-group-padding-inline:       var(--list-group-px, 0.75rem) !default;
-$list-group-border-color:         var(--list-group-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
+$list-group-border-color:         var(--list-group-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $list-group-radius:               var(--list-group-radius, 0.188rem) !default;
 $list-group-inner-radius:         calc($list-group-radius - 1px) !default;
 

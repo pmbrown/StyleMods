@@ -2,7 +2,7 @@
 // Borders
 // ----------------------------------------------------------
 $border-width:    var(--bd-width, 1px) !default;
-$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
+$border-color:    var(--bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $border-default:  $border-width solid $border-color !default;
 
 $border-position: (
@@ -53,6 +53,26 @@ $border-radius-circle: (
     .#{$name} {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
@@ -60,37 +80,10 @@ $border-radius-circle: (
       border-radius: #{$value};        
     }
   }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
-    }
-  }
 } // end border-radius-css
 
-// Border breakpoints
+
+// Border position breakpoints
 // XXL
 @mixin border-position-xxl-css {
   @each $name, $value in $border-position {
@@ -161,39 +154,31 @@ $border-radius-circle: (
     .#{$name}-xxl {
       border-radius: #{$value};        
     }
-  }
-  
-  @each $name, $value in $border-radius-circle {
-    .#{$name}-xxl {
-      border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
+
     .#{$name}-top-xxl {
       border-start-start-radius: #{$value};
       border-start-end-radius: #{$value};     
     }
-  }
-  
-  @each $name, $value in $border-radius {
+
     .#{$name}-bottom-xxl {
       border-end-start-radius: #{$value};
       border-end-end-radius: #{$value};     
     }
-  }
-  
-  @each $name, $value in $border-radius {
+
     .#{$name}-start-xxl {
       border-start-start-radius: #{$value};
       border-end-start-radius: #{$value};   
     }
-  }
-  
-  @each $name, $value in $border-radius {
+
     .#{$name}-end-xxl {
       border-start-end-radius: #{$value};
       border-end-end-radius: #{$value};    
+    }
+  }
+
+  @each $name, $value in $border-radius-circle {
+    .#{$name}-xxl {
+      border-radius: #{$value};        
     }
   }
 }
@@ -204,39 +189,31 @@ $border-radius-circle: (
     .#{$name}-xl {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top-xl {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom-xl {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start-xl {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end-xl {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
     .#{$name}-xl {
       border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top-xl {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom-xl {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start-xl {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end-xl {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
     }
   }
 }
@@ -247,39 +224,31 @@ $border-radius-circle: (
     .#{$name}-lg {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top-lg {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom-lg {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start-lg {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end-lg {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
     .#{$name}-lg {
       border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top-lg {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom-lg {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start-lg {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end-lg {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
     }
   }
 }
@@ -290,39 +259,31 @@ $border-radius-circle: (
     .#{$name}-md {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top-md {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom-md {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start-md {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end-md {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
     .#{$name}-md {
       border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top-md {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom-md {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start-md {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end-md {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
     }
   }
 }
@@ -334,39 +295,31 @@ $border-radius-circle: (
     .#{$name}-sm {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top-sm {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom-sm {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start-sm {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end-sm {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
     .#{$name}-sm {
       border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top-sm {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom-sm {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start-sm {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end-sm {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
     }
   }
 }
@@ -377,39 +330,31 @@ $border-radius-circle: (
     .#{$name}-xs {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top-xs {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom-xs {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start-xs {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end-xs {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
     .#{$name}-xs {
       border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top-xs {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom-xs {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start-xs {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end-xs {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
     }
   }
 }
@@ -420,39 +365,31 @@ $border-radius-circle: (
     .#{$name}-xxs {
       border-radius: #{$value};        
     }
+
+    .#{$name}-top-xxs {
+      border-start-start-radius: #{$value};
+      border-start-end-radius: #{$value};     
+    }
+
+    .#{$name}-bottom-xxs {
+      border-end-start-radius: #{$value};
+      border-end-end-radius: #{$value};     
+    }
+
+    .#{$name}-start-xxs {
+      border-start-start-radius: #{$value};
+      border-end-start-radius: #{$value};   
+    }
+
+    .#{$name}-end-xxs {
+      border-start-end-radius: #{$value};
+      border-end-end-radius: #{$value};    
+    }
   }
   
   @each $name, $value in $border-radius-circle {
     .#{$name}-xxs {
       border-radius: #{$value};        
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-top-xxs {
-      border-start-start-radius: #{$value};
-      border-start-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-bottom-xxs {
-      border-end-start-radius: #{$value};
-      border-end-end-radius: #{$value};     
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-start-xxs {
-      border-start-start-radius: #{$value};
-      border-end-start-radius: #{$value};   
-    }
-  }
-  
-  @each $name, $value in $border-radius {
-    .#{$name}-end-xxs {
-      border-start-end-radius: #{$value};
-      border-end-end-radius: #{$value};    
     }
   }
 }

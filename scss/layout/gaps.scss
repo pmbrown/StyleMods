@@ -22,15 +22,11 @@ $gap-sizes: (
   .gap-#{$name} {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name} {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name} {
       row-gap: #{$value};        
     }
@@ -42,15 +38,11 @@ $gap-sizes: (
   .gap-#{$name}-xxl {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-xxl {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-xxl {
       row-gap: #{$value};        
     }
@@ -62,15 +54,11 @@ $gap-sizes: (
   .gap-#{$name}-xl {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-xl {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-xl {
       row-gap: #{$value};        
     }
@@ -82,15 +70,11 @@ $gap-sizes: (
   .gap-#{$name}-lg {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-lg {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-lg {
       row-gap: #{$value};        
     }
@@ -102,15 +86,11 @@ $gap-sizes: (
   .gap-#{$name}-md {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-md {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-md {
       row-gap: #{$value};        
     }
@@ -122,15 +102,11 @@ $gap-sizes: (
   .gap-#{$name}-sm {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-sm {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-sm {
       row-gap: #{$value};        
     }
@@ -142,15 +118,11 @@ $gap-sizes: (
   .gap-#{$name}-xs {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-xs {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-xs {
       row-gap: #{$value};        
     }
@@ -162,15 +134,11 @@ $gap-sizes: (
   .gap-#{$name}-xxs {
       gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-c-#{$name}-xxs {
       column-gap: #{$value};        
     }
-  }
-  
-  @each $name, $value in $gap-sizes {
+
   .gap-r-#{$name}-xxs {
       row-gap: #{$value};        
     }

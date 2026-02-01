@@ -1,7 +1,25 @@
 //  ------------------------------------------------------------
 //  Place
 //  ------------------------------------------------------------
-$place-content-values: (
+@use "sass:map";
+
+$place-values: (
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+  "start": start,
+  "end": end,
+  "center": center,
+) !default;
+
+$place-space-values: (
+  "around": space-around,
+  "between": space-between,
+  "evenly": space-evenly,
+) !default;
+
+$place-content-values:  map.merge($place-values, $place-space-values) !default;
+
+$place-content-valuess: (
   "flex-start": flex-start,
   "flex-end": flex-end,
   "start": start,
@@ -29,7 +47,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name} {
       place-items: #{$value};
     }
@@ -37,7 +55,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name} {
       place-self: #{$value};
     }
@@ -54,7 +72,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-xxl-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-xxl {
       place-items: #{$value};
     }
@@ -62,7 +80,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-xxl-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-xxl {
       place-self: #{$value};
     }
@@ -79,7 +97,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-xl-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-xl {
       place-items: #{$value};
     }
@@ -87,7 +105,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-xl-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-xl {
       place-self: #{$value};
     }
@@ -104,7 +122,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-lg-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-lg {
       place-items: #{$value};
     }
@@ -112,7 +130,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-lg-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-lg {
       place-self: #{$value};
     }
@@ -129,7 +147,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-md-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-md {
       place-items: #{$value};
     }
@@ -137,7 +155,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-md-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-md {
       place-self: #{$value};
     }
@@ -154,7 +172,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-sm-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-sm {
       place-items: #{$value};
     }
@@ -162,7 +180,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-sm-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-sm {
       place-self: #{$value};
     }
@@ -179,7 +197,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-xs-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-xs {
       place-items: #{$value};
     }
@@ -187,7 +205,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-xs-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-xs {
       place-self: #{$value};
     }
@@ -204,7 +222,7 @@ $place-item-self-values: (
 }
 
 @mixin place-items-xxs-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-items-#{$name}-xxs {
       place-items: #{$value};
     }
@@ -212,7 +230,7 @@ $place-item-self-values: (
 }
 
 @mixin place-self-xxs-css {
-  @each $name, $value in $place-item-self-values {
+  @each $name, $value in $place-values {
     .place-self-#{$name}-xxs {
       place-self: #{$value};
     }

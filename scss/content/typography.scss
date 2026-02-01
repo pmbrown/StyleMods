@@ -44,26 +44,26 @@ $code-color:                  var(--code, color-mix(in srgb, CanvasText 60%, Can
 $kbd-padding-block:           0.1em !default;
 $kbd-padding-inline:          0.3em !default;
 $kbd-radius:                  0.125em !default;
-$kbd-background-color:        var(--kbd-bg, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
+$kbd-background-color:        var(--kbd-bg, color-mix(in srgb, CanvasText 8%, var(--background, Canvas))) !default;
 
 $pre-padding:                 1rem !default;
 $pre-margin-bottom:           1rem !default;
-$pre-border-color:            var(--pre-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
-$pre-background-color:        var(--pre-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$pre-border-color:            var(--pre-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
+$pre-background-color:        var(--pre-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
 $address-margin-bottom:       1rem !default;
 $blockquote-padding-block:    0.75rem !default;
 $blockquote-padding-inline:   1rem !default;
 $blockquote-margin-bottom:    1rem !default;
-$blockquote-border-color:     var(--blockquote-bd-color, color-mix(in srgb, CanvasText 13%, Canvas)) !default;
+$blockquote-border-color:     var(--blockquote-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $blockquote-border:           1px !default;
 $blockquote-border-left:      10px !default;
 $details-margin-bottom:       1rem !default;
 $summary-open-margin-bottom:  0.75rem !default;
 $summary-focus-shadow:        var(--summary-shadow, 0 0 0 0.12rem) !default;
-$summary-focus-color:         var(--summary-color, color-mix(in srgb, CanvasText 20%, var(--background))) !default;
+$summary-focus-color:         var(--summary-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 $figure-margin-bottom:        1rem !default;
 $figcaption-padding-top:      0.25em !default;
-$hr-color:                    color-mix(in srgb, CanvasText 20%, Canvas) !default;
+$hr-color:                    color-mix(in srgb, CanvasText 20%, var(--background, Canvas)) !default;
 $hr-margin-bottom:            1rem !default;
 
 @mixin typography-css {

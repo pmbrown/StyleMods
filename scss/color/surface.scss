@@ -1,49 +1,76 @@
 // ---------------------------------------------------------- 
 // Surface
 // ----------------------------------------------------------
-$surface:         var(--background, Canvas) !default;
-$surface-1:       color-mix(in srgb, CanvasText 4%, var(--surface)) !default;
-$surface-2:       color-mix(in srgb, CanvasText 8%, var(--surface)) !default;
-$surface-3:       color-mix(in srgb, CanvasText 13%, var(--surface)) !default;
-$surface-4:       color-mix(in srgb, CanvasText 20%, var(--surface)) !default;
-$surface-5:       color-mix(in srgb, CanvasText 28%, var(--surface)) !default;
-$surface-6:       color-mix(in srgb, CanvasText 35%, var(--surface)) !default;
-$surface-7:       color-mix(in srgb, CanvasText 42%, var(--surface)) !default;
-$surface-8:       color-mix(in srgb, CanvasText 50%, var(--surface)) !default;
-$surface-9:       color-mix(in srgb, CanvasText 58%, var(--surface)) !default;
-$surface-10:      color-mix(in srgb, CanvasText 65%, var(--surface)) !default;
-$surface-11:      color-mix(in srgb, CanvasText 72%, var(--surface)) !default;
+$surface:         var(--surface, var(--background, Canvas)) !default;
+$surface-1:       color-mix(in srgb, CanvasText 4%, $surface) !default;
+$surface-2:       color-mix(in srgb, CanvasText 8%, $surface) !default;
+$surface-3:       color-mix(in srgb, CanvasText 13%, $surface) !default;
+$surface-4:       color-mix(in srgb, CanvasText 20%, $surface) !default;
+$surface-5:       color-mix(in srgb, CanvasText 28%, $surface) !default;
+$surface-6:       color-mix(in srgb, CanvasText 35%, $surface) !default;
+$surface-7:       color-mix(in srgb, CanvasText 42%, $surface) !default;
+$surface-8:       color-mix(in srgb, CanvasText 50%, $surface) !default;
+$surface-9:       color-mix(in srgb, CanvasText 58%, $surface) !default;
+$surface-10:      color-mix(in srgb, CanvasText 65%, $surface) !default;
+$surface-11:      color-mix(in srgb, CanvasText 72%, $surface) !default;
 
 // Tokens style
 $surface-tokens: ':where(html)' !default;
 
-// Background color values
-$surface-backgrounds:
-  "surf-1"  CanvasText var(--surf-1),
-  "surf-2"  CanvasText var(--surf-2),
-  "surf-3"  CanvasText var(--surf-3),
-  "surf-4"  CanvasText var(--surf-4),
-  "surf-5"  CanvasText var(--surf-5),
-  "surf-6"  CanvasText var(--surf-6),
-  "surf-7"  light-dark(#fff, #000) var(--surf-7),
-  "surf-8"  light-dark(#fff, #000) var(--surf-8),
-  "surf-9"  light-dark(#fff, #000) var(--surf-9),
-  "surf-10" light-dark(#fff, #000) var(--surf-10),
-  "surf-11" light-dark(#fff, #000) var(--surf-11),
-!default; //
+$surface-values:
+  "surf-1"  $surface-1 CanvasText var(--surf-1),
+  "surf-2"  $surface-2 CanvasText var(--surf-2),
+  "surf-3"  $surface-3 CanvasText var(--surf-3),
+  "surf-4"  $surface-4 CanvasText var(--surf-4),
+  "surf-5"  $surface-5 CanvasText var(--surf-5),
+  "surf-6"  $surface-6 CanvasText var(--surf-6),
+  "surf-7"  $surface-7 light-dark(#fff, #000) var(--surf-7),
+  "surf-8"  $surface-8 light-dark(#fff, #000) var(--surf-8),
+  "surf-9"  $surface-9 light-dark(#fff, #000) var(--surf-9),
+  "surf-10" $surface-10 light-dark(#fff, #000) var(--surf-10),
+  "surf-11" $surface-11 light-dark(#fff, #000) var(--surf-11),
+!default;
 
-// Variables tokens map
-$surface-token-values: (
-  "surface": $surface,
-  "surf-1": $surface-1,
-  "surf-2": $surface-2,
-  "surf-3": $surface-3,
-  "surf-4": $surface-4,
-  "surf-5": $surface-5,
-  "surf-6": $surface-6,
-  "surf-7": $surface-7,
-  "surf-8": $surface-8,
-  "surf-9": $surface-9,
-  "surf-10": $surface-10,
-  "surf-11": $surface-11,
-) !default;
+
+// Variables mixins
+@mixin surface-variables { 
+  @each $name, $value in $surface-values {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin surface-variables-css {
+  #{$surface-tokens} {
+    @include surface-variables;
+  }
+}
+
+// Background color utilities
+@mixin surface-backgrounds-css {
+  @each $name, $value, $color, $background in $surface-values {
+    .bg-#{$name} {
+      color: $color;
+      background-color: $background;
+    }
+  }
+}
+
+// Borders
+@mixin surface-borders-css {
+  @each $name, $value, $color, $border in $surface-values {
+    .bd-#{$name} {
+      border-color: $border;
+    }
+  }
+}
+
+// Combined
+@mixin surface-utilities-css {
+  @include surface-backgrounds-css;
+  @include surface-borders-css;
+}
+
+@mixin surface-module-css {
+  @include surface-variables-css;
+  @include surface-utilities-css;
+}

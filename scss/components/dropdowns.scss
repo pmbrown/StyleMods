@@ -2,10 +2,10 @@
 // Dropdowns
 // ----------------------------------------------------------
 $dropdown-text-color:                     var(--dropdown-text, CanvasText) !default;
-$dropdown-background-color:               var(--dropdown-bg, Canvas) !default;
-$dropdown-border-color:                   var(--dropdown-bd-color, color-mix(in srgb, CanvasText 20%, Canvas)) !default;
+$dropdown-background-color:               var(--dropdown-bg, var(--background, Canvas)) !default;
+$dropdown-border-color:                   var(--dropdown-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 $dropdown-link-button-background-color:   var(--dropdown-link-bg, transparent) !default;
-$dropdown-link-button-background-hover:   var(--dropdown-link-hover, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
+$dropdown-link-button-background-hover:   var(--dropdown-link-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
 $dropdown-inline-size:                    var(--dropdown-min, fit-content) !default;
 $dropdown-max-inline-size:                var(--dropdown-max, 14rem) !default;
 $dropdown-margin-block-start:             var(--dropdown-top, 0.25rem) !default;
@@ -17,9 +17,9 @@ $dropdown-radius:                         var(--dropdown-radius, 0.188rem) !defa
 
 // Button
 $dropdown-button-text-color:              var(--dropdown-btn-text, CanvasText) !default;
-$dropdown-button-background-color:        var(--dropdown-btn-bg, color-mix(in srgb, CanvasText 4%, Canvas)) !default;
-$dropdown-button-background-hover:        var(--dropdown-btn-hover, color-mix(in srgb, CanvasText 8%, Canvas)) !default;
-$dropdown-button-focus-color:             var(--dropdown-focus-color, color-mix(in srgb, CanvasText 20%, Canvas)) !default;
+$dropdown-button-background-color:        var(--dropdown-btn-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
+$dropdown-button-background-hover:        var(--dropdown-btn-hover, color-mix(in srgb, CanvasText 8%, var(--background, Canvas))) !default;
+$dropdown-button-focus-color:             var(--dropdown-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 $dropdown-button-padding-block:           var(--dropdown-btn-py, 0.313rem) !default;
 $dropdown-button-focus-shadow:            0 0 0 0.06rem !default;
 
