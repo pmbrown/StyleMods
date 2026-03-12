@@ -19,8 +19,8 @@ $accordion-caret-down-icon:   url("data:image/svg+xml,<svg viewBox='0 0 16 16' f
 $accordion-caret-up-icon:     url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 6 4 4-8 7e-7z'/></svg>") !default;
 
 // Open/close icons
-$open-accordion:              $accordion-plus-icon !default;
-$close-accordion:             $accordion-minus-icon !default;
+$open-accordion:              $accordion-caret-down-icon !default;
+$close-accordion:             $accordion-caret-up-icon !default;
 
 @mixin accordions-css {
 

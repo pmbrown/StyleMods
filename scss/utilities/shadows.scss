@@ -1,41 +1,61 @@
 // ---------------------------------------------------------- 
 // Shadows
 // ----------------------------------------------------------
-$shadow-tokens:   ':where(html)' !default;
-$shadow:          0 0.25rem 0.75rem rgba(0, 0, 0, 0.15) !default;
-$shadow-sm:       0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !default;
-$shadow-lg:       0 0.5rem 1.25rem rgba(0, 0, 0, 0.15) !default;
-$shadow-xl:       0 1rem 2.5rem rgba(0, 0, 0, 0.175) !default;
+$shadow-tokens:         ':where(html)' !default;
+$box-shadow-1:          0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !default;
+$box-shadow-2:          0 0.25rem 0.75rem rgba(0, 0, 0, 0.15) !default;
+$box-shadow-3:          0 0.5rem 1.25rem rgba(0, 0, 0, 0.15) !default;
+$box-shadow-4:          0 1rem 2.5rem rgba(0, 0, 0, 0.175) !default;
+$text-shadow-1:         1px 1px 2px rgb(0 0 0/0.33) !default;
+$text-shadow-2:         1px 2px 2px rgb(0 0 0/0.4) !default;
+$text-shadow-3:         2px 3px 3px rgb(0 0 0/0.4) !default;
+$text-shadow-4:         2px 4px 4px rgb(0 0 0/0.4) !default;
 
-@mixin shadows-variables {
-  --shadow: #{$shadow};
-  --shadow-sm: #{$shadow-sm};
-  --shadow-lg: #{$shadow-lg};
-  --shadow-xl: #{$shadow-xl};
+$box-shadow-values: (
+  "box-shadow-1": #{$box-shadow-1},
+  "box-shadow-2": #{$box-shadow-2},
+  "box-shadow-3": #{$box-shadow-3},
+  "box-shadow-4": #{$box-shadow-4},
+) !default;
+
+$text-shadow-values: (
+  "text-shadow-1": #{$text-shadow-1},
+  "text-shadow-2": #{$text-shadow-2},
+  "text-shadow-3": #{$text-shadow-3},
+  "text-shadow-4": #{$text-shadow-4},
+) !default;
+
+@mixin shadow-variables {
+  @each $name, $value in $box-shadow-values {
+    --#{$name}: #{$value};
+  }
+  
+  @each $name, $value in $text-shadow-values {
+    --#{$name}: #{$value};
+  }
 }
 
-@mixin shadows-variables-css {
+@mixin shadow-variables-css {
   #{$shadow-tokens} {
-    @include shadows-variables;
+    @include shadow-variables;
+  }
+}
+
+@mixin shadow-classes {
+  @each $name, $value in $box-shadow-values {
+    .#{$name} {
+      box-shadow: var(--#{$name});
+    }
+  }
+  
+  @each $name, $value in $text-shadow-values {
+    .#{$name} {
+      text-shadow: var(--#{$name});
+    }
   }
 }
 
 @mixin shadows-css {
-  @include shadows-variables-css;
-  
-  .shadow {
-    box-shadow: var(--shadow);
-  }
-    
-  .shadow-sm {
-    box-shadow: var(--shadow-sm);
-  }
-    
-  .shadow-lg {
-    box-shadow: var(--shadow-lg);
-  }
-    
-  .shadow-xl {
-    box-shadow: var(--shadow-xl);
-  }
-} // end shadows-css
+  @include shadow-variables-css;
+  @include shadow-classes;
+}

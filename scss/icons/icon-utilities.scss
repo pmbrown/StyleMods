@@ -10,6 +10,8 @@
   background-color: var(--ico, CanvasText);
   mask: var(--svg) no-repeat;
   opacity: var(--ico-op, 1);
+  margin-inline-start: var(--ico-ms);
+  margin-inline-end: var(--ico-me);
 }
 
 @mixin icon-utilities-css {
@@ -23,12 +25,12 @@
   
   .ico-b:before { 
     @extend %icon-mask;
-    margin-inline-end: var(--ico-mr, calc(1em / 3.75));
+    --ico-me: var(--ico-mr, calc(1em / 3.75));
   }
   
   .ico-a:after {
     @extend %icon-mask;
-    margin-inline-start: var(--ico-ml, calc(1em / 3.75));
+    --ico-ms: var(--ico-ml, calc(1em / 3.75));
   }
   
   .ico-block:before, .ico-block-center:before {

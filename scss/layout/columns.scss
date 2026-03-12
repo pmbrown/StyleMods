@@ -1,11 +1,11 @@
 // ---------------------------------------------------------- 
 // Columns
 // ----------------------------------------------------------
-$column-values: 12 !default;
+$column-values: 6 !default;
 
 @mixin columns-css {
   .columns {
-    columns: var(--cols);
+    columns: var(--columns);
   }
   
   @for $value from 1 through $column-values {

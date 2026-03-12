@@ -81,31 +81,27 @@ $enable-text:                       false !default;
 // ----------------------------------------------------------
 // Layout
 // ----------------------------------------------------------
-$enable-align:                      false !default;
-$enable-aspect-ratio:               false !default;
-$enable-block:                      false !default;
-$enable-columns:                    false !default;
 $enable-containers:                 false !default;
+$enable-columns:                    false !default;
 $enable-display:                    false !default;
+$enable-block:                      false !default;
 $enable-flex:                       false !default;
 $enable-grid:                       false !default;
-$enable-inset:                      false !default;
+$enable-grid-columns:               false !default;
+$enable-grid-layouts:               false !default; // requires $enable-grid-columns:true
+$enable-align:                      false !default;
 $enable-justify:                    false !default;
+$enable-place:                      false !default;
+$enable-inset:                      false !default;
+$enable-position:                   false !default;
+$enable-sizes:                      false !default;
+$enable-z-index:                    false !default;
+$enable-aspect-ratio:               false !default;
 $enable-object-fit:                 false !default;
 $enable-order:                      false !default;
 $enable-overflow:                   false !default;
 $enable-overscroll:                 false !default;
-$enable-place:                      false !default;
-$enable-position:                   false !default;
 $enable-scrollbars:                 false !default;
-$enable-sizes:                      false !default;
-$enable-z-index:                    false !default;
-
-// Grids
-$enable-grid-layouts:               false !default;
-$enable-grid-templates:             false !default;
-
-// Spacing
 $enable-gaps:                       false !default;
 $enable-margins:                    false !default;
 $enable-padding:                    false !default;

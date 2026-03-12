@@ -63,35 +63,27 @@
 // Layouts
 // ----------------------------------------------------------
 @mixin layout-framework {
-// Grids
-  #{$variables-tokens} { 
-    @if $enable-grid-templates { @include grid-templates-variables; }
-  }
-  @if $enable-grid-templates { @include grid-templates-css; }
-  @if $enable-grid-layouts { @include grid-layouts-css; }
-  
-// Layout
-  @if $enable-align { @include align-css; }
-  @if $enable-aspect-ratio { @include aspect-ratio-css; }
-  @if $enable-block { @include block-css; }
-  @if $enable-columns { @include columns-css; }
   @if $enable-containers { @include containers-css; }
+  @if $enable-columns { @include columns-css; }
   @if $enable-display { @include display-css; }
+  @if $enable-block { @include block-css; }
   @if $enable-flex { @include flex-css; }
-  @if $enable-grid { @include grid-css; }
-  @if $enable-inset { @include inset-css; }
+  @if $enable-grid { @include grid-display-css; }
+  @if $enable-grid-columns { @include grid-columns-css; }
+  @if $enable-grid-layouts { @include grid-layouts-css; }
+  @if $enable-align { @include align-css; }
   @if $enable-justify { @include justify-css; }
+  @if $enable-place { @include place-css; }
+  @if $enable-inset { @include inset-css; }
+  @if $enable-position { @include position-css; }
+  @if $enable-sizes { @include sizes-css; }
+  @if $enable-z-index { @include z-index-css; }
+  @if $enable-aspect-ratio { @include aspect-ratio-css; }
   @if $enable-object-fit { @include object-fit-css; }
   @if $enable-order { @include order-css; }
   @if $enable-overflow { @include overflow-css; }
   @if $enable-overscroll { @include overscroll-css; }
-  @if $enable-place { @include place-css; }
-  @if $enable-position { @include position-css; }
   @if $enable-scrollbars { @include scrollbars-css; }
-  @if $enable-sizes { @include sizes-css; }
-  @if $enable-z-index { @include z-index-css; }
-  
-  // Spacing
   @if $enable-gaps { @include gaps-css; }
   @if $enable-margins { @include margins-css; }
   @if $enable-padding { @include padding-css; }

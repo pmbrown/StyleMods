@@ -76,7 +76,7 @@ $text-wrap: (
 @mixin font-sizes-css {
   @each $name, $value in $font-sizes {
     .fs-#{$name} {
-      font-size: #{$value};        
+      font-size: #{$value};
     }
   }
 }
@@ -84,7 +84,7 @@ $text-wrap: (
 @mixin font-weights-css {
   @each $name, $value in $font-weights {
     .fw-#{$name} {
-      font-weight: #{$value};        
+      font-weight: #{$value};
     }
   }
 }
@@ -92,7 +92,7 @@ $text-wrap: (
 @mixin text-align-css {
   @each $name, $value in $text-align {
     .text-#{$name} {
-      text-align: #{$value};        
+      text-align: #{$value};
     }
   }
 }
@@ -100,7 +100,7 @@ $text-wrap: (
 @mixin text-wrap-css {
   @each $name, $value in $text-wrap {
     .text-#{$name} {
-      text-wrap: #{$value};        
+      text-wrap: #{$value};
     }
   }
 }
@@ -125,21 +125,21 @@ $text-wrap: (
 }
 
 @mixin text-colors-css {
-  .text-white {
+  .text-white, .text-white * {
     color: #fff;
   }
   
-  .text-black {
+  .text-black, .text-black * {
     color: #000;
   }
 }
 
 @mixin text-links-css {
-  .decoration-none {
+  .decoration-none, .decoration-none * {
     text-decoration: none;
   }
   
-  .text-link {
+  .text-link, .text-link * {
     color: CanvasText;
     text-decoration-color: CanvasText;
   }

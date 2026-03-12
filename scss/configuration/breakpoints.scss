@@ -2,9 +2,9 @@
 // Breakpoints
 // ----------------------------------------------------------
 // Values
-$breakpoint-query:              'width <=' !default;
-$breakpoint-xxl:                1920px !default;
-$breakpoint-xl:                 1600px !default;
+$breakpoint-query:              'width <' !default;
+$breakpoint-xxl:                1536px !default;
+$breakpoint-xl:                 1366px !default;
 $breakpoint-lg:                 1280px !default;
 $breakpoint-md:                 1024px !default;
 $breakpoint-sm:                 768px !default;
@@ -29,6 +29,24 @@ $enable-text-sm:                false !default;
 $enable-text-xs:                false !default;
 $enable-text-xxs:               false !default;
 
+// Grid
+$enable-grid-xxl:               false !default;
+$enable-grid-xl:                false !default;
+$enable-grid-lg:                false !default;
+$enable-grid-md:                false !default;
+$enable-grid-sm:                false !default;
+$enable-grid-xs:                false !default;
+$enable-grid-xxs:               false !default;
+
+// Grid columns
+$enable-grid-columns-xxl:       false !default;
+$enable-grid-columns-xl:        false !default;
+$enable-grid-columns-lg:        false !default;
+$enable-grid-columns-md:        false !default;
+$enable-grid-columns-sm:        false !default;
+$enable-grid-columns-xs:        false !default;
+$enable-grid-columns-xxs:       false !default;
+
 // Grid layouts
 $enable-grid-layouts-xxl:       false !default;
 $enable-grid-layouts-xl:        false !default;
@@ -37,15 +55,6 @@ $enable-grid-layouts-md:        false !default;
 $enable-grid-layouts-sm:        false !default;
 $enable-grid-layouts-xs:        false !default;
 $enable-grid-layouts-xxs:       false !default;
-
-// Grid templates
-$enable-grid-templates-xxl:     false !default;
-$enable-grid-templates-xl:      false !default;
-$enable-grid-templates-lg:      false !default;
-$enable-grid-templates-md:      false !default;
-$enable-grid-templates-sm:      false !default;
-$enable-grid-templates-xs:      false !default;
-$enable-grid-templates-xxs:     false !default;
 
 // Gaps
 $enable-gaps-xxl:               false !default;
@@ -127,15 +136,6 @@ $enable-flex-md:                false !default;
 $enable-flex-sm:                false !default;
 $enable-flex-xs:                false !default;
 $enable-flex-xxs:               false !default;
-
-// Grid
-$enable-grid-xxl:               false !default;
-$enable-grid-xl:                false !default;
-$enable-grid-lg:                false !default;
-$enable-grid-md:                false !default;
-$enable-grid-sm:                false !default;
-$enable-grid-xs:                false !default;
-$enable-grid-xxs:               false !default;
 
 // Inset
 $enable-inset-xxl:              false !default;
