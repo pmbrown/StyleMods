@@ -2,17 +2,17 @@
 // Darkcoral
 // ----------------------------------------------------------
 $darkcoral:              #ff571a !default;
-$darkcoral-1:            color-mix(in srgb, var(--darkcoral) 30%, #fff) !default;
-$darkcoral-2:            color-mix(in srgb, var(--darkcoral) 42%, #fff) !default;
-$darkcoral-3:            color-mix(in srgb, var(--darkcoral) 55%, #fff) !default;
-$darkcoral-4:            color-mix(in srgb, var(--darkcoral) 70%, #fff) !default;
-$darkcoral-5:            color-mix(in srgb, var(--darkcoral) 85%, #fff) !default;
+$darkcoral-1:            color-mix(in srgb, var(--darkcoral), #fff 70%) !default;
+$darkcoral-2:            color-mix(in srgb, var(--darkcoral), #fff 58%) !default;
+$darkcoral-3:            color-mix(in srgb, var(--darkcoral), #fff 45%) !default;
+$darkcoral-4:            color-mix(in srgb, var(--darkcoral), #fff 30%) !default;
+$darkcoral-5:            color-mix(in srgb, var(--darkcoral), #fff 15%) !default;
 $darkcoral-6:            var(--darkcoral) !default;
-$darkcoral-7:            color-mix(in srgb, var(--darkcoral) 85%, #000) !default;
-$darkcoral-8:            color-mix(in srgb, var(--darkcoral) 75%, #000) !default;
-$darkcoral-9:            color-mix(in srgb, var(--darkcoral) 65%, #000) !default;
-$darkcoral-10:           color-mix(in srgb, var(--darkcoral) 55%, #000) !default;
-$darkcoral-11:           color-mix(in srgb, var(--darkcoral) 45%, #000) !default;
+$darkcoral-7:            color-mix(in srgb, var(--darkcoral), #000 15%) !default;
+$darkcoral-8:            color-mix(in srgb, var(--darkcoral), #000 25%) !default;
+$darkcoral-9:            color-mix(in srgb, var(--darkcoral), #000 35%) !default;
+$darkcoral-10:           color-mix(in srgb, var(--darkcoral), #000 45%) !default;
+$darkcoral-11:           color-mix(in srgb, var(--darkcoral), #000 55%) !default;
 
 $darkcoral-tokens:       ':where(html)' !default;
 

@@ -40,7 +40,7 @@ $bottom-end:      border-end-end-radius;
   .border, 
   [class*=border-] {
     border-width: var(--bd-width, 1px);
-    border-color: var(--bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas)));
+    border-color: var(--bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
   }
   
   @each $name, $value in $border-style-values {

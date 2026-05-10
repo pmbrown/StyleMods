@@ -9,7 +9,7 @@ $theme-link-hover:            light-dark(#385de0, #c6d8ec) !default;
 
 $theme-tokens:                ':where(html)' !default;
 
-$theme-colors: (
+$theme-color-values: (
   "text": $theme-text,
   "background": $theme-background,
   "link": $theme-link,
@@ -17,19 +17,19 @@ $theme-colors: (
   "hover": $theme-link-hover,
 ) !default;
 
-@mixin theme-background-color {
+@mixin theme-background-variable {
   --background: #{$theme-background};
 }
 
-@mixin theme-reset-colors {
-  @each $name, $value in $theme-colors {
+@mixin theme-variables {
+  @each $name, $value in $theme-color-values {
     --#{$name}: #{$value};
   }
 }
 
-@mixin theme-reset-colors-css {
+@mixin theme-variables-css {
   #{$theme-tokens} {
-    @include theme-color-variables;
+    @include theme-variables;
   }
 }
 

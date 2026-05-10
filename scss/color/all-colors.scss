@@ -1,5 +1,8 @@
 // ---------------------------------------------------------- 
 // All colors
+// Please note: Including all color variables, utilities and 
+// modifiers produces a lot of code so recommended usage of 
+// the grouped mixins below is for development purposes only.
 // ----------------------------------------------------------
 @use "surface" as *;
 @use "blue" as *;
@@ -31,7 +34,7 @@ $color-tokens:  ':where(html)' !default;
 // ----------------------------------------------------------
 // Variables
 // ----------------------------------------------------------
-@mixin all-primary-color-variables {
+@mixin primary-color-variables {
   @include blue-variables;
   @include red-variables;
   @include green-variables;
@@ -54,9 +57,9 @@ $color-tokens:  ':where(html)' !default;
   @include gray-variables;
 }
 
-@mixin all-primary-colors-variables-css {
+@mixin primary-color-variables-css {
   #{$color-tokens} {
-    @include primary-colors-variables;
+    @include all-primary-color-variables;
   }
 }
 
@@ -76,7 +79,7 @@ $color-tokens:  ':where(html)' !default;
 // ----------------------------------------------------------
 // Utilities
 // ----------------------------------------------------------
-@mixin all-primary-utilities-css {
+@mixin primary-color-utilities-css {
   @include blue-utilities-css;
   @include red-utilities-css;
   @include green-utilities-css;
@@ -99,13 +102,7 @@ $color-tokens:  ':where(html)' !default;
   @include gray-utilities-css;
 }
 
-@mixin all-color-utilities-css {
-  @include surface-utilities-css;
-  @include all-primary-utilities-css;
-  @include semantic-utilities-css;
-}
-
-@mixin all-primary-modifiers-css {
+@mixin primary-color-modifiers-css {
   @include blue-modifiers-css;
   @include red-modifiers-css;
   @include green-modifiers-css;
@@ -129,9 +126,25 @@ $color-tokens:  ':where(html)' !default;
   @include semantic-modifiers-css;
 }
 
+@mixin primary-color-utilities-modifiers-css {
+  @include primary-color-utilities-css;
+  @include primary-color-modifiers-css;
+}
+
+@mixin all-color-utilities-css {
+  @include surface-utilities-css;
+  @include primary-color-utilities-css;
+  @include semantic-utilities-css;
+}
+
 @mixin all-color-modifiers-css {
-  @include all-primary-modifiers-css;
+  @include primary-color-modifiers-css;
   @include semantic-modifiers-css;
+}
+
+@mixin all-color-utilities-modifiers {
+  @include all-color-utilities-css;
+  @include all-color-modifiers-css;
 }
 
 // Variables, utilities, modifiers

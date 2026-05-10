@@ -17,8 +17,9 @@ $button-border-color:      var(--btn-bd-color, color-mix(in srgb, CanvasText 20%
 $button-radius:            var(--btn-radius, 0.188rem) !default;
 $button-background-color:  var(--btn-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
 $button-background-hover:  var(--btn-hover, color-mix(in srgb, CanvasText 8%, var(--background, Canvas))) !default;
-$input-focus-shadow:       var(--focus-shadow, 0 0 0 0.06rem) !default;
-$input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
+$input-outline-width:      var(--input-outline-width, 1.75px) !default;
+$input-outline-color:      var(--input-outline-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
+$input-outline-offset:     var(--btn-outline-offset, 0) !default;
 
 @mixin forms-buttons-css {
 
@@ -75,12 +76,12 @@ $input-focus-color:        var(--focus-color, color-mix(in srgb, CanvasText 20%,
 }
 
 :where(button, input, optgroup, select, textarea):focus {
-  outline: none;
-  box-shadow: $input-focus-shadow $input-focus-color;
+  outline: $input-outline-width solid $input-outline-color;
+  outline-offset: $input-outline-offset;
 }
 
 :where(button, input, optgroup, select, textarea):focus:not(:focus-visible) {
-  box-shadow: none;
+  outline: none;
 }
 
 :where(button, [type=button], [type=submit], [type=reset]):is(:hover, :focus),

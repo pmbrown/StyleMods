@@ -1,7 +1,7 @@
 // ----------------------------------------------------------
 // Color mixins
 // ----------------------------------------------------------
-@use "../configuration" as *;
+@use "config" as *;
 @use "../index" as *;
 
 // ---------------------------------------------------------- 
@@ -16,8 +16,8 @@
     @if $enable-semantic-variables { @include semantic-variables; }
     
     // Theme variables
-    @if $enable-theme-background-color { @include theme-background-color; }
-    @if $enable-theme-reset-colors { @include theme-reset-colors; }
+    @if $enable-theme-background-color { @include theme-background-variable; }
+    @if $enable-theme-reset-colors { @include theme-variables; }
     
     // Primary variables 
     @if $enable-blue-variables { @include blue-variables; }

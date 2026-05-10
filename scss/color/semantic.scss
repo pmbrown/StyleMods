@@ -1,68 +1,117 @@
 // ---------------------------------------------------------- 
-// Semantic variables
+// Semantic color variables
 // ----------------------------------------------------------
 @use "blue" as *;
 @use "green" as *;
 @use "red" as *;
-@use "orange" as *;
 @use "cyan" as *;
+@use "yellow" as *;
 
 $semantic-tokens:       ':where(html)' !default;
 
 $primary:               $blue !default;
-$info:                  $cyan !default;
 $success:               $green !default;
-$warning:               $orange !default;
 $danger:                $red !default;
+$info:                  $cyan !default;
+$warning:               $yellow !default;
 $secondary:             #d3d3d3 !default; // HEX equivalent of $gray-2
 
-$primary-light:         color-mix(in srgb, var(--primary) 78%, #fff) !default;
-$info-light:            color-mix(in srgb, var(--info) 50%, #fff) !default; 
-$success-light:         color-mix(in srgb, var(--success) 80%, #fff) !default;
-$warning-light:         color-mix(in srgb, var(--warning) 75%, #fff) !default;
-$danger-light:          color-mix(in srgb, var(--danger) 82%, #fff) !default;  
-$secondary-light:       color-mix(in srgb, var(--secondary) 80%, #fff) !default;
+$primary-1:             color-mix(in srgb, var(--primary), #fff 30%) !default;
+$primary-2:             color-mix(in srgb, var(--primary), #fff 10%) !default;
+$primary-3:             var(--primary) !default;
+$primary-4:             color-mix(in srgb, var(--primary), #000 20%) !default;
+$primary-5:             color-mix(in srgb, var(--primary), #000 40%) !default;
 
-$primary-dark:          color-mix(in srgb, var(--primary) 78%, #000) !default;
-$info-dark:             color-mix(in srgb, var(--info) 82%, #000) !default;
-$success-dark:          color-mix(in srgb, var(--success) 80%, #000) !default;
-$warning-dark:          color-mix(in srgb, var(--warning) 87%, #000) !default;
-$danger-dark:           color-mix(in srgb, var(--danger) 84%, #000) !default;
-$secondary-dark:        color-mix(in srgb, var(--secondary) 80%, #000) !default;
+$success-1:             color-mix(in srgb, var(--success), #fff 30%) !default;
+$success-2:             color-mix(in srgb, var(--success), #fff 10%) !default;
+$success-3:             var(--success) !default;
+$success-4:             color-mix(in srgb, var(--success), #000 20%) !default;
+$success-5:             color-mix(in srgb, var(--success), #000 35%) !default;
 
-$primary-gradient:      linear-gradient(180deg, var(--primary-light), var(--primary), var(--primary-dark)) !default;
-$info-gradient:         linear-gradient(180deg, var(--info-light), var(--info), var(--info-dark)) !default;
-$success-gradient:      linear-gradient(180deg, var(--success-light), var(--success), var(--success-dark)) !default;
-$warning-gradient:      linear-gradient(180deg, var(--warning-light), var(--warning), var(--warning-dark)) !default;
-$danger-gradient:       linear-gradient(180deg, var(--danger-light), var(--danger), var(--danger-dark)) !default;
-$secondary-gradient:    linear-gradient(180deg, var(--secondary-light), var(--secondary), var(--secondary-dark)) !default;
+$danger-1:              color-mix(in srgb, var(--danger), #fff 30%) !default;
+$danger-2:              color-mix(in srgb, var(--danger), #fff 14%) !default;
+$danger-3:              var(--danger) !default;
+$danger-4:              color-mix(in srgb, var(--danger), #000 15%) !default;
+$danger-5:              color-mix(in srgb, var(--danger), #000 30%) !default;
+
+$info-1:                color-mix(in srgb, var(--info), #fff 50%) !default;
+$info-2:                color-mix(in srgb, var(--info), #fff 35%) !default;
+$info-3:                var(--info) !default;
+$info-4:                color-mix(in srgb, var(--info), #000 8%) !default;
+$info-5:                color-mix(in srgb, var(--info), #000 16%) !default;
+
+$warning-1:             color-mix(in srgb, var(--warning), #fff 45%) !default;
+$warning-2:             color-mix(in srgb, var(--warning), #fff 25%) !default;
+$warning-3:             var(--warning) !default;
+$warning-4:             color-mix(in srgb, var(--warning), #000 8%) !default;
+$warning-5:             color-mix(in srgb, var(--warning), #000 15%) !default;
+
+$secondary-1:           color-mix(in srgb, var(--secondary), #fff 40%) !default;
+$secondary-2:           color-mix(in srgb, var(--secondary), #fff 25%) !default;
+$secondary-3:           var(--secondary) !default;
+$secondary-4:           color-mix(in srgb, var(--secondary), #000 10%) !default;
+$secondary-5:           color-mix(in srgb, var(--secondary), #000 20%) !default;
+  
+$primary-gradient:      linear-gradient(180deg, var(--primary-2), var(--primary), var(--primary-4)) !default;
+$success-gradient:      linear-gradient(180deg, var(--success-2), var(--success), var(--success-4)) !default;
+$danger-gradient:       linear-gradient(180deg, var(--danger-2), var(--danger), var(--danger-4)) !default;
+$info-gradient:         linear-gradient(180deg, var(--info-2), var(--info), var(--info-4)) !default;
+$warning-gradient:      linear-gradient(180deg, var(--warning-2), var(--warning), var(--warning-4)) !default;
+$secondary-gradient:    linear-gradient(180deg, var(--secondary-2), var(--secondary), var(--secondary-4)) !default;
 
 $semantic-color-values:
-  "primary"   #fff var(--primary) var(--primary-dark) var(--primary-light) $primary-gradient,
-  "info"      #000 var(--info) var(--info-dark) var(--info-light) $info-gradient,
-  "success"   #fff var(--success) var(--success-dark) var(--success-light) $success-gradient,
-  "warning"   #000 var(--warning) var(--warning-dark) var(--warning-light) $warning-gradient,
-  "danger"    #fff var(--danger) var(--danger-dark) var(--danger-light) $danger-gradient,
-  "secondary" #000 var(--secondary) var(--secondary-dark) var(--secondary-light) $secondary-gradient,
+  "primary"   #fff var(--primary) var(--primary-4) var(--primary-2) var(--primary-5) var(--primary-1),
+  "success"   #fff var(--success) var(--success-4) var(--success-2) var(--success-5) var(--success-1),
+  "danger"    #fff var(--danger) var(--danger-4) var(--danger-2) var(--danger-5) var(--danger-1),
+  "info"      #000 var(--info) var(--info-2) var(--info-4) var(--info-5) var(--info-1),
+  "warning"   #000 var(--warning) var(--warning-1) var(--warning-4) var(--warning-5) var(--warning-1),
+  "secondary" #000 var(--secondary) var(--secondary-2) var(--secondary-4) var(--secondary-5) var(--secondary-1),
 !default;
 
-$semantic-token-values: (
-  "primary": $primary,
-  "info": $info,
-  "success": $success,
-  "warning": $warning,
-  "danger": $danger,
-  "secondary": $secondary,
-  "primary-light": $primary-light,
-  "info-light": $info-light,
-  "success-light": $success-light,
-  "warning-light": $warning-light,
-  "danger-light": $danger-light,
-  "secondary-light": $secondary-light,
-  "primary-dark": $primary-dark,
-  "info-dark": $info-dark,
-  "success-dark": $success-dark,
-  "warning-dark": $warning-dark,
-  "danger-dark": $danger-dark,
-  "secondary-dark": $secondary-dark,
-) !default;
+$semantic-gradient-values:
+  "primary"   #fff $primary-gradient,
+  "success"   #fff $success-gradient,
+  "danger"    #fff $danger-gradient,
+  "info"      #000 $info-gradient,
+  "warning"   #000 $warning-gradient,
+  "secondary" #000 $secondary-gradient,
+!default;
+
+$semantic-token-values:
+  "primary"     $primary #fff,
+  "primary-1"   $primary-1 #000,
+  "primary-2"   $primary-2 #fff,
+  "primary-3"   $primary-3 #fff,
+  "primary-4"   $primary-4 #fff,
+  "primary-5"   $primary-5 #fff,
+  "success"     $success #fff,
+  "success-1"   $success-1 #000,
+  "success-2"   $success-2 #fff,
+  "success-3"   $success-3 #fff,
+  "success-4"   $success-4 #fff,
+  "success-5"   $success-5 #fff,
+  "danger"      $danger #fff,
+  "danger-1"    $danger-1 #000,
+  "danger-2"    $danger-2 #fff,
+  "danger-3"    $danger-3 #fff,
+  "danger-4"    $danger-4 #fff,
+  "danger-5"    $danger-5 #fff,  
+  "info"        $info #000,
+  "info-1"      $info-1 #000,
+  "info-2"      $info-2 #000,
+  "info-3"      $info-3 #000,
+  "info-4"      $info-4 #000,
+  "info-5"      $info-5 #000,
+  "warning"     $warning #000,
+  "warning-1"   $warning-1 #000,
+  "warning-2"   $warning-2 #000,
+  "warning-3"   $warning-3 #000,
+  "warning-4"   $warning-4 #000,
+  "warning-5"   $warning-5 #000,
+  "secondary"   $secondary #000,
+  "secondary-1" $secondary-1 #000,
+  "secondary-2" $secondary-2 #000,
+  "secondary-3" $secondary-3 #000,
+  "secondary-4" $secondary-4 #000,
+  "secondary-5" $secondary-5 #000,
+!default;

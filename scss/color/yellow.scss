@@ -2,17 +2,17 @@
 // Yellow
 // ----------------------------------------------------------
 $yellow:              #ffff00 !default;
-$yellow-1:            color-mix(in srgb, var(--yellow) 27%, #fff) !default;
-$yellow-2:            color-mix(in srgb, var(--yellow) 37%, #fff) !default;
-$yellow-3:            color-mix(in srgb, var(--yellow) 47%, #fff) !default;
-$yellow-4:            color-mix(in srgb, var(--yellow) 57%, #fff) !default;
-$yellow-5:            color-mix(in srgb, var(--yellow) 70%, #fff) !default;
+$yellow-1:            color-mix(in srgb, var(--yellow), #fff 73%) !default;
+$yellow-2:            color-mix(in srgb, var(--yellow), #fff 63%) !default;
+$yellow-3:            color-mix(in srgb, var(--yellow), #fff 53%) !default;
+$yellow-4:            color-mix(in srgb, var(--yellow), #fff 43%) !default;
+$yellow-5:            color-mix(in srgb, var(--yellow), #fff 30%) !default;
 $yellow-6:            var(--yellow) !default;  
-$yellow-7:            color-mix(in srgb, var(--yellow) 85%, #000) !default;
-$yellow-8:            color-mix(in srgb, var(--yellow) 78%, #000) !default;
-$yellow-9:            color-mix(in srgb, var(--yellow) 68%, #000) !default;
-$yellow-10:           color-mix(in srgb, var(--yellow) 58%, #000) !default;
-$yellow-11:           color-mix(in srgb, var(--yellow) 50%, #000) !default;
+$yellow-7:            color-mix(in srgb, var(--yellow), #000 8%) !default;
+$yellow-8:            color-mix(in srgb, var(--yellow), #000 12%) !default;
+$yellow-9:            color-mix(in srgb, var(--yellow), #000 25%) !default;
+$yellow-10:           color-mix(in srgb, var(--yellow), #000 30%) !default;
+$yellow-11:           color-mix(in srgb, var(--yellow), #000 40%) !default;
 
 $yellow-tokens:       ':where(html)' !default;
 

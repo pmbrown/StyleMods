@@ -2,17 +2,17 @@
 // Purple
 // ----------------------------------------------------------
 $purple:              #6f42c1 !default;
-$purple-1:            color-mix(in srgb, var(--purple) 26%, #fff) !default;
-$purple-2:            color-mix(in srgb, var(--purple) 37%, #fff) !default;
-$purple-3:            color-mix(in srgb, var(--purple) 55%, #fff) !default;
-$purple-4:            color-mix(in srgb, var(--purple) 72%, #fff) !default;
-$purple-5:            color-mix(in srgb, var(--purple) 89%, #fff) !default;
+$purple-1:            color-mix(in srgb, var(--purple), #fff 74%) !default;
+$purple-2:            color-mix(in srgb, var(--purple), #fff 63%) !default;
+$purple-3:            color-mix(in srgb, var(--purple), #fff 45%) !default;
+$purple-4:            color-mix(in srgb, var(--purple), #fff 28%) !default;
+$purple-5:            color-mix(in srgb, var(--purple), #fff 11%) !default;
 $purple-6:            var(--purple) !default;
-$purple-7:            color-mix(in srgb, var(--purple) 85%, #000) !default;
-$purple-8:            color-mix(in srgb, var(--purple) 76%, #000) !default;
-$purple-9:            color-mix(in srgb, var(--purple) 68%, #000) !default;
-$purple-10:           color-mix(in srgb, var(--purple) 58%, #000) !default;
-$purple-11:           color-mix(in srgb, var(--purple) 48%, #000) !default;
+$purple-7:            color-mix(in srgb, var(--purple), #000 15%) !default;
+$purple-8:            color-mix(in srgb, var(--purple), #000 24%) !default;
+$purple-9:            color-mix(in srgb, var(--purple), #000 32%) !default;
+$purple-10:           color-mix(in srgb, var(--purple), #000 42%) !default;
+$purple-11:           color-mix(in srgb, var(--purple), #000 52%) !default;
 
 $purple-tokens:       ':where(html)' !default;
 

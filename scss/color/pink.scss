@@ -2,17 +2,17 @@
 // Pink
 // ----------------------------------------------------------
 $pink:              #ff33a0 !default;
-$pink-1:            color-mix(in srgb, var(--pink) 50%, #fff) !default;
-$pink-2:            color-mix(in srgb, var(--pink) 60%, #fff) !default;
-$pink-3:            color-mix(in srgb, var(--pink) 70%, #fff) !default;
-$pink-4:            color-mix(in srgb, var(--pink) 80%, #fff) !default;
-$pink-5:            color-mix(in srgb, var(--pink) 90%, #fff) !default;
+$pink-1:            color-mix(in srgb, var(--pink), #fff 50%) !default;
+$pink-2:            color-mix(in srgb, var(--pink), #fff 40%) !default;
+$pink-3:            color-mix(in srgb, var(--pink), #fff 30%) !default;
+$pink-4:            color-mix(in srgb, var(--pink), #fff 20%) !default;
+$pink-5:            color-mix(in srgb, var(--pink), #fff 10%) !default;
 $pink-6:            var(--pink) !default;  
-$pink-7:            color-mix(in srgb, var(--pink) 90%, #000) !default;
-$pink-8:            color-mix(in srgb, var(--pink) 80%, #000) !default;
-$pink-9:            color-mix(in srgb, var(--pink) 70%, #000) !default;
-$pink-10:           color-mix(in srgb, var(--pink) 60%, #000) !default;
-$pink-11:           color-mix(in srgb, var(--pink) 50%, #000) !default;
+$pink-7:            color-mix(in srgb, var(--pink), #000 10%) !default;
+$pink-8:            color-mix(in srgb, var(--pink), #000 20%) !default;
+$pink-9:            color-mix(in srgb, var(--pink), #000 30%) !default;
+$pink-10:           color-mix(in srgb, var(--pink), #000 40%) !default;
+$pink-11:           color-mix(in srgb, var(--pink), #000 50%) !default;
 
 $pink-tokens:       ':where(html)' !default;
 

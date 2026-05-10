@@ -2,26 +2,26 @@
 // Cards
 // ----------------------------------------------------------
 $card-text-color:               var(--card-text, CanvasText) !default;
-$card-text-margin-bottom:       var(--card-text-mb, 0.5rem) !default; // paragraphs & lists
-$card-padding-block:            var(--card-py, 1rem) !default;
-$card-padding-inline:           var(--card-px, 1rem) !default;
-$card-border-color:             var(--card-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
-$card-radius:                   var(--card-radius, 0.188rem) !default;
 $card-background-color:         var(--card-bg, var(--background, Canvas)) !default;
 $card-title-background:         var(--card-title-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
+$card-padding-block:            var(--card-py, 1rem) !default;
+$card-padding-inline:           var(--card-px, 1rem) !default;
+$card-title-padding-block:      calc($card-padding-block - 0.125em) !default;
+$card-text-margin-bottom:       var(--card-text-mb, 0.5rem) !default; // paragraphs & lists
+$card-border-color:             var(--card-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
+$card-radius:                   var(--card-radius, 0.188rem) !default;
+$card-inner-radius:             calc($card-radius - 1px) !default;
 $card-link-hover-text-color:    var(--card-text-hover, CanvasText) !default;
 $card-link-hover-background:    var(--card-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
-$card-link-focus-width:         var(--card-focus, 0.188rem) !default;
-$card-link-focus-color:         var(--card-focus-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
+$card-link-outline-width:       var(--card-outline-width, 0.125rem) !default;
+$card-link-outline-color:       var(--card-outline-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
 $card-link-img-hover-filter:    var(--card-img-hover, opacity(75%)) !default;
-$card-inner-radius:             calc($card-radius - 1px) !default;
-$card-title-padding-block:      calc($card-padding-block - 0.125em) !default;
 $card-image-margin-top:         calc($card-text-margin-bottom + 0.5rem) !default;
 $card-image-margin-bottom:      calc($card-text-margin-bottom + 0.25rem) !default;
 
 @mixin cards-css {
 
-:where(.card, .card-link) {
+.card, .card-link {
   color: $card-text-color; 
   max-inline-size: var(--card-width); 
   padding-block: $card-padding-block;
@@ -31,7 +31,7 @@ $card-image-margin-bottom:      calc($card-text-margin-bottom + 0.25rem) !defaul
   background-color: $card-background-color;
 }
 
-:where(.card-link) {
+.card-link {
   position: relative;
 }
 
@@ -42,22 +42,22 @@ $card-image-margin-bottom:      calc($card-text-margin-bottom + 0.25rem) !defaul
   inset: 0;
 }
 
-:where(.card-link :focus-visible) {
+.card-link :focus {
   outline: none;
 }
 
-:where(.card-link:is(:focus-within, :hover)) {
+.card-link:is(:focus-within, :hover) {
   color: $card-link-hover-text-color;
   background-color: $card-link-hover-background;
   cursor: pointer;
 }
 
-:where(.card-link:is(:focus-within, :hover)) img {
+.card-link:is(:focus-within, :hover) img {
   filter: $card-link-img-hover-filter;
 }
 
-:where(.card-link:focus-within) {
-  outline: $card-link-focus-width solid $card-link-focus-color;
+.card-link:focus-within {
+  outline: $card-link-outline-width solid $card-link-outline-color;
 }
 
 :where(.card, .card-link) :is(p, ol, ul, dl)  {

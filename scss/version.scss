@@ -1,7 +1,7 @@
 // ----------------------------------------------------------
 // Version
 // ----------------------------------------------------------
-$version:     '1.5.0';
+$version:     '1.5.1';
 $minutiae:    'Copyright 2025-2026 Phil Brown';
 $repo:        '(https://github.com/pmbrown/StyleMods)';
 $license:     'Licensed under MIT (https://github.com/pmbrown/StyleMods/blob/main/LICENSE)';
@@ -11,5 +11,5 @@ $license:     'Licensed under MIT (https://github.com/pmbrown/StyleMods/blob/mai
 }
 
 @mixin module-version($module) {
-/*! StyleMods (#{$module}) v#{$version} - #{$minutiae} - #{$license} */
+/*! StyleMods v#{$version} (#{$module}) - #{$minutiae} - #{$license} */
 }

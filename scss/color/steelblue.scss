@@ -2,17 +2,17 @@
 // Steelblue
 // ----------------------------------------------------------
 $steelblue:              #336699 !default;
-$steelblue-1:            color-mix(in srgb, var(--steelblue) 50%, #fff) !default;
-$steelblue-2:            color-mix(in srgb, var(--steelblue) 60%, #fff) !default;
-$steelblue-3:            color-mix(in srgb, var(--steelblue) 70%, #fff) !default;
-$steelblue-4:            color-mix(in srgb, var(--steelblue) 80%, #fff) !default;
-$steelblue-5:            color-mix(in srgb, var(--steelblue) 90%, #fff) !default;
+$steelblue-1:            color-mix(in srgb, var(--steelblue), #fff 50%) !default;
+$steelblue-2:            color-mix(in srgb, var(--steelblue), #fff 40%) !default;
+$steelblue-3:            color-mix(in srgb, var(--steelblue), #fff 30%) !default;
+$steelblue-4:            color-mix(in srgb, var(--steelblue), #fff 20%) !default;
+$steelblue-5:            color-mix(in srgb, var(--steelblue), #fff 10%) !default;
 $steelblue-6:            var(--steelblue) !default;  
-$steelblue-7:            color-mix(in srgb, var(--steelblue) 90%, #000) !default;
-$steelblue-8:            color-mix(in srgb, var(--steelblue) 80%, #000) !default;
-$steelblue-9:            color-mix(in srgb, var(--steelblue) 70%, #000) !default;
-$steelblue-10:           color-mix(in srgb, var(--steelblue) 60%, #000) !default;
-$steelblue-11:           color-mix(in srgb, var(--steelblue) 52%, #000) !default;
+$steelblue-7:            color-mix(in srgb, var(--steelblue), #000 10%) !default;
+$steelblue-8:            color-mix(in srgb, var(--steelblue), #000 20%) !default;
+$steelblue-9:            color-mix(in srgb, var(--steelblue), #000 30%) !default;
+$steelblue-10:           color-mix(in srgb, var(--steelblue), #000 40%) !default;
+$steelblue-11:           color-mix(in srgb, var(--steelblue), #000 48%) !default;
 
 $steelblue-tokens:       ':where(html)' !default;
 

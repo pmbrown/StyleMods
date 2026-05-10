@@ -2,13 +2,13 @@
 // Badges
 // ----------------------------------------------------------
 $badge-text-color:        var(--badge-text, CanvasText) !default;
-$badge-font-size:         var(--badge-fs, 0.65em) !default;
-$badge-font-weight:       var(--badge-fw, 600) !default;
-$badge-padding-block:     var(--badge-py, 0.375em) !default;
-$badge-padding-inline:    var(--badge-px, 0.65em) !default;
-$badge-border-color:      var(--badge-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
+$badge-font-size:         var(--badge-fs, 0.75em) !default;
+$badge-font-weight:       var(--badge-fw, normal) !default;
+$badge-padding-block:     var(--badge-py, 0.375rem) !default;
+$badge-padding-inline:    var(--badge-px, 0.65rem) !default;
+$badge-border-color:      var(--badge-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 $badge-radius:            var(--badge-radius, 0.188rem) !default;
-$badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
+$badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 6%, var(--background, Canvas))) !default;
 
 @mixin badges-css {
 
@@ -28,6 +28,25 @@ $badge-background-color:  var(--badge-bg, color-mix(in srgb, CanvasText 4%, var(
   border: 1px solid $badge-border-color;
   border-radius: $badge-radius;
   background-color: $badge-background-color;
+}
+
+:is(h1, h2, h3, h4, h5, h6) :is(.badge, [class*="badge-"]) {
+  --badge-fs: 0.65em;
+}
+
+.badge-pill {
+  --badge-px: 1em;
+  --badge-radius: 10rem;
+}
+
+.badge-outline {
+  --badge-bg: var(--background, Canvas);
+}
+
+.badge-outline-pill {
+  --badge-bg: var(--background, Canvas);
+  --badge-px: 1em;
+  --badge-radius: 10rem;
 }
 
 .badge-light {

@@ -2,17 +2,17 @@
 // Rosypink
 // ----------------------------------------------------------
 $rosypink:                #be4182 !default;
-$rosypink-1:              color-mix(in srgb, var(--rosypink) 31%, #fff) !default;
-$rosypink-2:              color-mix(in srgb, var(--rosypink) 44%, #fff) !default;
-$rosypink-3:              color-mix(in srgb, var(--rosypink) 58%, #fff) !default;
-$rosypink-4:              color-mix(in srgb, var(--rosypink) 72%, #fff) !default;
-$rosypink-5:              color-mix(in srgb, var(--rosypink) 87%, #fff) !default;
+$rosypink-1:              color-mix(in srgb, var(--rosypink), #fff 69%) !default;
+$rosypink-2:              color-mix(in srgb, var(--rosypink), #fff 56%) !default;
+$rosypink-3:              color-mix(in srgb, var(--rosypink), #fff 42%) !default;
+$rosypink-4:              color-mix(in srgb, var(--rosypink), #fff 28%) !default;
+$rosypink-5:              color-mix(in srgb, var(--rosypink), #fff 13%) !default;
 $rosypink-6:              var(--rosypink) !default;
-$rosypink-7:              color-mix(in srgb, var(--rosypink) 85%, #000) !default;
-$rosypink-8:              color-mix(in srgb, var(--rosypink) 72%, #000) !default;
-$rosypink-9:              color-mix(in srgb, var(--rosypink) 60%, #000) !default;
-$rosypink-10:             color-mix(in srgb, var(--rosypink) 50%, #000) !default;
-$rosypink-11:             color-mix(in srgb, var(--rosypink) 44%, #000) !default;
+$rosypink-7:              color-mix(in srgb, var(--rosypink), #000 15%) !default;
+$rosypink-8:              color-mix(in srgb, var(--rosypink), #000 28%) !default;
+$rosypink-9:              color-mix(in srgb, var(--rosypink), #000 40%) !default;
+$rosypink-10:             color-mix(in srgb, var(--rosypink), #000 50%) !default;
+$rosypink-11:             color-mix(in srgb, var(--rosypink), #000 56%) !default;
 
 $rosypink-tokens:         ':where(html)' !default;
 

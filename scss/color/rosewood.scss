@@ -2,17 +2,17 @@
 // Rosewood
 // ----------------------------------------------------------
 $rosewood:              #9f6060 !default;
-$rosewood-1:            color-mix(in srgb, var(--rosewood) 47%, #fff) !default;
-$rosewood-2:            color-mix(in srgb, var(--rosewood) 57%, #fff) !default;
-$rosewood-3:            color-mix(in srgb, var(--rosewood) 68%, #fff) !default;
-$rosewood-4:            color-mix(in srgb, var(--rosewood) 80%, #fff) !default;
-$rosewood-5:            color-mix(in srgb, var(--rosewood) 90%, #fff) !default;
+$rosewood-1:            color-mix(in srgb, var(--rosewood), #fff 53%) !default;
+$rosewood-2:            color-mix(in srgb, var(--rosewood), #fff 43%) !default;
+$rosewood-3:            color-mix(in srgb, var(--rosewood), #fff 32%) !default;
+$rosewood-4:            color-mix(in srgb, var(--rosewood), #fff 20%) !default;
+$rosewood-5:            color-mix(in srgb, var(--rosewood), #fff 10%) !default;
 $rosewood-6:            var(--rosewood) !default;  
-$rosewood-7:            color-mix(in srgb, var(--rosewood) 92%, #000) !default;
-$rosewood-8:            color-mix(in srgb, var(--rosewood) 82%, #000) !default;
-$rosewood-9:            color-mix(in srgb, var(--rosewood) 72%, #000) !default;
-$rosewood-10:           color-mix(in srgb, var(--rosewood) 62%, #000) !default;
-$rosewood-11:           color-mix(in srgb, var(--rosewood) 54%, #000) !default;
+$rosewood-7:            color-mix(in srgb, var(--rosewood), #000 8%) !default;
+$rosewood-8:            color-mix(in srgb, var(--rosewood), #000 18%) !default;
+$rosewood-9:            color-mix(in srgb, var(--rosewood), #000 28%) !default;
+$rosewood-10:           color-mix(in srgb, var(--rosewood), #000 38%) !default;
+$rosewood-11:           color-mix(in srgb, var(--rosewood), #000 46%) !default;
 
 $rosewood-tokens:       ':where(html)' !default;
 

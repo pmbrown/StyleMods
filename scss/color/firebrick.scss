@@ -2,17 +2,17 @@
 // Firebrick
 // ----------------------------------------------------------
 $firebrick:                #b22222 !default;
-$firebrick-1:              color-mix(in srgb, var(--firebrick) 29%, #fff) !default;
-$firebrick-2:              color-mix(in srgb, var(--firebrick) 44%, #fff) !default;
-$firebrick-3:              color-mix(in srgb, var(--firebrick) 58%, #fff) !default;
-$firebrick-4:              color-mix(in srgb, var(--firebrick) 72%, #fff) !default;
-$firebrick-5:              color-mix(in srgb, var(--firebrick) 87%, #fff) !default;
+$firebrick-1:              color-mix(in srgb, var(--firebrick), #fff 71%) !default;
+$firebrick-2:              color-mix(in srgb, var(--firebrick), #fff 56%) !default;
+$firebrick-3:              color-mix(in srgb, var(--firebrick), #fff 42%) !default;
+$firebrick-4:              color-mix(in srgb, var(--firebrick), #fff 28%) !default;
+$firebrick-5:              color-mix(in srgb, var(--firebrick), #fff 13%) !default;
 $firebrick-6:              var(--firebrick) !default;
-$firebrick-7:              color-mix(in srgb, var(--firebrick) 85%, #000) !default;
-$firebrick-8:              color-mix(in srgb, var(--firebrick) 72%, #000) !default;
-$firebrick-9:              color-mix(in srgb, var(--firebrick) 60%, #000) !default;
-$firebrick-10:             color-mix(in srgb, var(--firebrick) 50%, #000) !default;
-$firebrick-11:             color-mix(in srgb, var(--firebrick) 44%, #000) !default;
+$firebrick-7:              color-mix(in srgb, var(--firebrick), #000 15%) !default;
+$firebrick-8:              color-mix(in srgb, var(--firebrick), #000 28%) !default;
+$firebrick-9:              color-mix(in srgb, var(--firebrick), #000 40%) !default;
+$firebrick-10:             color-mix(in srgb, var(--firebrick), #000 50%) !default;
+$firebrick-11:             color-mix(in srgb, var(--firebrick), #000 56%) !default;
 
 $firebrick-tokens:         ':where(html)' !default;
 

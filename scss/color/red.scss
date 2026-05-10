@@ -1,18 +1,18 @@
 // ---------------------------------------------------------- 
 // Red
 // ----------------------------------------------------------
-$red:             #e60000 !default;
-$red-1:           color-mix(in srgb, var(--red) 26%, #fff) !default;
-$red-2:           color-mix(in srgb, var(--red) 42%, #fff) !default;
-$red-3:           color-mix(in srgb, var(--red) 60%, #fff) !default;
-$red-4:           color-mix(in srgb, var(--red) 74%, #fff) !default;
-$red-5:           color-mix(in srgb, var(--red) 89%, #fff) !default;
+$red:             #cc0000 !default;
+$red-1:           color-mix(in srgb, var(--red), #fff 74%) !default;
+$red-2:           color-mix(in srgb, var(--red), #fff 58%) !default;
+$red-3:           color-mix(in srgb, var(--red), #fff 40%) !default;
+$red-4:           color-mix(in srgb, var(--red), #fff 26%) !default;
+$red-5:           color-mix(in srgb, var(--red), #fff 11%) !default;
 $red-6:           var(--red) !default;  
-$red-7:           color-mix(in srgb, var(--red) 88%, #000) !default;
-$red-8:           color-mix(in srgb, var(--red) 78%, #000) !default;
-$red-9:           color-mix(in srgb, var(--red) 68%, #000) !default;
-$red-10:          color-mix(in srgb, var(--red) 58%, #000) !default;
-$red-11:          color-mix(in srgb, var(--red) 48%, #000) !default;
+$red-7:           color-mix(in srgb, var(--red), #000 12%) !default;
+$red-8:           color-mix(in srgb, var(--red), #000 22%) !default;
+$red-9:           color-mix(in srgb, var(--red), #000 32%) !default;
+$red-10:          color-mix(in srgb, var(--red), #000 42%) !default;
+$red-11:          color-mix(in srgb, var(--red), #000 52%) !default;
 
 $red-tokens:      ':where(html)' !default;
 

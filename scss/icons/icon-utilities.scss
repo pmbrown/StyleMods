@@ -7,7 +7,7 @@
   block-size: var(--ico-xy, 1em);
   inline-size: var(--ico-xy, 1em);  
   vertical-align: var(--ico-va, -.115em);
-  background-color: var(--ico, CanvasText);
+  background-color: var(--ico, CurrentColor);
   mask: var(--svg) no-repeat;
   opacity: var(--ico-op, 1);
   margin-inline-start: var(--ico-ms);
@@ -25,12 +25,12 @@
   
   .ico-b:before { 
     @extend %icon-mask;
-    --ico-me: var(--ico-mr, calc(1em / 3.75));
+    --ico-me: calc(1em / 3.75);
   }
   
   .ico-a:after {
     @extend %icon-mask;
-    --ico-ms: var(--ico-ml, calc(1em / 3.75));
+    --ico-ms: calc(1em / 3.75);
   }
   
   .ico-block:before, .ico-block-center:before {
@@ -47,17 +47,17 @@
 
 @mixin icon-links-css {
   :where(a) {
-    --ico: var(--link, LinkText);
+    --ico: var(--link, CurrentColor);
   }
   
   :where(a:is(:hover, :focus)) {
-    --ico: var(--hover, color-mix(in srgb, LinkText 75%, white));
+    --ico: var(--hover, CurrentColor);
   }
 }
 
 @mixin icon-buttons-css {    
   :where(button, .btn) {
-    --ico: var(--btn-text, buttontext);
+    --ico: var(--btn-text, CurrentColor);
   }
 }
 

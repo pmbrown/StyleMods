@@ -2,17 +2,17 @@
 // seagreen
 // ----------------------------------------------------------
 $seagreen:              #2e8b57 !default;
-$seagreen-1:            color-mix(in srgb, var(--seagreen) 22%, #fff) !default;
-$seagreen-2:            color-mix(in srgb, var(--seagreen) 32%, #fff) !default;
-$seagreen-3:            color-mix(in srgb, var(--seagreen) 50%, #fff) !default;
-$seagreen-4:            color-mix(in srgb, var(--seagreen) 65%, #fff) !default;
-$seagreen-5:            color-mix(in srgb, var(--seagreen) 85%, #fff) !default;
+$seagreen-1:            color-mix(in srgb, var(--seagreen), #fff 78%) !default;
+$seagreen-2:            color-mix(in srgb, var(--seagreen), #fff 68%) !default;
+$seagreen-3:            color-mix(in srgb, var(--seagreen), #fff 50%) !default;
+$seagreen-4:            color-mix(in srgb, var(--seagreen), #fff 35%) !default;
+$seagreen-5:            color-mix(in srgb, var(--seagreen), #fff 15%) !default;
 $seagreen-6:            var(--seagreen) !default;  
-$seagreen-7:            color-mix(in srgb, var(--seagreen) 86%, #000) !default;
-$seagreen-8:            color-mix(in srgb, var(--seagreen) 72%, #000) !default;
-$seagreen-9:            color-mix(in srgb, var(--seagreen) 61%, #000) !default;
-$seagreen-10:           color-mix(in srgb, var(--seagreen) 53%, #000) !default;
-$seagreen-11:           color-mix(in srgb, var(--seagreen) 45%, #000) !default;
+$seagreen-7:            color-mix(in srgb, var(--seagreen), #000 14%) !default;
+$seagreen-8:            color-mix(in srgb, var(--seagreen), #000 28%) !default;
+$seagreen-9:            color-mix(in srgb, var(--seagreen), #000 39%) !default;
+$seagreen-10:           color-mix(in srgb, var(--seagreen), #000 47%) !default;
+$seagreen-11:           color-mix(in srgb, var(--seagreen), #000 55%) !default;
 
 $seagreen-tokens:       ':where(html)' !default;
 

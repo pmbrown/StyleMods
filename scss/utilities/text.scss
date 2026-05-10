@@ -106,20 +106,20 @@ $text-wrap: (
 }
 
 @mixin text-variable-classes-css {
-  .line-height {
+  .line-height, .line-height * {
     line-height: var(--lh);
   }
   
-  .text-spacing {
+  .text-spacing, .text-spacing * {
     letter-spacing: var(--ls);
     word-spacing: var(--ws);
   }
   
-  .font-variant {
+  .font-variant, .font-variant * {
     font-variant: var(--fv);
   }
   
-  .text-transform {
+  .text-transform, .text-transform * {
     text-transform: var(--tt);
   }
 }

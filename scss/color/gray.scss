@@ -2,17 +2,17 @@
 // Gray
 // ----------------------------------------------------------
 $gray:              #808080 !default;
-$gray-1:            color-mix(in srgb, var(--gray) 25%, #fff) !default;
-$gray-2:            color-mix(in srgb, var(--gray) 35%, #fff) !default;
-$gray-3:            color-mix(in srgb, var(--gray) 55%, #fff) !default;
-$gray-4:            color-mix(in srgb, var(--gray) 65%, #fff) !default;
-$gray-5:            color-mix(in srgb, var(--gray) 75%, #fff) !default;
+$gray-1:            color-mix(in srgb, var(--gray), #fff 75%) !default;
+$gray-2:            color-mix(in srgb, var(--gray), #fff 65%) !default;
+$gray-3:            color-mix(in srgb, var(--gray), #fff 45%) !default;
+$gray-4:            color-mix(in srgb, var(--gray), #fff 35%) !default;
+$gray-5:            color-mix(in srgb, var(--gray), #fff 25%) !default;
 $gray-6:            var(--gray) !default;
-$gray-7:            color-mix(in srgb, var(--gray) 80%, #000) !default;
-$gray-8:            color-mix(in srgb, var(--gray) 70%, #000) !default;
-$gray-9:            color-mix(in srgb, var(--gray) 60%, #000) !default;
-$gray-10:           color-mix(in srgb, var(--gray) 50%, #000) !default;
-$gray-11:           color-mix(in srgb, var(--gray) 40%, #000) !default;
+$gray-7:            color-mix(in srgb, var(--gray), #000 20%) !default;
+$gray-8:            color-mix(in srgb, var(--gray), #000 30%) !default;
+$gray-9:            color-mix(in srgb, var(--gray), #000 40%) !default;
+$gray-10:           color-mix(in srgb, var(--gray), #000 50%) !default;
+$gray-11:           color-mix(in srgb, var(--gray), #000 60%) !default;
 
 $gray-tokens:       ':where(html)' !default;
 

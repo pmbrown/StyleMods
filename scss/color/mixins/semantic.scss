@@ -22,10 +22,10 @@
 // Utilities
 // ----------------------------------------------------------
 @mixin semantic-backgrounds-css {
-  @each $name, $text, $background in $semantic-color-values {
+  @each $name, $color, $text in $semantic-token-values {
     .bg-#{$name} {
       color: $text;
-      background-color: $background;
+      background-color: var(--#{$name});
     }
   }
 }
@@ -39,7 +39,7 @@
 }
 
 @mixin semantic-gradients-css {
-  @each $name, $text, $background, $darken, $lighten, $gradient in $semantic-color-values {
+  @each $name, $text, $gradient in $semantic-gradient-values {
     .gradient-#{$name} {
       color: $text;
       background-image: $gradient;
@@ -51,13 +51,15 @@
 // Modifiers
 // ----------------------------------------------------------
 @mixin semantic-accordions-css {
-  @each $name, $color, $background, $focus, $border in $semantic-color-values {
+  @each $name, $text, $background, $dark, $light, $darker in $semantic-color-values {
     .accordion-#{$name} {
-      --summary-text: #{$color};
-      --ico: #{$color};
-      --summary-bg: #{$background};
-      --summary-focus: #{$focus};
-      --accordion-bd-color: #{$border};
+      --accordion-text: #{$text};
+      --ico: #{$text};
+      --accordion-bg: #{$background};
+      --summary-focus: #{$dark};
+      --summary-bg: #{$dark};
+      --summary-bg-focus: #{$darker};
+      --accordion-bd-color: #{$light};
     }
   }
 }
@@ -72,6 +74,8 @@
       --hover: #{$color};
       --alert-bg: #{$background};
       --alert-bd-color: #{$border};
+      --alert-close-bg: #{$border};
+      --input-outline-color: #{$border};
     }
   }
 }
@@ -95,7 +99,7 @@
       --btn-bg: #{$background};
       --btn-bd-color: #{$border};
       --btn-hover: #{$hover};
-      --focus-color: #{$border};
+      --input-outline-color: #{$border};
     }
   }
 }

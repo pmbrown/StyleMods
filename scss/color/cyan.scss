@@ -2,17 +2,17 @@
 // Cyan
 // ----------------------------------------------------------
 $cyan:              #00e6e6 !default;
-$cyan-1:            color-mix(in srgb, var(--cyan) 19%, #fff) !default;
-$cyan-2:            color-mix(in srgb, var(--cyan) 26%, #fff) !default;
-$cyan-3:            color-mix(in srgb, var(--cyan) 35%, #fff) !default;
-$cyan-4:            color-mix(in srgb, var(--cyan) 45%, #fff) !default;
-$cyan-5:            color-mix(in srgb, var(--cyan) 60%, #fff) !default;
+$cyan-1:            color-mix(in srgb, var(--cyan), #fff 81%) !default;
+$cyan-2:            color-mix(in srgb, var(--cyan), #fff 74%) !default;
+$cyan-3:            color-mix(in srgb, var(--cyan), #fff 65%) !default;
+$cyan-4:            color-mix(in srgb, var(--cyan), #fff 55%) !default;
+$cyan-5:            color-mix(in srgb, var(--cyan), #fff 40%) !default;
 $cyan-6:            var(--cyan) !default;
-$cyan-7:            color-mix(in srgb, var(--cyan) 90%, #000) !default;
-$cyan-8:            color-mix(in srgb, var(--cyan) 80%, #000) !default;
-$cyan-9:            color-mix(in srgb, var(--cyan) 70%, #000) !default;
-$cyan-10:           color-mix(in srgb, var(--cyan) 60%, #000) !default;
-$cyan-11:           color-mix(in srgb, var(--cyan) 54%, #000) !default;
+$cyan-7:            color-mix(in srgb, var(--cyan), #000 10%) !default;
+$cyan-8:            color-mix(in srgb, var(--cyan), #000 20%) !default;
+$cyan-9:            color-mix(in srgb, var(--cyan), #000 30%) !default;
+$cyan-10:           color-mix(in srgb, var(--cyan), #000 40%) !default;
+$cyan-11:           color-mix(in srgb, var(--cyan), #000 46%) !default;
 
 $cyan-tokens:       ':where(html)' !default;
 

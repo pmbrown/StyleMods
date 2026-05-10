@@ -2,17 +2,17 @@
 // Orange
 // ----------------------------------------------------------
 $orange:              #ff8c00 !default;
-$orange-1:            color-mix(in srgb, var(--orange) 35%, #fff) !default;
-$orange-2:            color-mix(in srgb, var(--orange) 50%, #fff) !default;
-$orange-3:            color-mix(in srgb, var(--orange) 60%, #fff) !default;
-$orange-4:            color-mix(in srgb, var(--orange) 70%, #fff) !default;
-$orange-5:            color-mix(in srgb, var(--orange) 85%, #fff) !default;
+$orange-1:            color-mix(in srgb, var(--orange), #fff 65%) !default;
+$orange-2:            color-mix(in srgb, var(--orange), #fff 50%) !default;
+$orange-3:            color-mix(in srgb, var(--orange), #fff 40%) !default;
+$orange-4:            color-mix(in srgb, var(--orange), #fff 30%) !default;
+$orange-5:            color-mix(in srgb, var(--orange), #fff 15%) !default;
 $orange-6:            var(--orange) !default;
-$orange-7:            color-mix(in srgb, var(--orange) 85%, #000) !default;
-$orange-8:            color-mix(in srgb, var(--orange) 75%, #000) !default;
-$orange-9:            color-mix(in srgb, var(--orange) 65%, #000) !default;
-$orange-10:           color-mix(in srgb, var(--orange) 55%, #000) !default;
-$orange-11:           color-mix(in srgb, var(--orange) 45%, #000) !default;
+$orange-7:            color-mix(in srgb, var(--orange), #000 15%) !default;
+$orange-8:            color-mix(in srgb, var(--orange), #000 25%) !default;
+$orange-9:            color-mix(in srgb, var(--orange), #000 35%) !default;
+$orange-10:           color-mix(in srgb, var(--orange), #000 45%) !default;
+$orange-11:           color-mix(in srgb, var(--orange), #000 55%) !default;
 
 $orange-tokens:       ':where(html)' !default;
 

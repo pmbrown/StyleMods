@@ -1,11 +1,13 @@
 // ---------------------------------------------------------- 
 // Color modifiers
 // ----------------------------------------------------------
-@mixin accordion-color-values($color, $background, $focus, $border) {
-  --summary-text: #{$color};
+@mixin accordion-color-values($color, $background, $summary, $border) {
+  --accordion-text: #{$color};
   --ico: #{$color};
-  --summary-bg: #{$background};
-  --summary-focus: #{$focus};
+  --accordion-bg: #{$background};
+  --summary-focus: #{$border};
+  --summary-bg: #{$summary};
+  --summary-bg-focus: #{$border};
   --accordion-bd-color: #{$border};
 }
 
@@ -17,6 +19,8 @@
   --hover: #{$color};
   --alert-bg: #{$background};
   --alert-bd-color: #{$border};
+  --alert-close-bg: #{$border};
+  --input-outline-color: #{$border};
 }
 
 @mixin badge-color-values($color, $background, $border) {
@@ -32,7 +36,7 @@
   --btn-bg: #{$background};
   --btn-bd-color: #{$border};
   --btn-hover: #{$hover};
-  --focus-color: #{$focus};
+  --input-outline-color: #{$focus};
 }
 
 @mixin card-color-values($color, $background, $hover, $focus, $border) {

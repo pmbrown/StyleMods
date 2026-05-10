@@ -17,7 +17,7 @@ $inset-values: (
   "bottom": $inset-bottom,
   "left": $inset-left,
   "right": $inset-right,
-);
+) !default;
 
 @mixin inset-css {  
   @each $name, $value in $inset-values {

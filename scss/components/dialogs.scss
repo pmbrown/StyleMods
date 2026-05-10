@@ -5,12 +5,12 @@ $dialog-text-color:               var(--dialog-text, CanvasText) !default;
 $dialog-margin-top:               var(--dialog-mt, 1rem) !default;
 $dialog-padding-block:            var(--dialog-py, 1rem) !default;
 $dialog-padding-inline:           var(--dialog-px, 1rem) !default;
-$dialog-border-color:             var(--dialog-bd-color, color-mix(in srgb, CanvasText 13%, var(--background, Canvas))) !default;
+$dialog-border-color:             var(--dialog-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
 $dialog-radius:                   var(--dialog-radius, 0.188rem) !default;
 $dialog-inner-radius:             calc($dialog-radius - 1px) !default;
 $dialog-background-color:         var(--dialog-bg, var(--background, Canvas)) !default; 
 $dialog-transition:               var(--dialog-transition, 0.25s) !default;
-$dialog-backdrop:                 color-mix(in srgb, black 50%, transparent) !default;
+$dialog-backdrop:                 var(--dialog-backdrop-color, color-mix(in srgb, black 25%, transparent)) !default;
 $dialog-title-background-color:   var(--dialog-title-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
 $dialog-focus-shadow:             var(--dialog-focus-shadow, 0 0 0 0.12rem) !default;
 $dialog-focus-color:              var(--dialog-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
@@ -177,7 +177,7 @@ dialog:has(.dialog-header), .dialog-img, .dialog-figure {
 }
 
 .close-dialog-ico:before, .close-dialog-ico-b:before, .close-dialog-ico-a:after {
-  --ico: var(--dialog-text, CanvasText);
+  --ico: var(--dialog-text, CurrentColor);
   display: inline-block;
   content: "";
   block-size: 1em;

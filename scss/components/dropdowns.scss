@@ -15,6 +15,10 @@ $dropdown-body-padding-block:             var(--dropdown-body-py, 0.75rem) !defa
 $dropdown-content-margin-block-end:       var(--dropdown-content-mb, 0.75rem) !default;
 $dropdown-radius:                         var(--dropdown-radius, 0.188rem) !default;
 
+$dropdown-button-outline-width:           var(--input-outline-width, 1.75px) !default;
+$dropdown-button-outline-color:           var(--input-outline-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))) !default;
+$dropdown-button-outline-offset:          var(--btn-outline-offset, 0) !default;
+  
 // Button
 $dropdown-button-text-color:              var(--dropdown-btn-text, CanvasText) !default;
 $dropdown-button-background-color:        var(--dropdown-btn-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas))) !default;
@@ -24,7 +28,8 @@ $dropdown-button-padding-block:           var(--dropdown-btn-py, 0.313rem) !defa
 $dropdown-button-focus-shadow:            0 0 0 0.06rem !default;
 
 // Icons
-$dropdown-icon-color:                     var(--dropdown-ico, CanvasText) !default;
+$dropdown-icon-color:                     var(--dropdown-ico, CurrentColor) !default;
+$dropdown-icon-focus-color:               var(--dropdown-ico-focus, var(--link, light-dark(#1c3db5, #9fbfdf))) !default;
 $dropdown-open-icon:                      url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 10-4-4h8z'/></svg>") !default;
 $dropdown-close-icon:                     url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m8 6 4 4-8 7e-7z'/></svg>") !default;
 
@@ -63,6 +68,14 @@ details:has(.dropdown, .dropdown-list, .dropdown-body) summary:after {
 
 details[open]:has(.dropdown, .dropdown-list, .dropdown-body) summary:after {
   --svg: #{$dropdown-close-icon};
+}
+
+details:has(.dropdown, .dropdown-list, .dropdown-body) summary:focus-visible {
+  --dropdown-ico: #{$dropdown-icon-focus-color};
+}
+
+details:has(.dropdown, .dropdown-list, .dropdown-body) summary:focus-visible:not(:is(.dropdown-btn)) {
+  outline: none;
 }
 
 .dropdown, .dropdown-list, .dropdown-body {
@@ -113,7 +126,6 @@ details[open]:has(.dropdown, .dropdown-list, .dropdown-body) summary:after {
 
 :is(.dropdown, .dropdown-list) :is(a, button):focus {
   outline: none;
-  box-shadow: none;
 }
 
 .dropdown :is(a, button):not(:last-child),
@@ -148,6 +160,7 @@ details[open]:has(.dropdown, .dropdown-list, .dropdown-body) summary:after {
 
 // Dropdown button
 .dropdown-btn {
+  --dropdown-ico-focus: #{$dropdown-button-text-color};
   color: $dropdown-button-text-color;
   padding-block: $dropdown-button-padding-block;
   padding-inline-start: $dropdown-padding-inline;
@@ -161,9 +174,13 @@ details[open]:has(.dropdown, .dropdown-list, .dropdown-body) summary:after {
   background-color: $dropdown-button-background-hover;
 }
 
-.dropdown-btn:focus-visible {
+.dropdown-btn:focus {
+  outline: $dropdown-button-outline-width solid $dropdown-button-outline-color;
+  outline-offset: $dropdown-button-outline-offset;
+}
+
+.dropdown-btn:focus:not(:focus-visible) {  
   outline: none;
-  box-shadow: $dropdown-button-focus-shadow $dropdown-button-focus-color;
 }
 
 // Light-dismiss close dropdown backdrop

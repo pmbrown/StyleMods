@@ -6,17 +6,17 @@ $dark-scheme-icon:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='cur
 
 @mixin theme-switch-css {
 
-[style="color-scheme: light;"] #themes:before {
+[style="color-scheme: light;"] .theme-switch:before {
   content: "" / "Light ";
   --svg: #{$light-scheme-icon};
 }
   
-[style="color-scheme: dark;"] #themes:before {
+[style="color-scheme: dark;"] .theme-switch:before {
   content: "" / "Dark ";
   --svg: #{$dark-scheme-icon};
 }
 
-#themes:before {
+.theme-switch:before {
   display: inline-block;
   content: "";
   block-size: 1em;
@@ -24,17 +24,6 @@ $dark-scheme-icon:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='cur
   vertical-align: -.12em;
   background-color: var(--ico, CanvasText);
   mask: var(--svg) no-repeat;
-}
-
-#themes span {
-  all: initial;
-  position: absolute;
-  block-size: 1px;
-  inline-size: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 
 } // end theme-switch-css
