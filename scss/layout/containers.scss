@@ -1,8 +1,8 @@
 // ---------------------------------------------------------- 
 // Containers
 // ----------------------------------------------------------
-$container-xxl:       1920px !default;
-$container-xl:        1600px !default;
+$container-xxl:       1536px !default;
+$container-xl:        1366px !default;
 $container-lg:        1280px !default;
 $container-md:        1024px !default;
 $container-sm:        768px !default;
@@ -38,14 +38,14 @@ $container-values: (
 .container, .container-xxl .container-xl, .container-lg, .container-md, .container-sm, .container-xs, .container-xxs,
 .container-rem-xxl .container-rem-xl, .container-rem-lg, .container-rem-md, .container-rem-sm, .container-rem-xs, .container-rem-xxs {
   inline-size: 100%;
-  max-inline-size: var(--size);
+  max-inline-size: var(--container);
   margin-inline: var(--mx, auto);
   padding-inline: var(--px);
 }
 
   @each $name, $value in $container-values {
     .container-#{$name} {
-      --size: #{$value};
+      --container: #{$value};
     }
   }
   
