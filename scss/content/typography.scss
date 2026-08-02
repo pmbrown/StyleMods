@@ -3,7 +3,7 @@
 // ----------------------------------------------------------
 $text-color:                  var(--text, CanvasText) !default;
 $background-color:            var(--background, Canvas) !default;
-$font-family:                 'system-ui' !default;
+$font-family:                 '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Noto Sans", "Liberation Sans", "Arial", sans-serif' !default;
 $body-font-size:              var(--body-fs, 1rem) !default;
 $body-font-weight:            var(--body-fw, normal) !default;
 $body-line-height:            var(--body-lh, 1.5) !default;
